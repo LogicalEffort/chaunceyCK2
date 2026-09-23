@@ -5,7 +5,8 @@
 
 ```
 uv sync
-uv add "langchain[ollama]"
+curl -fsSL https://ollama.com/install.sh | sh #install ollama
+ollama pull llama3.1
 ```
 
 ### To run:
