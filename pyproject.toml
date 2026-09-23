@@ -1,0 +1,21 @@
+[project]
+name = "chaunceyck2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "LogicalEffort", email = "pamark126@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "deepagents>=0.7.17",
+    "langchain[ollama]>=1.4.2",
+    "langchain-ollama>=1.1.0",
+]
+
+[project.scripts]
+chaunceyck2 = "chaunceyck2:main"
+
+[build-system]
+requires = ["uv_build>=0.12.16,<0.13.0"]
+build-backend = "uv_build"
