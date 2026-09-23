@@ -4,7 +4,7 @@
 ### Environment setup:
 
 ```
-uv init
+uv sync
 uv add "langchain[ollama]"
 ```
 
