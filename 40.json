@@ -1,0 +1,904 @@
+{
+    "pageid": 40,
+    "title": "Warfare",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Please help with verifying or updating older sections of this article. At least some were last verified for version 2.8."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Waging war is one of the primary ways to obtain territory."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Warfare is centred around a few concepts, namely Casus Belli , troops, warscore, combat , and sieges."
+                }
+            ]
+        },
+        {
+            "heading": "Declaring War",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Wars are fought over Casus Belli . The CB used affects how warscore is calculated and determines the results of the three possible peace treaties:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Enforce Demands",
+                            "children": []
+                        },
+                        {
+                            "text": "White Peace",
+                            "children": []
+                        },
+                        {
+                            "text": "Surrender",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is also possible for a war to end inconclusively, which happens when the CB becomes invalid, the defender's liege title changes, the defender becomes unlanded, or (depending on the CB) the attacker dies."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You cannot declare war through the diplomacy menu if you have any levies raised. (Wars from events and decisions, e.g. title revocation and faction wars, are still possible. Non-levy troops do not impose this restriction.)"
+                }
+            ]
+        },
+        {
+            "heading": "Truces",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Ending a war binds the attacker with a truce — a promise not to declare another war against the same character. Most truces last 10 years, but some casus belli have shorter truce durations. All war outcomes lead to a truce (except for \"war ended inconclusively\"). Rebellions add bilateral truces."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Truces are between individual leaders, so if the ruler of either realm dies, the truce becomes irrelevant. Thus, the negative effects of breaking a truce can be circumvented by either murdering the enemy ruler, or in the most extreme cases by commiting suicide ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Breaking a truce :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Costs 200 prestige plus half of your current prestige.",
+                            "children": []
+                        },
+                        {
+                            "text": "Adds the character modifier \"Truce Breaker\", lowering diplomacy by 5 for 10 years. (Does not stack.)",
+                            "children": []
+                        },
+                        {
+                            "text": "Adds the opinion modifier \"Broke a Truce\" from all independent rulers of the target's religion group, lowering their opinion of you by -25. (Stacks.)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Troops",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Troops fight battles and perform sieges. They can be lost to attrition when not properly supplied."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Sources of troops include:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Levies , peasants recruited from your demesne and from vassals . Levies form the bulk of your army, and reinforce only in friendly territory.",
+                            "children": []
+                        },
+                        {
+                            "text": "Retinues , your private standing army. They are expensive to hire and reinforce, but nearly free to maintain when at full strength.",
+                            "children": []
+                        },
+                        {
+                            "text": "Horde troops , the nomadic equivalent of retinues. They are hired and reinforced using prestige or wealth, and Manpower",
+                            "children": []
+                        },
+                        {
+                            "text": "Mercenaries , hired with gold . They are very expensive, but can get you out of a tight spot. They replenish their numbers even in hostile territory.",
+                            "children": []
+                        },
+                        {
+                            "text": "Holy orders , hired with piety . They only fight religious enemies, and are free of maintenance when defending.",
+                            "children": []
+                        },
+                        {
+                            "text": "Event troops , important for tribal characters.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Movement commands",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Armies are normally ordered to move by right-clicking. Advanced techniques include:"
+                }
+            ]
+        },
+        {
+            "heading": "Movement speed",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The time taken to move between land provinces is affected by:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Distance between provinces;",
+                            "children": []
+                        },
+                        {
+                            "text": "Terrain : Flat terrain is generally faster to move through;",
+                            "children": []
+                        },
+                        {
+                            "text": "Trade routes :",
+                            "children": [
+                                {
+                                    "text": "Silk Road (+20%)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Trans-Saharan Trade Route (+30%)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Morale ;",
+                            "children": []
+                        },
+                        {
+                            "text": "Commander traits : Commanders increase movement speed depending on their traits, influenced by martial skill:",
+                            "children": [
+                                {
+                                    "text": "Administrator (+10%)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Organizer (+20%)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Way of the Tiger (+30%)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Scorcher ( Zun lodge) (+10%)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Mountain Guardian ( Bön lodge) (+10%)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Aeneator ( Hellenic lodge) (+10%)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Warrior Philosopher bloodline (+15%)",
+                                    "children": [
+                                        {
+                                            "text": "Characters with the Warrior Philosopher bloodline can choose to Drill Troops , gaining the Polished Formation modifier for an additional +10%",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Retreat : Armies in shattered retreat move faster and regain morale faster.",
+                            "children": []
+                        },
+                        {
+                            "text": "Nomadic capital buildings : The \"meat preserver\" and \"riding contests\" buildings increase global movement speed.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Ships",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Ships are used to transport troops, and by raiders to store loot when raiding coastal counties. Each ship carries 100 troops. There is no naval combat or blockading in the game. Ship levies are very expensive when raised, costing 0.45 Wealth per ship per month. Germanic pagans, reformed Germanic pagans with the Sons of Ragnarok doctrine, and reformed pagans with the Sea-Bound doctrine receive a 90% discount to raised ship levies.  Likewise, 'seafaring' cultures (Norse, Swedish, Norwegian, Danish, Norman, & Berber) also receive a 90% discount to raised ship levies.  Due to the immense cost of raised ship levies, those without discounts should dismiss ships when they are not immediately needed."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Ships are provided by:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Shipyards , buildings unlocked with the Shipbuilding technology . In the 867 start, only Germanic pagans, Byzantines and Muslims have this technology. If starting in the 769 bookmark, Norse (the culture) rulers will get an event which gives level 2 shipbuilding tech and shipyards. This happens at the start of the Viking Age, in year 800.",
+                            "children": []
+                        },
+                        {
+                            "text": "Family palaces of patrician families. Feudal kings may create vassal republics as an early source of ships.",
+                            "children": []
+                        },
+                        {
+                            "text": "Naval mercenary bands , after the year 1066, at a very steep cost.",
+                            "children": []
+                        },
+                        {
+                            "text": "Conscripted ships : rulers with overseas holdings can conscript 20 merchant ships for 50g.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Raising Ships",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Raised from the Military screen F6 , or with hotkey v from the holding screen.\nShips are raised in the port a coastal county (assuming shipyard building has been built)."
+                }
+            ]
+        },
+        {
+            "heading": "Selecting Ships",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Ships can be selected individually, or with Alt +drag to select only ships"
+                }
+            ]
+        },
+        {
+            "heading": "Ship Movement",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Ships movement is slightly different than troops' land movement:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Ships move from ports, where they're raised, to the 'center' of sea tiles, by right-clicking anywhere in the sea tile.",
+                            "children": []
+                        },
+                        {
+                            "text": "Next, ships move from the center of a sea tile to the center of another sea tile, by right-clicking the destination tile, just like troops move from county to county.",
+                            "children": []
+                        },
+                        {
+                            "text": "Finally, ships can also move from the center of sea tiles to dock at the port of a 'friendly' county, by right-click the destination county . (If you right-click on the port itself, the game doesn't always realize you meant to land at that port versus sailing to the center of the sea tile.)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: 'friendly means that the county is either owned by the player, owned by a player's ally or liege, or the player and/or ally have sieged and occupied the destination county."
+                }
+            ]
+        },
+        {
+            "heading": "Disbanding Ships",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Ships can disbanded by clicking the Disband button in the ship selection window, or hitting hotkey x ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "NOTE: Like troops, ships should be landed in a friendly port before disbanding or else you risk losing some ships. Remember, right-click the friendly county (i.e. the land) to get a ship to dock at a port."
+                }
+            ]
+        },
+        {
+            "heading": "Loading Troops onto Ships",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Troops can be loaded onto ship in 2 ways:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Ships in a port can load (\"embark\") onto ships immediately (no movement days required), using the embark button on the troop selector, or using hotkey v .",
+                            "children": []
+                        },
+                        {
+                            "text": "Ships in a sea tile must have the troops \"march\" to the ship, which takes 6 days (double-check?). Select the troops and right-click-select the ships to begin the movement.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "NOTE:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Ships must be grouped together ( Alt +drag, then merge ships or use hotkey g ) as a single fleet in order for larger army groupings to load.",
+                            "children": []
+                        },
+                        {
+                            "text": "Sometimes Paradox's \"math\" means that grouping a fleet of \"5\" ships with a fleet of \"10\" ships will create a fleet that will only hold 1400 troops, due to rounding.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Unloading Troops from Ships",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If you've just loaded troops onto ships, you can remove them manually by using the same embark button in the troop selector to unload them. \nWhen ships arrive at a friendly port, ships will automatically unload troops into the friendly county -- even if enemy forces are there!"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If your ships can't dock at a port, because it's an enemy or neutral port, then the ships will stop in the center of the sea tile. Select the ships and then right-click the county where you want the troops to \"march\" ashore."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Again, it takes 6 days for all the troops to land."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "TIPS:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "When troops land after traveling by sea, their morale is reduced by half (double-check) upon landing (perhaps because the troops need to re-organize and/or they're sea-sick?).",
+                            "children": []
+                        },
+                        {
+                            "text": "Additionally, landing troops into combat gives the defenders a large defensive bonus (30%? double-check) against the amphibious assault.",
+                            "children": []
+                        },
+                        {
+                            "text": "Because of the morale hit and the amphibious assault penalty, it is advisable to land your troops in an unoccupied country and let the morale recover before attacking. (Islands with only a couple counties get an inherent defensive bonus!)",
+                            "children": []
+                        },
+                        {
+                            "text": "Landing and immediately sieging is generally fine because your troops' morale will be recovering and the siege events that can deplete morale don't exceed 10% morale penalty and your morale should be recovering quickly anyway.",
+                            "children": []
+                        },
+                        {
+                            "text": "Sometimes it's faster to have troops return to the ships and unload into an adjoining county than it is to march to the next county. (double-check if morale is halved if just using moored ships as rapid transport)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Fog of war",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Fog of war hides troop movements in locations where you do not have immediate vision. The following provide vision in a province and adjacent provinces:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Troops and ships of your realm (including those of your liege and vassals)",
+                            "children": []
+                        },
+                        {
+                            "text": "Holdings in your realm (except those occupied by enemies)",
+                            "children": []
+                        },
+                        {
+                            "text": "Occupied enemy holdings",
+                            "children": []
+                        },
+                        {
+                            "text": "Allied holdings and troops (if you and your ally are both independent, or share the same liege?)",
+                            "children": []
+                        },
+                        {
+                            "text": "Your spymaster (e.g. when sent to Study Technology)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In addition, your Chancellor or Lord Spiritual can provide vision in a single province."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Even with Fog of War, you can see your enemy's total army size on their character screen. You can sometimes learn the locations of their armies as well, by scanning their vassal and courtier lists for \" leading troops in <province>\"."
+                }
+            ]
+        },
+        {
+            "heading": "Warscore",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Your goal is to raise the warscore to 100%, which will force your opponent to accept your demands. Your opponent may offer to surrender before that, but at 100%, choosing to enforce demands ends the war instantaneously. AI enemies will usually accept \"enforce demands\" if you have 80% warscore from occupation , even if other warscore factors are in their favor. Note that if a player does this, they have to wait until the opponent accepts the request before the war ends rather than it being instantaneous (not unlike a lot of other Diplomatic actions , e.g \"Arrange marriage\", \"Invite to court\", etc)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you're on the defensive, or need to bail out of the war, you can also seek White Peace when the war has gone on for a bit and the warscore is still near even."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Warscore can be gained in four ways:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Winning battles . When attacking landed enemies, warscore from battles is capped at 75%, which can be gained by defeating a number of troops equal to the sum of your enemies' fully replenished levies and retinues/horde troops. More warscore when fighting landless rulers (100% for defeating their entire army) and when fighting China using special CBs.",
+                            "children": []
+                        },
+                        {
+                            "text": "Winning sieges and occupying enemy territory. Occupying enemy territory can give up to 120% warscore, with significant bonuses for the enemy's demesne (which tends to be easier to capture due to depleted levies), capital, and the territory contested by the CB. Occupying all enemy holdings gives automatic 100% warscore.",
+                            "children": []
+                        },
+                        {
+                            "text": "Ticking warscore added monthly when:",
+                            "children": [
+                                {
+                                    "text": "Completely occupying the contested title , for CBs that name a title. One side must control all holdings that are de jure part of the target title and de facto part of the warring realms. For defenders, gives 15% warscore per year, starting after 1 year. For attackers, gives 40% warscore per year starting when the title becomes occupied.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The Defender controls all their holdings , for most CBs that do not name a title. This includes CBs that target an entire realm (e.g. Force Vassalization) and CBs that do not target land at all (e.g. Rivalry).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The Attacker controls all their holdings , for Independence, Free Tributary, and Overthrow Ruler wars. Gives 50% warscore per year (reduced to 30% for non-Hellenic pagans), starting immediately.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Holding prisoners . If the leader of a war is captured, warscore becomes 100% in the captor's favour. Captured male close relatives of the war leader also affect the war score by 5%, while the current heir counts for 50%.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Warscore gains from victories in battle or from occupying holdings are larger if they're against the war leader as opposed to their allies. Battles have half their usual warscore value during Great Holy Wars."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Warscore is capped at 99% until the leading side has won one major battle (at least 5% warscore contribution), the war has lasted 3 years, or all enemy territory is occupied. This prevents attackers from \"winning\" with quick sieges while the defenders have their forces elsewhere."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If defensive pacts are enabled, note that fighting pact armies will contribute to warscore, but occupying holdings controlled by pact members will not ."
+                }
+            ]
+        },
+        {
+            "heading": "Battles",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Game Difficulty",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "It is possible to set game difficulty before start. It ranges from very easy to very hard and morale of both your levies and the AI is affected. Note that these are proportions relative to 1. As such, in Very Hard for instance, your armies will have 75% of their original morale, and your enemies' 150%, namely the double of yours. Defeating their armies will thus require armies which have twice their strength or more."
+                },
+                {
+                    "type": "table",
+                    "rows": []
+                }
+            ]
+        },
+        {
+            "heading": "Sieges",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "All holdings have a basic garrison, which increases in size if certain improvements are constructed. Holdings also have a levy which can be raised. When sieging, you will need to have more troops in the county than the defenders have in their garrison plus levy. If the attackers do not have enough men, no progress will ever be made on the siege. Note that a liege can raise his vassals' troops and the vassals' garrisons will show their levy strength as being at full manpower. However, a character who raises the troops from his (or her) own demesne will have those raised levies taken out of the garrison. This means that it is much easier to siege the holdings of a liege who has raised his demesne troops than it is to siege his vassals."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the attackers do have enough troops, every 12 days a tick will count and progress will be made on the siege. Once a siege reaches 100% progress, it will be occupied by the attacker, contributing to warscore. The garrison will be massacred and some wealth will be taken from the holding's owner (12-30 gold, depending on the holding type). Its control will pass over to the attacker, and the garrison will slowly replenish over time. However, the levies won't be restored, which makes occupied holdings easier targets for siege and assault than free ones, and slightly eases their liberation."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the army used for a siege is toggled for raiding, a successful siege will not occupy the holding, but sack it instead. The garrison will be massacred, all the gold stocked in the holding (depending on the riches of the owner) will be taken. A modifier hampering tax will be applied to the holding, but on the plus side the holding won't be able to be pillaged while the modifier is active. However, sieging a sacked holding is usually not difficult (although raiding has to be toggled off, and the army cannot be assigned for raiding again until it returns to friendly territory and the ruler is at peace)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Whether in a war, or just raiding, completed sieges will provide small amounts of piety if attacking/raiding other religions."
+                }
+            ]
+        },
+        {
+            "heading": "Siege speed",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The progress made every 12 days is affected by:"
+                }
+            ]
+        },
+        {
+            "heading": "Assault",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Eventually, the attackers will be able to assault the defending garrison. The amount of time it takes for this option to become available depends on the holding's fortification level and how much the attackers outnumber the defenders. If an assault is ordered, the attackers will start losing large quantities of troops while accelerating the siege progress substantially. Holdings with fort level 6.0 and above cannot be assaulted (this can be changed at the game rules before starting a game); such holdings are usually well upgraded castles. For instance, Constantinople is on early start dates the only holding that cannot be assaulted, with a fort level above 12.0."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When assaulting, it is recommended to have several times the number of troops involved in the attack than the defenders have in their garrison. This will minimize the attacker's casualties, as the defenders are overrun and unable to maintain any level of adequate defense. Assaulting is based on the melee value of the unit, making Pikemen , Heavy infantry and War Elephants rather good at assaults; Heavy cavalry is quite interestingly extremely powerful for assaults. (This is to ensure that nomads are not at a disadvantage, as their horde troops are exclusively cavalry)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Only the commander in the center matters for the assault:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Most important is minimizing the number of days the assault takes. This can be accomplished with morale damage and regular damage bonuses (with traits such as Cruel and Inspiring leader ). Direct leader is effective, regardless of which flanks troops are on.",
+                            "children": []
+                        },
+                        {
+                            "text": "Defense bonuses (with traits such as Patient ) also reduce losses. When raw numeric advantage is enough to ensure a 1-day assault, only defense bonuses are important.",
+                            "children": []
+                        },
+                        {
+                            "text": "Siege leader is not effective for assaults.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Assault results depend mainly on two factors: fortification level and garrison. At Charlemagne start date for instance, most castles can be assaulted even with barely 3-4k soldiers, given you have a Inspiring leader commander, as garrisons hardly exceed 1k in most provinces – especially Eastern ones – and fortifications 4.50."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Another important factor is the amount of troops inside the holding. While the field soldiers will get killed off rather quickly, the numbers of soldiers in garrison is unlikely to decrease significantly anytime before the final day of assault. The quality of the troops also has an influence: Light infantry in tribal holdings get killed easily, while Heavy infantry , Pikemen , Heavy cavalry are very hard to overcome."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Due to the high attrition penalty you suffer in unreformed Pagan lands, assaulting may be a necessity. Once a Pagan holding is captured in the province, the attrition penalty is gone. Seeking out holdings where levies have been raised makes both sieges and assaults faster, as there are fewer defenders. To speed up conquest in Pagan lands, consider letting an Organizer lead when traveling, and a Holy warrior leading the assault."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "On holding types, note that Castles typically have higher fort levels than Cities or Temples; consider sieging Castles and assaulting the other two holding types for a good mix of speed and reduced casualties."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Tribal holdings have fortification levels comparable to those of cities, and few soldiers within. Thus, they are comparatively easy to assault, as even with as little as 2x their numbers, assaulting a tribe will hardly cost you more than one or two hundred soldiers."
+                }
+            ]
+        },
+        {
+            "heading": "Occupying nomad provinces",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Nomad provinces, on the other hand, are instantly occupied. The nomadic capitals have fort levels comparable to tribal ones, making them relatively easy to overcome. However, building a fort or leaving a small unit on place will be necessary to solidify the occupation of nomadic provinces, and occupying them will grant very little warscore if your enemy has vassalised Tribal Lords or Feudal ones, as most of their occupation warscore will lie in these holdings."
+                }
+            ]
+        },
+        {
+            "heading": "The Home Front",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If you are in an offensive war (except Crusades) and raise your vassals ' levies , you will gradually incur a stacking opinion penalty, -1 for every 61 days (approximately two months).  This penalty will increase as long as your vassals' levies are raised, and will slowly decrease at the same rate it increases. So if you're at war for 4 years, your vassals will end up with a -20 opinion of you which takes 4 years to wear off. If you're a long-reigning ruler with high diplomacy and good vassal relations, this is merely annoying. If you're barely keeping a lid on the dissent as it is, this can be extremely problematic. You can avoid this by calling as few of your vassals' troops as possible or by ending the war as quickly as possible."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Additionally, if your personal levies and retinue get depleted, you could have issues with factions , as they measure the strength of their members against the number of troops you can raise.  If half your personal troops are killed off, the power of those factions will increase dramatically, making them more likely to make demands or rebel. This is potentially compounded by more members joining the factions as their opinions of you drop due to the raised levies. Losing many troops is, however, one way to trick a faction - which would normally be too weak - into revolting, thereby allowing you to crush a relatively weak faction and revoke their lands at a mildly convenient time, rather than risking them continuing to gain power and strength and revolting at a truly inconvenient junction. This assumes that you have the wealth to buy mercenaries or that the faction is weak enough to not steamroll assaults through your holdings - you will probably need a bit of time to replenish all those troops you lost, after all."
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There are many strategies you can employ to improve how well you do in war."
+                }
+            ]
+        },
+        {
+            "heading": "Before the war",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Attack a weakened enemy . If your enemy is deeply unpopular with his vassals, has just lost an offensive war, is dealing with a rebellion, or is fighting a war over a different CB, you can beat him more easily. See also Weakening rival realms ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Weaken the enemy further with raids . You can start raiding with a fully prepared army while they scramble to gather their levies."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Keep your enemy's allies out . Attack while their allies are busy. Get their allies to like you more, so they choose not to join the war. In some cases you can end an alliance by murdering either one of the rulers, or one of the married couple tying the realms together. Or, if you're powerful enough, declare separate simultaneous wars against the two allied realms. If their allies are also your allies, try declaring war on a third party and calling your allies into that war - with them on your side in another war, they can't be called against you by your real target.  Allies who are already the primary participant in another war are likely to deal with their other war first."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Make sure your vassals and allies are ready . Your vassals should not have depleted levies and your allies should not be fighting their own wars."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Invite excellent commanders . By the time you reach king rank, you should have at least one organizer , one siege leader , and three excellent flank leaders. Both martial skill and traits matter: see Commander#Strategies ."
+                }
+            ]
+        },
+        {
+            "heading": "Gathering your army",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Raise only the vassal levies you need to avoid unnecessarily angering your vassals. If you only need the troops of a single vassal to fight a war, only raise those troops. This vassal will now be the only one getting annoyed at you, while the rest are unaffected. The other vassals' levies can then be raised later if ever needed. If you're rich enough to support it, you can also consider using only your own levies and retinue, as then no one will be getting annoyed with you; this is not recommended if there are factions against you, as the faction becomes relatively stronger as you lose troops. You can also raise vassal levies for the early part of a war, when the largest battles are fought, and dismiss them during the long siege portion of a war."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Raise vassal levies in the best location . You can raise your vassal's \"liege levies\" in any county belonging to his sub-realm. This is especially powerful if you plan ahead by giving each major vassal a well-placed county (coastal or near your enemies). You can even disband a levy in one place and immediately re-raise it in another; by doing so, you can somewhat replenish their numbers, but will have to wait for their morale to recover."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Consider hiring mercenaries . They can pay for themselves if they allow you to win a defensive war, or allow you to storm castles rather than slowly siege them. If your enemy is weak or you're rich, you could also carry on the war for a while with only mercenaries to let your \"Raised Levies\" penalty tick down. Hire a mercenary group whose army composition matches your needs: light infantry and archers for sieges; pikemen for assaults; heavy cavalry and infantry for winning close battles."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Get allied armies to link with yours . You may have to send some troops over to where your allies are sitting."
+                }
+            ]
+        },
+        {
+            "heading": "Picking your battles",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Target part of an enemy's army while it is split up . While you might not be able to defeat the entire enemy army at once, you're likely to be able to defeat half their army, and the rest is then easy to mop up."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Avoid splitting your army up into pieces smaller than the total size of the enemy army . If you do, you risk losing a large part of your army, and being reduced to a position where you can no longer fight back. If you have a really good reason to do so, go ahead, but make sure you keep the rest of your army close. (You can see your enemy's army size in the ledger , or the realm tree accessible from his portrait.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Outmaneuver your enemy . Organizers and ships do wonders for your ability to control when and where battles are fought. In your home territory, you can also disband levies in order to re-raise them elsewhere."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Take account of terrain . If possible, it's better to be the defender. A close battle is more likely to swing in your favour if you're defending in the mountains or forest and your enemy has to cross a river or strait. Conversely, avoid attacking into defensive terrain if you don't have a large advantage in numbers or quality of troops."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Bait enemies into attacking smaller armies, then send in reinforcements . Once the enemy army is committed to entering the battle province, send in your larger army. If the enemy can't see your reinforcements due to fog of war, even better: you can have your reinforcements already be on the way by the time the battle begins."
+                }
+            ]
+        },
+        {
+            "heading": "When you are losing",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Bait enemies into taking attrition . Using an army smaller than theirs, you can continuously pull back, leaving them in a province where their units will slowly die. Only works against large armies or when playing as pagans . Does not work against the attrition-free doomstacks of the Hordes ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When being chased, consider sacrificing a small number of men to let the rest escape . Let a few men remain while the rest go to another province where they can hopefully recover or merge with a larger army. Make sure you leave more than 4% of the enemy army, as anything lesser than this amount will be destroyed instantly, and will not slow down the enemy's advance."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Disband any levies that are doomed . You'll lose half your men if not in friendly territory, but you won't lose warscore. And you can re-raise the levies immediately in another location."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Order early retreat when losing severely . When morale is depleted, your army is forced to retreat to a destination not under your control. Before this happens, you can order early retreat by right-clicking a province to escape to. You can even retreat onto ships in this manner, preventing the enemy from chasing you down. If your army is much stronger at skirmish than melee, you can use this trick to skip the melee portion of battle."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Evade capture in sieges by moving your capital before declaring war, appointing adult children as commanders, or getting minor children tutored somewhere safe."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you realize you will lose, or are facing multiple wars, try to get white peace . As a defender, securing white peace can be considered a minor victory."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Check what the enemy's CB is . If a powerful neighbor is pressing a minor CB like a single-county claim, surrendering immediately is a viable option: your realm won't be significantly weakened, your armies will be intact, and they can't do anything else to you for 10 years."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Retreat of depleted levies to friendly territory : Levies reinforce while in friendly territory. When fighting neighboring realms, get depleted levies to return to friendly territory for them to reinforce. This is more vital when they need to recover morale as well."
+                }
+            ]
+        },
+        {
+            "heading": "Other strategies",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Bankrupt your enemy . His armies will lose a quarter of their morale, and his mercenaries may turn on him or even join you. You can drain your enemy's cash reserves and deny him income by capturing his demesne holdings. (His yearly income and expenses are shown if you hover over his cash balance, and his budget details are visible in his demesne screen.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Consider what will give you the most warscore . You may be able to get to 100% and enforce demands without certain battles or sieges, or even without really appearing to have the upper hand."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Don't fight offensive and defensive wars at the same time . Vassals will be angered by raised levies as long as an offensive war (except Crusades) is on-going; refrain from declaring offensive wars if you're defending or about to join a Crusade."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "End offensive wars quickly, as the opinion penalties will begin to decrease as long as no offensive wars are active.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If possible, occupy your enemy's capital . If you are attacking a large enemy, it might take them several months to move their army from their current position to their capital - often giving you enough time to siege it down. This may allow you to capture your enemies' children, which gives you warscore without actually having to fight their armies. Useful against enemies which are stronger than you. However, the location of the capital may make this strategy difficult; capitals which are located far away from your borders and have hostile terrain may not be worth the effort."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Don't stop . Just because you have 100% warscore, doesn't mean you need to make peace. Keep going; loot their castles, imprison their nobles, massacre their garrisons. Ravage the land and ensure they won't win the next war (which could be waged by your vassals using their own CBs). However, be sure not to push your advantage too far and allow the enemy to turn the tables."
+                }
+            ]
+        },
+        {
+            "heading": "Summary",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "By outmaneuvering or overpowering the enemy, you'll be able to win most battles, and eventually the war itself. Some overall tips:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Construct buildings to increase the size of your army. More details in the guide on construction",
+                            "children": []
+                        },
+                        {
+                            "text": "Research relevant tech. It can give you the edge you need. More details in the guide on technology",
+                            "children": []
+                        },
+                        {
+                            "text": "Appoint good commanders. Gain good commanders through marriage, invitations , War focus , or grace boons",
+                            "children": []
+                        },
+                        {
+                            "text": "When hiring mercenaries, go for heavy infantry and cavalry",
+                            "children": []
+                        },
+                        {
+                            "text": "If feudal, keep your vassals happy and allow de jure assimilation for more liege levies",
+                            "children": []
+                        },
+                        {
+                            "text": "Strike the right balance between levy law and opinion",
+                            "children": []
+                        },
+                        {
+                            "text": "Don't raise more troops than you need",
+                            "children": []
+                        },
+                        {
+                            "text": "Ambush the enemy if possible",
+                            "children": []
+                        },
+                        {
+                            "text": "Slow down the enemy's advance by sacrificing units if needed",
+                            "children": []
+                        },
+                        {
+                            "text": "Go for the wargoals first",
+                            "children": []
+                        },
+                        {
+                            "text": "Go for 100% warscore ASAP",
+                            "children": []
+                        },
+                        {
+                            "text": "Divide and conquer",
+                            "children": []
+                        },
+                        {
+                            "text": "Utilize the mobility ships give you",
+                            "children": []
+                        },
+                        {
+                            "text": "Avoid attacking across rivers and into hills",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": []
+        }
+    ]
+}
