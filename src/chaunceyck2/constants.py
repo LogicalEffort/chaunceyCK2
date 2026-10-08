@@ -1,7 +1,12 @@
 import os
+from pathlib import Path
 
 DB_PATH = os.environ.get("CHAUNCEY_DB", "ck2_units_sample.db")
 MODEL = os.environ.get("CHAUNCEY_MODEL", "llama3.1")
+EMBED_MODEL = "nomic-embed-text"
+COLLECTION = "ck2_wiki"
+
+CHROMA_DIR = str(Path(__file__).resolve().parents[2] / "db")
 
 SYSTEM_PROMPT = """You are Chauncey, an expert on the grand strategy game Crusader Kings II.
 Answer questions using ONLY data from the CK2 SQLite database, which you access with tools:

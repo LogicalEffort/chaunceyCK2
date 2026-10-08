@@ -8,8 +8,6 @@ def build_agent():
     llm = ChatOllama(
         model=MODEL,
         temperature=0,
-        # Deep agents ship a long built-in system prompt; Ollama's default context
-        # window is too small and silently truncates it. Raise it.
         num_ctx=16384,
     )
     return create_agent(
