@@ -1,0 +1,2680 @@
+{
+    "pageid": 40,
+    "title": "Warfare",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Please help with verifying or updating older sections of this article. At least some were last verified for version 3.0."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Bloodlines are only available with the Holy Fury DLC."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Bloodlines are modifiers that are passed down the generations from one specific character, the Founder - they work much like a dynasty, but with several more rules and caveats. They symbolize the widespread renown a certain character might have, and the staying power of stories surrounding their feats. Having a Bloodline in your character will convey a bonus based on who founded it, and there are many different Bloodlines to be found (and Founded)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some can be gained through special actions, such as by building a Legend as a Warrior Lodge Hero, others can be unlocked by performing impressive feats, such as being an extraordinarily dedicated Viking raider or restoring Israel."
+                }
+            ]
+        },
+        {
+            "heading": "Bloodline Effects",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "As a rule of thumb, raw effects (such as personal combat skill increase, or monthly prestige) stack between multiple bloodlines, while special effects do not."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Special effects are handled as flags by the game and having the same flag set multiple times doesn't do anything for you. However, similar effects granted NOT by bloodlines should be handled separately and thus should “stack” with effects from bloodlines."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example forged \"Conqueror\" bloodline's and warrior lodge \"Raider\" bloodline's artifact looting and prisoner capturing effects will not stack with each other, but they DO stack with similar effect from being a level 2+ member of a warrior lodge."
+                }
+            ]
+        },
+        {
+            "heading": "Gaining a bloodline",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Whether or not a bloodline is passed on to descendants depends on two specific properties of the bloodline in question: Inheritance and Transfer . First step is to find the bloodline that interests you."
+                }
+            ]
+        },
+        {
+            "heading": "Searching",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The ledger includes a page detailing all bloodlines that have existed in the history of the current game, regardless of how they were formed, in order of most living descendants. Clicking on a bloodline will take you to the character profile of the bloodline's founder. From there you can pull up the Bloodlines menu by clicking the icon between the artifact Treasury and Great Works menus. In the Bloodlines menu you can then click the blood icon next to the founder's portrait to pull up a menu with each living member holding that particular bloodline."
+                }
+            ]
+        },
+        {
+            "heading": "Inheritance",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Bloodlines aren't truly genetic but rather reputation-based, as such depending on the type of bloodline in question it can be inherited patrilineally or matrilineally. Which type of Inheritance is used generally depends on the gender of the founder of said bloodline, as it is believed certain type of blood is only \"potent\" in a certain gender."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If a bloodline is patrilineal, it can only normally be inherited by both sons and daughters. but only from fathers ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Conversely if it is matrilineal, then the bloodline can only normally be inherited by both sons and daughters, but only from mothers . If a woman takes a consort, her children will inherit all her bloodlines."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In the code there are also universal and individual bloodlines (all_descendants/no_inheritance), the former can be inherited from both parents, the latter can not be inherited at all."
+                }
+            ]
+        },
+        {
+            "heading": "Transfer",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A natural corollary from the rules stated above is that each child can only have one type of bloodlines each, and they can only pass on one of it. However, more bloodlines can be inherited per person through the use of bloodline transfer (override)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This describes the situation where the marriage in question is a matrilineal marriage (or there are no known fathers), in which case all bloodlines from all parties are treated temporarily as universal bloodlines. Meaning, for this specific matrilineal marriage, all children get all bloodlines from both parents."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that, in order to keep the patrilineal and matrilineal bloodlines together for more than one generation, the children of many bloodlines must also enter into matrilineal marriages. But even if they didn't, all the \"merged\" patrilineal bloodlines will still stay merged with the sons, and the \"merged\" matrilineal bloodlines still stay merged with the daughters. Assuming the family produced both sons and daughters, it could be trivial to bring both of the merged bloodlines back together again."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Additionally, this means governments with enatic succession is much better suited in the creation of a \"super bloodline\", as they should be marrying matrilinealy anyway, and with raiding they can take male consorts with bloodlines. In contrast, agnatic governments will never be able to have a super bloodline in power forever, not without inbreeding."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Finally, consortage effectively acts like a semi-matrilineal marriage -- the consort can only pass down patrilineal bloodlines, even though their woman will pass down both patrilineal and matrilineal bloodlines."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The following table provides examples of each of these situations:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Relationship",
+                            "Father",
+                            "Mother",
+                            "Offspring"
+                        ],
+                        [
+                            "(Patrilineal) Marriage, Concubinage",
+                            "Male Character with Bloodline",
+                            "Female Character",
+                            "Offspring will receive a Patrilineal Bloodline. Offspring will not receive a Matrilineal Bloodline."
+                        ],
+                        [
+                            "Male Character",
+                            "Female Character with Bloodline",
+                            "Offspring will not receive a Patrilineal Bloodline. Offspring will receive a Matrilineal Bloodline."
+                        ],
+                        [
+                            "Known birth outside of Marriage",
+                            "Known Male Character with Bloodline",
+                            "Female Character",
+                            "Offspring may or may not receive the Patrilineal Bloodline, depending on if bastard inheritance is allowed. Offspring will not receive a Matrilineal Bloodline"
+                        ],
+                        [
+                            "Known Male",
+                            "Female Character with Bloodline",
+                            "Offspring will receive a Matrilineal Bloodline."
+                        ],
+                        [
+                            "Unknown birth outside of Marriage",
+                            "Unknown Male Character",
+                            "Female Character with Bloodline",
+                            "Bloodlines will be treated as universal. Offspring will receive Patrilineal Bloodline(s) and Matrilineal Bloodline(s) of the mother."
+                        ],
+                        [
+                            "Matrilineal Marriage",
+                            "Male Character with Bloodline",
+                            "Female Character",
+                            "Bloodlines will be treated as universal. Offspring will receive the Patrilineal Bloodline(s) and Matrilineal Bloodline(s) of the father, provided the bloodline allows for it (almost all bloodlines do)."
+                        ],
+                        [
+                            "Male Character",
+                            "Female Character with Bloodline",
+                            "Bloodlines will be treated as universal. Offspring will receive the Patrilineal Bloodline(s) and Matrilineal Bloodline(s) of the mother, provided the bloodline allows for it (almost all bloodlines do)."
+                        ],
+                        [
+                            "Consortage",
+                            "Male Character with Bloodline",
+                            "Female Character",
+                            "Offspring will inherit all patrilineal bloodlines of the father"
+                        ],
+                        [
+                            "Male Character",
+                            "Female Character with Bloodline",
+                            "Offspring will inherit all of the mother's bloodlines, whether patrilineal or matrilineal"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Historical bloodlines",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Certain famous historical characters start with bloodlines, or found them at a certain point in their life. As bloodlines come and go, you’ll have a different setup depending on what bookmark you choose to start in."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some historical bloodlines might be founded after the game started. Since the founder may not be the historical founder, and may have a different nickname, the bloodline may have a different name. Most of those bloodlines will be named as Blood of <founder's first name> <founder's nickname> ."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Ragnarr 'Loðbrok' will gain his nickname and bloodline 780 if the player starts in 769, and in 818 if the player starts at a later date.",
+                            "children": []
+                        },
+                        {
+                            "text": "If Árpád succeeds in his Magyar Conquest of Hungary against Bulgaria he’ll found his bloodline.",
+                            "children": []
+                        },
+                        {
+                            "text": "If William succeeds in his invasion of England he’ll found his bloodline.",
+                            "children": []
+                        },
+                        {
+                            "text": "Sabuktigin, Seljuk and Timur will be created with their bloodline when corresponding Turkic Conqueror events fire.",
+                            "children": []
+                        },
+                        {
+                            "text": "Temüjin will gain, or be created with his bloodline when Mongol Invasion fires.",
+                            "children": []
+                        },
+                        {
+                            "text": "Become Genghis Khan decision which historically done by Temüjin Borjigin will give the character Genghis Khan bloodline.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Founder",
+                            "Founding Date",
+                            "Inheritance",
+                            "Opinions",
+                            "Other modifiers",
+                            "Flavor Text"
+                        ],
+                        [
+                            "Blood of Caradog",
+                            "Caradog Catuvellauni",
+                            "21",
+                            "Patrilineal",
+                            "+5 Welsh",
+                            "+5% Morale Defence +0.20 Monthly Prestige +5 Personal Combat Skill",
+                            "An ancient British warrior. King of the Catuvellauni tribe when the Romans invaded Britain, he led a resistance that nearly prevented them from conquering the island."
+                        ],
+                        [
+                            "Parthian Blood",
+                            "Erdewan Karen-Pahlav",
+                            "70",
+                            "Patrilineal",
+                            "+5 Iranian",
+                            "+0.20 Monthly Prestige +5 Personal Combat Skill Periodically attracts the servitude of Great Warriors (if Zoroastrian )",
+                            "A descendant of one of the seven Parthian clans under Sassanid rule. The seven clans, or houses, played key importance in Persian history."
+                        ],
+                        [
+                            "Blood of Sasan",
+                            "Sasan Sassanid",
+                            "130",
+                            "Patrilineal",
+                            "+5 Persian +5 Zoroastrian",
+                            "+0.20 Monthly Prestige +5 Personal Combat Skill Enable Sky Burials",
+                            "The founder of the Sassanid dynasty. Known as a great warrior, hunter and high priest of the Zoroastrian faith."
+                        ],
+                        [
+                            "Parthian Blood",
+                            "Mirian Khosroviani",
+                            "265",
+                            "Patrilineal",
+                            "+5 Iranian",
+                            "+0.20 Monthly Prestige +5 Personal Combat Skill Periodically attracts the servitude of Great Warriors (if Miaphysite )",
+                            "A descendant of one of the seven Parthian clans under Sassanid rule. The seven clans, or houses, played key importance in Persian history."
+                        ],
+                        [
+                            "Blood of Bagrat",
+                            "Bagrat Bagrationi",
+                            "280",
+                            "Patrilineal",
+                            "+5 Armenian +5 Georgian",
+                            "+0.10 Monthly Prestige",
+                            "One of the oldest Christian dynasties in the world. The children of Bagrat have made Georgia flourish throughout the centuries."
+                        ],
+                        [
+                            "Blood of Vortigern",
+                            "Gwrtheyrn Gwerthrynion",
+                            "350",
+                            "Patrilineal",
+                            "+5 Anglo-Saxon +5 Cruel",
+                            "+0.10 Monthly Prestige +5 Personal Combat Skill",
+                            "A king in sub-Roman Britain. He was a strong leader, but is notorious for hiring the Saxons as mercenaries and allowing them to enter the Isle of Britain."
+                        ],
+                        [
+                            "Blood of Niall 'of the Nine Hostages'",
+                            "Niall Ua Neill Noigiallaich",
+                            "400",
+                            "Patrilineal",
+                            "",
+                            "+0.10 Monthly Prestige +5 Personal Combat Skill +5.0% Light Infantry Morale Allows Tanistry Succession May gain Erudite",
+                            "A legendary high king of Ireland and founder of the Ui Neill dynasty. During his rule he won several battles against the Saxons, Scots, Gauls, and even the Romans."
+                        ],
+                        [
+                            "Merovingian Blood",
+                            "Mérovech de Merohingi",
+                            "410",
+                            "Patrilineal",
+                            "+5 Frankish +5 French",
+                            "+0.10 Monthly Prestige Periodically attracts the servitude of Great Warriors (if Old Germanic )",
+                            "The legendary founder of the Merovingian dynasty. He joined his tribal forces with Rome to drive the Huns out of Gaul, ending Atilla's ambitions in the area."
+                        ],
+                        [
+                            "Parthian Blood",
+                            "Bahram Mihran",
+                            "553",
+                            "Patrilineal",
+                            "+5 Iranian",
+                            "+0.20 Monthly Prestige +5 Personal Combat Skill Periodically attracts the servitude of Great Warriors (if Zoroastrian )",
+                            "A descendant of one of the seven Parthian clans under Sassanid rule. The seven clans, or houses, played key importance in Persian history."
+                        ],
+                        [
+                            "Ashina Blood",
+                            "Muhan Ashina",
+                            "560",
+                            "Patrilineal",
+                            "+5 Tengri /Reformed Tengri +5 Altaic",
+                            "+0.20 Monthly Prestige +5 Personal Combat Skill Children can prove themselves as Mercenaries .",
+                            "The Ashina clan rose to prominence after revolting against the Rouran Khaganate. Members of the clan are considered sacred, if not divine, by the people of the steppe."
+                        ],
+                        [
+                            "Blood of Attila",
+                            "Kubrat Dulo",
+                            "600",
+                            "Patrilineal",
+                            "+5 Bolghar +5 Bulgarian",
+                            "+0.10 Monthly Prestige +8 Personal Combat Skill +10% Horse Archers Morale Children can prove themselves as Mercenaries .",
+                            "Kubrat claims descendance from Attila - one of the most feared enemies of ancient Rome, who united numerous tribal clans under his banner."
+                        ],
+                        [
+                            "Solomonic Blood",
+                            "Mikael Solomonid",
+                            "620",
+                            "Patrilineal",
+                            "+5 East African +5 Israelite +5 Miaphysite",
+                            "+0.10 Monthly Prestige",
+                            "The Solomonid Dynasty claim direct descendance from the biblical Solomon, a king of Israel famed for legendary wisdom and wealth."
+                        ],
+                        [
+                            "Blood of Songtsen Gampo",
+                            "Songtsen Gampo",
+                            "622",
+                            "Patrilineal",
+                            "+5 Bödpa",
+                            "+0.10 Monthly Prestige Enable Sky Burials Increased Culture Conversion speed to Bödpa from Zhangzhung and Sumpa",
+                            "The founder of the Tibetan Empire who unified several Tibetan kingdoms under his rule. He also introduced Buddhism to Tibet and created the Tibetan Alphabet."
+                        ],
+                        [
+                            "Carolingian Blood",
+                            "Charles Martel",
+                            "1 November, 732",
+                            "Patrilineal",
+                            "+5 Catholic",
+                            "+0.20 Monthly Prestige +8 Personal Combat Skill Periodically attracts the servitude of Great Warriors (if Catholic )",
+                            "A brilliant warrior as well as a great statesman, he established the Franks as undisputed masters of Gaul and led the army that defeated the Muslims in the battle of Tours."
+                        ],
+                        [
+                            "Blood of Gopala",
+                            "Gopala Pala",
+                            "734",
+                            "Patrilineal",
+                            "+5 Indo-Aryan",
+                            "+0.10 Monthly Prestige",
+                            "The founder of the Pala dynasty, said to be descended from the mythical Suryavansha (Sun Dynasty). He came to rule a massive kingdom, encompassing all of Bengal."
+                        ],
+                        [
+                            "Blood of Ragnarr 'Lodbrok'",
+                            "Ragnarr af Munso",
+                            "818",
+                            "Patrilineal",
+                            "+5 Norse +5 Viking +5 Pirate +5 Ravager +5 Sea king +5 Sea queen",
+                            "+8 Personal Combat Skill Raiding can give the Viking Traits",
+                            "A legendary viking hero. He led numerous raids against the Franks and Anglo-Saxons, going so far as to sail up the Seine and successfully lay siege to Paris."
+                        ],
+                        [
+                            "Blood of Rurik",
+                            "Rurik Rurikid",
+                            "830",
+                            "Patrilineal",
+                            "+5 East Slavic",
+                            "+0.10 Monthly Prestige",
+                            "The founder of the Rurikid Dynasty. He was a Varangian chieftain who ruled over the Rus' and built several settlements, the most famous of which lies in Novgorod."
+                        ],
+                        [
+                            "Blood of Basil",
+                            "Basileios I Makedon",
+                            "836, May 25",
+                            "Patrilineal",
+                            "+5 Greek +5 Orthodox",
+                            "+0.10 Monthly Prestige",
+                            "One of the greatest of the East Roman emperors, his rule brought about an era of glory, prosperity, art, and imperial might."
+                        ],
+                        [
+                            "Blood of Dyre 'the Stranger'",
+                            "Dyre Oskyldr",
+                            "845",
+                            "Patrilineal",
+                            "+5 Slavic /Reformed Slavic",
+                            "+0.10 Monthly Prestige +8 Personal Combat Skill",
+                            "A legendary Varangian warrior. He ruled over the Kiev area, becoming its first king."
+                        ],
+                        [
+                            "Blood of Bayajidda and Magajiva",
+                            "Magajiva Daura",
+                            "867",
+                            "Matrilineal",
+                            "+5 Hausa",
+                            "+5 Personal Combat Skill Enable Enatic-Cognatic Succession",
+                            "The Daura claim descent from Bayajidda and Magajiva – the first of whom slew a great serpent, and the second of whom instituted the matriarchal system of the Hausa people."
+                        ],
+                        [
+                            "Blood of Haraldr 'Fairhair'",
+                            "Haraldr Yngling",
+                            "867",
+                            "Patrilineal",
+                            "+5 Norwegian +5 Norse +5 Attractive",
+                            "+5 Personal Combat Skill",
+                            "A legendary ruler who through skill and military might united the Kingdom of Norway and the people therein."
+                        ],
+                        [
+                            "Blood of Árpád",
+                            "Árpád Árpád",
+                            "868",
+                            "Patrilineal",
+                            "+5 Hungarian +5 Ambitious",
+                            "+0.10 Monthly Prestige +5 Personal Combat Skill",
+                            "The Kende (sacred ruler) of the Magyar tribes. He went on to conquer the Carpathian Basin, making a new home for the Hungarian people."
+                        ],
+                        [
+                            "Blood of Sa'id",
+                            "Sa'id Jannabid",
+                            "899",
+                            "Patrilineal",
+                            "+5 Qarmatian",
+                            "+0.25 Monthly Prestige +5 Personal Combat Skill Easier to create Qarmatian caliphate",
+                            "He is famed for conquering and establishing the Qarmatian Republic. They would go on to haunt their neighbors for years to come."
+                        ],
+                        [
+                            "Blood of Abdullah",
+                            "Abdullah Fatimid",
+                            "909",
+                            "Patrilineal Bastard can't inherit",
+                            "+5 Shia",
+                            "+0.25 Monthly Prestige +5 Personal Combat Skill Periodically attracts the servitude of Great Warriors (if Shia ) Easier to create Shia caliphate",
+                            "During the tumultuous years of the Abbasid caliphate, the Fatimids rose up in Ifriqiya and established their own Caliphate under Abdullah ibn Hussayn Fatimid."
+                        ],
+                        [
+                            "Blood of Boleslav 'the Cruel'",
+                            "Boleslav Premyslid",
+                            "915",
+                            "Patrilineal",
+                            "+5 Bohemian",
+                            "+0.10 Monthly Prestige +5 Personal Combat Skill",
+                            "Despite his involvement in the murder of his elder brother, Boleslav was a tenacious leader who significantly strengthened the Bohemian realm."
+                        ],
+                        [
+                            "Blood of Æthelstan",
+                            "Æthelstan of Wessex",
+                            "927",
+                            "Patrilineal",
+                            "+5 Anglo-Saxon",
+                            "+0.25 Monthly Prestige +5 Personal Combat Skill",
+                            "Famed and respected as the ruler who pushed the vikings out of the British Isles, and the first King of England."
+                        ],
+                        [
+                            "Blood of Mardavij",
+                            "Maravij Ziyarid",
+                            "930",
+                            "Patrilineal",
+                            "+5 Mazdan",
+                            "+0.25 Monthly Prestige +5 Personal Combat Skill",
+                            "He was the last Zoroastrian ruler who fought back against the Muslims in Persia, trying to restablish the Sasanian Empire."
+                        ],
+                        [
+                            "Blood of Rudolf",
+                            "Rudolf Welf",
+                            "933",
+                            "Patrilineal",
+                            "+5 German +5 Occitan",
+                            "+0.25 Monthly Prestige",
+                            "Known for combining the two separate parts of Burgundy to form the new Kingdom of Arles."
+                        ],
+                        [
+                            "Blood of Brian",
+                            "Brian Ua Briain",
+                            "941",
+                            "Patrilineal",
+                            "+5 Irish",
+                            "+0.10 Monthly Prestige +5 Personal Combat Skill Allows Tanistry Succession",
+                            "An Irish high king of legend. He managed to unify the warring leaders of Ireland and end the Viking occupation of the isle."
+                        ],
+                        [
+                            "Blood of Sabuktigin",
+                            "Sabuktigin Ghaznavid",
+                            "942",
+                            "Patrilineal",
+                            "+5 Turkish +5 Afghan",
+                            "+0.10 Monthly Prestige +5 Personal Combat Skill",
+                            "The founder of the Gahznavid dynasty. In his youth he lived as a slave, but in later life came to rule a mighty kingdom which expanded far towards India."
+                        ],
+                        [
+                            "Blood of Seljuk",
+                            "Seljuk Seljuk",
+                            "960",
+                            "Patrilineal",
+                            "+5 Turkish +5 Persian +5 Strategist",
+                            "+0.10 Monthly Prestige +5 Personal Combat Skill",
+                            "An Oghuz Turkic warlord, Seljuk started out an officer in the Khazar army. He later went on to found his own clan, seeking adventure away from his ancestral home."
+                        ],
+                        [
+                            "Blood of Otto 'the Great'",
+                            "Otto Liudolfinger",
+                            "962",
+                            "Patrilineal",
+                            "+5 Vassal",
+                            "+0.25 Monthly Prestige +5 Personal Combat Skill",
+                            "Conquered Italy, regained the old lands of the Holy Roman Empire and raised its banners once more."
+                        ],
+                        [
+                            "Blood of Boleslaw 'the Brave'",
+                            "Boleslaw Piast",
+                            "967",
+                            "Patrilineal",
+                            "+5 Polish +5 Brave",
+                            "+0.10 Monthly Prestige +5 Personal Combat Skill",
+                            "A remarkable politician, strategist, and statesman. He successfully turned Poland into a country as powerful as the realms of the west."
+                        ],
+                        [
+                            "Blood of Dmitar-Zvonimir",
+                            "Dmitar-Zvonimir Trpimirovic",
+                            "1030",
+                            "Patrilineal",
+                            "+5 Croatian",
+                            "+0.10 Monthly Prestige",
+                            "A peaceful ruler who rose to kingship through skilled diplomacy. His rule saw huge economic and cultural advancements take place in Croatia."
+                        ],
+                        [
+                            "Blood of Irâcêntira 'the Great'",
+                            "Irâcêntira Chola",
+                            "1040",
+                            "Patrilineal",
+                            "+5 Hindu",
+                            "+0.10 Monthly Prestige +5% War Elephants Morale Increased Religion Conversion speed to Hindu",
+                            "One of the greatest rulers India has ever seen. His conquests included the Andamans, Sri Lanka, the Maldives and even territories in Burma, Thailand and Indonesia."
+                        ],
+                        [
+                            "Blood of El Cid",
+                            "Rodrigo de Vivar",
+                            "1043",
+                            "Patrilineal",
+                            "+5 Iberian",
+                            "+5% Morale Defence +5 Personal Combat Skill",
+                            "A military leader and hero of great renown. The Moors dubbed him 'El Cid' ('the Lord'), while the Christians called him 'El Campeador' ('Outstanding Warrior')."
+                        ],
+                        [
+                            "Blood of Matilde de Canossa",
+                            "Matilde de Canossa",
+                            "(Available to earn as Matilde de Canossa from January 1st, 1046 - July 24th, 1115.)",
+                            "Matrilineal Bastard can't inherit",
+                            "+5 Religious Head Opinion",
+                            "+0.05 Monthly Piety Characters of this bloodline more readily take vows (See Action/Activity Bloodlines below for more details on specifics of creating this bloodline)",
+                            ""
+                        ],
+                        [
+                            "Blood of Arwa",
+                            "Arwa Sulayhid",
+                            "1048, Apr 4",
+                            "Matrilineal",
+                            "+5 Bedouin",
+                            "+0.10 Monthly Piety",
+                            "A powerful woman, Arwa was known for her intelligence and knowledge of both heavenly and earthly affairs. She also engaged in several building projects across Yemen."
+                        ],
+                        [
+                            "Blood of William 'The Conqueror'",
+                            "William de Normandie",
+                            "1066",
+                            "Patrilineal",
+                            "+5 Norman +5 English +5 Bastard +5 Legit_bastard",
+                            "Legitimizing Bastards is Free",
+                            "Born an illegitimate bastard, he more than proved himself after successfully claiming the throne of England - becoming known as 'the Conqueror'."
+                        ],
+                        [
+                            "Blood of Yusuf",
+                            "Yusuf Almoravid",
+                            "1071",
+                            "Patrilineal",
+                            "+5 Andalusian",
+                            "+0.10 Monthly Prestige +5 Personal Combat Skill",
+                            "Yusuf was invited by the emirs of Andalusia to come to Iberia and stop the Christian onslaught. He won, and established a vast realm extending from Ghana to Toledo."
+                        ],
+                        [
+                            "Blood of Alexios",
+                            "Alexios Komnenos",
+                            "1081",
+                            "Patrilineal",
+                            "+5 Greek",
+                            "+0.10 Monthly Prestige +5 Personal Combat Skill",
+                            "A great emperor who fought both the Seljuk Turks and the Normans. His reforms stopped the imperial decline, restoring much of the former glory."
+                        ],
+                        [
+                            "Blood of Bohemond",
+                            "Bohemond de Hauteville",
+                            "1098, June 3",
+                            "Patrilineal",
+                            "",
+                            "+0.10 Monthly Prestige +5 Personal Combat Skill Higher chance to create Crusader States",
+                            "A major leader of the First Crusade, Bohemond used his legendary martial skill and political cunning to capture Antioch and establish a kingdom for himself in the Levant."
+                        ],
+                        [
+                            "Blood of Aliénor",
+                            "Aliénor de Poitou",
+                            "1122",
+                            "Matrilineal",
+                            "+5 General Opinion",
+                            "+5 Personal Combat Skill",
+                            "One of the most powerful women of western Europe. She was a patron of literature and a military commander, as well as a leader in the Second Crusade."
+                        ],
+                        [
+                            "Blood of Alfonso",
+                            "Alfonso d'Ivrea",
+                            "1126",
+                            "Patrilineal",
+                            "+5 Castilian",
+                            "+0.20 Monthly Prestige",
+                            "Lord over half of Iberia, Alfonso claimed the title \"Emperor of all Spain\" and sought to unify the peninsula under his rule. He was also known as a patron of arts."
+                        ],
+                        [
+                            "Blood of Roger",
+                            "Roger de Hauteville",
+                            "1130, Dec 25",
+                            "Patrilineal",
+                            "+5 Latin",
+                            "+0.10 Monthly Prestige +5 Personal Combat Skill",
+                            "Last of the great Norman conquerors, Roger unified Sicily under his rule, transforming it into a local power responsible for raids across the Muslim lands."
+                        ],
+                        [
+                            "Blood of Gartzia 'the Restorer'",
+                            "Gartzia de Navarra",
+                            "1134, Sept 27",
+                            "Patrilineal",
+                            "+5 Basque",
+                            "+0.10 Monthly Prestige +5 Personal Combat Skill",
+                            "Warrior-king of the Basques and a major sponsor of the Reconquista, Garcia restored Basque control over Navarra after a long period of Aragonese domination."
+                        ],
+                        [
+                            "Blood of Afonso 'the Conqueror'",
+                            "Afonso de Bourgogne",
+                            "1139",
+                            "Patrilineal",
+                            "+5 Portuguese",
+                            "+0.10 Monthly Prestige",
+                            "Vanquisher of both Moors and Leonese in his campaigns for Portuguese independence, Afonso cunningly battled many enemies to establish the roots of his own realm."
+                        ],
+                        [
+                            "Blood of Friedrich",
+                            "Friedrich von Hohenstaufen",
+                            "1152",
+                            "Patrilineal",
+                            "+5 German",
+                            "+0.20 Monthly Prestige +5 Personal Combat Skill",
+                            "An able ruler, Frederick 'Barbarossa' was known both as a warrior who sought to control the rebel Italian princes and as a skilled lawmaker."
+                        ],
+                        [
+                            "Blood of Abu Ya'qub",
+                            "Abu Ya'qub Almohad",
+                            "1184",
+                            "Patrilineal",
+                            "+5 Berber",
+                            "+5 Personal Combat Skill +0.10 Monthly Prestige",
+                            "Leader of the Almohad dynasty, the reign of Abu made both science and trade prosper, with his administrative and military skills being successful in halting the Reconquista."
+                        ],
+                        [
+                            "Blood of Richard 'the Lionheart'",
+                            "Richard Plantagenet",
+                            "1187",
+                            "Patrilineal",
+                            "+5 Catholic",
+                            "+0.10 Monthly Piety +5 Personal Combat Skill",
+                            "A great military leader and warrior who became known as 'the Lionheart'. He was a figurehead of the Third Crusade, scoring numerous victories against the Muslims."
+                        ],
+                        [
+                            "Blood of Saladin",
+                            "Saladin Ayyubid",
+                            "1187, October 2",
+                            "Patrilineal",
+                            "+5 Muslim",
+                            "+5% Morale Defence +0.10 Monthly Prestige",
+                            "The first Sultan of Egypt and Syria. He successfully led the Muslim military campaign against the Crusader States in the Levant."
+                        ],
+                        [
+                            "Blood of Philippe 'the Great'",
+                            "Philippe Capet",
+                            "1190",
+                            "Patrilineal",
+                            "",
+                            "+5% Damage Against Religious Enemies +5 Personal Combat Skill +0.10 Monthly Piety",
+                            "A pious and respected leader of the Third Crusade, Philippe fought against both heretics and infidels with great success."
+                        ],
+                        [
+                            "Blood of Enrico",
+                            "Enrico Dandolo",
+                            "1202, Oct 1",
+                            "Patrilineal",
+                            "+10 City Vassal -5 Byzantine",
+                            "",
+                            "The mastermind behind the Fourth Crusade and the sack of Constantinople, Enrico is remembered as one of the most successful and prosperous doges Venice ever had."
+                        ],
+                        [
+                            "Blood of Baudouin",
+                            "Baudouin Van Vlaanderen",
+                            "1204",
+                            "Patrilineal",
+                            "+5 Latin -5 Byzantine",
+                            "+0.10 Monthly Prestige Can Castrate others Can Blind others",
+                            "A leader of the Fourth Crusade, Baldouin fought alongside the Venetians to topple the last remnant of the Roman Empire, becoming the first Latin Emperor of Constantinople."
+                        ],
+                        [
+                            "Blood of Temüjin",
+                            "Temüjin Borjigin",
+                            "1206",
+                            "Patrilineal",
+                            "+8 Mongol +5 Hunter",
+                            "+0.20 Monthly Prestige +8 Personal Combat Skill Allows Sky Burials Can also be formed by the Become Genghis Khan decision.",
+                            "The founder of the Mongol Empire, proclaimed 'Genghis Khan' (Universal Ruler) by the many subjugated peoples of the steppes. An extremely brutal and efficient leader."
+                        ],
+                        [
+                            "Blood of Alexandr",
+                            "Alexandr Rurikid",
+                            "1220, May 30",
+                            "Patrilineal",
+                            "+5 Russian +5 Orthodox",
+                            "+5 Personal Combat Skill",
+                            "A legendary military leader who won scores of military victories against invading Germans and Swedes. He was later canonized as a saint."
+                        ],
+                        [
+                            "Blood of Jaume 'the Conqueror'",
+                            "Jaume de Barcelona",
+                            "1243",
+                            "Patrilineal",
+                            "+5 Catalan +5 Occitan",
+                            "+0.10 Monthly Prestige +8 Personal Combat Skill",
+                            "Known as James the Conqueror, he established dominance over the Mediterranean Sea. He is also remembered as a sponsor of artists and a notorious lawmaker."
+                        ],
+                        [
+                            "Blood of Baibars",
+                            "Baibars Bunduqdarid",
+                            "1260, Oct 24",
+                            "Patrilineal",
+                            "+5 Egyptian",
+                            "+0.10 Monthly Prestige +5 Personal Combat Skill",
+                            "Once sold in a slave market, Baibars would eventually become the man responsible for both defeating the Mongol advance and removing the Crusader States from the Levant."
+                        ],
+                        [
+                            "Blood of Muhammad",
+                            "Muhammad Nasrid",
+                            "1266",
+                            "Patrilineal",
+                            "+5 Andalusian +5 Castilian",
+                            "+0.10 Monthly Prestige",
+                            "Known as a champion of the faithful, diplomat and friend to Christians, Muhammad managed to keep alive the light of Al-Andalus despite the Castilian invasion."
+                        ],
+                        [
+                            "Blood of William",
+                            "William Wallace",
+                            "1271",
+                            "Patrilineal",
+                            "+5 Scottish",
+                            "+5% Morale Defence +8 Personal Combat Skill",
+                            "A brave knight who fought in the Wars of Scottish Independence. After defeating an English army, he was appointed 'Guardian of Scotland'."
+                        ],
+                        [
+                            "Blood of Osman",
+                            "Osman Ottoman",
+                            "1281",
+                            "Patrilineal",
+                            "+10 Turkish",
+                            "+0.20 Monthly Prestige +8 Personal Combat Skill",
+                            "Founder of the Ottoman dynasty, Osman rose to prominence as a daring commander, achieving victories against both Greeks and fellow Turks in his campaigns."
+                        ],
+                        [
+                            "Blood of Musa 'the Lion'",
+                            "Musa Keita",
+                            "1312",
+                            "Patrilineal",
+                            "+5 Mandé",
+                            "-10% Build Time +0.20 Monthly Prestige",
+                            "A scholar and conqueror, Musa became a legend in the Islamic world for the vast wealth and majesty of his African kingdom. He also sponsored many construction projects."
+                        ],
+                        [
+                            "Blood of Thugluq",
+                            "Thugluq Tughluq",
+                            "1320, Oct 1",
+                            "Patrilineal",
+                            "+3 Dravidian +3 Indo-Aryan",
+                            "+0.10 Monthly Prestige +5 Personal Combat Skill",
+                            "Founder of the Tughluq dynasty, he expanded Muslim reach across the Indian subcontinent and successfully repelled the Mongol menace."
+                        ],
+                        [
+                            "Blood of Timur Timurid",
+                            "Timur Timurid",
+                            "1350",
+                            "Patrilineal",
+                            "+5 Mongol +5 Clubfooted",
+                            "+5% Morale Offence +0.10 Monthly Prestige +5 Personal Combat Skill Children can prove themselves as Mercenaries",
+                            "In his native tongue, Timur means 'Iron'. Despite being crippled by two arrows, he was both a military genius and a statesman capable of instilling great loyalty."
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Saintly / Ancestor Veneration Bloodlines",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These bloodlines are created posthumously when a character achieves sainthood or a reformed (with the Ancestor Veneration doctrine) pagan religion's equivalent. [1]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Like the Warrior Lodge Bloodlines, the ancestor's bloodline is selected from amidst those eligible when the canonization (or the pagan ancestor worship event equivalent) occurs (Event HF.40020 / HF.40101 repectively)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Christian saints, upon canonization, will create in one province of their demesne (priority to the capital, then capital neighbouring provinces, and finally to demesne provinces more generally) the Tomb of the Saint modifier. It can then be used as a site of pilgrimage and on being looted can provide saintly artifacts ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Most bloodlines will end up being referred to as Blood of [Character Name] ."
+                }
+            ]
+        },
+        {
+            "heading": "Saintly Bloodlines",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "All saintly bloodlines do not allow for bastard inheritance."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "All saintly bloodlines give +5 to religious head acceptance of special interactions such as requesting excommunication or divorce. This bonus does not stack."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Due to an unfixed bug, the \"Damage Against Religious Enemies\" combat modifiers from bloodlines are always active, even if the bloodline is inactive [2] . (Eg: If an Orthodox character has a Catholic ancestor who founded the \"Defender of the Faith\" bloodline, the bloodline will be inactive for the Orthodox character, but they will still receive +30% Damage Against Religious Enemies.)"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Inheritance",
+                            "Requirements",
+                            "Opinions",
+                            "Other modifiers"
+                        ],
+                        [
+                            "Saintly Defender of the Faith Bloodline",
+                            "Patrilineal",
+                            "Is zealous or holy warrior Active Condition: Must believe the same religion as founder",
+                            "",
+                            "+30% Damage Against Religious Enemies +0.30 Monthly Piety Zealots may arrive at your capital to run amok, if zealous can convince to join as event troops If Catholic, when at religious war units may spawn in your capital"
+                        ],
+                        [
+                            "Saintly Monastic Bloodline",
+                            "Patrilineal",
+                            "Monks and Mystics DLC Is celibate or monk or nun Is Christian or Reformed Hellenic Pagan Active Condition: Must believe the same religion as founder",
+                            "+5 Christian Church Opinion",
+                            "+0.10 Monthly Piety Gain more Devotion in Monastic Societies Monks will help your capital occasionally"
+                        ],
+                        [
+                            "Saintly Cultural Bloodline",
+                            "Patrilineal",
+                            "Always Active Condition: Must have the same culture as founder",
+                            "",
+                            "+0.30 Monthly Piety Convert Counties to your Culture faster ( from adjacent province only)"
+                        ],
+                        [
+                            "Saintly Inquisitional Bloodline",
+                            "Patrilineal",
+                            "Always Chance increased by 400% if zealous or holy warrior Active Condition: Must believe the same religion as founder",
+                            "+5 Christian Church Opinion",
+                            "+10% Damage Against Religious Enemies Convert Counties to your Religion faster"
+                        ],
+                        [
+                            "Saintly Jewish Bloodline",
+                            "Patrilineal",
+                            "Has Active Condition: Must be Christian",
+                            "+15 Jewish Opinion",
+                            "+0.20 Monthly Piety Loans from Jews have 0% interest Cannot expel Jews"
+                        ],
+                        [
+                            "Saintly Theologians Bloodline",
+                            "Patrilineal",
+                            "Always Active Condition: Must believe the same religion as founder",
+                            "",
+                            "+0.20 Monthly Piety Theologians will occasionally join your court"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is celibate or monk or nun",
+                            "children": []
+                        },
+                        {
+                            "text": "Is Christian or Reformed Hellenic Pagan",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must believe the same religion as founder"
+                }
+            ]
+        },
+        {
+            "heading": "Ancestor Veneration Bloodlines",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "All bloodlines allow for bastard inheritance."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Inheritance",
+                            "Requirements",
+                            "Opinions",
+                            "Other modifiers"
+                        ],
+                        [
+                            "Generic Ancestor Veneration Bloodline",
+                            "Depending on Founder Gender",
+                            "Always",
+                            "",
+                            "+0.20 Monthly Prestige +5 Personal Combat Skill Great Warriors will occasionally join your court (if founder religion)"
+                        ],
+                        [
+                            "Duelist Ancestor Veneration Bloodline",
+                            "Depending on Founder Gender",
+                            "Is duelist",
+                            "",
+                            "+0.10 Monthly Prestige +20% Light Foot Troops +5 Personal Combat Skill Allows Dueling"
+                        ],
+                        [
+                            "Raiding Ancestor Veneration Bloodline",
+                            "Depending on Founder Gender",
+                            "Has any of the viking raider traits",
+                            "+5 Brave Opinion",
+                            "+20% Light Foot Troops +5 Personal Combat Skill Organizing Raids is faster and more fruitful"
+                        ],
+                        [
+                            "Bastard Ancestor Veneration Bloodline",
+                            "Depending on Founder Gender",
+                            "Is bastard or Is legitimized_bastard",
+                            "+5 Bastard Opinion +5 Legitimized Bastard Opinion",
+                            "+0.10 Monthly Prestige Legitimizing Bastards is free"
+                        ],
+                        [
+                            "Sky Burial Ancestor Veneration Bloodline",
+                            "Depending on Founder Gender",
+                            "Is Nomadic and Tengri/Bon",
+                            "",
+                            "+0.20 Monthly Prestige +3 Personal Combat Skill Allows Sky Burials"
+                        ],
+                        [
+                            "Mercenary Ancestor Veneration Bloodline",
+                            "Depending on Founder Gender",
+                            "Is Nomadic",
+                            "+5 Brave Opinion +5 Strategist Opinion",
+                            "+5 Personal Combat Skill Children can prove themselves as Mercenaries"
+                        ],
+                        [
+                            "Tanistry Ancestor Veneration Bloodline",
+                            "Depending on Founder Gender",
+                            "Has Tanistry succession",
+                            "+5 Dynasty Opinion",
+                            "+5 Personal Combat Skill Allows Tanistry succession"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Wicked Saintly Bloodlines",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A similar \"Saintly\" bloodline exists for impious Christian saints, usually when there is a wicked Pope. It is earned through a similar beatification event chain as the traditional saintly events, but it looks for impious traits instead."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Inheritance",
+                            "Requirements",
+                            "Opinions",
+                            "Other modifiers"
+                        ],
+                        [
+                            "Wicked Saintly Bloodline",
+                            "Patrilineal",
+                            "Always Active Condition: Must be Christian",
+                            "-5 Christian Church Opinion",
+                            "+1 Monthly Prestige -0.10 Monthly Piety"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Created Bloodlines",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "All bloodlines that are neither historical nor saintly bloodlines are flagged as created bloodlines. They can be formed through various events and are inherited the same way as historical bloodlines."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Many foundable bloodlines in game files have both a Patrilineal and Matrilineal variants. If founded on a male character, then it will be Patrilineal, if on a female character, Matrilineal. These (pairs of bloodlines, technically) are listed below as \"Depending on Founder Gender\"."
+                }
+            ]
+        },
+        {
+            "heading": "Forged Bloodlines",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These bloodlines are earned through the Forge Bloodline ambition , available to duke+ rulers with very high prestige. The prestige cost will be higher if anyone of your dynasty has succeeded at this ambition (even if that bloodline has died out). Warning: Any created bloodline , which means any bloodline except historical and saintly (including ancestor veneration) ones, on the character will prevent taking this ambition."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "By picking this ambition you will be provided with several paths to create your own custom Bloodline, tailoring it to whichever kind of ruler you wish to be remembered as. Each path will lead you to unlock a different bloodline, each coming in different variants. Additionally, if you pursue more than a single path at the same time, you have a chance of unlocking a hybridized Bloodline, with its own unique perks. The tasks provided by the ambition are as follows."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Murder or execute 30 people (regular duels and battlefield duels count as well)",
+                            "children": []
+                        },
+                        {
+                            "text": "Win 15 foreign wars",
+                            "children": []
+                        },
+                        {
+                            "text": "Rule at peace for 30 years while the ambition is active",
+                            "children": []
+                        },
+                        {
+                            "text": "Build 10 castles",
+                            "children": []
+                        },
+                        {
+                            "text": "Build 10 cities",
+                            "children": []
+                        },
+                        {
+                            "text": "Build 10 temples",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you were at least kingdom tier when choosing the ambition, then after 800-1,600 days you will get an opportunity to invest resources and select from an additional pool of potential bloodlines, if you have not yet created one."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Whether a created bloodline will be patrilineal or matrilineal depends on whether the founder is male or female. Warning: if you earn any created bloodline after starting this ambition (including in particular decision bloodline, warrior lodge hero, immortality, Alexander bloodline), you will not be able to forge a new bloodline. Anyone of your earned bloodline will also not be able to create a bloodline through this ambition. It is necessary to get a kin who doesn't have your bloodline to enable this ambition again. So be careful of your actions."
+                }
+            ]
+        },
+        {
+            "heading": "Murder bloodlines",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There are five possible bloodlines from pure murder. Forging one will grant an appropriate nick name like \"the Dragon\" or \"the Little Nightmare\" based on which bloodline is acquired, assuming you don't have one. Also, forging the Dragon King bloodline adds Cannibal , forging the Silent Killer bloodline adds Paranoid and forging any of the others adds Cruel ."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Founding Method",
+                            "Opinions",
+                            "Other modifiers",
+                            "Event ID"
+                        ],
+                        [
+                            "Happy Child / Vile Blood of...",
+                            "Finish before age 16, or start before age 12 and finish before age 35 Murder 30 People",
+                            "-4 Vassal Opinion",
+                            "+15.0% Plot Power Increase Wards are more Dangerous (Chance for children of this bloodline to get event to murder guardians for +1 Intrigue ). Murderous AI",
+                            "HF.24026"
+                        ],
+                        [
+                            "Macabre Banquet / Vile Blood of...",
+                            "Murder 30 People",
+                            "-6 Vassal Opinion",
+                            "+10.0% Plot Power Defence Can Embalm Prisoner . Murderous AI",
+                            "HF.24028"
+                        ],
+                        [
+                            "Silent Killer / Sly Blood of...",
+                            "Murder 30 People",
+                            "",
+                            "+10.0% Imprisonment Chance Can restore reputation through Obfuscate (remove Kinslayer traits , Known Murderer, Scandalous Rumours, or Vicious Rumours modifier). Scandalous and Vicious Rumors can be removed together, otherwise only one trait or modifier per use. Using the decision requires Intrigue 8 or above, and has a cooldown of 10 years. It costs between 300 and 1000 Prestige to use the decision, depending on the modifier or trait to be removed. Having Intrigue 15 or above halves the cost. Murderous AI",
+                            "HF.24029"
+                        ],
+                        [
+                            "The Butcher / Vile Blood of...",
+                            "Murder 30 People Must NOT be unattractive, Celibate or Eunuch",
+                            "-4 Vassal Opinion",
+                            "+10.0% Plot Power Increase Can personally pursue murder plots. That is to say, murder plots can succeed without anyone else backing them. Murderous AI",
+                            "HF.24030"
+                        ],
+                        [
+                            "The Dragon King / Blood of the Dragon-King",
+                            "Murder 30 People Must be Cruel Must be Lunatic , Possessed or Cannibal",
+                            "-4 Vassal Opinion",
+                            "+10.0% Imprisonment Chance Can burn prisoners . Murderous AI",
+                            "HF.24231"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Conquests Bloodlines",
+            "level": 4,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Founding Method",
+                            "Opinions",
+                            "Other modifiers",
+                            "Event ID"
+                        ],
+                        [
+                            "The Conqueror (Blood of___)",
+                            "Win 15 foreign wars; On success, gain Wroth and the nickname 'the Bloodhound'.",
+                            "",
+                            "+5% Leading in Center +5% Levy Reinforcement Rate +5 Personal Combat Skill Increased Artifact Looting and prisoner capturing chance",
+                            "HF.24035"
+                        ],
+                        [
+                            "The Warrior Philosopher",
+                            "Win 15 foreign wars Min 8 learning, not Dumb On success, gain Diligent and the nickname 'the Warrior Philosopher'.",
+                            "",
+                            "+15% Movement Speed +5% Retreat +3 Personal Combat Skill Can Drill Troops, paying prestige to gain one of the following character modifiers for 4 years, this ability requires having more than 50 prestige to activate and has a 10 years cool-down period. 300 prestige for 10% attrition resistance 300 for +10% Movement Speed 200 for 40 days of supply",
+                            "HF.24036"
+                        ],
+                        [
+                            "The Li'l Warrior Philosopher",
+                            "Win 15 foreign wars Finish before age 16, or start before age 12 and finish before age 35 On success, gain Brave and the nickname 'the Warrior Child'.",
+                            "",
+                            "+6 Personal Combat Skill +5% Morale Defence +5% Morale Damage Great warriors will occasionally join your court",
+                            "HF.24032"
+                        ],
+                        [
+                            "The Perfect Knight",
+                            "Win 15 foreign wars Be male Christian (unless Christianity has Equality or Enatic Clans, only possible in alternate starts, then either both sexes or only women). Must not have evil trait (cruel, arbitrary, impaler). Scions of this bloodline need to be Christian for it to be active. On success, gain Brave and the nickname 'the White Knight'.",
+                            "",
+                            "+4 Personal Combat Skill +0.05 monthly Piety +10% Cavalry Command Attracts Knights, Bards and Damsels Grants the Winged Helmet artifact",
+                            "HF.24034"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Peace bloodlines",
+            "level": 4,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Founding Method",
+                            "Opinions",
+                            "Other modifiers",
+                            "Event ID"
+                        ],
+                        [
+                            "Protector Bloodline",
+                            "Remain 30 years at peace",
+                            "+4 Vassal Opinion",
+                            "-2% National Revolt Risk +0.1 Monthly Piety Vassals less likely to join a faction",
+                            "HF.24040"
+                        ],
+                        [
+                            "Benefactor Bloodline",
+                            "Remain 30 years at peace",
+                            "+4 Vassal Opinion",
+                            "-2% National Revolt Risk +5% National Tax Modifier Rulers can Endear Neighbors and Subjects (spend 300 prestige to improve the opinions of neighbouring rulers or spend 200 prestige for -15% National Revolt Risk)",
+                            "HF.24041"
+                        ],
+                        [
+                            "Blessed Child Bloodline",
+                            "Remain 30 years at peace Start before age 12 and finish before age 45",
+                            "+4 Vassal Opinion",
+                            "+0.25 monthly piety -2% global revolt risk Vassals are half as likely to create and join factions",
+                            "HF.24038"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Construction bloodlines",
+            "level": 4,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Founding Method",
+                            "Opinions",
+                            "Other modifiers",
+                            "Event ID"
+                        ],
+                        [
+                            "The Architect Bloodline",
+                            "Build 10 cities",
+                            "+6 City Vassal Opinion",
+                            "+5% Burgher Vassal Tax Has access to special City buildings: Cities#Infrastructure",
+                            "HF.24042"
+                        ],
+                        [
+                            "The Castellan Bloodline",
+                            "Build 10 castles",
+                            "+4 Feudal Vassal Opinion",
+                            "+5% Noble Vassal Tax Has access to special Castle buildings: Castles#Special_Fortifications",
+                            "HF.24043"
+                        ],
+                        [
+                            "The Carpenter Bloodline",
+                            "Build 10 temples",
+                            "+4 Temple Vassal Opinion",
+                            "+5% Temple Vassal Tax Has access to special Temple buildings: Temples#Monumental_Shrines",
+                            "HF.24044"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Hybrid bloodlines",
+            "level": 4,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Founding Method",
+                            "Opinions",
+                            "Other modifiers",
+                            "Event ID"
+                        ],
+                        [
+                            "Murder/War Bloodline (The Bloodhound / Vile Blood of...)",
+                            "Murder 20 people, win 10 foreign wars",
+                            "",
+                            "+2% Levy Reinforcement Rate +5% Plot Power Increase +3 Personal Combat Skill Can Fabricate Claims faster (x0.75) Can Sow Discontent faster (x0.75)",
+                            "HF.24045"
+                        ],
+                        [
+                            "The Builder Bloodline",
+                            "Build 24 holdings without building 10 of any single type or if you build 24 or more holdings before selecting the forge bloodline ambition",
+                            "",
+                            "-20% Build Cost -20% Build Time +2% National Tax Modifier",
+                            "HF.24047"
+                        ],
+                        [
+                            "Murder/Peace Bloodline",
+                            "Rule at peace for 15 years, murder 20 people",
+                            "",
+                            "+5% imprisonment chance -1% global revolt risk Can spend prestige to disband factions",
+                            "HF.24046"
+                        ],
+                        [
+                            "Murder/Builder Bloodline",
+                            "Murder 20 people, build 15 holdings",
+                            "",
+                            "+1% global tax modifiier -1% global revolt risk Has access to special Castle buildings: Castles#Oppressive_Fortifications",
+                            "HF.24048"
+                        ],
+                        [
+                            "Peace Architect Bloodline",
+                            "Rule at peace for 15 years, build 5 cities",
+                            "+5 City Vassal Opinion",
+                            "+0.05 monthly piety +3% City Tax Has access to special City buildings: Cities#Infrastructure +50% more likely to increase prosperity",
+                            "HF.24049"
+                        ],
+                        [
+                            "Peace Castellan Bloodline",
+                            "Rule at peace for 15 years, build 5 castles",
+                            "+5 Feudal Vassal Opinion",
+                            "+0.05 monthly piety +3% Castle Tax Has access to special Castle buildings: Castles#Special_Fortifications +50% more likely to increase prosperity",
+                            "HF.24050"
+                        ],
+                        [
+                            "Peace Monumental Bloodline",
+                            "Rule at peace for 15 years, build 5 temples",
+                            "+5 Temple Vassal Opinion",
+                            "+0.05 monthly piety +3% Temple Tax Has access to special Temple buildings: Temples#Monumental_Shrines +50% more likely to increase prosperity",
+                            "HF.24051"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "if you build 24 or more holdings before selecting the forge bloodline ambition"
+                }
+            ]
+        },
+        {
+            "heading": "Event Chain Bloodlines",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Should you fail to meet the requirements for any of the other bloodlines for some time, an event chain will trigger which will allow you to forge a bloodline without meeting any of the ambition requirements. The type of bloodline is dependent upon your decisions on the event chain. This event chain will only fire if you are King or Emperor."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Opinions",
+                            "Other modifiers",
+                            "Event ID"
+                        ],
+                        [
+                            "Philosopher Bloodline",
+                            "+10 Poet",
+                            "-15% Build Time +15% Tech Spread Cultural Tech research boost Attracts artists",
+                            "HF.24067"
+                        ],
+                        [
+                            "Family Bloodline",
+                            "+5 Dynasty",
+                            "+0.20 Monthly Prestige Can harass your relatives into fitting your image of a proper dynasty",
+                            "HF.24061"
+                        ],
+                        [
+                            "Benevolence Bloodline",
+                            "+25 Just +10 Kind",
+                            "+0.2 Monthly Prestige +0.05 Monthly Piety",
+                            "HF.24058"
+                        ],
+                        [
+                            "Ruthlessness Bloodline",
+                            "-10 Vassal",
+                            "+15% imprisonment chance +2% global revolt risk Can plot to revoke any title that was not recently granted",
+                            "HF.24073"
+                        ],
+                        [
+                            "Theology Bloodline",
+                            "+4 Church",
+                            "+0.10 monthly piety +5% cultural tech spread x0.5 MTTH for your court chaplain to find a philosopher while researching cultural techs Only active if you follow the founder's religion",
+                            "HF.24064"
+                        ],
+                        [
+                            "Zeal Bloodline",
+                            "+8 Church",
+                            "+0.15 monthly piety -3% cultural tech spread x0.75 MTTH for your court chaplain to convert a province Unlimited use of the Religious Liberation CB (even if you have Jade Dragon CBs disabled) Only active if you follow the founder's religion Gives nickname \"the Zealot\"",
+                            "HF.24070"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "-- Event Choices"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Branch #1: Benevolence or Family"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Branch #2: Philosopher or Theology"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Branch #3: Ruthlessness or Zeal"
+                }
+            ]
+        },
+        {
+            "heading": "Warrior Lodge bloodlines",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These bloodlines are earned through Warrior Lodges ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The Legendary Gathering decision to start this requires:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Holy Fury DLC",
+                            "children": []
+                        },
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Rank 4 in the Warrior Lodge",
+                            "children": []
+                        },
+                        {
+                            "text": "Not having done a legendary gathering for this society in the past 100 years",
+                            "children": []
+                        },
+                        {
+                            "text": "Have at least 500 Renown",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "After taking this decision the society Legend progress bar will be unlocked. It is filled by members of the society completing missions. Once filled, you (or the one who called together the gathering) will seek out onto a quest into another realm, facing a series of increasingly harder duels . Completing all of these successfully will earn you a bloodline."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Inheritance",
+                            "Requirements",
+                            "Opinions",
+                            "Other modifiers"
+                        ],
+                        [
+                            "Legendary Eagle Hunter",
+                            "Depending on Founder Gender",
+                            "Is Tengri / Reformed Tengri or Nomadic Has Hunting Eagle and Friend of Eagles character modifier Is a falconer",
+                            "+5 Falconer",
+                            "+15 Personal Combat Skill Characters tend to keep hunting birds"
+                        ],
+                        [
+                            "Legendary Leader",
+                            "Depending on Founder Gender",
+                            "Conclave DLC",
+                            "+5 Vassal",
+                            "+5 Personal Combat Skill Characters tend to have their councilors be Loyal"
+                        ],
+                        [
+                            "Legendary Battle Survivor",
+                            "Depending on Founder Gender",
+                            "Always",
+                            "",
+                            "+5 Personal Combat Skill Resilient to battle injuries"
+                        ],
+                        [
+                            "Legendary Dog Hunter",
+                            "Depending on Founder Gender",
+                            "Way of Life DLC Has Hunter trait",
+                            "+5 Hunter",
+                            "+15 Personal Combat Skill Characters tend to keep hunting dogs"
+                        ],
+                        [
+                            "Legendary Raider",
+                            "Depending on Founder Gender",
+                            "Always",
+                            "+5 Greedy",
+                            "+0.10 Monthly Prestige +10 Personal Combat Skill Increases the chance of looting Artifacts and taking prisoners after sieging enemy holdings"
+                        ],
+                        [
+                            "Legendary Warrior",
+                            "Depending on Founder Gender",
+                            "Always",
+                            "",
+                            "+0.10 Monthly Prestige +15 Personal Combat Skill Characters may more easily join warrior lodges"
+                        ],
+                        [
+                            "Legendary Soldier",
+                            "Depending on Founder Gender",
+                            "Monks and Mystics DLC or Jade Dragon DLC",
+                            "",
+                            "+0.10 Monthly Prestige +10 Personal Combat Skill Smiths are less likely to betray you in the artifact crafting process"
+                        ],
+                        [
+                            "Legendary Battle Bard",
+                            "Depending on Founder Gender",
+                            "Always",
+                            "+5 Poet",
+                            "+0.10 Monthly Prestige +10 Personal Combat Skill Gain access to specific battlefield events"
+                        ],
+                        [
+                            "Legendary Commander",
+                            "Depending on Founder Gender",
+                            "Always",
+                            "+5 Strategist",
+                            "+0.10 Monthly Prestige +10 Personal Combat Skill Promote Commander decision gives better commanders"
+                        ],
+                        [
+                            "Legendary Captor",
+                            "Depending on Founder Gender",
+                            "Always",
+                            "+5 Just",
+                            "+0.10 Monthly Prestige +10 Personal Combat Skill Improved chance to capture enemy commanders in combat"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "All warrior lodge bloodlines are somewhat randomly selected by an event (HF.12300 or, if dead, HF.12301) among ones eligible once the legend is completed."
+                }
+            ]
+        },
+        {
+            "heading": "Other created bloodlines",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Action/Activity Bloodlines",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These bloodlines are earned by the character doing an action or activity."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Inheritance",
+                            "Founding Method",
+                            "Opinions",
+                            "Other modifiers",
+                            "Event ID"
+                        ],
+                        [
+                            "Sea King/Queen Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Having sacked 200 holds, Is a Sea king or Sea queen , Doesn't own any historical Norse bloodline ( i.e. Blood of Ragnarr 'Lodbrok', Blood of Rurik, Blood of Haraldr 'Fairhair', or Blood of Dyre 'the Stranger') or sea king/queen bloodline Active Condition: Must believe the same religion as founder",
+                            "+5 Sea king +5 Sea queen",
+                            "+3 Personal Combat Skill Organizing raids is faster and more fruitful",
+                            "HF.23212"
+                        ],
+                        [
+                            "Bloodthirsty Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Believes Aztec, Reformed Aztec or a reformed pagan religion with Bloodthirsty Gods Doctrine , Burned hearts points, which can be gained by sacrificing to Gods, is at least 200, Doesn't already own bloodthirsty bloodline Active Condition: Aztec or a reformed pagan religion with Bloodthirsty Gods Doctrine",
+                            "+5 Haemophiliac +5 Haemophant +5 Haemoarch",
+                            "+0.30 Monthly Piety Sacrificing prisoners yields an additional Prestige reward",
+                            "HF.23434"
+                        ],
+                        [
+                            "Family Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Believes a reformed pagan religion with Stability, Children of Perun or Survivors of Ukko Doctrine , Has Inspired Meliorism on close relatives 8 times (Should earn the bloodline next time Inspired Meliorism on anyone), Possesses a title above count tier (when Inspiring Meliorism), Doesn't own any created bloodline",
+                            "+5 Dynasty",
+                            "+0.20 Monthly Prestige Can influence younger close relatives",
+                            "HF.23770"
+                        ],
+                        [
+                            "Benevolent Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Believes a reformed pagan religion with Stability, Children of Perun or Survivors of Ukko Doctrine , Hasn't Inspired Meliorism on close relatives 8 times, Has Inspired Meliorism on council members (other than oneself, close relatives, or advisors) 8 times (Should earn the bloodline next time Inspired Meliorism on anyone other than close relatives), Possesses a title above count tier (when Inspiring Meliorism), Doesn't own any created bloodline Note: Can also earn this bloodline through event chain when having Forge Bloodline ambition",
+                            "+25 Just +10 Kind",
+                            "+0.20 Monthly Prestige +0.05 Monthly Piety",
+                            "HF.23771"
+                        ],
+                        [
+                            "Teuta's Bloodline",
+                            "Matrilineal",
+                            "Requirements: Is an independent South Slavic/Dalmatian female Pagan, Isn't an empress, nor is realm size bigger or equal than 120, Doesn't believe Hellenic or Reformed Hellenic, Capital is located in the duchy of Dioclea or Rashka, Win a war against Byzantium/Roman Empire as either attacker or defender, Historical starts only, Active Condition: Must be Pagan or tribal, must not be Byzantine, Roman nor believe Hellenic or Reformed Hellenic",
+                            "+10 Sea queen +10 South Slavic -10 Greek -10 Roman",
+                            "Will attract ships during times of war",
+                            "HF.24011"
+                        ],
+                        [
+                            "Blood of Phalaris",
+                            "Patrilineal Bastard can't inherit DOES NOT allow matrilineal transfer",
+                            "Requirements: Primary title is the kingdom of Sicily and capital is located in the duchy of Sicily, Completely controls the duchy of Sicily Is a capable male Greek, Has lunatic , possessed , impaler or cruel trait, Doesn't have kind or just trait, Has Brazen Bull character modifier (can gain it in random event when has impaler trait and meets some other condition (see event 3600 for detail)) or learning skill is no less than 15, Chooses the special action (throw in the Brazen Bull or try something original) in Torture a prisoner random event Active Condition: Must be Byzantine, Latin or believe Hellenic or Reformed Hellenic",
+                            "-10 Christian -10 Muslim -10 Jewish",
+                            "Can use the brazen bull to execute prisoners",
+                            "HF.24000"
+                        ],
+                        [
+                            "Duelist Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Has Duelist lifestyle trait, Has at least 50 duel experience and 20 ruthless duel experience, Has at least 10 sneaky duel experience or 80 duel experience, Doesn't already own a duelist bloodline (this or the ancestor worship duelist bloodline) Note: Once you meet the experience minimums, each duel where you earn experience gives you a 20% chance to earn the bloodline (50% if you have no bloodlines) \"Duel experience\", \"sneaky duel experience\" and \"ruthless duel experience\" are internal values which can only be directly read by using console commands - they do not directly correspond to anything that is normally visible to the player. However, these values can be indirectly measured by checking the various duel-related character modifiers, where a new modifier is added for every 5 points of the internal value. IE: You need at least the following modifiers: \"Renowned Duelist x10\"; and \"Ruthless Duelist x4\"; and either \"Sneaky Duelist x2\" or \"Renowned Duelist x16\".",
+                            "",
+                            "+20 Personal Combat Skill +1.5% Morale Damage +1.5% Morale Defense Allows dueling",
+                            "HFP.402"
+                        ],
+                        [
+                            "Matilde Bloodline",
+                            "Depending on Founder Gender Bastard can't inherit The Male version DOES NOT allow matrilineal transfer",
+                            "Requirements: On winning a Antipapal / Excommunication war against the Holy Roman Emperor, must Be a Feudal Catholic Adult Be a King or lower title Be either lower tier than king, a viceroyalty , crowned , or fighting an excommunication war as part of a coronation deal Be either married or have no children. Have 500 Piety Have Realm Size less than 120 Have opinion 25 or greater with the pope Doesn't have an antipope Doesn't own any created bloodline Doesn't have incapable , excommunicated , lustful , gluttonous , greedy , proud , slothful , envious , wroth , heresiarch , crowned_by_myself . Doesn't have character modifiers adulteress , incestous adulteress , witch , consorts with infidels , or consorts with mystics . Doesn't have a bastard or legit_bastard child. Has at least 2 of zealous , chaste , diligent , humble , charitable , temperate , kind , patient , celibate , theologian , nun or 1000 piety. Active Condition: Must be Catholic If the requirements for this are earned while playing as Matilde di Canossa (January 1st, 1046 - July 24th, 1115, Duchess of Toscana from July 1055 - July 23rd, 1115), one earns the similar, but different, True Matilde Bloodline.",
+                            "+10 Religious Head",
+                            "+0.05 Monthly Piety Characters of this bloodline more readily take vows",
+                            "HF.24251"
+                        ],
+                        [
+                            "True Matilde Bloodline",
+                            "Matrilineal Bastard can't inherit",
+                            "Requirements: See above Active Condition: Must be Catholic If the requirements are earned while playing as Matilde di Canossa (January 1st, 1046 - July 24th, 1115, Duchess of Toscana from July 1055 - July 23rd, 1115), one earns this True Matilde Bloodline.",
+                            "+5 Religious Head +5 Italian",
+                            "+0.05 Monthly Piety Characters of this bloodline more readily take vows",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Having sacked 200 holds,",
+                            "children": []
+                        },
+                        {
+                            "text": "Is a Sea king or Sea queen ,",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't own any historical Norse bloodline ( i.e. Blood of Ragnarr 'Lodbrok', Blood of Rurik, Blood of Haraldr 'Fairhair', or Blood of Dyre 'the Stranger') or sea king/queen bloodline",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must believe the same religion as founder"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Believes Aztec, Reformed Aztec or a reformed pagan religion with Bloodthirsty Gods Doctrine ,",
+                            "children": []
+                        },
+                        {
+                            "text": "Burned hearts points, which can be gained by sacrificing to Gods, is at least 200,",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't already own bloodthirsty bloodline",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Aztec or a reformed pagan religion with Bloodthirsty Gods Doctrine"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Believes a reformed pagan religion with Stability, Children of Perun or Survivors of Ukko Doctrine ,",
+                            "children": []
+                        },
+                        {
+                            "text": "Has Inspired Meliorism on close relatives 8 times (Should earn the bloodline next time Inspired Meliorism on anyone),",
+                            "children": []
+                        },
+                        {
+                            "text": "Possesses a title above count tier (when Inspiring Meliorism),",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't own any created bloodline",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Believes a reformed pagan religion with Stability, Children of Perun or Survivors of Ukko Doctrine ,",
+                            "children": []
+                        },
+                        {
+                            "text": "Hasn't Inspired Meliorism on close relatives 8 times,",
+                            "children": []
+                        },
+                        {
+                            "text": "Has Inspired Meliorism on council members (other than oneself, close relatives, or advisors) 8 times (Should earn the bloodline next time Inspired Meliorism on anyone other than close relatives),",
+                            "children": []
+                        },
+                        {
+                            "text": "Possesses a title above count tier (when Inspiring Meliorism),",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't own any created bloodline",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: Can also earn this bloodline through event chain when having Forge Bloodline ambition"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is an independent South Slavic/Dalmatian female Pagan,",
+                            "children": []
+                        },
+                        {
+                            "text": "Isn't an empress, nor is realm size bigger or equal than 120,",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't believe Hellenic or Reformed Hellenic,",
+                            "children": []
+                        },
+                        {
+                            "text": "Capital is located in the duchy of Dioclea or Rashka,",
+                            "children": []
+                        },
+                        {
+                            "text": "Win a war against Byzantium/Roman Empire as either attacker or defender,",
+                            "children": []
+                        },
+                        {
+                            "text": "Historical starts only,",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must be Pagan or tribal, must not be Byzantine, Roman nor believe Hellenic or Reformed Hellenic"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Primary title is the kingdom of Sicily and capital is located in the duchy of Sicily,",
+                            "children": []
+                        },
+                        {
+                            "text": "Completely controls the duchy of Sicily",
+                            "children": []
+                        },
+                        {
+                            "text": "Is a capable male Greek,",
+                            "children": []
+                        },
+                        {
+                            "text": "Has lunatic , possessed , impaler or cruel trait,",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't have kind or just trait,",
+                            "children": []
+                        },
+                        {
+                            "text": "Has Brazen Bull character modifier (can gain it in random event when has impaler trait and meets some other condition (see event 3600 for detail)) or learning skill is no less than 15,",
+                            "children": []
+                        },
+                        {
+                            "text": "Chooses the special action (throw in the Brazen Bull or try something original) in Torture a prisoner random event",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must be Byzantine, Latin or believe Hellenic or Reformed Hellenic"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Has Duelist lifestyle trait,",
+                            "children": []
+                        },
+                        {
+                            "text": "Has at least 50 duel experience and 20 ruthless duel experience,",
+                            "children": []
+                        },
+                        {
+                            "text": "Has at least 10 sneaky duel experience or 80 duel experience,",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't already own a duelist bloodline (this or the ancestor worship duelist bloodline)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Once you meet the experience minimums, each duel where you earn experience gives you a 20% chance to earn the bloodline (50% if you have no bloodlines)",
+                            "children": []
+                        },
+                        {
+                            "text": "\"Duel experience\", \"sneaky duel experience\" and \"ruthless duel experience\" are internal values which can only be directly read by using console commands - they do not directly correspond to anything that is normally visible to the player.",
+                            "children": [
+                                {
+                                    "text": "However, these values can be indirectly measured by checking the various duel-related character modifiers, where a new modifier is added for every 5 points of the internal value. IE: You need at least the following modifiers: \"Renowned Duelist x10\"; and \"Ruthless Duelist x4\"; and either \"Sneaky Duelist x2\" or \"Renowned Duelist x16\".",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "On winning a Antipapal / Excommunication war against the Holy Roman Emperor, must"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Be a Feudal Catholic Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Be a King or lower title",
+                            "children": []
+                        },
+                        {
+                            "text": "Be either lower tier than king, a viceroyalty , crowned , or fighting an excommunication war as part of a coronation deal",
+                            "children": []
+                        },
+                        {
+                            "text": "Be either married or have no children.",
+                            "children": []
+                        },
+                        {
+                            "text": "Have 500 Piety",
+                            "children": []
+                        },
+                        {
+                            "text": "Have Realm Size less than 120",
+                            "children": []
+                        },
+                        {
+                            "text": "Have opinion 25 or greater with the pope",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't have an antipope",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't own any created bloodline",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't have incapable , excommunicated , lustful , gluttonous , greedy , proud , slothful , envious , wroth , heresiarch , crowned_by_myself .",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't have character modifiers adulteress , incestous adulteress , witch , consorts with infidels , or consorts with mystics .",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't have a bastard or legit_bastard child.",
+                            "children": []
+                        },
+                        {
+                            "text": "Has at least 2 of zealous , chaste , diligent , humble , charitable , temperate , kind , patient , celibate , theologian , nun or 1000 piety.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must be Catholic If the requirements for this are earned while playing as Matilde di Canossa (January 1st, 1046 - July 24th, 1115, Duchess of Toscana from July 1055 - July 23rd, 1115), one earns the similar, but different, True Matilde Bloodline."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "See above",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must be Catholic If the requirements are earned while playing as Matilde di Canossa (January 1st, 1046 - July 24th, 1115, Duchess of Toscana from July 1055 - July 23rd, 1115), one earns this True Matilde Bloodline."
+                }
+            ]
+        },
+        {
+            "heading": "Decision / Formation Bloodlines",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Mostly associated with the formation of specific empires and other realms."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Inheritance",
+                            "Founding Method",
+                            "Opinions",
+                            "Other modifiers",
+                            "Event ID"
+                        ],
+                        [
+                            "Slavic Union Emperor Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Forms the Slavic Union (see decisions for detail)",
+                            "+5 West Slavic +5 East Slavic",
+                            "+0.10 Monthly Prestige +5 Personal Combat Skill",
+                            ""
+                        ],
+                        [
+                            "Roman Emperor Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Restores the Roman Empire (see decisions for detail), Doesn't own any famous historical Roman bloodline ( i.e. Blood of Basil or Blood of Alexios) or Roman emperor bloodline Active Condition: Must be Christian, Hellenic or Reformed Hellenic",
+                            "+5 Christian +5 Hellenic +5 Reformed Hellenic",
+                            "+0.25 Monthly Prestige Convert counties to Roman culture faster",
+                            "LoR.20"
+                        ],
+                        [
+                            "Restored Israel Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Creates Israel (see decisions for detail) Active Condition: Must be Jewish",
+                            "+10 Church",
+                            "+30% Damage Against Religious Enemies Can borrow from the Banks of Israel",
+                            ""
+                        ],
+                        [
+                            "Samrat Chakravartin Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Becomes Samrat Chakravartin (see decisions for detail) Active Condition: Must be Dharmic",
+                            "+5 Hindu +5 Jain +5 Buddhist",
+                            "+0.25 Monthly Piety -1% Global Revolt Risk",
+                            ""
+                        ],
+                        [
+                            "Saoshyant Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Becomes Saoshyant (see decisions for detail) Active Condition: Must be Zoroastrian",
+                            "+10 Church",
+                            "+1.00 Monthly Piety +30% Damage Against Religious Enemies",
+                            ""
+                        ],
+                        [
+                            "Chinese Imperial Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Adopts Chinese Imperialism (see decisions for detail) Doesn't own any created bloodline",
+                            "+5 Taoist",
+                            "+0.20 Monthly Prestige +2% Culture Technology Spread Rate",
+                            "HF.24240"
+                        ],
+                        [
+                            "Genghis Khan Bloodline",
+                            "Patrilineal",
+                            "Requirements: Become Genghis Khan (see decisions for detail) No Genghis Khan bloodline exists already This bloodline exists already on the historical Genghis Khan (Temüjin Borjigin), from 1206 onwards.",
+                            "+8 Mongol +5 Hunter",
+                            "+0.20 Monthly Prestige +8 Personal Combat Skill Allows Sky Burials",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Forms the Slavic Union (see decisions for detail)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Restores the Roman Empire (see decisions for detail),",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't own any famous historical Roman bloodline ( i.e. Blood of Basil or Blood of Alexios) or Roman emperor bloodline",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must be Christian, Hellenic or Reformed Hellenic"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Creates Israel (see decisions for detail)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must be Jewish"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Becomes Samrat Chakravartin (see decisions for detail)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must be Dharmic"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Becomes Saoshyant (see decisions for detail)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must be Zoroastrian"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adopts Chinese Imperialism (see decisions for detail)",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't own any created bloodline",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Become Genghis Khan (see decisions for detail)",
+                            "children": []
+                        },
+                        {
+                            "text": "No Genghis Khan bloodline exists already",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This bloodline exists already on the historical Genghis Khan (Temüjin Borjigin), from 1206 onwards."
+                }
+            ]
+        },
+        {
+            "heading": "Special Event Bloodlines",
+            "level": 4,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Inheritance",
+                            "Founding Method",
+                            "Opinions",
+                            "Other modifiers",
+                            "Event ID"
+                        ],
+                        [
+                            "Heir to Alexander Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Requires the successful completion of a rare event chain. The initial event trigger requires: Player only Possesses a real (not temporary) emperor tier title Has 15000 Prestige Is a capable non-prisoner adult Doesn't have Content trait Capital is located in one of the following regions: Europe Asia Minor Jerusalem Arabian Peninsula Historical starts only Can only be attempted once per character Can only be obtained once per playthrough Further events along this event chain will require payments of prestige and cash",
+                            "+5 Hellenic +5 Reformed Hellenic",
+                            "+0.20 Monthly Prestige +15% Levy Reinforcement Rate +10 Personal Combat Skill Can use Invasion CB once per lifetime",
+                            "HF.24208"
+                        ],
+                        [
+                            "Child of Destiny Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Is the Child of Destiny (a quite rare event) Possesses a real (not temporary) duke tier or above title Player characters cannot own any ambition bloodline ( i.e. Child of Destiny, Boudica, Alexander or Immortal bloodline), ambition bloodline will also prevent the child from becoming the Child of Destiny Non-player characters cannot own any created bloodline (which includes any bloodline except historical, saintly, and ancestor veneration bloodlines)",
+                            "+5 Vassal",
+                            "+10 Personal Combat Skill +10% Damage Character tend to become ambitious",
+                            "HF.304"
+                        ],
+                        [
+                            "Immortality Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Successfully completes immortality quest",
+                            "+5 Taoist",
+                            "+0.20 Monthly Prestige +1 Health Murderous AI",
+                            "RIP.21124 (Or other immortality events)"
+                        ],
+                        [
+                            "Ashoka Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Requires the successful completion of an rare event chain. The initial event trigger requires: Player only Possesses a real (not temporary) emperor tier title Has 15000 Prestige Is a capable non-prisoner adult Believes Dharmic religion Doesn't have Content trait Capital is located in India Historical starts only Can only be attempted once per character, Can only be obtained once per playthrough Further events along the event chain will require payments of prestige and cash",
+                            "+5 Hindu +5 Jain +10 Buddhist",
+                            "+0.10 Monthly Piety -3% Global Revolt Risk +5 Personal Combat Skill Can call religious liberation wars Can use Invasion CB once per lifetime",
+                            "HF.24228"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Player only",
+                            "children": []
+                        },
+                        {
+                            "text": "Possesses a real (not temporary) emperor tier title",
+                            "children": []
+                        },
+                        {
+                            "text": "Has 15000 Prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "Is a capable non-prisoner adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't have Content trait",
+                            "children": []
+                        },
+                        {
+                            "text": "Capital is located in one of the following regions:",
+                            "children": [
+                                {
+                                    "text": "Europe",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Asia Minor",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Jerusalem",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Arabian Peninsula",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Historical starts only",
+                            "children": []
+                        },
+                        {
+                            "text": "Can only be attempted once per character",
+                            "children": []
+                        },
+                        {
+                            "text": "Can only be obtained once per playthrough",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Further events along this event chain will require payments of prestige and cash"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is the Child of Destiny (a quite rare event)",
+                            "children": []
+                        },
+                        {
+                            "text": "Possesses a real (not temporary) duke tier or above title",
+                            "children": []
+                        },
+                        {
+                            "text": "Player characters cannot own any ambition bloodline ( i.e. Child of Destiny, Boudica, Alexander or Immortal bloodline), ambition bloodline will also prevent the child from becoming the Child of Destiny",
+                            "children": []
+                        },
+                        {
+                            "text": "Non-player characters cannot own any created bloodline (which includes any bloodline except historical, saintly, and ancestor veneration bloodlines)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Successfully completes immortality quest",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Player only",
+                            "children": []
+                        },
+                        {
+                            "text": "Possesses a real (not temporary) emperor tier title",
+                            "children": []
+                        },
+                        {
+                            "text": "Has 15000 Prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "Is a capable non-prisoner adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Believes Dharmic religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't have Content trait",
+                            "children": []
+                        },
+                        {
+                            "text": "Capital is located in India",
+                            "children": []
+                        },
+                        {
+                            "text": "Historical starts only",
+                            "children": []
+                        },
+                        {
+                            "text": "Can only be attempted once per character,",
+                            "children": []
+                        },
+                        {
+                            "text": "Can only be obtained once per playthrough",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Further events along the event chain will require payments of prestige and cash"
+                }
+            ]
+        },
+        {
+            "heading": "Crusader Bloodlines",
+            "level": 4,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Inheritance",
+                            "Founding Method",
+                            "Opinions",
+                            "Other modifiers",
+                            "Event ID"
+                        ],
+                        [
+                            "Lord of Outremer Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Forms an Empire of the Outremer (see decisions for detail) Active Condition: Must believe the same religion as founder",
+                            "+5 Christian",
+                            "+0.30 Monthly Prestige +10 Personal Combat Skill +20% Damage Against Religious Enemies Convert counties to religion faster",
+                            "HFP.40027"
+                        ],
+                        [
+                            "Destroyer of Byzantium Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Founds Latin Empire through the fourth Crusade",
+                            "+5 Latin +5 West Germanic +5 Central Germanic -5 Byzantine",
+                            "+0.20 Monthly Prestige Can castrate or blind others",
+                            "HF.49008"
+                        ],
+                        [
+                            "Northern Crusade Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Wins three Northern Crusade ( i.e. Teutonic War) as the most participating crusader, Hasn't already founded any Crusade bloodline, Doesn't already own northern Crusade bloodline Active Condition: Must be non-heretic Christian",
+                            "",
+                            "+0.20 Monthly Prestige +10% Damage Against Religious Enemies Can vassalize the Teutonic Knights Can hire a Teutonic Honor Guard",
+                            "HF.49114"
+                        ],
+                        [
+                            "Children's Crusade Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements Leads and wins a children's Crusade Active Condition: Must believe the same religion as founder",
+                            "+5 Christian",
+                            "+0.15 Monthly Piety +5 Personal Combat Skill Higher chance to create crusader states",
+                            ""
+                        ],
+                        [
+                            "Grand Crusader Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Wins more than one Crusade as the most participating crusader or Wins a crusade as the most participating crusader and has Crusader King trait, Hasn't already founded any Crusade bloodline Active Condition: Must believe the same religion as founder",
+                            "+5 Christian",
+                            "+0.20 Monthly Prestige +5 Personal Combat Skill Get a larger share of Crusade war chest",
+                            "HF.49020"
+                        ],
+                        [
+                            "Crusade Lord",
+                            "Depending on Founder Gender",
+                            "Requirements: Given to the crusade beneficiary if the first crusade is victorious Start date before 1100.1.1 Not given if the most participating crusader is the beneficiary (e.g. due to \"self-serving crusader\" stance) Active Condition: Must believe the same religion as founder",
+                            "+5 Christian",
+                            "+0.10 Monthly Prestige +5 Personal Combat Skill Higher chance to create crusader states",
+                            ""
+                        ],
+                        [
+                            "Crusader Commander Bloodline",
+                            "Depending on Founder Gender",
+                            "Requirements: Has triggered positive battle events 20 times more than negative battle events in Crusades (?), Hasn't already founded any Crusade bloodline, Doesn't own any bloodline that has Resilient to Battle Injuries effect, or leads and win a Shepherds' Crusade (can't be achieved by player) Active Condition: Must believe the same religion as founder",
+                            "",
+                            "+0.20 Monthly Prestige +10 Personal Combat Skill Resilient to battle injuries",
+                            "HF.49021"
+                        ],
+                        [
+                            "Reconquista Bloodline",
+                            "Depending on Founder Gender Bastard can't inherit",
+                            "Immediately after winning a Reconquista war as attacker: Has won four Reconquista wars as attacker, Has NOT won two Reconquista wars as defender, Is Christian, Hasn't already founded Reconquista Cid bloodline. Active Condition: Must be Christian Iberian Note: be aware that you can only start one Reconquista war per character lifetime, so you'll have to join others Reconquista wars to achieve this.",
+                            "+5 Iberian",
+                            "+0.10 Monthly Piety +0.20 Monthly Prestige Can prepare a Reconquest War cheaper Grants the Shrouded Helm artifact",
+                            "HF.49221"
+                        ],
+                        [
+                            "Reconquista Cid Bloodline",
+                            "Depending on Founder Gender",
+                            "Immediately after winning a Reconquista war as defender: Has won two Reconquista wars as attacker, Has won two Reconquista wars as defender, Is Christian, Hasn't already founded Reconquista bloodline. Active Condition: Must be Iberian or Andalusian Note: be aware that you can only start one Reconquista war per character lifetime, so you'll have to join others Reconquista wars to achieve this.",
+                            "+5 Iberian +5 Andalusian",
+                            "+0.20 Monthly Prestige +3.0% Morale Damage +3.0% Morale Defense",
+                            "HF.49220"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Forms an Empire of the Outremer (see decisions for detail)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must believe the same religion as founder"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Founds Latin Empire through the fourth Crusade",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Wins three Northern Crusade ( i.e. Teutonic War) as the most participating crusader,",
+                            "children": []
+                        },
+                        {
+                            "text": "Hasn't already founded any Crusade bloodline,",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't already own northern Crusade bloodline",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must be non-heretic Christian"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Leads and wins a children's Crusade",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must believe the same religion as founder"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Wins more than one Crusade as the most participating crusader or",
+                            "children": []
+                        },
+                        {
+                            "text": "Wins a crusade as the most participating crusader and has Crusader King trait,",
+                            "children": []
+                        },
+                        {
+                            "text": "Hasn't already founded any Crusade bloodline",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must believe the same religion as founder"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Given to the crusade beneficiary if the first crusade is victorious",
+                            "children": []
+                        },
+                        {
+                            "text": "Start date before 1100.1.1",
+                            "children": []
+                        },
+                        {
+                            "text": "Not given if the most participating crusader is the beneficiary (e.g. due to \"self-serving crusader\" stance)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must believe the same religion as founder"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Has triggered positive battle events 20 times more than negative battle events in Crusades (?),",
+                            "children": []
+                        },
+                        {
+                            "text": "Hasn't already founded any Crusade bloodline,",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't own any bloodline that has Resilient to Battle Injuries effect,",
+                            "children": []
+                        },
+                        {
+                            "text": "or leads and win a Shepherds' Crusade (can't be achieved by player)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must believe the same religion as founder"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Has won four Reconquista wars as attacker,",
+                            "children": []
+                        },
+                        {
+                            "text": "Has NOT won two Reconquista wars as defender,",
+                            "children": []
+                        },
+                        {
+                            "text": "Is Christian,",
+                            "children": []
+                        },
+                        {
+                            "text": "Hasn't already founded Reconquista Cid bloodline.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must be Christian Iberian"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: be aware that you can only start one Reconquista war per character lifetime, so you'll have to join others Reconquista wars to achieve this."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Has won two Reconquista wars as attacker,",
+                            "children": []
+                        },
+                        {
+                            "text": "Has won two Reconquista wars as defender,",
+                            "children": []
+                        },
+                        {
+                            "text": "Is Christian,",
+                            "children": []
+                        },
+                        {
+                            "text": "Hasn't already founded Reconquista bloodline.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must be Iberian or Andalusian"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: be aware that you can only start one Reconquista war per character lifetime, so you'll have to join others Reconquista wars to achieve this."
+                }
+            ]
+        },
+        {
+            "heading": "Alternate Start bloodlines",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Like in historical timelines, when an Alternate Start campaign is generated, certain characters start with bloodlines. On generation, it is possible for different characters to have the \"same\" type of bloodline (the same bonuses), although they will differ in name."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Inheritance",
+                            "Opinion",
+                            "Other modifiers"
+                        ],
+                        [
+                            "Great Conqueror Bloodline",
+                            "Depending on Founder Gender",
+                            "+5 Vassal",
+                            "+0.25 Monthly Prestige +10 Personal Combat Skill Periodically attracts the servitude of Great Warriors Spawns with a special sword and if a Horse, potentially a Unicorn Flair Spawned onto a character in a Shattered Invasion Alternate Start"
+                        ],
+                        [
+                            "Random World Bloodline 1",
+                            "Depending on Founder Gender",
+                            "+5 Vassal",
+                            "+0.25 Monthly Prestige +5 Personal Combat Skill Periodically attracts the servitude of Great Warriors"
+                        ],
+                        [
+                            "Random World Bloodline 2",
+                            "Depending on Founder Gender",
+                            "+2 Vassal",
+                            "+0.25 Monthly Prestige +15 Personal Combat Skill Allows for Sky Burials"
+                        ],
+                        [
+                            "Random World Bloodline 3",
+                            "Depending on Founder Gender",
+                            "+2 Vassal +20 Sex Appeal",
+                            "+0.25 Monthly Prestige +25% Fertility Legitimizing Bastards is Free"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Finding characters with bloodlines",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In the \"Bloodlines\" page of the Ledger :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "To see a quick summary of bloodline effects : hover the entry",
+                            "children": []
+                        },
+                        {
+                            "text": "To see a list of living descendants : click an entry to view its founder, then click the bloodline icon (on their character page), then click the bloodline icon (on the bloodline itself).",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ The Saintly Bloodlines in game files describe variants of the Saintly bloodlines for specific pagan religions, but seem to be not earnable ( Event HF.40000 ) by pagans in the normal course of the game. See /Crusader Kings II/common/events/HF_sainthood_events.txt , /Crusader Kings II/common/events/HF_ancestor_worship_events.txt , and /Crusader Kings II/common/bloodlines/01_saintly_bloodlines.txt .",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forumpost:25833627 (2019) & forumpost:29402967 (2024)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

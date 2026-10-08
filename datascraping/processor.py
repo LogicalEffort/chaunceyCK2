@@ -50,7 +50,7 @@ with sync_playwright() as p:
     browser = p.chromium.launch(headless=False)
     page = browser.new_page()
 
-    url = "https://ck2.paradoxwikis.com/api.php?action=parse&pageid=40&prop=text&format=json"
+    url = "https://ck2.paradoxwikis.com/api.php?action=parse&pageid=4894&prop=text&format=json"
 
     response = page.goto(url)
     data = response.json()
@@ -123,7 +123,7 @@ with sync_playwright() as p:
         "sections": sections
     }
 
-    output_path = Path("data/content/processed/40.json")
+    output_path = Path("data/content/processed/4894.json")
 
     with open(output_path, "w", encoding="utf-8") as file:
         json.dump(processed_page, file, indent=4,ensure_ascii=False )
