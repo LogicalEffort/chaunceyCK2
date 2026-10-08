@@ -1,0 +1,1048 @@
+{
+    "pageid": 2483,
+    "title": "Portrait modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "\"Modding rules [1] state that DLC assets should not be made available via mods to users not owning that DLC. Thus DLC assets can be referenced in a custom portraits*.gfx file, so that the DLC is required to use the mod. But the sprites themselves cannot be added directly to the mod.\""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Portraits are built by superposing layers of basic elements: background, generic head, facial elements (cheeks, hair, nose, ...), clothes, headgear, etc."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Each of these basic elements come with multiple variations or frames."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The choice of frame is either based on:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "the character DNA ,",
+                            "children": []
+                        },
+                        {
+                            "text": "or properties of the character (i.e triggers )",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Children are an exception as they are created using a single image, hence children look similar."
+                }
+            ]
+        },
+        {
+            "heading": "Characteristics",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There are two kind of characteristics: DNA and properties. Both are strings of letters (and possibly zeros for properties). They can be seen in-game by using console command charinfo ."
+                }
+            ]
+        },
+        {
+            "heading": "DNA",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "DNA is a string of 11 letters inherited from the parents and doesn't change after birth."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For historical characters, their DNA string can be set in character history :"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Otherwise randomly generated characters will get random DNA strings, which are persisted in the game saves."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Index",
+                            "Used for"
+                        ],
+                        [
+                            "d0",
+                            "Neck"
+                        ],
+                        [
+                            "d1",
+                            "Chin"
+                        ],
+                        [
+                            "d2",
+                            "Mouth"
+                        ],
+                        [
+                            "d3",
+                            "Nose"
+                        ],
+                        [
+                            "d4",
+                            "Cheeks"
+                        ],
+                        [
+                            "d5",
+                            "Unused"
+                        ],
+                        [
+                            "d6",
+                            "Eyes"
+                        ],
+                        [
+                            "d7",
+                            "Ears"
+                        ],
+                        [
+                            "d8",
+                            "Hair Color"
+                        ],
+                        [
+                            "d9",
+                            "Eye Color"
+                        ],
+                        [
+                            "d10",
+                            "Unused"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "So Genghis Khan's dna = \"bfimkolbecc\" means:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Frame b for the neck (2nd frame in mongol_male_neck_1.dds)",
+                            "children": []
+                        },
+                        {
+                            "text": "Frame f for the chin (6th frame in mongol_male_chin_1.dds)",
+                            "children": []
+                        },
+                        {
+                            "text": "Frame i for the mouth (9th frame in mongol_male_mouth_1.dds)",
+                            "children": []
+                        },
+                        {
+                            "text": "Frame m for the nose (13th frame in mongol_male_nose_1.dds)",
+                            "children": []
+                        },
+                        {
+                            "text": "etc...",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In case there are less frames than the index of the letter in alphabet, it wraps around. For instance, for chins there are usually 4 frames, so a = 1st frame and e = 1st frame as well."
+                }
+            ]
+        },
+        {
+            "heading": "Properties",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Properties are a string of up to 14 letters (in vanilla). If the string is shorter, zeros will be added at the end."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Only hair (p1) and beards (p4) can be changed in-game via the Customization Pack , the other property values are derived from portrait_properties.txt file."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "p0: Background",
+                            "children": []
+                        },
+                        {
+                            "text": "p1: Hair",
+                            "children": []
+                        },
+                        {
+                            "text": "p2: Base Head",
+                            "children": []
+                        },
+                        {
+                            "text": "p3: Clothes",
+                            "children": []
+                        },
+                        {
+                            "text": "p4: Beard",
+                            "children": []
+                        },
+                        {
+                            "text": "p5: Headgear",
+                            "children": []
+                        },
+                        {
+                            "text": "p6: Imprisoned",
+                            "children": []
+                        },
+                        {
+                            "text": "p7: Scars tier I",
+                            "children": []
+                        },
+                        {
+                            "text": "p8: Red Dots",
+                            "children": []
+                        },
+                        {
+                            "text": "p9: Boils",
+                            "children": []
+                        },
+                        {
+                            "text": "p10: Blinded",
+                            "children": []
+                        },
+                        {
+                            "text": "p11: Player",
+                            "children": []
+                        },
+                        {
+                            "text": "p12: Mask",
+                            "children": []
+                        },
+                        {
+                            "text": "p13: Eyepatch",
+                            "children": []
+                        },
+                        {
+                            "text": "p14: Chinese makeup",
+                            "children": []
+                        },
+                        {
+                            "text": "p15: Chinese makeup 2",
+                            "children": []
+                        },
+                        {
+                            "text": "p16: Chinese empress jewelry",
+                            "children": []
+                        },
+                        {
+                            "text": "p17: Immortality",
+                            "children": []
+                        },
+                        {
+                            "text": "p18: Special crowns behind",
+                            "children": []
+                        },
+                        {
+                            "text": "p19: Special crowns",
+                            "children": []
+                        },
+                        {
+                            "text": "p20: Freckles",
+                            "children": []
+                        },
+                        {
+                            "text": "p21: Physique",
+                            "children": []
+                        },
+                        {
+                            "text": "p22: Pale",
+                            "children": []
+                        },
+                        {
+                            "text": "p23: Black eye",
+                            "children": []
+                        },
+                        {
+                            "text": "p24: Harelip",
+                            "children": []
+                        },
+                        {
+                            "text": "p25: Scars tier II",
+                            "children": []
+                        },
+                        {
+                            "text": "p26: Scars tier III",
+                            "children": []
+                        },
+                        {
+                            "text": "p27: Blood splatter",
+                            "children": []
+                        },
+                        {
+                            "text": "p28: Tattoos",
+                            "children": []
+                        },
+                        {
+                            "text": "p29: Warpaint",
+                            "children": []
+                        },
+                        {
+                            "text": "p30: Demon Child",
+                            "children": []
+                        },
+                        {
+                            "text": "p31: Frankish culture male overlayer",
+                            "children": []
+                        },
+                        {
+                            "text": "p32: Frankish culture female overlayer",
+                            "children": []
+                        },
+                        {
+                            "text": "p33: Frankish culture female underlayer and hair",
+                            "children": []
+                        },
+                        {
+                            "text": "p34: Special Helmets",
+                            "children": []
+                        },
+                        {
+                            "text": "p35: Special Masks",
+                            "children": []
+                        },
+                        {
+                            "text": "p36: Special Scepters",
+                            "children": []
+                        },
+                        {
+                            "text": "p37: Special Relations",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is possible to add new properties with the following:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Define a sprite in a .gfx file, for instance GFX_custom",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Configure p18 in portrait_properties.txt (the number of properties is determined dynamically from there):",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Add a layer in portraits.gfx: \"GFX_custom:p18\"",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Rendering",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Based on player's experimentations, here is a description of how the rendering of portraits works in-game. Note that part of the logic has also been re-implemented in Portrait Builder tool, for an out-of-game rendering."
+                }
+            ]
+        },
+        {
+            "heading": "Children",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For child portraits:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Look directly for a spriteType entry in /interface/portraits/* with name PORTRAIT_<culturegfx>_child_<sex> , where:",
+                            "children": [
+                                {
+                                    "text": "<culturegfx> is the graphical_culture defined for the character culture or culture group",
+                                    "children": []
+                                },
+                                {
+                                    "text": "<sex> is either male or female",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Feudal",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The game renders feudal adult portraits as follows:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Look for a portraitType entry in /interface/portraits/portrait.gfx (or any other portraitType under /interface/* ) with name PORTRAIT_<culturegfx>_<sex><_period><age> , where:",
+                            "children": [
+                                {
+                                    "text": "<culturegfx> is the graphical_culture defined for the character culture or culture group ( common/cultures/00_cultures.txt )",
+                                    "children": []
+                                },
+                                {
+                                    "text": "<sex> is either male or female",
+                                    "children": []
+                                },
+                                {
+                                    "text": "<age> is an integer: 0 for young (16 <= age < 30), 1 for middle age (30 <= age < 50), 2 for old age (age >= 50)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "<_period> is either _early if year is before 950, _late if year is after 1250, or empty otherwise (note: actual dates are defines EARLY_PORTRAIT_AND_UNIT_BEFORE_YEAR and LATE_PORTRAIT_AND_UNIT_AFTER_YEAR)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "In case no portraitType entry matches, try some defaulting: no date, no age, fallback ethnicities in the graphical_cultures list, ethnicity from parent culture group, or westerngfx in last resort.",
+                            "children": []
+                        },
+                        {
+                            "text": "If a portraitType entry matches, apply the layers in order. For each layer defined as GFX_TYPE:[d|p]INDEX :",
+                            "children": [
+                                {
+                                    "text": "Look for GFX_TYPE in spriteTypes ( /interface/portraits/portrait_sprites.gfx or any other spriteType under /interface/* ) and read the number of frames N .",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Resolve the frame to use:",
+                                    "children": [
+                                        {
+                                            "text": "If letter is d , look for the letter in character DNA at INDEX position, and convert the letter to a number (modulo N )",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "If letter is p , resolve the property for value INDEX , defined in /interface/portrait_properties.txt . The choice is made based on a weighted random, but the first factor that evaluates to >= 100 will be automatically chosen.",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Define a skin tone for the ethnicity in common/graphicalculturetypes/graphicalculturetype.txt , so that it can \"manage\" mixed-race children.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Theocracy",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The rendering is the same as feudal characters, except for headgear and clothing layers:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Look for character religion definition and read the frame index directly there (portrait_properties.txt is not used):",
+                            "children": [
+                                {
+                                    "text": "religious_clothing_head : index of the frame to use for the religious head",
+                                    "children": []
+                                },
+                                {
+                                    "text": "religious_clothing_priest : index of the frame to use for other priests",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Use frame at index inside hardcoded sprites GFX_religious_male_clothes, GFX_religious_male_headgear, etc. instead of the sprites defined in portrait.gfx",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Republic",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The rendering is the same as feudal characters, except for headgear and clothing layers.\nIt uses hardcoded sprites GFX_merchant_male_clothes, GFX_merchant_male_headgear, etc. instead of the sprites defined in portrait.gfx"
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Clothing override",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With patch 2.7 a new mechanism was added to override the clothing layers based on rules."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The only examples in vanilla are from \\interface\\portraits\\society_clothes.gfx in dlc070.zip"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The general structure is the following:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Notes:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "c0 to c7 are the \"culture indexes\" that reference clothing layers (normally driven by properties p3 and p5) to be overridden from the base portraitType:",
+                            "children": [
+                                {
+                                    "text": "c0 = clothes behind",
+                                    "children": []
+                                },
+                                {
+                                    "text": "c1 = headgear behind",
+                                    "children": []
+                                },
+                                {
+                                    "text": "c2 = clothes",
+                                    "children": []
+                                },
+                                {
+                                    "text": "c3 = headgear mid",
+                                    "children": []
+                                },
+                                {
+                                    "text": "c4 = clothes infront",
+                                    "children": []
+                                },
+                                {
+                                    "text": "c5 = headgear",
+                                    "children": []
+                                },
+                                {
+                                    "text": "c6 = headgear behind hairlayer",
+                                    "children": []
+                                },
+                                {
+                                    "text": "c7 = headgear hairlayer",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: extra culture index cannot be added dynamically by modders."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "allow_property_values block can be used in a similar way to portrait_properties.txt to select the frames for p3 (clothes) and p5 (headgear) in the overridden sprites of the layer block.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Portrait scope",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A new scope is used, which is a sort of limited version of a character scope, with conditions prefixed with portrait_ ."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Condition",
+                            "Type",
+                            "Used in vanilla",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "portrait_age",
+                            "child/oldage",
+                            "✓",
+                            "Age of character compared to a portrait threshold (child, young, middle or old). As the thresholds are configurable, the numeric values are not directly hardcoded here.",
+                            "portrait_age > child portrait_age < oldage"
+                        ],
+                        [
+                            "portrait_is_female",
+                            "bool",
+                            "✓",
+                            "Whether character is a female",
+                            "portrait_is_female = yes"
+                        ],
+                        [
+                            "portrait_has_trait",
+                            "trait",
+                            "✓",
+                            "Whether character has the trait",
+                            "portrait_has_trait = vaishnavist_hindu"
+                        ],
+                        [
+                            "portrait_religion",
+                            "religion",
+                            "X",
+                            "[ Seen in the .exe - to be tested ]",
+                            ""
+                        ],
+                        [
+                            "portrait_culture",
+                            "culture",
+                            "✓",
+                            "Character culture",
+                            "portrait_culture = greek"
+                        ],
+                        [
+                            "portrait_culture_group",
+                            "culture_group",
+                            "✓",
+                            "",
+                            "portrait_culture_group = latin"
+                        ],
+                        [
+                            "portrait_gfx_culture",
+                            "?",
+                            "X",
+                            "[ Seen in the .exe - to be tested ]",
+                            ""
+                        ],
+                        [
+                            "portrait_government",
+                            "government",
+                            "X",
+                            "Whether character has the specified government. Seems to only work on landed characters.",
+                            ""
+                        ],
+                        [
+                            "portrait_tier",
+                            "tier",
+                            "✓",
+                            "",
+                            "portrait_tier = king"
+                        ],
+                        [
+                            "portrait_title_tier",
+                            "?",
+                            "X",
+                            "[ Seen in the .exe - to be tested ]",
+                            ""
+                        ],
+                        [
+                            "portrait_society",
+                            "society",
+                            "✓",
+                            "",
+                            "portrait_society = monastic_order_benedictine"
+                        ],
+                        [
+                            "portrait_society_rank",
+                            "int",
+                            "✓",
+                            "Character rank if member of a society",
+                            "portrait_society_rank = 1"
+                        ],
+                        [
+                            "portrait_clothing",
+                            "bool",
+                            "✓",
+                            "Warning : portrait_clothing = no appears to be broken.",
+                            "portrait_clothing = yes"
+                        ],
+                        [
+                            "portrait_offmap",
+                            "offmap_power",
+                            "✓",
+                            "Whether the character rules the given offmap.",
+                            "portrait_offmap = offmap_china"
+                        ],
+                        [
+                            "portrait_is_patrician",
+                            "bool",
+                            "X",
+                            "Whether the character is in a merchant republic and their employer patrician or has a republic government form.",
+                            "portrait_is_patrician = yes"
+                        ],
+                        [
+                            "portrait_in_command",
+                            "bool",
+                            "X",
+                            "Whether the character is in command and leading any troops.",
+                            "portrait_in_command = yes"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "portrait_age < oldage"
+                }
+            ]
+        },
+        {
+            "heading": "Custom ethnicities",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "It is possible to create new ethnicities by creating new assets and/or mixing existing vanilla or DLC assets in portraitTypes layers."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For instance a customgfx ethnicity with norsegfx faces and byzantinegfx clothes."
+                }
+            ]
+        },
+        {
+            "heading": "New assets",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If creating image sprites from scratch, you need to:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "In folder gfx/characters/ create 2 folders (gothic_male & gothic_female) to store the sprites (ex: gothic_male_clothes.dds with 12 frames)",
+                            "children": []
+                        },
+                        {
+                            "text": "In folder interface/ create a file portraits_gothic_spritetypes.gfx, with one entry per image sprite:",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "DLC assets",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Reusing DLC assets is easier than creating new one, but because the DLC assets cannot themselves be bundled into the mod, [2] users who don't own the DLC(s) containing these assets (ex: the Norse Portraits DLC) will see gothicgfx portraits with clothes but no heads."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The reason is that, as soon as some portraitTypes entry for gothicgfx are defined, the game will render them, even if the layers refer to unknown assets and will not show up properly\nThe fallback to another ethnicity in graphical_cultures list (or default westerngfx) only happens if no portraitType entry is found at all !"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There are some solutions to this problem:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Bundling the portraitTypes definitions for that ethnicity outside the main mod, in a sub-mod. This way players:",
+                            "children": [
+                                {
+                                    "text": "can activate the sub-mod ONLY if they have the required DLC(s).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "will see the fallback ethnicities if they don't have the required DLC(s)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Providing fallback portraitTypes for that ethnicities that do not use DLC assets. Players have to download those extra fallback portraitTypes and use the ones for which they don't have the required DLC.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "New ethnicity",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To define a new gothicgfx ethnicity, here are the steps:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "In main mod folder common/graphicalculturetypes/ add a new .txt file with the line:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "In main mod common/cultures/00_cultures.txt file, modify or add a new gothic culture with the following lines",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: if using sub-mods, it is important that the last culturegfx in the list be one of the vanilla base types (occitangfx, muslimgfx, byzantinegfx, westerngfx). In case it is westerngfx, it can be omitted as it is the default, or used as 3 layers of ethnicities. If using fallback portraitTypes, this is not required."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "In sub-mod (or main mod, depending on the solution chosen) folder interface/ add a new file portraits_gothic.gfx, with the following structure (copied from another vanilla portraits.gfx):",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "For each portraitType, reference the correct spriteType for each layer (custom, vanilla or DLC spriteType):",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Static portraits",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To display static pre-rendered portraits, there are a few techniques:"
+                }
+            ]
+        },
+        {
+            "heading": "Misc layer",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "This technique has become obsolete with patch 2.6 , given that new properties layers can now be modded, rather than modifying an existing layer."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Using a miscellaneous layer (for instance blinded_eyes) and add frames for pre-rendered portraits: [3]"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Move the layer to the end of layer list in portraits.gfx",
+                            "children": []
+                        },
+                        {
+                            "text": "Increase the number of frames in portrait_sprites.gfx (ex: GFX_character_blinded_eyes)",
+                            "children": []
+                        },
+                        {
+                            "text": "Edit sprite (ex: blinded_eyes.dds) to add the extra frame(s)",
+                            "children": []
+                        },
+                        {
+                            "text": "Add an entry in portrait_properties.txt for each frame inside the property corresponding to the layer (ex: p10 blinded), with a trigger based on unique trait or character flag:",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Occluded flag",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Using occluded = yes in character history; this is used for Muhammad (The Prophet). Big limitation is that everyone with occluded = yes will have same portrait. It uses a single frame texture with hardcoded name Muhammad.tga:"
+                }
+            ]
+        },
+        {
+            "heading": "Custom ethnicity",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Using a custom ethnicity, and setting it in character history, or via event using set_graphical_culture command.\nBecause the commands requires a culture as argument, a custom culture definition must be added too.\nAlso the ethnicity being randomly inherited from one of the parents at birth, some on_action events may be needed to control things."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The steps are:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Create a custom culture in common/cultures/",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Define a portrait in interface/ for the custom ethnicity, with the fixed frame layer based on p2 property",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Use set_graphical_culture = special command and graphical_culture = specialgfx condition in events.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "External links",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A complete guide to Custom Portraits",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Portrait Builder tool",
+                            "children": []
+                        },
+                        {
+                            "text": "Culture",
+                            "children": []
+                        },
+                        {
+                            "text": "Portrait DLCs",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Forum:779854",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum:779854",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum:809364",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,434 @@
+{
+    "pageid": 4896,
+    "title": "Patch 3.0 mod compatibility guide",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This guide describes the steps to make a mod compatible with patch 3.0.X from patch 2.8.3.2 ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that this does not replace the usual step of merging files , in case the mod modifies some vanilla files."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In case of issues, run the latest version of The Validator , and try activating debug launch options, which will now report failed asserts in log files ."
+                }
+            ]
+        },
+        {
+            "heading": "Folders",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "province_setup is no longer used when loading from saves, so no more need to duplicate information with province history files."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There is now more than 1 vanilla trade route: for custom maps, either replace_path = \"common/trade_routes\" or blank the new file."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When overriding a graphic file by name, the extension now has to be the same (.tga or .dds)."
+                }
+            ]
+        },
+        {
+            "heading": "CBs",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "There's a new optional sort_priority in CBs",
+                            "children": []
+                        },
+                        {
+                            "text": "Some CBs now check for on-going crusades via:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "For compatibility with Haruspicy religion feature, the following needs to be added to all CBs:",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Minor titles",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A new male_consort entry is expected by the engine inside common/minor_titles (will cause CTD if missing).",
+                            "children": []
+                        },
+                        {
+                            "text": "The feminist religion and status of women checks:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "are moved to scripted triggers (and enriched to handle patriarchal/matriarchal religion features:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The following effects are added to job & minor titles that vote on the council:",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Religions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Intermarrying AI logic has been changed, so now all religions that should be able to intermarry need to be specified in their entry of common\\religions , regardless of their group. Previously, only Pagans could refuse on religious grounds within their group.",
+                            "children": []
+                        },
+                        {
+                            "text": "reformer_head_of_religion must now be set on the reformed version of the religion instead of the original religion.",
+                            "children": []
+                        },
+                        {
+                            "text": "can_hold_temples now causes CTD. It was deprecated since patch 2.4 .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Portraits",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Note: all previous portrait packs have been impacted by the patch, so you may need to unzip the portrait DLCs again, to use as reference."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "New properties up to p36 have been added, so any custom properties needs to be moved to p37 or later. For reference, the new layers for PORTRAIT_westerngfx_male are indicated:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Notes:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "(1) Empty layers not used here for headgear (p5) are added for reference: :p5:c6 (headgear behind hairlayer) and :p5:c7 (headgear hairlayer)",
+                            "children": []
+                        },
+                        {
+                            "text": "(2) GFX_western_male_ear:d7 is moved",
+                            "children": []
+                        },
+                        {
+                            "text": "(3) GFX_character_eyepatch:p13 is moved",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "For scars there are 3 variants: GFX_character_scars_light , GFX_character_scars and GFX_character_scars_dark , loosely correlated with the culturegfx skin_tone .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Mods can take advantage of new portrait packs (in case players have the DLC active):",
+                            "children": [
+                                {
+                                    "text": "levantinegfx (typically for cultures already using arabicgfx)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "englishgfx (typically for cultures already using saxongfx)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "trueoccitangfx  (typically for cultures already using occitangfx)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "romangfx",
+                                    "children": []
+                                },
+                                {
+                                    "text": "dalmatiangfx",
+                                    "children": []
+                                },
+                                {
+                                    "text": "outremergfx",
+                                    "children": []
+                                },
+                                {
+                                    "text": "italiangfx",
+                                    "children": []
+                                },
+                                {
+                                    "text": "croatsouthslavicgfx",
+                                    "children": []
+                                },
+                                {
+                                    "text": "serbsouthslavicgfx",
+                                    "children": []
+                                },
+                                {
+                                    "text": "magyargfx",
+                                    "children": []
+                                },
+                                {
+                                    "text": "pagangfx",
+                                    "children": []
+                                },
+                                {
+                                    "text": "hellenicgfx",
+                                    "children": []
+                                },
+                                {
+                                    "text": "berbergfx",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "westerngfx is now added explicitly as default in vanilla graphical_cultures when applicable.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: it's important to always use a vanilla culturegfx as a backup for players without any portrait packs."
+                }
+            ]
+        },
+        {
+            "heading": "Personal combat rescaling",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "combat_rating attribute has been scaled up by a factor of 5 to 10."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Custom modifiers, traits, scripting checks, etc. need to be updated to take into account the new balance:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Berserker: +25",
+                            "children": []
+                        },
+                        {
+                            "text": "Master duelist: +20",
+                            "children": []
+                        },
+                        {
+                            "text": "Whispering Sword: +15",
+                            "children": []
+                        },
+                        {
+                            "text": "Won duel: +10",
+                            "children": []
+                        },
+                        {
+                            "text": "Giant: +10",
+                            "children": []
+                        },
+                        {
+                            "text": "Sword: +5",
+                            "children": []
+                        },
+                        {
+                            "text": "Dwarf: -15",
+                            "children": []
+                        },
+                        {
+                            "text": "Old: -15",
+                            "children": []
+                        },
+                        {
+                            "text": "Very old: -35",
+                            "children": []
+                        },
+                        {
+                            "text": "Obese: -50",
+                            "children": []
+                        },
+                        {
+                            "text": "Bedridden illness: -100",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "New game rules",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "silly_events can be checked for easter egg events, if applicable."
+                }
+            ]
+        },
+        {
+            "heading": "Alternate starts",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A new folder common/alternate_start needs to be adapted to the mod settings."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "To make a mod fully compatible with alternate start scenario, some tags need to be added:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In cultures nomadic_in_alt_start = yes and alternate_start = { has_alternate_start_parameter = { key = culture value = full_random } } if applicable.\nIn game rules: alt_start_default = off"
+                }
+            ]
+        },
+        {
+            "heading": "Misc scripting",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "ai = no and only_playable = yes are now valid pre-trigger for decisions, to optimize them.",
+                            "children": []
+                        },
+                        {
+                            "text": "dynasty = random is sometimes replaced by dynasty = actually_culture in create_character commands.",
+                            "children": []
+                        },
+                        {
+                            "text": "trait = fair is replaced by has_fair_trait_trigger = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "trait = ugly is replaced by has_ugly_trait_trigger = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "NOT = { has_character_flag = is_child_of_destiny } is added to all childhood personality events",
+                            "children": []
+                        },
+                        {
+                            "text": "",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "is replaced by pacifists_lose_piety_effect = yes"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "has_job_title = yes can be used a character event pre-trigger (typically for job title events)",
+                            "children": []
+                        },
+                        {
+                            "text": "When using remove_trait = wounded , consider using the new add_scarred_tiered_effect = yes as well to increase the variable scarred_variable",
+                            "children": []
+                        },
+                        {
+                            "text": "Consider using add_blood_splatter_effect = yes (combat, hunting, ...) or apply_random_minor_injury_effect = yes (concussion, ...) in custom events, so that it reflects in portraits",
+                            "children": []
+                        },
+                        {
+                            "text": "Consider using gain_weight_small_effect = yes (feast, wedding, glutton events...) / lose_weight_small_effect = yes (hunting, travelling, ...) / gain_weight_medium_effect = yes / lose_weight_medium_effect = yes (oubliette, torture, ...) for events that switch from temperate to drunkard or gluttonous. In order to reflect in portraits weight_trait_check_effect = yes must be called. Note that a 5 year pulse event will re-calculate the physique_variable based on traits.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Patch 3.0 mod compatibility discussion thread",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": []
+        }
+    ]
+}

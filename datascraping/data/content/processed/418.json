@@ -1,0 +1,673 @@
+{
+    "pageid": 418,
+    "title": "Temples",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Temples are the generic name for religious holdings in a county. They are one of four major settlement types, the other three being castles , cities and tribes . Christian temples are called bishoprics , Muslim temples are called mosques , Zoroastrian temples are called vahrams , Hindu and Jain temples are called mandirs , while Buddhist temples are called viharas . Temples are the only holding type which all playable government types can build."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Temples are normally associated with Theocratic government . An exception is made for rulers of Iqta and Monastic Feudal realms, which allows for both castles and temples to be held without penalty; they gain monthly piety for each temple holding in their demesne ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Clergy of most religions are disqualified from succession . This can be useful for managing gavelkind succession, especially for Catholics, who have frequent opportunities to invest bishops . Temple holders are otherwise normally appointed through open elective succession."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Granting a temple to a courtier of your religion gives 25 piety . This often happens after holy wars . You still get the piety if you right-click the temple to generate a random vassal. Hindu characters must be of the Brahmin caste to be granted temples."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Holy sites that lack a temple only give +5% to the religion's moral authority . Constructing a temple boosts this to 10%. An additional +5% is awarded if the religion's head personally holds a temple in one of the religion's holy sites; this bonus does not stack. Constructing a temple in any province also gives +1% to moral authority for 20 years."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Buildings are functionally identical across religions even though their names vary. Note that building upgrades stack."
+                }
+            ]
+        },
+        {
+            "heading": "Base Stats",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "All holdings have certain base statistics, providing income, fort level, and levies, so even a newly constructed holding will have some value."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Characteristic",
+                            "Value"
+                        ],
+                        [
+                            "",
+                            "Income",
+                            "8"
+                        ],
+                        [
+                            "",
+                            "Fort level",
+                            "0"
+                        ],
+                        [
+                            "",
+                            "Levies",
+                            "45 light infantry 45 heavy infantry 40 archers 2 galleys (if located at coastal county)"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Fortifications",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These buildings increase fort level, increasing the time it takes an attacking army to siege the holding and reducing the amount of free loot available to raiders."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements"
+                        ],
+                        [
+                            "Church Fortifications I",
+                            "50",
+                            "182",
+                            "+0.5 fort level",
+                            "Church Walls I",
+                            ""
+                        ],
+                        [
+                            "Church Fortifications II",
+                            "50",
+                            "182",
+                            "+0.5 fort level",
+                            "Church Walls II Church Fortifications I",
+                            "Improved Keeps I"
+                        ],
+                        [
+                            "Church Fortifications III",
+                            "50",
+                            "182",
+                            "+0.5 fort level",
+                            "Church Fortifications II",
+                            "Improved Keeps III"
+                        ],
+                        [
+                            "Church Fortifications IV",
+                            "100",
+                            "365",
+                            "+1 fort level",
+                            "Church Fortifications III",
+                            "Improved Keeps V"
+                        ],
+                        [
+                            "Church Fortifications V",
+                            "100",
+                            "365",
+                            "+1 fort level",
+                            "Church Fortifications IV",
+                            "Improved Keeps VII"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Walls",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Walls increase levy size and fort level, raising the defensive capacity. They also slightly increase yearly income from the holding."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements"
+                        ],
+                        [
+                            "Church Walls I",
+                            "50",
+                            "365",
+                            "+0.5 fort level +2.5% levy size +0.2 income",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Church Wall II",
+                            "50",
+                            "547",
+                            "+0.5 fort level +2.5% levy size +0.2 income",
+                            "Church Walls I",
+                            "Improved Keeps II"
+                        ],
+                        [
+                            "Church Walls III",
+                            "100",
+                            "730",
+                            "+1 fort level +5% levy size +0.2 income",
+                            "Church Walls II",
+                            "Improved Keeps IV"
+                        ],
+                        [
+                            "Church Walls IV",
+                            "100",
+                            "1095",
+                            "+1 fort level +5% levy size +0.2 income",
+                            "Church Walls III",
+                            "Improved Keeps VI"
+                        ],
+                        [
+                            "Church Walls V",
+                            "150",
+                            "1460",
+                            "+1.5 fort level +7.5% levy size +0.5 income",
+                            "Church Walls IV",
+                            "Improved Keeps VIII"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Churches and Cathedrals",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Chuches are the center of the Temple holding and increase percentage-wise the number of levy and garrison troops available. They also provide piety to the liege, and holder if Muslim."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements"
+                        ],
+                        [
+                            "Church I",
+                            "150",
+                            "547",
+                            "+5% levy size +5% garrison size +0.05 liege piety",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Church II",
+                            "200",
+                            "730",
+                            "+7.5% levy size +10% garrison size +0.05 liege piety",
+                            "Church Walls I Church I",
+                            ""
+                        ],
+                        [
+                            "Church III",
+                            "300",
+                            "1095",
+                            "+10% levy size +15% garrison size +0.05 liege piety",
+                            "Church II",
+                            "Church Infrastructure II"
+                        ],
+                        [
+                            "Cathedral I",
+                            "400",
+                            "1460",
+                            "+12.5% levy size +20% garrison size +0.05 liege piety",
+                            "Church III",
+                            "Church Infrastructure IV"
+                        ],
+                        [
+                            "Cathedral II",
+                            "500",
+                            "2190",
+                            "+15% levy size +25% garrison size +0.05 liege piety",
+                            "Cathedral I",
+                            "Church Infrastructure VI"
+                        ],
+                        [
+                            "Cathedral III",
+                            "500",
+                            "2190",
+                            "+15% levy size +25% garrison size +0.05 liege piety",
+                            "Cathedral II",
+                            "Church Infrastructure VIII"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Militia Quarters",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Militia Quarters increase the raw number of light infantry and archers available. These two troop types are of low quality, but make up the majority of armies and are utilised mostly in the skirmish phase of battles."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements"
+                        ],
+                        [
+                            "Militia Quarters I",
+                            "100",
+                            "365",
+                            "+60 light infantry +30 archers",
+                            ""
+                        ],
+                        [
+                            "Militia Quarters II",
+                            "120",
+                            "547",
+                            "+65 light infantry +45 archers",
+                            "Church Walls I Militia Quarters I",
+                            ""
+                        ],
+                        [
+                            "Militia Quarters III",
+                            "200",
+                            "730",
+                            "+70 light infantry +60 archers",
+                            "Militia Quarters II",
+                            "Church Infrastructure I"
+                        ],
+                        [
+                            "Militia Quarters IV",
+                            "300",
+                            "1095",
+                            "+75 light infantry +75 archers",
+                            "Militia Quarters III",
+                            "Church Infrastructure III"
+                        ],
+                        [
+                            "Militia Quarters V",
+                            "400",
+                            "2190",
+                            "+85 light infantry +85 archers",
+                            "Militia Quarters IV",
+                            "Church Infrastructure V"
+                        ],
+                        [
+                            "Militia Quarters VI",
+                            "500",
+                            "2190",
+                            "+95 light infantry +95 archers",
+                            "Militia Quarters V",
+                            "Church Infrastructure VII"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Barracks",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Church Barracks provide heavy infantry, which are heavy hitters and important in the melee phase of battles."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements"
+                        ],
+                        [
+                            "Barracks I",
+                            "100",
+                            "365",
+                            "+45 heavy infantry",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Barracks II",
+                            "120",
+                            "730",
+                            "+55 heavy infantry",
+                            "Church Walls I Barracks I",
+                            ""
+                        ],
+                        [
+                            "Barracks III",
+                            "200",
+                            "730",
+                            "+65 heavy infantry",
+                            "Church Walls II Barracks II",
+                            "Church Infrastructure II"
+                        ],
+                        [
+                            "Barracks IV",
+                            "300",
+                            "1095",
+                            "+75 heavy infantry",
+                            "Barracks III",
+                            "Church Infrastructure IV"
+                        ],
+                        [
+                            "Barracks V",
+                            "400",
+                            "2190",
+                            "+85 heavy infantry",
+                            "Barracks IV",
+                            "Church Infrastructure VI"
+                        ],
+                        [
+                            "Barracks VI",
+                            "500",
+                            "2190",
+                            "+95 heavy infantry",
+                            "Barracks V",
+                            "Church Infrastructure VIII"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Towns",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Church towns increase the income of the holding."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements"
+                        ],
+                        [
+                            "Church Town I",
+                            "100",
+                            "365",
+                            "+2 income",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Church Town II",
+                            "120",
+                            "547",
+                            "+2 income",
+                            "Church Town I Church Walls I",
+                            ""
+                        ],
+                        [
+                            "Church Town III",
+                            "200",
+                            "730",
+                            "+2 income",
+                            "Church Town II Church Walls II",
+                            "Church Infrastructure I"
+                        ],
+                        [
+                            "Church Town IV",
+                            "300",
+                            "1095",
+                            "+2 income",
+                            "Church Town III",
+                            "Church Infrastructure III"
+                        ],
+                        [
+                            "Church Town V",
+                            "400",
+                            "2190",
+                            "+2 income",
+                            "Church Town IV",
+                            "Church Infrastructure V"
+                        ],
+                        [
+                            "Church Town VI",
+                            "500",
+                            "2190",
+                            "+2 income",
+                            "Church Town V",
+                            "Church Infrastructure VII"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Temple Shipyards",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Temple shipyards are buildings that can only be built in coastal provinces; they provide galleys that can be used to transport troops."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "Temple Shipyard I",
+                            "100",
+                            "365",
+                            "+4 galleys",
+                            "",
+                            "Shipbuilding I",
+                            "Only available in coastal holdings"
+                        ],
+                        [
+                            "Temple Shipyard II",
+                            "100",
+                            "730",
+                            "+5 galleys",
+                            "Temple Shipyard I",
+                            "Shipbuilding II",
+                            "Only available in coastal holdings"
+                        ],
+                        [
+                            "Temple Shipyard III",
+                            "100",
+                            "1095",
+                            "+6 galleys",
+                            "Temple Shipyard II",
+                            "Shipbuilding III",
+                            "Only available in coastal holdings"
+                        ],
+                        [
+                            "Temple Shipyard IV",
+                            "100",
+                            "1460",
+                            "+7 galleys",
+                            "Temple Shipyard III",
+                            "Shipbuilding IV",
+                            "Only available in coastal holdings"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Schools",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Schools are educational institutions that increase the rate of technological growth in the entire county. Names varies depending on religion."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "Monastic School",
+                            "120",
+                            "547",
+                            "+10% tech spread rate +0.04 cultural tech points +0.05 liege piety",
+                            "Church Walls I",
+                            "Church Infrastructure III",
+                            "Bonus affects the entire county"
+                        ],
+                        [
+                            "Cathedral School",
+                            "120",
+                            "547",
+                            "+20% tech spread rate +0.04 cultural tech points +0.05 liege piety",
+                            "Monastic School Church Walls II",
+                            "Church Infrastructure VI",
+                            "Bonus affects the entire county"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Monumental Shrines",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This building chain is accessible when the owner or any liege of the temple has the Monumental (Carpenter) or Peaceful-Monumental bloodlines. See Bloodline#Forged_Bloodlines"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "Monumental Shrines I",
+                            "125",
+                            "365",
+                            "+1 income +0.05 liege piety",
+                            "",
+                            "",
+                            "Requires an owner or any liege with the Monumental or Peaceful-Monumental bloodlines."
+                        ],
+                        [
+                            "Monumental Shrines II",
+                            "250",
+                            "560",
+                            "+1 income +0.1 liege piety",
+                            "Monumental Shrines I",
+                            "Church Infrastructure III",
+                            "Requires an owner or any liege with the Monumental or Peaceful-Monumental bloodlines."
+                        ],
+                        [
+                            "Monumental Shrines III",
+                            "250",
+                            "560",
+                            "+1 income +0.15 liege piety",
+                            "Monumental Shrines II",
+                            "Church Infrastructure V",
+                            "Requires an owner or any liege with the Monumental or Peaceful-Monumental bloodlines."
+                        ],
+                        [
+                            "Monumental Shrines IV",
+                            "250",
+                            "560",
+                            "+1 income +0.25 liege piety",
+                            "Monumental Shrines III",
+                            "Church Infrastructure VII",
+                            "Requires an owner or any liege with the Monumental or Peaceful-Monumental bloodlines."
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Saint Shrine",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Available with the Tomb of the Saint province modifier"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements"
+                        ],
+                        [
+                            "Shrine",
+                            "150",
+                            "210",
+                            "+0.05 liege piety -0.05% revolt risk +2 income",
+                            "",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

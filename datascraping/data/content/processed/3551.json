@@ -1,0 +1,656 @@
+{
+    "pageid": 3551,
+    "title": "On action events",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These are events that fire on_action."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Name"
+                        ],
+                        [
+                            "1",
+                            "Empty dummy event"
+                        ],
+                        [
+                            "2",
+                            "Empty dummy event"
+                        ],
+                        [
+                            "10",
+                            "Killer discovered after murder - consequences"
+                        ],
+                        [
+                            "11",
+                            "Attacker discovered after failed murder - consequences"
+                        ],
+                        [
+                            "20",
+                            "Adultery discovered"
+                        ],
+                        [
+                            "150",
+                            "On-action event: Avoided imprison, declared independence"
+                        ],
+                        [
+                            "4000",
+                            "character_event"
+                        ],
+                        [
+                            "151",
+                            "On-action event: Was imprisoned"
+                        ],
+                        [
+                            "4001",
+                            "character_event"
+                        ],
+                        [
+                            "152",
+                            "on_avoided_imprison_fled_country"
+                        ],
+                        [
+                            "4002",
+                            "character_event"
+                        ],
+                        [
+                            "153",
+                            "on_released_FROM_prison"
+                        ],
+                        [
+                            "154",
+                            "on_executed"
+                        ],
+                        [
+                            "155",
+                            "on_exiled"
+                        ],
+                        [
+                            "156",
+                            "on_failed_assassination - no harm done"
+                        ],
+                        [
+                            "40003",
+                            "on_failed_assassination - involvement remains unknown"
+                        ],
+                        [
+                            "157",
+                            "on_failed_assassination - wounded"
+                        ],
+                        [
+                            "40004",
+                            "character_event"
+                        ],
+                        [
+                            "158",
+                            "on_failed_assassination - maimed"
+                        ],
+                        [
+                            "40005",
+                            "character_event"
+                        ],
+                        [
+                            "159",
+                            "on_failed_assassination_disc - no harm done"
+                        ],
+                        [
+                            "40006",
+                            "on_failed_assassination - divulged my name"
+                        ],
+                        [
+                            "on_failed_assassination_disc - wounded"
+                        ],
+                        [
+                            "40007",
+                            "character_event"
+                        ],
+                        [
+                            "161",
+                            "on_failed_assassination - maimed"
+                        ],
+                        [
+                            "40008",
+                            "character_event"
+                        ],
+                        [
+                            "162",
+                            "on_assassination"
+                        ],
+                        [
+                            "40009",
+                            "character_event"
+                        ],
+                        [
+                            "163",
+                            "on_assassination - discovered"
+                        ],
+                        [
+                            "40010",
+                            "character_event"
+                        ],
+                        [
+                            "40020",
+                            "Failed assassination attempt on us, reactions possible"
+                        ],
+                        [
+                            "40021",
+                            "Liege deals with inter-realm assassination"
+                        ],
+                        [
+                            "40022",
+                            "Legitimate claim on throne"
+                        ],
+                        [
+                            "40023",
+                            "character_event"
+                        ],
+                        [
+                            "40024",
+                            "character_event"
+                        ],
+                        [
+                            "40025",
+                            "character_event"
+                        ],
+                        [
+                            "40026",
+                            "character_event"
+                        ],
+                        [
+                            "200",
+                            "CHRISTIAN CRUSADE AGAINST MUSLIMS"
+                        ],
+                        [
+                            "201",
+                            "CHRISTIAN CRUSADE AGAINST PAGANS"
+                        ],
+                        [
+                            "321",
+                            "CHRISTIAN CRUSADE AGAINST HERETICS"
+                        ],
+                        [
+                            "320",
+                            "MUSLIM JIHAD AGAINST CHRISTIANS"
+                        ],
+                        [
+                            "322",
+                            "MUSLIM JIHAD AGAINST PAGANS"
+                        ],
+                        [
+                            "323",
+                            "MUSLIM JIHAD AGAINST HERETICS"
+                        ],
+                        [
+                            "324",
+                            "PAGAN HOLY WAR AGAINST CHRISTIANS"
+                        ],
+                        [
+                            "325",
+                            "PAGAN HOLY WAR AGAINST MUSLIMS"
+                        ],
+                        [
+                            "326",
+                            "PAGAN HOLY WAR AGAINST OTHER PAGANS"
+                        ],
+                        [
+                            "327",
+                            "ZOROASTRIAN GREAT HOLY WAR"
+                        ],
+                        [
+                            "328",
+                            "JEWISH GREAT HOLY WAR"
+                        ],
+                        [
+                            "202",
+                            "DEMAND_RELIGIOUS_CONVERSION_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "203",
+                            "DEMAND_RELIGIOUS_CONVERSION_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "204",
+                            "REVOKE_TITLE_INTERACTIONS_ACCEPT_EVENT"
+                        ],
+                        [
+                            "205",
+                            "REVOKE_TITLE_INTERACTIONS_DECLINE_EVENT"
+                        ],
+                        [
+                            "206",
+                            "OFFER_PEACE_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "207",
+                            "OFFER_PEACE_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "208",
+                            "SEND_GIFT_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "209",
+                            "SEND_GIFT_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "210",
+                            "OFFER_VASSALIZATION_INTERACTIONS_EVENT"
+                        ],
+                        [
+                            "212",
+                            "ARRANGE_BETROTHAL_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "213",
+                            "ARRANGE_BETROTHAL_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "214",
+                            "OFFER_SUCCESSION_MARRIAGE_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "215",
+                            "OFFER_SUCCESSION_MARRIAGE_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "216",
+                            "OFFER_MARRIAGE_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "217",
+                            "OFFER_MARRIAGE_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "218",
+                            "RANSOM_CHARACTER_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "219",
+                            "RANSOM_CHARACTER_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "220",
+                            "EDUCATE_CHARACTER_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "221",
+                            "EDUCATE_CHARACTER_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "222",
+                            "ABANDON_AMBITION_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "223",
+                            "ABANDON_AMBITION_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "224",
+                            "STOP_BACKING_AMBITION_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "225",
+                            "STOP_BACKING_AMBITION_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "226",
+                            "JOIN_AMBITION_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "227",
+                            "JOIN_AMBITION_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "228",
+                            "GRANT_LANDED_TITLE_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "229",
+                            "GRANT_LANDED_TITLE_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "230",
+                            "APPOINT_TO_OFFICE_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "231",
+                            "APPOINT_TO_OFFICE_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "232",
+                            "ASK_FOR_INVASION_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "233",
+                            "ASK_FOR_INVASION_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "234",
+                            "ASK_FOR_DIVORCE_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "235",
+                            "ASK_FOR_DIVORCE_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "236",
+                            "ASK_FOR_EXCOMMUNICATION_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "237",
+                            "ASK_FOR_EXCOMMUNICATION_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "238",
+                            "CALL_ALLY_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "41000",
+                            "CALL_ALLY_INTERACTION_ACCEPT_EVENT for tribal vassals"
+                        ],
+                        [
+                            "239",
+                            "CALL_ALLY_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "41001",
+                            "CALL_ALLY_INTERACTION_DECLINE_EVENT for tribal vassals"
+                        ],
+                        [
+                            "241",
+                            "DECLARE_WAR_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "274",
+                            "RETRACT_VASSAL_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "275",
+                            "RETRACT_VASSAL_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "330",
+                            "ARRANGE_SUCC_BETROTHAL_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "331",
+                            "ARRANGE_SUCC_BETROTHAL_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "280",
+                            "INVITE_TO_COURT_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "281",
+                            "INVITE_TO_COURT_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "282",
+                            "ASK_FOR_VASSALIZATION_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "283",
+                            "ASK_FOR_VASSALIZATION_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "284",
+                            "ASK_TO_LIFT_EXCOMMUNICATION_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "285",
+                            "ASK_TO_LIFT_EXCOMMUNICATION_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "286",
+                            "ASK_TO_RANSOM_CHARACTER_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "287",
+                            "ASK_TO_RANSOM_CHARACTER_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "288",
+                            "SETTLE_ADVENTURER_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "289",
+                            "SETTLE_ADVENTURER_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "503",
+                            "ABSORB_CLAN_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "504",
+                            "ABSORB_CLAN_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "505",
+                            "FORM_BLOOD_OATH_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "506",
+                            "FORM_BLOOD_OATH_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "507",
+                            "SETTLE_FEUD_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "508",
+                            "SETTLE_FEUD_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "509",
+                            "SPLIT_CLAN_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "510",
+                            "SPLIT_CLAN_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "500",
+                            "On-action event: Royal Marriage Aid Duty"
+                        ],
+                        [
+                            "501",
+                            "On-action event: Zoroastrian Xwedodah"
+                        ],
+                        [
+                            "502",
+                            "On-action event: Messalian close kin marriage"
+                        ],
+                        [
+                            "290",
+                            "Approve or disapprove of de facto Law Change"
+                        ],
+                        [
+                            "675",
+                            "Zeus Version Approve or disapprove of de facto Law Change"
+                        ],
+                        [
+                            "291",
+                            "Approve or disapprove of de jure Law Change"
+                        ],
+                        [
+                            "676",
+                            "Zeus Version Approve or disapprove of de jure Law Change"
+                        ],
+                        [
+                            "292",
+                            "Approve or disapprove of de jure Law Change"
+                        ],
+                        [
+                            "293",
+                            "ASK_TO_JOIN_WAR_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "294",
+                            "ASK_TO_JOIN_WAR_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "295",
+                            "ASK_TO_EMBARGO_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "296",
+                            "ASK_TO_EMBARGO_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "297",
+                            "ASK_TO_EMBARGO_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "298",
+                            "ASK_TO_EMBARGO_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "diploresponse.1",
+                            "FORM_ALLIANCE_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "diploresponse.2",
+                            "FORM_ALLIANCE_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "600",
+                            "Rebels spawn"
+                        ],
+                        [
+                            "601",
+                            "Inform barons about the rebels"
+                        ],
+                        [
+                            "610",
+                            "Province defects to rebels"
+                        ],
+                        [
+                            "615",
+                            "Rebels disperse"
+                        ],
+                        [
+                            "620",
+                            "Crusade/Jihad Succeeds"
+                        ],
+                        [
+                            "621",
+                            "Crusade/Jihad Fails"
+                        ],
+                        [
+                            "650",
+                            "On-action event: On Death - hidden - clear stuff"
+                        ],
+                        [
+                            "660",
+                            "on_forced_consort"
+                        ],
+                        [
+                            "661",
+                            "character_event"
+                        ],
+                        [
+                            "662",
+                            "character_event"
+                        ],
+                        [
+                            "670",
+                            "narrative_event"
+                        ],
+                        [
+                            "671",
+                            "character_event"
+                        ],
+                        [
+                            "63103",
+                            "character_event"
+                        ],
+                        [
+                            "63104",
+                            "The liege is notified of the independence"
+                        ],
+                        [
+                            "63105",
+                            "Remove patron deity modifiers for hindu converts"
+                        ],
+                        [
+                            "63106",
+                            "Safety check event for flag clearace - do_not_disturb etc"
+                        ],
+                        [
+                            "520",
+                            "BUY_FAVOR_ACCEPT_EVENT"
+                        ],
+                        [
+                            "521",
+                            "BUY_FAVOR_DECLINE_EVENT"
+                        ],
+                        [
+                            "522",
+                            "REQUEST_SUPPORT_ACCEPT_EVENT"
+                        ],
+                        [
+                            "523",
+                            "REQUEST_SUPPORT_DECLINE_EVENT"
+                        ],
+                        [
+                            "524",
+                            "FORM_NON_AGGRESSION_PACT_ACCEPT_EVENT"
+                        ],
+                        [
+                            "525",
+                            "FORM_NON_AGGRESSION_PACT_DECLINE_EVENT"
+                        ],
+                        [
+                            "750",
+                            "letter_event"
+                        ],
+                        [
+                            "526",
+                            "ASK_COUNCIL_POSITION_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "527",
+                            "ASK_COUNCIL_POSITION_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "528",
+                            "ASK_REALM_PEACE_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "529",
+                            "ASK_REALM_PEACE_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "530",
+                            "FORCE_JOIN_FACTION_INTERACTION_ACCEPT_EVENT"
+                        ],
+                        [
+                            "531",
+                            "FORCE_JOIN_FACTION_INTERACTION_DECLINE_EVENT"
+                        ],
+                        [
+                            "532",
+                            "Realm with designated regent or court physicians inherited by realm that already has a designated regent"
+                        ],
+                        [
+                            "533",
+                            "character_event"
+                        ],
+                        [
+                            "534",
+                            "Crusade/Jihad is invalidated"
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

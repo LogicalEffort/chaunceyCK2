@@ -1,0 +1,424 @@
+{
+    "pageid": 504,
+    "title": "Opinion",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Opinion represents the degree to which a character likes or dislikes another. Having high opinion with someone will lead said character to have friendlier behavior and accept more requests therefrom. Conversely, having low opinion may trigger the character to be more hostile, joining factions or plots against the other."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Opinion is affected by a variety of factors that range from traits to succession law, from diplomacy to events , among others. Each different opinion modifier, along with their reasons, are fully visible to players through the relevant tooltip."
+                }
+            ]
+        },
+        {
+            "heading": "Viewing opinions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The character sheet for any character will show:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Their opinion towards the player character (bottom right)",
+                            "children": []
+                        },
+                        {
+                            "text": "Their opinion towards their liege, and vice versa (top right)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The opinion of a ruler toward another can also be seen using the \"opinion\" map mode:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Select the \"Opinion\" map mode (shortcut: D )",
+                            "children": []
+                        },
+                        {
+                            "text": "Click a province in one ruler's demesne",
+                            "children": []
+                        },
+                        {
+                            "text": "Hover over the other ruler's demesne",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is also possible to see the opinion of an arbitrary character A toward another character B :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Right-click on the portrait of character B",
+                            "children": []
+                        },
+                        {
+                            "text": "Left-click on the \"Explore Character Opinions\" button",
+                            "children": []
+                        },
+                        {
+                            "text": "Find character A in the list, it will indicate their opinion of character B .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Effects on vassal duties",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Vassals' opinion of their liege will affect how well they fulfill their duties."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Duty",
+                            "Min",
+                            "Max",
+                            "Notes"
+                        ],
+                        [
+                            "Liege tax",
+                            "-100",
+                            "0",
+                            "At -100 opinion, the vassal will not pay any taxes at all. One exception is the Catholic clergy; see below. Having an opinion higher than 0 will not grant any additional tax revenue."
+                        ],
+                        [
+                            "Liege levy",
+                            "0",
+                            "100",
+                            "Both the min and max percentages are set by laws . Only vassals above (min levies) / (max levies) will provide more than the minimum. For example, with laws setting min levies to 20% and max levies to 60%, vassals with opinion above 33 will provide more than 20%."
+                        ],
+                        [
+                            "Piety to liege",
+                            "0",
+                            "50",
+                            "Vassal has an upgraded hospital or temple ."
+                        ],
+                        [
+                            "Prestige to liege",
+                            "0",
+                            "50",
+                            "Vassal has an upgraded hospital or is a Muslim close relative."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Having an opinion higher than 0 will not grant any additional tax revenue."
+                }
+            ]
+        },
+        {
+            "heading": "Catholic clergy exceptions",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Catholic clergy who prefer a Pope to their secular liege will pay taxes to him instead, and not provide levies to anyone. A vassal pope who dislikes you (opinion < 0) will likewise pay no taxes and provide no levies."
+                }
+            ]
+        },
+        {
+            "heading": "List of opinion modifiers",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Wrong government type",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Vassals of count-tier and above who have a different government type from their liege will have a -20  to their opinion towards the liege due to \"wrong government type\"."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "For this modifier's purpose, Iqta, Monastic Feudal and Holy Order governments are considered feudal. Also, ordinary republics and merchant republics are also considered to have the same government and do not generate opinion penalties with each other.",
+                            "children": []
+                        },
+                        {
+                            "text": "Due to this modifier, non-feudal lieges may find it more difficult to maximize levies from feudal vassals.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Common opinion modifiers",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For opinion modifiers based on the following, see the corresponding page:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Traits",
+                            "children": []
+                        },
+                        {
+                            "text": "Succession law",
+                            "children": []
+                        },
+                        {
+                            "text": "Demesne laws",
+                            "children": []
+                        },
+                        {
+                            "text": "Realm laws",
+                            "children": []
+                        },
+                        {
+                            "text": "Crown laws",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Actions that increase opinion",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Send Gift",
+                            "children": []
+                        },
+                        {
+                            "text": "Give Artifact (you can have your local smith forge a very cheap sword that gives +15 opinion)",
+                            "children": []
+                        },
+                        {
+                            "text": "Educate Child (one of your children)",
+                            "children": []
+                        },
+                        {
+                            "text": "Build in Holding in ruler's Demesne (opinion increased immediately on the start of construction)",
+                            "children": []
+                        },
+                        {
+                            "text": "others...",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Scaling opinion modifiers",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Formula",
+                            "Applies to"
+                        ],
+                        [
+                            "Prestige",
+                            "+1 / 200 Prestige (max +10)",
+                            "Everyone except clergy 10x effect when negative (-1 / 20)"
+                        ],
+                        [
+                            "Piety",
+                            "+1 / 50 Piety (max +10)",
+                            "Clergy of same faith"
+                        ],
+                        [
+                            "State Diplomacy",
+                            "+1 / 4 State Diplomacy",
+                            "Everyone who does not see personal diplomacy"
+                        ],
+                        [
+                            "Personal Diplomacy",
+                            "+1.5 * (Personal Diplomacy - 4) For minors, parent or guardian skill may be checked instead of the child's",
+                            "For opinion toward rulers: Own courtiers (including prisoners) Council members (except when in seclusion) Spouse For opinion toward non-rulers: All characters"
+                        ],
+                        [
+                            "Short Reign",
+                            "-2 * (10 - (Years Reigned [rounding up] + Majesty in capital province)) (max +0).",
+                            "Vassals and below. Tripled for most unreformed pagans ; waived for Buddhists and Jains."
+                        ],
+                        [
+                            "Long Reign",
+                            "+ 1 2 ∗ ( Y e a r s R e i g n e d [ r o u n d i n g u p ] − 10 ) ( m i n + 0 ) {\\displaystyle +{\\frac {1}{2}}*(Years\\ Reigned[rounding\\ up]-10)(min+0)}",
+                            "Vassals and below"
+                        ],
+                        [
+                            "Ruled too long",
+                            "",
+                            "Vassals and below (of Immortal rulers, usually)"
+                        ],
+                        [
+                            "Demesne Too Big",
+                            "-10 / step over limit. 2-month grace period after newly acquiring holdings (via conquest, revocation, inheritance, etc.)",
+                            "Vassals"
+                        ],
+                        [
+                            "Too Many Held Duchies",
+                            "-10 / held duchies over 2.",
+                            "Vassals (of king or emperor)"
+                        ],
+                        [
+                            "Elector Titles Held",
+                            "-15 per held elector title beyond 1 duchy and 1 kingdom",
+                            "Direct de jure vassals in a feudal elective kingdom or empire"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "10x effect when negative (-1 / 20)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For opinion toward rulers:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Own courtiers (including prisoners)",
+                            "children": []
+                        },
+                        {
+                            "text": "Council members (except when in seclusion)",
+                            "children": []
+                        },
+                        {
+                            "text": "Spouse",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For opinion toward non-rulers:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "All characters",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Ambition opinion",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Ambitious characters have an additional -25 opinion modifier toward characters they desire something from, stacking with the following negative opinion modifiers:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Title claimant",
+                            "children": []
+                        },
+                        {
+                            "text": "Desires <title>",
+                            "children": [
+                                {
+                                    "text": "Direct de jure liege title is held by liege, and does not contain the liege's capital",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Direct de jure vassal title is held by liege",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Desires control of <title>",
+                            "children": [
+                                {
+                                    "text": "\"One of your vassals has, as their primary title, a title that is my direct de jure vassal\"",
+                                    "children": []
+                                },
+                                {
+                                    "text": "A vassal transfer will fix this and also add \"vassal transfer: +10\" for 10 years",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Too many held elector titles (more than one de jure duchy, or more than one de jure kingdom)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Ambition opinion is also active against a liege while a character is plotting to fabricate a claim on their liege's title . If a vassal is \"-25 Ambitious\" toward their liege and shows no reason to be, they are probably using this plot."
+                }
+            ]
+        },
+        {
+            "heading": "Modding",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Modifiers#Opinion_modifier_types for opinion effects of traits, character modifiers, artifacts",
+                            "children": []
+                        },
+                        {
+                            "text": "Modifiers#Opinion_modifiers for timed opinion modifiers between specific characters",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

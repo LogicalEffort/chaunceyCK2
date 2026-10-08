@@ -1,0 +1,288 @@
+{
+    "pageid": 1471,
+    "title": "Creating a mod",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This tutorial explains in details the steps required to create a basic mod."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that another approach is to copy/paste and modify an existing mod (though not a mod installed via Steam Workshop since these are packaged differently)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is assumed that the OS is Windows, but this could apply to MacOS or Linux with few changes."
+                }
+            ]
+        },
+        {
+            "heading": "Prerequisites",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Install a good text editor (such as Notepad++ ), since default Notepad on Windows can possibly mess up the file encoding.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Steps",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Create the CK2 mod directory",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There are 2 different directories involved:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The CK2 install directory: it contains the base game files, which should not be modified directly and considered 'read-only' (modifications will be lost when Steam is updating). It can be found via Steam: find CK2 in your games library, right click on the name and select properties in the menu. Choose the local files tab and then press browse local files . It will take you to a path that ends with something like steamapps\\common\\Crusader Kings II .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The CK2 user files: it contains the user data (saves, game preferences, logs and mods). The path is generally something like ~/My Documents/Paradox Interactive/Crusader Kings II/ , where ~ is the home directory. Depending on your configuration and Windows version, this could look like: C:\\Users\\<YourUser>\\Documents\\Paradox Interactive\\Crusader Kings II , and in Linux, ~/.paradoxinteractive/Crusader Kings/ .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Tip : you may create shortcuts to these directories on your desktop."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Step 1 : Create a mod folder ~/My Documents/Paradox Interactive/Crusader Kings II/mod/ , if it doesn't exist."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note : there is also a legacy common\\Crusader Kings II\\mod\\ folder in the CK2 install directory, but it must not be used to store mods."
+                }
+            ]
+        },
+        {
+            "heading": "Create the .mod file",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The .mod format here is just a plain text file, saved with .mod file extension instead of the .txt extension."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Tip : most CK2 files use .txt extension, but there is also .csv (localization), .gfx (graphics), .sfx (sounds), .gui (interface), .lua (global variables) and .info (documentation)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Step 2 : Create an empty file named \"mymod.mod\" in the CK2 mod folder ( ~/My Documents/Paradox Interactive/Crusader Kings II/mod/mymod.mod )."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note : make sure the file extension is .mod (and not .mod.txt) - disable \"Hide Known Extensions\" option of Windows explorer."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Step 3 : Open the file with your editor and add:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Notes :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Don't forget the quotes, it is mandatory in case there is a space.",
+                            "children": []
+                        },
+                        {
+                            "text": "Save the file with ANSI (Windows-1252) encoding. This is true for all CK2 files: never use UTF-8 encoding (with or without 'BOM') !",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Tip : the path is relative to CK2 user directory, hence the \"mod/\" prefix."
+                }
+            ]
+        },
+        {
+            "heading": "Create the mod data folder",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Step 4 : Create an empty folder named \"mymod\" in the CK2 mod folder ( ~/My Documents/Paradox Interactive/Crusader Kings II/mod/mymod/ )."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Tip : best practice is to use same name for path folder as the mod file name, so that they are next to each other when browsing the CK2 mod folder."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note : folder and file names are case sensitive on OS other than Windows, so a best practice is to use only lower-case."
+                }
+            ]
+        },
+        {
+            "heading": "Making a game modification",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "We need a little change that will be quickly visible in-game, to validate that the mod is working."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Let's do some basic localization modding and change the text \"Choose Your Starting Era\" on the lobby to \"Choose Your Favourite Era\" (the corresponding localisation key is PICK_YOUR_STARTING_ERA )"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Step 5 : Create an empty folder named \"localisation\" in the mod data folder ( ~/My Documents/Paradox Interactive/Crusader Kings II/mod/mymod/localisation/ )."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Notes :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A mod follows the same folder structure as the base game, and the two are merged when loading in memory.",
+                            "children": []
+                        },
+                        {
+                            "text": "Beware the folder has to be named \"localisation\" and not \"localization\" !",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Step 6 : Create an empty file named \"00_mymod.csv\" in that folder ( ~/My Documents/Paradox Interactive/Crusader Kings II/mod/mymod/localisation/00_mymod.csv )."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Tip : the \"00_\" prefix is to ensure our localization is loaded first and overrides the vanilla one. Each folder has its own loading order/overriding behavior."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Step 7 : Open the file with a text editor and copy the following lines to the file and save:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "That's it!"
+                }
+            ]
+        },
+        {
+            "heading": "Testing the mod",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Step 8 : Activate the mod \"My mod\" in the launcher (and don't activate any other mod) and start the game."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Troubleshooting : if the mod doesn't show up in the launcher, it probably means the .mod file is not in the correct folder or has the wrong extension (.txt instead of .mod)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Tip : notice that the in-game checksum has not changed compared to the one from the launcher. This is because the localisation folder doesn't alter the checksum, as it's only a cosmetic change."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Step 9 : Click on Start and verify that the title of the pop-up has changed."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Troubleshooting : if the change is not visible in game, or the game crashes, check for errors logged by the game at startup in error.log ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Step 10 : Take some time to congratulate yourself, and go back for more modding!"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note : each time you modify something in the mod files, you need to stop and restart CK2 so that the change is taken into account."
+                }
+            ]
+        },
+        {
+            "heading": "What's next?",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Mod other game files . Take it slowly, with small challenge, one problem at a time !",
+                            "children": []
+                        },
+                        {
+                            "text": "Register your CK2 game and ask for help on the Crusader Kings II - User Modifications forum",
+                            "children": []
+                        },
+                        {
+                            "text": "Upload your mod to the Steam Workshop",
+                            "children": []
+                        },
+                        {
+                            "text": "Zip the mymod.mod and mymod folder together into a mymod.zip and upload the mod on the forum",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "External links",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Guide: Your first mod - to add an event option.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": []
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "pageid": 3646,
+    "title": "History modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "History modding is the setup of the historical (or canon) data that allows the history to be scrollable in the game lobby, and by extension the research necessary to gather that data."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For the most part the data is only used before starting a new game: as soon as a game starts it will slowly diverge from history depending on player and random A.I actions, even if some historical events can be triggered or influenced via scripting (culture melting pots, appearance of historical characters, ...). The alternative history is persisted in the save game , and as of patch 2.5 the vanilla history is even no longer processed when loading from a save, to speed up the process."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "History modding requires:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Dynasty modding to list historical dynasties",
+                            "children": []
+                        },
+                        {
+                            "text": "Character history to define character statistics (and dynasty, if noble), as well as important life events (birth, marriage, death,...).",
+                            "children": []
+                        },
+                        {
+                            "text": "Title modding to:",
+                            "children": [
+                                {
+                                    "text": "Define a base de jure hierarchy of landed titles. Note that this hierarchy may change via title history (this is called \"dynamic de jure\").",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Associate those titles to rulers (coronation dates), as well as activating or deactivating titles at certain dates. Active titles without history get a randomly generated ruler assigned at start-up.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Province history to define the evolution of provinces (culture and religion), and the date of foundation of its holdings.",
+                            "children": []
+                        },
+                        {
+                            "text": "Technology history to configure the initial technology of provinces, depending on the start date.",
+                            "children": []
+                        },
+                        {
+                            "text": "War history to reference historical wars and warscore evolution, so that a war may already be on-going when starting at a given date.",
+                            "children": []
+                        },
+                        {
+                            "text": "Bookmark modding to highlight some key start dates (because they are more challenging, balanced, have special scripted events, etc.).",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In addition, coats of arms modding is involved to associate shields to dynasties and flags to titles."
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "pageid": 6337,
+    "title": "JD chinese invasion events",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/jd_chinese_invasion_events.txt"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Event"
+                        ],
+                        [
+                            "JD.10100",
+                            "China launches an invasion... (Hidden, picks an invasion type - Tributary OR Major OR nothing happens)"
+                        ],
+                        [
+                            "JD.10130",
+                            "Visible event for player: \"Become tributary of China, or prepare to be conquered\""
+                        ],
+                        [
+                            "JD.10101",
+                            "Tributary Invasion (where the CB is set and troops are spawned)"
+                        ],
+                        [
+                            "JD.10105",
+                            "NEWS: visible event for player (someone PEACEFULLY became a tributary to China, from accepting the demand)"
+                        ],
+                        [
+                            "JD.10102",
+                            "NEWS: visible event for player (tributary invasion)"
+                        ],
+                        [
+                            "JD.10103",
+                            "Major Invasion (where the CB is set and troops are spawned)"
+                        ],
+                        [
+                            "JD.10104",
+                            "NEWS: Major invasion declared on <target>! (Visible event for players + player target, fired from JD.10103)"
+                        ],
+                        [
+                            "JD.10200",
+                            "Cleanup event REGULAR (sent from yearly pulse)"
+                        ],
+                        [
+                            "JD.10201",
+                            "Cleanup event for MAJOR invasion (sent from yearly pulse)"
+                        ],
+                        [
+                            "JD.10202",
+                            "Sets exception flag for new rulers - makes sure China's new Emperor can be a belligerent as they please (fired from on_offmap_ruler_changed)"
+                        ],
+                        [
+                            "JD.10121",
+                            "Fallback gating event (to handle Displaced Princes, Jurchen Invacers, and Rebel Generals) ... in case the old Protector General left some paper-work behind when they abandoned office (Fires for the current governor, from offmap_monthly_pulse)"
+                        ],
+                        [
+                            "JD.10108",
+                            "News event for Jurchen tribe/Displaced prince invasion/adventurer (stand-alone, fired further down, from JD.10109)"
+                        ],
+                        [
+                            "JD.10109",
+                            "Spawning Altaic Tribe adventurer... (fires for the governor, from jd_chinese_status_and_policy_events file)"
+                        ],
+                        [
+                            "JD.10113",
+                            "Spawning Displaced Prince - Only in case of dynasty change...  (fires for the governor, from JD.50300, jd_chinese_status_and_policy_events file )"
+                        ],
+                        [
+                            "JD.10110",
+                            "An ambitious Jurchen General/Displaced Prince begins to plan an adventure for a foreign title"
+                        ],
+                        [
+                            "JD.10111",
+                            "Checks ready to settle (declare war or negotiate) or continue raiding, repeating every 3 years. (Gating event)"
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

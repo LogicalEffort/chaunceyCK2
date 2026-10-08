@@ -1,0 +1,896 @@
+{
+    "pageid": 937,
+    "title": "Patch 1.09",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This patch was released January 14, 2013, along with Linux support and The Republic DLC."
+                }
+            ]
+        },
+        {
+            "heading": "Major",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Merchant Republic gameplay (Duke or higher tier Republics with a coastal capital)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a 'Grant Independence' diplomatic interaction",
+                            "children": []
+                        },
+                        {
+                            "text": "Titles can now automatically change name depending on the culture of their top liege",
+                            "children": []
+                        },
+                        {
+                            "text": "The Reign length opinion modifiers are now dependent on how long a character has been the liege of someone, not how long the primary title has been held",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 1241 Bookmark - \"The Mongols\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Save file transfer now works on Mac",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced max demesne size from ruler tier, especially for Dukes",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced the effect of Stewardship on max demesne size (now 15%, down from 25%.)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a max demesne size bonus (+1) for dukes with more than one duchy",
+                            "children": []
+                        },
+                        {
+                            "text": "Increased the Prestige effects of a rank difference in marriages by a factor of 5",
+                            "children": []
+                        },
+                        {
+                            "text": "All merc regiments now grow in max size over time",
+                            "children": []
+                        },
+                        {
+                            "text": "Added more mercenary bands: Finns, Lapps, Abyssinians, Nubians, Lithuanians, Scots, Irish and Alans",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Ultimogeniture succession law",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Tanistry succession law",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Minor",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed a bug with religions that have become or stopped being heresies not being correctly reset on reload",
+                            "children": []
+                        },
+                        {
+                            "text": "Sunset Invasion: Slightly increased the arrival strength of the Aztecs",
+                            "children": []
+                        },
+                        {
+                            "text": "Increased the strength of the Timurids",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a hidden event that clears diplomatic immunity from faction members if the faction leader dies while waiting for the liege response to an ultimatum",
+                            "children": []
+                        },
+                        {
+                            "text": "When forming the Roman Empire, de jure assimilation into the Byzantine Empire is now carried over",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug allowing you to declare excommunication wars on lieges above your immediate liege (the war would then invalidate)",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Will not attach units to allied units unless they are in the war target area",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where a king who was also emperor lost the empire title in a civil war, but retained all dukes as vassals under the kingdom",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash in the province view",
+                            "children": []
+                        },
+                        {
+                            "text": "Retinues no longer cost maintenance when you are out of money ( since they do not reinforce when you are out of money )",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a rare crash that could occur when a character was exiled from the last existing republic",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with de jure withdrawal out of empires where the counter would reset and nothing would happen",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Infinitesimal chance that the AI will fold to faction demands from tiny factions",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some bugs with the outcomes of the Imperial Reconquest CB",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with characters not always returning correctly from foreign courts",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a CTD with the GamersGate in-game store API if there was a network error",
+                            "children": []
+                        },
+                        {
+                            "text": "Forbidding councillors from leading armies is now saved",
+                            "children": []
+                        },
+                        {
+                            "text": "Forbidding councillors from leading armies will no longer lead to an out of sync in multiplayer",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue where a settlement could be awarded to an enemy after a siege was won",
+                            "children": []
+                        },
+                        {
+                            "text": "Character screen no longer moves to front when it updates its data",
+                            "children": []
+                        },
+                        {
+                            "text": "When creating a new unit one subunit will automatically transfer over if the selected unit has at least two",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a message for when someone takes over as a faction leader",
+                            "children": []
+                        },
+                        {
+                            "text": "Prerequisite building missing text in building tooltip is now localized",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue where character browser was showing some rulers when set to \"all characters\" and \"no rulers\"",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Fixed a somewhat borked odds calculation vs attached units",
+                            "children": []
+                        },
+                        {
+                            "text": "Army AI: Fixed an indecision issue - will be more determined to hunt down certain armies",
+                            "children": []
+                        },
+                        {
+                            "text": "Army AI: Fixed a bug with splinter armies putting the whole agent into retreat mode",
+                            "children": []
+                        },
+                        {
+                            "text": "Army AI: Fixed a rare collection livelock issue if a splinter army was besieging a holding",
+                            "children": []
+                        },
+                        {
+                            "text": "Army AI: Fixed a glitch with the potential target province calculation due to moving enemy units",
+                            "children": []
+                        },
+                        {
+                            "text": "Claimant Factions are no longer valid for non-elective titles if the claimant has no claim",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a confusing \"any demesne title\" trigger tooltip",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed the kingdom of Pommerania from the de jure HRE",
+                            "children": []
+                        },
+                        {
+                            "text": "Liege levy maintenance cost is now shared with sub vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "The old liege now only gets weak claims on members of successful independence factions",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a rare crash in AI flank leader unit assignment",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue that could allow vassals of vassals to launch independence faction wars",
+                            "children": []
+                        },
+                        {
+                            "text": "Independence faction wars are now invalidated if the pre-war liege becomes vassalized himself",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where the successor of an Ecumenical Patriarch (or a vassal Pope) could change religion to the liege's.",
+                            "children": []
+                        },
+                        {
+                            "text": "Vassals of vassals can no longer start claimant factions for claimants in another realm",
+                            "children": []
+                        },
+                        {
+                            "text": "You now correctly gain Piety for granting bishoprics to courtiers",
+                            "children": []
+                        },
+                        {
+                            "text": "Muslim rulers no longer get Piety for creating a random mosque holder",
+                            "children": []
+                        },
+                        {
+                            "text": "Hamburg and Celle now have ports",
+                            "children": []
+                        },
+                        {
+                            "text": "Province of Alexandria adjusted to include the site of the actual city",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender corrections to certain characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing parents for Roupen I of Armenia Minor",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed broken House Oitir dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed several Mongol characters having the wrong religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Constantine de Hauteville is no longer female",
+                            "children": []
+                        },
+                        {
+                            "text": "Gytha Thorkelsdottir now has the correct deathdate",
+                            "children": []
+                        },
+                        {
+                            "text": "Louis d'Évreux now has the correct mother",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixes to Václav II and descendants",
+                            "children": []
+                        },
+                        {
+                            "text": "William 'Adelin' now has the correct deathdate",
+                            "children": []
+                        },
+                        {
+                            "text": "Miscellaneous database corrections to the de Luxembourg dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "Miscellaneous database corrections for the Normans and the 1st Earl of Chester",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the birthdate of Saint Louis IX of France and his brother Robert of Artois",
+                            "children": []
+                        },
+                        {
+                            "text": "Switched culture for two characters from Irish to Scottish",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixes to Danish and Norwegian bastards",
+                            "children": []
+                        },
+                        {
+                            "text": "Added the Hvide Bishops of Roskilde",
+                            "children": []
+                        },
+                        {
+                            "text": "The culture of Khwarizm now changes to Turkish at the correct date",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated the Jarls of Västergötland",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed various issues with wrong or missing mothers for Frankish characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the lineage of Erik III of Denmark",
+                            "children": []
+                        },
+                        {
+                            "text": "Added new Maghreb Wikipedia links",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaked deathdate of Mubashir, Duke of Mallorca, and made him eunuch",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the spelling of the de Cuiseaux dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrections to the Af Sverker family",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixes to the ruler history of the Périgord and La Marche counties",
+                            "children": []
+                        },
+                        {
+                            "text": "The Pirate King Kyrillos is now correctly imprisoned when captured through event",
+                            "children": []
+                        },
+                        {
+                            "text": "Added dynasty and descendants to Umar ibn Khattab",
+                            "children": []
+                        },
+                        {
+                            "text": "Fleshed out the Rassid dynasty of Yemen",
+                            "children": []
+                        },
+                        {
+                            "text": "Additions to the Banu 'Amir dynasty and its descendants",
+                            "children": []
+                        },
+                        {
+                            "text": "Various changes and additions to the Hammudid dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "Added the Mayzadids of Hillah",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated the Scottish name list",
+                            "children": []
+                        },
+                        {
+                            "text": "Minor changes and additions to the Italian name list",
+                            "children": []
+                        },
+                        {
+                            "text": "The Umayyad and Hashimid now have Muslim-style Coats of Arms",
+                            "children": []
+                        },
+                        {
+                            "text": "Added some missing Dukes of Brittany",
+                            "children": []
+                        },
+                        {
+                            "text": "Namechanges for several Scottish characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Constantinople is now protected by the Theodosian Walls",
+                            "children": []
+                        },
+                        {
+                            "text": "Some corrections to Swedish kings and their families",
+                            "children": []
+                        },
+                        {
+                            "text": "Links for Hungarian names added",
+                            "children": []
+                        },
+                        {
+                            "text": "Changes to the Baltic pagan setup",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrections to Birger Jarl's family line",
+                            "children": []
+                        },
+                        {
+                            "text": "All Armenian characters are now Miaphysite",
+                            "children": []
+                        },
+                        {
+                            "text": "Added descriptive texts of all buildings",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue with certain buildings referring to an obsolete Seljuk title",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated the credits",
+                            "children": []
+                        },
+                        {
+                            "text": "Basra and Tigris now have the correct ruler in 1152",
+                            "children": []
+                        },
+                        {
+                            "text": "Blocked claimant factions for vassals of vassals under Medium or higher crown authority",
+                            "children": []
+                        },
+                        {
+                            "text": "Blocked most factions for vassals of vassals under Medium crown authority in addition to High and Absolute",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a problem with the limit of children for heirs",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Fixed a bug with it not dismissing liege levies when done with them",
+                            "children": []
+                        },
+                        {
+                            "text": "The pre-spawned 1066 conquest armies in England now suffer normal attrition",
+                            "children": []
+                        },
+                        {
+                            "text": "Event spawned civil war armies now suffer normal attrition",
+                            "children": []
+                        },
+                        {
+                            "text": "Made the bastard birth event (450) more common",
+                            "children": []
+                        },
+                        {
+                            "text": "If married, women now fool their husbands about the parentage of children born from the bastard birth event (450)",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with kingdom adjudication and barony tier titles under lieges with split allegiances",
+                            "children": []
+                        },
+                        {
+                            "text": "Lowered the inheritance chance a bit for most congenital traits",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some glitches with the Mongol conversion events",
+                            "children": []
+                        },
+                        {
+                            "text": "There is now a chance that the Ilkhanate will convert to Nestorianism",
+                            "children": []
+                        },
+                        {
+                            "text": "There is now a small chance that the Golden Horde will convert to Nestorianism",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Tweaked the effect of the Content trait on the creation and joining of Claimant factions",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: A bit smarter about launching claimant ultimatums",
+                            "children": []
+                        },
+                        {
+                            "text": "Diplomacy View: Fixed a minor prestige tooltip issue when marrying lowborn characters",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Vassals of a conqueror's title should not support claimants of another culture",
+                            "children": []
+                        },
+                        {
+                            "text": "DoW AI: Now more aware of the possibility of mercs and the military value of Gold",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: More keen on using mercs if even slightly outnumbered",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Very rich states are now more likely to use multiple merc regiments if needed",
+                            "children": []
+                        },
+                        {
+                            "text": "Renamed the merc fleets after sea zones",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a hidden event to disband William's special invasion fleet",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Lords and their heirs always answer each other's call to wars",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Fixed a bug that could prevent the passing of laws",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Smarter about trying to institute Agnatic-Cognatic law",
+                            "children": []
+                        },
+                        {
+                            "text": "Retinues are now correctly passed on to the _player_ successor, not the primary title successor",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash bug in the Diplo and Province views with character with a null list of enemies",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where characters inherited debts",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a minor bug in the effect 'vassalize_or_take_under_title' that would allow vassalization of unvassalizable titles like the Hashashin",
+                            "children": []
+                        },
+                        {
+                            "text": "The religious CB now vassalizes lords of your own religion in the target Duchy",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Fixed an issue where lords would marry off their councillors matrilineally to lowborn courtiers",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with succession law opinions of children not of their parent's dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "Optimized the line of succession calculation code",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Fixed some bugs with elective successor choices",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed (hopefully) a gross bankruptcy bug with the 'transfer_scaled_wealth' effect",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: External powers now more aggressive against civil war revolters",
+                            "children": []
+                        },
+                        {
+                            "text": "Various code speed optimizations",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed another bug with dead character in the Allies list",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Husband and Wife always answer each other's calls to war",
+                            "children": []
+                        },
+                        {
+                            "text": "Reversed the order of rulers in the Title History View (latest now on top)",
+                            "children": []
+                        },
+                        {
+                            "text": "Invasion AI: Fixed a bug where fleets were afraid of loaded armies on enemy fleets",
+                            "children": []
+                        },
+                        {
+                            "text": "Army AI: Fixed a brain death issue when under invasion by a Mercenary company whose unit was destroyed",
+                            "children": []
+                        },
+                        {
+                            "text": "Army AI: Fixed an issue where it would not raise its own demesne ships",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Will tend to hand out the latest acquired baronies rather than the oldest",
+                            "children": []
+                        },
+                        {
+                            "text": "The Traitor opinion is now inherited by ruler successors",
+                            "children": []
+                        },
+                        {
+                            "text": "Calling someone to war now makes them dislike you by the same amount you will like them for answering",
+                            "children": []
+                        },
+                        {
+                            "text": "Conquerors (rulers of conquered titles) can now call on rulers from back home (Cultural Bonds) while defending against other cultures",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a rare crash in the Diplomacy View",
+                            "children": []
+                        },
+                        {
+                            "text": "The 'vassalize_or_take_under_title' effect now correctly restores the taker liege afterward",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where certain event effects in CBs could take Patrician titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the backend poster not having a HTTP POST timeout",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the random seed in event effect descriptions not matching the actual effect",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where rampaging mercs would make an invalid DoW",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug preventing you from nominating bishop successors",
+                            "children": []
+                        },
+                        {
+                            "text": "Muslim pulse events are now triggered correctly",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed misplaced IF in decadence_invasion",
+                            "children": []
+                        },
+                        {
+                            "text": "Added additional rulers to Chalkidike in the history database",
+                            "children": []
+                        },
+                        {
+                            "text": "Chancellor event while improving relations is now properly triggered",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed error in polygamy event",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue with event where a character tries to free his/her spouse",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing parents to several Arabic characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Added additional Alan dynasties",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixes to several Welsh dynasty names",
+                            "children": []
+                        },
+                        {
+                            "text": "Some Armenian dynasty names are now Greek as intended",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the dynasty of Udalard de Besalu",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters older than 50 will no longer fight in tournaments",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed pronoun error in Guardian event",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed superfluous church opinion effect from several Muslim-only event modifiers",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue where the wife of a courtier could suggest a new Lord Spiritual",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed option effect in event 1009",
+                            "children": []
+                        },
+                        {
+                            "text": "Added additional Irish and Welsh dynasties and characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing parents for the Riyahdids",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Muslim Hafsids of Crete and the Anemas dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "Tatikios now has Greek culture and is employed by Alexios Komnenos",
+                            "children": []
+                        },
+                        {
+                            "text": "Various additions to Norwegian and Irish family trees",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Modding",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The event trigger and effect 'any_faction_backer' without a 'faction' field now work for the backers of all factions",
+                            "children": []
+                        },
+                        {
+                            "text": "The 'copy_title_history' effect now also copies de jure assimilation",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some bugs with the 'de_jure_liege_or_above' and 'de_jure_vassal_or_below' triggers",
+                            "children": []
+                        },
+                        {
+                            "text": "Character event flags are now shown in the portrait debug tooltip",
+                            "children": []
+                        },
+                        {
+                            "text": "The modifier 'assassinate_chance_modifier' on the acting ruler now has an effect",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'is_at_sea'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'is_patrician'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'is_merchant_republic'",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed unused on actions 'on_siege_won' and 'on_siege_list'.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added on action 'on_siege_over' which triggers for all characters in the province",
+                            "children": []
+                        },
+                        {
+                            "text": "Exported PATRICIAN_CAMPAIGN_FUND_FACTOR to defines",
+                            "children": []
+                        },
+                        {
+                            "text": "Exported DOGE_SUCC_RANDOM_FACTOR to defines",
+                            "children": []
+                        },
+                        {
+                            "text": "Added effects 'embargo' and 'lift_embargo'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'has_trade_post'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event target 'trade_post_owner'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event effect 'seize_trade_post'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'attrition' field to the 'spawn_unit' effect. This is an attrition multiplier.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'cuckoo' (impregnation) console command",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'culture = random' to 'create_character' and related event effects",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'rep_trade_posts' Plot type",
+                            "children": []
+                        },
+                        {
+                            "text": "Added define 'ENFORCE_ONE_OF_EACH_HOLDING' (Require players to build at least one City, Temple and Castle in each province)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event target 'plot_target_province'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a 'capital_holding' event target",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'num_of_trade_posts'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'num_of_trade_post_diff'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event trigger 'any_trade_post'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event effect 'any_trade_post'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event effect 'random_trade_post'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'same_religion = yes' field to the effect 'vassalize_or_take_under_title'. It will only vassalize rulers of the taker's religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'is_patrician' filter to events",
+                            "children": []
+                        },
+                        {
+                            "text": "Increased max demesne size limit for Patricians by 1 (define DEMESNE_MAX_SIZE_PATRICIAN)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'any_attacker' (war scope)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'any_defender' (war scope)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'inherit' field to opinion modifiers",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,156 @@
+{
+    "pageid": 73,
+    "title": "Dynasty modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Dynasties are either declared in the /common/dynasties/ folder or randomly created using the prefix defined for the culture ."
+                }
+            ]
+        },
+        {
+            "heading": "Definition",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The most basic dynasty definition requires a unique numeric ID, a name in the form of a string, and a Culture in the form of an alphanumeric ID which references the same ID in the cultures files. The culture line is used to determine if it will appear as a random name in the Ruler Designer , and it may be used for random characters of a culture. A religion can also be added to make sure that a randomly generated coat of arms will have a fitting shape and pattern."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Here's an example of a basic dynasty:"
+                }
+            ]
+        },
+        {
+            "heading": "Coat of Arms",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "It's also possible to define a Coat of Arms for a dynasty."
+                }
+            ]
+        },
+        {
+            "heading": "Template",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A Coat of Arms definition requires a template to be selected. There are five templates available to use in the CoA. Each of them uses a different number of layers, and we must create all of them to avoid the game crashing."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Name",
+                            "Layers"
+                        ],
+                        [
+                            "0",
+                            "Plain",
+                            "1"
+                        ],
+                        [
+                            "1",
+                            "Per Fess",
+                            "2"
+                        ],
+                        [
+                            "2",
+                            "Per Pale",
+                            "2"
+                        ],
+                        [
+                            "3",
+                            "Per Cross",
+                            "4"
+                        ],
+                        [
+                            "4",
+                            "Triangle",
+                            "3"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Layers",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A layer is defined as follows:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Attribute",
+                            "Description",
+                            "Data Type",
+                            "Example"
+                        ],
+                        [
+                            "texture",
+                            "The pattern texture file ID to use.",
+                            "Integer",
+                            "texture = 0"
+                        ],
+                        [
+                            "texture_internal",
+                            "The ID of the pattern tile in the file to use",
+                            "Integer",
+                            "texture_internal = 4"
+                        ],
+                        [
+                            "emblem",
+                            "An optional tag setting the emblem ID to draw on the layer",
+                            "Integer",
+                            "emblem = 7"
+                        ],
+                        [
+                            "color",
+                            "Used one or more times to select which colors to use for drawing Not having enough colors defined will crash CK2 The number required is dependent on the selected pattern texture",
+                            "Integer",
+                            "color = 3"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Example",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Here's an example of a dynasty definition with a Coat of Arms:"
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Character modding",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

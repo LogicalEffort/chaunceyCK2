@@ -1,0 +1,130 @@
+{
+    "pageid": 2000,
+    "title": "Demesne income",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A large part of your income , especially in a small realm, comes from the personal holdings of your demesne ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The Base Holding Income is the sum of:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "the Base Income of the holding: 0.5 for a tribe , 4 for a castle , 8 for a temple , or 12 for a city .",
+                            "children": []
+                        },
+                        {
+                            "text": "the Building Income brought by all buildings constructed in the holding",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Local Income Modifiers include province and holding modifiers. They include:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Technology boost from \"Castle Infrastructure\" tech (up to +50%) and \"Cities and Temples\" tech (up to 40%).",
+                            "children": []
+                        },
+                        {
+                            "text": "Muslim Infidel tax on non-Muslim provinces: +25%",
+                            "children": []
+                        },
+                        {
+                            "text": "Steward 's Collect Taxes job, which depends on Steward's stewardship attribute: +2.5% tax/skill point. Note that it only applies to holdings owned by the Steward's liege, so they are best used in counties where the liege owns more than one holding.",
+                            "children": []
+                        },
+                        {
+                            "text": "Wrong government type penalty of -75%, in case the owner's government type does not match the holding type.",
+                            "children": []
+                        },
+                        {
+                            "text": "Looted province penalty, if a province has been raided or hostile armies lived off loot for supply",
+                            "children": []
+                        },
+                        {
+                            "text": "New administration penalty of -30%",
+                            "children": []
+                        },
+                        {
+                            "text": "Recently conquered penalty of -100%",
+                            "children": []
+                        },
+                        {
+                            "text": "Prosperity",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Owner Income Modifiers include:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "State stewardship , +2% per point",
+                            "children": []
+                        },
+                        {
+                            "text": "For Muslims, decadence above 25% decreases demesne income, while decadence below 25% increases it.",
+                            "children": []
+                        },
+                        {
+                            "text": "Modifiers confusingly called \"National Tax Modifier\", such as:",
+                            "children": [
+                                {
+                                    "text": "Greedy (+10%)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Expelled Jews (-10%)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "A penalty of -25% per holding above the demesne limit , with a maximum of -90%.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Exceeding Demesne limit",
+                            "By 1",
+                            "By 2",
+                            "By 3",
+                            "By 4 and above"
+                        ],
+                        [
+                            "Income penalty",
+                            "-25%",
+                            "-50%",
+                            "-75%",
+                            "-90%"
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

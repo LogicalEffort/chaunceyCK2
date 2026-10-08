@@ -1,0 +1,185 @@
+{
+    "pageid": 2741,
+    "title": "Merging guide",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This guide describes the steps to retrofit the changes from a vanilla patch , for a mod that modifies some vanilla files."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is best to avoid copying and modifying vanilla files inside a mod (by loading from folders ), but sometimes this is unavoidable."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you do, there is some extra work needed for every vanilla patch, to merge changes with your own, and make the mod compatible with the new patch:"
+                }
+            ]
+        },
+        {
+            "heading": "Merge tool",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Ideally you should use a 3-way merge tool, with 3-way folder merging capability:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "3-way text merging will resolve most conflicts automatically, allowing to complete much faster and with less risks of mistakes.",
+                            "children": []
+                        },
+                        {
+                            "text": "3-way folder merging allows to trigger the 3-way text merge of files that need merging more conveniently.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some 3-way merge tools:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "KDiff3",
+                            "children": []
+                        },
+                        {
+                            "text": "Beyond Compare 4 Pro (30 days free trial)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that WinMerge doesn't support 3-way merge, only 2-way diff."
+                }
+            ]
+        },
+        {
+            "heading": "Launching the merge",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "3-way merge is composed of 4 windows:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Source : The mod",
+                            "children": []
+                        },
+                        {
+                            "text": "Base : The last vanilla version for which the mod was updated for",
+                            "children": []
+                        },
+                        {
+                            "text": "Destination : The vanilla version to updated to",
+                            "children": []
+                        },
+                        {
+                            "text": "Result : The mod",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For simplicity, it's common to have source and result work on same files, but make sure the old version of the mod is backed-up in case you need to re-start the merge for any reason."
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "This article is a Stub ,  which means that it does not sufficiently cover its subject matter. Please help expand this article if you can."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Tips",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Tell the mergetool about CK2 syntax, for an even more efficient merge and some syntax coloration:",
+                            "children": [
+                                {
+                                    "text": "Comment = Text from # to end of line",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Identifier = Text matching [_a-z]\\w*",
+                                    "children": []
+                                },
+                                {
+                                    "text": "String = Text from \" to \"",
+                                    "children": []
+                                },
+                                {
+                                    "text": "...",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If possible, add new mod entities in separate files, as things added at the end of a vanilla files will always conflict when new elements are added to vanilla.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If removing elements from a large vanilla file, leave breadcrumbs to help the merge tool. This will prevent the tool from attempting to merge with the next element in the file.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For instance if removing religious CB in 00_cb_types, keeping the following in the mod will help future merges:"
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": []
+        }
+    ]
+}

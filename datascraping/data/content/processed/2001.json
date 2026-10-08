@@ -1,0 +1,542 @@
+{
+    "pageid": 2001,
+    "title": "Liege tax",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A large part of your income comes from liege taxes (taxing your vassals)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The formula for each vassal is:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "where:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Vassal Income is the vassal's total steady income. It includes the vassal's demesne income , liege tax from their own vassals, and trade income.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tax Percentage is set by liege law. A separate tax rate applies to each government type that vassals might have.",
+                            "children": []
+                        },
+                        {
+                            "text": "Penalty modifiers that may apply:",
+                            "children": [
+                                {
+                                    "text": "Negative opinion : -20% at -20 opinion, etc",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Over Vassal Limit : a percentage depending on the number of vassals in excess of vassal limit .",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Patrician : -50% for vassal patricians (including vassal doges)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Over Demesne Limit : -20% per county/holding over limit, with -100% at 5 over.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Taxes paid by vassals can be seen in the liege's \"Vassals\" tab, and totals for each vassal government type are shown in the liege's demesne screen."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Nomadic clans do not pay taxes to their Khagan, while tribal vassals do not pay taxes to their tribal liege, unless their tribal liege is a vassal of a ruler following a non-tribal government ."
+                }
+            ]
+        },
+        {
+            "heading": "Tax laws",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Tax laws are part of the realm's demesne laws (without Conclave) or realm laws (with Conclave)."
+                }
+            ]
+        },
+        {
+            "heading": "Without Conclave",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Without Conclave, there is a tradeoff between taxes and vassal opinion."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Beware of the side effects of increasing taxes: while maximizing income is pretty simple, it can have a drastic effect on other areas of your realm. Increasing taxes on nobles (without Conclave DLC) make them like you less, and thus make them more likely to rebel and give you less levies. Too high taxes can thus make your realm considerably weaker, and massively increase internal turmoil. You can thus easily end up spending more time and money on placating your vassals and putting down rebellions than you earn in increased income. This is especially important to consider when it comes to the Catholic clergy.\nSo while you might end up earning more money, if you're not careful you'll never actually get to use that extra money for anything useful, instead using it up in unit upkeep and bribes."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is relatively safe to raise taxes on mayors, as they can't rebel and barely provide troops anyway."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If your realm is stable, you may consider taxing nobles as well. Your successor will not need to be popular in order to eliminate these taxes after you die."
+                }
+            ]
+        },
+        {
+            "heading": "Tax laws",
+            "level": 4,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Feudal Tax (Non-Muslim)",
+                            "None 0% Tax",
+                            "Small 10% Tax -10 opinion",
+                            "Large 20% Tax -20 opinion",
+                            "Harsh 30% Tax -30 opinion"
+                        ],
+                        [
+                            "City Tax",
+                            "Minimal 15% Tax +10 opinion",
+                            "Normal 25% Tax",
+                            "Large 35% Tax -10 opinion",
+                            "Harsh 45% Tax -20 opinion"
+                        ],
+                        [
+                            "Temple Tax (Non-Muslim)",
+                            "None 0% Tax +20 opinion",
+                            "Minimal 35% Tax",
+                            "Medium 45% Tax -10 opinion",
+                            "Large 55% Tax -20 opinion"
+                        ],
+                        [
+                            "Iqta Tax (Muslim)",
+                            "None 0% Tax +10 opinion",
+                            "Small 10% Tax",
+                            "Large 20% Tax -10 opinion",
+                            "Harsh 30% Tax -20 opinion"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Non-Muslim)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "0% Tax",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "10% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "20% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-20 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "30% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-30 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "15% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "25% Tax",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "35% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "45% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-20 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Non-Muslim)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "0% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+20 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "35% Tax",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "45% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "55% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-20 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Muslim)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "0% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "10% Tax",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "20% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "30% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-20 opinion",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Maximization",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Now that we know how tax works and what affects it, we can now work out how to maximize it.\nFirst we've got simple construction, which will directly increase the income of a holding, which will trickle down as tax. Constructing buildings in your vassals' holdings gives less of a return on your investment than building in your own demesne. As such, when seeking to maximize income, you should build as many income buildings in your demesne as possible. However, funding construction for your vassals will increase their opinion of you for some time; weigh your options and plan accordingly."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Next, you can increase the tax law to make your vassals pay more. However, if their opinion is already low enough, this will not pay off, with a full list here:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "10% -> 20% gives more as long as opinion is originally above -80 (0.1 * 0.2 = 0.2 * 0.1)",
+                            "children": []
+                        },
+                        {
+                            "text": "15% -> 25% gives more as long as opinion is originally above -75 (0.15 * 0.25 = 0.25 * 0.15)",
+                            "children": []
+                        },
+                        {
+                            "text": "20% -> 30% gives more as long as opinion is originally above -70 (0.2 * 0.3 = 0.3 * 0.2)",
+                            "children": []
+                        },
+                        {
+                            "text": "25% -> 35% gives more as long as opinion is originally above -65 (0.25 * 0.35 = 0.35 * 0.25)",
+                            "children": []
+                        },
+                        {
+                            "text": "30% -> 40% gives more as long as opinion is originally above -60 (0.3 * 0.4 = 0.4 * 0.3)",
+                            "children": []
+                        },
+                        {
+                            "text": "35% -> 45% gives more as long as opinion is originally above -55 (0.35 * 0.45 = 0.45 * 0.35)",
+                            "children": []
+                        },
+                        {
+                            "text": "45% -> 55% gives more as long as opinion is originally above -45 (0.45 * 0.55 = 0.55 * 0.45)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "As such, higher tax will almost always equal more income, but this does not take into account the hit to levies, nor the chance of rebellion. For Catholic clergy, it's best to leave clergy tax rates at 35%; any increase might anger them to the point whereby they pay taxes to the Pope and withhold levies from you."
+                }
+            ]
+        },
+        {
+            "heading": "With Conclave",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With the Conclave DLC active, tax laws are replaced by obligation laws , which allow the ruler to shift the focus of the obligations of the realm's vassals, between more taxes or more levies. This also means that laws concerning taxes will no longer increase or decrease vassals' opinions."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Most rulers will try to shift burgher obligations toward taxes and noble obligations toward levies. However, vassals on the council prefer the opposite and may spend favors to force law votes."
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Keep vassal opinion high",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Happy vassals pay their full taxes, usually give more levies, are less likely to rebel, and (without Conclave) may allow you to raise tax rates."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Grant them titles, run tournaments, grant their wishes, make them councillors, improve diplomacy, research technology, etc."
+                }
+            ]
+        },
+        {
+            "heading": "Have more vassal republics",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If you have plenty of troops, consider converting some vassal counties to grand cities:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Lord mayors pay taxes at the city rate.",
+                            "children": []
+                        },
+                        {
+                            "text": "Granting a duchy title to a coastal Lord Mayor will make him Doge of a new merchant republic . After a few years, the republic's trade zones will begin generating wealth for both the republic and all connected cities.",
+                            "children": []
+                        },
+                        {
+                            "text": "Lord mayors and doges can hold additional cities. After winning a holy war, consider granting cities to your burgher vassals rather than giving them away along with the county title. The new count will resent the doge, but not you, for lacking control of the local city.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "However, remember that feudal realms are restricted to 10% of their realm for vassal republics. On the flip side, merchant republics should aim for more vassal republics due to no \"Wrong Government type\" penalties."
+                }
+            ]
+        },
+        {
+            "heading": "Help your vassals improve their state stewardship",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Since vassal income is affected by state stewardship , helping your vassals with their stewardship can net you more tax income."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "When granting titles, prefer characters with high stewardship skill (as well as Greedy )",
+                            "children": []
+                        },
+                        {
+                            "text": "Arrange for mayors to marry women with high stewardship",
+                            "children": [
+                                {
+                                    "text": "In the character finder , select \"women\", \"unmarried\", \"will join court\", \"Great House: No\" to restrict to lowborn, sort by stewardship",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Educate the sons of mayors, or select new mayors by matrilineally marrying candidates to mayors' daughters",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Appoint an antipope",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Catholic clergy will only ever pay you tax if they prefer you over the pope, and as their opinion towards the pope is generally in the region of +40 to +60, getting them to like you more than the pope can be pretty hard. One extremely effective workaround is appointing an anti-pope. You will get all church taxes paid to the antipope, so every bishop who likes either you or the antipope more than they like the real pope will pay you church taxes. In addition, every bishop will pay tax to you if they like the antipope more than they like the real pope and their liege. If you rule a large realm, church taxes could therefore end up as your largest source of income."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A good antipope can draw most of the church tax from your kingdom, easily dwarfing the income you get from your demesne and direct vassals.  A great antipope can even draw taxes from other Catholic realms. (The reason it's hard to draw taxes from outside your realm is that the official head of religion gets a +30 opinion boost.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Catholic emperors should ultimately aim for their antipope to become the real Pope by pressing his claim on the Papacy."
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Economy",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

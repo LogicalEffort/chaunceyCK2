@@ -1,0 +1,336 @@
+{
+    "pageid": 2494,
+    "title": "Interface modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Interface modding allows to change some vanilla screens, but there are important limitations:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "interfaces are hardcoded to match vanilla religion groups.",
+                            "children": []
+                        },
+                        {
+                            "text": "behavior of UI buttons is hardcoded and not moddable, though existing buttons can be moved or hidden.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "To identify interface elements, activate interface debug mode by pressing the same keys as for opening the console while still being in the main menu (does not work anymore once you've loaded into a campaign).\nIt will display in which file and which line the elements are defined."
+                }
+            ]
+        },
+        {
+            "heading": "List of interface files",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Here is a list of the most important interface files, and what they contain:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Description"
+                        ],
+                        [
+                            "main.gui",
+                            "Main interface when running the game (minimap, chat, ...)"
+                        ],
+                        [
+                            "frontend.gui",
+                            "Lobby interface (choose starting era, country selection, multiplayer, ...)"
+                        ],
+                        [
+                            "domestic_overview.gui",
+                            "Primary title tab"
+                        ],
+                        [
+                            "domestic_dynastic.gui",
+                            "Character tab"
+                        ],
+                        [
+                            "domestic_court.gui",
+                            "Councillors tab"
+                        ],
+                        [
+                            "domestic_law.gui",
+                            "Laws tab"
+                        ],
+                        [
+                            "domestic_technology.gui",
+                            "Technology tab"
+                        ],
+                        [
+                            "domestic_military.gui",
+                            "Military tab"
+                        ],
+                        [
+                            "domestic_plots.gui",
+                            "Intrigue tab"
+                        ],
+                        [
+                            "domestic_factions.gui",
+                            "Factions tab"
+                        ],
+                        [
+                            "domestic_religion.gui",
+                            "Religion / College of Cardinal tabs"
+                        ],
+                        [
+                            "province.gui",
+                            "Province window, with its settlements/fort/trade post"
+                        ],
+                        [
+                            "focusview.gui",
+                            "Focus window"
+                        ],
+                        [
+                            "combat.gui",
+                            "Combat window"
+                        ],
+                        [
+                            "waroverview.gui",
+                            "Warscore window"
+                        ],
+                        [
+                            "unitpanel.gui",
+                            "Army window"
+                        ],
+                        [
+                            "domestic_diplomacy.gui",
+                            "Diplomacy popup"
+                        ],
+                        [
+                            "eventwindow.gui",
+                            "Event popups (normal, narrative, letter, ...)"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Structure of .gui files",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "This article is a Stub ,  which means that it does not sufficiently cover its subject matter. Please help expand this article if you can."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Choose starting era window",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "As of patch 2.5 , starting eras no longer require interface modding to be changed, see bookmark modding ."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The first two starting eras are DLC-locked, so best thing to do is to hide them by overriding interface/frontend.gui in the mod and by replacing position for picture / dlc_requirement / load_progress / label / year boxes dark_ages_window and viking_era_window windows, with:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In bookmarks.txt, give the hardcoded name from vanilla to the 3 bookmarks you want to see on the era screen:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "3rd era: name = \"BM_FATE_OF_ENGLAND\"",
+                            "children": []
+                        },
+                        {
+                            "text": "4th era: name = \"BM_THE_MONGOLS\"",
+                            "children": []
+                        },
+                        {
+                            "text": "5th era: name = \"BM_100_YEARS_WAR\"",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can, if needed move these around and center them, with some fitting positions."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Override the following hardcoded localization keys inside a .csv file in the localization folder of the mod:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "PICK_STARTING_ERA_TEXT",
+                            "children": []
+                        },
+                        {
+                            "text": "3rd era: BM_FATE_OF_ENGLAND, EARLY_MED, EARLY_MED_INFO",
+                            "children": []
+                        },
+                        {
+                            "text": "4th era: BM_THE_MONGOLS, HIGH_MED, HIGH_MED_INFO",
+                            "children": []
+                        },
+                        {
+                            "text": "5th era: BM_100_YEARS_WAR, LATE_MED, LATE_MED_INFO",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For each bookmark, the 1st 6 characters defined in common/bookmarks.txt will appear, and will need to be described by adding localization keys:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For instance with:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "then ERA_CHAR_INFO_140, ERA_CHAR_INFO_1316, ERA_CHAR_INFO_1128, ERA_CHAR_INFO_1128 and ERA_CHAR_INFO_74441 have to be localized."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Finally the era images can be customized, by overriding (or updating frontend.gui) with your own gfx: GFX_pick_era_image_3, GFX_pick_era_image_4, GFX_pick_era_image_5"
+                }
+            ]
+        },
+        {
+            "heading": "Papal succession",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In order to use Papal succession (succ_papal_succession) for another religion, the first step is to mod the sucession laws:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A button to open cardinal screen should magically appear in the religion screen ! However clicking the button will cause a CTD, and a bit of interface modding is required:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Open domestic_religion.gui and copy the definition for window named domestic_religion_title_fraticelli_cardinal",
+                            "children": []
+                        },
+                        {
+                            "text": "Create a file <my_religion>_domestic_religion.gui and paste the code.",
+                            "children": []
+                        },
+                        {
+                            "text": "Replace occurrences of title_fraticelli_cardinal by the new religious title defined inside folder common/religious_titles (ex: title_<my_religion>_cardinal)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Adding a focus",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In focusview.gfx, the number of frames needs to be increased:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Add a 32*32 version of your icon in gfx/ambitions/, and reference it with spriteType name GFX_<focus_name>, <focus_name> being the new focus defined in common/ambitions/00_focuses.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In focusview.gui, add an 11th focus, and adjust its position:"
+                }
+            ]
+        },
+        {
+            "heading": "Shortcuts",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "New keyboard shortcuts can be added via shortcut = \"<key>\" . [1]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If using priority_shortcut flag, it will fire before any other shortcuts."
+                }
+            ]
+        },
+        {
+            "heading": "Minimap",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Graphics modding",
+                            "children": []
+                        },
+                        {
+                            "text": "Portrait modding",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ forum:here-is-how-to-add-an-embark-shortcut-key-and-others.625248",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

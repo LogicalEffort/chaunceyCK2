@@ -1,0 +1,60 @@
+{
+    "pageid": 6022,
+    "title": "Trade route modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Provinces along a trade route benefit from bonuses to local tax income, movement speed, and technology spread. Certain provinces along a trade route can also construct trade posts , which provide trade income to the owner of the province. The course of a trade route is defined in the /common/trade_routes/ folder."
+                }
+            ]
+        },
+        {
+            "heading": "Creating a Basic Trade Route",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A trade route's bonuses, source, course, and major stops must be defined by a .txt file in the /common/trade_routes/ folder. As an example:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The end result of this code, the Trier tree trade, is a trade route that starts in Lorraine, passes through Metz, and ends in Trier, and that grants a 33.3% bonus to local income, a 83.3% bonus to local movement speed and technology spread, and a base income of 83.3 for any trade posts built along the trade route."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Now that the Trier tree trade has been defined, localization can be added to change the name of the province modifier. Creating a .csv file under /localisation/ will add a localization for the trade route:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Finally, a scripted trigger is required to allow the construction of trade posts on Potential Trade Post counties. Creating a .txt file under /common/scripted_triggers/ , and add a trade route post trigger:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The Trier tree trade is now complete - its province modifiers apply, trade posts can be built in Lorraine and Trier, and its name is now properly localized to display in-game."
+                }
+            ]
+        },
+        {
+            "heading": "Trade Route Pathing",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A path connects either a starting province or previously defined end province to a new end province. These provinces do not need to be adjacent. Both path = { 127 128 118} and path = { 127 118} are valid. A path cannot connect a province defined in an existing path that was not the end province of that path. As an example:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The second path between Metz and Mainz is invalid. In order to create a valid path between Metz and Mainz, Metz must be the end province of an existing path:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Provinces in a path can also be non-county provinces, such as major rivers and sea tiles. The same pathing rules apply for these provinces as well as counties. IDs for these non-county provinces can be found in /map/definition.csv As an example, adding a path for Rhine river trade from Trier to Holland:"
+                }
+            ]
+        }
+    ]
+}

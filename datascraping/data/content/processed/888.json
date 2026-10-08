@@ -1,0 +1,803 @@
+{
+    "pageid": 888,
+    "title": "Casus Belli modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Casus Belli are quite complex to mod, as lot of flags and scopes are involved."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "CB life-cycle is the following:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "When selecting a target character, can_use is evaluated",
+                            "children": []
+                        },
+                        {
+                            "text": "If character is eligible, can_use_title is evaluated on the titles in the realm (which titles are scanned depend on CB flags like check_all_titles , check_de_jure_tier ,...)",
+                            "children": []
+                        },
+                        {
+                            "text": "War is declared on the contested title (for AI this also depends on ai_will_do and some hardcoded logic)",
+                            "children": []
+                        },
+                        {
+                            "text": "on_add , on_add_title and on_add_posttitle are executed.",
+                            "children": []
+                        },
+                        {
+                            "text": "During the duration of the war, is_valid and is_valid_title are regularly executed to ensure CB remains valid (otherwise war ends as inconclusive)",
+                            "children": []
+                        },
+                        {
+                            "text": "Each battle and occupied holding contribute to warscore based on CB parameters. Depending on CB type, there might be an additional ticking warscore.",
+                            "children": []
+                        },
+                        {
+                            "text": "Depending on the output of the war either on_success , on_fail or on_reverse_demand and associated title/posttitle blocks are executed.",
+                            "children": []
+                        },
+                        {
+                            "text": "A truce is applied between attacker and defender, whose duration depend on value of truce_days",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Special flags",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Type",
+                            "Effect",
+                            "Example"
+                        ],
+                        [
+                            "name",
+                            "key",
+                            "Localized name to use for this Casus Belli. If a title is involved \"Title\" is available as a localization scope.",
+                            "name = CB_NAME_RELIGIOUS"
+                        ],
+                        [
+                            "war_name",
+                            "key",
+                            "Localized name to use for the resulting war. If a title is involved you can use the variable \"$OTHER_TITLE$\" in your localized text to display the title name.",
+                            "war_name = WAR_NAME_RELIGIOUS"
+                        ],
+                        [
+                            "sprite",
+                            "int",
+                            "Index of sprite to use for CB icon",
+                            "sprite = 1"
+                        ],
+                        [
+                            "truce_days",
+                            "int",
+                            "How long of a truce is enforced after war end.",
+                            "truce_days = 100"
+                        ],
+                        [
+                            "is_permanent",
+                            "bool",
+                            "CBs with this set to 'no' can not be declared via the the regular CB interface; they’re instead declared via events, decisions, etc.",
+                            "is_permanent = no"
+                        ],
+                        [
+                            "is_independence",
+                            "bool",
+                            "Allows the attacker to call in other vassals or tributaries, if possible. This flag is necessary for the AI to use cbs against its suzerain if it is a tributary.",
+                            "is_independence = yes"
+                        ],
+                        [
+                            "hostile_against_others",
+                            "bool",
+                            "Whether others attacking the same target be considered enemies",
+                            "hostile_against_others = yes"
+                        ],
+                        [
+                            "full_hostility",
+                            "bool",
+                            "If set to yes in addition to hostile_against_others , will cause anyone targeting a realm with a CB with the flag to be hostile towards one another. They will also be hostile to anyone targeting the defender's primary title. Defaults to no.",
+                            "full_hostility = yes"
+                        ],
+                        [
+                            "can_ask_to_join_war",
+                            "bool",
+                            "Whether others ask to join this war",
+                            "can_ask_to_join_war = no"
+                        ],
+                        [
+                            "reflect_titleholder_change",
+                            "bool",
+                            "",
+                            "reflect_titleholder_change = no"
+                        ],
+                        [
+                            "is_claim_all",
+                            "bool",
+                            "",
+                            "is_claim_all = yes"
+                        ],
+                        [
+                            "is_revolt_cb",
+                            "bool",
+                            "Whether CB is considered a revolt against the liege",
+                            "is_revolt_cb = yes"
+                        ],
+                        [
+                            "major_revolt",
+                            "bool",
+                            "Whether CB is a major (faction-based) revolt",
+                            "major_revolt = yes"
+                        ],
+                        [
+                            "press_claim",
+                            "bool",
+                            "",
+                            "press_claim = yes"
+                        ],
+                        [
+                            "allow_whitepeace",
+                            "bool",
+                            "Whether the war can end in a white peace",
+                            ""
+                        ],
+                        [
+                            "allowed_to_target_suzerains",
+                            "bool",
+                            "Prevent a tributary to target his suzerain(not longer used in 2.8.0, as it uses tributaries fields instead)",
+                            "allowed_to_target_tributaries = no"
+                        ],
+                        [
+                            "allowed_to_target_tributaries",
+                            "bool",
+                            "Prevent a suzerain to target his tributaries. Wars declared via war effect do not check this flag when checking whether CB can be used (has no effect on CB usability checks outside the hardcoded \"Declare War\" diplo-action).",
+                            ""
+                        ],
+                        [
+                            "can_call_allies",
+                            "bool",
+                            "Whether either side can call allies",
+                            ""
+                        ],
+                        [
+                            "attacker_can_call_allies",
+                            "bool",
+                            "",
+                            "attacker_can_call_allies = no"
+                        ],
+                        [
+                            "defender_can_call_allies",
+                            "bool",
+                            "",
+                            "defender_can_call_allies = no"
+                        ],
+                        [
+                            "can_call_vassals",
+                            "bool",
+                            "Whether vassals can be called to assist",
+                            "can_call_vassals = no"
+                        ],
+                        [
+                            "can_attack_vassals",
+                            "bool",
+                            "Allows CB to be used against your own direct vassals (vassals below your direct vassals are not affected by this flag, as the game never allows you declare war directly on your indirect vassals). Defaults to no. Flag only has effect for CBs declared using the war effect (i.e., prevents war declaration if the target is your direct vassal and can_attack_vassals = yes flag is not set for the CB), you will still be blocked from declaring war on your direct vassals via the hardcoded \"Declare War\" diplo-action regardless of can_attack_vassals flag value. unsafe_war effect can be used to forcibly declare war on a direct vassal target for a CB without can_attack_vassals = yes flag set.",
+                            "can_attack_vassals = yes"
+                        ],
+                        [
+                            "attacker_alliance_occ_warscore",
+                            "bool",
+                            "Whether occupying any holding of any attacker counts towards war score",
+                            ""
+                        ],
+                        [
+                            "check_de_jure_tier",
+                            "tier",
+                            "Scans all de jure kingdoms for the counties which are held by or vassals(or below) of selected character. Only valid if is_permanent = yes",
+                            "check_de_jure_tier = KING"
+                        ],
+                        [
+                            "check_dejure_duchies",
+                            "bool",
+                            "[ {{{1}}} ]",
+                            ""
+                        ],
+                        [
+                            "check_all_titles",
+                            "bool",
+                            "If permanent, setting this to true will check against all of someones titles, including vassal held titles",
+                            ""
+                        ],
+                        [
+                            "check_all_trade_posts",
+                            "bool",
+                            "",
+                            "check_all_trade_posts = yes"
+                        ],
+                        [
+                            "check_actor_direct_vassals",
+                            "bool",
+                            "[ {{{1}}} ]",
+                            ""
+                        ],
+                        [
+                            "other_de_jure_claim",
+                            "bool",
+                            "Optimization for de jure claims of vassals",
+                            "other_de_jure_claim = yes"
+                        ],
+                        [
+                            "is_holy_war",
+                            "bool",
+                            "",
+                            "is_holy_war = yes"
+                        ],
+                        [
+                            "apply_long_occ_mod",
+                            "bool",
+                            "Do not apply the 'new administration' modifier to Holdings",
+                            "apply_long_occ_mod = no"
+                        ],
+                        [
+                            "apply_short_occ_mod",
+                            "bool",
+                            "Do not apply the 'recently_conquered' modifier to Holdings",
+                            "apply_short_occ_mod = no"
+                        ],
+                        [
+                            "piety_cost",
+                            "double",
+                            "Cb is visible to select even if not having enough piety.",
+                            ""
+                        ],
+                        [
+                            "prestige_cost",
+                            "double",
+                            "Cb is visible to select even if not having enough prestige.",
+                            ""
+                        ],
+                        [
+                            "allow_distant",
+                            "bool",
+                            "AI parameter",
+                            "allow_distant = yes"
+                        ],
+                        [
+                            "attacker_ai_victory_worth",
+                            "",
+                            "Minimum warscore for AI to accept surrender from defender. -1 means always accept.",
+                            "attacker_ai_victory_worth = { factor = -1 }"
+                        ],
+                        [
+                            "attacker_ai_defeat_worth",
+                            "",
+                            "Minimum warscore for AI to admit defeat to defender",
+                            "attacker_ai_defeat_worth = { factor = 100 }"
+                        ],
+                        [
+                            "defender_ai_victory_worth",
+                            "",
+                            "Minimum warscore for AI to accept surrender from attacker",
+                            "attacker_ai_victory_worth = { factor = -1 }"
+                        ],
+                        [
+                            "defender_ai_defeat_worth",
+                            "",
+                            "Minimum warscore for AI to admit defeat to attacker",
+                            "defender_ai_defeat_worth = { factor = 100 }"
+                        ],
+                        [
+                            "battle_warscore_mult",
+                            "double",
+                            "Modifies the warscore gained from battles in wars using that CB",
+                            "battle_warscore_mult = 0.5"
+                        ],
+                        [
+                            "attacker_rel_head_is_ally",
+                            "bool",
+                            "The attacker can call his (main) Pope into the war",
+                            "attacker_rel_head_is_ally = yes"
+                        ],
+                        [
+                            "display_on_map",
+                            "bool",
+                            "Cb is displayed in the diplomatic map mode (default is yes)",
+                            "display_on_map = no"
+                        ],
+                        [
+                            "coalition_threat",
+                            "bool",
+                            "Does not cause a threat increase. Deprecated since 2.8.",
+                            "coalition_threat = no"
+                        ],
+                        [
+                            "infamy_modifier",
+                            "float",
+                            "Multiplied by resulting threat from a war",
+                            "infamy_modifier = 0.85"
+                        ],
+                        [
+                            "is_tyranny_cb",
+                            "bool",
+                            "",
+                            "is_tyranny_cb = yes"
+                        ],
+                        [
+                            "ticking_war_score_multiplier",
+                            "float",
+                            "Changes the speed of ticking warscore . Deprectated since 2.8?",
+                            "ticking_war_score_multiplier = 5.0"
+                        ],
+                        [
+                            "att_ticking_war_score_multiplier",
+                            "float",
+                            "Changes the speed of ticking warscore for the attacker",
+                            "att_ticking_war_score_multiplier = 5.0"
+                        ],
+                        [
+                            "def_ticking_war_score_multiplier",
+                            "float",
+                            "Changes the speed of ticking warscore for the defender",
+                            "def_ticking_war_score_multiplier = 5.0"
+                        ],
+                        [
+                            "max_defender_occupation_score",
+                            "float",
+                            "Defines how much warscore it is possible for the defender to gain by occupying provinces. Defaults to 100. Make sure the CB has ticking warscore if using this or you could end up with never-ending wars",
+                            "max_defender_occupation_score = 85"
+                        ],
+                        [
+                            "max_attacker_occupation_score",
+                            "float",
+                            "Defines how much warscore it is possible for the attacker to gain by occupying provinces. Defaults to 100. Make sure the CB has ticking warscore if using this or you could end up with never-ending wars",
+                            "max_attacker_occupation_score = 85"
+                        ],
+                        [
+                            "max_defender_battle_score",
+                            "float",
+                            "Defines how much warscore it is possible for the defender to gain by fighting battles. Defaults to the defines MAX_WARSCORE_FROM_BATTLE_DEFENDERS",
+                            "max_defender_battle_score = 50"
+                        ],
+                        [
+                            "max_attacker_battle_score",
+                            "float",
+                            "Defines how much warscore it is possible for the attacker to gain by fighting battles. Defaults to the defines MAX_WARSCORE_FROM_BATTLE_ATTACKERS",
+                            "max_attacker_battle_score = 50"
+                        ],
+                        [
+                            "hostages_block_cb",
+                            "bool",
+                            "Defaults to \"yes\". If set to \"no\", the defender having close relatives of yours imprisoned does not prevent you from declaring war. Wars declared via war effect do not check this flag when checking whether CB can be used (has no effect on CB usability checks outside the hardcoded \"Declare War\" diplo-action).",
+                            "hostages_block_cb = no"
+                        ],
+                        [
+                            "attacker_unoccupied_warscore",
+                            "bool",
+                            "If attacker completely unoccupied, attacker will get ticking warscore . Only works if no title is targetted",
+                            "attacker_unoccupied_warscore = yes"
+                        ],
+                        [
+                            "defender_unoccupied_warscore",
+                            "bool",
+                            "If defender completely unoccupied, defender will get ticking warscore . Only works if no title is targetted",
+                            "defender_unoccupied_warscore = yes"
+                        ],
+                        [
+                            "capturing_attacker_is_complete_victory",
+                            "bool",
+                            "Whether capturing the attacker as a prisoner is considered automatic victory for the defender. Defaults to yes. If set to no, capture instead gives CAPTURED_HEIR_WAR_SCORE warscore",
+                            "capturing_attacker_is_complete_victory = yes"
+                        ],
+                        [
+                            "capturing_defender_is_complete_victory",
+                            "bool",
+                            "Whether capturing the defender as a prisoner is considered automatic victory for the attacker. Defaults to yes. If set to no, capture instead gives CAPTURED_HEIR_WAR_SCORE warscore",
+                            "capturing_defender_is_complete_victory = yes"
+                        ],
+                        [
+                            "third_party_portrait",
+                            "scope",
+                            "If set, this will override what'd normally show as the third party on the war overview. The scopes are the same as in can_use.",
+                            "third_party_portrait = event_target:invasion_of_china_claimant"
+                        ],
+                        [
+                            "sort_priority",
+                            "int",
+                            "Can be used to decide the order in which CBs show up in the UI.",
+                            "sort_priority = 1000"
+                        ],
+                        [
+                            "diplo_view_region",
+                            "region",
+                            "Can be used to override which provinces are highlighted when the CB is selected in the diplomacy view.",
+                            "diplo_view_region = custom_leon"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Scopes",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For Casus Belli, inside scopes :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Default scope for character scopes can't be counted upon.  Use ROOT, FROM and FROMFROM explicitly to specify which character you want.",
+                            "children": []
+                        },
+                        {
+                            "text": "Default scope for title scopes is the title the war is declared over.",
+                            "children": []
+                        },
+                        {
+                            "text": "ROOT is the character who has a case for war. (for both titles and character scopes)",
+                            "children": []
+                        },
+                        {
+                            "text": "FROM is the character who is being declared war on. (for both titles and character scopes)",
+                            "children": []
+                        },
+                        {
+                            "text": "FROMFROM is the third party claimant, used in other_claim(_) Casus Belli.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Type",
+                            "Effect",
+                            "Example"
+                        ],
+                        [
+                            "can_use_title",
+                            "title conditions",
+                            "This section sets up the conditions under which the CB can be used (title scope)",
+                            ""
+                        ],
+                        [
+                            "can_use",
+                            "character conditions",
+                            "This section sets up the conditions under which the CB can be used (character scope). Warning: if this evaluates to false, the CB will still seem to be available, but the interface will tell you that you \"haven't selected a valid CB\".  It may be better to put as many character scope requirements for the CB as possible in can_use_gui instead.",
+                            ""
+                        ],
+                        [
+                            "can_use_gui",
+                            "character conditions",
+                            "This sections sets up further conditions to prevent starting the war even though it shows up in the UI.",
+                            "can_use_gui = { ROOT = { piety = 100 } }"
+                        ],
+                        [
+                            "is_valid",
+                            "character conditions",
+                            "This section tests if the CB remains valid. If the test fails, the war ends inconclusively (character scope)",
+                            ""
+                        ],
+                        [
+                            "is_valid_title",
+                            "title conditions",
+                            "This section tests if the CB remains valid. If the test fails, the war ends inconclusively (title scope)",
+                            "is_valid_title = { FROM = { has_landed_title = PREV } }"
+                        ],
+                        [
+                            "ai_will_do",
+                            "clause",
+                            "Warning: using FROM inside ROOT scope is broken until Patch 2.5 . [1]",
+                            ""
+                        ],
+                        [
+                            "on_add",
+                            "character commands",
+                            "The immediate effect of declaring war using this CB",
+                            "on_add = { ROOT = { piety = -100 } }"
+                        ],
+                        [
+                            "on_add_title",
+                            "title commands",
+                            "",
+                            ""
+                        ],
+                        [
+                            "on_add_posttitle",
+                            "character commands",
+                            "",
+                            ""
+                        ],
+                        [
+                            "on_success",
+                            "character commands",
+                            "What happens when attacker wins (character scope)",
+                            "on_success = { FROM = { prestige = -50 } }"
+                        ],
+                        [
+                            "on_success_title",
+                            "title commands",
+                            "What happens when attacker wins (title scope)",
+                            "on_success_title = { usurp_title_plus_barony_if_unlanded = ROOT }"
+                        ],
+                        [
+                            "on_success_posttitle",
+                            "character commands",
+                            "What happens when attacker wins, after transfer of title",
+                            ""
+                        ],
+                        [
+                            "on_fail",
+                            "character commands",
+                            "What happens when attacker white peaces out (character scope)",
+                            ""
+                        ],
+                        [
+                            "on_fail_title",
+                            "title commands",
+                            "What happens when attacker white peaces out (title scope)",
+                            ""
+                        ],
+                        [
+                            "on_fail_posttitle",
+                            "character commands",
+                            "",
+                            ""
+                        ],
+                        [
+                            "on_reverse_demand",
+                            "character commands",
+                            "What happens after loss (character scope) (e.g., loss of prestige/piety/gold)",
+                            "on_reverse_demand = { ROOT = { prestige = -150 } }"
+                        ],
+                        [
+                            "on_reverse_demand_title",
+                            "title commands",
+                            "What happens after loss (title scope) (e.g., loss of claim)",
+                            "on_reverse_demand_title = { ROOT = { remove_claim = PREV } }"
+                        ],
+                        [
+                            "on_reverse_demand_posttitle",
+                            "character commands",
+                            "",
+                            ""
+                        ],
+                        [
+                            "on_attacker_leader_death",
+                            "war commands",
+                            "What happens if the leader of the attacking alliance dies",
+                            "on_attacker_leader_death { end_war = invalid }"
+                        ],
+                        [
+                            "on_defender_leader_death",
+                            "war commands",
+                            "What happens if the leader of the defending alliance dies",
+                            ""
+                        ],
+                        [
+                            "on_thirdparty_death",
+                            "war commands",
+                            "",
+                            ""
+                        ],
+                        [
+                            "on_invalidation",
+                            "war commands",
+                            "",
+                            ""
+                        ],
+                        [
+                            "on_invalidation_title",
+                            "war commands",
+                            "",
+                            ""
+                        ],
+                        [
+                            "on_invalidation_posttitle",
+                            "war commands",
+                            "",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Warning: if this evaluates to false, the CB will still seem to be available, but the interface will tell you that you \"haven't selected a valid CB\".  It may be better to put as many character scope requirements for the CB as possible in can_use_gui instead."
+                }
+            ]
+        },
+        {
+            "heading": "Example",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Localisation",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "<cb_name> : name of the casus belli.",
+                            "children": []
+                        },
+                        {
+                            "text": "<cb_war_name> : name of the war after it starts.",
+                            "children": []
+                        },
+                        {
+                            "text": "<cb_tag>_desc : description of the casus belli when declaring war.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Special symbols",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In the war name and casus belli name, there are special hard-coded symbols available:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Symbol",
+                            "Example",
+                            "Description"
+                        ],
+                        [
+                            "$ORDER$",
+                            "Second",
+                            "An ordinal, based on how many times the title holder has used this cause for war.  On the first usage, the symbol evaluates to the blank string \"\".  Thereafter, it evaluates to the ordinal number of the war, like \"Second\", \"Third\", etc., with an added space.  This symbol should always be flush with the following text, e.g., \"The $ORDER$World War\", because it includes its own space only as needed."
+                        ],
+                        [
+                            "$FIRST$",
+                            "Kingdom of England",
+                            "The name of the attacker's primary title (ROOT)"
+                        ],
+                        [
+                            "$FIRST_ADJ$",
+                            "English",
+                            "The demonym (demographic adjective name) of the attacker (ROOT)"
+                        ],
+                        [
+                            "$SECOND$",
+                            "Kingdom of France",
+                            "The name of the defender's primary title (FROM)"
+                        ],
+                        [
+                            "$SECOND_ADJ$",
+                            "French",
+                            "The demonym (demographic adjective name) of the defender (FROM)"
+                        ],
+                        [
+                            "$ATTACKER$",
+                            "King Henry VI",
+                            "The titled first name of the attacker (ROOT)"
+                        ],
+                        [
+                            "$DEFENDER$",
+                            "Jeanne d'Arc",
+                            "The titled first name of the defender (FROM)"
+                        ],
+                        [
+                            "$CLAIMANT$",
+                            "Lisa Simpson",
+                            "The titled first name of the claimant (FROMFROM)"
+                        ],
+                        [
+                            "$OTHER_TITLE$",
+                            "County of Orléans",
+                            "The contested title in a claim war that targets a title."
+                        ],
+                        [
+                            "$RELIGION$",
+                            "Muslim",
+                            "The adjective of the religion of the attacker (ROOT)"
+                        ],
+                        [
+                            "$HOLY_WAR$",
+                            "Fatwa",
+                            "The holy war name as taken from the attacker's religion"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bracketed commands",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Generally, vanilla avoids scoped bracketed localisation commands in all war names and casus belli keys.  Use of bracketed commands is mostly unsupported and there has been little research done in this area."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "However, the following special scopes are confirmed to have been used in vanilla casus belli:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Scope",
+                            "Description",
+                            "Example Key",
+                            "Example Text"
+                        ],
+                        [
+                            "Actor",
+                            "The attacker (ROOT)",
+                            "WAR_NAME_HERETIC_UPRISING",
+                            "$ORDER$$SECOND_ADJ$ [Actor.Religion.GetName] Revolt"
+                        ],
+                        [
+                            "Title",
+                            "The contested title in a claim war",
+                            "WAR_NAME_LIBERATION_REVOLT",
+                            "$ORDER$Liberation of [Title.GetBaseName]"
+                        ],
+                        [
+                            "<offmap_power_name>",
+                            "The name of an offmap power",
+                            "WAR_NAME_INVASION_OF_CHINA",
+                            "$ORDER$$FIRST_ADJ$ Invasion of the [offmap_china.GetFullName]\")"
+                        ],
+                        [
+                            "Recipient",
+                            "Designated heir ???",
+                            "WAR_NAME_DISMANTLE_PRETENDER_CHINA",
+                            "The $ORDER$[offmap_china.GetFullName] War to Dismantle the Pretender [Recipient.PrimaryTitle.GetFullName]"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ https://forum.paradoxplaza.com/forum/index.php?threads/captain-to-the-rescue.874495/page-8#post-19846143",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

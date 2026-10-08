@@ -1,0 +1,256 @@
+{
+    "pageid": 4023,
+    "title": "Councillor modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": []
+        },
+        {
+            "heading": "Councillor titles",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Councillor titles are defined in common\\job_titles ."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Flag",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "is_chancellor is_marshal is_treasurer is_spymaster is_spiritual",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "is_voter",
+                            "bool",
+                            "Whether the councillor appears in the council.",
+                            ""
+                        ],
+                        [
+                            "attribute",
+                            "attribute",
+                            "This attribute is added to the ruler's for governance purposes.",
+                            ""
+                        ],
+                        [
+                            "dignity",
+                            "float",
+                            "",
+                            ""
+                        ],
+                        [
+                            "opinion_effect",
+                            "int",
+                            "",
+                            ""
+                        ],
+                        [
+                            "%character modifiers%",
+                            "modifiers",
+                            "",
+                            "monthly_salary = 0.1\nmonthly_prestige = 0.75"
+                        ],
+                        [
+                            "lift_fow",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "lift_neighbor_fow",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "allow",
+                            "block",
+                            "Conditions for the character to hold the title",
+                            ""
+                        ],
+                        [
+                            "dismiss_trigger",
+                            "block",
+                            "",
+                            ""
+                        ],
+                        [
+                            "gain_effect",
+                            "block",
+                            "Fires when the title is granted",
+                            ""
+                        ],
+                        [
+                            "lose_effect",
+                            "block",
+                            "Fires when a title is lost through most causes",
+                            ""
+                        ],
+                        [
+                            "retire_effect",
+                            "block",
+                            "Fires when a title is lost due to the character stepping down",
+                            ""
+                        ],
+                        [
+                            "death_effect",
+                            "block",
+                            "Fires when a title is lost due to the character dying",
+                            ""
+                        ],
+                        [
+                            "action",
+                            "job_action",
+                            "",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "is_marshal is_treasurer is_spymaster is_spiritual"
+                }
+            ]
+        },
+        {
+            "heading": "Adding extra councillor",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Adding a 6th job_title is possible, but requires some interface modding in order to make some vertical space."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Warning: the new councillor job title entry (ex: job_custom) cannot be used dynamically as a scope inside scripting or localization like for vanilla jobs."
+                }
+            ]
+        },
+        {
+            "heading": "Councillor actions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Councillor actions are defined in common\\job_actions ."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Flag",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "attribute",
+                            "attribute",
+                            "All modifiers (like local_build_time_modifier ) are multiplied by the attribute of the character.",
+                            "attribute = diplomacy"
+                        ],
+                        [
+                            "attribute_cap",
+                            "int",
+                            "A cap that determines from which skill level (of the fitting attribute), having a higher skill level won't increase the action bonuses anymore",
+                            "attribute_cap = 25"
+                        ],
+                        [
+                            "offmap",
+                            "bool",
+                            "Whether the action requires the selection of a province or not.",
+                            "offmap = yes"
+                        ],
+                        [
+                            "potential",
+                            "clause",
+                            "Trigger to determine whether or not the action will show in the 'council -> positions' tab (the player character is FROM, the councillor is in 'new_character')",
+                            "potential = { FROM = {  is_nomadic = no } }"
+                        ],
+                        [
+                            "trigger",
+                            "clause",
+                            "Province scope trigger to determine if the action is meaningful in a province (the player character is FROM, the councillor is in 'new_character')",
+                            "trigger = { any_province_lord = { character = FROM } }"
+                        ],
+                        [
+                            "events",
+                            "clause",
+                            "Events that can trigger off this action. This info is only used by the GUI.",
+                            "events = { 900 901 }"
+                        ],
+                        [
+                            "%province modifiers%",
+                            "modifiers",
+                            "Province modifiers applied by the action",
+                            "local_tax_modifier = 0.025"
+                        ],
+                        [
+                            "liege_modifier",
+                            "modifier",
+                            "Static modifier applied to the councillor liege",
+                            "liege_modifier = organize_army_liege_mod"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Adding extra job_actions",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "This article is a Stub ,  which means that it does not sufficiently cover its subject matter. Please help expand this article if you can."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Council positions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "See About the council voting on targeted_decision and [Guide] Council Votes on Diplo-Actions ."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "This article is a Stub ,  which means that it does not sufficiently cover its subject matter. Please help expand this article if you can."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": []
+        }
+    ]
+}

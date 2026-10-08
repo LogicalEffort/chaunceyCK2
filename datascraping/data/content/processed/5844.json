@@ -1,0 +1,63 @@
+{
+    "pageid": 5844,
+    "title": "Nickname modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Nicknames are epithets defined in files in the common/nicknames folder."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any nickname defined in one of these files can be added using the give_nickname command . They can also be granted at random based on conditions defined on the nicknames."
+                }
+            ]
+        },
+        {
+            "heading": "Definition",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "allow",
+                            "Conditions",
+                            "Optional. The conditions a character must fulfill to be eligible to receive the nickname randomly. If missing, nickname can only be obtained with the give_nickname command.",
+                            "allow = {\n    age = 16\n}"
+                        ],
+                        [
+                            "chance",
+                            "MTTH",
+                            "Optional. The odds of an eligible character receiving the given nickname (presumably in percent per year). If missing, nickname can only be obtained with the give_nickname command.",
+                            "chance = {\n    factor = 5\n\n    modifier = {\n        factor = 2\n        stewardship >= 8\n    }\n}"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example:"
+                }
+            ]
+        },
+        {
+            "heading": "Localisation",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Nicknames take their localization from a key with the same name as the nickname. For example, the nickname nick_the_swift would look for the localization key also called nick_the_swift . Nicknames typically begin with nick_ , but this is not enforced. For nicknames which use localization commands, those commands are only evaluated when the nickname is handed out - a nickname will not change after it's been obtained."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,1285 @@
+{
+    "pageid": 5711,
+    "title": "Swaying",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With Holy Fury , you may select another adult character to sway . Your character will look for ways to improve the other character's opinion , sometimes by helping the other character in some way ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Valid targets for swaying are non-rivals; rivals can be swayed if the character is arbitrary ."
+                }
+            ]
+        },
+        {
+            "heading": "Tombola",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Once a year, your character will randomly select an idea from a weighted list:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Weight",
+                            "Requirements and modifiers",
+                            "Description"
+                        ],
+                        [
+                            "Stop swaying?",
+                            "10",
+                            "Opinion is already 70+ Has never selected 'continue swaying'",
+                            "Perhaps I should focus my time and resources to sway somebody else? A) stop swaying B) continue swaying (and you will not get this event again, even if you later switch targets)"
+                        ],
+                        [
+                            "Write a letter",
+                            "1",
+                            "Not at same location",
+                            "Choose a letter style. Opinion boost is likely if choice is appropriate for the recipient's personality."
+                        ],
+                        [
+                            "Hidden attempt",
+                            "1",
+                            "",
+                            "No choices. Result shown as a notification."
+                        ],
+                        [
+                            "Gift",
+                            "1",
+                            "70 wealth Less likely if tribal",
+                            "Spend up to 100 wealth to give the recipient up to 100 prestige Recipient chooses: Accept. Gain prestige based on size of gift, opinion bonus based on size of gift Reject. More likely when shy / greedy / envious / cruel or gift was small"
+                        ],
+                        [
+                            "Tribal honors",
+                            "1",
+                            "Tribal",
+                            "Spend up to 300 prestige to give the recipient the same amount of prestige Recipient has similar choices as with monetary gift (above)"
+                        ],
+                        [
+                            "Based on education"
+                        ],
+                        [
+                            "Use military knowledge",
+                            "2",
+                            "Any of: Martial education Strategist",
+                            "Diplomacy and martial options. The martial option increases swayee's martial skill , if your skill is 2 higher and the swayee accepts"
+                        ],
+                        [
+                            "Use diplomatic skills",
+                            "3",
+                            "Any of: Diplomacy education Socializer",
+                            "Embassy and letter options."
+                        ],
+                        [
+                            "Use stewardship",
+                            "2",
+                            "Any of: Stewardship education Administrator Greedy Diligent",
+                            "Diplomacy and stewardship options. If swaying a lower-tier ruler, additional option to send 100g, with 10% chance to become more Charitable"
+                        ],
+                        [
+                            "Use learning",
+                            "1",
+                            "Any of: Learning education Scholar",
+                            "A) Gift book. Highest chance of opinion boost. Moderate chance to increase swayee's learning skill B) Lend books. Small chance to increase swayee's learning skill C) Offer prayers. High chance that swayee gets +20 piety"
+                        ],
+                        [
+                            "Offer mentorship",
+                            "1",
+                            "Same education type Swayer has a higher education level Less likely if relevant skill diff is below 5",
+                            "May upgrade swayee's education , give swayee a temporary skill bonus, or give swayee a temporary skill penalty More likely to succeed if their relevant skill is high Positive outcomes allow swayee to become more Proud Negative outcomes allow swayee to become more Humble"
+                        ],
+                        [
+                            "Based on swayer's traits"
+                        ],
+                        [
+                            "Lustful",
+                            "1",
+                            "Lustful",
+                            "Diplomacy and learning options Will not succeed with AI characters who are uninterested in your gender May move to your court if they are Lustful (must be unmarried, loveless, and +5 opinion before event)"
+                        ],
+                        [
+                            "Gluttonous",
+                            "1",
+                            "Gluttonous",
+                            "Basic and learning options May turn them more Gluttonous May move to your court if you invited them to dinner (must be unmarried, loveless, and +10 opinion before event)"
+                        ],
+                        [
+                            "Slothful",
+                            "1",
+                            "Slothful",
+                            "Sightseeing and letter options May move to your court if you invited them to sightseeing (must be unmarried, loveless, and +5 opinion before event)"
+                        ],
+                        [
+                            "Wroth",
+                            "1",
+                            "Wroth",
+                            ""
+                        ],
+                        [
+                            "Proud",
+                            "1",
+                            "Proud",
+                            "Diplomacy and wealth-spending options"
+                        ],
+                        [
+                            "Discuss their needs",
+                            "5",
+                            "Any of: Kind Gregarious",
+                            "A: Spend prestige B, if they are ill: offer to have your Court Physician treat them ( up to +2 health recovery for 2 years) C, if they follow another religion and you are not Zealous: each character may gain sympathy for the other's religious group"
+                        ],
+                        [
+                            "Sharing cruelty",
+                            "2",
+                            "Any of: Cruel Envious Impaler",
+                            "Letter on torture (diplomacy check) or gruesome gift They may become more Cruel"
+                        ],
+                        [
+                            "Poet",
+                            "3",
+                            "Poet",
+                            "Write about their looks, their realm, or their accomplishments More effective if they are Poet , Scholar , Mystic , or Proud Less effective if they have low learning and none of those traits May make swayee more Proud"
+                        ],
+                        [
+                            "Swaying an enemy"
+                        ],
+                        [
+                            "Defecting general",
+                            "1",
+                            "All of: Swayee has the minor title Commander and is leading an army Swayee's liege is at war with swayer (as direct participants) Opinion at least +50",
+                            "If not a ruler: they may move to your court and bring their family If a ruler: they may refuse to lead armies for 3 years"
+                        ],
+                        [
+                            "Reach out to enemy",
+                            "50+",
+                            "Hostile due to war, liege's war, raiding, etc",
+                            "A) Ask to fight honorably. Asker must have 14 diplomacy and meet other requirements. If accepted, disables ambush tactics for three years. B) Ask to end war. Asker must be Kind and must be a direct participant in a non-Crusader war where swayee is the primary attacker or defender. If accepted, the war ends in white peace (along with all other wars where swayee is a primary participant). C) Ask for a short meeting. If accepted, boosts opinion. If you have 15 intrigue, you may use this as an opportunity to attempt to abduct them. D) Offer a compliment. If accepted, boosts opinion and you gain prestige."
+                        ],
+                        [
+                            "Apology"
+                        ],
+                        [
+                            "Ask for forgiveness",
+                            "50+",
+                            "Any of the following opinion modifiers: Personal grievances: Hate Tortured me Mutilated me In prison (!) Attempted murder Family grievances: Tortured... Mutilated... Executed child Attempted murder of...",
+                            "Apologize and ask for forgiveness (removal of opinion penalty). You may have up to four options: 20 diplomacy option: guaranteed success unless they are Envious 20 intrigue option: guaranteed success unless they are Paranoid Kind option: guaranteed success unless they are Cruel Default option: AI choice depends on your diplomacy skill and their traits"
+                        ],
+                        [
+                            "Longer event chains"
+                        ],
+                        [
+                            "Invite for long visit",
+                            "5+",
+                            "More likely with: Gregarious Socializer Hedonist Carousing focus Family focus, if swaying a close relative or spouse Less likely with: Shy Opinion at least -40 Has not had this event in the last 2000 days",
+                            "Increases opinion by at least +5 (at least +15 with 15 diplomacy), and often more if you have similar personality traits. [1] If you have opposite personality traits , you may have an option to try to flip their personality trait to the one matching yours . Such an attempt is more likely to succeed if: [2] You have higher diplomacy than the swayee You are Gregarious , Socializer , Grey eminence High opinion They are Trusting , Gregarious They are NOT Paranoid , Shy . On the other hand, having many opposite personality traits with the swayee increases the chance that the visit will be dominated by disagreement. This situation can be salvaged if you have 15 diplomacy or the Patient trait; otherwise, it will lead to an opinion penalty. If the visit goes well and opinion is high, there are small chances of: Opportunity to become friends (requires mutual opinion +60) Opportunity to become lovers (requires mutual opinion +60) Swayee can copy your lifestyle trait , if they have none (requires opinion +40). Only the following lifestyles can be copied: Scholar , Mystic , Hunter , Gardener , Duelist , Architect , Hedonist , Game Master , Socializer ; and the trait Falconer Swayee owes you a favor (requires opinion +40). More likely if they are Charitable"
+                        ],
+                        [
+                            "Lifestyle activity",
+                            "2+",
+                            "Swayer has a lifestyle trait More likely: Swayee also has a lifestyle trait which suggests the same activity",
+                            "Select an activity based on your lifestyle trait — or any area in which you have 8+ skill Each character makes a choice that will add or remove a personality trait and affect opinion See below for details"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Opinion is already 70+",
+                            "children": []
+                        },
+                        {
+                            "text": "Has never selected 'continue swaying'",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Perhaps I should focus my time and resources to sway somebody else?"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A) stop swaying",
+                            "children": []
+                        },
+                        {
+                            "text": "B) continue swaying (and you will not get this event again, even if you later switch targets)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Not at same location",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "70 wealth",
+                            "children": []
+                        },
+                        {
+                            "text": "Less likely if tribal",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Spend up to 100 wealth to give the recipient up to 100 prestige"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Recipient chooses:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Accept. Gain prestige based on size of gift, opinion bonus based on size of gift",
+                            "children": []
+                        },
+                        {
+                            "text": "Reject. More likely when shy / greedy / envious / cruel or gift was small",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Tribal",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Spend up to 300 prestige to give the recipient the same amount of prestige"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Recipient has similar choices as with monetary gift (above)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any of:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Martial education",
+                            "children": []
+                        },
+                        {
+                            "text": "Strategist",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Diplomacy and martial options. The martial option increases swayee's martial skill , if your skill is 2 higher and the swayee accepts"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any of:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Diplomacy education",
+                            "children": []
+                        },
+                        {
+                            "text": "Socializer",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any of:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Stewardship education",
+                            "children": []
+                        },
+                        {
+                            "text": "Administrator",
+                            "children": []
+                        },
+                        {
+                            "text": "Greedy",
+                            "children": []
+                        },
+                        {
+                            "text": "Diligent",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any of:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Learning education",
+                            "children": []
+                        },
+                        {
+                            "text": "Scholar",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A) Gift book. Highest chance of opinion boost. Moderate chance to increase swayee's learning skill",
+                            "children": []
+                        },
+                        {
+                            "text": "B) Lend books. Small chance to increase swayee's learning skill",
+                            "children": []
+                        },
+                        {
+                            "text": "C) Offer prayers. High chance that swayee gets +20 piety",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Same education type",
+                            "children": []
+                        },
+                        {
+                            "text": "Swayer has a higher education level",
+                            "children": []
+                        },
+                        {
+                            "text": "Less likely if relevant skill diff is below 5",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "May upgrade swayee's education , give swayee a temporary skill bonus, or give swayee a temporary skill penalty",
+                            "children": []
+                        },
+                        {
+                            "text": "More likely to succeed if their relevant skill is high",
+                            "children": []
+                        },
+                        {
+                            "text": "Positive outcomes allow swayee to become more Proud",
+                            "children": []
+                        },
+                        {
+                            "text": "Negative outcomes allow swayee to become more Humble",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Diplomacy and learning options",
+                            "children": []
+                        },
+                        {
+                            "text": "Will not succeed with AI characters who are uninterested in your gender",
+                            "children": []
+                        },
+                        {
+                            "text": "May move to your court if they are Lustful (must be unmarried, loveless, and +5 opinion before event)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Basic and learning options",
+                            "children": []
+                        },
+                        {
+                            "text": "May turn them more Gluttonous",
+                            "children": []
+                        },
+                        {
+                            "text": "May move to your court if you invited them to dinner (must be unmarried, loveless, and +10 opinion before event)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Sightseeing and letter options",
+                            "children": []
+                        },
+                        {
+                            "text": "May move to your court if you invited them to sightseeing (must be unmarried, loveless, and +5 opinion before event)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Diplomacy and wealth-spending options",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any of:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Kind",
+                            "children": []
+                        },
+                        {
+                            "text": "Gregarious",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A: Spend prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "B, if they are ill: offer to have your Court Physician treat them ( up to +2 health recovery for 2 years)",
+                            "children": []
+                        },
+                        {
+                            "text": "C, if they follow another religion and you are not Zealous: each character may gain sympathy for the other's religious group",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any of:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Cruel",
+                            "children": []
+                        },
+                        {
+                            "text": "Envious",
+                            "children": []
+                        },
+                        {
+                            "text": "Impaler",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Letter on torture (diplomacy check) or gruesome gift",
+                            "children": []
+                        },
+                        {
+                            "text": "They may become more Cruel",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Write about their looks, their realm, or their accomplishments",
+                            "children": []
+                        },
+                        {
+                            "text": "More effective if they are Poet , Scholar , Mystic , or Proud",
+                            "children": []
+                        },
+                        {
+                            "text": "Less effective if they have low learning and none of those traits",
+                            "children": []
+                        },
+                        {
+                            "text": "May make swayee more Proud",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "All of:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Swayee has the minor title Commander and is leading an army",
+                            "children": []
+                        },
+                        {
+                            "text": "Swayee's liege is at war with swayer (as direct participants)",
+                            "children": []
+                        },
+                        {
+                            "text": "Opinion at least +50",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If not a ruler: they may move to your court and bring their family",
+                            "children": []
+                        },
+                        {
+                            "text": "If a ruler: they may refuse to lead armies for 3 years",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A) Ask to fight honorably. Asker must have 14 diplomacy and meet other requirements. If accepted, disables ambush tactics for three years.",
+                            "children": []
+                        },
+                        {
+                            "text": "B) Ask to end war. Asker must be Kind and must be a direct participant in a non-Crusader war where swayee is the primary attacker or defender. If accepted, the war ends in white peace (along with all other wars where swayee is a primary participant).",
+                            "children": []
+                        },
+                        {
+                            "text": "C) Ask for a short meeting. If accepted, boosts opinion. If you have 15 intrigue, you may use this as an opportunity to attempt to abduct them.",
+                            "children": []
+                        },
+                        {
+                            "text": "D) Offer a compliment. If accepted, boosts opinion and you gain prestige.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any of the following opinion modifiers:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Personal grievances:",
+                            "children": [
+                                {
+                                    "text": "Hate",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Tortured me",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Mutilated me",
+                                    "children": []
+                                },
+                                {
+                                    "text": "In prison (!)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Attempted murder",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Family grievances:",
+                            "children": [
+                                {
+                                    "text": "Tortured...",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Mutilated...",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Executed child",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Attempted murder of...",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Apologize and ask for forgiveness (removal of opinion penalty)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You may have up to four options:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "20 diplomacy option: guaranteed success unless they are Envious",
+                            "children": []
+                        },
+                        {
+                            "text": "20 intrigue option: guaranteed success unless they are Paranoid",
+                            "children": []
+                        },
+                        {
+                            "text": "Kind option: guaranteed success unless they are Cruel",
+                            "children": []
+                        },
+                        {
+                            "text": "Default option: AI choice depends on your diplomacy skill and their traits",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "More likely with:",
+                            "children": [
+                                {
+                                    "text": "Gregarious",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Socializer",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Hedonist",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Carousing focus",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Family focus, if swaying a close relative or spouse",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Less likely with:",
+                            "children": [
+                                {
+                                    "text": "Shy",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Opinion at least -40",
+                            "children": []
+                        },
+                        {
+                            "text": "Has not had this event in the last 2000 days",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Increases opinion by at least +5 (at least +15 with 15 diplomacy), and often more if you have similar personality traits. [1]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you have opposite personality traits , you may have an option to try to flip their personality trait to the one matching yours . Such an attempt is more likely to succeed if: [2]"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "You have higher diplomacy than the swayee",
+                            "children": []
+                        },
+                        {
+                            "text": "You are Gregarious , Socializer , Grey eminence",
+                            "children": []
+                        },
+                        {
+                            "text": "High opinion",
+                            "children": []
+                        },
+                        {
+                            "text": "They are Trusting , Gregarious",
+                            "children": []
+                        },
+                        {
+                            "text": "They are NOT Paranoid , Shy .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "On the other hand, having many opposite personality traits with the swayee increases the chance that the visit will be dominated by disagreement. This situation can be salvaged if you have 15 diplomacy or the Patient trait; otherwise, it will lead to an opinion penalty."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the visit goes well and opinion is high, there are small chances of:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Opportunity to become friends (requires mutual opinion +60)",
+                            "children": []
+                        },
+                        {
+                            "text": "Opportunity to become lovers (requires mutual opinion +60)",
+                            "children": []
+                        },
+                        {
+                            "text": "Swayee can copy your lifestyle trait , if they have none (requires opinion +40). Only the following lifestyles can be copied: Scholar , Mystic , Hunter , Gardener , Duelist , Architect , Hedonist , Game Master , Socializer ; and the trait Falconer",
+                            "children": []
+                        },
+                        {
+                            "text": "Swayee owes you a favor (requires opinion +40). More likely if they are Charitable",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Swayer has a lifestyle trait",
+                            "children": []
+                        },
+                        {
+                            "text": "More likely:",
+                            "children": [
+                                {
+                                    "text": "Swayee also has a lifestyle trait which suggests the same activity",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Select an activity based on your lifestyle trait — or any area in which you have 8+ skill",
+                            "children": []
+                        },
+                        {
+                            "text": "Each character makes a choice that will add or remove a personality trait and affect opinion",
+                            "children": []
+                        },
+                        {
+                            "text": "See below for details",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Lifestyle activities",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If you have a lifestyle trait, you may have an opportunity to invite the swayee to participate in a special activity with you. You may pick the activity associated with your lifestyle, or certain other activities based on your skills."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Your choice during the event will:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Modify one of your personality traits",
+                            "children": []
+                        },
+                        {
+                            "text": "Affect opinion directly (option A tends to be viewed more positively)",
+                            "children": []
+                        },
+                        {
+                            "text": "Affect the likelihood that the swayee will reflect on the event as an overall positive experience, further improving opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The swayee will have a similar choice during the event, but with different personality-trait effects in some cases."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Activity",
+                            "Available",
+                            "Option A",
+                            "Option B",
+                            "Notes"
+                        ],
+                        [
+                            "Hunting",
+                            "Any of: Hunter 8 martial",
+                            "Become more Wroth",
+                            "Become more Patient",
+                            "Hunting is especially good for opinion Hunting and Dueling risk injury Martial check"
+                        ],
+                        [
+                            "Hunting is especially good for opinion Hunting and Dueling risk injury Martial check",
+                            "Dueling",
+                            "Duelist",
+                            "Become more Brave",
+                            "Become more Patient"
+                        ],
+                        [
+                            "Games",
+                            "Any of: Game Master Strategist",
+                            "Become more Kind",
+                            "Become more Ambitious",
+                            "Martial and PCS check"
+                        ],
+                        [
+                            "Social",
+                            "Any of: Socializer Hedonist Master seducer Master seductress 8 diplomacy 8 intrigue",
+                            "Become more Lustful",
+                            "Become more Chaste",
+                            "Intrigue or diplomacy check"
+                        ],
+                        [
+                            "Learning",
+                            "Any of: Mystic Theologian Scholar Faqih 8 learning",
+                            "Become more Diligent",
+                            "Become more Content",
+                            "Learning check"
+                        ],
+                        [
+                            "Stewardship",
+                            "Any of: Administrator Gardener Architect 8 stewardship, if few enough options",
+                            "Become more Proud",
+                            "Become more Honest",
+                            "Stewardship check"
+                        ],
+                        [
+                            "Torture",
+                            "Any of: Impaler Master schemer",
+                            "Become more Cruel",
+                            "Become more Cruel",
+                            "Intrigue check"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any of:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Hunter",
+                            "children": []
+                        },
+                        {
+                            "text": "8 martial",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Hunting is especially good for opinion",
+                            "children": []
+                        },
+                        {
+                            "text": "Hunting and Dueling risk injury",
+                            "children": []
+                        },
+                        {
+                            "text": "Martial check",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Duelist",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any of:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Game Master",
+                            "children": []
+                        },
+                        {
+                            "text": "Strategist",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Martial and PCS check",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any of:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Socializer",
+                            "children": []
+                        },
+                        {
+                            "text": "Hedonist",
+                            "children": []
+                        },
+                        {
+                            "text": "Master seducer",
+                            "children": []
+                        },
+                        {
+                            "text": "Master seductress",
+                            "children": []
+                        },
+                        {
+                            "text": "8 diplomacy",
+                            "children": []
+                        },
+                        {
+                            "text": "8 intrigue",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Intrigue or diplomacy check",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Mystic",
+                            "children": []
+                        },
+                        {
+                            "text": "Theologian",
+                            "children": []
+                        },
+                        {
+                            "text": "Scholar",
+                            "children": []
+                        },
+                        {
+                            "text": "Faqih",
+                            "children": []
+                        },
+                        {
+                            "text": "8 learning",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Learning check",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any of:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Administrator",
+                            "children": []
+                        },
+                        {
+                            "text": "Gardener",
+                            "children": []
+                        },
+                        {
+                            "text": "Architect",
+                            "children": []
+                        },
+                        {
+                            "text": "8 stewardship, if few enough options",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Stewardship check",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any of:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Impaler",
+                            "children": []
+                        },
+                        {
+                            "text": "Master schemer",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Intrigue check",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For improving opinion :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Having high diplomacy helps in many rolls and unlocks better options in several events",
+                            "children": []
+                        },
+                        {
+                            "text": "Swaying one character for a long time may be the most effective approach, since timed opinion modifiers renew when stacked",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For improving your character :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Lifestyle activities let you select new personality traits including Diligent , Patient , and Kind",
+                            "children": [
+                                {
+                                    "text": "To become eligible for this event quickly, consider using a focus that will get you a lifestyle trait quickly (Seduction, Carousing, Scholarship)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Prefer swaying characters who would be interested in the same activity, to increase the chance of the event being chosen.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "If you are eligible for the Stewardship event, swaying a lower-tier ruler may give you an expensive opportunity to gain Charitable",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Considering your strengths :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Consider swaying your heir , especially if you could upgrade their education or flip their personality traits which are opposite to yours",
+                            "children": []
+                        },
+                        {
+                            "text": "If you are Content , consider swaying Ambitious vassals in the hope of flipping them to Content",
+                            "children": []
+                        },
+                        {
+                            "text": "If you are Lustful , Gluttonous , or Slothful , consider aiming to bring characters to your court (they must be unmarried and loveless)",
+                            "children": []
+                        },
+                        {
+                            "text": "If you are a Poet , consider swaying characters more amenable to poetry",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Two of the options presented will be based on your personality traits, selected at random. The trait-based options' effect is +10 opinion normally, +20 opinion if they have the same trait, -5 opinion and a chance to flip if they have the opposite trait. (HF.21103 and HF.21104)",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ combining the HF.21104 roll and HF.21124 AI choice",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

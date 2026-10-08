@@ -1,0 +1,1101 @@
+{
+    "pageid": 6333,
+    "title": "HFP pregnancy events",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/HFP_pregnancy_events.txt"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Event",
+                            "Notes"
+                        ],
+                        [
+                            "HFP.20400",
+                            "Pregnant ruler notified she hasn't appointed a regent.",
+                            ""
+                        ],
+                        [
+                            "HFP.20401",
+                            "on_pregnancy, set clock for finishing phase at 2 months",
+                            ""
+                        ],
+                        [
+                            "HFP.20402",
+                            "(follow-up from HFP.20401)",
+                            ""
+                        ],
+                        [
+                            "HFP.20403",
+                            "on_birth (fired on the child), remove the trait and check all flavor flags.",
+                            ""
+                        ],
+                        [
+                            "HFP.20404",
+                            "Hard pregnancy starts",
+                            ""
+                        ],
+                        [
+                            "HFP.20405",
+                            "Spouse/Physician informed of a hard pregnancy.",
+                            ""
+                        ],
+                        [
+                            "HFP.20406",
+                            "Mother adviced by spouse to stop retire for the pregnancy.",
+                            ""
+                        ],
+                        [
+                            "HFP.20407",
+                            "Lonely mother decides if she wants to start regency or not.",
+                            ""
+                        ],
+                        [
+                            "HFP.20408",
+                            "Spouse/Physician informed mother will rest.",
+                            ""
+                        ],
+                        [
+                            "HFP.20409",
+                            "Spouse/Physician informed mother will rest outside.",
+                            ""
+                        ],
+                        [
+                            "HFP.20410",
+                            "Spouse/Physician informed mother will not rest.",
+                            ""
+                        ],
+                        [
+                            "HFP.20411",
+                            "Hidden random list for possible bad effects during hard pregnancy at home.",
+                            ""
+                        ],
+                        [
+                            "HFP.20412",
+                            "Hidden random list for possible bad effects during hard pregnancy outside.",
+                            ""
+                        ],
+                        [
+                            "HFP.20413",
+                            "Became wroth pregnant",
+                            ""
+                        ],
+                        [
+                            "HFP.20414",
+                            "Became gluttonous pregnant",
+                            ""
+                        ],
+                        [
+                            "HFP.20415",
+                            "Became depressed pregnant",
+                            ""
+                        ],
+                        [
+                            "HFP.20416",
+                            "Became drunkard pregnant",
+                            ""
+                        ],
+                        [
+                            "HFP.20417",
+                            "Countryside: Riding accident.",
+                            ""
+                        ],
+                        [
+                            "HFP.20418",
+                            "Countryside: Health is dropping during travel.",
+                            ""
+                        ],
+                        [
+                            "HFP.20419",
+                            "Countryside: Bad weather.",
+                            ""
+                        ],
+                        [
+                            "HFP.20420",
+                            "if drunk pregnant",
+                            "After Hard Pregnancy recovery"
+                        ],
+                        [
+                            "HFP.20421",
+                            "if gluttonous pregnant",
+                            ""
+                        ],
+                        [
+                            "HFP.20422",
+                            "if wroth pregnant",
+                            ""
+                        ],
+                        [
+                            "HFP.20423",
+                            "if depressed pregnant",
+                            ""
+                        ],
+                        [
+                            "HFP.20424",
+                            "Spouse complains about fat wife",
+                            "Spouse responses"
+                        ],
+                        [
+                            "HFP.20425",
+                            "Fat wife receives complaint",
+                            ""
+                        ],
+                        [
+                            "HFP.20426",
+                            "Spouse complains about drunkard wife",
+                            ""
+                        ],
+                        [
+                            "HFP.20427",
+                            "Drunkard wife receives complaint",
+                            ""
+                        ],
+                        [
+                            "HFP.20428",
+                            "Spouse complains about wroth wife",
+                            ""
+                        ],
+                        [
+                            "HFP.20429",
+                            "Wroth wife receives complaint",
+                            ""
+                        ],
+                        [
+                            "HFP.20430",
+                            "Spouse complains about depressed wife",
+                            ""
+                        ],
+                        [
+                            "HFP.20431",
+                            "Depressed wife receives complaint",
+                            ""
+                        ],
+                        [
+                            "HFP.20432",
+                            "wife's back in shape",
+                            "Spouse receives comunication of success/failure"
+                        ],
+                        [
+                            "HFP.20433",
+                            "wife's become fat",
+                            ""
+                        ],
+                        [
+                            "HFP.20434",
+                            "wife's sober again",
+                            ""
+                        ],
+                        [
+                            "HFP.20435",
+                            "wife still drinks",
+                            ""
+                        ],
+                        [
+                            "HFP.20436",
+                            "wife's calm now",
+                            ""
+                        ],
+                        [
+                            "HFP.20437",
+                            "wife's wounded husband!",
+                            ""
+                        ],
+                        [
+                            "HFP.20438",
+                            "wife's happy again",
+                            ""
+                        ],
+                        [
+                            "HFP.20439",
+                            "wife's become hollow",
+                            ""
+                        ],
+                        [
+                            "HFP.20440",
+                            "wife enjoys drinking",
+                            "Pre-notifications during pregnancy"
+                        ],
+                        [
+                            "HFP.20441",
+                            "wife enjoys eating",
+                            ""
+                        ],
+                        [
+                            "HFP.20442",
+                            "wife enjoys yelling",
+                            ""
+                        ],
+                        [
+                            "HFP.20443",
+                            "wife enjoys crying",
+                            ""
+                        ],
+                        [
+                            "HFP.20500",
+                            "Troubled Pregnancy begins.",
+                            ""
+                        ],
+                        [
+                            "HFP.20501",
+                            "Notify Spouse and Regent of the ruler about what is happening and prompt either to offer help if possible.",
+                            ""
+                        ],
+                        [
+                            "HFP.20502",
+                            "Naughty Regent: So, how do we do it?",
+                            ""
+                        ],
+                        [
+                            "HFP.20503",
+                            "Rare strange positive dream during pregnancy will cause strange birth. (happens only once per dynasty)",
+                            ""
+                        ],
+                        [
+                            "HFP.20504",
+                            "Rare strange negative dream during pregnancy will cause strange birth. (happens only once per dynasty)",
+                            ""
+                        ],
+                        [
+                            "HFP.20505",
+                            "Notification: Spouse/Regent has sent his physician to help. Do you want him?",
+                            ""
+                        ],
+                        [
+                            "HFP.20506",
+                            "Notification: Spouse/Regent wishes to offer his services as physician. Do you want him?",
+                            ""
+                        ],
+                        [
+                            "HFP.20507",
+                            "Notify regent/spouse that his physician will help woman.",
+                            ""
+                        ],
+                        [
+                            "HFP.20508",
+                            "Notify regent/spouse that woman needs no help.",
+                            ""
+                        ],
+                        [
+                            "HFP.20509",
+                            "Mother: Spouse/Regent sent a priest.",
+                            ""
+                        ],
+                        [
+                            "HFP.20510",
+                            "Mother: Spouse/Regent sent a shaman.",
+                            ""
+                        ],
+                        [
+                            "HFP.20511",
+                            "Mother: Regent succeeds in poisoning you.",
+                            ""
+                        ],
+                        [
+                            "HFP.20512",
+                            "Notify regent that he has succeeded in poisoning pregnant woman.",
+                            ""
+                        ],
+                        [
+                            "HFP.20513",
+                            "Mother: Regent succeeds in smothering you.",
+                            ""
+                        ],
+                        [
+                            "HFP.20514",
+                            "Notify regent that he has succeeded in smothering pregnant woman.",
+                            ""
+                        ],
+                        [
+                            "HFP.20515",
+                            "Mother: Regent is discovered trying to use poison.",
+                            ""
+                        ],
+                        [
+                            "HFP.20516",
+                            "Regent imprisoned for his deed.",
+                            ""
+                        ],
+                        [
+                            "HFP.20517",
+                            "Regent killed for his deed.",
+                            ""
+                        ],
+                        [
+                            "HFP.20518",
+                            "Mother: Regent is discovered trying to smother you.",
+                            ""
+                        ],
+                        [
+                            "HFP.20519",
+                            "Mother: Spouse/Regent offers moral support.",
+                            ""
+                        ],
+                        [
+                            "HFP.20520",
+                            "Mother in troubled pregnancy: Offer chance to do something about it.",
+                            ""
+                        ],
+                        [
+                            "HFP.20521",
+                            "(Now for randomized pain. Description from HFP.20520)",
+                            ""
+                        ],
+                        [
+                            "HFP.20522",
+                            "Troubled pregnancy: Asthma",
+                            ""
+                        ],
+                        [
+                            "HFP.20523",
+                            "Troubled pregnancy: Vomiting",
+                            ""
+                        ],
+                        [
+                            "HFP.20524",
+                            "Troubled pregnancy: Hair and Rashes",
+                            ""
+                        ],
+                        [
+                            "HFP.20525",
+                            "Troubled pregnancy: Metalmouth",
+                            ""
+                        ],
+                        [
+                            "HFP.20526",
+                            "Troubled pregnancy: Fever and Sweath",
+                            ""
+                        ],
+                        [
+                            "HFP.20527",
+                            "Troubled pregnancy: Amnesia",
+                            ""
+                        ],
+                        [
+                            "HFP.20528",
+                            "Troubled pregnancy: Panic Attack",
+                            ""
+                        ],
+                        [
+                            "HFP.20529",
+                            "Troubled pregnancy: Undernourishment",
+                            "More Dangerous ones."
+                        ],
+                        [
+                            "HFP.20530",
+                            "Troubled pregnancy: Epilectic Episode",
+                            ""
+                        ],
+                        [
+                            "HFP.20531",
+                            "Troubled pregnancy: Blood and Cramps",
+                            ""
+                        ],
+                        [
+                            "HFP.20532",
+                            "Troubled pregnancy: Teeth Hurting and Falling",
+                            ""
+                        ],
+                        [
+                            "HFP.20533",
+                            "Troubled pregnancy: Insomnia",
+                            ""
+                        ],
+                        [
+                            "HFP.20534",
+                            "Troubled pregnancy: Hallucinations",
+                            ""
+                        ],
+                        [
+                            "HFP.20535",
+                            "Troubled pregnancy: Sleepwalking",
+                            ""
+                        ],
+                        [
+                            "HFP.20536",
+                            "Troubled pregnancy: Recovery",
+                            ""
+                        ],
+                        [
+                            "HFP.20553",
+                            "physician notified of mother recovering from troubled pregnancy before childbirth.",
+                            ""
+                        ],
+                        [
+                            "HFP.20554",
+                            "spouse (who is not a physician) notified of mother recovering from troubled pregnancy before childbirth.",
+                            ""
+                        ],
+                        [
+                            "HFP.20537",
+                            "Troubled pregnancy: DEATH before birth",
+                            ""
+                        ],
+                        [
+                            "HFP.20538",
+                            "on_birth baby vision child event",
+                            ""
+                        ],
+                        [
+                            "HFP.20539",
+                            "mother/father receive news of miraculous birth",
+                            ""
+                        ],
+                        [
+                            "HFP.20540",
+                            "mother/father receive news of ominous birth",
+                            ""
+                        ],
+                        [
+                            "HFP.20541",
+                            "post-fever",
+                            "POST BIRTH TROUBLED PREGNANCY OUTCOMES"
+                        ],
+                        [
+                            "HFP.20542",
+                            "hair loss",
+                            ""
+                        ],
+                        [
+                            "HFP.20543",
+                            "blood",
+                            ""
+                        ],
+                        [
+                            "HFP.20544",
+                            "complete recovery",
+                            ""
+                        ],
+                        [
+                            "HFP.20545",
+                            "partial recovery",
+                            ""
+                        ],
+                        [
+                            "HFP.20546",
+                            "remains infirm",
+                            ""
+                        ],
+                        [
+                            "HFP.20547",
+                            "Death after birth",
+                            ""
+                        ],
+                        [
+                            "HFP.20548",
+                            "spouse notified of full recovery",
+                            ""
+                        ],
+                        [
+                            "HFP.20549",
+                            "spouse notified of partial recovery",
+                            ""
+                        ],
+                        [
+                            "HFP.20550",
+                            "spouse notified of infirmity",
+                            ""
+                        ],
+                        [
+                            "HFP.20551",
+                            "spouse notified of death",
+                            ""
+                        ],
+                        [
+                            "HFP.20552",
+                            "spouse notified of troubled pregnancy after birth",
+                            ""
+                        ],
+                        [
+                            "HFP.20555",
+                            "clear hard pregnancy on_birth.",
+                            ""
+                        ],
+                        [
+                            "HFP.20556",
+                            "on_pregnancy positive events.",
+                            ""
+                        ],
+                        [
+                            "HFP.20557",
+                            "First pregnancy scare.",
+                            ""
+                        ],
+                        [
+                            "HFP.20558",
+                            "Baby kicks.",
+                            ""
+                        ],
+                        [
+                            "HFP.20559",
+                            "Mother of one thinks about what will her next child be.",
+                            ""
+                        ],
+                        [
+                            "HFP.20560",
+                            "Mother needs new dresses.",
+                            ""
+                        ],
+                        [
+                            "HFP.20561",
+                            "Husband: pregnant wife wants new dresses.",
+                            ""
+                        ],
+                        [
+                            "HFP.20562",
+                            "Wife flattered by husband",
+                            ""
+                        ],
+                        [
+                            "HFP.20563",
+                            "Wife gets clothes from husband.",
+                            ""
+                        ],
+                        [
+                            "HFP.20564",
+                            "Wife doesn't get clothes from husband.",
+                            ""
+                        ],
+                        [
+                            "HFP.20565",
+                            "Mother gets positive omen.",
+                            ""
+                        ],
+                        [
+                            "HFP.20566",
+                            "Husband notified.",
+                            ""
+                        ],
+                        [
+                            "HFP.20567",
+                            "Mother gets negative omen.",
+                            ""
+                        ],
+                        [
+                            "HFP.20568",
+                            "Husband notified.",
+                            ""
+                        ],
+                        [
+                            "HFP.20569",
+                            "Christian Mother can make vow to the Holy Virgin.",
+                            ""
+                        ],
+                        [
+                            "HFP.20570",
+                            "Holy Virgin: What vow are you going to take?",
+                            ""
+                        ],
+                        [
+                            "HFP.20571",
+                            "Pagan Mother can go offer sacrifice to the gods for healthy child.",
+                            ""
+                        ],
+                        [
+                            "HFP.20572",
+                            "Pagan sacrifice: what are you wishing for?",
+                            ""
+                        ],
+                        [
+                            "HFP.20573",
+                            "Mother has weird cravings.",
+                            ""
+                        ],
+                        [
+                            "HFP.20596",
+                            "Spouse: Mother has weird cravings.",
+                            ""
+                        ],
+                        [
+                            "HFP.20574",
+                            "Son/Spouse: chance to offer solace to pregnant mother/wife.",
+                            ""
+                        ],
+                        [
+                            "HFP.20575",
+                            "Lover: chance to visit pregnant lover in secret.",
+                            ""
+                        ],
+                        [
+                            "HFP.20576",
+                            "Mother: Spouse gives presents to make you feel better.",
+                            ""
+                        ],
+                        [
+                            "HFP.20577",
+                            "Notify spouse that woman has fallen in love with him.",
+                            ""
+                        ],
+                        [
+                            "HFP.20578",
+                            "Mother: Loving husband/child spends time with her.",
+                            ""
+                        ],
+                        [
+                            "HFP.20579",
+                            "Notify child that mother loves him.",
+                            ""
+                        ],
+                        [
+                            "HFP.20580",
+                            "Mother is visited by lover.",
+                            ""
+                        ],
+                        [
+                            "HFP.20581",
+                            "Mother recovers from stress after pregnancy.",
+                            "Post-birth notifications"
+                        ],
+                        [
+                            "HFP.20582",
+                            "Mother craved for quail's leg: child is good at talking but clubfooted.",
+                            ""
+                        ],
+                        [
+                            "HFP.20583",
+                            "Mother craved for hare's head: child is good at spying but harelipped.",
+                            ""
+                        ],
+                        [
+                            "HFP.20584",
+                            "Mother craved for trout's eye: child is good at learning but ugly.",
+                            ""
+                        ],
+                        [
+                            "HFP.20585",
+                            "Mother hoped for a warrior and she got one.",
+                            ""
+                        ],
+                        [
+                            "HFP.20586",
+                            "Mother sacrificed to gods for strong kid and got one.",
+                            ""
+                        ],
+                        [
+                            "HFP.20587",
+                            "Mother sacrificed to gods for pretty kid and got one.",
+                            ""
+                        ],
+                        [
+                            "HFP.20588",
+                            "Mother sacrificed to gods for smart kid and got one.",
+                            ""
+                        ],
+                        [
+                            "HFP.20589",
+                            "Mother wanted a boy/girl and she got a...",
+                            ""
+                        ],
+                        [
+                            "HFP.20590",
+                            "Mother made vow to the Holy Virgin, if child is healthy, time to pay up.",
+                            ""
+                        ],
+                        [
+                            "HFP.20591",
+                            "Mother: you broke your vow and now your child is sick.",
+                            ""
+                        ],
+                        [
+                            "HFP.20592",
+                            "On adulthood: hidden event to determine if child of troubled birth will talk to mother about the event.",
+                            ""
+                        ],
+                        [
+                            "HFP.20593",
+                            "portrait ping.",
+                            ""
+                        ],
+                        [
+                            "HFP.20594",
+                            "Child of troubled birth: approach mother about subject?",
+                            ""
+                        ],
+                        [
+                            "HFP.20595",
+                            "Mother is grateful for the child's kindness.",
+                            ""
+                        ],
+                        [
+                            "HFP.20597",
+                            "Clean up event 35 days post-birth to clear all persistent event targets.",
+                            ""
+                        ],
+                        [
+                            "HFP.20598",
+                            "Mother thinks about her son/daughter being the son/daughter of the Pope.",
+                            ""
+                        ],
+                        [
+                            "HFP.20599",
+                            "delayed from on_birth event. Mother develops bond with child.",
+                            ""
+                        ],
+                        [
+                            "HFP.20000",
+                            "delayed from on_birth event (of a few years). Father develops bond with child.",
+                            ""
+                        ],
+                        [
+                            "HFP.20001",
+                            "Mother drunk/drugged during pregnancy, child is growing dumb.",
+                            ""
+                        ],
+                        [
+                            "HFP.20002",
+                            "Father: Mother drunk/drugged during pregnancy, child is growing dumb.",
+                            ""
+                        ],
+                        [
+                            "HFP.20003",
+                            "Pregnancy glow",
+                            ""
+                        ],
+                        [
+                            "HFP.20004",
+                            "Pregnancy glow - Spouse notified",
+                            ""
+                        ],
+                        [
+                            "HFP.20029",
+                            "Pregnancy glow - Spouse is flattering you.",
+                            ""
+                        ],
+                        [
+                            "HFP.20005",
+                            "Husband receives event to call other women to entertain wife.",
+                            "The Gossiping - Only for rulers or spouses of rulers (COUNT or higher)"
+                        ],
+                        [
+                            "HFP.20006",
+                            "Mother: gossiping has been organized.",
+                            ""
+                        ],
+                        [
+                            "HFP.20007",
+                            "Mother: enjoying the gossiping.",
+                            ""
+                        ],
+                        [
+                            "HFP.20008",
+                            "Mother: not enjoying the gossiping.",
+                            ""
+                        ],
+                        [
+                            "HFP.20009",
+                            "Mother: pampered during gossiping.",
+                            ""
+                        ],
+                        [
+                            "HFP.20010",
+                            "Relative: you have been invited to the gossiping.",
+                            ""
+                        ],
+                        [
+                            "HFP.20011",
+                            "Relative: gossiping input.",
+                            ""
+                        ],
+                        [
+                            "HFP.20012",
+                            "Mother: enjoying the gossiping. - Relative version",
+                            ""
+                        ],
+                        [
+                            "HFP.20013",
+                            "Mother: not enjoying the gossiping. - Relative version",
+                            ""
+                        ],
+                        [
+                            "HFP.20014",
+                            "Mother: pampered during gossiping. - Relative version",
+                            ""
+                        ],
+                        [
+                            "HFP.20015",
+                            "Relative: notified of mother's reaction",
+                            ""
+                        ],
+                        [
+                            "HFP.20016",
+                            "Mother: becoming friend with relative",
+                            ""
+                        ],
+                        [
+                            "HFP.20017",
+                            "Relative: becoming friend with mother",
+                            ""
+                        ],
+                        [
+                            "HFP.20018",
+                            "Does mother want to go?",
+                            "Post-partum Churching of the Mother (one month after on_birth) - Only for Catholic Rulers (or main spouses of Rulers) who are married and have produced a(n apparently) legitimate child."
+                        ],
+                        [
+                            "HFP.20019",
+                            "What does mother do?",
+                            ""
+                        ],
+                        [
+                            "HFP.20020",
+                            "Response",
+                            ""
+                        ],
+                        [
+                            "HFP.20021",
+                            "Husband notified of the Churching.",
+                            ""
+                        ],
+                        [
+                            "HFP.20022",
+                            "Mother: husband comforted you.",
+                            ""
+                        ],
+                        [
+                            "HFP.20023",
+                            "Mother: husband forgave you.",
+                            ""
+                        ],
+                        [
+                            "HFP.20024",
+                            "Mother: husband is upset.",
+                            ""
+                        ],
+                        [
+                            "HFP.20025",
+                            "Real father notified mother revealed his identity.",
+                            ""
+                        ],
+                        [
+                            "HFP.20026",
+                            "Churching flags on the mother cleared after a month.",
+                            ""
+                        ],
+                        [
+                            "HFP.20027",
+                            "Child is blessed, give random trait.",
+                            ""
+                        ],
+                        [
+                            "HFP.20028",
+                            "Parents notified of blessed child.",
+                            ""
+                        ],
+                        [
+                            "HFP.20030",
+                            "Dark rest. Fires for female rulers, or, if unlanded, for their spouse.",
+                            ""
+                        ],
+                        [
+                            "HFP.20031",
+                            "Dark rest: mother's learning increases.",
+                            ""
+                        ],
+                        [
+                            "HFP.20032",
+                            "Dark rest: mother's learning increases. - Spouse notified.",
+                            ""
+                        ],
+                        [
+                            "HFP.20033",
+                            "Dark rest: mother becomes paranoid due to seclusion.",
+                            ""
+                        ],
+                        [
+                            "HFP.20034",
+                            "Dark rest: mother becomes paranoid due to seclusion. - Spouse notified.",
+                            ""
+                        ],
+                        [
+                            "HFP.20035",
+                            "Dark rest: mother becomes calmer due to seclusion.",
+                            ""
+                        ],
+                        [
+                            "HFP.20036",
+                            "Dark rest: mother becomes calmer due to seclusion. - Spouse notified.",
+                            ""
+                        ],
+                        [
+                            "HFP.20037",
+                            "Dark rest: mother becomes more gregarious.",
+                            ""
+                        ],
+                        [
+                            "HFP.20038",
+                            "Dark rest:  mother becomes more gregarious. - Spouse notified.",
+                            ""
+                        ],
+                        [
+                            "HFP.20039",
+                            "Dark rest: mother becomes more popular.",
+                            ""
+                        ],
+                        [
+                            "HFP.20040",
+                            "Dark rest:  mother becomes more popular. - Spouse notified.",
+                            ""
+                        ],
+                        [
+                            "HFP.20041",
+                            "Dark rest: mother falls in love with husband.",
+                            ""
+                        ],
+                        [
+                            "HFP.20042",
+                            "Dark rest: mother falls in love with husband. - Spouse notified.",
+                            ""
+                        ],
+                        [
+                            "HFP.20043",
+                            "Spouse: organize fertility festival for wife.",
+                            "Pagan festival of fertility. Only for Count or higher married rulers (or their main spouse). Only for Norse, Finnish, Romuva. Goddesses mentioned for loc: Freyja (norse), Zemyna (Romuva/baltic), Akka (Finnish)"
+                        ],
+                        [
+                            "HFP.20044",
+                            "Fertility festival: Mother has just been honored.",
+                            ""
+                        ],
+                        [
+                            "HFP.20045",
+                            "Mother: festival has been organized for you.",
+                            ""
+                        ],
+                        [
+                            "HFP.20046",
+                            "Mother: Festival - Mother of the realm.",
+                            ""
+                        ],
+                        [
+                            "HFP.20047",
+                            "Mother: Festival - A goddess am I.",
+                            ""
+                        ],
+                        [
+                            "HFP.20048",
+                            "Mother: Festival - Gone insane.",
+                            ""
+                        ],
+                        [
+                            "HFP.20049",
+                            "Mother: Festival - People are happy.",
+                            ""
+                        ],
+                        [
+                            "HFP.20050",
+                            "Mother: Festival - Vassals are happy.",
+                            ""
+                        ],
+                        [
+                            "HFP.20051",
+                            "Vassals notified of popular festival.",
+                            ""
+                        ],
+                        [
+                            "HFP.20052",
+                            "Mother: Festival - Fertility bonus.",
+                            ""
+                        ],
+                        [
+                            "HFP.20053",
+                            "Mother: Festival - Godly virtues.",
+                            ""
+                        ],
+                        [
+                            "HFP.20054",
+                            "Husband: Notification event.",
+                            ""
+                        ],
+                        [
+                            "HFP.20055",
+                            "Child was blessed by goddess. Becomes beautiful a few years later.",
+                            ""
+                        ],
+                        [
+                            "HFP.20056",
+                            "Father: mother dies before birth, child is born weakly and pale.",
+                            ""
+                        ],
+                        [
+                            "HFP.20057",
+                            "Hollow child gains specific trait.",
+                            ""
+                        ],
+                        [
+                            "HFP.20058",
+                            "On_adolescence. Hollow child gains adulthood trait and modifier.",
+                            ""
+                        ],
+                        [
+                            "HFP.20059",
+                            "Hollow child modifier notification.",
+                            ""
+                        ],
+                        [
+                            "HFP.20060",
+                            "Educator/Father notified of strange behavior.",
+                            ""
+                        ],
+                        [
+                            "HFP.20061",
+                            "Spouse: Mother aborted child to avoid hard pregnancy.",
+                            ""
+                        ],
+                        [
+                            "HFP.20062",
+                            "Mother's crime exposed.",
+                            ""
+                        ],
+                        [
+                            "HFP.20063",
+                            "Mother was forgiven.",
+                            ""
+                        ],
+                        [
+                            "HFP.20064",
+                            "Mother becomes depressed/insane after abortion.",
+                            ""
+                        ],
+                        [
+                            "HFP.20065",
+                            "Mother inadvertedly reveals her crime during night terror.",
+                            ""
+                        ],
+                        [
+                            "HFP.20066",
+                            "Mother bleeds, loses fertility.",
+                            ""
+                        ],
+                        [
+                            "HFP.20067",
+                            "Notify lover that his lover is pregnant.",
+                            ""
+                        ],
+                        [
+                            "HFP.20068",
+                            "Cleanup on_birth event to remove illegitimate trait gained when a wife gives birth after the death of her husband.",
+                            ""
+                        ],
+                        [
+                            "HFP.20069",
+                            "Wife notified of kindred spirit I.",
+                            ""
+                        ],
+                        [
+                            "HFP.20070",
+                            "Wife notified of kindred spirit II.",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

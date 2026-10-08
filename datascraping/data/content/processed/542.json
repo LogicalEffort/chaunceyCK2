@@ -1,0 +1,2169 @@
+{
+    "pageid": 542,
+    "title": "Titular title",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A Titular title is a title that does not have any de jure territory associated with it. The game uses titular titles to represent rulers considered higher in status than counts, but who did not govern territories corresponding to a de jure territory. For example, in 867, Great Moravia is a titular kingdom, while most of the pagan Slavic and Baltic tribes are titular duchies."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Titular kingdoms and empires may assimilate de jure duchies or kingdoms, respectively, into their realms, and upon doing so cease being titular. Alternatively, de jure kingdoms can lose all their de jure duchies via de jure drift, and can become titular kingdoms. For example, in 867, the Kingdoms of Asturias and León have one de jure duchy each, but in 1066, León has assimilated the Duchy of Asturias and the Kingdom of Asturias has become titular."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Generally, to create a titular kingdom or empire, you must control its de jure capital (since there is no de jure territory to control 51% or 80% of). You can determine the capital by searching for the title and hovering the \"Create\" button, or by checking the list of kingdoms or empires ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Certain titular kingdoms (and one titular empire, the Latin Empire) may be formed by a character who holds the required territories and/or meets certain, often religious , requirements. Other titular kingdoms exist in historical starts but cannot be created during the game."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Creating a titular title can be one way of advancing one's title tier, in order to unlock mechanics and allow higher-tier vassals. However, as titular titles have no de jure vassals, the amount of levies provided by vassals will be limited."
+                }
+            ]
+        },
+        {
+            "heading": "Related concepts",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Tribal titles are similar to titular titles. The two differences are that they cannot assimilate any de jure titles, and they are destroyed when another title of the same rank is gained. Until the introduction of tribal government in patch 2.2 , many Slavic, Finnish, and Baltic characters started out with duchy-tier tribal titles."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Landless titles can exist without the holder having any land, and are often titular. They include holy orders , mercenary companies, most religious head titles, and horde empires that arrive from off-map. The only way these titles can be destroyed is due to lack of heirs, which never happens for those that use Open Elective succession (like the Ecumenical Patriarchate). Without land, they are listed as \"residing\" in a county, e.g. a landless Pope is usually \"Residing in Rome\"."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Temporary titles are always titular. There are several types of temporary titles:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Rebellion titles are given to leaders of faction rebellions, so they can temporarily control other members.  The title is destroyed when the rebellion ends.",
+                            "children": []
+                        },
+                        {
+                            "text": "Landless temporary titles are given to generated revolt leaders and to ToG adventurers . The title is destroyed when the war ends.",
+                            "children": []
+                        },
+                        {
+                            "text": "Adventurer titles are given to raiding adventurers and dynamic mercenaries . These titles can persist without land or war, but are not playable .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "List of creatable titular titles",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "CoA",
+                            "Name",
+                            "Rank",
+                            "Notes",
+                            "ID",
+                            "Capital",
+                            "Other names"
+                        ],
+                        [
+                            "",
+                            "Holy Roman Empire",
+                            "Empire",
+                            "Decision Form the Holy Roman Empire",
+                            "e_hre",
+                            "Jülich",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Roman Empire",
+                            "Empire",
+                            "Decision Restore Roman Empire",
+                            "e_roman_empire",
+                            "Rome",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Latin Empire",
+                            "Empire",
+                            "Be Catholic or a Catholic Heresy . Neither the Byzantine Empire nor the Roman Empire has a holder. Exists from 16 May 1204 to 25 July 1261. With the Holy Fury DLC, it is also created if the Fourth Crusade is successful. It can then be re-created once destroyed.",
+                            "e_latin_empire",
+                            "Constantinople",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Nicene Empire",
+                            "Empire",
+                            "Can be created if it has existed earlier in a campaign. Exists from 16 May 1204 to 25 July 1261. With Holy Fury , if the Fourth Crusade is successful, it replaces the Byzantine Empire.",
+                            "e_nicaea",
+                            "Nikaea",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Outremer",
+                            "Empire",
+                            "Decision Form an Empire of the Outremer",
+                            "e_outremer",
+                            "Jerusalem",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Slavic Union",
+                            "Empire",
+                            "Decision Form the Slavic Union",
+                            "e_lechczechrus",
+                            "Kiev",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Russia",
+                            "Empire",
+                            "Decision Form the Empire of Russia",
+                            "e_russian_empire",
+                            "Vladimir",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Bulgaria",
+                            "Empire",
+                            "Decision Form the Empire of Bulgaria. Exists in the 936 bookmark.",
+                            "e_bulgaria",
+                            "Tyrnovo",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Mongol Empire",
+                            "Empire",
+                            "Decision Become Genghis Khan. Exists from 1206 to 1227.",
+                            "e_mongol_empire",
+                            "Kara Khorum",
+                            ""
+                        ],
+                        [
+                            "",
+                            "India",
+                            "Empire",
+                            "Decision Become Samrat Chakravartin. Holder titled Samrat Chakravartin.",
+                            "e_india",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Pisa",
+                            "Kingdom",
+                            "Decision Create the Kingdom of Pisa. Exists from 1060 to 1285.",
+                            "k_pisa",
+                            "Pisa",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Genoa",
+                            "Kingdom",
+                            "Decision Create the Kingdom of Genoa. Exists from 1066.",
+                            "k_genoa",
+                            "Genoa",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Amalfi",
+                            "Kingdom",
+                            "Decision Create the Kingdom of Amalfi",
+                            "k_genoa",
+                            "Amalfi",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Romagna",
+                            "Kingdom",
+                            "Created once the Papal States has been usurped from the Pope . Replaces the de jure Papal States once created.",
+                            "k_romagna",
+                            "Ravenna",
+                            "Ravenna (Greek)"
+                        ],
+                        [
+                            "",
+                            "Great Moravia",
+                            "Kingdom",
+                            "Exists de jure from 830 to 907.",
+                            "k_moravia",
+                            "Brno",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Naples",
+                            "Kingdom",
+                            "Exists de jure from 1302.",
+                            "k_naples",
+                            "Napoli",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Trinacria",
+                            "Kingdom",
+                            "Exists de jure from 1302.",
+                            "k_trinacria",
+                            "Palermo",
+                            ""
+                        ],
+                        [
+                            "",
+                            "León",
+                            "Kingdom",
+                            "Decision Create the Kingdom of León. Exists de jure from 20 December 910.",
+                            "k_leon",
+                            "León",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Antioch",
+                            "Kingdom",
+                            "Decision Create the Principality of Antioch. Exists from 1098. If destroyed, need to be Catholic to re-create. Holder titled Prince.",
+                            "k_antioch",
+                            "Antioch",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Cyprus",
+                            "Kingdom",
+                            "Decision Create the Kingdom of Cyprus. Exists from 1192. If destroyed, need to be Christian to re-create.",
+                            "k_cyprus",
+                            "Famagusta",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Israel",
+                            "Kingdom",
+                            "Decision Create Israel",
+                            "k_israel",
+                            "Jerusalem",
+                            "Judea (Roman)"
+                        ],
+                        [
+                            "",
+                            "Bosnia",
+                            "Kingdom",
+                            "Decision Create the Kingdom of Bosnia. Exists de jure from 1322.",
+                            "k_bosnia",
+                            "Vrhbosna",
+                            ""
+                        ],
+                        [
+                            "",
+                            "The Hansa",
+                            "Kingdom",
+                            "Decision Create the Hansa. Exists from 1227.",
+                            "k_hansa",
+                            "Lübeck",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Austria Styria Bavaria Carinthia",
+                            "Kingdom",
+                            "Decision Gather the lands of the Eastern Marches. The player will be able to choose one out of four names and CoA.",
+                            "k_eastern_marches",
+                            "Wien",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Austria",
+                            "Kingdom",
+                            "Decision Become the Archduke of Austria. Holder titled Archduke.",
+                            "k_austria",
+                            "Wien",
+                            "Noricum (Roman)"
+                        ],
+                        [
+                            "",
+                            "Saxony",
+                            "Kingdom",
+                            "Decision Form the Grand Duchy of Saxony. Holder titled Archduke.",
+                            "k_saxon",
+                            "Braunschweig",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Franconia",
+                            "Kingdom",
+                            "Decision Form the Grand Duchy of Franconia. Holder titled Archduke.",
+                            "k_franconia",
+                            "Würzburg",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Swabia",
+                            "Kingdom",
+                            "Decision Form the Grand Duchy of Swabia. Holder titled Archduke.",
+                            "k_swabia",
+                            "Schwaben",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Saxony",
+                            "Kingdom",
+                            "Exists from 740 to 781. Can also be created if Thankmar's rebellion (936 bookmark) is victorious.",
+                            "k_saxony",
+                            "Braunschweig",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Franconia",
+                            "Kingdom",
+                            "Can be created if Thankmar's rebellion is victorious.",
+                            "k_franconia_otto",
+                            "Würzburg",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Thuringia",
+                            "Kingdom",
+                            "Can be created if Thankmar's rebellion is victorious.",
+                            "k_thuringia_otto",
+                            "Thüringen",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Swabia",
+                            "Kingdom",
+                            "Can be created if Thankmar's rebellion is victorious.",
+                            "k_swabia_otto",
+                            "Schwaben",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Swiss Confederation",
+                            "Kingdom",
+                            "Decision Create the Swiss Confederation",
+                            "k_switzerland",
+                            "Bern",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Switzerland",
+                            "Duchy",
+                            "Decision Create the Swiss Confederation. Replaces the de jure duchies of Thurgau and Raetia.",
+                            "d_swiss",
+                            "Schwyz",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Amalfi",
+                            "Duchy",
+                            "Control the County of Amalfi as a republic. De jure in the 936 bookmark.",
+                            "d_amalfi",
+                            "Amalfi",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Pechina",
+                            "Duchy",
+                            "Control the County of Almeria as a republic. Can only be created in a game starting in the 936 bookmark.",
+                            "d_pechina",
+                            "Almeria",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Gotland",
+                            "Duchy",
+                            "Can only be created while it exists de jure from 6 June 1161 to 1285.",
+                            "d_gotland",
+                            "Gotland",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Durham",
+                            "Duchy",
+                            "Exists from 1071. Can only be created by Catholic theocratic rulers, therefore uncreatable for players.",
+                            "d_durham_palatine",
+                            "Durham",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Mainz",
+                            "Duchy",
+                            "Exists from 1152. Can only be created by theocratic rulers, therefore uncreatable for players.",
+                            "d_mainz",
+                            "Mainz",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "With the Holy Fury DLC, it is also created if the Fourth Crusade is successful. It can then be re-created once destroyed."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "With Holy Fury , if the Fourth Crusade is successful, it replaces the Byzantine Empire."
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Styria"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Bavaria"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Carinthia"
+                }
+            ]
+        },
+        {
+            "heading": "Creatable religious head titles",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "CoA",
+                            "Name",
+                            "Rank",
+                            "Notes",
+                            "ID",
+                            "Capital"
+                        ],
+                        [
+                            "",
+                            "The Ecumenical Patriarchate",
+                            "Kingdom",
+                            "Orthodox head. If destroyed, can be re-created by the decision Restore the Ecumenical Patriarchate. Holder titled Ecumenical Patriarch.",
+                            "k_orthodox",
+                            "Constantinople"
+                        ],
+                        [
+                            "",
+                            "The Fraticelli Papacy",
+                            "Duchy",
+                            "Fraticelli head. Decision Create Fraticelli Papacy. Holder titled Pope.",
+                            "d_fraticelli",
+                            "Rome"
+                        ],
+                        [
+                            "",
+                            "The Iconoclast Patriarchate",
+                            "Duchy",
+                            "Iconoclast head. Decision Create Iconoclast Patriarchy. Holder titled Ecumenical Patriarch.",
+                            "d_iconoclast",
+                            "Constantinople"
+                        ],
+                        [
+                            "",
+                            "The Sunni Caliphate",
+                            "Duchy",
+                            "Sunni head. One of: Have Sayyid trait and 1000 piety Have Sayyid trait or Mirza trait or 1000 piety, AND one of Control Mecca and Medina Control Jerusalem, Damascus and Baghdad Holder titled Caliph.",
+                            "d_sunni",
+                            "Mecca"
+                        ],
+                        [
+                            "",
+                            "The Yazidi Sheikhdom",
+                            "Duchy",
+                            "Yazidi head. 1000 piety. Holder titled Sheikh.",
+                            "d_yazidi",
+                            "Mosul"
+                        ],
+                        [
+                            "",
+                            "The Shia Caliphate",
+                            "Duchy",
+                            "Shia head. One of: Have Sayyid trait and 1000 piety Have Sayyid trait or Mirza trait or 1000 piety, AND one of Control Mecca and Medina Control Jerusalem, Damascus and Baghdad It will also be created if the scripted Rise of the Shia Caliphate is successful. Holder titled Caliph.",
+                            "d_shiite",
+                            "Mecca"
+                        ],
+                        [
+                            "",
+                            "The Hurufi Skeikhdom [ sic ]",
+                            "Duchy",
+                            "Hurufi head. One of: Have Sayyid trait and 1000 piety Have Sayyid trait or Mirza trait or 1000 piety, AND one of Control Mecca and Medina Control Jerusalem, Damascus and Baghdad Holder titled Caliph.",
+                            "d_hurufi",
+                            "Mecca"
+                        ],
+                        [
+                            "",
+                            "The Qarmatian Caliphate",
+                            "Duchy",
+                            "Qarmatian head. One of: Sayyid trait Mirza trait 1000 piety Blood of Sa'id bloodline One of: 3 holy sites Blood of Sa'id bloodline 500 piety Holder titled Caliph.",
+                            "d_qarmatian",
+                            "Al Hasa"
+                        ],
+                        [
+                            "",
+                            "The Ibadi Caliphate",
+                            "Duchy",
+                            "Ibadi head. One of: Have Sayyid trait and 1000 piety Have Sayyid trait or Mirza trait or 1000 piety, AND one of Control Mecca and Medina Control Jerusalem, Damascus and Baghdad Holder titled Caliph.",
+                            "d_ibadi",
+                            "Mecca"
+                        ],
+                        [
+                            "",
+                            "The Kharijite Caliphate",
+                            "Duchy",
+                            "Kharijite head. 1000 piety and one of: Control Mecca and Medina Control Jerusalem, Damascus and Baghdad Holder titled Caliph.",
+                            "d_ibadi",
+                            "Mecca"
+                        ],
+                        [
+                            "",
+                            "The Jewish High Priesthood",
+                            "Duchy",
+                            "Jewish head. Decision Restore High Priesthood. Holder titled Kohen Gadol.",
+                            "d_jewish",
+                            "Jerusalem"
+                        ],
+                        [
+                            "",
+                            "The Zoroastrian Church",
+                            "Duchy",
+                            "Zoroastrian head. Decision Restore Priesthood. Holder titled Moabadan-Moabad.",
+                            "d_zoroastrian",
+                            "Esfahan"
+                        ],
+                        [
+                            "",
+                            "The Fylkirate",
+                            "Duchy",
+                            "Given to the reformer of the Reformed Germanic religion or its vassal depending on the leadership chosen during reformation. Holder titled Fylkir (m), Fylkja (f).",
+                            "d_norse_pagan_reformed",
+                            "Uppland"
+                        ],
+                        [
+                            "",
+                            "The Sky-Temple",
+                            "Duchy",
+                            "Given to the reformer of the Reformed Tengri religion or its vassal depending on the leadership chosen during reformation. Holder titled Tengrikut.",
+                            "d_tengri_pagan_reformed",
+                            "Sarkel"
+                        ],
+                        [
+                            "",
+                            "The Romuvan Congregation",
+                            "Duchy",
+                            "Given to the reformer of the Reformed Romuva religion or its vassal depending on the leadership chosen during reformation. Holder titled First Vaidila (m), First Vaidilute (f).",
+                            "d_baltic_pagan_reformed",
+                            "Stettin"
+                        ],
+                        [
+                            "",
+                            "The Sacred Woods",
+                            "Duchy",
+                            "Given to the reformer of the Reformed Suomenusko religion or its vassal depending on the leadership chosen during reformation. Holder titled Tietaja.",
+                            "d_finnish_pagan_reformed",
+                            "Uusimaa"
+                        ],
+                        [
+                            "",
+                            "The Slavic Church",
+                            "Duchy",
+                            "Given to the reformer of the Reformed Slavic religion or its vassal depending on the leadership chosen during reformation. Holder titled Velký Volhv.",
+                            "d_slavic_pagan_reformed",
+                            "Târgoviste"
+                        ],
+                        [
+                            "",
+                            "The Aztec Church",
+                            "Duchy",
+                            "Given to the reformer of the Reformed Aztec religion or its vassal depending on the leadership chosen during reformation. Holder titled Tlatoani.",
+                            "d_aztec_reformed",
+                            "Vestisland"
+                        ],
+                        [
+                            "",
+                            "The African Congregation",
+                            "Duchy",
+                            "Given to the reformer of the Reformed African religion or its vassal depending on the leadership chosen during reformation. Holder titled Grand Saltigue.",
+                            "d_west_african_pagan_reformed",
+                            "Niani"
+                        ],
+                        [
+                            "",
+                            "The Church of Zun",
+                            "Duchy",
+                            "Given to the reformer of the Reformed Zunist religion or its vassal depending on the leadership chosen during reformation. Holder titled Dastur (m/f).",
+                            "d_zun_pagan_reformed",
+                            "Bost"
+                        ],
+                        [
+                            "",
+                            "The Sacred Bön Hierarchy",
+                            "Duchy",
+                            "Given to the reformer of the Reformed Bön religion or its vassal depending on the leadership chosen during reformation. Holder titled Dalai Lama.",
+                            "d_bon_reformed",
+                            "Lhasa"
+                        ],
+                        [
+                            "",
+                            "Collegium Pontificum",
+                            "Kingdom",
+                            "Given to the reformer of the Reformed Hellenic religion or its vassal depending on the leadership chosen during reformation. Holder titled Pontifex Maximus.",
+                            "k_hellenic_pagan",
+                            "Rome"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "One of:",
+                            "children": [
+                                {
+                                    "text": "Have Sayyid trait and 1000 piety",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Have Sayyid trait or Mirza trait or 1000 piety, AND one of",
+                                    "children": [
+                                        {
+                                            "text": "Control Mecca and Medina",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "Control Jerusalem, Damascus and Baghdad",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Holder titled Caliph."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "One of:",
+                            "children": [
+                                {
+                                    "text": "Have Sayyid trait and 1000 piety",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Have Sayyid trait or Mirza trait or 1000 piety, AND one of",
+                                    "children": [
+                                        {
+                                            "text": "Control Mecca and Medina",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "Control Jerusalem, Damascus and Baghdad",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It will also be created if the scripted Rise of the Shia Caliphate is successful. Holder titled Caliph."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "[ sic ]"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "One of:",
+                            "children": [
+                                {
+                                    "text": "Have Sayyid trait and 1000 piety",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Have Sayyid trait or Mirza trait or 1000 piety, AND one of",
+                                    "children": [
+                                        {
+                                            "text": "Control Mecca and Medina",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "Control Jerusalem, Damascus and Baghdad",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Holder titled Caliph."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "One of:",
+                            "children": [
+                                {
+                                    "text": "Sayyid trait",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Mirza trait",
+                                    "children": []
+                                },
+                                {
+                                    "text": "1000 piety",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Blood of Sa'id bloodline",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "One of:",
+                            "children": [
+                                {
+                                    "text": "3 holy sites",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Blood of Sa'id bloodline",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "500 piety",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Holder titled Caliph."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "One of:",
+                            "children": [
+                                {
+                                    "text": "Have Sayyid trait and 1000 piety",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Have Sayyid trait or Mirza trait or 1000 piety, AND one of",
+                                    "children": [
+                                        {
+                                            "text": "Control Mecca and Medina",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "Control Jerusalem, Damascus and Baghdad",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Holder titled Caliph."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1000 piety and one of:",
+                            "children": [
+                                {
+                                    "text": "Control Mecca and Medina",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Control Jerusalem, Damascus and Baghdad",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Holder titled Caliph."
+                }
+            ]
+        },
+        {
+            "heading": "List of uncreateable titular titles",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Religious head titles",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Uncreatable religious heads always exist."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "CoA",
+                            "Name",
+                            "Rank",
+                            "Notes",
+                            "ID",
+                            "Capital"
+                        ],
+                        [
+                            "",
+                            "The Papacy",
+                            "Kingdom",
+                            "Catholic head. Holder titled Pope.",
+                            "k_papal_state",
+                            "Rome"
+                        ],
+                        [
+                            "",
+                            "The Monothelite Patriarchate",
+                            "Duchy",
+                            "Monothelite head. Holder titled Patriarch.",
+                            "d_monothelite",
+                            "Antioch"
+                        ],
+                        [
+                            "",
+                            "The Paulician Patriarchate",
+                            "Duchy",
+                            "Paulician head. Holder titled Patriarch.",
+                            "d_paulician",
+                            "Constantinople"
+                        ],
+                        [
+                            "",
+                            "The Miaphysite Papacy",
+                            "Duchy",
+                            "Miaphysite head. Holder titled Pope.",
+                            "d_miaphysite",
+                            "Alexandria"
+                        ],
+                        [
+                            "",
+                            "The Monophysite Papacy",
+                            "Duchy",
+                            "Monophysite head. Holder titled Pope.",
+                            "d_monophysite",
+                            "Alexandria"
+                        ],
+                        [
+                            "",
+                            "The Patriarchate of the East",
+                            "Duchy",
+                            "Nestorian head. Holder titled Patriarch of the East.",
+                            "d_nestorian",
+                            "Baghdad"
+                        ],
+                        [
+                            "",
+                            "The Manichean Church",
+                            "Duchy",
+                            "Manichaean head. Holder titled Yamag.",
+                            "d_manichean",
+                            "Samarkand"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Other titles",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Some titles are marked as obsolete; these are remnants from older versions of CK2, or in some cases from CK1. Further confirmation is required to find their ultimate sources."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "CoA",
+                            "Name",
+                            "Rank",
+                            "Notes",
+                            "ID",
+                            "Capital",
+                            "Other names"
+                        ],
+                        [
+                            "",
+                            "Aztec Empire",
+                            "Empire",
+                            "If Sunset Invasion is active, it can show up somewhere on the Atlantic Coast between 1250 and 1350.",
+                            "e_mexikha",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Chagatai",
+                            "Empire",
+                            "Exists after 2 December 1227.",
+                            "e_chagatai",
+                            "Samarkand",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Golden Horde",
+                            "Empire",
+                            "Exists after 2 December 1227.",
+                            "e_golden_horde",
+                            "Saray",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Ilkhanate",
+                            "Empire",
+                            "Exists after 2 December 1227.",
+                            "e_il-khanate",
+                            "Esfahan",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Cordoba",
+                            "Empire",
+                            "Exists only in the 936 bookmark. Holder titled Caliph.",
+                            "e_cordoba",
+                            "Cordoba",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Seljuk Empire",
+                            "Empire",
+                            "Seljuk appears between 965 and 985 (or between 809 and 1200 if the game rule \"Turkic Conquerors\" is set to \"Random\"), and if his adventure is successful, he will create this title.",
+                            "e_seljuk_turks",
+                            "Esfahan",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Timurids",
+                            "Empire",
+                            "Timur appears between 1350 and 1370 (or any time after 1200 if the game rule \"Turkic Conquerors\" is set to \"Random\"), and if his adventure is successful, he will create this title.",
+                            "e_timurids",
+                            "Esfahan",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Western Protectorate",
+                            "Empire",
+                            "A tributary of China . Always exists even without land. Holder titled Protector General.",
+                            "e_china_west_governor",
+                            "Dunhuang",
+                            "Yuan (after 10 February 1243)"
+                        ],
+                        [
+                            "",
+                            "Rebels",
+                            "Empire",
+                            "Used to spawn rebels if The Old Gods is not active.",
+                            "e_rebels",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Pirates",
+                            "Empire",
+                            "Unknown purpose or obsolete.",
+                            "e_pirates",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Sakya Trizin",
+                            "Kingdom",
+                            "Exists from 1073.",
+                            "k_sakya_trizin",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Pechenegs",
+                            "Kingdom",
+                            "If Horse Lords is active, it will be replaced by a nomadic title.",
+                            "k_pechenegs",
+                            "Lower Dniepr",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Magyar",
+                            "Kingdom",
+                            "If Horse Lords is active, it will be replaced by a nomadic title.",
+                            "k_magyar",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Almohad",
+                            "Kingdom",
+                            "Obsolete title",
+                            "k_almohad",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Al-Murabitids",
+                            "Kingdom",
+                            "Obsolete title",
+                            "k_al-murabitids",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Beni Helal",
+                            "Kingdom",
+                            "Obsolete title",
+                            "k_beni_helal",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Fatimids",
+                            "Kingdom",
+                            "Obsolete title",
+                            "k_fatimids",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Hammadid",
+                            "Kingdom",
+                            "Obsolete title",
+                            "k_hammadid",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Kafsid",
+                            "Kingdom",
+                            "Obsolete title",
+                            "k_kafsid",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Marinid",
+                            "Kingdom",
+                            "Obsolete title",
+                            "k_marinid",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Zenata",
+                            "Kingdom",
+                            "Obsolete title",
+                            "k_zenata",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Zirid",
+                            "Kingdom",
+                            "Obsolete title",
+                            "k_zirid",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Ziyanids",
+                            "Kingdom",
+                            "Obsolete title",
+                            "k_ziyanids",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Avaria",
+                            "Kingdom",
+                            "While the title itself is unused, its name and CoA is applied to the Kingdom of Hungary in the 769 bookmark until the event \"Fall of the Avars\".",
+                            "k_avaria",
+                            "Esztergom",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Lombardy",
+                            "Kingdom",
+                            "While the title itself is unused, its name and CoA is applied to the Kingdom of Italy in the 769 bookmark until the event \"The Kingdom of Italy\".",
+                            "k_lombardy",
+                            "Pavia",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Saruhan",
+                            "Kingdom",
+                            "Exists from 1308 in Anatolia.",
+                            "k_saruhan",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Tekke",
+                            "Kingdom",
+                            "Exists from 1300 in Anatolia.",
+                            "k_tekke",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Ottoman Turks",
+                            "Kingdom",
+                            "Exists from 1299 in Anatolia.",
+                            "k_ottoman",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Rum",
+                            "Kingdom",
+                            "Exists from 1077 to 1301 in Anatolia. Does not use dynasty name as realm name.",
+                            "k_rum",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Mentese",
+                            "Kingdom",
+                            "Exists from 1280 in Anatolia.",
+                            "k_mentese",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Karaman",
+                            "Kingdom",
+                            "Exists from 1256 in Anatolia.",
+                            "k_karaman",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Germiyan",
+                            "Kingdom",
+                            "Exists from 1300 in Anatolia.",
+                            "k_germiyan",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Eretnid",
+                            "Kingdom",
+                            "Exists from 1335 in Anatolia.",
+                            "k_eretnid",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Aydin",
+                            "Kingdom",
+                            "Exists from 1308 in Anatolia.",
+                            "k_aydin",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Candar",
+                            "Kingdom",
+                            "Exists from 1292 in Anatolia.",
+                            "k_candar",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Liao",
+                            "Kingdom",
+                            "Exists in the 936 bookmark if Horse Lords is not active, otherwise replaced with a nomad title.",
+                            "k_liao",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Teutonic State",
+                            "Kingdom",
+                            "Created by the Teutonic Order if the Northern Crusade is successful. Holder titled Hochmeister. Holy Order government.",
+                            "k_teutonic_state",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Abbasid",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_abbasid",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Oxford",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_oxford",
+                            "Oxford",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Arabia Felix",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_arabia_felix",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Arabs",
+                            "Duchy",
+                            "Obsolete title. Bedouin culture .",
+                            "d_arabs",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Assassin",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_assassin",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Balearic",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_balearic",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Belgrade",
+                            "Duchy",
+                            "Exists from 1248 to 1272 as a vassal of Hungary.",
+                            "d_belgrade",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Bergen",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_bergen",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Bordeaux",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_bordeaux",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Braganza",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_braganza",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Butrinto",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_butrinto",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Campania",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_campania",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Catalonia",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_catalonia",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Chaldea",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_chaldea",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Cumberland",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_cumberland",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Curonians",
+                            "Duchy",
+                            "Obsolete title. Tribal, Lettigallian culture. Corresponds to the de jure territory of the Duchy of Courland, called Curonia by several cultures. Holder titled High Chief.",
+                            "d_curonian",
+                            "Kurzeme",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Danmark",
+                            "Duchy",
+                            "Obsolete title. Tribal, Norse culture.",
+                            "d_danes",
+                            "Sjælland",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Don",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_don",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Dorostotum",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_dorostotum",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "El Rif",
+                            "Duchy",
+                            "Obsolete title. The comment in its history file reads \"deleted, was used as a duchy of Upper-Brittany in DVIP\"",
+                            "d_el_rif",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "El-Arish",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_el-arish",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Erzerum",
+                            "Duchy",
+                            "Exists from 1071 in Armenia.",
+                            "d_erzerum",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Estonians",
+                            "Duchy",
+                            "Obsolete title. Tribal, Estonian culture. Holder titled High Chief. Not to be confused with the de jure Duchy of Estonia, which has the ID d_esthonia.",
+                            "d_estonia",
+                            "Kalevan",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Galatia",
+                            "Duchy",
+                            "Obsolete title. It was supposed to be held by Nikephoros Phokas as a vassal of Byzantium in 1066, but the content in its history file has been commented out.",
+                            "d_galatia",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Georgia",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_georgia",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Gauthiod",
+                            "Duchy",
+                            "Obsolete title. Tribal, Norse culture.",
+                            "d_geats",
+                            "Westrogothia",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Hellas",
+                            "Duchy",
+                            "Obsolete title. It was supposed to be a vassal of Byzantium from 1066, later a vassal of Aragon from 1337, but the content in its history file has been commented out. Not to be confused with the de jure Duchy of Hellas, with ID d_athens.",
+                            "d_hellas",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Ikonion",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_ikonion",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Ingrians",
+                            "Duchy",
+                            "Obsolete title. Tribal, Finnish culture. Holder titled High Chief.",
+                            "d_ingers",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Kvens",
+                            "Duchy",
+                            "Obsolete title. Tribal, Finnish culture. Holder titled High Chief.",
+                            "d_kajaneborg",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Kappadokia",
+                            "Duchy",
+                            "It was supposed to be a vassal of Rum from 1187 to 1307, but it has no holder and so does not appear in game.",
+                            "d_kappadokia",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Karnten",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_karnten",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Käkisalmians",
+                            "Duchy",
+                            "Obsolete title. Tribal, Finnish culture. Holder titled High Chief.",
+                            "d_kexholm",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Khazars",
+                            "Duchy",
+                            "Obsolete title. Tribal, Khazar culture.",
+                            "d_khazars",
+                            "Sarkel",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Kirkuk",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_kirkuk",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Sami",
+                            "Duchy",
+                            "Obsolete title. Tribal, Sami culture. Corresponds to the de jure territory of the Duchy of Lapland, with ID d_sapmi.",
+                            "d_sami",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Krakow",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_krakow",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Laodikeia",
+                            "Duchy",
+                            "Obsolete title. Was supposed to be a vassal of Byzantium, but the content in its history file has been commented out.",
+                            "d_laodikeia",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Lettigallians",
+                            "Duchy",
+                            "Obsolete title. Tribal, Lettigallian culture. Holder titled High Chief. Corresponds to the de jure territory of the Duchy of Latgale.",
+                            "d_lettigalians",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Luristan",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_luristan",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Lut",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_lut",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Lykia",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_lykia",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Mar",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_mar",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Milano",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_milano",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Muromians",
+                            "Duchy",
+                            "Obsolete title. Tribal, Mordvin culture. Corresponds to the de jure territory of the Duchy of Murom. Holder titled High Chief.",
+                            "d_muromians",
+                            "Murom",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Nikomedeia",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_nikomedeia",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Pecheneg",
+                            "Duchy",
+                            "Obsolete title. Tribal, Pecheneg culture.",
+                            "d_pechenegs",
+                            "Olvia",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Kimak",
+                            "Duchy",
+                            "If Horse Lords is active, it will be replaced by a nomadic title.",
+                            "d_kimak",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Kirghiz",
+                            "Duchy",
+                            "If Horse Lords is active, it will be replaced by a nomadic title.",
+                            "d_kirghiz",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Kipchak",
+                            "Duchy",
+                            "Exists until 890, and from 1221 onwards. If Horse Lords is active, it will be replaced by a nomadic title.",
+                            "d_kipchak",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Pressburg",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_pressburg",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Pronsk",
+                            "Duchy",
+                            "Exists in the 867 bookmark as a Russian tributary of Khazaria.",
+                            "d_pronsk",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Pruthenians",
+                            "Duchy",
+                            "Obsolete title. Tribal, Prussian culture. Corresponds to the de jure territory of the Duchy of Prussia, called Pruthenia by the Baltic culture group.",
+                            "d_pruthenians",
+                            "Marienburg",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Qom",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_qom",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Romagna",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_romagna",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Salamanca",
+                            "Duchy",
+                            "Exists from 1337 as a vassal of Castile.",
+                            "d_salamanca",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Saamod",
+                            "Duchy",
+                            "Obsolete title. Tribal, Nenets culture. Holder titled High Chief.",
+                            "d_sames",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Sandomiersk",
+                            "Duchy",
+                            "Exists from 1138 to 1306 as a vassal of Poland.",
+                            "d_sandomiersk",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Satakuntans",
+                            "Duchy",
+                            "Tribal, Finnish culture. Holder titled High Chief. While the title itself is obsolete, its CoA is used for the Duchy of Finland until 1284.",
+                            "d_satakunta",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Shiraz",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_shiraz",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Sinope",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_sinope",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Slovakia",
+                            "Duchy",
+                            "Exists from 1066 as a vassal of Hungary. Held by Prince Árpád Géza of Hungary.",
+                            "d_slovakia",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Svithjod",
+                            "Duchy",
+                            "Obsolete title. Tribal, Norse culture.",
+                            "d_sweden",
+                            "Uppland",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Tavastians",
+                            "Duchy",
+                            "Obsolete title. Tribal, Finnish culture. Holder titled High Chief.",
+                            "d_tavasts",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Meryas",
+                            "Duchy",
+                            "Obsolete title. Tribal, Mordvin culture. Corresponds to the de jure territory of the Duchy of Rostov, called Merya by several cultures. Holder titled High Chief.",
+                            "d_meryas",
+                            "Rostov",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Veps",
+                            "Duchy",
+                            "Obsolete title. Tribal, Mordvin culture. Was supposed to be held by a Finnish chief in 867, but the history has been commented out. Not to be confused with the de jure Duchy of Veps, with the ID d_beloozero. Holder titled High Chief.",
+                            "d_veps",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Meshcheras",
+                            "Duchy",
+                            "Obsolete title. Tribal, Mordvin culture. Corresponds to the de jure territory of the Duchy of Ryazan, called Meshchera by the Mordvin and Meshchera cultures. Holder titled High Chief.",
+                            "d_meshcheras",
+                            "Ryazan",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Drevliania",
+                            "Duchy",
+                            "Tribal title in Ruthenia existing in 769 and 867. Volhynian culture. Holder titled High Chief.",
+                            "d_drevlians",
+                            "Pinsk",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Varna",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_varna",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Wielkopolska",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_wielkopolska",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Vlachs",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_vlachs",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Volga",
+                            "Duchy",
+                            "Obsolete title. The comment in the history file states \"delete leftover from CK1\".",
+                            "d_volga",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Votes",
+                            "Duchy",
+                            "Obsolete title. Tribal, Finnish culture. Holder titled High Chief. Was meant to be held by Finnish characters starting from 1066, but the title's history has been commented out.",
+                            "d_votes",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Zara",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_zara",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Zaragoza",
+                            "Duchy",
+                            "Exists from 769 to 1115 as a Muslim emirate in Hispania.",
+                            "d_zaragoza",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Zemigallians",
+                            "Duchy",
+                            "Tribal title in Lithuania existing from 769 to 1199, Lettigallian culture. Holder titled High Chief.",
+                            "d_zemigalians",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Lendians",
+                            "Duchy",
+                            "Obsolete title. Tribal, Polish culture. Corresponds to the de jure territory of the Duchy of Lesser Poland. Holder titled High Chief.",
+                            "d_lendians",
+                            "Krakow",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Kryvians",
+                            "Duchy",
+                            "Obsolete title. Tribal, Russian culture. Corresponds to the de jure territory of the Duchy of Polotsk, called Krivichia by the Severian and Ilmenian cultures. Holder titled High Chief.",
+                            "d_kryvians",
+                            "Polotsk",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Ilmenians",
+                            "Duchy",
+                            "Obsolete title. Tribal, Russian culture. Corresponds to the de jure territory of the Duchy of Novgorod, called Ilmenia by the Ilmenian and Severian cultures, as well as the Finno-Ugric culture group. Holder titled High Chief.",
+                            "d_ilmenians",
+                            "Novgorod",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Severians",
+                            "Duchy",
+                            "Obsolete title. Tribal, Russian culture. Corresponds to the de jure territory of the Duchy of Chernigov, called Severia by the Severian, Ilmenian, Mordvin and Meshchera cultures. Holder titled High Chief.",
+                            "d_severians",
+                            "Novgorod Seversky",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Vyatichi",
+                            "Duchy",
+                            "Obsolete title. Tribal, Russian culture. Corresponds to the de jure territory of the Duchy of Tver, called Vyatichia by the Ilmenian and Severian cultures. Holder titled High Chief.",
+                            "d_vyatichi",
+                            "Tver",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Dregovichi",
+                            "Duchy",
+                            "Obsolete title. Tribal, Russian culture. Corresponds to the de jure territory of the Duchy of Turov, called Dregovichia by the Ilmenian culture. Holder titled High Chief.",
+                            "d_dregovichi",
+                            "Pinsk",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Radimichi",
+                            "Duchy",
+                            "Obsolete title. Tribal, Russian culture. Corresponds to the de jure territory of the Duchy of Smolensk, called Radimichia by the Severian and Ilmenian cultures. Holder titled High Chief.",
+                            "d_radimichi",
+                            "Mstislavl",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Glomacze",
+                            "Duchy",
+                            "Obsolete title. Tribal, Pomeranian culture. Corresponds to the de jure territory of the Duchy of Meissen, called Nisani by the Pomeranian cultures. Holder titled High Chief.",
+                            "d_glomacze",
+                            "Meissen",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Sorbs",
+                            "Duchy",
+                            "Obsolete title. Tribal, Pomeranian culture. Corresponds to the de jure territory of the Duchy of Brandenburg, called Sorbia by the Pomeranian cultures. Holder titled High Chief.",
+                            "d_sorbs",
+                            "Lausitz",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Obotrites",
+                            "Duchy",
+                            "Obsolete title. Tribal, Pomeranian culture. Corresponds to the de jure territory of the Duchy of Mecklenburg, called Obotritia by the Pomeranian cultures. Holder titled High Chief.",
+                            "d_obotrites",
+                            "Mecklenburg",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Thessalia",
+                            "Duchy",
+                            "Held by a Serbian pagan in Greece in 769.",
+                            "d_thessalia",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Peloponnese",
+                            "Duchy",
+                            "Held by a Serbian pagan in Greece in 769.",
+                            "d_peloponnese",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Hamadan",
+                            "Duchy",
+                            "Obsolete title. Was supposed to be a duchy in Persia that existed throughout the game's timeline but its entire history has been commented out.",
+                            "d_hamadan",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Esfahan",
+                            "Duchy",
+                            "Exists from 1066 in Persia, starting as a title held by Alp Arslan, then from 1221 as a Mongol vassal.",
+                            "d_esfahan",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Kermanshah",
+                            "Duchy",
+                            "Exists from 990 to 1157, then from 1161 onwards. From 1066 it is a Seljuk vassal, then from 1230 it becomes an Ilkhanate vassal.",
+                            "d_kermanshah",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Tigris",
+                            "Duchy",
+                            "Exists from 769 to 869 as an Abbasid vassal.",
+                            "d_tigris",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Burtas",
+                            "Duchy",
+                            "Exists from 769 to 936. In the 867 bookmark it is a Khazar tributary. If Horse Lords is active, it will be replaced by a nomadic title.",
+                            "d_burtas",
+                            "Burtasy",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Luxembourg",
+                            "Duchy",
+                            "Obsolete title",
+                            "d_luxembourg",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Guiyi",
+                            "Duchy",
+                            "Exists from 914 to 1032.",
+                            "d_guiyi",
+                            "",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If Horse Lords is active, it will be replaced by a nomadic title."
+                }
+            ]
+        }
+    ]
+}

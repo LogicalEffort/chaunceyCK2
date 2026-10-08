@@ -1,0 +1,1596 @@
+{
+    "pageid": 6244,
+    "title": "Event Modifier List",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Reference",
+                            "Name",
+                            "Effect"
+                        ],
+                        [
+                            "the_dungeon",
+                            "In the Dungeon",
+                            "health = -1 diplomacy = -10"
+                        ],
+                        [
+                            "the_oubliette",
+                            "In the Oubliette",
+                            "health = -2 diplomacy = -20"
+                        ],
+                        [
+                            "house_arrest",
+                            "Under House Arrest",
+                            "diplomacy = -5"
+                        ],
+                        [
+                            "truce_breaker",
+                            "Truce Breaker",
+                            "diplomacy = -5"
+                        ],
+                        [
+                            "nomad_agitation",
+                            "Nomad Agitation",
+                            "local_revolt_risk = 0.04"
+                        ],
+                        [
+                            "negative_money",
+                            "Lack of Funds",
+                            "land_morale = -0.25"
+                        ],
+                        [
+                            "promised_a_title",
+                            "Promised a Title",
+                            "monthly_character_prestige = 0.10"
+                        ],
+                        [
+                            "promised_a_marriage",
+                            "Promised a Marriage",
+                            "monthly_character_piety = 0.10"
+                        ],
+                        [
+                            "the_merciful",
+                            "Merciful",
+                            "intrigue = -1 monthly_character_prestige = 0.10"
+                        ],
+                        [
+                            "the_bountiful",
+                            "Bountiful",
+                            "monthly_character_prestige = 0.02 monthly_character_wealth = 0.05"
+                        ],
+                        [
+                            "illumination",
+                            "Illumination",
+                            "monthly_character_prestige = 0.05 monthly_character_piety = 0.05"
+                        ],
+                        [
+                            "aspiring_poet",
+                            "Aspiring Poet",
+                            "diplomacy = 1"
+                        ],
+                        [
+                            "aspiring_duelist",
+                            "Aspiring Duelist",
+                            "martial = 1"
+                        ],
+                        [
+                            "aspiring_hunter",
+                            "Aspiring Hunter",
+                            "martial = 1"
+                        ],
+                        [
+                            "aspiring_falconer",
+                            "Aspiring Falconer",
+                            "diplomacy = 1"
+                        ],
+                        [
+                            "sweet_temptation",
+                            "Sweet Temptation",
+                            "fertility = 0.2 church_opinion = -20"
+                        ],
+                        [
+                            "stay_strong",
+                            "Stay Strong",
+                            "fertility = -0.2 church_opinion = 20"
+                        ],
+                        [
+                            "no_green_man",
+                            "No Green Man",
+                            ""
+                        ],
+                        [
+                            "dead_green_man",
+                            "Dead Green Man",
+                            "monthly_character_prestige = -0.05"
+                        ],
+                        [
+                            "hidden_green_man",
+                            "Hidden Green Man",
+                            "monthly_character_wealth = 0.05 monthly_character_prestige = 0.05"
+                        ],
+                        [
+                            "headof_green_man",
+                            "The Head of The Green Man",
+                            "monthly_character_wealth = 0.05 monthly_character_prestige = 0.05"
+                        ],
+                        [
+                            "green_man",
+                            "Green Man",
+                            "monthly_character_wealth = 0.06 monthly_character_prestige = 0.06"
+                        ],
+                        [
+                            "green_mans_ghost",
+                            "The Ghost of the Green Man",
+                            "monthly_character_prestige = -0.05"
+                        ],
+                        [
+                            "noble_heart",
+                            "Noble Heart",
+                            "diplomacy = 1"
+                        ],
+                        [
+                            "fear_of_the_stag",
+                            "Fear of the Stag",
+                            "diplomacy = -1"
+                        ],
+                        [
+                            "a_mighty_trophy",
+                            "A Mighty Trophy",
+                            "martial = 1"
+                        ],
+                        [
+                            "one_celibate",
+                            "Pleasures in the after-life: Celibacy",
+                            "monthly_character_piety = 0.05 fertility = -0.2"
+                        ],
+                        [
+                            "one_hedonist",
+                            "Pleasures in life: Hedonism",
+                            "monthly_character_prestige = 0.05 fertility = 0.2"
+                        ],
+                        [
+                            "true_christian_knight",
+                            "True Christian Knight",
+                            "monthly_character_piety = 0.05 church_opinion = 10"
+                        ],
+                        [
+                            "diligent_on_cost",
+                            "Diligent on Cost",
+                            "build_cost_modifier = -0.33"
+                        ],
+                        [
+                            "diligent_on_time",
+                            "Diligent on Time",
+                            "build_time_modifier = -0.33"
+                        ],
+                        [
+                            "diligent_liege_size",
+                            "Diligent Liege",
+                            "castle_levy_size = 0.25"
+                        ],
+                        [
+                            "diligent_liege_morale",
+                            "Diligent Liege",
+                            "land_morale = 0.1"
+                        ],
+                        [
+                            "mercy_to_sinners",
+                            "Mercy to Sinners",
+                            "church_opinion = 5"
+                        ],
+                        [
+                            "unrighteous_spouse",
+                            "Unrighteous Spouse",
+                            "monthly_character_piety = -0.05 monthly_character_prestige = -0.05"
+                        ],
+                        [
+                            "offended_moneylenders",
+                            "Offended Moneylenders",
+                            "global_tax_modifier = -0.1"
+                        ],
+                        [
+                            "diplomacy_advice",
+                            "Diplomacy Advice",
+                            "local_revolt_risk = -0.05"
+                        ],
+                        [
+                            "martial_advice",
+                            "Martial Advice",
+                            ""
+                        ],
+                        [
+                            "stewardship_advice",
+                            "Stewardship Advice",
+                            "local_tax_modifier = 0.05"
+                        ],
+                        [
+                            "intrigue_advice",
+                            "Intrigue Advice",
+                            "intrigue = 2"
+                        ],
+                        [
+                            "learning_advice",
+                            "Learning Advice",
+                            "church_opinion = 5"
+                        ],
+                        [
+                            "for_the_sake_of_love",
+                            "For the sake of love",
+                            "diplomacy = -2 martial = -2 stewardship = -2 intrigue = -2 learning = -2"
+                        ],
+                        [
+                            "chaste_learning",
+                            "Chastity Learning",
+                            "church_opinion = 15 monthly_character_prestige = -0.1 monthly_character_piety = 0.05"
+                        ],
+                        [
+                            "defer_to_church_decision",
+                            "Defers to Church",
+                            "church_opinion = 15 monthly_character_prestige = -0.1"
+                        ],
+                        [
+                            "imprison_lawbreakers",
+                            "Imprison Lawbreakers",
+                            "monthly_character_piety = 0.05"
+                        ],
+                        [
+                            "kill_lawbreakers",
+                            "Kill Lawbreakers",
+                            ""
+                        ],
+                        [
+                            "modifier_witch",
+                            "Found a Witch!",
+                            ""
+                        ],
+                        [
+                            "tortured_witch",
+                            "Tortured Witch",
+                            ""
+                        ],
+                        [
+                            "punish_cook",
+                            "Punish the Cook",
+                            ""
+                        ],
+                        [
+                            "the_strong",
+                            "Strong",
+                            ""
+                        ],
+                        [
+                            "spy_imprison",
+                            "A Spy in your Prison",
+                            ""
+                        ],
+                        [
+                            "the_content",
+                            "The Contented One",
+                            ""
+                        ],
+                        [
+                            "the_fainthearted",
+                            "Fainthearted",
+                            ""
+                        ],
+                        [
+                            "mod_poachers",
+                            "Poachers",
+                            ""
+                        ],
+                        [
+                            "the_cynical",
+                            "Cynical",
+                            ""
+                        ],
+                        [
+                            "the_pompous",
+                            "Pompous",
+                            ""
+                        ],
+                        [
+                            "the_pitiful",
+                            "Pitiful",
+                            ""
+                        ],
+                        [
+                            "the_judger",
+                            "Just",
+                            ""
+                        ],
+                        [
+                            "mod_ashamed",
+                            "Ashamed",
+                            ""
+                        ],
+                        [
+                            "the_greedy",
+                            "Greedy One",
+                            ""
+                        ],
+                        [
+                            "the_suspicious",
+                            "Suspicious",
+                            ""
+                        ],
+                        [
+                            "the_kind",
+                            "Kind",
+                            ""
+                        ],
+                        [
+                            "the_sullen",
+                            "Sullen",
+                            ""
+                        ],
+                        [
+                            "the_prude",
+                            "Prude",
+                            ""
+                        ],
+                        [
+                            "the_reveller",
+                            "Reveller",
+                            ""
+                        ],
+                        [
+                            "the_compassionate",
+                            "Compassionate",
+                            ""
+                        ],
+                        [
+                            "church_unfunny",
+                            "Unfunny Church",
+                            ""
+                        ],
+                        [
+                            "mod_confused",
+                            "Confused",
+                            ""
+                        ],
+                        [
+                            "the_vicious",
+                            "Vicious",
+                            ""
+                        ],
+                        [
+                            "the_impaler",
+                            "Impaler",
+                            ""
+                        ],
+                        [
+                            "the_gardener",
+                            "Gardener",
+                            ""
+                        ],
+                        [
+                            "kings_stipend",
+                            "The King's Stipend",
+                            ""
+                        ],
+                        [
+                            "emperors_stipend",
+                            "The Emperor's Stipend",
+                            ""
+                        ],
+                        [
+                            "wine_meat",
+                            "Wine and Meat",
+                            ""
+                        ],
+                        [
+                            "modifier_positive",
+                            "Positive Trait",
+                            ""
+                        ],
+                        [
+                            "modifier_negative",
+                            "Negative Trait",
+                            ""
+                        ],
+                        [
+                            "mod_interrogated",
+                            "Interrogated",
+                            ""
+                        ],
+                        [
+                            "interrogation_success",
+                            "Successful interrogation of prisoner!",
+                            ""
+                        ],
+                        [
+                            "evil_rumours",
+                            "Evil Rumors",
+                            ""
+                        ],
+                        [
+                            "iron_shackles",
+                            "Iron Shackles",
+                            ""
+                        ],
+                        [
+                            "lighter_shackles",
+                            "Lighter Shackles",
+                            ""
+                        ],
+                        [
+                            "no_shackles",
+                            "No Shackles",
+                            ""
+                        ],
+                        [
+                            "master_builder",
+                            "Master Builder",
+                            ""
+                        ],
+                        [
+                            "sabotaged_building",
+                            "Sabotaged Building",
+                            ""
+                        ],
+                        [
+                            "great_inventor",
+                            "Great Inventor",
+                            ""
+                        ],
+                        [
+                            "secret_mil_invention",
+                            "Secret Military Invention",
+                            ""
+                        ],
+                        [
+                            "the_idle",
+                            "Idle",
+                            ""
+                        ],
+                        [
+                            "slothful_ruler",
+                            "Slothful Ruler",
+                            ""
+                        ],
+                        [
+                            "levy_reinforcements",
+                            "Levy Reinforcements",
+                            ""
+                        ],
+                        [
+                            "unintentional_saboteur",
+                            "Unintentional Saboteur",
+                            ""
+                        ],
+                        [
+                            "missing_reinforcements",
+                            "Lost Reinforcements",
+                            ""
+                        ],
+                        [
+                            "the_perturbed",
+                            "Perturbed",
+                            ""
+                        ],
+                        [
+                            "the_apologetic",
+                            "Apologetic",
+                            ""
+                        ],
+                        [
+                            "the_sincere",
+                            "Sincere",
+                            ""
+                        ],
+                        [
+                            "the_regretful",
+                            "Regretful",
+                            ""
+                        ],
+                        [
+                            "the_cruel",
+                            "Cruel",
+                            ""
+                        ],
+                        [
+                            "the_bookaddict",
+                            "Book Addict",
+                            ""
+                        ],
+                        [
+                            "the_bibliophage",
+                            "Bibliophage",
+                            ""
+                        ],
+                        [
+                            "flower_power",
+                            "Power of Flowers",
+                            ""
+                        ],
+                        [
+                            "the_naturalist",
+                            "Naturalist",
+                            ""
+                        ],
+                        [
+                            "the_natural_addict",
+                            "Nature Addict",
+                            ""
+                        ],
+                        [
+                            "magnanimous_person",
+                            "Magnanimous Person",
+                            ""
+                        ],
+                        [
+                            "the_paranoid",
+                            "Paranoia",
+                            ""
+                        ],
+                        [
+                            "mod_bloodlust",
+                            "Bloodlust",
+                            ""
+                        ],
+                        [
+                            "intriguing_book",
+                            "Intriguing Book",
+                            ""
+                        ],
+                        [
+                            "esoteric_religion",
+                            "Esoteric Religion",
+                            ""
+                        ],
+                        [
+                            "the_pious",
+                            "Pious",
+                            ""
+                        ],
+                        [
+                            "the_curious",
+                            "Curious",
+                            ""
+                        ],
+                        [
+                            "the_alchemist",
+                            "Alchemist",
+                            ""
+                        ],
+                        [
+                            "brazen_bull",
+                            "Brazen Bull",
+                            ""
+                        ],
+                        [
+                            "tortured_prisoner",
+                            "Tortured",
+                            ""
+                        ],
+                        [
+                            "master_impaler",
+                            "Master Impaler",
+                            ""
+                        ],
+                        [
+                            "mother_daughter",
+                            "Such mother, such daughter",
+                            ""
+                        ],
+                        [
+                            "father_son",
+                            "Such father, such son",
+                            ""
+                        ],
+                        [
+                            "mother_son",
+                            "Such mother, such son",
+                            ""
+                        ],
+                        [
+                            "father_daughter",
+                            "Such father, such daughter",
+                            ""
+                        ],
+                        [
+                            "master_duelist",
+                            "Master Duelist",
+                            ""
+                        ],
+                        [
+                            "averted_duel",
+                            "Averted Duel",
+                            ""
+                        ],
+                        [
+                            "the_dour_duellist",
+                            "Dour Duellist",
+                            ""
+                        ],
+                        [
+                            "master_hunter",
+                            "Master Hunter",
+                            ""
+                        ],
+                        [
+                            "wild_hunter",
+                            "Wild Hunter",
+                            ""
+                        ],
+                        [
+                            "tortured",
+                            "Tortured",
+                            ""
+                        ],
+                        [
+                            "the_ruthless",
+                            "Ruthless",
+                            ""
+                        ],
+                        [
+                            "the_eager",
+                            "Eager",
+                            ""
+                        ],
+                        [
+                            "the_amiable",
+                            "Amiable",
+                            ""
+                        ],
+                        [
+                            "the_naive",
+                            "Naïve",
+                            ""
+                        ],
+                        [
+                            "big_spender",
+                            "Spending Money on Baubles",
+                            ""
+                        ],
+                        [
+                            "war_knowledge",
+                            "War Knowledge",
+                            ""
+                        ],
+                        [
+                            "recent_revolt",
+                            "Recent Revolt",
+                            ""
+                        ],
+                        [
+                            "religious_tension",
+                            "Religious Tension",
+                            ""
+                        ],
+                        [
+                            "force_converting",
+                            "Forced Conversion",
+                            ""
+                        ],
+                        [
+                            "heretic_stronghold",
+                            "Heretic Stronghold",
+                            ""
+                        ],
+                        [
+                            "high_taxes",
+                            "High Taxes",
+                            ""
+                        ],
+                        [
+                            "incompetent_rule",
+                            "Incompetent Ruler",
+                            ""
+                        ],
+                        [
+                            "thieves_guild",
+                            "Thieves' Guild",
+                            ""
+                        ],
+                        [
+                            "smugglers_ring",
+                            "Smugglers' Ring",
+                            ""
+                        ],
+                        [
+                            "highway_robber_band",
+                            "Highway Robber Band",
+                            ""
+                        ],
+                        [
+                            "excessive_bureaucracy",
+                            "Excessive Bureaucracy",
+                            ""
+                        ],
+                        [
+                            "suspected_impaler",
+                            "Suspected Impaler",
+                            ""
+                        ],
+                        [
+                            "student_of_language",
+                            "Student of Language",
+                            ""
+                        ],
+                        [
+                            "multilingual",
+                            "Multilingual",
+                            ""
+                        ],
+                        [
+                            "bad_breath",
+                            "Bad Breath",
+                            ""
+                        ],
+                        [
+                            "sanctuary",
+                            "Sanctuary",
+                            ""
+                        ],
+                        [
+                            "harbour_the_homeless",
+                            "Harboring the homeless",
+                            ""
+                        ],
+                        [
+                            "appeased_religious",
+                            "Blessed People",
+                            ""
+                        ],
+                        [
+                            "prepared_home",
+                            "Home Defense",
+                            ""
+                        ],
+                        [
+                            "guard_dogs",
+                            "Guard Dogs",
+                            ""
+                        ],
+                        [
+                            "realm_religious_fervor",
+                            "The entire realm is gripped by religious fervor and an unquestioning belief in the ruler's divine mandate.",
+                            ""
+                        ],
+                        [
+                            "thugs_rampant",
+                            "Strange disappearances...",
+                            ""
+                        ],
+                        [
+                            "neglected_development",
+                            "Neglected development.",
+                            ""
+                        ],
+                        [
+                            "peasants_protected",
+                            "Subjects Are Feeling Protected",
+                            ""
+                        ],
+                        [
+                            "merchants_unhappy",
+                            "The merchants are unhappy",
+                            ""
+                        ],
+                        [
+                            "temple_corruption",
+                            "Temple Corruption",
+                            ""
+                        ],
+                        [
+                            "local_death_cult",
+                            "Local Death Cult",
+                            ""
+                        ],
+                        [
+                            "pyramid",
+                            "Pyramid",
+                            ""
+                        ],
+                        [
+                            "trade_route",
+                            "Trade Route",
+                            ""
+                        ],
+                        [
+                            "stone_quarry",
+                            "Stone Quarry",
+                            ""
+                        ],
+                        [
+                            "magnificent_maze",
+                            "Magnificent Maze",
+                            ""
+                        ],
+                        [
+                            "leaning_tower_bad",
+                            "Leaning Tower",
+                            ""
+                        ],
+                        [
+                            "leaning_tower",
+                            "Leaning Tower",
+                            ""
+                        ],
+                        [
+                            "caravan_raiders",
+                            "Caravan Raiders",
+                            ""
+                        ],
+                        [
+                            "caravan_guards",
+                            "Caravan Guards",
+                            ""
+                        ],
+                        [
+                            "invading_population_halt",
+                            "",
+                            ""
+                        ],
+                        [
+                            "chinese_embargo",
+                            "Chinese Embargo",
+                            ""
+                        ],
+                        [
+                            "publicly_humiliated",
+                            "Publicly Humiliated",
+                            ""
+                        ],
+                        [
+                            "dung_collector",
+                            "Dung Collector",
+                            ""
+                        ],
+                        [
+                            "trade_governor",
+                            "Trade Governor",
+                            ""
+                        ],
+                        [
+                            "surge_of_traders",
+                            "Surge of traders",
+                            ""
+                        ],
+                        [
+                            "aspiring_trader",
+                            "Aspiring Trader",
+                            ""
+                        ],
+                        [
+                            "trader",
+                            "Trader",
+                            ""
+                        ],
+                        [
+                            "maze_pavilion",
+                            "Pavilion",
+                            ""
+                        ],
+                        [
+                            "construction_accident",
+                            "Construction Accident",
+                            ""
+                        ],
+                        [
+                            "maze_fountain",
+                            "Fountain",
+                            ""
+                        ],
+                        [
+                            "maze_fountain_extravagant",
+                            "Fountain",
+                            ""
+                        ],
+                        [
+                            "business_contacts",
+                            "Business Contacts",
+                            ""
+                        ],
+                        [
+                            "decadent_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "bribed_by_noble_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "fabricated_claim_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "spouse_active_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "suitable_father_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "petition_release_prisoner_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "laughing_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "missing_child_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "voice_in_darkness_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "confessor_and_occultist_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "unchristian_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "suspected_of_incest_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "dabble_dark_arts_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "taken_by_rebels_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "compliment_food_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "complain_food_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "summer_fair_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "large_feast_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "poetry_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "used_poetry_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "lustful_affair_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "blissful_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "friend_at_war_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "heretic_friend_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "friend_diplomacy_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "friend_martial_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "friend_stewardship_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "friend_intrigue_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "friend_learning_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "greedy_steward_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "recalculate_rivalry_modifier",
+                            "",
+                            ""
+                        ],
+                        [
+                            "religious_rival_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "hunting_rival_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "revenge_seeker_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "killed_father_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "nomuslim_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "qadi_divorce_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "suggested_qadi_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "suggested_new_qadi_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "suggested_calligrapher_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "mosque_calligrapher_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "calligrapher_swindle_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "musician_song_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "poet_verse_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "cupbearer_poison_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "architect_improvement_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "food_taster_poison_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "lustful_chancellor_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "famous_muslim_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "muslim_famous_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "fatwa_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "hunt_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "went_out_of_hiding_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "adopted_faith_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "spear_throwing_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "run_training_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "recent_duel_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "declined_prestige_duel_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "wargame_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "relative_treatment_reaction_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "picked_main_deity_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "epic_tournament",
+                            "",
+                            ""
+                        ],
+                        [
+                            "epic_tournament_furusiyya",
+                            "",
+                            ""
+                        ],
+                        [
+                            "recruitment_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "recruitment_delay_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "drugs_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "quest_cooldown_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "summon_familiar_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "secret_religion_induction_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "secret_religion_sympathy_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "secret_religions_recruitment_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "secret_religions_induct_child_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "gardening_cooldown_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "fell_asleep_in_church_cooldown_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "acquire_ingredients_decision_cooldown_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "scrying_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "horoscope_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "stargazing_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "hermetics_infiltrate_laboratory_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "write_theory_paper_decision_cooldown_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "chinese_grace_send_gift_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "chinese_grace_send_eunuch_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "chinese_grace_send_commander_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "chinese_grace_send_concubine_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "chinese_grace_tributary_timer",
+                            "",
+                            ""
+                        ],
+                        [
+                            "jd_china_boon_cd",
+                            "",
+                            ""
+                        ],
+                        [
+                            "jd_china_tribute_cd",
+                            "",
+                            ""
+                        ],
+                        [
+                            "china_force_open_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "baptism_request_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "coronation_request_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "lost_rank_up_duel_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "antagonize_sins_1_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "antagonize_sins_2_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "antagonize_sins_3_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "antagonize_sins_4_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "antagonize_sins_5_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "antagonize_sins_6_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "antagonize_sins_7_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "battle_events_1_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "battle_events_2_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "battle_events_3_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "battle_events_4_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "battle_events_5_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "battle_events_6_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "battle_events_7_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "battle_events_8_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "battle_events_9_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "northern_crusade_targeted_decision_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "teaching_moment_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "drank_from_fountain_cooldown",
+                            "",
+                            ""
+                        ],
+                        [
+                            "voice_of_jesus",
+                            "",
+                            ""
+                        ],
+                        [
+                            "holy_comet",
+                            "",
+                            ""
+                        ],
+                        [
+                            "voice_of_satan",
+                            "",
+                            ""
+                        ],
+                        [
+                            "stressed_commander",
+                            "",
+                            ""
+                        ],
+                        [
+                            "misplaced_food",
+                            "",
+                            ""
+                        ],
+                        [
+                            "one_year_fasting",
+                            "",
+                            ""
+                        ],
+                        [
+                            "religious_tract",
+                            "",
+                            ""
+                        ],
+                        [
+                            "rats_in_cell",
+                            "",
+                            ""
+                        ],
+                        [
+                            "slept_in_church",
+                            "",
+                            ""
+                        ],
+                        [
+                            "drunk_commander",
+                            "",
+                            ""
+                        ],
+                        [
+                            "peasants_scorned",
+                            "",
+                            ""
+                        ],
+                        [
+                            "peasant_unrest",
+                            "",
+                            ""
+                        ],
+                        [
+                            "religious_unrest",
+                            "",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "diplomacy = -10"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "diplomacy = -20"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "monthly_character_prestige = 0.10"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "monthly_character_wealth = 0.05"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "monthly_character_piety = 0.05"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "church_opinion = -20"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "church_opinion = 20"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "monthly_character_prestige = 0.05"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "monthly_character_prestige = 0.05"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "monthly_character_prestige = 0.06"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "fertility = -0.2"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "fertility = 0.2"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "church_opinion = 10"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "monthly_character_prestige = -0.05"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "martial = -2"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "stewardship = -2"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "intrigue = -2"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "learning = -2"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "monthly_character_prestige = -0.1"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "monthly_character_piety = 0.05"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "monthly_character_prestige = -0.1"
+                }
+            ]
+        }
+    ]
+}

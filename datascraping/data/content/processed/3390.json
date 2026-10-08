@@ -1,0 +1,90 @@
+{
+    "pageid": 3390,
+    "title": "Game rules modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Game rules are enumerated global values, that can only be modified at game start."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In their simplest form (on/off), they are similar to boolean global flags , but can get more complex (fewer/default/more)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The benefit of game rules is that they have a nice dedicated UI to manage the options at the start of a game, so there's less modding needed than using decisions."
+                }
+            ]
+        },
+        {
+            "heading": "Definition",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Rules are defined in folder common/game_rules/ .\nThe format is:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Rule execution is defined in events/game_rule_events.txt . While the format changes for some rules, the general format for many is:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Notes:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The first option is the default one at game start.",
+                            "children": []
+                        },
+                        {
+                            "text": "If certain rule only makes sense to appear with a DLC, it can use dlc = \"The Reaper's Due\" .",
+                            "children": []
+                        },
+                        {
+                            "text": "Each option can have achievements = yes/no . This doesn't make sense to be used for mods, as they already disable achievements by changing the checksum .",
+                            "children": []
+                        },
+                        {
+                            "text": "The same is true for alt_start_achievements = yes/no , which determines whether the option disables achievements when using alternate starts (shattered/randomised world). Defaults to yes even if achievements = no .",
+                            "children": []
+                        },
+                        {
+                            "text": "You can create custom rule group, for example group = \"RULE_GROUP_MY_MOD\" .",
+                            "children": []
+                        },
+                        {
+                            "text": "Parameter \"achievements = no\" adds to LOCALIZATION_KEY_FOR_OPTION_DESC a red text \" This option turns off achievements.\" (localisation key \"RULE_ACHIEVEMENTS_WARNINGS\" in ReapersDue.csv).",
+                            "children": []
+                        },
+                        {
+                            "text": "If you want a rule to have a different default value when using alternate starts, use alt_start_default = <option_name> .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Usage",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Selected option of a rule can be compared from scripting via the condition has_game_rule = { name = <rule_name> value = <option_name> } ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some vanilla rules are not used from scripting and modify hardcoded behavior, similar to defines , which is not possible for mods."
+                }
+            ]
+        }
+    ]
+}

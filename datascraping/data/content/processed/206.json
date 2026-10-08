@@ -1,0 +1,229 @@
+{
+    "pageid": 206,
+    "title": "The Validator",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Validator is a utility tool for Windows, allowing to find all sorts of errors inside the game files. It has found numerous bugs, both in vanilla and in mods."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is sometime the only way to locate the source of some random CTDs or some weird engine bugs."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Validator is updated regularly, and the number of false positives is constantly shrinking. If the Validator reports an error that you don't think is an error, first make sure it actually does work and then report it to the forum thread , where Jamie550 will make the necessary corrections as soon as practically possible. In a similar way, if you discover a bug that wasn't detected by the Validator and cost you some time, report it as well!"
+                }
+            ]
+        },
+        {
+            "heading": "Features",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Check that the basic syntax is correct, and detect issues with brackets.",
+                            "children": []
+                        },
+                        {
+                            "text": "Advanced checking of scopes , triggers , and effects syntax and validity.",
+                            "children": []
+                        },
+                        {
+                            "text": "Checking of buildings, casus belli, characters, diseases, dynasties, and much more.",
+                            "children": []
+                        },
+                        {
+                            "text": "Detects misspellings, invalid or duplicate IDs, and all kinds of typos.",
+                            "children": []
+                        },
+                        {
+                            "text": "Detect missing flags.",
+                            "children": []
+                        },
+                        {
+                            "text": "Warn on missing localizations.",
+                            "children": []
+                        },
+                        {
+                            "text": "...",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Versions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Validator",
+                            "Vanilla"
+                        ],
+                        [
+                            "v1.30.3",
+                            "Patch 3.1.X"
+                        ],
+                        [
+                            "v1.27.3",
+                            "Patch 2.8.X"
+                        ],
+                        [
+                            "v1.22.8",
+                            "Patch 2.7.2"
+                        ],
+                        [
+                            "v1.20.3",
+                            "Patch 2.7.1"
+                        ],
+                        [
+                            "v1.18.6",
+                            "Patch 2.6.X"
+                        ],
+                        [
+                            "v1.15.6",
+                            "Patch 2.5.X"
+                        ],
+                        [
+                            "v1.12",
+                            "Patch 2.4.5"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Setup",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Create a new scheme for your mod:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Game Path : location of CK2game.exe. For instance: C:\\Program Files (x86)\\Steam\\SteamApps\\common\\Crusader Kings II . To find it in Steam, right-click on Crusader Kings II in game library, go to \"Local Files\" tab, click \"Browse Local Files\", and copy the path from the explorer window.",
+                            "children": []
+                        },
+                        {
+                            "text": "Mod name : this is the folder name of the mod inside ~\\Documents\\Paradox Interactive\\Crusader Kings II\\mod\\ . For instance with ~\\Documents\\Paradox Interactive\\Crusader Kings II\\mod\\MyMod\\ , mod name would be MyMod .",
+                            "children": []
+                        },
+                        {
+                            "text": "Select \"Crusader Kings 2\" in the dropdown.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is possible to configure the external editor used to open files when double-clicking an issue.\nUnder Files/Options :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Path (for Notepad++ this may be C:\\Program Files (x86)\\Notepad++\\notepad++.exe)",
+                            "children": []
+                        },
+                        {
+                            "text": "Command line options to jump to the faulty line (for Notepad++: {0} -n{1})",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Issues that are NOT detected by the Validator",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Some modding issues are known to NOT be detected by the Validator. (Eg: Because writing the code to detect the issue would require an excessive amount of effort.) These issues are listed here, as an additional resource for modders who encounter issues but don't have any relevant Validator errors."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If a building upgrades from itself",
+                            "children": [
+                                {
+                                    "text": "Eg: If custom_building_3 upgrades_from = custom_building_3 instead of upgrades_from = custom_building_2 .",
+                                    "children": []
+                                },
+                                {
+                                    "text": "This error causes the game to freeze on load.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Other Known Issues",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "You cannot individually suppress \"Duplicate ID\" warnings for localisation strings in your mod which overwrite base game loc strings.",
+                            "children": [
+                                {
+                                    "text": "But you can globally suppress all such errors (via the Localization.IgnoreNonReplaceDuplicatesIfInVanilla flag).",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "DidYouKnow.pdf in Validator directory, for advanced features.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The validator can be downloaded here: https://forum.paradoxplaza.com/forum/index.php?threads/the-validator-find-errors-quickly-and-with-minimal-pain.597480/",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

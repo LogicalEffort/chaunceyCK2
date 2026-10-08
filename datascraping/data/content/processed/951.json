@@ -1,0 +1,310 @@
+{
+    "pageid": 951,
+    "title": "Save-game editing",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This page is intended to assist with editing the CKII Save File. Before editing save files, it is highly recommended that you create a copy of the files in question. Simple mistakes made while editing can make a save file unplayable. Save-game editing is IMPOSSIBLE on ironman ."
+                }
+            ]
+        },
+        {
+            "heading": "File locations",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Mac: ~/Documents/Paradox Interactive/Crusader Kings II/save games/",
+                            "children": []
+                        },
+                        {
+                            "text": "Linux: ~/.paradoxinteractive/Crusader Kings II/save games/",
+                            "children": []
+                        },
+                        {
+                            "text": "Windows: C:\\Users\\YOURNAME\\Documents\\Paradox Interactive\\Crusader Kings II\\save games",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Save files will be compressed (ZIP format) unless you uncheck the box when saving. Autosaves and quick saves are not compressed. The encoding of the save file is Windows-1252."
+                }
+            ]
+        },
+        {
+            "heading": "Editing Characters",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Any character in the game can be edited very easily. Any aspect of a character including stats, traits and prestige/piety can be changed. You can open save files in Notepad, but they will take several minutes to load. A more advanced text editor such as Notepad++ is therefore recommended."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In order to edit a character you must first locate them within the file. The Character ID of the player character can be found at the very top of the save file. Other Character IDs can be found in a non-ironman game by using the charinfo console command . When you have the character ID, search the document using Ctrl+F and type in the Character ID followed by =."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "( EXAMPLE: 31443= )"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you do not know this number, then simply run a search for the name of the character and cross reference information like birth dates, parent names, or traits (this requires knowing the trait codes). This becomes a lot easier if the character has an uncommon name."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "( EXAMPLE: bn=\"charactername\" )"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The section below, Save File Contents , can help you identify if you are in the right spot."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Once you find the character you are looking for, you can edit any of their features. Numerical values such as health, base stats and fertility are very easy to alter. Traits must be added using their numerical ID as opposed to actual name."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If your character has moved capitals already and you wish to allow them to do it again, change the \"moved_capital\" variable to \"yes\" instead of \"no\", then choose your new capital from within the game. This is very helpful if your landed son inherits from you, as the inheritance causes them to change capitals. Given that rulers normally suffer a prestige penalty for having unlanded sons, most players opt to give them land, only to discover they're stuck with their current capital when the father dies."
+                }
+            ]
+        },
+        {
+            "heading": "Marriage",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In order to create a marriage you need both Character IDs. You must search for each character and add the line:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "where the ID is the other characters ID. This will marry the two characters in game. For a free divorce from a non-matrilineal marriage, simply remove this section. In order to divorce a matrilineal marriage, you will also need to remove the section outlined below."
+                }
+            ]
+        },
+        {
+            "heading": "Matrilineal marriage",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If you want a matrilineal  marriage you will need to add to the relation={} section of the save file. As an example, let's take 1500 as the husband's ID, and 2800 as the wife's ID. Add this to the relation section:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you wish to turn a matrilineal marriage into a normal one, simply find and delete those lines."
+                }
+            ]
+        },
+        {
+            "heading": "Save File Contents",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This is the order of content within the Save File. This can help the user navigate the areas of the file that they are trying to access."
+                }
+            ]
+        },
+        {
+            "heading": "Player information",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Dynamic titles",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Game information",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Dynasties",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For more information: dynasty modding ."
+                }
+            ]
+        },
+        {
+            "heading": "Characters",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For more information: character modding ."
+                }
+            ]
+        },
+        {
+            "heading": "Delayed events",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Relations",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "ID",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Religion",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Religion Group",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Culture",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Culture Group",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Provinces",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For more information: province modding ."
+                }
+            ]
+        },
+        {
+            "heading": "Bloodline",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Title",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For more information: title modding ."
+                }
+            ]
+        },
+        {
+            "heading": "Active ambition / Active focus",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Nomad",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Combat",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "War",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Active war",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Coalition",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Previous wars",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Outbreak",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Disease",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Character history",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Nomad relation",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Other information",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Society",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Artifacts",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Offmap Powers",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Wonder Upgrade",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Wonder",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Quests",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Final information",
+            "level": 3,
+            "content": []
+        }
+    ]
+}

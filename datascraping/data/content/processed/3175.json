@@ -1,0 +1,297 @@
+{
+    "pageid": 3175,
+    "title": "Chronicle events",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This page lists event IDs and event links for the event list: Chronicle events"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Name"
+                        ],
+                        [
+                            "CM.10000",
+                            "When chronicle is begun (On Action on_chronicle_start)"
+                        ],
+                        [
+                            "CM.10001",
+                            "When chronicle is transformed to new character (On Action on_chronicle_owner_change)"
+                        ],
+                        [
+                            "CM.10010",
+                            "From on action on_death - check who died and create appropriate chronicle entries"
+                        ],
+                        [
+                            "CM.10011",
+                            "From on action on_birth - check who was born and create appropriate chronicle entries"
+                        ],
+                        [
+                            "CM.19011",
+                            "[untitled]"
+                        ],
+                        [
+                            "CM.10012",
+                            "War"
+                        ],
+                        [
+                            "CM.10013",
+                            "Joined ally in war"
+                        ],
+                        [
+                            "CM.10014",
+                            "Answered call to arms"
+                        ],
+                        [
+                            "CM.10015",
+                            "On crusade creation Called from 'on_crusade_creation'\n\t new_character is the targetted [sic] enemy\n\t ROOT is the religious head\n\t FROM is the attacked kingdom title"
+                        ],
+                        [
+                            "CM.10016",
+                            "On crusade success ROOT is the target title\n\t new_character is the Enemy\n\t FROM is the taker"
+                        ],
+                        [
+                            "CM.10017",
+                            "On crusade failure ROOT is the target title\n\t new_character is the Enemy\n\t FROM is the Pope/Caliph"
+                        ],
+                        [
+                            "CM.10018",
+                            "Aztec first contact"
+                        ],
+                        [
+                            "CM.10019",
+                            "[untitled]"
+                        ],
+                        [
+                            "CM.10020",
+                            "Aztec Invasion"
+                        ],
+                        [
+                            "CM.10021",
+                            "Creates new higher level title"
+                        ],
+                        [
+                            "CM.10022",
+                            "Usurps new higher level title"
+                        ],
+                        [
+                            "CM.10023",
+                            "Marriage"
+                        ],
+                        [
+                            "CM.10024",
+                            "From on action on_became_imprisoned - check who was imprisoned and create appropriate chronicle entries"
+                        ],
+                        [
+                            "CM.10025",
+                            "From on action on-released-from-prison - check who was released and create appropriate chronicle entries"
+                        ],
+                        [
+                            "CM.10026",
+                            "When a character converts to a new religion - on action: on_character_convert_religion"
+                        ],
+                        [
+                            "CM.10027",
+                            "When a character converts to a new culture - On action: on_character_convert_culture"
+                        ],
+                        [
+                            "CM.10028",
+                            "When a character acquires a nickname - On action: on_acquire_nickname"
+                        ],
+                        [
+                            "CM.10029",
+                            "Won battle - On action: on_battle_won"
+                        ],
+                        [
+                            "CM.10030",
+                            "Lost battle - On action: on_battle_lost"
+                        ],
+                        [
+                            "CM.10031",
+                            "Won battle but didn't participate myself"
+                        ],
+                        [
+                            "CM.10032",
+                            "Lost battle but didn't participate myself"
+                        ],
+                        [
+                            "CM.10033",
+                            "Personally captured major settlement"
+                        ],
+                        [
+                            "CM.10034",
+                            "My forces captured major settlement"
+                        ],
+                        [
+                            "CM.10035",
+                            "Enemy forces captured major settlement"
+                        ],
+                        [
+                            "CM.10036",
+                            "Marriage of primary heir - ROOT is employer. FROM is employers \"employee\". new_character is the other spouse."
+                        ],
+                        [
+                            "CM.10037",
+                            "Divorce"
+                        ],
+                        [
+                            "CM.10038",
+                            "Peace, attacker won"
+                        ],
+                        [
+                            "CM.10039",
+                            "Inherit major title - # ROOT is the character, FROM is the, FROMFROM is the old holder"
+                        ],
+                        [
+                            "CM.10040",
+                            "Peace, whitepeace"
+                        ],
+                        [
+                            "CM.10041",
+                            "Peace, defender won"
+                        ],
+                        [
+                            "CM.10500",
+                            "Dragon Sighted"
+                        ],
+                        [
+                            "CM.10501",
+                            "province_event"
+                        ],
+                        [
+                            "CM.10502",
+                            "Giant sighted"
+                        ],
+                        [
+                            "CM.10503",
+                            "province_event"
+                        ],
+                        [
+                            "CM.10504",
+                            "Sea serpents sighted"
+                        ],
+                        [
+                            "CM.10505",
+                            "province_event"
+                        ],
+                        [
+                            "CM.10506",
+                            "Strange shapes seen dancing on the moon"
+                        ],
+                        [
+                            "CM.10507",
+                            "Ten feet tall woman"
+                        ],
+                        [
+                            "CM.10508",
+                            "province_event"
+                        ],
+                        [
+                            "CM.10509",
+                            "Raining blood"
+                        ],
+                        [
+                            "CM.10510",
+                            "province_event"
+                        ],
+                        [
+                            "CM.10511",
+                            "Strange plague kills rabbits"
+                        ],
+                        [
+                            "CM.10512",
+                            "province_event"
+                        ],
+                        [
+                            "CM.10513",
+                            "Earthquake"
+                        ],
+                        [
+                            "CM.10514",
+                            "province_event"
+                        ],
+                        [
+                            "CM.10515",
+                            "Flood"
+                        ],
+                        [
+                            "CM.10516",
+                            "province_event"
+                        ],
+                        [
+                            "CM.10517",
+                            "Two suns were seen"
+                        ],
+                        [
+                            "CM.10518",
+                            "province_event"
+                        ],
+                        [
+                            "CM.10519",
+                            "Goat with three heads was born"
+                        ],
+                        [
+                            "CM.10520",
+                            "province_event"
+                        ],
+                        [
+                            "CM.10521",
+                            "Bird invasion"
+                        ],
+                        [
+                            "CM.10522",
+                            "province_event"
+                        ],
+                        [
+                            "CM.10523",
+                            "Many children born in province"
+                        ],
+                        [
+                            "CM.10524",
+                            "province_event"
+                        ],
+                        [
+                            "CM.10525",
+                            "Province celebrates beloved ruler"
+                        ],
+                        [
+                            "CM.10526",
+                            "province_event"
+                        ],
+                        [
+                            "CM.10527",
+                            "A star falls from the sky"
+                        ],
+                        [
+                            "CM.10528",
+                            "province_event"
+                        ],
+                        [
+                            "CM.10529",
+                            "Bountiful harvest"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Called from 'on_crusade_creation'\n\t new_character is the targetted [sic] enemy\n\t ROOT is the religious head\n\t FROM is the attacked kingdom title"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "ROOT is the target title\n\t new_character is the Enemy\n\t FROM is the taker"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "ROOT is the target title\n\t new_character is the Enemy\n\t FROM is the Pope/Caliph"
+                }
+            ]
+        }
+    ]
+}

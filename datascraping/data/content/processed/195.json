@@ -1,0 +1,696 @@
+{
+    "pageid": 195,
+    "title": "Patch 1.06",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The third major patch. Released alongside Sword of Islam as well as two minor pieces of DLC"
+                }
+            ]
+        },
+        {
+            "heading": "Major",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Muslim Decadence System",
+                            "children": []
+                        },
+                        {
+                            "text": "Muslim Polygamy",
+                            "children": []
+                        },
+                        {
+                            "text": "Added new provinces , titles and history for Mali, Songhay and Ghana",
+                            "children": []
+                        },
+                        {
+                            "text": "Added the province of Aprutium (split off from Spoleto)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added the new creatable Empires of Russia, Britannia, Spain, Francia, Scandinavia, Persia and Arabia",
+                            "children": []
+                        },
+                        {
+                            "text": "Strong and Weak Claim System",
+                            "children": []
+                        },
+                        {
+                            "text": "Overhaul of game text for Muslims",
+                            "children": []
+                        },
+                        {
+                            "text": "Added plots to claim titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Split up the former Kingdom of Khazaria into many de jure kingdoms",
+                            "children": []
+                        },
+                        {
+                            "text": "Split the Kingdom of Rus into the kingdoms of Rus and Ruthenia",
+                            "children": []
+                        },
+                        {
+                            "text": "Added the duchies of Susa and Latium",
+                            "children": []
+                        },
+                        {
+                            "text": "Revised murder plots completely. No decisions , just events .",
+                            "children": []
+                        },
+                        {
+                            "text": "Commander traits added",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavily revised combat tactics",
+                            "children": []
+                        },
+                        {
+                            "text": "Loads of new events",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Minor",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "AI: Much more eager to join Crusades /Jihads if it has de jure interests in the target kingdom",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Much more eager to join Crusades/Jihads if in the same realm as the religious head",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: More stubborn about fighting decadence revolters",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Tweaked Crusade targeting - will no longer target kingdoms with 0 'holiness' value for that religion",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Non-Muslims will not accept marriages for female relatives with Muslims, unless they are vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Now prefers giving baronies /counties to courtiers with static dynasties rather than creating random characters",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Vassals of vassals can now correctly revolt to depose their liege",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: DoW now factors in the strength of enemies of enemies",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Willing to join another rebelling vassal's war for the crown only if they'd like them better as _liege_",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Vassals should no longer start wars (except for revolts) if the whole realm is under attack from outside",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Caliphs will now be more aggressive with calling Jihads",
+                            "children": []
+                        },
+                        {
+                            "text": "Army AI: Will now assault when appropriate",
+                            "children": []
+                        },
+                        {
+                            "text": "Army AI: Fixed a problem where you could trick AI armies into ping-ponging while it was trying to gather its forces",
+                            "children": []
+                        },
+                        {
+                            "text": "Army AI: Fixed some issues where it would not count attached units properly",
+                            "children": []
+                        },
+                        {
+                            "text": "Army AI: Better at moving across land without marching together with other armies, causing unnecessary attrition",
+                            "children": []
+                        },
+                        {
+                            "text": "Army AI: Improved attrition check in targeting calculations",
+                            "children": []
+                        },
+                        {
+                            "text": "Army AI: Fixed an issue where it would merge armies to huge sizes by not considering attached forces",
+                            "children": []
+                        },
+                        {
+                            "text": "Invasion AI: Fixed an issue where it would choose poor secondary targets if the target province was too heavily defended",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer possible to call lieges to war against their own vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the succession message not being shown for the ones who inherit titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with the de jure law vote message not going away when trying to approve it",
+                            "children": []
+                        },
+                        {
+                            "text": "Slightly increased merc reinforcement rates",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a memory leak with timed opinion modifiers that time out naturally",
+                            "children": []
+                        },
+                        {
+                            "text": "Moved the county of Chalons into Lower Burgundy and Grisons into Upper Burgundy",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the depose liege CB sometimes making the new ruler independent (bug in the effect 'abdicate_to_most_liked_by').",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the effect 'abdicate_to_most_liked_by' that would invalidate outside wars",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the 'grant_title' effect which would assign the liege to the liege of the granter",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a potential infinite loop in war name generation",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the Feudal Elective law being tolerated for Republics",
+                            "children": []
+                        },
+                        {
+                            "text": "If the loser in a war is imprisoned , he is now automatically released on peace",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with created characters sometimes getting duplicate education traits",
+                            "children": []
+                        },
+                        {
+                            "text": "People who avoid imprisonment will now always flee to another realm",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a whole bunch of cleaned up title coats of arms",
+                            "children": []
+                        },
+                        {
+                            "text": "Muslim coats of arms should now use better colors",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer allowed to grant titles to prisoners",
+                            "children": []
+                        },
+                        {
+                            "text": "You can now correctly press the de jure claims of vassals of vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with being able to call vassals of vassals of the enemy into wars within the same realm",
+                            "children": []
+                        },
+                        {
+                            "text": "When winning (enforce or reverse) a war, all prisoners from your realm held by the enemy are now released",
+                            "children": []
+                        },
+                        {
+                            "text": "Added opinion modifiers 'Imprisoned my Child' and 'Executed my Child'",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer allowed to ask to join outsider wars against your liege",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the depose liege CB in republics and bishoprics",
+                            "children": []
+                        },
+                        {
+                            "text": "Rulers deposed with the 'depose' casus belli no longer get any land from their old vassals to remain rulers",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue where a ruler could not offer peace to a rebelling vassal if he had holdings occupied by another (loyal) vassal in a separate war",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the hostility icons for loyal vassals in separate wars with rebelling vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "If a vassal is at war with another vassal who is rebelling, the war no longer ends if the liege wins and the rebellion is crushed",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with lieges ending up in two wars if a vassal revolted while a revoke action was pending",
+                            "children": []
+                        },
+                        {
+                            "text": "Blocked excommunication wars against revolters",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some issues with succession not being recalculated after certain event effects",
+                            "children": []
+                        },
+                        {
+                            "text": "Peace Offers now make it clear whether it's a demand for surrender, white peace or surrender",
+                            "children": []
+                        },
+                        {
+                            "text": "Cleaned up all CB tooltips",
+                            "children": []
+                        },
+                        {
+                            "text": "The initial Seljuk-Byzantine war is now a full invasion of the de jure kingdom of Armenia",
+                            "children": []
+                        },
+                        {
+                            "text": "Added \"Scarred\" trait",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug allowing rulers of a hostile religion to vote for de jure laws even when not de facto vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "Toned down base attribute gain of children from guardians",
+                            "children": []
+                        },
+                        {
+                            "text": "Optimized the CPU heaviest events",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a nasty old crash bug with the defection of the Victual Brothers",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a hostility bug with allies helping to defend against a revolter",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with Gavelkind inheritance in baronies, where the youngest child would inherit first",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with the random seed in delayed events",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug allowing you to usurp titles from your own vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with vassals of vassals gaining independence when you pressed their claims",
+                            "children": []
+                        },
+                        {
+                            "text": "The titular kingdoms of Naples and Trinacria are no longer creatable in-game",
+                            "children": []
+                        },
+                        {
+                            "text": "The Ecumenical Patriarch will now refuse to excommunicate a character who has repented, even if the Emperor asks",
+                            "children": []
+                        },
+                        {
+                            "text": "Merc navies will now disband when not getting paid",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with the lower Crown Authority plot when the liege folds to the ultimatum of a vassal king",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer possible to grant duchies to barons",
+                            "children": []
+                        },
+                        {
+                            "text": "The event effect 'destroy_landed_title' now gives the current holder a strong claim on the title",
+                            "children": []
+                        },
+                        {
+                            "text": "The events where the Mongols receive reinforcements no longer trigger if the titles are held by non-Tengri or non-Mongol rulers",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with attached units and siege outcomes",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with Revokation plot wars against vassals who lose the title to someone else",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where a vassal in revolt against his liege would sometimes have the war end inconclusively when the liege got a new liege",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue where children would change guardian if they became landed",
+                            "children": []
+                        },
+                        {
+                            "text": "AI spouses of lower rank than you will now always accept education requests- In feudal elective titular realms, _all_ vassals of the appropriate tier are now electors",
+                            "children": []
+                        },
+                        {
+                            "text": "The death of a spouse no longer makes characters lose their jobs",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters who end up leading the troops of their enemies should now automatically return home",
+                            "children": []
+                        },
+                        {
+                            "text": "The opinion penalties for revoking a title are now applied whether or not the target accepts or refuses",
+                            "children": []
+                        },
+                        {
+                            "text": "If a vassal refuses a title revokation and wins or achieves a white peace, the 'declared_war' opinion modifier is now cleared (meaning the liege does not get a 'free' title revokation)",
+                            "children": []
+                        },
+                        {
+                            "text": "There is no longer a cooldown for calling allies to war who _accepted_ a previous call",
+                            "children": []
+                        },
+                        {
+                            "text": "Primogeniture: more heirs should now be listed",
+                            "children": []
+                        },
+                        {
+                            "text": "Gavelkind: fixed a glitch with grandchildren",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed impassable terrain between Kartli and Albania",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed unit position in the Irish Sea",
+                            "children": []
+                        },
+                        {
+                            "text": "Made Sviatopolk Rurikovich (count of Zaozerye in 1066) a legit bastard",
+                            "children": []
+                        },
+                        {
+                            "text": "Heretics and infidels are now barred from inheriting anything that the religious head holds",
+                            "children": []
+                        },
+                        {
+                            "text": "The portraits for undiscovered murderers should now be hidden in the event window",
+                            "children": []
+                        },
+                        {
+                            "text": "Mercs and Holy Order commanders should no longer be shown in the quick marriage window",
+                            "children": []
+                        },
+                        {
+                            "text": "Now always allowed to attach your units to your lieges' units",
+                            "children": []
+                        },
+                        {
+                            "text": "Added an event where a ruler converts to the native culture",
+                            "children": []
+                        },
+                        {
+                            "text": "Adjusted and improved the events where provinces change culture",
+                            "children": []
+                        },
+                        {
+                            "text": "Reactivated the lifting FoW for allies in wars",
+                            "children": []
+                        },
+                        {
+                            "text": "Doubled regular assassination costs",
+                            "children": []
+                        },
+                        {
+                            "text": "The \"Arrange Marriage\" button now shows random courtiers if there are too few interesting women around",
+                            "children": []
+                        },
+                        {
+                            "text": "There is now a slight chance of a random education outcome",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some issues with war invalidation for banishment of landed characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Can no longer banish mercs, holy order heads, or religious heads",
+                            "children": []
+                        },
+                        {
+                            "text": "Attached units that are not in the same province as the master unit are no longer hostile to the master unit's enemies",
+                            "children": []
+                        },
+                        {
+                            "text": "The spouse will now get a message on divorce",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some historical issues with Chios and Lesbos",
+                            "children": []
+                        },
+                        {
+                            "text": "The liege should now get pressed claims on _all_ titles of characters who declare independence",
+                            "children": []
+                        },
+                        {
+                            "text": "If an ally could legally call you into a war, you should always be able to ask to join as well",
+                            "children": []
+                        },
+                        {
+                            "text": "Battle Death should now show the unit owner rather than the unit commander",
+                            "children": []
+                        },
+                        {
+                            "text": "Vassals of lieges who are fighting their liege will no longer revolt",
+                            "children": []
+                        },
+                        {
+                            "text": "Holy War CBs are now valid for Catholic vassals of Orthodox lieges, etc.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added automatic county conversion events for Muslims (35500 and 35501)",
+                            "children": []
+                        },
+                        {
+                            "text": "Pathfinding now prefers friendly territory to enemy territory",
+                            "children": []
+                        },
+                        {
+                            "text": "Vassal vs Liege wars should now end with a _mutual_ truce",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "For Modders",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Exported inbreeding trait gain factors to defines",
+                            "children": []
+                        },
+                        {
+                            "text": "Exported most relevant files under common to their own folders, so they can be broken up into multiple files",
+                            "children": []
+                        },
+                        {
+                            "text": "Added ' immortal ' flag to traits; stops aging, character will not die of age or poor health",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'pilgrimage' flag to traits; the character is away and needs a regent , but can still be a guardian, etc.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'name_tier' to landed titles, so that empires can be called kingdoms, etc.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'pass_effect' to decisions and laws, which is not run by automatic functions (useful for setting opinion modifiers when passing laws.)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event target 'fromfrom'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'in_revolt'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'divine_blood' flag to dynasties, which allows full consanguine marriages and tells the AI to prefer keepin' it in the family",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'founder_named_dynasties' to cultures",
+                            "children": []
+                        },
+                        {
+                            "text": "Can now script marriage consanguinity rules in religions",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a 'potential' trigger to Job Actions",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'dismiss_trigger' to job titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a 'potential' trigger to traits",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'num_of_realm_counties'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added effect 'vassalize_or_take_under_title'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'death_reason'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event target 'killer'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event effect 'objective_succeeds'",
+                            "children": []
+                        },
+                        {
+                            "text": "The trigger 'can_be_given_away' is now more restrictive. Checks occupation or sieges of constituent Holdings, contestation in wars, etc.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added history command 'conquest_culture'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'plot_power_contribution'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'random'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'any_potential_tribal_county'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added effect 'any_potential_tribal_county'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added effect 'random_potential_tribal_county'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'new' target in effects ( character = new ) for newly created characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Added death reason 'death_hashshashin'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added effect 'make_primary_spouse'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'has_strong_claim'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'has_weak_claim'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added effect 'add_weak_claim'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added effect 'add_weak_pressed_claim'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'has_regent'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'is_contested'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event effect 'any_spouse'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event effect 'random_spouse'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'any_spouse'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'is_main_spouse'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a 'distance' trigger",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,1929 @@
+{
+    "pageid": 3938,
+    "title": "Patch 2.8.X",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.8.X are all patches beginning with 2.8, and linked to Jade Dragon expansion."
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.8",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Patch 2.8.1",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.8.1 was released on 2017-12-06 [1] with the checksum WTTG ."
+                }
+            ]
+        },
+        {
+            "heading": "Free Features",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added Chinese holding icons",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Balance",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The AI is now much less likely to instantly give up when attacked with a Tributary CB",
+                            "children": []
+                        },
+                        {
+                            "text": "You now lose the Kowtow trait when the dynasty in china changes",
+                            "children": []
+                        },
+                        {
+                            "text": "When accepting to become a tributary of China, as a demand from asking them to re-open the Silk Road, it no longer costs more Grace than turning down their demand completely",
+                            "children": []
+                        },
+                        {
+                            "text": "If you personally kill your own Chinese courtiers, the Emperor will no longer be sorry and refund you the grace",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "AI Improvements",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Told the AI that provinces with more holdings, slots, and buildings are better, and it should try to keep those for itself when handing out titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the AI loving viceroyalties so much it'd try to give duchies out as viceroyalties even when not allowed to do so due to being a vassal, and then destroying the duchy in a fit of rage when it realized it wasn't allowed to do so",
+                            "children": []
+                        },
+                        {
+                            "text": "Told the AI that if it considers a province to be a high priority target, it should probably also consider it to be a possible target, rather than deciding to not go there just because it is slightly too far away",
+                            "children": []
+                        },
+                        {
+                            "text": "Told the AI that it isn't a good idea to grant a title to someone you just revoked a title off of, even if it is a duchy where you hold no land yourself, and that it might be a good idea to hold onto the duchy you just revoked for a little while before giving it away",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Interface",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The \"arrange marriage\" button is now disabled for characters who can't marry (E.G., eunuchs), and they are no longer included in the selection lists for the diplomatic action",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed toggling province embellishments not working",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed ESC not closing the \"you need to restart to apply graphical settings changes\" window",
+                            "children": []
+                        },
+                        {
+                            "text": "The trade route tooltip now tells you how much the value of the route is changed by external factors, if the route is not currently at 100% value",
+                            "children": []
+                        },
+                        {
+                            "text": "The \"Personal Combat Skill\" value in the command modifier tooltip now lists the sources of the combat skill",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the contact address in the EULA having some mysterious spacing",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed map modes in some cases being wrongly colored after loading a save",
+                            "children": []
+                        },
+                        {
+                            "text": "Units raised from provinces rather than the military view now also obey your rally points",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the \"not pacified by liege\" tooltip entry when declaring a war on another vassal mentioning an expiry date of 1 Jan 1 when you've never been pacified. Now only shows expiry if you're currently pacified",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the event countdown for narrative events in MP overlapping the event text",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Ruler Designer not being usable in MP due to the designed character getting reset upon hitting \"Ready\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed apostrophes and periods attempting to leave this mortail coil in on-map names",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the tooltip for the army coat of arms being unselectable and having a flickering tooltip",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the title tier requirement in the grant title interaction not getting translated to other languages",
+                            "children": []
+                        },
+                        {
+                            "text": "You now get a warning message when loading an old save (one in which the first or second numbers differ. E.G., 2.7.0.0 vs. 2.8.0.0)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a cooldown icon for sending a Physician",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the effect tooltip for becoming a tributary to China sometimes not fitting into its window",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed superfluous information from the effect tooltip for sending an artifact to China",
+                            "children": []
+                        },
+                        {
+                            "text": "De-cluttered the menu for interacting with China * the interactions will now only display failed conditions",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a faulty tooltip in an old event where you ask a friend to help you refine your skills in swordsmanship",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrected a few cases of highlighting and capitalizing of game terms missing in the China Menu",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed accented characters in non-English languages not showing up at all in the big decorative letter in narrative events. Now they'll show their Latin equivalent instead. E.G., É will be shown as E",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the in-game Game Rules window ending up behind other GUI elements on low resolutions",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Assassin join requirement tooltip showing the sub-conditions of \"any playable ruler\" failing even when there's a ruler that meets the conditions",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Chinese Emperor getting the Combat Modifier icon at times",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed character names based on ancestors using their regnal names rather than birth names. Most notably, this could result in Chinese emperors using a previous emperor's temple name as their birth name",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Border Dispute CB in some cases telling you you'd usurp baronies that would not actually get usurped",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed it not being visible to the player that smiths will not marry",
+                            "children": []
+                        },
+                        {
+                            "text": "The Taoist religion now has its own piety icon",
+                            "children": []
+                        },
+                        {
+                            "text": "Provided a way to deal with excessively hairy family members",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated Grace condition tooltips in the China menu to no longer mentions \"offmap power\", but simply, eg. \"the Tang Empire\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed text overflowing in the tooltip for Becoming a Tributary to China",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the multiplayer button being enabled after hitting \"Continue\" in the launcher and resigning, despite this changing the checksum, making it impossible to actually play MP",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed loading a save then hitting a bookmark causing text about achievements to appear overlapping the scenario description. Fixed the achievement text not appearing after loading a save",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "User modding",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed \"on_demand = no\" in sound causing OnDemand to be turned on rather than off",
+                            "children": []
+                        },
+                        {
+                            "text": "The character flag \"ai_flag_never_transfer\" will now stop the AI from transferring the given character to one of its vassals (used in vanilla to ensure that if you achieve independence from your liege, your liege's liege won't just transfer you back)",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed is_ancestor_of/is_descendant_of giving the wrong result in some cases due to skipping the 0th character in each generation except the first",
+                            "children": []
+                        },
+                        {
+                            "text": "The \"Quick Save\" button now works in ironman; it updates your ironman save",
+                            "children": []
+                        },
+                        {
+                            "text": "Added \"show_only_failed_conditions = yes\" parameter for triggers. When set, this will cause only failed triggers within this trigger (recursively) to show up in the tooltip. Especially useful when you have a lot of edge cases you need to handle, but which are only rarely relevant to the player",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing \"Requirements:\" header for the offmap interaction buttons",
+                            "children": []
+                        },
+                        {
+                            "text": "Second entry of a variable in check_variable trigger can now also set the comparing operator ( =, <, >=, <=, ==, != )",
+                            "children": []
+                        },
+                        {
+                            "text": "Added gfx_culture_scope, which scopes to a character's ethnicity",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed event targets not working in the \"culture\" effect",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Database",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added roughly 100 historical characters to the history of Yemen during the 11th and 12th century. Arwa Sulayhid is now a playable ruler of Yemen.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a handful of provinces having more holdings than holding slots in later start dates; increased the holding slots by one when adding the new holding",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed incorrect holder of d_baghdad in 1289",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bugfixes",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed the Shatter Realm CB not destroying landless kingdoms and empires",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed it being possible to end up as one's own lover. Could in very rare cases lead to CTD",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the AI investing more money than they had in purchasing weapons, jewelry and armor",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated the Investigate Artifact Rumors chain, which appeared to never end",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed it being possible for your new liege to just transfer you back to your old one if you achieve independence as the vassal of a vassal",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed kinslayer penalties not being properly applied in all cases for grandparents and grandchildren",
+                            "children": []
+                        },
+                        {
+                            "text": "The modifiers from being a tributary now get removed within a day of ceasing to be a tributary, rather than taking up to a month",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the long reign bonus being applied, and at too high a value, in the year between when the short reign penalty ends and when the long reign bonus was supposed to start",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed it being possible to disband shattered units by selecting more than one unit",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed OOS when hovering over the add_random_education_trait effect",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed and updated the decision to Become Saoshyant, in accordance with the updated duchies of Persia in 2.8",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed being able to grant indestructible artifacts to china without them being removed from your inventory",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing death text for the Kowtow Travels trait",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed achievements being possible to unlock with mods enabled",
+                            "children": []
+                        },
+                        {
+                            "text": "Players should no longer be lured by foreign preachers, if they are of a religion belonging to DLCs that the player does not own (which would cause a Game Over if they accept to convert to that religion)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added some missing rebel loc and rebel flags to the Converter",
+                            "children": []
+                        },
+                        {
+                            "text": "If you manage to dedicate a book to your rival, they will now be \"Strangely Flattered\" (rather than \"Flattered\")",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a progress event for the Compose a Book chain, where it would try to mention a Chancellor by name, even when you had no one employed",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed changes to trade route value (for example due to China going Isolationist) not persisting in saves",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed courtiers stealing their wards to their new court if for any reason they move to another court",
+                            "children": []
+                        },
+                        {
+                            "text": "The Army of Light is no longer active from the start",
+                            "children": []
+                        },
+                        {
+                            "text": "Sardinia and Corsica are now assigned to the correct pentarch",
+                            "children": []
+                        },
+                        {
+                            "text": "The Empire of Italy now requires the Kingdom of Sardinia and Corsica",
+                            "children": []
+                        },
+                        {
+                            "text": "Traveling the passages of time and death will no longer allow souls of war offenders to cheat the injustices they caused their enemies. (Historical wars in 867 should now work when traversing history backwards)",
+                            "children": []
+                        },
+                        {
+                            "text": "Winning an invasion of China will now set their status to Stable, unless they are in a Golden Age",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a problem where a character could end up with multiple tributary suzerains at the start of the game.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Chinese Emperor will no longer accept that you send severely injured Concubines, Eunuchs, Commanders, or Physicians to serve them",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed so that adopting Chinese Imperialism keeps the laws from your previous title",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed so that the cool-down for employing a smith is removed if the first thing you decide is to change your mind about the whole endeavor",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed one way the game could freeze due to getting stuck in a liege loop",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the name of China sometimes getting messed up if you switch bookmarks a bit",
+                            "children": []
+                        },
+                        {
+                            "text": "A courtier's family now joins the new court when the courtier gains a title through the grant title interaction.",
+                            "children": []
+                        },
+                        {
+                            "text": "Claimants for China will now abdicate their old titles before assuming the throne",
+                            "children": []
+                        },
+                        {
+                            "text": "Female Muslims Adventurers should now properly disregard certain social convention and actually declare war against their targets",
+                            "children": []
+                        },
+                        {
+                            "text": "The Free Captives CB no longer misinforms you of who you'll imprison in turn",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed so that you do not get to adopt Chinese Imperialism after having installed your own dynasty on the dragon throne",
+                            "children": []
+                        },
+                        {
+                            "text": "Children can now gain Chinese commander traits when they grow up to get the Brilliant Strategist trait",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed abdication in some cases leading to independence for no apparent reason",
+                            "children": []
+                        },
+                        {
+                            "text": "If you murdered your Chinese Prince/Princess you will no longer receive an event where you grief them",
+                            "children": []
+                        },
+                        {
+                            "text": "The Western protectorate now also has a claim on Yumen in 769",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed loading saves in some cases causing nomad provinces to cease to be nomad provinces",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed combat tactics changing every single day while flanking",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed high authority realms in some cases ending up with no government when converting to EU4. Most notably, this could happen if a realm adopted Chinese Imperialism",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters no longer get angry about being \"fired from the council\" if the reason they're no longer on the council is that someone other than their liege imprisoned them, or because they moved to a different court",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters no longer hold a grudge against their former liege for alleviating them from the council if they become bedridden with illness",
+                            "children": []
+                        },
+                        {
+                            "text": "Historical relatives of the Chinese Emperor no longer loiter in the west",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed disabling the marriage AI for close relatives not persisting in saves",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some duplicate/broken chinese and irish dynasties",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Embargo CB not being available if the merchant republic only indirectly holds trade posts in your lands via its patrician vassals, rather than holding them personally",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed regents losing their council position after loading saves",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue in the Hermetic events where you brew a potion for someone else: you now get notified about whether they accepted the potion or not",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed partially reinforced mercenaries getting a sudden boost in troop numbers upon hiring, and upon dismissing",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed overly hairy patricians crashing the game",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a change in the holder of a vassal title in some cases invalidating wars for that title even though it is still in the same realm",
+                            "children": []
+                        },
+                        {
+                            "text": "We no longer cull borders on the map since it makes no sense with the max zoom level we have now.",
+                            "children": []
+                        },
+                        {
+                            "text": "Windows and Unix/OSX can now chat with each other.",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters no longer talk about the weather as much",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed you instantly getting a game over if you played as a Ruler Designed Nomad vassal",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed holdings in old saves sometimes ending up with a dejure county different from the county they're in. Could in rare cases lead to freezes",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Desert Cavalry buildings giving Horse Archers instead of Camel Cavalry",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed requirements for Steppe Cavalry buildings incorrectly excluding Iranian from levels 1 and 3",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed siege leaders in flanks other than the center not working after loading a save, but instead only for new battles or if reassigned",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed revolting against your liege while having Gavelkind (or Elective Gavelkind) succession causing you to change succession to Seniority",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.8.1.1",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.8.1.1 was released on 2017-12-18 [2] with the checksum ISRM ."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed an issue where you would game over if you tried to play a Borjigin dynasty character after the ascent of the Yuan dynasty in China.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue where several Cultural Conversion decisions didn't work correctly.",
+                            "children": []
+                        },
+                        {
+                            "text": "We've also updated the Converter to be compatible with EU4's Japan patch.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.8.2",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.8.2 was released on 2018-05-15 [3] with the checksum WVUU ."
+                }
+            ]
+        },
+        {
+            "heading": "Free Features",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The \"Offer Consort\" interaction is now available even without Monks and Mystics",
+                            "children": []
+                        },
+                        {
+                            "text": "The seven coat of arms emblems provided to people who own War of the Roses are now available for everyone. Can be used as part of Christian and Jewish coats of arms",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The Ark of the Covenant can now be found by Jews and Christians when hunting artifacts.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Balance",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed it taking a month from game start before it'd start generating women for marriage",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a risk for particularly evil actions within a devil-worshiping society leading to demon hunters coming after you",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed redundant flag clear at RIP.21014.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed scoping issue with Ask for Pardon decision.",
+                            "children": []
+                        },
+                        {
+                            "text": "Balanced effects on Option A of event 1013.",
+                            "children": []
+                        },
+                        {
+                            "text": "Balanced effects on Option B of event 1004.",
+                            "children": []
+                        },
+                        {
+                            "text": "Balanced effects on Option B of event 1011.",
+                            "children": []
+                        },
+                        {
+                            "text": "Rebalanced currency gains for the Desecrate Temple action.",
+                            "children": []
+                        },
+                        {
+                            "text": "Minimum province supply is now 1000 rather than 100",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer possible to offer your own concubine to someone else; you now have to first set them aside",
+                            "children": []
+                        },
+                        {
+                            "text": "Player-controlled characters can no longer be assigned to lead troops by their liege if they are already leading their own troops",
+                            "children": []
+                        },
+                        {
+                            "text": "Losing land on inheritance due to gavelkind now makes you lose a lot more threat than it previously did",
+                            "children": []
+                        },
+                        {
+                            "text": "Search for a Smith is reworked to be a more positive experience.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tribal Vassals of a reformed religion will now approve votes for Tribal organization",
+                            "children": []
+                        },
+                        {
+                            "text": "Several minor titles can be granted to Cathar and Messalian characters now.",
+                            "children": []
+                        },
+                        {
+                            "text": "Can no longer wage war over weak claims against females with Full Status for Women, nor when the Gender Equality game rule is activated",
+                            "children": []
+                        },
+                        {
+                            "text": "When enforcing demands as a liege against a revolting vassal at the end of a war, the vassal will get the Traitor opinion, allowing for the free revocation of one title, if he doesn't already have it.",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer possible to succesfully murder someone with a plot when they are at a pilgrimage",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed modifier in random list for RIP.10030.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added safety triggers and limits on SoA.5425 to prevent it from firing for non-muslims and avoid sympathy traits being applied when not appropriate.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "AI Improvements",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Told the AI that it a bad idea to recruit retinues if the place where they spawned has enemy troops in it",
+                            "children": []
+                        },
+                        {
+                            "text": "Gave the AI a few pointers on the existence of ships when it comes to getting its troops back home after a war",
+                            "children": []
+                        },
+                        {
+                            "text": "The AI now realizes that simply pretending enemy holy orders don't exist doesn't actually help it win wars",
+                            "children": []
+                        },
+                        {
+                            "text": "The AI no longer briefly forgets about one of its armies, and thus decides to merge some armies together, leading to it then deciding they need to be split, forgetting about one of them once more, starting the cycle all over again",
+                            "children": []
+                        },
+                        {
+                            "text": "The AI will no longer run in circles trying to attach to someone of lower tier, being constantly told \"no, you can't do that\". We didn't actually make the AI any smarter in this regard; we just removed the tier restriction on attaching",
+                            "children": []
+                        },
+                        {
+                            "text": "Told the AI that the war goal should always be considered within its area of operations, stopping it complaining that that it is a bit too far away and deciding not to go there",
+                            "children": []
+                        },
+                        {
+                            "text": "Told the AI for landless characters that during a war, the war goal is actually a lot more important than whatever provinces it happens to have occupied",
+                            "children": []
+                        },
+                        {
+                            "text": "Informed the AI that it is a bad idea to abandon a siege you control just because there's enough other people besieging it. On top of the AI now knowing how to remain in control of a siege, the AI will no longer collectively all at once decide to abandon a siege reasoning \"someone else will pick up the slack\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Told the AI it is a decent idea to merge its armies even if there's no enemies around to fight, assuming that has no real risk of causing supply issues",
+                            "children": []
+                        },
+                        {
+                            "text": "Informed the AI that if it has the max possible warscore from occupation, it might actually be a good idea to try to hunt down enemy units instead of sieging for months or years on end",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed non-player characters without AI (barons) not dismissing their levies",
+                            "children": []
+                        },
+                        {
+                            "text": "Told the AI that once it has decided it no longer has any real reason to converge its forces it should actually... stop converging those forces on whatever target originally made sense",
+                            "children": []
+                        },
+                        {
+                            "text": "The AI no longer gets horribly confused when armies it is ordered to attach to merge with another army",
+                            "children": []
+                        },
+                        {
+                            "text": "Told the AI that while we're very impressed that it now manages to discount enemy holy orders when appropriate, it might be a good idea to also discount its own holy orders rather than try and fail to attack someone who cannot be targeted by said holy order",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Interface",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed the music cutting out when muted, rather than slowly fading out. Also fixed the song restarting when unmuted rather than continuing from where it left off",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the combat modifier icon not being shown if the character has a negative personal combat rating, but no command effects",
+                            "children": []
+                        },
+                        {
+                            "text": "Loading a save no longer causes the camera to reset to the middle of Europe",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some tooltips (for example, the tooltip on laws) flickering when the game is unpaused",
+                            "children": []
+                        },
+                        {
+                            "text": "Changed the shortcuts for cycling over holdings in the holding view from ',' and '.' to 'b' and 'n'",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed participation scaled piety/prestige/decadence not showing up in war tooltips before the war has been declared",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed lack of header in the \"You have been kicked by the host\" pop-up",
+                            "children": []
+                        },
+                        {
+                            "text": "The levy bar in the province view now states the maximum reinforcement rate for the levies; that is, the rate they will reinforce if there is room for more troops",
+                            "children": []
+                        },
+                        {
+                            "text": "CTRL+click on campaign funds for cardinals and patricians will now invest just enough money to beat the current best candidate. This includes accounting for the random factor for patricians. The value for SHIFT+click has been increased from 50 to 100",
+                            "children": []
+                        },
+                        {
+                            "text": "The event where your court physician becomes renowned now shows their portrait in the top-right",
+                            "children": []
+                        },
+                        {
+                            "text": "The most recently added loading screen is no longer guaranteed to be the first loading screen shown; it is instead simply far more likely to be show (50-50)",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed finished build chains having a prestige icon on them for no particular reason",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed character selection windows responding to the scroll wheel far to the right of, and under, the actual window",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed it being possible to change character selection during campaign setup while the Game Rules window is open",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed people who hold a temple getting buried in religious clothing even if they weren't actually a theocracy",
+                            "children": []
+                        },
+                        {
+                            "text": "Made the \"close\" button on the China screen prettier",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed portraits in some cases being incorrect for a single day when coming of age",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the religion screen not properly updating when changing religion with it open",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed it in some cases being unclear why you cannot hire a mercenary band",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed it not being clear that negative command modifiers end up at 0 due to martial. Now shows \"Martial Influenxe: x 0.00\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed command modifiers sometimes showing up as 0 for a handful of days after gaining a command trait",
+                            "children": []
+                        },
+                        {
+                            "text": "Shortened the \"Known Plots\" text in Spanish so that it no longer gets cut off",
+                            "children": []
+                        },
+                        {
+                            "text": "When hovering over your twin, the tooltip now says \"Your Twin\" rather than \"Your Brother/Sister\"",
+                            "children": []
+                        },
+                        {
+                            "text": "The \"unmarried heir\" alert no longer shows up if you cannot arrange marriage on their behalf. It now also shows up for heirs that are rulers if you're still able to arrange marriage on their behalf",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the portrait not appearing in the option for the prisoner you can choose to set free, upon demand from your vassal",
+                            "children": []
+                        },
+                        {
+                            "text": "The game now makes sure that you are always running a resolution your graphics card says is okay to use. To override this, edit the settings file and set \"override_resolution_safety\" to \"yes\"",
+                            "children": []
+                        },
+                        {
+                            "text": "The game now warns you when you disband ships with troops on them",
+                            "children": []
+                        },
+                        {
+                            "text": "Disbanding ships no longer tells you that all ships will return home, and then that *actually* not *all* ships, in the same warning. It will also refer to event fleets as \"event fleets\" rather than \"event troops\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters sent to China will no longer say they \"died\" in the tooltip when hovering over their age",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed \"Ransom Prisoner\" in some cases appearing on characters that are neither in prison nor hold any of your courtiers imprisoned",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed text overflow in the demands listed by China for your surrender, after player has tried to Force China to open up the Silk Road",
+                            "children": []
+                        },
+                        {
+                            "text": "For the purposes of notifications, characters you've previously played as are now always considered close family",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the striping in the culture and religion map-modes sometimes being outdated for a while after a realm converts culture/religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the China screen on small resolutions spawning with its contents partially off-screen",
+                            "children": []
+                        },
+                        {
+                            "text": "Right-clicking a character being selected in the China UI (E.G., a potential eunuch) now selects them rather than doing nothing. Left-click still selects as well",
+                            "children": []
+                        },
+                        {
+                            "text": "The call tribal vassals/allies buttons now does not require CTRL to be held to call allies if you're not someone who could uses tribal vassal allies. If you do use tribal vassal allies, CTRL is still needed to call regular allies. The button is now also greyed out if no calls whatsoever are possible",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed using the barber shop on someone clean shaven in some cases causing a strange horizontal line to appear",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed clicking \"Ransom Prisoner\" on one of your prisoners in some cases selecting someone other than that prisoner as the person to ransom",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed it not being possible to replace the holder of a minor title (E.G., Court Physician), forcing you to first remove their title, then give it to the person replacing them",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed writing something in the character finder after having sorted the character list causing the sort order to break",
+                            "children": []
+                        },
+                        {
+                            "text": "Hovering over the name field on the character screen now once more shows their full name rather than their titled name",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the looting icon in some cases making it appear as if you can loot despite neither having an adjacent province nor an adjacent navy",
+                            "children": []
+                        },
+                        {
+                            "text": "Improved the looting tooltip to make it clearer why you in some cases are unable to loot",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the enforce peace tooltip not accounting for the duration of enforce peace when it comes to the cooldown between when it was used and when it will be available once more",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the coats of arms for claims on titles held by people following Eastern Religions having the wrong border (Christian title border)",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an event option text being overlapped by a portrait, at the end of the Visitor from China-event chain",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the text for the Indian Religion view hint, to fit inside the box properly",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated description for Crown Laws",
+                            "children": []
+                        },
+                        {
+                            "text": "Childhood maturing events now show you the potential trait of the offspring if you try to change them to become more similar to yourself",
+                            "children": []
+                        },
+                        {
+                            "text": "Some missing cultural features from the feature/welcome screen has been added",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed it not being visible if a max-level building is inactive",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed brief noise occuring when changing effect volume from zero to non-zero",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed long names getting split across two lines in the society member list. Now longer names can fit, and extremely long names will get truncated with \"...\"",
+                            "children": []
+                        },
+                        {
+                            "text": "The emperor's likes when it comes to Eunuch grace values and similar now reference the emperor rather than China itself",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed misleading \"Achievements Disabled\" message on the character selection screen",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed characters killed by event on the first day of the game getting a death date one day later after unpausing the game",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the \"Elector Titles Held\" opinion penalty not having a minus sign",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the list of elective supporters not showing up in the realm view when hovering over the \"number of people that support this candidate\" number in some cases",
+                            "children": []
+                        },
+                        {
+                            "text": "The AI dynasty coat of arms are now more varied",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed editing historical dynasties' coats of arms sometimes leading to slot numbers higher than the max, and emblems doing strange things",
+                            "children": []
+                        },
+                        {
+                            "text": "If you declare war on China, the war overview now shows who you're trying to put on the throne",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed factions disappearing in the UI when having the \"Start a Faction\" view open and the game is not paused",
+                            "children": []
+                        },
+                        {
+                            "text": "Inactive titles now tell you clearly that that is why they cannot be created",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the society membership score tooltip in some cases not adding up to the total value shown",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed your secret religion not going away on the character screen if you embrace or abandon it while having the character screen open",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the logic for what unit type to show on the map not properly accounting for the maintenance cost of special units, leading to War Elephants almost never being displayed",
+                            "children": []
+                        },
+                        {
+                            "text": "Increased the amount of space provided for ruler event modifiers in the title view",
+                            "children": []
+                        },
+                        {
+                            "text": "Made the list of game rule filters in the game rules window more compact",
+                            "children": []
+                        },
+                        {
+                            "text": "Religions in the ledger now provide the same tooltip as they would in the character view",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some instances in French where \"Courtisan(e)\" would show up rather than the gender-specific version",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed it in some cases not being possible to arrange a marriage between one of your descendants and someone in your court via the \"arrange marriage\" button on the descendant",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed succession laws having their adjectives in the wrong order in French",
+                            "children": []
+                        },
+                        {
+                            "text": "Ensured that the map mode you select in the lobby always remains in place when you go in-game",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Claimants window not actually refreshing when you open a different landed title and hit \"Claimants\" there",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer possible to designate an heir who cannot inherit, since that wouldn't work anyway",
+                            "children": []
+                        },
+                        {
+                            "text": "Plots will no longer be hidden from view simply because your character is really happy with life",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated the Game Rules/Welcome interface.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "User modding",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added \"immortal_age\" trigger, which checks at what age someone became immortal. Always returns false if they are not immortal. Takes comparison operators. Example: immortal_age > 40",
+                            "children": []
+                        },
+                        {
+                            "text": "Added \"practical_age\" trigger. Practical age is the age someone became immortal at, if they're immortal. Otherwise it is their current age. Example: practical_age > 40",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed numerous errors getting logged when using the \"reloadevents\" console command",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed namespaced events not being possible to trigger after using the \"reloadevents\" console command",
+                            "children": []
+                        },
+                        {
+                            "text": "Added the following exports to export_to_variable:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "health: Exports a characters' health, including traits and the like, unlike base_health which only exports their base health\nday/month/year: Exports the current day of the month/month of the year/year\nday/month/year_of_birth: Exports the characters' day/month/year of birth"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The character opinion tooltip now provides scopes for custom loc. ROOT is the judging person, FROM is the person being judged",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed custom loc in rare cases being unable to reference event targets",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the artifact_owner scope doing nothing",
+                            "children": []
+                        },
+                        {
+                            "text": "Added set_immune_to_pruning command. Prevents a character from being pruned from AI courts or removed from save games. WARNING: the effects cannot be undone",
+                            "children": []
+                        },
+                        {
+                            "text": "Added is_immune_to_pruning trigger. Checks if the character has specifically been made immune to pruning either by script or the game internally",
+                            "children": []
+                        },
+                        {
+                            "text": "Added true_father and true_father_even_if_dead scopes. Scopes to the real_father if one exists else it scopes to the father",
+                            "children": []
+                        },
+                        {
+                            "text": "Added TrueFather localization promotion. As above, promotes to the RealFather if one exists else it promotes to the Father",
+                            "children": []
+                        },
+                        {
+                            "text": "Added twin and twin_even_if_dead scopes. Scopes to the twin of a character. WARNING: if your mod tries to use triplets etc. via the twin system you may encounter some oddities with these scopes.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Twin localization promotion. As above, promotes to the twin of a character. WARNING: if your mod tries to use triplets etc. via the twin system you may encounter some oddities with this scope.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added is_twin_of condition. Checks if the scoped character is the twin of the target character.",
+                            "children": []
+                        },
+                        {
+                            "text": "When debug_mode (AKA \"charinfo\") is active, the script tags of traits, modifiers, and artifacts now get shown in their tooltip for use in console commands, script effects, and similar",
+                            "children": []
+                        },
+                        {
+                            "text": "Added has_pressed_claim, has_strong_pressed_claim and has_weak_pressed_claim. Function the same as their non-pressed counterparts but check only for pressed claims and not un-pressed claims",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a modulo_variable command, modulos the first value by the second. Can take another variable as the second value as well as a which argument like the other variable commands",
+                            "children": []
+                        },
+                        {
+                            "text": "Added an optional \"fallback\" entry for a trigger_switch, this effect is run if no other entry in the trigger_switch is valid",
+                            "children": []
+                        },
+                        {
+                            "text": "Added male_opinion and female_opinion modifiers",
+                            "children": []
+                        },
+                        {
+                            "text": "Added on_betrothal on_action. Fires when a betrothal has been accepted. Same scopes as the on_marriage on_action",
+                            "children": []
+                        },
+                        {
+                            "text": "Untied the ability to prevent a religion from being able to demand religious conversion from the pagan group. Now use can_demand_religious_conversion = yes/no toggle to change the behavior. Defaults to yes. As before the character's government must also allow them to demand religious conversion for the interaction to be possible",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a cancel_pregnancy = yes effect. It removes the pregnancy of the currently scoped character",
+                            "children": []
+                        },
+                        {
+                            "text": "Added immortal_age history effect. Functions like the immortal_age line in create_character in that it sets the age at which the character became immortal. Make sure to actually add the immortal trait as well",
+                            "children": []
+                        },
+                        {
+                            "text": "Made the bride price merchant republic functionality a government toggle, uses_bride_price = yes/no. Default is \"no\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Offmap likes and dislikes now always go through custom loc",
+                            "children": []
+                        },
+                        {
+                            "text": "Custom loc now supports the parameter \"use_first_valid = yes\". If set, the text will not be randomly selected from the valid strings, but instead the very first valid string used",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the following console commands in some cases crashing the game: add_rival, remove_rival, clear_focus, remove_friend",
+                            "children": []
+                        },
+                        {
+                            "text": "Added parameter \"death_date_desc\" for death reasons. Changes the text shown when hovering over someone's age. Useful for death reasons like \"Went to China\" that aren't really outright dying",
+                            "children": []
+                        },
+                        {
+                            "text": "copy_random_personality_trait now shows the icon of the trait being copied",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed regional_percentage not working, and having a wonky tooltip",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed blank headgear portrait layers in rare cases leading to people being bald",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed comment next to on_yearly_childhood_pulse being incorrect about when it fires",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the any_landed_title trigger only checking dynamic titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Now possible to define who was liege of who in civil wars in history. See the War of the two Eriks for an example",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a number of crashes in the console when providing an invalid province ID",
+                            "children": []
+                        },
+                        {
+                            "text": "Building names and descriptions can now use custom loc. ROOT is the barony",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed using transfer_artifact with \"from\" not actually having the artifact leading to crashes long after the fact",
+                            "children": []
+                        },
+                        {
+                            "text": "The coat of arms system is now mod-foldered, (interface/coat_of_arms), so you can split your coat of arms definitions across multiple files. Note however that there is no support for appending existing definitions from a different file",
+                            "children": []
+                        },
+                        {
+                            "text": "Coat of arms textures can now take \"max_emblems = number\", to say how many emblems the AI is allowed to use at most. Defaults to 1. No effect if \"emblem = no\" is set. Also ensures only templates with at most this many slots get used by the AI. They can also take \"emblem_chance = number\", which defines the chance that an emblem will be used at all by the AI. Default value is 50",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a way the game could crash if you did weird things in loc like \"Prev.Prev\"",
+                            "children": []
+                        },
+                        {
+                            "text": "CBs can now take a third_party_portrait parameter. If set, this will override what'd normally show as the third party on the war overview. The scopes are the same as in can_use. Example: third_party_portrait = event_target:invasion_of_china_claimant",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed using any_current_enemy in the wrong scope crashing the game",
+                            "children": []
+                        },
+                        {
+                            "text": "show_scope_change = no now works in any/random effects",
+                            "children": []
+                        },
+                        {
+                            "text": "any/random_current_enemy no longer arbitrarily excludes the ROOT scope",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the relative_power_to_liege trigger not working",
+                            "children": []
+                        },
+                        {
+                            "text": "The loc strings COURTIER_MALE/FEMALE no longer have their first letter capitalized",
+                            "children": []
+                        },
+                        {
+                            "text": "GetPlayerRelation no longer forcibly makes the first letter in the relation (E.G., \"liege\") capitalized. Added GetPlayerRelationCap which uses the old behavior",
+                            "children": []
+                        },
+                        {
+                            "text": "set_secret_religion = scope now takes that scope's true religion rather than secret religion, so as to not set the null religion if the target has no secret religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the religion_authority trigger not working with numbers",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed set_interested_society always causing the character's interested society to be set to none, even when a society is specified",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed scoping to societies statically not working. E.G., \"the_satanists = { }\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed newlines in artifact descriptions set via \"set_description\" breaking after saving and loading the game, causing the whole text to be replaced with \"Unreadable String\"",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Database",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Name links. So many name links.",
+                            "children": []
+                        },
+                        {
+                            "text": "Unique Afghan and Baloch names added, no longer just a copy of the Kurdish names",
+                            "children": []
+                        },
+                        {
+                            "text": "Barony of \"Stargard\" has been removed from Rostock and moved to Stettin instead, replacing the incorrectly named barony of \"Stestargard\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Kabulistan in 769 is now ruled by a Buddhist branch of the Zunbil dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "Added fictional characters to fill history of Karur and Karor",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bugfixes",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Mercenary leaders should now properly be assigned for the middle flank of the army created by hiring the mercenary.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed nomads in some cases ending up with more holdings in a county than the number of holding slots",
+                            "children": []
+                        },
+                        {
+                            "text": "Bedridden characters can no longer be court physicians",
+                            "children": []
+                        },
+                        {
+                            "text": "Someone holding duchies/kingdoms in their primary title but no baronies or counties will no longer prevent you from usurping their title",
+                            "children": []
+                        },
+                        {
+                            "text": "The game will no longer freeze for an immense amount of time when pasting a long text into chat",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a rare crash on autosaving caused by a dynasty getting deleted despite being referenced by a title named after that dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue where you as a monastic order member would send yourself a congratulatory letter upon completing a pilgrimage in the name of your order",
+                            "children": []
+                        },
+                        {
+                            "text": "Made sure that the \"Honor the Dead\" event, during the kowtow to the Emperor, does not target characters who actually went to China",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed it in some cases being possible to become the Pope simply by dying while the Pope is your heir",
+                            "children": []
+                        },
+                        {
+                            "text": "Can no longer send rulers as concubines or eunuchs to china",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a confusing phrasing in some News from China-events",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed event 73004 never being able to trigger, as dead people have no prestige.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed place holder tooltip for trade post buildings.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed tooltip bug when you convert to the religion of your capital.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the player being able to retain childhood traits if they were incapable.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed that people could send patricians as eunuchs to China.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed incorrect event results in event 75111.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Norse Viking and Sea King related events to fit both males and females.",
+                            "children": []
+                        },
+                        {
+                            "text": "Isolationist China now REALLY don't want any visitors. For real.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed RIP.29014 event not showing portrait of the character skull was stolen from.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed missing portrait in imprisonment event 75011.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed problem with event JD.10130 where you could become tributary of China while you were becoming tributary of China. That is too much tributariness.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Ancona and Venice occasionally not being playable in certain start dates.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Bergenhus being spelled Bergenshus.",
+                            "children": []
+                        },
+                        {
+                            "text": "Changed description for Merchant Enclave to work regardless of the culture/owner of the province.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed RIP.30301.d.horse being slightly out of window.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed broken Tripimirovic dynasty tree.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed option loc being slightly too long in WoL.10116.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed scoping issue with other_claim_on_liege cb.",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated scoping and trigger for event 61135 to take in consideration that a child ruler might not have a regent at any given time, or that his regent might not be always a courtier.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Fatwa decision tooltip having a broken localization.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed ZE.22610 text being slightly out of bounds.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed incomplete limit in the second Option of HL.5050.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed broken tooltips of historical renaming events for West/East Francia.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed long list of tooltip portraits potentially appearing in RIP.4101.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed incomplete tooltip in event 100210.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed incomplete tooltip in event 100230.",
+                            "children": []
+                        },
+                        {
+                            "text": "Safety triggers on ZE.2020 to prevent it from firing when the ruler has no Chancellor.",
+                            "children": []
+                        },
+                        {
+                            "text": "Making an ironman save name with invalid characters no longer crashes the game, but now instead gives a pop-up complaining that it was unable to save",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed option trigger and tooltip on event 100150.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added notification message when ruler is appointed Designated Regent.",
+                            "children": []
+                        },
+                        {
+                            "text": "Changed scoping for notification of Hermetic Apprentice's death to check directly for its mentor rather than the current liege.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing AI crusade weights for Aztec Reformed.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed scoping issue with event RIP.29800.",
+                            "children": []
+                        },
+                        {
+                            "text": "Title usurpation is now properly restricted by the creation trigger for the title. This check can be bypassed by setting the title attribute usurpation_abides_allow = no.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Son trying to join the Bektashi order when already in the court of the Bektashi Grand Master.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing Pope for 70 days Benedictus X, whose absence was breaking the regnal numbers of the following Popes named Benedictus.",
+                            "children": []
+                        },
+                        {
+                            "text": "When using the Intrigue Focus to dig dirt on somebody, the option to give the information to the target's liege is no longer available if the liege is incapable, inaccessible, or a child.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some issues with achievements that required specific start dates still being available if you started later in history.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed flag cleanup event on monastic orders sometimes causing the artifact theft event chain to break.",
+                            "children": []
+                        },
+                        {
+                            "text": "Smiths will now refuse court invites, thus preventing them from being snatched while in the middle of an event chain as well as being recalled back to court by their angry liege after stealing his artifact.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed scoping issue causing the Emperor to blame a ruler for the death of Chinese courtier who was captured and executed by somebody else during a war.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Option B of MNM.1841 reducing Opinion rather than increasing it.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added cleanup event to properly interrupt an Hajj in case of imprisonment.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Highway Robbers and Thieves' Guild modifiers not affecting tribals and nomads.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Aztec Invasion happening almost always 50 years after the start of the game when setting it as Randomized in the rules.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Mongol Invasion happening almost always 50 years after the start of the game when setting it as Randomized in the rules.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed so that you can no longer lead troops while doing Penance for a Monastic Order.",
+                            "children": []
+                        },
+                        {
+                            "text": "You can no longer reassign the guardian for someone in prison other than your own, which would inexplicably free them.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Nabhanids not being Ibadi.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some Frankish names in history.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Great Conquest CB being listed when the player does not fill all conditions to use it.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a confusing option text at the end of the Magnificent Maze chain.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed getting liked / disliked by your vassals for creating a Duchy (incorrectly tied to obligation laws)",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed incorrect traitor flag for abducting your Liege with Intrigue focus",
+                            "children": []
+                        },
+                        {
+                            "text": "Made sure that the human sacrifice involved in the Ancestor Worship-chain is actually in *your* court, a.k.a *yours* to sacrifice.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed losing a battle in some cases giving you prestige and piety rather than reducing it",
+                            "children": []
+                        },
+                        {
+                            "text": "You can now attach your armies to the army of someone of lower tier if you really want to",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Assassin Debt notification not firing upon death of ruler for his heir.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed conquering a county as a patrician with no holdings other than your family palace in some cases resulting in you ceasing to be a patrician",
+                            "children": []
+                        },
+                        {
+                            "text": "Probably fixed it being possible to end up holding two nomad clan titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed vassals in rare cases going independent when someone revolting against their rule dies",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed winning a war against another vassal in rare cases causing you to go independent",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed gavelkind inheritance in rare cases resulting in one or more heir of a vassal going independent",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the War of the two Eriks leaving Erik the Heathen independent if he loses",
+                            "children": []
+                        },
+                        {
+                            "text": "The \"Prevent Realm Peace\" interaction no longer requires that your liege be independent",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Claim All CB not giving ticking warscore",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the decisions to have a vassal end a war causing the end of unrelated wars",
+                            "children": []
+                        },
+                        {
+                            "text": "Made sure the sacrificing to the ancestors-events do not lead to you befriending your own prisoners.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed caste inheritance completely ignoring the existence of the mother",
+                            "children": []
+                        },
+                        {
+                            "text": "Your spiritual councillor should no longer accidentally start fearing his own people, only other proper scary pagans",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed holy wars and some other CBs in rare cases causing landless characters (for example, religious heads) in the target realm to lose their title or ending up vassalized by you when they shouldn't",
+                            "children": []
+                        },
+                        {
+                            "text": "Made it so bedridden/incapable Councilors will never succeed in any job_action.",
+                            "children": []
+                        },
+                        {
+                            "text": "Effects of event ZE.11021 (Son upset of liege disbanding his mercenary band) made clearer. The character will also now no longer return to the liege's court if other vassals in the realm are available.",
+                            "children": []
+                        },
+                        {
+                            "text": "When hiring mercenaries they'll now never spawn on top of enemy units, even if your capital is on an island",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some old saves crashing during save load",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the game in rare cases crashing when opening the court view after keeping it closed for several years",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a rare crash where the last member of a coalition inherits the titles of the coalition target, and then ends up still thinking they're a target of the coalition after the coalition has been deleted",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a rare OOS caused by council discontent when one or more players have used the Ruler Designer",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed rare crash when a player uses ally orders and then uses the console to switch character or observe",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Ritual Devil Worshipper event in some cases giving Witch when it should give Suspected Witch",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed rulers generated on succession (E.G., theocracies and republics) not being considered members of their own court in some cases",
+                            "children": []
+                        },
+                        {
+                            "text": "Optimized the UI some, reducing lag when scrolling character lists and similar",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.8.2.1",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.8.2.1 was released on 2018-05-17 [4] with the checksum SAHQ ."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Slavic rulers are now less self sacrificing",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed display issues with some text",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.8.3",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.8.3 was released on 2018-06-12 [5] with the checksum WVUU ."
+                }
+            ]
+        },
+        {
+            "heading": "Free Features",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Single Player menu now shows portrait, name, and date for the continue save.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bug Fixes",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed a crash in the law view for the elector tooltip",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash on startup related to custom game rules",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.8.3.1",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.8.3.1 was released on 2018-06-13 [6] with the checksum SAHQ ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The only fix in this update is a 're-fix' for a resurfaced bug relating to overly self-sacrificing AI. Hence, there won't be a roll-back for 2.8.3!"
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.8.3.2",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.8.3.2 was released on 2018-06-27 [7] with the checksum SAHQ ."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed some common crashes from using main menu mods.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Forum, 2.8.1 Released, changelog here. Checksum WTTG , 2017-12-06",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum, Patch Released - 2.8.1.1 - Checksum ISRM , 2017-12-18",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum, Crusader Kings II - 2.8.2 \"Spring Cleaning Patch\" is now live! , 2018-05-15",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum, Hotfix Patch 2.8.2.1 is now live - [checksum SAHQ] , 2018-05-17",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum, Patch 2.8.3 is now live! - [checksum WVUU] , 2018-06-12",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum, Hotfix Patch 2.8.3.1 is now live! , 2018-06-13",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum, Hotfix Patch 2.8.3.2 is now live! , 2018-06-27",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

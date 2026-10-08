@@ -1,0 +1,2237 @@
+{
+    "pageid": 3647,
+    "title": "Scripting",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Scripting allows to modify dynamically the world and govern A.I. character behaviors. It is opposed to static history modding , though some scripts may exceptionally be triggered from history files."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Scripting is event-based, with Clausewitz engine being optimized to filter and process massive amounts of events on characters and provinces."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The structure is based on definitions of entities, that have:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "properties (or \"flags\")",
+                            "children": []
+                        },
+                        {
+                            "text": "pre-defined functions (or \"blocks\") attached and called in a specific order by the engine, and containing scopes , conditions and commands .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A relatively unique characteristic of the engine is the ability to dynamically display a textual representation of those \"blocks\" in tooltips (each scope, condition and command being localized), for the player to preview the effects of an action before taking it or know why a decision isn't available, and without any extra work required by modders."
+                }
+            ]
+        },
+        {
+            "heading": "Basics",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The scripts are plain .txt files, and use a JSON-like syntax:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "= separates key from a value",
+                            "children": []
+                        },
+                        {
+                            "text": "{ } is a structured/complex value",
+                            "children": []
+                        },
+                        {
+                            "text": "# is the start of a comment",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The grammar of allowed properties and blocks depend on the relative path of the file toward the base game directory:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "common/religions will contain .txt files where entities are religion groups and religion, with properties specific to religions (see religion modding ).",
+                            "children": []
+                        },
+                        {
+                            "text": "events will contain .txt files where entities are events, with properties and blocks specific to events (see event modding ).",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Value types",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Most frequent value types are:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Type",
+                            "Description"
+                        ],
+                        [
+                            "bool",
+                            "Boolean value yes/no"
+                        ],
+                        [
+                            "int",
+                            "Integer value"
+                        ],
+                        [
+                            "float",
+                            "Floating point value"
+                        ],
+                        [
+                            "date",
+                            "YYYY.MM.dd format, starting from 1.1.1 . Note: negative dates are not properly handled by the engine."
+                        ],
+                        [
+                            "string",
+                            "String literal values, e.g. \"Orsini\". Quotes are only strictly needed when the value contains spaces, though recommended for readability."
+                        ],
+                        [
+                            "color",
+                            "Color values either as RGB list { 255 255 255 } or hexadecimal 0xff0000 ."
+                        ],
+                        [
+                            "clause",
+                            "A complex structure where parameters depend on the condition. <condition> = {\n <parameter1> = <value1>\n <parameter2> = <value2>\n}"
+                        ],
+                        [
+                            "ID",
+                            "An ID referencing an entity defined in another file (culture, religion, culturegfx, localization key,...). Does not contain spaces (_ is typically used as word separator). It may be quoted, though it leads to confusion with string literals."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: negative dates are not properly handled by the engine."
+                }
+            ]
+        },
+        {
+            "heading": "Boolean operators",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Operators used to combine several conditions:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Operator",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "AND",
+                            "Returns true if all enclosed conditions return true. This is the default operator after a scope change.",
+                            "AND = {\n    age >= 15\n    age < 35\n}"
+                        ],
+                        [
+                            "OR",
+                            "Returns true if at least one enclosed condition returns true",
+                            "OR = {\n    culture = norman \n    culture = saxon\n}"
+                        ],
+                        [
+                            "NOT",
+                            "Returns true if the enclosed condition is false. It behaves the same as NOR, but for clarity NOR is preferred in case of more than 1 condition.",
+                            "NOT = { trait = on_hajj }"
+                        ],
+                        [
+                            "NOR",
+                            "Returns true if none of the enclosed conditions return true.",
+                            "NOR = {\n    trait = seducer\n    trait = seductress\n} which is equivalent to: NOT = { \n    OR = { \n\ttrait = seducer\n\ttrait = seductress\n    }\n} or alternately: AND = {\n    NOT = { trait = seducer }\n    NOT = { trait = seductress }\n}"
+                        ],
+                        [
+                            "NAND",
+                            "Returns true if at least one enclosed condition return false.",
+                            "NAND = {\n    culture = norman\n    religion = catholic\n} which is equivalent to: NOT = { \n    AND = { \n\tculture = norman\n\treligion = catholic\n    }\n} or alternately: OR = { \n    NOT = { culture = norman }\n    NOT = { religion = catholic }\n}"
+                        ],
+                        [
+                            "calc_true_if",
+                            "Returns true if at least amount conditions return true. amount supports numerical operators as of patch 2.8 .",
+                            "calc_true_if = {\n    amount >= 3\n    culture = swedish\n    religion = catholic\n    is_female = no\n    is_adult = yes\n    age >= 50\n}"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It behaves the same as NOR, but for clarity NOR is preferred in case of more than 1 condition."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "which is equivalent to:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "or alternately:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "which is equivalent to:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "or alternately:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "amount supports numerical operators as of patch 2.8 ."
+                }
+            ]
+        },
+        {
+            "heading": "Numeric operators",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With patch 2.8 comparison operators have been generalized to all numeric triggers."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Operator",
+                            "Comparison",
+                            "Example",
+                            "Pre-2.8",
+                            "Notes"
+                        ],
+                        [
+                            "=",
+                            "Greater or equal",
+                            "ai_greed = 5",
+                            "ai_greed = 5",
+                            "Backward-compatible greater equivalence (mandatory in version 2.7.2 or earlier).  Contrary to expectation, this is not an exact comparison. ai_greed = 5 is read as \"ai_greed is at least 5\", not \"ai_greed is equal to 5\". When inside a NOT, it is read as \"ai_greed is less than 5\"."
+                        ],
+                        [
+                            "<",
+                            "Less than",
+                            "ai_greed < 5",
+                            "NOT = { ai_greed = 5 }",
+                            "Lesser unequivalence.  True if value is less than numeral and not equal to numeral."
+                        ],
+                        [
+                            ">",
+                            "Greater than",
+                            "ai_greed > 5",
+                            "ai_greed = 6",
+                            "Greater unequivalence.  True if value is greater than numeral, but not equal to numeral.  Pre-2.8 equivalent works only for integers (otherwise, will need to check against the target number plus a very small floating point, such as scaled_wealth = 5.00001 )."
+                        ],
+                        [
+                            "<=",
+                            "Lesser or equal",
+                            "ai_greed <= 5",
+                            "NOT = { ai_greed = 6 }",
+                            "Lesser equivalence.  True if variable is less or equal to numeral.  Pre-2.8 equivalent works only for integers (otherwise, will need to check against the target number plus a very small floating point, such as NOT = { scaled_wealth = 5.00001 } )."
+                        ],
+                        [
+                            ">=",
+                            "Greater or equal",
+                            "ai_greed >= 5",
+                            "ai_greed = 5",
+                            "Greater equivalence.  True if value is greater than or equal to numeral.  Identical, but lexically superior, to = ."
+                        ],
+                        [
+                            "==",
+                            "Equal",
+                            "ai_greed == 5",
+                            "ai_greed = 5 NOT = { ai_greed = 6 }",
+                            "Exact comparison.  True if and only if value equals numeral, and no other value.  Pre-2.8 equivalent works only for integers (otherwise, will need to check against the target number plus a very small floating point, such as wealth = 5 NOT = { wealth = 5.00001 } )."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "NOT = { ai_greed = 6 }"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Warning : the above feature applies neither to the tier nor among_most_powerful_vassals triggers.  \nThis is for backward compatibility reasons, since existing code might assume that \"tier = duke\" means equal and not greater-than-or-equal comparison. This would break multiple mods if they required a change to reflect the new operators."
+                }
+            ]
+        },
+        {
+            "heading": "Control flow statements",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "If",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "if statements allow to execute commands only if certain conditions are met. The structure is:"
+                }
+            ]
+        },
+        {
+            "heading": "Else_if/Else",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In version 2.8, else_if and else statements were added."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In versions prior to 2.8, if/else_if/else can still be simulated by repeating the conditions in an if with a NOT operator:"
+                }
+            ]
+        },
+        {
+            "heading": "Trigger If",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 3.0 added support for control flow statements in trigger clauses, expanding on condition_tooltip . trigger_if is an alias for conditional_tooltip , which can be chained with trigger_else_if and trigger_else . Additionally, limit can be used instead of trigger , matching regular syntax for if . \nThese are very useful in indicating control flow and intent in lengthy, complex triggers. Keep in mind that long chains of trigger_else_if that require one of the limit clauses to be true have to end with trigger_else , since the entire chain is ignored and is thus always true if none of the limit clauses are true."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Consider the following:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This can be written much clearer in the following way:"
+                }
+            ]
+        },
+        {
+            "heading": "Switch",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "trigger_switch was introduced in patch 2.4 and is a shortcut to multiple if/limit blocks, in case the ifs are on different values of the same condition, specified via on_trigger ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It works with all triggers that have a non-complex right-hand-side argument and will try to do a normal evaluation during the on_triggers from the scope that the trigger_switch clause is residing in. If more than one value in on_triggers evaluate as true, it will still only execute the first in the list that evaluates to true. [1] If a fallback value is present and no other value evaluated as true, then the fallback option will be executed."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Switch doesn't work with scripted triggers , as they are macros and thus are complex right-hand-side arguments. [2]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "As of patch 2.5 , it was not working with the region trigger, due to a specific issue that will get fixed. [3]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Here are some examples:"
+                }
+            ]
+        },
+        {
+            "heading": "Break",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "break was introduced with patch 2.3 and acts as a return statement, causing everything after it (in the main block: option, immediate, ...) to be ignored. [4] It avoids the need to repeat the conditions with NOT operator in another if/limit block, when commands are exclusive. The structure is:"
+                }
+            ]
+        },
+        {
+            "heading": "While",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "while effect was added in patch 2.6 [5] , allowing for the implementation of while loops."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The syntax is:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Here is an example:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This will add 100 wealth to THIS, the current scoped character, as it will loop 20 times."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Notes:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "the while effect does not produce any tooltip due to the problems that would cause.",
+                            "children": []
+                        },
+                        {
+                            "text": "make sure you don't create an endless loop... Although there is a fail-safe at 100K loops.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In patch 2.8 , an additional count parameter was added which allows a fixed number of loops (i.e. a for loop), and does not require the use of variables.  This provides much cleaner and more concise code if a fixed number of loops is desired."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The above effect block will add 100 wealth to THIS, just like the previous example."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the two methods are combined, the loop will exit either when the limit fails, or when the count is passed, whichever happens first."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Even though the above while loop \"should\" execute 25 times because of myvar , it will end after 20 loops because of the count .  If myvar was set to 15 instead, it would execute only 15 times, and not 20 times, because the variable check would be false."
+                }
+            ]
+        },
+        {
+            "heading": "Storing information",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Here is a summary of the possible ways to store information, depending on the type of scope that information is attached to:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Type of storage / Supported scopes",
+                            "Variable (numeric)",
+                            "Flag (boolean + date)",
+                            "Modifier (boolean + date)",
+                            "Event target (scope reference)",
+                            "Earmark (boolean)"
+                        ],
+                        [
+                            "Global scope",
+                            "set_variable with 'global_' prefix in front of variable name",
+                            "set_global_flag",
+                            "No",
+                            "save_global_event_target_as",
+                            "No"
+                        ],
+                        [
+                            "Event chain",
+                            "set_variable with 'local_' prefix in front of variable name",
+                            "No",
+                            "No",
+                            "save_event_target_as",
+                            "No"
+                        ],
+                        [
+                            "Character scope",
+                            "set_variable",
+                            "set_character_flag",
+                            "add_character_modifier",
+                            "save_persistent_event_target",
+                            "No"
+                        ],
+                        [
+                            "Province scope",
+                            "set_variable",
+                            "set_province_flag",
+                            "add_province_modifier",
+                            "save_persistent_event_target",
+                            "No"
+                        ],
+                        [
+                            "Title scope",
+                            "set_variable",
+                            "set_title_flag",
+                            "No",
+                            "save_persistent_event_target",
+                            "No"
+                        ],
+                        [
+                            "Holding scope",
+                            "No",
+                            "No",
+                            "add_holding_modifier",
+                            "No",
+                            "No"
+                        ],
+                        [
+                            "Dynasty",
+                            "No",
+                            "set_dynasty_flag",
+                            "add_dynasty_modifier",
+                            "No",
+                            "No"
+                        ],
+                        [
+                            "Bloodline scope",
+                            "No",
+                            "set_bloodline_flag or flags = {} in bloodline types.",
+                            "No",
+                            "No",
+                            "No"
+                        ],
+                        [
+                            "Unit scope",
+                            "No",
+                            "No",
+                            "No",
+                            "No",
+                            "When using spawn_unit"
+                        ],
+                        [
+                            "Artifact scope",
+                            "set_variable",
+                            "set_artifact_flag or flags = {} in artifact definitions.",
+                            "No",
+                            "save_persistent_event_target",
+                            "No"
+                        ],
+                        [
+                            "Society scope",
+                            "set_variable",
+                            "set_flag",
+                            "add_society_modifier",
+                            "save_persistent_event_target",
+                            "No"
+                        ],
+                        [
+                            "Offmap power scope",
+                            "set_variable",
+                            "set_offmap_flag",
+                            "No",
+                            "save_persistent_event_target",
+                            "No"
+                        ],
+                        [
+                            "Religion scope",
+                            "set_variable",
+                            "set_flag",
+                            "religion_authority",
+                            "save_event_target_as",
+                            "No"
+                        ],
+                        [
+                            "Culture scope",
+                            "set_variable",
+                            "set_flag",
+                            "No",
+                            "save_event_target_as",
+                            "No"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Variables",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Variables are numeric values attached to character, province, title, global scope (added with patch 2.7 ) or event chains (added with patch 2.8 ). They have a range of −2,147,483.648 to 2,147,483.647, in steps of .001 (32 bit signed fixed-point, 3 decimal places)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Variable are persisted in saves, and though there is no command to clear variables, the increased file size is usually negligible. Variables set to 0 are not saved to file, and so will be cleared after reload."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Since patch 2.8 , it is possible to check a variable with a trigger/condition, and to assign a variable to an effect/command."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Important : in versions prior to patch 2.8 , scripting variables are only able to pull, not set, the other numeric variables used by the game (attributes, gold, piety, ...), i.e. it's not possible to assign the value of a variable to a trigger."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Variables are always stored/retrieve in the scope where the commands/triggers are executed.\nSo for instance to create a variable myvar with value 1 in ROOT scope:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Or to create a global variable, add the prefix 'global_' in front of the variable's name:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "and to check for it:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Since the introduction of global_variables with patch 2.7 , it is possible to compare two variables in separate scopes by setting the value of one of the variables to a global_variable, then comparing the global variable to any scoped variable as follows:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is also possible to count number of instances of a scope:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Support for event variables was added in patch 2.8 , which are only accessible for the duration of an event chain. These are not bound to any scope and can be convenient when dealing with scopes that do not support variables, such as bloodlines. Save event variables by starting the name with 'local_'."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Variables can be assigned the value of certain triggers using the export_to_variable command"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Variables which can be exported [6] [7] :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "martial",
+                            "children": []
+                        },
+                        {
+                            "text": "diplomacy",
+                            "children": []
+                        },
+                        {
+                            "text": "intrigue",
+                            "children": []
+                        },
+                        {
+                            "text": "stewardship",
+                            "children": []
+                        },
+                        {
+                            "text": "learning",
+                            "children": []
+                        },
+                        {
+                            "text": "base_health",
+                            "children": []
+                        },
+                        {
+                            "text": "health",
+                            "children": []
+                        },
+                        {
+                            "text": "demesne_efficiency",
+                            "children": []
+                        },
+                        {
+                            "text": "decadence",
+                            "children": []
+                        },
+                        {
+                            "text": "dynasty_realm_power",
+                            "children": []
+                        },
+                        {
+                            "text": "fertility",
+                            "children": []
+                        },
+                        {
+                            "text": "infamy",
+                            "children": []
+                        },
+                        {
+                            "text": "mercenary_siphon_factor",
+                            "children": []
+                        },
+                        {
+                            "text": "monthly_income",
+                            "children": []
+                        },
+                        {
+                            "text": "plot_power",
+                            "children": []
+                        },
+                        {
+                            "text": "population_factor",
+                            "children": []
+                        },
+                        {
+                            "text": "relative_power_to_liege",
+                            "children": []
+                        },
+                        {
+                            "text": "religion_authority",
+                            "children": []
+                        },
+                        {
+                            "text": "revolt_risk",
+                            "children": []
+                        },
+                        {
+                            "text": "scaled_wealth",
+                            "children": []
+                        },
+                        {
+                            "text": "treasury/wealth",
+                            "children": []
+                        },
+                        {
+                            "text": "yearly_income",
+                            "children": []
+                        },
+                        {
+                            "text": "age",
+                            "children": []
+                        },
+                        {
+                            "text": "day_of_birth",
+                            "children": []
+                        },
+                        {
+                            "text": "month_of_birth",
+                            "children": []
+                        },
+                        {
+                            "text": "year_of_birth",
+                            "children": []
+                        },
+                        {
+                            "text": "ai_ambition",
+                            "children": []
+                        },
+                        {
+                            "text": "ai_greed",
+                            "children": []
+                        },
+                        {
+                            "text": "ai_honor",
+                            "children": []
+                        },
+                        {
+                            "text": "ai_rationality",
+                            "children": []
+                        },
+                        {
+                            "text": "ai_zeal",
+                            "children": []
+                        },
+                        {
+                            "text": "among_most_powerful_vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "combat_rating",
+                            "children": []
+                        },
+                        {
+                            "text": "demesne_garrison_size",
+                            "children": []
+                        },
+                        {
+                            "text": "demesne_size",
+                            "children": []
+                        },
+                        {
+                            "text": "health_traits",
+                            "children": []
+                        },
+                        {
+                            "text": "imprisoned_days",
+                            "children": []
+                        },
+                        {
+                            "text": "lifestyle_traits",
+                            "children": []
+                        },
+                        {
+                            "text": "max_manpower",
+                            "children": []
+                        },
+                        {
+                            "text": "num_fitting_characters_for_title",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_baron_titles",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_buildings",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_children",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_claims",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_consorts",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_count_titles",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_count_titles_in_realm",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_demesne_castles",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_demesne_cities",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_demesne_empty_provinces",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_demesne_temples",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_demesne_tribes",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_duke_titles",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_dynasty_members",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_emperor_titles",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_empty_holdings",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_extra_landed_titles",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_feuds",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_friends",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_holy_sites",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_king_titles",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_lovers",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_max_settlements",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_plot_backers",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_prisoners",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_rivals",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_settlements",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_subrealm_castles",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_subrealm_cities",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_subrealm_empty_provinces",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_subrealm_temples",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_subrealm_tribes",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_spouses",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_titles",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_trade_posts",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_traits",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_unique_dynasty_vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "over_max_demesne_size",
+                            "children": []
+                        },
+                        {
+                            "text": "over_vassal_limit",
+                            "children": []
+                        },
+                        {
+                            "text": "personality_traits",
+                            "children": []
+                        },
+                        {
+                            "text": "piety",
+                            "children": []
+                        },
+                        {
+                            "text": "population",
+                            "children": []
+                        },
+                        {
+                            "text": "population_and_manpower",
+                            "children": []
+                        },
+                        {
+                            "text": "prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "realm_diplomacy",
+                            "children": []
+                        },
+                        {
+                            "text": "realm_intrigue",
+                            "children": []
+                        },
+                        {
+                            "text": "realm_learning",
+                            "children": []
+                        },
+                        {
+                            "text": "realm_martial",
+                            "children": []
+                        },
+                        {
+                            "text": "realm_stewardship",
+                            "children": []
+                        },
+                        {
+                            "text": "realm_levies",
+                            "children": []
+                        },
+                        {
+                            "text": "realm_levies_plus_allies",
+                            "children": []
+                        },
+                        {
+                            "text": "max_realm_levies",
+                            "children": []
+                        },
+                        {
+                            "text": "realm_size",
+                            "children": [
+                                {
+                                    "text": "NB: Unlike the in-game realm size, this includes family palaces.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "republic_total_num_of_trade_posts",
+                            "children": []
+                        },
+                        {
+                            "text": "ruled_years",
+                            "children": []
+                        },
+                        {
+                            "text": "score",
+                            "children": []
+                        },
+                        {
+                            "text": "unused_manpower",
+                            "children": []
+                        },
+                        {
+                            "text": "retinue_points_max",
+                            "children": []
+                        },
+                        {
+                            "text": "retinue_points_used",
+                            "children": []
+                        },
+                        {
+                            "text": "retinue_points_free",
+                            "children": []
+                        },
+                        {
+                            "text": "total_tax_value",
+                            "children": []
+                        },
+                        {
+                            "text": "holding_tax_value",
+                            "children": []
+                        },
+                        {
+                            "text": "dynastic_prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "society_currency",
+                            "children": []
+                        },
+                        {
+                            "text": "day",
+                            "children": []
+                        },
+                        {
+                            "text": "month",
+                            "children": []
+                        },
+                        {
+                            "text": "year",
+                            "children": []
+                        },
+                        {
+                            "text": "total_years_played",
+                            "children": []
+                        },
+                        {
+                            "text": "holding_garrison",
+                            "children": []
+                        },
+                        {
+                            "text": "holding_garrison_percent",
+                            "children": []
+                        },
+                        {
+                            "text": "holding_raisable_levy",
+                            "children": []
+                        },
+                        {
+                            "text": "holding_raisable_levy_percent",
+                            "children": []
+                        },
+                        {
+                            "text": "holding_total_levy",
+                            "children": []
+                        },
+                        {
+                            "text": "holding_total_levy_percent",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Normally, the value is pulled from the current scope, but another scope can be set with the who parameter."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Commands on variables have a second parameter, which can be:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A literal value: (set|change|subtract|multiply|divide|modulo)_variable = { which = <variable_name> value = <value> }",
+                            "children": []
+                        },
+                        {
+                            "text": "A reference to another variable in same scope: (set|change|subtract|multiply|divide|modulo)_variable = { which = <variable_name> which = <another_variable_name> }",
+                            "children": []
+                        },
+                        {
+                            "text": "A scope (in the form of ROOT/FROM/PREV/THIS) which contains a variable with the same name: (set|change|subtract|multiply|divide|modulo)_variable = { which = <variable_name> which = <scope> }",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Variables can be checked with usual superior or equal comparison, or with strict equality:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "check_variable = { which = <variable_name> value = <value> }",
+                            "children": []
+                        },
+                        {
+                            "text": "is_variable_equal = { which = <variable_name> value = <value> }",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "As of patch 2.8 , numerical operators are supported in check_variable , on both numerical values and other variables."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Variables can be used in localization: [8]"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "[<variable_name>.GetName] , ex: [Root.PrimaryTitle.test_var.GetName]",
+                            "children": []
+                        },
+                        {
+                            "text": "[<variable_name>.GetValue] , ex: [Root.PrimaryTitle.test_var.GetValue]",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The variables themselves are localized via a .csv entry whose key is the variable name:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "myvar;My Variable;;;;;;;;;;;;;x",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any variable command will treat a previously undefined variable as having a value of 0."
+                }
+            ]
+        },
+        {
+            "heading": "Flags",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Flags are boolean values (flag is either present or not), which can be attached to the following scopes: character, province, title, dynasty, or global."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The command to set or clear a flag are:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "set_<scope>_flag = <flag_name>",
+                            "children": []
+                        },
+                        {
+                            "text": "clr_<scope>_flag = <flag_name>",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Flags can be checked via conditions, for either the flag presence or the duration since the flag has been set:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "has_<scope>_flag = <flag_name>",
+                            "children": []
+                        },
+                        {
+                            "text": "had_<scope>_flag = { flag = <flag_name> days = <duration> }",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that modifiers are somewhat similar to flags, but in addition they alter the statistics of the scope they are attached to."
+                }
+            ]
+        },
+        {
+            "heading": "Dynamic flags",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The flag name may be dynamic, by appending @ and a scope (character, province or title): [9]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It only affects how the actual flag name is created, but doesn't change how the flag is checked."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "FROM = { set_character_flag = is_friend_of_@ROOT }"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example, if a character has a character ID of 140, the saved character flag will be is_friend_of_140 ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "They can also be used in triggers: has_character_flag = is_friend_of_@FROM"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Use of dynamic flags is currently only supported for set|clr_ scope _flag commands and has|had_ scope _flag conditions. They cannot be used in the flag line of the create_character command (flags used in instances other than those listed previously must be static). [10]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that scopes saved as variables in event targets can be used in dynamic flags as well. [11]"
+                }
+            ]
+        },
+        {
+            "heading": "Earmarks",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Event spawned units have a similar but more limited mechanism than flags, called earmarks ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "An earmark is added when creating a unit via: spawn_unit = { earmark = <earmark> }"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It can then be tested on the owner of the unit: has_earmarked_regiments = <earmark>"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "And finally to disband the unit with the given earmark: disband_event_forces = <earmark>"
+                }
+            ]
+        },
+        {
+            "heading": "Event targets",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Scopes (character, province or title) can be saved as variables and re-used during an event chain , using: [12]"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "command save_event_target_as = <target_name> or save_global_event_target_as = <target_name>",
+                            "children": []
+                        },
+                        {
+                            "text": "special scope event_target:<target_name>",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Event targets can be used in the tooltip of the event in which they are saved (which is normally not possible, as tooltips are built before effects are executed)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Event targets are used in localization by referencing directly the variable name:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "I have decided to punish my vassal [target_adulterer.GetFullName]"
+                }
+            ]
+        },
+        {
+            "heading": "Persistent event targets",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Persistent event targets work much like regular event targets, except they are tied to a scope (which can be a province, character, title, artifact, society, or offmap power), not to an event chain. That means that you can keep referencing it from different contexts long after the original event chain is over, such as from new events, society names, trait names (they are used in vanilla to store the name of the person responsible for the coronation in the \"Crowned by X\" traits). They are only cleared when purposely cleared, or when the holder scope (if it is a character) dies."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "save_persistent_event_target = { name = name_of_target scope = event_target:my_character } . Scope is the scope to save. It'll be saved in whatever the current scope is scoped to, assuming it supports persistent event targets. Relative scoping like ROOT, liege, and similar work as well.",
+                            "children": []
+                        },
+                        {
+                            "text": "clear_persistent_event_target = name_of_target . Removes the given target.",
+                            "children": []
+                        },
+                        {
+                            "text": "persistent_event_target:name_of_target = { } . Scopes to the given target.",
+                            "children": []
+                        },
+                        {
+                            "text": "[name_of_target.SomeLocCommand] . Scopes to the given target in localisation . In the case of collision with a regular event target, the non-persistent target takes precedence.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Timers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "It is sometime needed to measure how much time has elapsed since an event occurred as a condition of another event."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There are 2 techniques for that: flags or event modifiers ."
+                }
+            ]
+        },
+        {
+            "heading": "Flags as timers",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Scripting flags keep a reference to when they were set."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Setting a flag using set_<scope>_flag command:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Using had_<scope>_flag triggers to check elapsed time in days:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If needed, timer can be reset by using clr_<scope>_flag command followed by set_<scope>_flag :",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Event modifiers as timers",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A modifier can act as a cooldown timer, and make the scripts simpler, but they are limited to characters, provinces and holdings."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Setting a hidden modifier that will expire after a given time via add_character_modifier , add_province_modifier or add_holding_modifier commands:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Checking it via has_character_modifier , has_province_modifier or has_holding_modifier",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Modifiers need to be defined in common\\event_modifiers",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: hidden modifiers don't need localization as they are not displayed."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Modifiers can also be stacked",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "After you can check the quantity of this modifier"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can also remove a quantity of this modifier"
+                }
+            ]
+        },
+        {
+            "heading": "Randomness",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There are two commands that can be used to generate a random result: random and random_list . random_list is similar to using several random blocks, except it guarantees that only one block will execute, which is not the case with multiple random blocks."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Since patch 2.3 both commands can be weighted with some mult_modifier = { } blocks, that based on conditions, can:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "increase the chances if factor > 1",
+                            "children": []
+                        },
+                        {
+                            "text": "decrease the chances if factor < 1",
+                            "children": []
+                        },
+                        {
+                            "text": "annihilate the chances if factor = 0",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Since patch 2.7 random_list supports the use of trigger . trigger obsoletes the use of modifiers with factor 0 and requires no inverted logic. random can be wrapped inside an if block instead."
+                }
+            ]
+        },
+        {
+            "heading": "Random",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The actual chances (if both <factor_1> and <factor_2> conditions match) are: <percentage> * <factor_1> * <factor_2> / 100"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Example:"
+                }
+            ]
+        },
+        {
+            "heading": "Random list",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The actual chances (in case all factor match) are:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Total = <weight_A> * <factor_1> * <factor_2> + <weight_B> * <factor_3> + ...",
+                            "children": []
+                        },
+                        {
+                            "text": "A chances: <weight_A> * <factor_1> * <factor_2> / Total",
+                            "children": []
+                        },
+                        {
+                            "text": "B chances: <weight_B> * <factor_3> / Total",
+                            "children": []
+                        },
+                        {
+                            "text": "Fallback: if all other options have 0 weight",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Example:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In the example below, if the player has Holy Fury installed there will be a 50/50 chance of either option being chosen. If the player does not have Holy Fury installed then only the first option will be chosen."
+                }
+            ]
+        },
+        {
+            "heading": "Scope chain",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To understand scope chains, imagine that every time the game engine encounters a scope while processing a script block, the scope will be put on the top of a stack.\nOnce the triggers, commands or nested scopes in that scope have been evaluated, the current scope is removed from that stack, and game engine continues with processing the parent scope."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that the scope chain is different from the event chain : each time an effect that triggers an event (like character_event ) is executed inside an event or decision, the base scope of that event (i.e. the caller) is added to the event chain, so that the new event (i.e the callee) may reference it."
+                }
+            ]
+        },
+        {
+            "heading": "Special scopes",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "When nesting scopes, special variables are used to reference other scopes in the chain. These values cannot be changed."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Variable",
+                            "Description"
+                        ],
+                        [
+                            "ROOT",
+                            "Original and lowest scope in the chain: Events : the entity (character or province) who got the event. For on_action events , varies depending on the action. In some rare cases, the default scope (THIS at the beginning of the block) and ROOT are different: this happens for major = yes events. Decisions : the decision taker. Targeted decisions : the targeted character. Objectives : the plotting character Casus Belli : the character who has a case for war. Buildings : the province. job_actions: the councillor"
+                        ],
+                        [
+                            "FROM",
+                            "Events : the entity (character or province) who sent the event. Only works if an event was triggered by another event/decision, to scope to that trigger. May be chained with FROMFROM to go up the chain of events (maximum 4 FROMs as of patch 2.3 ). For on_action events , varies depending on the action. Targeted decisions : the decision taker. Objectives : the target character of the plot Casus Belli : the character who is being declared war on. Buildings : the character (baron) holding the settlement. FROMFROM is the holding (barony title). job_actions: the ruler"
+                        ],
+                        [
+                            "ROOT_FROM",
+                            "ROOT_FROM is a shortcut for ROOT = { FROM = { } } : it allows to reference the FROM of current block when inside a chain of FROM scopes. Since FROM is relative, using FROMFROM = { FROM = { } } would be equivalent to using directly FROMFROMFROM = {} , which is not what you want. FROMFROM = { ROOT_FROM = { } } allows to apply conditions/commands referencing both FROMFROM and FROM.\nFor instance: FROMFROM = { is_child_of = ROOT_FROM } . Can be stacked up to four times (same as FROM ), i.e., ROOT_FROMFROMFROMFROM is valid syntax."
+                        ],
+                        [
+                            "PREV",
+                            "Previous scope used in the chain. May be chained with PREVPREV to go several scopes up the chain. Maximum 4 PREVs chainable for PREVs used as part of RHS argument, i.e., some_trigger/effect = PREVPREVPREVPREV , some_trigger/effect = { some_arg = PREVPREVPREVPREV } . Maximum 2 PREVs chainable for PREVs used for scope changing, i.e., PREVPREV = { some_trigger/effect = yes } . Note: PREV, ROOT, FROM, ROOT_FROM, and their chained variants do count as a scope change."
+                        ],
+                        [
+                            "THIS",
+                            "Current scope. Used in conditions/commands that work against a scope, as that argument is mandatory: any_realm_character = {\n   ROOT = { is_liege_of = THIS }\n} Note that using ROOT and FROM scopes do not change the scope of THIS."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Original and lowest scope in the chain:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Events : the entity (character or province) who got the event. For on_action events , varies depending on the action. In some rare cases, the default scope (THIS at the beginning of the block) and ROOT are different: this happens for major = yes events.",
+                            "children": []
+                        },
+                        {
+                            "text": "Decisions : the decision taker.",
+                            "children": []
+                        },
+                        {
+                            "text": "Targeted decisions : the targeted character.",
+                            "children": []
+                        },
+                        {
+                            "text": "Objectives : the plotting character",
+                            "children": []
+                        },
+                        {
+                            "text": "Casus Belli : the character who has a case for war.",
+                            "children": []
+                        },
+                        {
+                            "text": "Buildings : the province.",
+                            "children": []
+                        },
+                        {
+                            "text": "job_actions: the councillor",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Events : the entity (character or province) who sent the event. Only works if an event was triggered by another event/decision, to scope to that trigger. May be chained with FROMFROM to go up the chain of events (maximum 4 FROMs as of patch 2.3 ). For on_action events , varies depending on the action.",
+                            "children": []
+                        },
+                        {
+                            "text": "Targeted decisions : the decision taker.",
+                            "children": []
+                        },
+                        {
+                            "text": "Objectives : the target character of the plot",
+                            "children": []
+                        },
+                        {
+                            "text": "Casus Belli : the character who is being declared war on.",
+                            "children": []
+                        },
+                        {
+                            "text": "Buildings : the character (baron) holding the settlement. FROMFROM is the holding (barony title).",
+                            "children": []
+                        },
+                        {
+                            "text": "job_actions: the ruler",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "ROOT_FROM is a shortcut for ROOT = { FROM = { } } : it allows to reference the FROM of current block when inside a chain of FROM scopes."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Since FROM is relative, using FROMFROM = { FROM = { } } would be equivalent to using directly FROMFROMFROM = {} , which is not what you want. FROMFROM = { ROOT_FROM = { } } allows to apply conditions/commands referencing both FROMFROM and FROM.\nFor instance: FROMFROM = { is_child_of = ROOT_FROM } ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Can be stacked up to four times (same as FROM ), i.e., ROOT_FROMFROMFROMFROM is valid syntax."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "May be chained with PREVPREV to go several scopes up the chain. Maximum 4 PREVs chainable for PREVs used as part of RHS argument, i.e., some_trigger/effect = PREVPREVPREVPREV , some_trigger/effect = { some_arg = PREVPREVPREVPREV } . Maximum 2 PREVs chainable for PREVs used for scope changing, i.e., PREVPREV = { some_trigger/effect = yes } . Note: PREV, ROOT, FROM, ROOT_FROM, and their chained variants do count as a scope change."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Used in conditions/commands that work against a scope, as that argument is mandatory:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that using ROOT and FROM scopes do not change the scope of THIS."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For instance imagine the following province event:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In order of evaluation, at position:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "#1: trigger is not a scope, but the beginning of script block (aka function). ROOT is referencing the province for which the event is being evaluated. THIS points to ROOT . The stacks looks like that:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "#2: owner is a scope, so THIS now points to the owner of the province. PREV points to ROOT (previous scope). The stacks looks like that:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "#3 top_liege is a scope, so THIS points to the top liege of the owner of the province. PREV points to the owner, PREVPREV points to ROOT . So here it is comparing the culture of the top liege with the culture of the owner. The stacks looks like:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "#4 Previous block is finished, so THIS is now pointing again to the owner of the province, PREV points to ROOT .",
+                            "children": []
+                        },
+                        {
+                            "text": "#5 NOT is an operator , not a scope. Scope chain remains unchanged. So here it is comparing the culture of the owner with the culture of the province.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Scopes and conditions",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Comparison",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Scopes cannot be compared directly for equality: for instance primary_title = k_england is invalid. The appropriate condition must be used:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Characters",
+                            "Titles",
+                            "Provinces"
+                        ],
+                        [
+                            "current_heir = {\n    character = PREV\n}",
+                            "primary_title = {\n    title = k_england\n}",
+                            "location  = {\n    province = 272 # Akershus\n}"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Checking if a scope exists",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "When a scope is used in a condition block, always = yes condition can be used to check if anything was matched by the scope:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For instance to check a character has a mother: mother_even_if_dead = { always = yes } ."
+                }
+            ]
+        },
+        {
+            "heading": "Count",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "When a scope is used in a condition block, count = N condition will cause the scope to evaluate to true, if at least N elements are matched in the scope.\nAs of patch 2.3 any scopes starting with any_ can be used with count.\nAs of patch 2.8 count supports numerical operators in most any_ scopes."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For instance to check if a ruler has at least 7 dwarf courtier at his court:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In practice, some mod developers have had difficulty using < and <= operators with the count condition. (In particular, the base game only ever uses count = and count >= , so it's possible any bugs were simply never noticed by the developers.) This issue can be worked around by inverting the condition. (Because a < b is equivalent to NOT = { a >= b } .)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In other words, if this isn't working:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "then try this equivalent code:"
+                }
+            ]
+        },
+        {
+            "heading": "Limit",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Limit can be used to further reduce what is matched by a multi-variant scope ( any_ , random_ ), when a scope is used in command block:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For instance to scope only other rulers of same religion in the realm and fire some event to them:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A frequent modding mistake is to try using limit inside a trigger block, which is not only unnecessary, but will also break the event."
+                }
+            ]
+        },
+        {
+            "heading": "Preferred Limit",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In Patch 3.0, the new preferred limit syntax was added to the game, which can be used in any random_ scope to help specify multiple layers of specificity when choosing a random target."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example, say you want to find the strongest vassal in your realm who is ambitious. You cannot directly sort a list of vassals by strength and pick the top one who is ambitious, without an overly complex system of pinging events and variables, but you can have a good approximation using preferred limits."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This looks for a random vassal, who follows the regular limit (is ambitious), but first looks amongst those who meet the first preferred limit (is powerful vassal). If it can find an ambitious powerful vassal, it will execute the commands and call it a day - otherwise, it will look among the king-tier and duke-tier vassals for one who is ambitious. And if there is no ambitious king or duke vassal, it will look among the count-tier vassals. If none of the preferred scopes are met, then it will disregard them all and look for any vassal who is ambitious (who will be a baron in this case, by process of elimination)."
+                }
+            ]
+        },
+        {
+            "heading": "Score Value",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 3.0 added a score selection function via score_value clause to any_ effect scopes, used in conjunction with an optional count parameter. Rather than executing effects on random matching elements, the highest scoring elements that match the any_ scope and the limit clause, if specified, are selected instead. This functionality cannot be combined with preferred_limit clauses, however, as the latter is exclusive to random_ scopes."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If a score_value clause is used without a count parameter specified in conjunction, the any_ scope will default to count = 1 . If an any_ scope needs to select all possible elements (i.e., not capped) sorted by the score_value clause, it can be achieved so by using count = -1 ."
+                }
+            ]
+        },
+        {
+            "heading": "Tooltips",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In triggers and effects , tooltips are automatically generated by the Clausewitz engine in order to provide a detailed summary of what will occur when the player chooses an option.  For instance, when the user hovers their mouse over a decision in the Intrigue menu, a detailed list of tooltips showing the conditions that allow them to take that decision will be automatically generated by the game, allowing the player to see at a glance what changes are needed before the decision becomes available -- or why they can choose that decision now, if they already meet all the conditions.  Likewise, when the player moves their mouse over one of the buttons in an event, the list of results is automatically generated from the effects contained in that option."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "These automatically generated tooltips usually range from helpful to very helpful, but there are rare occasions (especially with highly complex scripting) where they may produce tooltips that are unnecessarily technical or cluttered, are improperly localised, or even state the opposite of what they actually do.  To correct this, the mod author is able to override these automatically generated tooltips with custom tooltips of their own."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Three special clauses can be used to change the tooltip displayed for an effect or condition:"
+                }
+            ]
+        },
+        {
+            "heading": "Hidden tooltips",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Hides the entire evaluation of an effect or trigger from the player, typically the firing of an event, or conditions that only AI has to satisfy."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Hidden tooltips are very useful for decisions and events if the actual results are to be hidden from the player for dramatic effect, or if the automatically generated tooltips produce unnecessarily technical details (such as the setting and modification of variables)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Hidden tooltips can also be used in triggers, but depending on the specific context it may be very confusing for the player if a decision satisfies all of its visible conditions, but fails a hidden one; a custom_tooltip is preferable in this case."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In 2.6.2 hidden_effect and hidden_trigger aliases were added, which can be used to reduce ambiguity."
+                }
+            ]
+        },
+        {
+            "heading": "Custom tooltips",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Custom tooltips simplify some complex or hard to read triggers or effects, by replacing the tooltip content with the contents of a localisation key."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "These allow very complex trigger chains to be reduced to a simple message. custom_tooltip can also be used to display a message without hiding effects or triggers:"
+                }
+            ]
+        },
+        {
+            "heading": "Conditional tooltips",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Added in version patch 2.8 , these display the tooltip conditions only if the included trigger evaluates successfully."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In the above example, the liege's realm peace conditions are only shown if the liege is not independent (as if the liege were independent, this would produce a strange-looking tooltip when it scopes to the non-existent liege of the liege)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This can also be used to rule out massive, ugly trigger chains for a better user experience -- for instance, when checking the tier or society membership of the ruler, and then checking specific conditions for each tier or society.  Each specific block could check to see if the character is of that tier or a member of that society, therefore showing only the relevant conditions."
+                }
+            ]
+        },
+        {
+            "heading": "Tooltip filtering",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Triggers and effects may also be filtered for better readability."
+                }
+            ]
+        },
+        {
+            "heading": "show_scope_change ( patch 2.8 )",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The above example scopes to the owner of the character's current location to check their opinion of the root character.  By default, this would produce an ugly chain of your current location, followed by a blank line (the \"owner\" scope is not localised in the game), followed by the correct and intended line.  With the show_scope_change = no limiter, only the single intended line would be shown."
+                }
+            ]
+        },
+        {
+            "heading": "show_only_failed_conditions ( 2.8.1 )",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This feature applies to triggers only.  In the above example, \"always = yes\" and \"character = ROOT\" will always be true.  The only condition that can be true or false is whether the \"is_vassal_of = FROM\" (is FROM the vassal of ROOT?).  With show_only_failed_conditions = yes , the \"always\" and \"character\" conditions will not be shown.  This is useful when there are a lot of edge cases that need to be handled and the vast majority of the test cases will be true most of the time."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This feature is used heavily in the Jade Dragon decisions to show only why China will reject a given proposal, without showing all of the obvious reasons why they would accept it."
+                }
+            ]
+        },
+        {
+            "heading": "generate_tooltip ( patch 2.8 )",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Even though the hidden_tooltip will hide the tooltips, it will still perform all of the necessary localisation processing of the tooltips.  The generate_tooltip = no parameter suppresses this behaviour.  Note that this will break randomisation and suppress the assignment of the localisation of event_targets and other similar behaviour.  This feature is used in vanilla to suppress the processing of complex \"any_\" scopes for localisation when the localisation won't be shown to the player (in, e.g., casus belli)."
+                }
+            ]
+        },
+        {
+            "heading": "Combining tooltips",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "It is possible to use a conditional_tooltip to hide a custom_tooltip .  You may surround a series of custom tooltips in an over-arching conditional tooltip."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A custom_tooltip will hide all of the automatically-generated tooltips in its block, replacing it with the localised text.  Therefore, it is not necessary (but not harmful) to use a hidden_tooltip inside a custom_tooltip , as the custom tooltip will already hide its contents and display only the localised text, with a ( * ) or ( x ) based on its evaluated value."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Likewise, surrounding either a custom_tooltip or conditional_tooltip with a hidden_tooltip will simply hide everything inside, rendering them unnecessary."
+                }
+            ]
+        },
+        {
+            "heading": "Notes",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Tooltips can seem to be wrong when an effect both sets and reads a flag or updates and reads a variable in the same block. This is because to display the tooltip, the triggers in option block are executed, but not the commands (they will only when the option is actually chosen), so it may be inconsistent.\nHere is an example where tooltip cannot reflect what will actually happen:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "To resolve this, use custom_tooltip . For event options, consider moving the commands that modify flags or variables up from the option block into an immediate block."
+                }
+            ]
+        },
+        {
+            "heading": "Scripted block",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A scripted trigger (or scripted effect ) is a macro, comprised of conditions (respectively commands ) that can be executed in a single batch."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It allows reusing common scripts throughout a mod, instead of copying and pasting that code wherever it is used (and having to remember to update each separate use every time).  On the other hand, over-use of scripted triggers or scripted effects can lead to spaghetti code .  Unless you are re-using the same code over and over and it is growing unnecessarily large in file size or unwieldy to maintain, it is usually preferable to keep triggers or effects where they are used instead of moving them to a scripted trigger or effect."
+                }
+            ]
+        },
+        {
+            "heading": "Definition",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Scripted blocks are defined in any filename in the \\common\\scripted_effects\\ or \\common\\scripted_triggers\\ folders, using the extremely simple syntax:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Thereafter, the scripted block can be called in your code like any other trigger or command, using the format: scripted_block_name = yes"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is always best practice to include a proper naming convention for your scripted blocks to avoid overlap with other mods, and never to overwrite the original vanilla files, as there is no reason to do so: simply define a new file for your own scripted blocks.  Also use a prefix or suffix that identifies that your trigger/command is a scripted trigger/effect, and not built-in: mymod_helloworld_effect = yes #Paradox naming convention fn_mymod_helloworld = yes #Other naming convention"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is important to use unique names. For instance, if you have a trait that has the same name as an effect block, it will not be parsed correctly if you refer to that trait within the block."
+                }
+            ]
+        },
+        {
+            "heading": "Scopes",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The scopes of the scripted blocks are always equal to the context in which the scripted block is called—THIS, ROOT, FROM, PREV, etc. will always be assigned to the same as where the scripted effect was originally used. Be extremely careful to use your scripted block in the correct scope it was created for, including the entire scope chain, or else portions of the code may fail silently.  While this is unlikely to crash anything, it can result in silent failures and logic errors and can be a source of frustration because of the degree of separation between the file where the scripted block is being used and the file where the scripted block is defined—code that appears correct in either file may not be correct if the scopes are different than intended."
+                }
+            ]
+        },
+        {
+            "heading": "Example",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The following scripted effect removes all \"vanilla\" education traits from the character:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "SCOPE: THIS = Character",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Then it can be called in any effect block as if it were a command included in the base game:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is strongly recommended to document the scopes which a scripted block requires, in a comment at the beginning of that scripted block."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Scripted blocks are known to work in events, decisions, disease definitions, and character history."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If your scripted trigger uses a custom tooltip then it is best to use NOT = { scripted_trigger = yes } instead of scripted_trigger = no otherwise the custom tooltip will not be inverted correctly like automatically generated tooltips from normal conditions are."
+                }
+            ]
+        },
+        {
+            "heading": "Usage",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Scripted blocks are intended to make code easier to read and maintain by placing conditions or effects in a single location of a mod."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you have a single set of conditions being tested for repeatedly within a mod or have an effect being used frequently then it's recommended to use a scripted block to be able to easily modify and adjust behaviour. The use of scripted blocks also helps reduce the number of repeated lines from conditions or effects."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There's a great number of pre-made triggers and effects within the vanilla code and be aware that they can be used freely within your own mods."
+                }
+            ]
+        },
+        {
+            "heading": "Differences from other languages",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Modders skilled with other programming languages need to be aware of the following quirks of scripted blocks:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "There are no parameters or other variables that can be passed to a function; the argument is always the singular boolean \"yes\".  This can be worked around by setting variables prior to calling the function, and then checking those variables inside the function, bearing in mind the limited support for variables in Crusader Kings II.",
+                            "children": []
+                        },
+                        {
+                            "text": "The behaviour of the function depends on the context from which the function is called.  The function does not create a new context unless it explicitly includes a new scope.  Always ensure that the function is called from the correct context.",
+                            "children": []
+                        },
+                        {
+                            "text": "Functions cannot return a value—they behave as \"void\" functions.  To \"return\" a value, set a flag (e.g., set_character_flag ) or set a variable (i.e., set_variable ) inside the function.  Remember that the function takes in the same context as the place it is called, so all variables assigned will be saved to the calling scope and accessible outside the function.",
+                            "children": []
+                        },
+                        {
+                            "text": "Scripted blocks are more like non-hygienic macros than proper functions (similar to batch files and other context-dependent macros).",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Scopes",
+                            "children": []
+                        },
+                        {
+                            "text": "Conditions",
+                            "children": []
+                        },
+                        {
+                            "text": "Commands",
+                            "children": []
+                        },
+                        {
+                            "text": "Event modding",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ forum:597480/page-110#post-20878292",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:874495/page-21#post-20889305",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:597480/page-110#post-20879441",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum:820483",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:774248/page-30#post-21507013",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:606906/page-123#post-23434440",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:1163658/#post-25303812",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum:774248",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:774248/page-20#post-20109979",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:589686/page-1707#post-24382261",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:589686/page-1633#post-23624865",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum:800491",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

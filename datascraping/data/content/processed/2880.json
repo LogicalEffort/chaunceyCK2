@@ -1,0 +1,932 @@
+{
+    "pageid": 2880,
+    "title": "Demesne laws",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Demesne laws are de facto laws, defining the relationship between a ruler and their vassals. When the Conclave DLC is active, they are replaced by realm laws ."
+                }
+            ]
+        },
+        {
+            "heading": "Vassal obligations",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Laws are graded from low to high e.g. the higher the taxes, the lower the vassals 's opinion will be."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that levies here refer to maximum levies - the amount of their levies that a vassal with an opinion of +100 would provide. Crown laws handle minimum levies."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Highest level requires the Legalism technology:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Harsh Tax laws require Legalism VI",
+                            "children": []
+                        },
+                        {
+                            "text": "Maximum levy laws require Legalism VII",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Feudal Levies (Non-Muslim)",
+                            "Minimal 60% Levies +10 opinion",
+                            "Small 70% Levies +5 opinion",
+                            "Normal 80% Levies +0 opinion",
+                            "Maximum 100% Levies -5 opinion"
+                        ],
+                        [
+                            "Feudal Tax (Non-Muslim)",
+                            "None 0% Tax +0 opinion",
+                            "Small 10% Tax -10 opinion",
+                            "Large 20% Tax -20 opinion",
+                            "Harsh 30% Tax -30 opinion"
+                        ],
+                        [
+                            "City Levies",
+                            "Minimal 50% Levies +10 opinion",
+                            "Normal 65% Levies +0 opinion",
+                            "Large 80% Levies -10 opinion",
+                            "Maximum 95% Levies -20 opinion"
+                        ],
+                        [
+                            "City Tax",
+                            "Minimal 15% Tax +10 opinion",
+                            "Normal 25% Tax +0 opinion",
+                            "Large 35% Tax -10 opinion",
+                            "Harsh 45% Tax -20 opinion"
+                        ],
+                        [
+                            "Temple Levies (Non-Muslim)",
+                            "Minimal 50% Levies +10 opinion",
+                            "Normal 60% Levies +0 opinion",
+                            "Large 70% Levies -10 opinion",
+                            "Maximum 80% Levies -20 opinion"
+                        ],
+                        [
+                            "Temple Tax (Non-Muslim)",
+                            "None 0% Tax +20 opinion",
+                            "Minimal 35% Tax +0 opinion",
+                            "Medium 45% Tax -10 opinion",
+                            "Large 55% Tax -20 opinion"
+                        ],
+                        [
+                            "Tribal Levies",
+                            "Minimal 50% Levies +0 opinion",
+                            "Normal 60% Levies -10 opinion",
+                            "Large 70% Levies -20 opinion",
+                            "Maximum 80% Levies -30 opinion"
+                        ],
+                        [
+                            "Tribal Tax",
+                            "None 0% Tax +0 opinion",
+                            "Minimal 10% Tax -10 opinion",
+                            "Medium 20% Tax -20 opinion",
+                            "Large 30% Tax -30 opinion"
+                        ],
+                        [
+                            "Iqta Levies (Muslim)",
+                            "Minimal 60% Levies +10 opinion",
+                            "Small 70% Levies +5 opinion",
+                            "Normal 80% Levies +0 opinion",
+                            "Maximum 100% Levies -5 opinion"
+                        ],
+                        [
+                            "Iqta Tax (Muslim)",
+                            "None 0% Tax +10 opinion",
+                            "Small 10% Tax +0 opinion",
+                            "Large 20% Tax -10 opinion",
+                            "Harsh 30% Tax -20 opinion"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Non-Muslim)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "60% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "70% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "+5 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "80% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "+0 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "100% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "-5 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Non-Muslim)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "0% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+0 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "10% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "20% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-20 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "30% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-30 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "50% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "65% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "+0 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "80% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "95% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "-20 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "15% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "25% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+0 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "35% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "45% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-20 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Non-Muslim)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "50% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "60% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "+0 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "70% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "80% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "-20 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Non-Muslim)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "0% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+20 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "35% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+0 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "45% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "55% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-20 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "50% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "+0 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "60% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "70% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "-20 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "80% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "-30 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "0% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+0 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "10% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "20% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-20 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "30% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-30 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Muslim)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "60% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "70% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "+5 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "80% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "+0 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "100% Levies",
+                            "children": []
+                        },
+                        {
+                            "text": "-5 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Muslim)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "0% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "10% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+0 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "20% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "30% Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-20 opinion",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Centralization",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A centralized state is important for the liege to grow powerful, but a decentralized state might be easier to maintain (or necessary, if the liege has many direct vassals). If the Conclave DLC is activated, this law is found under the Realm laws tab.\nDukes and above can enact centralization laws."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Law",
+                            "Vassal limit",
+                            "Demesne size",
+                            "Requirements",
+                            "ID"
+                        ],
+                        [
+                            "Decentralized",
+                            "+10",
+                            "-",
+                            "-",
+                            "centralization_0"
+                        ],
+                        [
+                            "Low centralization",
+                            "+5",
+                            "+1",
+                            "Legalism I Low Tribal Organization or higher (for tribal rulers)",
+                            "centralization_1"
+                        ],
+                        [
+                            "Medium centralization",
+                            "-",
+                            "+2",
+                            "Legalism II Medium Tribal Organization or higher (for tribal rulers)",
+                            "centralization_2"
+                        ],
+                        [
+                            "High centralization",
+                            "-5",
+                            "+3",
+                            "Legalism III High Tribal Organization or higher (for tribal rulers)",
+                            "centralization_3"
+                        ],
+                        [
+                            "Centralized",
+                            "-10",
+                            "+4",
+                            "Legalism V Absolute Tribal Organization or higher (for tribal rulers)",
+                            "centralization_4"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Tribal organization",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Tribal organization applies to independent tribal rulers of duke tier and above. It replaces crown laws (without Conclave) or subsumes council laws (with Conclave). It can only be changed one increment at a time, but unlike crown law a ruler may change it more than once in their lifetime."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Law",
+                            "Unreformed pagan vassal opinion",
+                            "Effect without Conclave",
+                            "Effect with Conclave",
+                            "ID"
+                        ],
+                        [
+                            "Minimum Tribal Organization",
+                            "+5",
+                            "",
+                            "",
+                            "tribal_organization_0"
+                        ],
+                        [
+                            "Low Tribal Organization",
+                            "-5",
+                            "Title revocation allowed",
+                            "The council now votes on wars and laws",
+                            "tribal_organization_1"
+                        ],
+                        [
+                            "Medium Tribal Organization",
+                            "-10",
+                            "Free revocation from infidels and heretics",
+                            "The council now votes on grants and revocation",
+                            "tribal_organization_2"
+                        ],
+                        [
+                            "High Tribal Organization",
+                            "-20",
+                            "Can set tax & levy rates Tribal vassals provide levies and taxes Tribal vassals are no longer called to war",
+                            "The council now votes on imprisonment, exile, and execution",
+                            "tribal_organization_3"
+                        ],
+                        [
+                            "Absolute Tribal Organization",
+                            "-30",
+                            "Can adopt feudalism or found a merchant republic",
+                            "tribal_organization_4"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Viceroyalty",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With the Charlemagne DLC, independent feudal emperors can grant kingdoms or duchies to vassals as Viceroyalties . Unlike regular titles, viceroyal titles automatically revert to the liege upon their holder's death, lessening the chance that vassals will grow too powerful or pass their titles on to disloyal heirs. If the Conclave DLC is activated, this law is found under the Realm laws tab."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that having viceroy vassals will upset your feudal duke+ vassals who are not themselves viceroys. The opinion penalty is -2 for each viceroy kingdom and -1 for each viceroy duchy held by a direct vassal. This may make it difficult to manage a realm with both hereditary kings and viceroy kings."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Viceroyalties also have a -20% levy penalty to their liege."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Law",
+                            "Vassal limit",
+                            "Privileges",
+                            "Requirements",
+                            "ID"
+                        ],
+                        [
+                            "No Viceroyalties",
+                            "",
+                            "",
+                            "",
+                            "vice_royalty_0"
+                        ],
+                        [
+                            "Kingdom Viceroyalties",
+                            "-5",
+                            "Allows nominating Viceroys",
+                            "Legalism IV",
+                            "vice_royalty_1"
+                        ],
+                        [
+                            "Duchy Viceroyalties",
+                            "-10",
+                            "Allows nominating Minor Viceroys",
+                            "Legalism VIII (or automatic with Imperial Administration)",
+                            "vice_royalty_2"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: A viceroyal duchy owned by a vassal king will not revert to the emperor if the king's capital is in that duchy."
+                }
+            ]
+        },
+        {
+            "heading": "Administration",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Applies to independent feudal emperors. The Byzantine Empire starts with Imperial Administration, while other realms will only be able to adopt it later in the game."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Law",
+                            "Vassal limit",
+                            "Feudal opinion",
+                            "Privileges",
+                            "Requirements",
+                            "ID"
+                        ],
+                        [
+                            "Feudal Administration",
+                            "-",
+                            "-",
+                            "-",
+                            "-",
+                            "feudal_administration"
+                        ],
+                        [
+                            "Imperial Administration",
+                            "+25",
+                            "-10",
+                            "Enables Duchy Viceroyalties law Free revocation of viceroyal duchies Free revocation of duchies (without Charlemagne ) Free retraction of vassals, even from kings",
+                            "Absolute crown authority Majesty V.",
+                            "imperial_administration"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that if the player is an emperor and don't see an option within Demesne Laws / Realm Laws to choose between \"Feudal Administration\" and \"Imperial Administration\", they may need to scroll down to see those options."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that Imperial Administration automatically gains ability to have kingdom and duchy viceroys, regardless of legalism."
+                }
+            ]
+        },
+        {
+            "heading": "Changing demesne laws",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Rulers can seek approval to change a demesne law every 5 years. All vassals get a vote, weighted depending on their titles. Muslims change laws using piety instead and do not need voter support."
+                }
+            ]
+        }
+    ]
+}

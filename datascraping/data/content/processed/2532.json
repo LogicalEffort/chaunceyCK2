@@ -1,0 +1,346 @@
+{
+    "pageid": 2532,
+    "title": "Steam Workshop",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Steam Workshop is a feature of Steam that simplifies mods discovery and installation for players. Support for Crusader Kings II was added in March 2014, with patch 2.1 . As of patch 2.8 the limit of 50MB has been lifted, allowing for large overhaul or total conversion mods to be on the workshop."
+                }
+            ]
+        },
+        {
+            "heading": "Installing a mod",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Important : Remove any previous manual installation of the mod if any. If a .mod file already exists with same name under ~\\Documents\\Paradox Interactive\\Crusader Kings II\\mod\\ it will conflict during the installation.",
+                            "children": []
+                        },
+                        {
+                            "text": "Find the mod on the CKII Steam Workshop",
+                            "children": []
+                        },
+                        {
+                            "text": "Click \"Subscribe\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Start CKII launcher",
+                            "children": [
+                                {
+                                    "text": "Under \"Mods\" tab, the new mod will appear at the bottom of the mod list as unselectable, with a red background (which does not reflect download progress !).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "At the same time a \"Crusader Kings II - Workshop Content\" download will be triggered in Steam client (where you can monitor progress).",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Once the download has completed, tick the checkbox to activate the mod.",
+                            "children": []
+                        },
+                        {
+                            "text": "Play!",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Troubleshooting",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If the mod doesn't show up in the launcher:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Verify you haven't reached the 50 subscribed mods limit.",
+                            "children": []
+                        },
+                        {
+                            "text": "Try subscribing to the mod in Steam client, while CK2 launcher is already started.",
+                            "children": []
+                        },
+                        {
+                            "text": "In case no download progress appears in Mod tab, check the setting for downloading while game is running ( Steam -> Settings -> Downloads -> Allow downloads during gameplay ).",
+                            "children": []
+                        },
+                        {
+                            "text": "Make sure you have Steam Cloud enabled [1] . Note that Steam cloud sync appears to be broken for mods with capitals in user_dir. [2]",
+                            "children": []
+                        },
+                        {
+                            "text": "Try restarting CK2 and Steam client.",
+                            "children": []
+                        },
+                        {
+                            "text": "Verify mod file and archive are present in folder ~\\Documents\\Paradox Interactive\\Crusader Kings II\\mod . If not, you can force a re-download of the mod by looking into C:\\Program Files (x86)\\Steam\\userdata\\<SteamUser>\\ugc for files & folders referencing the mod (for instance 203770_subscriptions.vdf and \\referenced\\45371260977302539\\mod\\ ), deleting them and restarting Steam client.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the mod background stays red in the launcher after the download has completed in Steam client, it likely means the installation failed:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Verify you don't have a pre-existing manual installation of the mod (a .mod file with same name but with a path = entry instead of archive = ). If so, delete the original .mod file and the installed .zip archive, then restart the CK2 launcher, in order to force a re-copy of .mod and .zip from Steam client cache to the mod folder.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Uninstalling a mod",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Unsubscribe from the mod in Steam. You can see all subscribed mods on CK2 workshop under: Browse -> Subscribed articles .",
+                            "children": []
+                        },
+                        {
+                            "text": "Manually delete the associated .mod and .zip file under ~\\Documents\\Paradox Interactive\\Crusader Kings II\\mod , so that the mod no longer appears in the launcher.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Uploading a mod",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Mod upload is managed from within the game:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "(Optional) Define an image banner and tags in .mod file (see mod file ). Note: CK2 Workshop search will use terms from the text in the description area.",
+                            "children": []
+                        },
+                        {
+                            "text": "Launch the game with an unpacked mod folder and the mod activated. Note: *.mod file must be using path format and not archive format.",
+                            "children": []
+                        },
+                        {
+                            "text": "On main menu, click Content button, then Manage for the mod, and upload. The zipping to archive format will occur during upload.",
+                            "children": []
+                        },
+                        {
+                            "text": "After upload is finished, mod page will open inside the Steam client. Copy the URL (ex: steamcommunity.com/sharedfiles/filedetails/?id=123456) and open in your favorite browser, as it's easier than using the Steam client integrated browser.",
+                            "children": []
+                        },
+                        {
+                            "text": "Add a description, screenshots or videos, and edit change notes.",
+                            "children": []
+                        },
+                        {
+                            "text": "Once everything looks fine, make the mod public (in the 'Change Visibility' option under the 'Owner Controls')!",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Mod file before upload (MyMod.mod):"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Mod file when downloaded from Workshop (mymod.mod):"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "MyMod.zip will contain a generated descriptor.mod which is identical to mymod.mod."
+                }
+            ]
+        },
+        {
+            "heading": "Updating a mod",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Unsubscribe from your mod on Steam",
+                            "children": []
+                        },
+                        {
+                            "text": "Remove the zipped mod and the *.mod file from the \"mod\" folder and move the updated and unpacked mod folder and *.mod file into it.",
+                            "children": []
+                        },
+                        {
+                            "text": "Make sure there isn’t a descriptor.mod file inside the folder",
+                            "children": []
+                        },
+                        {
+                            "text": "Check the .mod file. Make sure it’s set to path= not archive=",
+                            "children": []
+                        },
+                        {
+                            "text": "Launch the game and click on Content Settings - Manage",
+                            "children": []
+                        },
+                        {
+                            "text": "Click on update (where the \"Publish\" button is on first upload)",
+                            "children": []
+                        },
+                        {
+                            "text": "Edit the description in the in-game steam browser and accept the agreement",
+                            "children": []
+                        },
+                        {
+                            "text": "After updating, the mod will automaticaly be set to \"hidden\" visibility. So go to the mod page on Steam and set the mod visibility back to \"public\".",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Troubleshooting",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Manage button is always greyed out: activate Steam Cloud Synch' for CK2 ( Steam -> Settings/(Preferences on mac) -> Cloud -> Enable cloud sync ), it is (strangely) required to upload mods.",
+                            "children": []
+                        },
+                        {
+                            "text": "Game crashes a few seconds after clicking on Update and going back to main menu: usually that's ok, the upload will still happen silently in the background, which may take few minutes for a big mod on a low bandwidth connection.",
+                            "children": []
+                        },
+                        {
+                            "text": "After changing computer, there is only Publish instead of Update for an existing mod: you first need to publish as a new mod, delete that new mod from the workshop, restart the game and then you are able to update the existing mod. [Note from October 2019: Doesn't seem to work]",
+                            "children": []
+                        },
+                        {
+                            "text": "Game crashes a few seconds after clicking on Update' without going back to the main menu or updating your mod if you have the old descriptor.mod file make sure you delete that before updating",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Beware of the case sensitivity of folder and file names when a mod is archived ! These issues will not be reproducible on Windows with an unzipped mod folder, since Windows file system is case insensitive. For instance:",
+                            "children": [
+                                {
+                                    "text": "A mod file gfx/fonts/MapFont.dds will not override vanilla file gfx/fonts/Mapfont.dds , due to wrong case of file name Map F ont.dds",
+                                    "children": []
+                                },
+                                {
+                                    "text": "A file inside a mod folder Events/my_events.txt ( E vents/ ) will not be loaded by the game, as the game would expect events/my_events.txt ( e vents/ ).",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Limitations",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Mods installed via Steam Workshop will auto-update and only latest version of a given mod can be installed, so be careful about non-backward compatible changes, as previous saves may become unplayable .",
+                            "children": []
+                        },
+                        {
+                            "text": "Installation of meta-mods (for instance HIP ) with selection of modules to install and automatic compatibility patching cannot be triggered automatically.",
+                            "children": []
+                        },
+                        {
+                            "text": "The mod size limit has been lifted in patch 2.8 (used to be 50MB), however very large mods (> 350MB) will fail to upload.",
+                            "children": []
+                        },
+                        {
+                            "text": "Quotes are removed in the downloaded .mod file [3] . This means sub-mods of a main mod that require dependencies = { \"Main Mod\" } and whose main mod has some spaces in its name (and thus require quoting) won't work properly via the workshop. You'll have use dependencies = { \"\\\"Main Mod\\\"\" } for when you are updating to the Steam Workshop.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "External links",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "CKII Workshop",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ https://steamcommunity.com/app/203770/discussions/0/613958868365189597",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum:843464",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:1129514",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

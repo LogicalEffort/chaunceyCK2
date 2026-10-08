@@ -1,0 +1,2095 @@
+{
+    "pageid": 202,
+    "title": "Localisation",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Localisation files contain all the text that gets displayed on the screen, with the exception of character names (for example William or Matilda). These files are in .csv, or Comma-Separated Values format, which can be opened in a text editor or spreadsheet program like Microsoft Excel or OpenOffice Calc . Despite the name, they are actually separated with semicolons."
+                }
+            ]
+        },
+        {
+            "heading": "Values",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The game loads all localisation files in the localisation folder, and will overwrite any vanilla strings with a mod's. All values should be added to new .csv files that do not share a name with any localisation file from vanilla or another mod. It is acceptable to copy existing .csvs into your mod's localisation folder, and then clear it of data and rename it, rather than creating new ones from scratch."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that no added value can contain a semi-colon. Values also should not be more than 1023 characters long - anything above that will not be displayed and will be logged to error.log ."
+                }
+            ]
+        },
+        {
+            "heading": "Code Name",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The leftmost column of each row of a .csv contains how an object is referred to in the code. If there is no row with the code name, the code name will be displayed instead of any text."
+                }
+            ]
+        },
+        {
+            "heading": "Events",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For each event , the code will look up the string you used for \"desc\" and the string you used for each option's \"name\". So if you wrote an event:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You would need to add strings \"EVTDESC76411467\", \"EVTOPTA76411467\", and \"EVTOPTB76411467\""
+                }
+            ]
+        },
+        {
+            "heading": "Decisions",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For each decision 's name, the event will look up its title, and for the text that comes up when you mouse-over for long enough it will look that up with \"_desc\" appended to it. You can also use \"_desc_extra\" in order to show text after the Requirement section of the tooltip. So if you wrote an event:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You would need to add strings \"do_nothing\", \"do_nothing_desc\", and, optionally, \"do_nothing_desc_extra\"."
+                }
+            ]
+        },
+        {
+            "heading": "Objectives",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For objectives , i. e., plots and ambitions, you will need to define {objective_name}_title and {objective_name}_desc. For example, if your plot is to annoy someone:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You will need to add strings \"plot_annoy_title\" and \"plot_annoy_desc\":"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(If you can't translate your message into the other languages, you can leave those fields blank; the English will be used by default.)"
+                }
+            ]
+        },
+        {
+            "heading": "Others",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For cultures , religions or titles, will go with the name of the added title. For example, if you added the title \"e_aaa\" to landed_titles, with culture \"fictoid\" in cultures and religion \"nonsensism\" in religions, you would need to create a row for each of them."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is possible to localize the name of the title apart for culture (a Greek King is called Despot for example) for character type too so to replace the Doge title for the ruler of Republic with for example \"Prince\" we could use the key city_duke so as you can change the name of the title itself to \"Principality\" using city_duchy_of, you could mix this with culture (city_duke_roman and city_duchy_of_roman for example) and for religion (city_duke_catholic and city_duchy_of_catholic). The equivalents temple_duke and temple_duchy_of also exists."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If a title need a particular title that is not tied to culture or religion but to the title itself then you can add the line \"title = <localization_key>\" in the title definition in /common/landed_titles/landed_titles.txt where the title is defined. For example if the ruler of \"e_aaa\" instead of the default title of \"Emperor\" held historically the title of \"Supreme King\" you should add the line \"title = supreme_king_desc\" and then add a corresponding line in the localization file."
+                }
+            ]
+        },
+        {
+            "heading": "Loading",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Loading tips appear below loading_screens and are defined with hardcoded keys:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that all tips including and after the first empty one will be ignored."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The localization of loading steps can also be changed by overriding the associated keys from text1.csv (PROC_FLAGS, LOAD_FLAGS, LOAD_GFX, etc.)"
+                }
+            ]
+        },
+        {
+            "heading": "Languages",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The next three columns contain its name in English, French, and German. The column after German is unused, but the column after that is Spanish. If any of the used columns are left blank, the text will not appear to users running the game in that language, so it is preferable to copy over the data from the column you did write. In newer patches, English localisation will appear for a language where the column is blank. Therefore, you can now simply not include any languages beyond English, and simply end the localisation line with ;;;;;;;;;;;;;x instead."
+                }
+            ]
+        },
+        {
+            "heading": "All Examples",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "All of the examples, viewed by a text editor, would look like"
+                }
+            ]
+        },
+        {
+            "heading": "Commands",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "More dynamic localisation can be achieved by using localization commands, to change words based on a condition."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "As of patch 2.8 , they work in all tooltips, in particular:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Event description and options",
+                            "children": []
+                        },
+                        {
+                            "text": "Decisions name and description",
+                            "children": []
+                        },
+                        {
+                            "text": "Character modifier descriptions, since patch 2.3",
+                            "children": []
+                        },
+                        {
+                            "text": "Nicknames, since patch 2.3",
+                            "children": []
+                        },
+                        {
+                            "text": "Character opinion tooltips, where ROOT is the judging person and FROM is the person being judged",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The name of scopes and commands are hardcoded and thus can't be changed.\nSome commands have:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "a 'Cap' suffix version, that will capitalize the first letter, for use as first word of a phrase.",
+                            "children": []
+                        },
+                        {
+                            "text": "an 'Opp' suffix version, that will do the opposite: GetManWomanOpp prints 'man' if character is a woman.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Warning: commands are case sensitive ( getName (invalid) vs GetName (valid))."
+                }
+            ]
+        },
+        {
+            "heading": "Gender",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There are localization commands to display predefined words that vary based on character gender:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Command",
+                            "Scope",
+                            "Description"
+                        ],
+                        [
+                            "GetHerHim (GetHerHimCap, GetHerHimOpp, GetHerHimOppCap)",
+                            "character",
+                            "Prints 'him' or 'her' based on the character's gender."
+                        ],
+                        [
+                            "Prints 'him' or 'her' based on the character's gender.",
+                            "GetObjectPronoun (GetObjectPronounCap, GetObjectPronounOpp, GetObjectPronounOppCap)",
+                            "character"
+                        ],
+                        [
+                            "GetHerHis (GetHerHisCap, GetHerHisOpp)",
+                            "character",
+                            "Prints 'his' or 'her' based on the character's gender."
+                        ],
+                        [
+                            "Prints 'his' or 'her' based on the character's gender.",
+                            "GetPossPronoun (GetPossPronounCap, GetPossPronounOpp)",
+                            "character"
+                        ],
+                        [
+                            "GetHersHis (GetHersHisOpp)",
+                            "character",
+                            "Prints 'his' or 'hers' based on the character's gender."
+                        ],
+                        [
+                            "Prints 'his' or 'hers' based on the character's gender.",
+                            "GetAbsPossPronoun (GetAbsPossPronounOpp)",
+                            "character"
+                        ],
+                        [
+                            "GetHerselfHimself (GetHerselfHimselfOpp)",
+                            "character",
+                            "Prints 'himself' or 'herself' based on the character's gender."
+                        ],
+                        [
+                            "Prints 'himself' or 'herself' based on the character's gender.",
+                            "GetReflexivePronoun (GetReflexivePronounOpp)",
+                            "character"
+                        ],
+                        [
+                            "GetSheHe (GetSheHeCap, GetSheHeOpp, GetSheHeCapOpp)",
+                            "character",
+                            "Prints 'he' or 'she' based on the character's gender."
+                        ],
+                        [
+                            "Prints 'he' or 'she' based on the character's gender.",
+                            "GetSubjectPronoun (GetSubjectPronounOpp, GetSubjectPronounCap, GetSubjectPronounCapOpp)",
+                            "character"
+                        ],
+                        [
+                            "GetManWoman (GetManWomanOpp)",
+                            "character",
+                            "Prints 'man' or 'woman' based on the character's gender."
+                        ],
+                        [
+                            "GetMenWomen",
+                            "character",
+                            "Prints 'men' or 'women' based on the character's gender."
+                        ],
+                        [
+                            "GetBoyGirl (GetBoyGirlCap, GetBoyGirlOpp, GetBoyGirlOppCap)",
+                            "character",
+                            "Prints 'boy' or 'girl' based on the character's gender."
+                        ],
+                        [
+                            "GetGirlWomanBoyMan",
+                            "character",
+                            "Prints 'boy', 'man', 'girl' or 'woman' based on the character's gender and age."
+                        ],
+                        [
+                            "GetMaleFemale",
+                            "character",
+                            "Prints 'male' or 'female' based on the character's gender."
+                        ],
+                        [
+                            "GetHusbandWife (GetHusbandWifeOpp, GetHusbandWifeCap, GetHusbandWifeCapOpp)",
+                            "character",
+                            "Prints 'husband' or 'wife' based on the character's gender."
+                        ],
+                        [
+                            "GetFatherMother (GetFatherMotherCap)",
+                            "character",
+                            "Prints 'father' or 'mother' based on the character's gender."
+                        ],
+                        [
+                            "GetSonDaughter (GetSonDaughterCap)",
+                            "character",
+                            "Prints 'son' or 'daughter' based on the character's gender."
+                        ],
+                        [
+                            "GetMasterMistress (GetMasterMistressOpp, GetMasterMistressCap, GetMasterMistressCapOpp)",
+                            "character",
+                            ""
+                        ],
+                        [
+                            "GetLadLass (GetLadLassOpp)",
+                            "character",
+                            ""
+                        ],
+                        [
+                            "GetLordLady (GetLordLadyOpp)",
+                            "character",
+                            ""
+                        ],
+                        [
+                            "GetMilordMilady",
+                            "character",
+                            ""
+                        ],
+                        [
+                            "GetKingQueen",
+                            "character",
+                            ""
+                        ],
+                        [
+                            "GetEmperorEmpress",
+                            "character",
+                            ""
+                        ],
+                        [
+                            "GetPatriarchMatriarch",
+                            "character",
+                            ""
+                        ],
+                        [
+                            "GetBrotherSister (GetBrotherSisterCap)",
+                            "character",
+                            ""
+                        ],
+                        [
+                            "GetAdultererAdulteress",
+                            "character",
+                            ""
+                        ],
+                        [
+                            "GetUncleAunt",
+                            "character",
+                            ""
+                        ],
+                        [
+                            "GetWarlockWitch (GetWarlockWitchCap, GetWarlockWitchOpp, GetWarlockWitchCapOpp)",
+                            "character",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Character and title names",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Character and title naming commands, with examples based on King Louis VI 'the Fat' Capet of France."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Command",
+                            "Scope",
+                            "Example",
+                            "Notes"
+                        ],
+                        [
+                            "GetFirstName",
+                            "character",
+                            "Louis",
+                            ""
+                        ],
+                        [
+                            "GetFirstNameWithNick",
+                            "character",
+                            "Louis 'the Fat'",
+                            ""
+                        ],
+                        [
+                            "GetBirthName",
+                            "character",
+                            "Louis",
+                            "Birth name for characters with a regnal name or who took a new name when becoming religious head"
+                        ],
+                        [
+                            "GetTitle",
+                            "character",
+                            "King",
+                            ""
+                        ],
+                        [
+                            "GetTitledName",
+                            "character",
+                            "King Louis VI of France",
+                            ""
+                        ],
+                        [
+                            "GetTitledNameWithNick",
+                            "character",
+                            "King Louis VI 'the Fat' of France",
+                            ""
+                        ],
+                        [
+                            "GetTitledFirstName",
+                            "character",
+                            "King Louis VI",
+                            "Titular name of character"
+                        ],
+                        [
+                            "GetTitledFirstNameWithNick",
+                            "character",
+                            "King Louis VI 'the Fat'",
+                            ""
+                        ],
+                        [
+                            "GetTitledFirstNameNoRegnal",
+                            "character",
+                            "",
+                            "Like GetTitledFirstName, but uses birth names for Popes and other characters with regnal names."
+                        ],
+                        [
+                            "GetDynName",
+                            "character",
+                            "Louis Capet",
+                            ""
+                        ],
+                        [
+                            "GetOnlyDynastyName",
+                            "character",
+                            "Capet",
+                            ""
+                        ],
+                        [
+                            "GetLastWordInDynastyName",
+                            "character",
+                            "Capet",
+                            "Will split the character's dynasty names on spaces and apostrophes, and return the last word: d'Anjou becomes Anjou de Hauteville becomes Hauteville"
+                        ],
+                        [
+                            "GetBestName",
+                            "character",
+                            "King Louis 'the Fat'",
+                            "The logic is to: Use nickname if any (King Louis 'the Fat') Default to primary title (King Louis of France)"
+                        ],
+                        [
+                            "GetBestNameWithoutRegnalNumber",
+                            "character",
+                            "King Louis 'the Fat'",
+                            "Any number attached to a name ('III' if the third ruler of that title) will get removed from the normal BestName."
+                        ],
+                        [
+                            "GetFullName",
+                            "character title",
+                            "Louis Capet Kingdom of France",
+                            ""
+                        ],
+                        [
+                            "GetPrimaryTitles",
+                            "character",
+                            "King of France etc.",
+                            ""
+                        ],
+                        [
+                            "GetBaseName",
+                            "title",
+                            "France",
+                            ""
+                        ],
+                        [
+                            "GetName (GetNameCap)",
+                            "title",
+                            "France",
+                            "Warning : does not work on characters !"
+                        ],
+                        [
+                            "GetFullBaseName",
+                            "title",
+                            "Kingdom of France",
+                            ""
+                        ],
+                        [
+                            "GetRulerTitle",
+                            "title",
+                            "King",
+                            ""
+                        ],
+                        [
+                            "GetAdjective",
+                            "title",
+                            "French",
+                            ""
+                        ],
+                        [
+                            "GetFOA",
+                            "title",
+                            "Your Majesty",
+                            "Form of address"
+                        ],
+                        [
+                            "GetTier",
+                            "title",
+                            "Kingdom",
+                            "Examples: Empire, Kingdom, Duchy, County, Barony, City, Bishopric. Localises according to religion (group) and culture (group)."
+                        ],
+                        [
+                            "GetTitledGrandMasterName",
+                            "society",
+                            "",
+                            ""
+                        ],
+                        [
+                            "GetTitledNextGrandMasterName",
+                            "society",
+                            "",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "d'Anjou becomes Anjou",
+                            "children": []
+                        },
+                        {
+                            "text": "de Hauteville becomes Hauteville",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Use nickname if any (King Louis 'the Fat')",
+                            "children": []
+                        },
+                        {
+                            "text": "Default to primary title (King Louis of France)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "title"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Kingdom of France"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "etc."
+                }
+            ]
+        },
+        {
+            "heading": "Wonders",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Localisation commands referring to wonders or wonder upgrades."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Command",
+                            "Scope",
+                            "Notes"
+                        ],
+                        [
+                            "GetName (GetNameCap)",
+                            "Wonder/Upgrade",
+                            ""
+                        ],
+                        [
+                            "GetTypeName",
+                            "Wonder/Upgrade",
+                            ""
+                        ],
+                        [
+                            "GetWonderAge",
+                            "Wonder",
+                            "Would print a number of how many years a wonder has been around, since its first stage/tier was completed."
+                        ],
+                        [
+                            "GetUpgradeAge",
+                            "Upgrade",
+                            "Would print a number."
+                        ],
+                        [
+                            "GetFoundingDate",
+                            "Wonder",
+                            "Date when first brick was layed down, in the following format: 1 January, 537"
+                        ],
+                        [
+                            "GetFirstStageCompleteDate",
+                            "Wonder",
+                            ""
+                        ],
+                        [
+                            "GetCurrentStageNumber",
+                            "Wonder",
+                            ""
+                        ],
+                        [
+                            "GetCurrentStageCompleteDate",
+                            "Wonder",
+                            ""
+                        ],
+                        [
+                            "GetNextStageNumber",
+                            "Wonder",
+                            ""
+                        ],
+                        [
+                            "GetDesc",
+                            "Wonder/Upgrade",
+                            "Would print whatever the desc is currently set to. Could be used to update the text, only by appending something new to it."
+                        ],
+                        [
+                            "GetPercentComplete",
+                            "Upgrade",
+                            ""
+                        ],
+                        [
+                            "GetBuildProgressMonths",
+                            "Upgrade",
+                            ""
+                        ],
+                        [
+                            "GetEstimatedFinishDate",
+                            "Upgrade",
+                            ""
+                        ],
+                        [
+                            "GetFlatCost",
+                            "Upgrade",
+                            ""
+                        ],
+                        [
+                            "GetFlatCostWithoutModifier",
+                            "Upgrade",
+                            ""
+                        ],
+                        [
+                            "GetTickingCost",
+                            "Upgrade",
+                            ""
+                        ],
+                        [
+                            "GetTickingCostActive",
+                            "Upgrade",
+                            ""
+                        ],
+                        [
+                            "GetTickingCostWithoutModifier",
+                            "Upgrade",
+                            ""
+                        ],
+                        [
+                            "GetConstructionStatus (GetConstructionStatusCap)",
+                            "Upgrade",
+                            ""
+                        ],
+                        [
+                            "GetAllowTriggerDescription",
+                            "Upgrade",
+                            ""
+                        ],
+                        [
+                            "GetActiveTriggerDescription",
+                            "Upgrade",
+                            ""
+                        ],
+                        [
+                            "GetCompletionDate",
+                            "Upgrade",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Other built-in commands",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Command",
+                            "Scope",
+                            "Description"
+                        ],
+                        [
+                            "GetAgeYears",
+                            "character",
+                            "Displays the age of the character"
+                        ],
+                        [
+                            "GetName (GetNameCap)",
+                            "religion culture variable province government modifier offmap wonder upgrade artifact",
+                            "Displays the name of the scope: Culture.GetName, Religion.GetName, [Root.test_var.GetName] , [Root.modifier_name.GetName] , [Root.Offmap.GetName] (For offmap powers, an intermediate .Offmap scope change is REQUIRED. Eg. [Root.Offmap.GetName] will return the name of the offmap power (as intended), but [Root.GetName] will probably be blank.)"
+                        ],
+                        [
+                            "GetFullName",
+                            "religion",
+                            "Displays the defined full name of the religion ( religion _full)."
+                        ],
+                        [
+                            "GetCouncilName",
+                            "character",
+                            "Displays cultural/religious council name of a ruler, based on localisation keys: (council_(_female)_<religion(_group)/culture(_group)>"
+                        ],
+                        [
+                            "GetHumanName (GetHumanNameLine, GetSpaceHumanNameWithNewline)",
+                            "character",
+                            "Displays character's player name, optionally preceded or followed by a newline. Only works in multiplayer."
+                        ],
+                        [
+                            "GetHumanName",
+                            "character",
+                            "Displays character's player name. Only works in multiplayer."
+                        ],
+                        [
+                            "GetValue",
+                            "variable",
+                            "[Root.PrimaryTitle.test_var.GetValue]"
+                        ],
+                        [
+                            "GetID",
+                            "character/province/title",
+                            "Displays the internal ID of the scope (character ID, province ID, ...). This is useful for logging or debug purposes."
+                        ],
+                        [
+                            "GetGroupName",
+                            "religion/culture",
+                            "Display the parent group name: the [Root.Religion.GetGroupName] world"
+                        ],
+                        [
+                            "GetFromRelation GetFromFromRelation GetFromFromFromRelation GetFromFromFromFromRelation GetFatherOfUnbornRelation GetFromReincarnationRelation GetFromReverseRelation GetLiegeRelation GetNewRelation GetPrevRelation GetPrevReverseRelation",
+                            "character",
+                            "Prints the relation you have with mentioned character, for example 'mother' or 'son'. Warning : adding any scope to the beginning breaks it, it must be used by itself [GetFromRelation] ."
+                        ],
+                        [
+                            "GetFromFromVsRootRelation GetFromVsFromFromRelation GetFromFromVsFromRelation GetFromFromFromVsFromRelation GetFromVsFatherOfUnbornRelation GetFromVsFromFromFromRelation GetFromVsNewRelation GetReincarnationRelation",
+                            "character",
+                            "Variant of above comparing the sender to the previous sender in an event chain."
+                        ],
+                        [
+                            "GetScriptureName",
+                            "religion",
+                            "Prints the holy book of the linked character's religion: The words of the [Root.Religion.GetScriptureName] are certain!"
+                        ],
+                        [
+                            "GetHighGodName (GetHighGodNameCap)",
+                            "religion",
+                            "Reference to the religion's high_god_name localization: ...worthy to be [Root.Religion.GetHighGodName]'s servant."
+                        ],
+                        [
+                            "GetRandomGodName (GetRandomGodNameCap)",
+                            "religion",
+                            "Reference to the religion's god_names localization list: Oh [Root.Religion.GetRandomGodName], what am I doing?"
+                        ],
+                        [
+                            "GetRandomEvilGodName (GetRandomEvilGodNameCap)",
+                            "religion",
+                            "Reference to the religion's evil_god_names localization list: This is the work of [Root.Religion.GetRandomEvilGodName]!"
+                        ],
+                        [
+                            "GetPriestTitle (GetPriestTitleCap)",
+                            "religion",
+                            "a group of [Root.Religion.GetPriestTitle]s have arrived at your court"
+                        ],
+                        [
+                            "GetPietyName",
+                            "religion",
+                            "Reference to the religion's piety_name localization: ...to improve [This.GetHerHis] [This.Religion.GetPietyName]..."
+                        ],
+                        [
+                            "GetCrusadeName",
+                            "religion",
+                            "Reference to the religion's crusade_name localization: ...declared a [Root.Religion.GetCrusadeName]."
+                        ],
+                        [
+                            "GetHighestTitle",
+                            "religion",
+                            "Primary title, with ruler title. Examples: \"High Chief of Moravia\", \"Doge of Venice\", \"Captain of Bulgarian Band\""
+                        ],
+                        [
+                            "GetJobTitle",
+                            "character",
+                            "Councillor job name: ...carry out [From.GetHerHis] duties as [From.GetJobTitle]."
+                        ],
+                        [
+                            "GetChancellorName GetMarshalName GetTreasurerName GetSpymasterName GetLordSpiritualName",
+                            "character",
+                            "Gets councillor name, depending on liege's religion(_group) and culture(_group)"
+                        ],
+                        [
+                            "GetMyChancellorName GetMyMarshalName GetMyTreasurerName GetMySpymasterName GetMyLordSpiritualName",
+                            "character",
+                            "Gets councillor name, depending on own religion(_group) and culture(_group)"
+                        ],
+                        [
+                            "GetProposedLaw",
+                            "title",
+                            "...to institute the [From.GetProposedLaw] Law"
+                        ],
+                        [
+                            "GetLawProposer",
+                            "character",
+                            "I have been convinced by [From.GetLawProposer] to institute the [From.GetProposedLaw] Law."
+                        ],
+                        [
+                            "GetPlot",
+                            "character",
+                            "Example output: \"Revoke the County of Clermont\""
+                        ],
+                        [
+                            "GetAmbition",
+                            "character",
+                            "Example output: \"Become Exalted among Men\""
+                        ],
+                        [
+                            "GetObjective",
+                            "character",
+                            "Displays both ambition and plot, separated by a new line"
+                        ],
+                        [
+                            "GetQuestName",
+                            "character",
+                            ""
+                        ],
+                        [
+                            "GetDate",
+                            "any",
+                            "Example output: 779.1.14"
+                        ],
+                        [
+                            "GetDateText",
+                            "any",
+                            "Example output: 14 January, 779"
+                        ],
+                        [
+                            "GetDay",
+                            "any",
+                            "Example output: 14"
+                        ],
+                        [
+                            "GetWeekday",
+                            "any",
+                            "Example output: Monday"
+                        ],
+                        [
+                            "GetMonth",
+                            "any",
+                            "Example output: 1"
+                        ],
+                        [
+                            "GetYear",
+                            "any",
+                            "Example output: 779"
+                        ],
+                        [
+                            "GetDesc",
+                            "government/religion",
+                            "Description of government or religion. [Government.GetDesc]"
+                        ],
+                        [
+                            "GetFeatures",
+                            "government/religion/culture",
+                            "Features of government, religion or culture [Religion.GetFeatures]"
+                        ],
+                        [
+                            "GetDeathReason (GetDeathReasonCap)",
+                            "character",
+                            "[GetDeathReasonCap] on [GetDeathDate]"
+                        ],
+                        [
+                            "GetDeathDate",
+                            "character",
+                            "[GetDeathReasonCap] on [GetDeathDate]"
+                        ],
+                        [
+                            "GetBirthDate",
+                            "character",
+                            "born [GetBirthDate]"
+                        ],
+                        [
+                            "GetFromRootInsult GetFromFromRootInsult",
+                            "character",
+                            "Returns an insulting adjective and noun based on the target character's traits and physical sex, e.g., \"filthy lecher\", as regarded by the first scope to second scope (e.g., GetFromRootInsult is from FROM to ROOT) -- avoiding self-deprecating insults for traits shared in common (e.g., if both Lustful, the insulter is unlikely to call them a lecher).  As with GetFromRelation, it must be used by itself without any scope command in front. [GetFromRootInsult]"
+                        ],
+                        [
+                            "GetRootFromInsult GetRootFromFromInsult",
+                            "character",
+                            "As above but in opposite direction—ROOT to FROM, etc. [GetRootFromInsult]"
+                        ],
+                        [
+                            "GetRootFromInsultNoun",
+                            "character",
+                            "As above but just the noun, e.g. \"lecher\". [GetRootFromInsultNoun]"
+                        ],
+                        [
+                            "GetFromRootInsultNounAdj GetFromFromRootInsultNounAdj GetRootFromFromInsultNounAdj GetRootFromInsultNounAdj",
+                            "character",
+                            "Returns an insult in the opposite order of \"noun adjective\", sent by the first scope to the second scope (GetFromFromRootInsultNounAdj = FROMFROM to ROOT). Generally used by localised non-English languages which have a reverse-ordered adjective structure (e.g., English \"filthy dog\" (adjective noun) is French \"chien sale\" (noun adjective)).  Must be used without a scope. [GetFromRootInsultNounAdj]"
+                        ],
+                        [
+                            "GetRootFromCompliment GetRootFromFromCompliment GetFromFromRootCompliment GetFromRootCompliment",
+                            "character",
+                            "Returns a complimentary phrase in the form of \"adjective noun\", e.g., \"brave warrior\", from the first character to the second character, based on the traits of the second character.  As with similar localisation commands with scopes listed in the body of the name, no scope prefix can be used."
+                        ],
+                        [
+                            "GetRootFromComplimentNounAdj GetRootFromFromComplimentNounAdj GetFromFromRootComplimentNounAdj GetFromRootComplimentNounAdj",
+                            "character",
+                            "Returns reverse-ordered \"noun adjective\" compliment, instead of the normal \"adjective noun\" compliment, for languages (e.g., French) with non-English adjective order."
+                        ],
+                        [
+                            "GetExpiryDate",
+                            "modifier",
+                            "Returns the expiration date of the character's, province's, or holding's named modifier. e.g., [Root.modifier_name.GetExpiryDate]"
+                        ],
+                        [
+                            "GetCurrency",
+                            "offmap",
+                            "The name of the offmap power's currency (e.g., \"Grace\"). (Intermediate .Offmap scope change may be required - not tested. See .GetName for an example.)"
+                        ],
+                        [
+                            "GetDisLike",
+                            "offmap",
+                            "The offmap ruler's current dislike. (Intermediate .Offmap scope change may be required - not tested. See .GetName for an example.)"
+                        ],
+                        [
+                            "GetLike",
+                            "offmap",
+                            "The offmap ruler's current like. (Intermediate .Offmap scope change may be required - not tested. See .GetName for an example.)"
+                        ],
+                        [
+                            "GetPolicy",
+                            "offmap",
+                            "The offmap power's current political alignment. (Intermediate .Offmap scope change may be required - not tested. See .GetName for an example.)"
+                        ],
+                        [
+                            "GetPrevPolicy",
+                            "offmap",
+                            "The offmap power's last political alignment before the current one. Blank if the offmap power hasn't yet had a different policy. (Intermediate .Offmap scope change may be required - not tested. See .GetName for an example.)"
+                        ],
+                        [
+                            "GetPrevStatus",
+                            "offmap",
+                            "The offmap power's last political state before the current one. Blank if the offmap power hasn't yet had a different status. (Intermediate .Offmap scope change may be required - not tested. See .GetName for an example.)"
+                        ],
+                        [
+                            "GetStatus",
+                            "offmap",
+                            "The offmap power's current political state. (Intermediate .Offmap scope change may be required - not tested. See .GetName for an example.)"
+                        ],
+                        [
+                            "GetFullName",
+                            "offmap",
+                            "The offmap power's fullname. (Intermediate .Offmap scope change is REQUIRED in most situations, eg: [Root.Offmap.GetFullName] .)"
+                        ],
+                        [
+                            "GetFullGenericName",
+                            "offmap",
+                            "The offmap power's full generic name. (Intermediate .Offmap scope change may be required - not tested. See .GetName for an example.)"
+                        ],
+                        [
+                            "GetShortName",
+                            "offmap",
+                            "The offmap power's generic name. (Intermediate .Offmap scope change is REQUIRED in most situations, eg: [Root.Offmap.GetShortName] .)"
+                        ],
+                        [
+                            "GetShortGenericName",
+                            "offmap",
+                            "The offmap power's short generic name. (Intermediate .Offmap scope change may be required - not tested. See .GetName for an example.)"
+                        ],
+                        [
+                            "GetScopes",
+                            "any",
+                            "Shows a list of all event targets set, and what each scope corresponds to. Note that it only works in scopes; once you've promoted to a specific entity (E.G., a character), scope properties are unavailable."
+                        ],
+                        [
+                            "GetFoundationDate",
+                            "bloodline",
+                            "Provides the foundation date of the bloodline, in the following format: 1 November, 732"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(For offmap powers, an intermediate .Offmap scope change is REQUIRED. Eg. [Root.Offmap.GetName] will return the name of the offmap power (as intended), but [Root.GetName] will probably be blank.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "GetFromFromRelation GetFromFromFromRelation GetFromFromFromFromRelation GetFatherOfUnbornRelation GetFromReincarnationRelation GetFromReverseRelation GetLiegeRelation GetNewRelation GetPrevRelation GetPrevReverseRelation"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "GetFromVsFromFromRelation GetFromFromVsFromRelation GetFromFromFromVsFromRelation GetFromVsFatherOfUnbornRelation GetFromVsFromFromFromRelation GetFromVsNewRelation GetReincarnationRelation"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "GetMarshalName GetTreasurerName GetSpymasterName GetLordSpiritualName"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "GetMyMarshalName GetMyTreasurerName GetMySpymasterName GetMyLordSpiritualName"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "[Government.GetDesc]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "[Religion.GetFeatures]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "[GetDeathReasonCap] on [GetDeathDate]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "[GetDeathReasonCap] on [GetDeathDate]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "born [GetBirthDate]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "GetFromFromRootInsult"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "[GetFromRootInsult]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "GetRootFromFromInsult"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "[GetRootFromInsult]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "[GetRootFromInsultNoun]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "GetFromFromRootInsultNounAdj GetRootFromFromInsultNounAdj GetRootFromInsultNounAdj"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "[GetFromRootInsultNounAdj]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "GetRootFromFromCompliment GetFromFromRootCompliment GetFromRootCompliment"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "GetRootFromFromComplimentNounAdj GetFromFromRootComplimentNounAdj GetFromRootComplimentNounAdj"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Intermediate .Offmap scope change may be required - not tested. See .GetName for an example.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Intermediate .Offmap scope change may be required - not tested. See .GetName for an example.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Intermediate .Offmap scope change may be required - not tested. See .GetName for an example.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Intermediate .Offmap scope change may be required - not tested. See .GetName for an example.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Intermediate .Offmap scope change may be required - not tested. See .GetName for an example.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Intermediate .Offmap scope change may be required - not tested. See .GetName for an example.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Intermediate .Offmap scope change may be required - not tested. See .GetName for an example.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Intermediate .Offmap scope change is REQUIRED in most situations, eg: [Root.Offmap.GetFullName] .)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Intermediate .Offmap scope change may be required - not tested. See .GetName for an example.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Intermediate .Offmap scope change is REQUIRED in most situations, eg: [Root.Offmap.GetShortName] .)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Intermediate .Offmap scope change may be required - not tested. See .GetName for an example.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Other commands are often hardcoded variables, only available in a specific context, and so useless for modding:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "GetArtifactName",
+                            "children": []
+                        },
+                        {
+                            "text": "GetBornAndDeathDate",
+                            "children": []
+                        },
+                        {
+                            "text": "GetDelayedLiegeOpinion",
+                            "children": []
+                        },
+                        {
+                            "text": "GetDelayedPlayerOpinion",
+                            "children": []
+                        },
+                        {
+                            "text": "GetDemesneSizeRatio",
+                            "children": []
+                        },
+                        {
+                            "text": "GetDiploGiftSize",
+                            "children": []
+                        },
+                        {
+                            "text": "GetDiplomacy",
+                            "children": []
+                        },
+                        {
+                            "text": "GetDiplomacyBreakdown",
+                            "children": []
+                        },
+                        {
+                            "text": "GetHighestTitles",
+                            "children": []
+                        },
+                        {
+                            "text": "GetInstantLiegeOpinion",
+                            "children": []
+                        },
+                        {
+                            "text": "GetInstantPlayerOpinion",
+                            "children": []
+                        },
+                        {
+                            "text": "GetIntrigue",
+                            "children": []
+                        },
+                        {
+                            "text": "GetIntrigueBreakdown",
+                            "children": []
+                        },
+                        {
+                            "text": "GetIsValidDesc",
+                            "children": []
+                        },
+                        {
+                            "text": "GetLearning",
+                            "children": []
+                        },
+                        {
+                            "text": "GetLearningBreakdown",
+                            "children": []
+                        },
+                        {
+                            "text": "GetMartial",
+                            "children": []
+                        },
+                        {
+                            "text": "GetMartialBreakdown",
+                            "children": []
+                        },
+                        {
+                            "text": "GetMonthlyIncome",
+                            "children": []
+                        },
+                        {
+                            "text": "GetMonthlyPiety",
+                            "children": []
+                        },
+                        {
+                            "text": "GetMonthlyPietyBreakdown",
+                            "children": []
+                        },
+                        {
+                            "text": "GetMonthlyPrestige",
+                            "children": []
+                        },
+                        {
+                            "text": "GetMonthlyPrestigeBreakdown",
+                            "children": []
+                        },
+                        {
+                            "text": "GetObjective",
+                            "children": []
+                        },
+                        {
+                            "text": "GetOnAdd",
+                            "children": []
+                        },
+                        {
+                            "text": "GetOnFail",
+                            "children": []
+                        },
+                        {
+                            "text": "GetOnReveseDemand",
+                            "children": []
+                        },
+                        {
+                            "text": "GetOnSuccess",
+                            "children": []
+                        },
+                        {
+                            "text": "GetPietyCost",
+                            "children": []
+                        },
+                        {
+                            "text": "GetPlayerRelation",
+                            "children": []
+                        },
+                        {
+                            "text": "GetPlayerRelationCap",
+                            "children": []
+                        },
+                        {
+                            "text": "GetStatusInfo",
+                            "children": []
+                        },
+                        {
+                            "text": "GetStatusInfoWithoutRegnalNumber",
+                            "children": []
+                        },
+                        {
+                            "text": "GetStewardship",
+                            "children": []
+                        },
+                        {
+                            "text": "GetStewardshipBreakdown",
+                            "children": []
+                        },
+                        {
+                            "text": "GetTitleIncParents",
+                            "children": []
+                        },
+                        {
+                            "text": "GetWarName",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There are also Localisation keys. These are less flexible than commands, and will only work where the game is hardcoded to provide them. They appear to be a legacy feature."
+                }
+            ]
+        },
+        {
+            "heading": "Scopes",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To use a localization command with a scope chain, use the following pattern:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Commands should always be placed within [], otherwise they won't work.",
+                            "children": []
+                        },
+                        {
+                            "text": "The first part is the character who is being linked to (Root, Spouse, From, ...)",
+                            "children": []
+                        },
+                        {
+                            "text": "The last part is a command to display text (GetHerHim, GetFullName, ...)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example, here are the strings for the \"request council job\" events:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is sad that [Root.Liege.GetTitledFirstName] is employing [Root.job_marshal.GetTitledFirstName] as [Root.Liege.GetHerHis] marshal. I am more competent and would be a better marshal!"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "[From.GetBestName] claims that [From.GetSheHe] would be a better marshal than [Root.job_marshal.GetTitledFirstName] , and petitions that [From.GetSheHe] should be given the title of Marshal of the [Root.PrimaryTitle.GetFullName] ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Scope commands, similar to scripting scopes :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Actor",
+                            "children": []
+                        },
+                        {
+                            "text": "ActorExtra",
+                            "children": []
+                        },
+                        {
+                            "text": "AdultExtra",
+                            "children": []
+                        },
+                        {
+                            "text": "Betrothed",
+                            "children": []
+                        },
+                        {
+                            "text": "Capital",
+                            "children": []
+                        },
+                        {
+                            "text": "ChildExtra",
+                            "children": []
+                        },
+                        {
+                            "text": "Clan",
+                            "children": []
+                        },
+                        {
+                            "text": "Completer (wonder/upgrade, hardcoded for UI purposes)",
+                            "children": []
+                        },
+                        {
+                            "text": "County",
+                            "children": []
+                        },
+                        {
+                            "text": "Culture",
+                            "children": []
+                        },
+                        {
+                            "text": "Duchy",
+                            "children": []
+                        },
+                        {
+                            "text": "Educator",
+                            "children": []
+                        },
+                        {
+                            "text": "Empire",
+                            "children": []
+                        },
+                        {
+                            "text": "Employer",
+                            "children": []
+                        },
+                        {
+                            "text": "Father",
+                            "children": []
+                        },
+                        {
+                            "text": "FatherOfUnborn",
+                            "children": []
+                        },
+                        {
+                            "text": "Founder (bloodline)",
+                            "children": []
+                        },
+                        {
+                            "text": "From(From(From(From)))",
+                            "children": []
+                        },
+                        {
+                            "text": "Government",
+                            "children": []
+                        },
+                        {
+                            "text": "Governor (offmap)",
+                            "children": []
+                        },
+                        {
+                            "text": "GovernorTitle (offmap)",
+                            "children": []
+                        },
+                        {
+                            "text": "GrandMaster (society)",
+                            "children": []
+                        },
+                        {
+                            "text": "Guardian",
+                            "children": []
+                        },
+                        {
+                            "text": "Heir",
+                            "children": []
+                        },
+                        {
+                            "text": "Holder (province or title)",
+                            "children": []
+                        },
+                        {
+                            "text": "Host",
+                            "children": []
+                        },
+                        {
+                            "text": "job_chancellor",
+                            "children": []
+                        },
+                        {
+                            "text": "job_marshal",
+                            "children": []
+                        },
+                        {
+                            "text": "job_spiritual",
+                            "children": []
+                        },
+                        {
+                            "text": "job_spymaster",
+                            "children": []
+                        },
+                        {
+                            "text": "job_treasurer",
+                            "children": []
+                        },
+                        {
+                            "text": "Killer",
+                            "children": []
+                        },
+                        {
+                            "text": "Kingdom",
+                            "children": []
+                        },
+                        {
+                            "text": "Liege",
+                            "children": []
+                        },
+                        {
+                            "text": "Location",
+                            "children": []
+                        },
+                        {
+                            "text": "Lover",
+                            "children": []
+                        },
+                        {
+                            "text": "MercRepCapital",
+                            "children": []
+                        },
+                        {
+                            "text": "Mother",
+                            "children": []
+                        },
+                        {
+                            "text": "New",
+                            "children": []
+                        },
+                        {
+                            "text": "NextGrandMaster (society)",
+                            "children": []
+                        },
+                        {
+                            "text": "Offmap",
+                            "children": []
+                        },
+                        {
+                            "text": "OldestChild",
+                            "children": []
+                        },
+                        {
+                            "text": "OriginalOwner (artifact / wonder)",
+                            "children": []
+                        },
+                        {
+                            "text": "Owner (artifact / wonder)",
+                            "children": []
+                        },
+                        {
+                            "text": "ParentReligion",
+                            "children": []
+                        },
+                        {
+                            "text": "Player",
+                            "children": []
+                        },
+                        {
+                            "text": "PlotTarget",
+                            "children": []
+                        },
+                        {
+                            "text": "PlotTargetTitle",
+                            "children": []
+                        },
+                        {
+                            "text": "Prev(Prev(Prev(Prev)))",
+                            "children": []
+                        },
+                        {
+                            "text": "PrevGovernor (offmap)",
+                            "children": []
+                        },
+                        {
+                            "text": "PrevRuler (offmap)",
+                            "children": []
+                        },
+                        {
+                            "text": "Province (wonder)",
+                            "children": []
+                        },
+                        {
+                            "text": "PrimaryTitle",
+                            "children": []
+                        },
+                        {
+                            "text": "RealFather",
+                            "children": []
+                        },
+                        {
+                            "text": "Realm",
+                            "children": []
+                        },
+                        {
+                            "text": "Recipient",
+                            "children": []
+                        },
+                        {
+                            "text": "RecipientExtra",
+                            "children": []
+                        },
+                        {
+                            "text": "Regent",
+                            "children": []
+                        },
+                        {
+                            "text": "Reincarnation",
+                            "children": []
+                        },
+                        {
+                            "text": "RelHead",
+                            "children": []
+                        },
+                        {
+                            "text": "Religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Root",
+                            "children": []
+                        },
+                        {
+                            "text": "Root_From(From(From(From)))",
+                            "children": []
+                        },
+                        {
+                            "text": "Ruler (offmap)",
+                            "children": []
+                        },
+                        {
+                            "text": "SeaZone",
+                            "children": []
+                        },
+                        {
+                            "text": "SecretReligion",
+                            "children": []
+                        },
+                        {
+                            "text": "Siege",
+                            "children": []
+                        },
+                        {
+                            "text": "Society",
+                            "children": []
+                        },
+                        {
+                            "text": "Spouse",
+                            "children": []
+                        },
+                        {
+                            "text": "SupportedClaimant",
+                            "children": []
+                        },
+                        {
+                            "text": "SupportedClaimantTitle",
+                            "children": []
+                        },
+                        {
+                            "text": "ThePope",
+                            "children": []
+                        },
+                        {
+                            "text": "ThirdPartyCharacter",
+                            "children": []
+                        },
+                        {
+                            "text": "ThirdPartyTitle",
+                            "children": []
+                        },
+                        {
+                            "text": "This",
+                            "children": []
+                        },
+                        {
+                            "text": "Title",
+                            "children": []
+                        },
+                        {
+                            "text": "TopLiege",
+                            "children": []
+                        },
+                        {
+                            "text": "TrueFather",
+                            "children": []
+                        },
+                        {
+                            "text": "TrueReligion",
+                            "children": []
+                        },
+                        {
+                            "text": "Twin",
+                            "children": []
+                        },
+                        {
+                            "text": "Wonder (province)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can scope directly to specific offmap powers by using their name, e.g.:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Since Patch 3.0 you can also scope to landed titles, religions, religion groups, cultures and culture groups in loc using their name, e.g.:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that referencing a group is just a different way to reference the first member of the group, it will not scope to the group itself."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Additionally, the following dynamic localization scopes are available:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The names of saved event targets [1] ( save_event_target_as , save_global_event_target_as , save_persistent_event_target )",
+                            "children": []
+                        },
+                        {
+                            "text": "The names of numeric variables ( set_variable ), used with GetName or GetValue",
+                            "children": []
+                        },
+                        {
+                            "text": "The names of timed modifiers , used with GetName or GetExpiryDate",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Customizable localisation",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "As of patch 2.6 it is possible to define custom localization commands with scripted logic based on conditions."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "These commands are defined in localisation\\customizable_localisation folder and don't impact the checksum ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The structure is:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In the example above, when using [MyCustomCommand] in a localization string, it will be replaced either by KEY_1 or KEY_2 value, depending on the evaluation of the conditions."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If several of the triggers have their conditions met, unless use_first_valid = yes is used, one of them will be picked at random. If use_first_valid = yes is used, then the first key that has its condition met will be used."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that it is not possible to override hardcoded localization commands (for instance [GetBestName]) this way."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "As of patch 2.7 custom localisation can reference localization strings that themselves contain custom localisation."
+                }
+            ]
+        },
+        {
+            "heading": "Special Characters",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Some sets of characters perform special functions."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "NOTE: Save the file with the Windows-1252 encoding so the color codes work correctly."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Command",
+                            "Description"
+                        ],
+                        [
+                            "\\n",
+                            "Line break. Works only in certain cases."
+                        ],
+                        [
+                            "§Bxxx§!",
+                            "Prints the text xxx in blue, RGB: 0000FF"
+                        ],
+                        [
+                            "§Cxxx§!",
+                            "Prints the text xxx in grey, RGB: 374111"
+                        ],
+                        [
+                            "§Fxxx§!",
+                            "Prints the text xxx in brown, RGB: 6F3E09"
+                        ],
+                        [
+                            "§Gxxx§!",
+                            "Prints the text xxx in green, RGB: 2CAB32"
+                        ],
+                        [
+                            "§Kxxx§!",
+                            "Prints the text xxx in dark red, RGB: 710505"
+                        ],
+                        [
+                            "§Lxxx§!",
+                            "Prints the text xxx in light brown, RGB: C3B091"
+                        ],
+                        [
+                            "§Mxxx§!",
+                            "Prints the text xxx in light yellow, RGB: FFFA75"
+                        ],
+                        [
+                            "§Pxxx§!",
+                            "Prints the text xxx in pink, RGB: C81EAA"
+                        ],
+                        [
+                            "§Rxxx§!",
+                            "Prints the text xxx in red, RGB: B53D3D"
+                        ],
+                        [
+                            "§Wxxx§!",
+                            "Prints the text xxx in white, RGB: FFFFFF"
+                        ],
+                        [
+                            "§Yxxx§!",
+                            "Prints the text xxx in yellow, RGB: DBCB47"
+                        ],
+                        [
+                            "§Zxxx§!",
+                            "Prints the text xxx in dark green, RGB: 037A17"
+                        ],
+                        [
+                            "§gxxx§!",
+                            "Prints the text xxx in grey, RGB: B0B0B0"
+                        ],
+                        [
+                            "§bxxx§!",
+                            "Prints the text xxx in black, RGB: 000000"
+                        ],
+                        [
+                            "§lxxx§!",
+                            "Prints the text xxx in bright green, RGB: 9AC14B"
+                        ],
+                        [
+                            "¤",
+                            "Prints the symbol for personal wealth."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Colours can be switched mid-line, like this: §GHold §YControl§G to Call all Allies to War§!"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "§! is used to terminate a coloured piece of text."
+                }
+            ]
+        },
+        {
+            "heading": "Languages",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "French",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A set of localization commands dedicated for French translations is included in \\localisation\\customizable_localisation\\00_customizable_localisation_FR.txt. For more info: Traduction remaniée - Crusader Kings II 2.7.x (in French)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "French custom localisation strings are located in \\localisation\\FR.csv."
+                }
+            ]
+        },
+        {
+            "heading": "German",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A set of localization commands dedicated for German translations is included in \\localisation\\customizable_localisation\\00_customizable_localisation_DE.txt."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "German custom localisation strings are located in \\localisation\\DE.csv."
+                }
+            ]
+        },
+        {
+            "heading": "Spanish",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A set of localization commands dedicated for Spanish translations is included in \\localisation\\customizable_localisation\\00_customizable_localisation_ES.txt."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Spanish custom localisation strings are located in \\localisation\\SPA.csv."
+                }
+            ]
+        },
+        {
+            "heading": "Editing",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Using a text editor",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Each line of a Paradox localisation file should look like this:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The number and position of the semicolons is important, as it defines which data goes in which language and when the line is over."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Lines beginning with \"#\" are considered comments, so they do not need semicolons. Blank lines are also ignored."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Localisation files must be saved using a single-byte character encoding ( Windows-1252 ) rather than UTF-8. They must end with a single empty line."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Examples for text editors \n(in conjunction with links to CK2 specific language support files) : Modding#Text_editors"
+                }
+            ]
+        },
+        {
+            "heading": "Using spreadsheet software",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If opened as a spreadsheet, each area between the semicolons would get its own column and each line of the localisation file would get its own row. If you are asked to choose a \"delimiter\" character, specify that the values are separated by semicolons and that there is no text delimiter."
+                }
+            ]
+        },
+        {
+            "heading": "Excel",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Important note: If your system uses English number separators (i.e. comma for thousands, period for decimal places) then Excel won't be able to load or save localisation data. To fix this, go to Excel > Excel Options > Advanced and un-check the \"Use System Separators\" option. Then change the Decimal Separator to comma. This causes Excel to use semicolons instead. You can toggle the System Separators box whenever you need to do other work in Excel."
+                }
+            ]
+        },
+        {
+            "heading": "OpenOffice Calc/LibreOffice Calc",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Some tips to work with localization in OpenOffice Calc or LibreOffice Calc:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Import settings: Separated by semicolon, no Text delimiter, ISO-8859-1 or Western 1252/Latin 1 encoding.",
+                            "children": []
+                        },
+                        {
+                            "text": "Use Right-click/Column Width... to set proper width in order to have the languages to translate to/from visible at the same time, in order to avoid horizontal scrolling.",
+                            "children": []
+                        },
+                        {
+                            "text": "Use Right-click/Format Cells... -> Alignment tab -> Wrap text automatically for the language(s) being worked on, to always see the whole text.",
+                            "children": []
+                        },
+                        {
+                            "text": "Ensure all the x are aligned in same column (column O if using vanilla number of columns), otherwise the blank line at the end of the file may be removed.",
+                            "children": []
+                        },
+                        {
+                            "text": "Check spelling per column (one language at a time).",
+                            "children": []
+                        },
+                        {
+                            "text": "Make sure text does not contain semicolon, otherwise it will be truncated in game, and when re-importing it will appear split into multiple columns.",
+                            "children": []
+                        },
+                        {
+                            "text": "When saving, use current format.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Command line",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "It is possible to use the very poorly documented command line features of OpenOffice or LibreOffice to create a batch file that will automatically convert an .ods spreadsheet file into a semicolon-delimited .csv file.  You may then drag and drop any .ods file onto this batch file, and it will be automatically converted into a .csv file in the parent directory."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If using LibreOffice, copy and paste the following command into a blank text file, and rename that file to \"update_file.cmd\" (or any other name of your choice, of course, so long as it retains the .cmd extension):"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The same command line will work with OpenOffice with the file path changed accordingly, as both products are from a shared code base.  The same command line will work identically on Linux and Mac installations of LibreOffice as well, with the exception of the file path and \"%1\" parameter which must be changed to suit the operating system."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The gobbledegook in the command line parameter is documented here , but here is a breakdown:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "\"C:\\Program Files\\LibreOffice\\program\\soffice.exe\"",
+                            "Absolute file path to the OpenOffice or LibreOffice binary.  Using an absolute path allows you to run the command from any folder."
+                        ],
+                        [
+                            "--convert-to csv:",
+                            "Denotes that we want to start a headless client that will run a conversion to the .csv format."
+                        ],
+                        [
+                            "\"Text - txt - csv (StarCalc)\":",
+                            "Using the CSV filter."
+                        ],
+                        [
+                            "59,34,1,1,2/2/2/2/2/2/2/2/2/2/2/2/2/2/2",
+                            "In order from left to right: Field Separator: 59 = semicolon Text Delimiter: 34 = quotation-mark Character Set: 1 = Windows-1252 First Line: 1 Cell Formats: \"2\" = string for all fifteen columns"
+                        ],
+                        [
+                            "--outdir ..",
+                            "Export the file to the directory one level closer to the system root."
+                        ],
+                        [
+                            "%1",
+                            "Passes the absolute filename dropped onto the batch file to the command line."
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Field Separator: 59 = semicolon",
+                            "children": []
+                        },
+                        {
+                            "text": "Text Delimiter: 34 = quotation-mark",
+                            "children": []
+                        },
+                        {
+                            "text": "Character Set: 1 = Windows-1252",
+                            "children": []
+                        },
+                        {
+                            "text": "First Line: 1",
+                            "children": []
+                        },
+                        {
+                            "text": "Cell Formats: \"2\" = string for all fifteen columns",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This allows you to work directly in the .ods format (or any other valid spreadsheet format) in a subfolder of the \"/ modname /localisation\" folder such as \"/ modname /localisation/src\", which means you may take advantage of the spreadsheet software's ability to hide irrelevant columns, enable word wrapping, use cell formatting, assign column widths, set optimal row heights, etc., all without having to run through the \"Save a Copy\" system dialog in the File menu to save as .csv."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is also possible to change the --outdir .. (two periods) to --outdir . (one period) to export to the same directory."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A multiple-file variant using Windows NT batch scripting is here, but heed the warning:"
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Forum: New effect for saving event targets",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

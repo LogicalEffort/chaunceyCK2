@@ -1,0 +1,359 @@
+{
+    "pageid": 2627,
+    "title": "Patch 2.4 mod compatibility guide",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This guide describes the steps to make a mod compatible with patch 2.4.X from patch 2.3.6 . [1]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that this does not replace the usual step of merging files , in case the mod modifies some vanilla files."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In case of issues, run the latest version of The Validator , and try activating debug launch options, which will now report failed asserts in log files ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The steps are:"
+                }
+            ]
+        },
+        {
+            "heading": "New folders",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Move bookmarks, combat_tactics, disease, job_actions, job_titles, triggered_modifiers files to their new folders",
+                            "children": []
+                        },
+                        {
+                            "text": "Move laws from /decisions/ to their new folder in /common/laws/",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In addition, it's possible to make use of these new folders by splitting into multiple files, see loading from folders ."
+                }
+            ]
+        },
+        {
+            "heading": "Religion",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Remove can_hold_temples in religion definitions",
+                            "children": []
+                        },
+                        {
+                            "text": "Add religion flags to Muslim religions:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Add to defensive religions:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Religion descriptions now get their characteristics automatically appended in the tooltip, so existing descriptions may need to be revised. Use <religion>_FEATURES localization key to describe additional features that are detected automatically.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Culture",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Merge graphical_culture and second_graphical_culture into a list:",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Minor titles",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Split allow block minor_titles into 2 blocks:",
+                            "children": [
+                                {
+                                    "text": "allowed_to_hold: keep what was in default scope",
+                                    "children": []
+                                },
+                                {
+                                    "text": "allowed_to_grant: put what used to be in FROM scope, without the FROM",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If applicable, port the conditions for commanders from job_marshal to minor_titles (feminist religions, etc.)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Ensure minor titles have a grant_limit , otherwise they cannot be assigned in any way (interface or event)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Use is_high_prio = yes for minor titles that impact gameplay and should not stay unoccupied.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Decisions and events",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Remove vassal_decisions, replaced by targetted_decisions. Add appropriate filter / ai_target_filter (usually court or vassal). Note: targetted_decisions were already present since several patches, but vassal_decisions was still used by vanilla until now.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Use icon_religion flag for conversion decisions",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If using grant_title for an inactive landed titles, activating the title beforehand is now required (like for landless titles) via:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "activate_title = { title = THIS status = yes } or giving de jure lands."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "has_character_flag = do_not_disturb was re-factored into",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Replace convert_to_castle command by convert_to = CASTLE and similar for other convert_to_<holding> commands",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "History",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Add title history to disable landless religious heads if needed, as they will now trigger great holy wars.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweak province history to ensure proper government types. As feudal_governments.txt gets loaded first, it gets priority: if any province in character demesne is feudal, it will be used as capital - even if the historical de jure capital is in a tribal province.",
+                            "children": []
+                        },
+                        {
+                            "text": "In province history, ensure that remove_settlement command is called after the switch of capital , if that settlement was the capital.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Governments",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If having playable religious heads other than Reformed Germanic and Muslim Caliphs, replace in governments potentials:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "by the more generic condition:"
+                }
+            ]
+        },
+        {
+            "heading": "Map",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Rename region.txt to island_region.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "Add geographical_region.txt, and adapt if provinces or dejure are different from vanilla.",
+                            "children": []
+                        },
+                        {
+                            "text": "Modify default.map with region and geographical_region file paths:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Verify that the index of terrain.bmp uses valid colors, as this will now cause CTD on loading.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Other",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Move holy_site definition in landed_titles from barony to county",
+                            "children": []
+                        },
+                        {
+                            "text": "Add is_nomadic = no to standard retinues potential conditions",
+                            "children": []
+                        },
+                        {
+                            "text": "Add extra layer GFX_player_overlay:p11 to all custom ethnicity portraits, at the end:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If using custom era selection screen, replace BM_RISE_OF_THE_HANSA by BM_THE_MONGOLS for \"middle\" bookmark name.",
+                            "children": []
+                        },
+                        {
+                            "text": "For total conversions mod, replace_path common/trade_routes folder, or create an empty file 00_silk_route.txt in it.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ forum:steps-for-2-4-compatibilty.869881",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

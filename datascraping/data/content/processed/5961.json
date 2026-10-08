@@ -1,0 +1,1023 @@
+{
+    "pageid": 5961,
+    "title": "More Bloodlines",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "More Bloodlines is a mod for Crusader Kings II to add more bloodlines to game"
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Bloodlines",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Inheritance",
+                            "Founding Method",
+                            "Opinions",
+                            "Other modifiers",
+                            "Event ID"
+                        ],
+                        [
+                            "Popely Bloodline",
+                            "Patrilineal",
+                            "Requirements: 5 member of your dynasty is chosen Pope Doesn't have this bloodline Active Condition: Must have the same dynasty and religion as founder",
+                            "+5 Same Religion Opinion",
+                            "+0.5 Monthly Prestige +0.5 Monthly Piety Characters tend to become Zealous and are more likely to get canonized",
+                            "IB.101"
+                        ],
+                        [
+                            "Popely Bloodline 2-5",
+                            "Patrilineal",
+                            "Requirements: 10/15/20/25 member of your dynasty is chosen Pope This bloodline can be earned up to 4 times Active Condition: Must have the same dynasty and religion as founder",
+                            "+2 Same Religion Opinion",
+                            "+0.5 Monthly Prestige +0.5 Monthly Piety Characters tend to become Zealous and are more likely to get canonized",
+                            "IB.102 IB.103 IB.104 IB.105"
+                        ],
+                        [
+                            "Wonderly Bloodline",
+                            "Patrilineal",
+                            "Requirements: Contructs or Upgrade a Wonder 4 times None of the Wonders have holy_building flag",
+                            "-5 Temple Vassal Opinion +15 Vassal Opinion -5 Greedy",
+                            "Build Cost -10% Build Time -20% +1 Monthly Prestige -0.2 Monthly Piety",
+                            "IB.21"
+                        ],
+                        [
+                            "Wonderly Bloodline ( Holy )",
+                            "Patrilineal",
+                            "Requirements: Contructs or Upgrade a Wonder 4 times One of the Wonders have holy_building flag",
+                            "+10 Temple Vassal Opinion +8 Vassal Opinion",
+                            "Build Cost -10% Build Time -20% +0.5 Monthly Prestige +0.2 Monthly Piety +5% Clergy Vassal Tax -0.05 Temple build cost modifier",
+                            "IB.22"
+                        ],
+                        [
+                            "Reformist Bloodline",
+                            "Patrilineal",
+                            "Requirements: Reform a religion Active Condition: Must have same religion as founder of bloodline",
+                            "+15 Same Religion Opinion +10 Church Opinion",
+                            "+1 Monthly Prestige +1 Monthly Piety Characters tend to become Zealous",
+                            "IB.30"
+                        ],
+                        [
+                            "Divine Bloodline",
+                            "Patrilineal",
+                            "Requirements: Reform a religion with Dogmatic nature, Divine Marriage doctrine and Temporal leadership Active Condition: Must have same religion and dynasty as founder of bloodline",
+                            "+20 Same Religion Opinion +20 Church Opinion",
+                            "+1 Monthly Prestige +1 Monthly Piety -2% Revolt Risk Characters tend to become Zealous",
+                            "IB.30"
+                        ],
+                        [
+                            "Virgin Birth Bloodline",
+                            "Patrilineal",
+                            "Requirements: Child born from Virgin Birth event (SoA.5242) gets this bloodline Active Condition: Must have the same religion as founder",
+                            "+10 Same Religion Opinion -15 Temple Vassal Opinion +10 Zealous -20 Cynical",
+                            "+0.75 Monthly Prestige +0.75 Monthly Piety Characters tend to become Zealous",
+                            "IB.40"
+                        ],
+                        [
+                            "Family Bloodline",
+                            "Patrilineal",
+                            "Requirements: 20 members of your dynasty is born inbred Active Condition: Must belong to the same dynasty as founder",
+                            "+15 Dynasty Opinion",
+                            "-0.2 Monthly Prestige -0.2 Monthly Piety -5 Sex Appeal 5% Fertility Characters tend to have Harelip",
+                            "IB.51"
+                        ],
+                        [
+                            "Emperor Bloodline",
+                            "Patrilineal",
+                            "Requirements: On successfully invading China Active Condition: Must belong to the same dynasty as founder",
+                            "+10 Taoist Opinion +5 Dynasty Opinion -20 Han Opinion",
+                            "+1 Monthly Prestige +5% Technology Spread Rate",
+                            "IB.61"
+                        ],
+                        [
+                            "Tyrant Bloodline",
+                            "Patrilineal",
+                            "Requirements: Must take 30 tyrant actions",
+                            "-5 General Opinion -5 Vassal Opinion +15 Cruel -20 Kind",
+                            "+1 Monthly Prestige -0.3 Monthly Piety -1% National Revolt Risk",
+                            "IB.71"
+                        ],
+                        [
+                            "White Hunter Bloodline",
+                            "Patrilineal",
+                            "Requirements: On finding and killing white stag/lion/tiger/bear",
+                            "+20 Hunter +5 General Opinion",
+                            "+0.5 Monthly Prestige Characters may befriend hunting dog",
+                            "IB.80"
+                        ],
+                        [
+                            "Merciful Bloodline",
+                            "Patrilineal",
+                            "Requirements: On finding and sparing white stag/lion/tiger/bear",
+                            "+10 Hunter +5 Kind +5 General Opinion",
+                            "+0.5 Monthly Prestige Characters may befriend hunting dog",
+                            "IB.81"
+                        ],
+                        [
+                            "Vassilyev Bloodline",
+                            "Patrilineal",
+                            "Requirements: On giving birth to 20 children as a female Must not get caught cheating",
+                            "",
+                            "+0.5 Monthly Prestige +0.5 Monthly Piety +5% Fertility +5 Sex Appeal",
+                            "IB.91"
+                        ],
+                        [
+                            "Vassilyev Bloodline ( Unfaithful )",
+                            "Patrilineal",
+                            "Requirements: On giving birth to 20 children as a female Must get caught cheating",
+                            "",
+                            "+0.5 Monthly Prestige -0.5 Monthly Piety +5% Fertility +10 Sex Appeal",
+                            "IB.91"
+                        ],
+                        [
+                            "Casanova Bloodline",
+                            "Patrilineal",
+                            "Requirements: Must have 30 children as a male",
+                            "",
+                            "+0.5 Monthly Prestige -0.5 Monthly Piety +5% Fertility +10 Sex Appeal",
+                            "IB.92"
+                        ],
+                        [
+                            "Great Old Bloodline",
+                            "Patrilineal",
+                            "Requirements: On killing Cthulhu in Lunatic event(event 6358) Active Condition: Must belong to the same dynasty as founder",
+                            "+7 Trusting",
+                            "+10 Personal Combat Skill +0.1 Monthly Prestige Characters are more likely to be Lunatic",
+                            "IB.110"
+                        ],
+                        [
+                            "Arthurian Bloodline",
+                            "Patrilineal",
+                            "Requirements: Must win a defensive war against a Norse or reformed Norse Ruler Must create Empire of Britannia Must have Welsh culture Active Condition: Must have the same culture and religion as Founder",
+                            "+7 Welsh Opinion +5 Dynasty Opinion",
+                            "+10 Personal Combat Skill Characters can equip Caledfwlch Caledfwlch : +1 Monthly Prestige | +5 Welsh Opinion | +5 Vassal Opinion +2 Martial | +12 Personal Combat Skill | +20%  Morale Damage | +30% Morale Defence",
+                            "IB.122"
+                        ],
+                        [
+                            "Triad Bloodline (Uncut)",
+                            "Patrilineal",
+                            "Requirements: Sacrificy the pope, caliph and ecumenical patriarch in the same blot Active Condition: Must have the same religion Founder",
+                            "+10 Same Religion Opinion -20  Muslim Opinion -20  Christian Opinion +10 Zealous",
+                            "+1 Monthly Prestige +1 Monthly Piety +10 Personal Combat Skill",
+                            "IB.130"
+                        ],
+                        [
+                            "Triad Bloodline",
+                            "Patrilineal",
+                            "Requirements: Sacrificy the pope, caliph and ecumenical patriarch during the lifetime of character in blot Active Condition: Must have the same religion Founder",
+                            "+10 Same Religion Opinion -20  Muslim Opinion -20  Christian Opinion +8 Zealous",
+                            "+0.8 Monthly Prestige +0.5 Monthly Piety +8 Personal Combat Skill",
+                            "IB.131"
+                        ],
+                        [
+                            "Sevenly Bloodline",
+                            "Patrilineal",
+                            "Requirements: Seventh son of a seventh son gets this bloodline There must be no daughters between sons",
+                            "+5 Genius +5 Strong +5 Fair",
+                            "Characters are more likely to be Genius , Strong and Fair",
+                            "IB.141"
+                        ],
+                        [
+                            "Lecter Bloodline",
+                            "Patrilineal",
+                            "Requirements: On eating 10 character",
+                            "+25 Cannibal -10 General Opinion -10 Vassal Opinion",
+                            "+0.5 Monthly Prestige -1 Monthly Piety Cannibalizing has a chance of healing this character",
+                            "IB.151"
+                        ],
+                        [
+                            "Charismatic Bloodline",
+                            "Patrilineal",
+                            "Requirements: Gained by a decision Have 5 friends Don't have any rival All count or above tier rulers in your realm should have 0 or above opinion of you(Not just direct vassals)",
+                            "+5 General Opinion",
+                            "+0.3 Monthly Prestige +2% Global tax modifier -2% Revolt risk",
+                            "Gained by a decision"
+                        ],
+                        [
+                            "Shield of West Bloodline",
+                            "Patrilineal",
+                            "Requirements: Defeat of aztec invasion",
+                            "+10 General Opinion +5 Vassal Opinion",
+                            "+1 Monthly Prestige +8 Personal Combat Skill +10% Morale of Armies",
+                            "SSI.105"
+                        ],
+                        [
+                            "Midas Bloodline",
+                            "Patrilineal",
+                            "Requirements: Have 100k gold Have a yearly income of 2000 Note: Checks for requirements once a year(on November 25)",
+                            "-5 Vassal Opinion",
+                            "+1 Monthly Prestige +5% Global Tax Modifier +50% more likely to increase prosperity",
+                            "IB.160"
+                        ],
+                        [
+                            "Defender of Faith Bloodline",
+                            "Patrilineal",
+                            "Requirements: Most participating defender in a crusade gains this bloodline after crusade is defeated",
+                            "+10 Same Religion Opinion +10 Church Opinion",
+                            "+1 Monthly Prestige +1 Monthly Piety -1% Revolt Risk +10 Personal Combat Skill Characters tend to become Zealous",
+                            "IB.170"
+                        ],
+                        [
+                            "Death Repeller Bloodline",
+                            "Patrilineal",
+                            "Requirements: Choose to duel death in For Whom The Bell Tolls event and survive",
+                            "",
+                            "+1 Monthly Prestige +10 Personal Combat Skill +0.5 Health Great warriors will occasionally join your court",
+                            "IB.180"
+                        ],
+                        [
+                            "Drunk Bloodline",
+                            "Patrilineal",
+                            "Requirements: Defeat Death on chess game Choosing Drunkard or Hedonist options on chess with death event",
+                            "+10 Drunkard",
+                            "+1 Monthly Prestige +0.5 Health",
+                            "IB.180"
+                        ],
+                        [
+                            "Selfish Bloodline",
+                            "Patrilineal",
+                            "Requirements: Defeat Death on chess game Choosing sacrificing someone on chess with death event",
+                            "-5 General Opinion",
+                            "-0.5 Monthly Prestige -0.5 Monthly Piety +1 Health Resilient to battle injuries",
+                            "IB.180"
+                        ],
+                        [
+                            "Grand Master Bloodline",
+                            "Patrilineal",
+                            "Requirements: Defeat Death on chess game Get maximum score available in chess with death event",
+                            "+10 General Opinion",
+                            "+1 Monthly Prestige +0.5 Health All Stats +2 Characters have a higher chance of being Genius",
+                            "IB.180"
+                        ],
+                        [
+                            "Mata (Femme Fatale) Bloodline",
+                            "Patrilineal",
+                            "Requirements: Be Female Defeat Death on chess game Choose Genius and Master seductress options on chess with death event",
+                            "+5 General Opinion",
+                            "+1 Monthly Prestige +0.5 Health +10 Sex Appeal +15.0% Plot Power Increase Can personally pursue murder plots.",
+                            "IB.180"
+                        ],
+                        [
+                            "Bond Bloodline",
+                            "Patrilineal",
+                            "Requirements: Be Male Defeat Death on chess game Choose Genius and Master seducer options on chess with death event",
+                            "+5 General Opinion",
+                            "+1 Monthly Prestige +0.07 Monthly Piety +0.5 Health +5 Sex Appeal +10.0% Plot Power Increase +10.0% Arrest Chance Can personally pursue murder plots.",
+                            "IB.180"
+                        ],
+                        [
+                            "International Master Bloodline",
+                            "Patrilineal",
+                            "Requirements: Defeat Death on chess game Choose Game master option on chess with death event",
+                            "+10 General Opinion",
+                            "+1 Monthly Prestige +0.5 Health +1 All Stats Characters have a higher chance of being Genius",
+                            "IB.180"
+                        ],
+                        [
+                            "Intimidator Bloodline",
+                            "Patrilineal",
+                            "Requirements: Defeat Death on chess game Choose Impaler option on chess with death event",
+                            "+5 General Opinion +5 Cruel",
+                            "+1 Monthly Prestige +0.5 Health Characters tend to have their councilors be Loyal",
+                            "IB.180"
+                        ],
+                        [
+                            "Tenacious Bloodline",
+                            "Patrilineal",
+                            "Requirements: Defeat Death on chess game Do not have maximum score on chess with death event",
+                            "+5 General Opinion",
+                            "+0.5 Monthly Prestige +0.5 Health",
+                            "IB.180"
+                        ],
+                        [
+                            "Art of War Bloodline",
+                            "Patrilineal",
+                            "Requirements: Win a war against an enemy who has a realm size of at least 50 and whose realm size is at least 10 times(33.3 times for tribal or nomad) more than yours",
+                            "",
+                            "+1 Monthly Prestige +2 Martial +10% Levy Reinforcement Rate +10% Army Morale -10% Retinue Maintenance Cost",
+                            "IB.190 / IB.192"
+                        ],
+                        [
+                            "Female Warrior Bloodline",
+                            "Matrilineal",
+                            "Requirements: Win 100 major battles as a female commander leading army Win 5 battle field duels or have 50 duel experience Be female Note: There are 13 variants depending on your culture/religion/region with slight differences",
+                            "+5 Same Culture",
+                            "+1 Monthly Prestige +2 Martial +10 Personal Combat Skill +10% Army Morale Enables Enatic-Cognatic Succession",
+                            "IB.201(for automatic bloodline depending on culture/religion/region) / IB.2001 to IB.2013 for specific bloodlines"
+                        ],
+                        [
+                            "Hannibal Barca Bloodline",
+                            "Patrilineal",
+                            "Requirements: Conquer Rome as a berber republic Previous owner must not have berber culture Active Condition: Must have the same culture as founder",
+                            "+10 Berber Culture -5 Roman Opinion",
+                            "+1 Monthly Prestige +15 Days of Supply +5 Personal Combat Skill +10% Army Morale +10% Global Movement Speed",
+                            "IB.211"
+                        ],
+                        [
+                            "Writer Bloodline",
+                            "Patrilineal",
+                            "Requirements: Write 2 quality 4 book and 1 quality 3 book or 1 quality 4 book and 3 quality 3 book",
+                            "+10 Poet",
+                            "+0.5 Monthly Prestige +1 Learning +5 Personal Combat Skill +10% Culture Technology Growth Modifier Founders Capital gets Writers Guild : +0.2/Month Culture Tech Point",
+                            "IB.220"
+                        ],
+                        [
+                            "Merchant Bloodline",
+                            "Patrilineal",
+                            "Requirements: Own 25 tradeposts",
+                            "+10 City Vassal Opinion",
+                            "+0.5 Monthly Prestige +15% Retinue Size +5% Burgher Vassal Tax",
+                            "IB.230"
+                        ],
+                        [
+                            "Saxon Bloodline",
+                            "Patrilineal",
+                            "Requirements: Win a war against Charlamagne or Carloman as King of Saxony Form Empire of Scandinavia or Empire of Germany as King of Saxony",
+                            "+5 Norse Opinion",
+                            "+1 Monthly Prestige +8 Personal Combat Skill Periodically attracts the servitude of Great Warriors ( if Germanic )",
+                            "IB.244"
+                        ],
+                        [
+                            "Black Widow Bloodline",
+                            "Patrilineal",
+                            "Requirements: A woman who has 5 deceased husbands before age of 45 gets this bloodline",
+                            "",
+                            "-1 Monthly Prestige +15% Plot Power Increase Can personally pursue murder plots",
+                            "IB.252"
+                        ],
+                        [
+                            "Longevity Bloodline",
+                            "Patrilineal",
+                            "Requirements: Characters aged 100 and above get this bloodline (checks once a year)",
+                            "",
+                            "+0.5 Monthly Prestige +0.08 Monthly Piety +0.5 Health +1 Learning",
+                            "IB.260"
+                        ],
+                        [
+                            "Kaiser-i Rum Bloodline",
+                            "Patrilineal",
+                            "Requirements: Conquer Constantinople as a Muslim Turkish ruler",
+                            "",
+                            "+1 Monthly Prestige +1 Monthly Piety +15% Siege Speed +1 Martial",
+                            "IB.270"
+                        ],
+                        [
+                            "Cronus Bloodline",
+                            "Patrilineal",
+                            "Requirements: Devour 5 of your children as a hellenic",
+                            "+ 5 Hellenic Opinion",
+                            "-1 Monthly Prestige +1.23 Monthly Piety Can Castrate others",
+                            "IB.280"
+                        ],
+                        [
+                            "Melekh Mashiach Bloodline",
+                            "Patrilineal",
+                            "Requirements: Restore Kingdom of Israel Build the Third Temple Restore Priesthood of Judaism Be Jew Active Condition: Must have the religion as founder",
+                            "+15 Jewish Opinion",
+                            "+0.5 Monthly Prestige +1 Monthly Piety Loans from Jews have 0% interest Cannot expel Jews",
+                            "IB.290"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "5 member of your dynasty is chosen Pope",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't have this bloodline",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must have the same dynasty and religion as founder"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "10/15/20/25 member of your dynasty is chosen Pope",
+                            "children": []
+                        },
+                        {
+                            "text": "This bloodline can be earned up to 4 times",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must have the same dynasty and religion as founder"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Contructs or Upgrade a Wonder 4 times",
+                            "children": []
+                        },
+                        {
+                            "text": "None of the Wonders have holy_building flag",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Contructs or Upgrade a Wonder 4 times",
+                            "children": []
+                        },
+                        {
+                            "text": "One of the Wonders have holy_building flag",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Reform a religion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must have same religion as founder of bloodline"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Reform a religion with Dogmatic nature, Divine Marriage doctrine and Temporal leadership",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must have same religion and dynasty as founder of bloodline"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Child born from Virgin Birth event (SoA.5242) gets this bloodline",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must have the same religion as founder"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "20 members of your dynasty is born inbred",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must belong to the same dynasty as founder"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "On successfully invading China",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must belong to the same dynasty as founder"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Must take 30 tyrant actions",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "On finding and killing white stag/lion/tiger/bear",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "On finding and sparing white stag/lion/tiger/bear",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "On giving birth to 20 children as a female",
+                            "children": []
+                        },
+                        {
+                            "text": "Must not get caught cheating",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "On giving birth to 20 children as a female",
+                            "children": []
+                        },
+                        {
+                            "text": "Must get caught cheating",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Must have 30 children as a male",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "On killing Cthulhu in Lunatic event(event 6358)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must belong to the same dynasty as founder"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Must win a defensive war against a Norse or reformed Norse Ruler",
+                            "children": []
+                        },
+                        {
+                            "text": "Must create Empire of Britannia",
+                            "children": []
+                        },
+                        {
+                            "text": "Must have Welsh culture",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must have the same culture and religion as Founder"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Sacrificy the pope, caliph and ecumenical patriarch in the same blot",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must have the same religion Founder"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Sacrificy the pope, caliph and ecumenical patriarch during the lifetime of character in blot",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must have the same religion Founder"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Seventh son of a seventh son gets this bloodline",
+                            "children": []
+                        },
+                        {
+                            "text": "There must be no daughters between sons",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "On eating 10 character",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Gained by a decision"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Have 5 friends",
+                            "children": []
+                        },
+                        {
+                            "text": "Don't have any rival",
+                            "children": []
+                        },
+                        {
+                            "text": "All count or above tier rulers in your realm should have 0 or above opinion of you(Not just direct vassals)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Defeat of aztec invasion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Have 100k gold",
+                            "children": []
+                        },
+                        {
+                            "text": "Have a yearly income of 2000",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: Checks for requirements once a year(on November 25)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Most participating defender in a crusade gains this bloodline after crusade is defeated"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Choose to duel death in For Whom The Bell Tolls event and survive",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Defeat Death on chess game",
+                            "children": []
+                        },
+                        {
+                            "text": "Choosing Drunkard or Hedonist options on chess with death event",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Defeat Death on chess game",
+                            "children": []
+                        },
+                        {
+                            "text": "Choosing sacrificing someone on chess with death event",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Defeat Death on chess game",
+                            "children": []
+                        },
+                        {
+                            "text": "Get maximum score available in chess with death event",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Be Female",
+                            "children": []
+                        },
+                        {
+                            "text": "Defeat Death on chess game",
+                            "children": []
+                        },
+                        {
+                            "text": "Choose Genius and Master seductress options on chess with death event",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Be Male",
+                            "children": []
+                        },
+                        {
+                            "text": "Defeat Death on chess game",
+                            "children": []
+                        },
+                        {
+                            "text": "Choose Genius and Master seducer options on chess with death event",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Defeat Death on chess game",
+                            "children": []
+                        },
+                        {
+                            "text": "Choose Game master option on chess with death event",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Defeat Death on chess game",
+                            "children": []
+                        },
+                        {
+                            "text": "Choose Impaler option on chess with death event",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Defeat Death on chess game",
+                            "children": []
+                        },
+                        {
+                            "text": "Do not have maximum score on chess with death event",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Win a war against an enemy who has a realm size of at least 50 and whose realm size is at least 10 times(33.3 times for tribal or nomad) more than yours",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Win 100 major battles as a female commander leading army",
+                            "children": []
+                        },
+                        {
+                            "text": "Win 5 battle field duels or have 50 duel experience",
+                            "children": []
+                        },
+                        {
+                            "text": "Be female",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: There are 13 variants depending on your culture/religion/region with slight differences"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Conquer Rome as a berber republic",
+                            "children": []
+                        },
+                        {
+                            "text": "Previous owner must not have berber culture",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must have the same culture as founder"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Write 2 quality 4 book and 1 quality 3 book or 1 quality 4 book and 3 quality 3 book",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Own 25 tradeposts",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Win a war against Charlamagne or Carloman as King of Saxony",
+                            "children": []
+                        },
+                        {
+                            "text": "Form Empire of Scandinavia or Empire of Germany as King of Saxony",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A woman who has 5 deceased husbands before age of 45 gets this bloodline",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Characters aged 100 and above get this bloodline (checks once a year)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Conquer Constantinople as a Muslim Turkish ruler",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Devour 5 of your children as a hellenic",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Restore Kingdom of Israel",
+                            "children": []
+                        },
+                        {
+                            "text": "Build the Third Temple",
+                            "children": []
+                        },
+                        {
+                            "text": "Restore Priesthood of Judaism",
+                            "children": []
+                        },
+                        {
+                            "text": "Be Jew",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Active Condition: Must have the religion as founder"
+                }
+            ]
+        }
+    ]
+}

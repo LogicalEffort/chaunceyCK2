@@ -1,0 +1,390 @@
+{
+    "pageid": 672,
+    "title": "Objective modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Objectives are goals a character can select."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There are four categories of objectives, which are determined by their prefix:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Ambitions (obj_ prefix)",
+                            "children": []
+                        },
+                        {
+                            "text": "Factions (faction_ prefix)",
+                            "children": []
+                        },
+                        {
+                            "text": "Plots (plot_ prefix)",
+                            "children": []
+                        },
+                        {
+                            "text": "Focuses (focus_ prefix)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Ambitions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Ambitions are objectives that are specific to a character, representing their goals and motivations.  Every character in the game can choose an ambition, although most vanilla ambitions are restricted to capable adults only."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "See common/objectives/00_ambitions.txt for the vanilla ambitions."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Localisation:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "obj_ambition_name _title: The name of the ambition. Can use the 'This' scope for text substitutions/text commands.",
+                            "children": []
+                        },
+                        {
+                            "text": "obj_ambition_name _desc: The description of the ambition. Can use the 'This' scope for text substitutions/text commands.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Factions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Factions are \"objectives\" that allow membership by realm characters, and use type = liege_titles to contest the ownership of the realm's titles, type = liege_titles_w_claimant to declare a pretender, or type = character to declare a faction that simply seeks a change.  Multiple player and non-player characters can join a faction via the Intrigue panel.  They are functionally identical to plots in gameplay terms, but are openly announced and they will list the relative power of the faction members to the liege, suggesting that the faction's demands will be maintained by force.  Factions include special GUI behaviour to show which title is being contested or which character is being nominated by the faction.  The game will also issue an alert for a \"dangerous faction\" if the faction exceeds warning_level percent of the leader's total levies."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A character can only be the leader of one faction at a time, but can be a member of an unlimited number of factions, unless those factions declare themselves exclusive = yes ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "All remaining behaviour of a faction is soft-coded by decision .  In vanilla, a plot_decision is used to allow the faction to issue an ultimatum that results in armed rebellion if it is refused, but it is entirely possible to create factions that have no decisions or gameplay effects, or where the ultimatum does not cause the faction to revolt, and there is no requirement to use a plot_decision specifically.  It can just as easily be a standard intrigue decision, targetted decision, settlement decision, etc.  There is also no limit to the number of decisions that can be associated with a given faction."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "See common/objectives/00_factions.txt for the vanilla factions and decisions/faction_decisions.txt for the vanilla ultimatums."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Localisation:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "faction_name _title: The name of the faction.  For localisation commands, 'This' is the target title and 'From' is the faction leader.",
+                            "children": []
+                        },
+                        {
+                            "text": "faction_name _desc: The description of the faction.  For localisation commands, 'This' is the target title and 'From' is the faction leader.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Configuration",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "type",
+                            "string",
+                            "Each objective has a target. The type defines the initial pool of targets for the target. This pool can be narrowed down further in the allow section. The types for ambitions and plots are: character (the plotter) spouse (the plotter's spouse) rivals (the plotter's rivals) friends (the plotter's friends) liege_titles (the plotter's liege's titles) liege_titles_w_claimant (the plotter's liege's titles for a claimant) vassal_titles (the plotter's vassals' titles) realm_titles (titles in the plotter's realm) realm_characters (characters in the plotter's realm) realm_characters_plus (characters in the plotter's realm, plus rivals and relatives of the plotter, parents, children and spouse) independent_rulers rep_trade_posts Some of these types target characters, others target titles. All ambitions in vanilla use the character scope but it is possible to have ambitions targeting other characters.",
+                            "type = character"
+                        ],
+                        [
+                            "intrigue_plot military_plot vassal_rank_plot vassal_intrigue_plot murder_plot",
+                            "bool",
+                            "Each plot must specify who is eligible to join the plot as fellow plotters. Each pool of potential plotters is enabled by setting it with \"yes\". More than one pool can be enabled. For example, if you have the line \"murder_plot = yes\" then the courtiers in the same court as the target will be able to join the plot. These pools are defined by relationships to the target of the plot. If the relationship and the target type of the plot do not match there will not be any plotters in that pool. For example if you have a plot that targets a realm_character the vassal_rank_plot pool will not contain any plotters. This is because the vassal_rank_pool makes plotters eligible based on their relationship to a target title, not to a target character.",
+                            "intrigue_plot = yes"
+                        ],
+                        [
+                            "is_job_ambition",
+                            "bool",
+                            "The objective is about a councillor job. Helps the AI to prioritize.",
+                            "is_job_ambition = yes"
+                        ],
+                        [
+                            "potential",
+                            "conditions",
+                            "Only used for plots. It checks the plotter scope, where conditions can be set to let certain characters to use a specific plot.",
+                            "potential = {\n\tindependent = no\n}"
+                        ],
+                        [
+                            "target_potential",
+                            "conditions",
+                            "Conditions on the target of a plot.",
+                            "target_potential = {\n\tNOT = { any_spouse = { character = FROM } }\n}"
+                        ],
+                        [
+                            "allow",
+                            "conditions",
+                            "For plots, allow checks the target scope. Conditions in this section will determine which characters are valid targets for the plot. The FROM scope in this context can be used to check the plotter scope. For ambitions, allow checks the plotter scope, just as potential does for plots.",
+                            ""
+                        ],
+                        [
+                            "player_allow",
+                            "conditions",
+                            "If false, shows the faction entry for players, but disabled. For plots and factions",
+                            ""
+                        ],
+                        [
+                            "allow_join",
+                            "conditions",
+                            "Restricts whether characters can join factions. Faction member scope (ROOT = joiner, FROM = target).",
+                            ""
+                        ],
+                        [
+                            "chance",
+                            "",
+                            "AI characters pick ambitions and plots based on the chance value. The greater the chance value, the greater the odds that the AI will pick that particular ambition. Just like ai_chance for event options, modifiers can be used to alter a particular character's chance of picking the objective. Base chance is set by adding \"factor = x\" in the chance section, where x is the base weight. AI characters will also not pick objectives below a certain factor at all. This value can be changed in defines.lua, by changing the \"OBJECTIVE_DISCARD_WEIGHT_THRESHOLD\" variable.",
+                            "chance = {\n\tfactor = 100\n\tmodifier = {\n\t\tfactor = 1.25\n\t\ttrait = patient\n\t}\n}"
+                        ],
+                        [
+                            "creation_effect",
+                            "commands",
+                            "For plots, commands occur when the plot is activated. For ambitions, the commands are fired upon ambition selection.",
+                            ""
+                        ],
+                        [
+                            "success",
+                            "conditions",
+                            "The success section is used to set conditions to determine if the character has completed the objective. When all conditions are true in this section, the objective is considered completed.",
+                            "success = {\n\thas_job_title = job_chancellor\n}"
+                        ],
+                        [
+                            "abort",
+                            "conditions",
+                            "When all conditions in the abort section are true, the character is forced to abort the current objective.",
+                            "abort = {\n\tOR = {\n\t\ttrait = charitable\n\t\ttrait = incapable\n\t}\n}"
+                        ],
+                        [
+                            "abort_effect",
+                            "commands",
+                            "When an objective is aborted, either by choice or by forced abort, all of the commands in the abort_effect section are fired.",
+                            ""
+                        ],
+                        [
+                            "effect",
+                            "commands",
+                            "When an objective is successfully completed, all of the commands in the effect section are fired.",
+                            "effect = {\n\tchange_intrigue = 1\n}"
+                        ],
+                        [
+                            "exclusive",
+                            "bool",
+                            "Can only lead or be in one faction of this type",
+                            "exclusive = yes"
+                        ],
+                        [
+                            "expectation_of_liege",
+                            "bool",
+                            "",
+                            "expectation_of_liege = yes"
+                        ],
+                        [
+                            "rel_head_loyalist",
+                            "bool",
+                            "Members consider the \"real\" pope to be the rightful religious head",
+                            ""
+                        ],
+                        [
+                            "cancel_on_leader_death",
+                            "bool",
+                            "The faction will not automatically continue under a new leader",
+                            "cancel_on_leader_death = yes"
+                        ],
+                        [
+                            "warning_level",
+                            "double",
+                            "At this level of faction power we give player an alert. Set to 0 for no alerts.",
+                            "warning_level = 0.7"
+                        ],
+                        [
+                            "ai_capital_kingdom_focus",
+                            "bool",
+                            "AI characters with this ambition will actually focus on taking the kingdom",
+                            "ai_capital_kingdom_focus = yes"
+                        ],
+                        [
+                            "membership",
+                            "clause",
+                            "AI membership weight: ROOT is the prospective member. FROM is the faction leader. FROMFROM is the target title or character.",
+                            ""
+                        ],
+                        [
+                            "can_cancel",
+                            "bool",
+                            "Ambition cannot be cancelled.",
+                            "can_cancel = no"
+                        ],
+                        [
+                            "<modifier_name>",
+                            "modifiers",
+                            "Modifiers while the objective is active.",
+                            ""
+                        ],
+                        [
+                            "potential_traits",
+                            "List< traits >",
+                            "Traits that can be gained via this focus",
+                            "potential_traits = {\n\thaughty\n\tbrooding\n}"
+                        ],
+                        [
+                            "good_traits",
+                            "List< traits >",
+                            "Traits that positively influence the focus",
+                            "good_traits = {\n  affectionate\n  curious\n\n}"
+                        ],
+                        [
+                            "bad_traits",
+                            "List< traits >",
+                            "Traits that negatively influence the focus",
+                            "bad_traits = {\n  willful\n  fussy\n}"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "character (the plotter)",
+                            "children": []
+                        },
+                        {
+                            "text": "spouse (the plotter's spouse)",
+                            "children": []
+                        },
+                        {
+                            "text": "rivals (the plotter's rivals)",
+                            "children": []
+                        },
+                        {
+                            "text": "friends (the plotter's friends)",
+                            "children": []
+                        },
+                        {
+                            "text": "liege_titles (the plotter's liege's titles)",
+                            "children": []
+                        },
+                        {
+                            "text": "liege_titles_w_claimant (the plotter's liege's titles for a claimant)",
+                            "children": []
+                        },
+                        {
+                            "text": "vassal_titles (the plotter's vassals' titles)",
+                            "children": []
+                        },
+                        {
+                            "text": "realm_titles (titles in the plotter's realm)",
+                            "children": []
+                        },
+                        {
+                            "text": "realm_characters (characters in the plotter's realm)",
+                            "children": []
+                        },
+                        {
+                            "text": "realm_characters_plus (characters in the plotter's realm, plus rivals and relatives of the plotter, parents, children and spouse)",
+                            "children": []
+                        },
+                        {
+                            "text": "independent_rulers",
+                            "children": []
+                        },
+                        {
+                            "text": "rep_trade_posts",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some of these types target characters, others target titles. All ambitions in vanilla use the character scope but it is possible to have ambitions targeting other characters."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "military_plot vassal_rank_plot vassal_intrigue_plot murder_plot"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "These pools are defined by relationships to the target of the plot. If the relationship and the target type of the plot do not match there will not be any plotters in that pool. For example if you have a plot that targets a realm_character the vassal_rank_plot pool will not contain any plotters. This is because the vassal_rank_pool makes plotters eligible based on their relationship to a target title, not to a target character."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "For plots, allow checks the target scope. Conditions in this section will determine which characters are valid targets for the plot. The FROM scope in this context can be used to check the plotter scope.",
+                            "children": []
+                        },
+                        {
+                            "text": "For ambitions, allow checks the plotter scope, just as potential does for plots.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "AI characters will also not pick objectives below a certain factor at all. This value can be changed in defines.lua, by changing the \"OBJECTIVE_DISCARD_WEIGHT_THRESHOLD\" variable."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "For plots, commands occur when the plot is activated.",
+                            "children": []
+                        },
+                        {
+                            "text": "For ambitions, the commands are fired upon ambition selection.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Localisation",
+            "level": 2,
+            "content": []
+        }
+    ]
+}

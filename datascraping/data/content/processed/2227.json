@@ -1,0 +1,3332 @@
+{
+    "pageid": 2227,
+    "title": "Modifiers",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Modifiers are bonus or penalties, referenced by a variable, localized and attached to characters, province, religion or opinion depending on the type."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Modifiers are everywhere and can be attached in multiple ways: traits, technology, events, culture, triggers, ..."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "All values of modifiers are double, but depending on how they are used in formulas, they can either be:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Flat (additive): 1 means +1",
+                            "children": []
+                        },
+                        {
+                            "text": "Percentage (multiplicative): 1 means +100% (i.e. x 2), 0.1 means +10% (i.e. x 1.1), etc.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "List of modifiers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Modifiers can only be used in the correct scope. When using modifier in wrong scope, it will display as NONE in tooltip and/or will do absolutely nothing (though some modifier displayed as NONE may actually apply its effect):"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "[1] Character : Character modifiers are attached to characters and modify their personal or state abilities, their behavior (for the AI characters), or the opinion a group of people have of that character. They are primarily used in events via command add_character_modifier , combat tactics (for commanders), ambitions & focuses, artifacts, bloodlines, and religion character_modifier .",
+                            "children": []
+                        },
+                        {
+                            "text": "Traits : Traits modifiers are used inside traits . All character modifiers work in traits, but not vice-versa.",
+                            "children": []
+                        },
+                        {
+                            "text": "[2] Province : Province modifiers are attached to provinces and impact the actions of characters while they are in that province. They are added in events via add_province_modifier command, or via disease.",
+                            "children": []
+                        },
+                        {
+                            "text": "Councillor : Councillor jobs modifiers give bonus to a province where the job is being performed by the councillor.",
+                            "children": []
+                        },
+                        {
+                            "text": "Technology : Technology modifiers give bonus to a provinces which have attained that technological level. Anything that works as a province modifier will work as a tech modifier, though not vice-versa.",
+                            "children": []
+                        },
+                        {
+                            "text": "[3] Holding : Holding modifiers are attached to individual holdings in a province with the add_holding_modifier command. In pre-2.4 patches, this kind of modifier was only attached via vanilla code.",
+                            "children": []
+                        },
+                        {
+                            "text": "[4] Building : Building modifiers only affect the holding they're built in. For family palace buildings, any character modifier can also be used, and will apply to its owner. Some modifiers can only work in family palaces.",
+                            "children": []
+                        },
+                        {
+                            "text": "Laws : Laws modifiers apply to the primary title having such laws active.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Notes:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "<holding_type> can be city, castle or temple",
+                            "children": []
+                        },
+                        {
+                            "text": "<unit> can be pikemen, light_cavalry, knights, heavy_infantry, archers or light_infantry. Entries from /common/special_troops are also valid: horse_archers, war_elephants, camel_cavalry.",
+                            "children": []
+                        },
+                        {
+                            "text": "<tech_type> can be economy, culture or military",
+                            "children": []
+                        },
+                        {
+                            "text": "✓ means the modifier is known to work in that scope (used in vanilla or tested)",
+                            "children": []
+                        },
+                        {
+                            "text": "X means the modifier is known not to work in that scope",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Character attribute modifiers",
+                            "Description",
+                            "Type",
+                            "Character [1]",
+                            "Traits",
+                            "Province [2]",
+                            "Councillor",
+                            "Technology",
+                            "Holding [3]",
+                            "Building [4]",
+                            "Laws"
+                        ],
+                        [
+                            "diplomacy",
+                            "Diplomacy skill of a character",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "diplomacy_penalty",
+                            "Modifies diplomacy skill of character. Total bonus cannot exceed 0.",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "stewardship",
+                            "Stewardship skill of a character",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "stewardship_penalty",
+                            "Modifies stewardship skill of character. Total bonus cannot exceed 0.",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "martial",
+                            "Martial skill of a character",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "martial_penalty",
+                            "Modifies martial skill of character. Total bonus cannot exceed 0.",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "intrigue",
+                            "Intrigue skill of a character",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "intrigue_penalty",
+                            "Modifies intrigue skill of character. Total bonus cannot exceed 0.",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "learning",
+                            "Learning skill of a character",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "learning_penalty",
+                            "Modifies learning skill of character. Total bonus cannot exceed 0.",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "fertility",
+                            "Fertility of a character.",
+                            "Percent",
+                            "✓",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "fertility_penalty",
+                            "Modifies fertility of character. Total bonus cannot exceed 0.",
+                            "Percent",
+                            "✓",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "health",
+                            "Health of a character",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "health_penalty",
+                            "Modifies health of character. Total bonus cannot exceed 0, i.e a disease with health_penalty = -1 combined with a treatment health_penalty = 2 will not result in +1 health, but 0.",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "combat_rating",
+                            "Personal Combat Skill",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "threat_decay_speed",
+                            "threat decay percentage per month",
+                            "Percent",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Realm modifiers",
+                            "Description",
+                            "Type",
+                            "Character [1]",
+                            "Traits",
+                            "Province [2]",
+                            "Councillor",
+                            "Technology",
+                            "Holding [3]",
+                            "Building [4]",
+                            "Laws"
+                        ],
+                        [
+                            "demesne_size",
+                            "Maximum demesne size",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            "✓"
+                        ],
+                        [
+                            "vassal_limit",
+                            "Vassal limit",
+                            "Flat",
+                            "X",
+                            "X",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "X",
+                            "✓"
+                        ],
+                        [
+                            "global_revolt_risk",
+                            "Revolt risk in a ruler's realm (whole provinces, not only demesne)",
+                            "Percent",
+                            "✓",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓"
+                        ],
+                        [
+                            "local_revolt_risk",
+                            "Revolt risk in a in a province",
+                            "Percent",
+                            "X",
+                            "X",
+                            "✓",
+                            "✓",
+                            "",
+                            "X",
+                            "",
+                            ""
+                        ],
+                        [
+                            "disease_defence",
+                            "Chance of a province to gain a disease",
+                            "Percent",
+                            "",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            "X",
+                            "",
+                            ""
+                        ],
+                        [
+                            "culture_flex",
+                            "Tolerance to other cultures",
+                            "Percent",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "religion_flex",
+                            "Tolerance to other religions",
+                            "Percent",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "short_reign_length",
+                            "Short reign penalty in years",
+                            "Flat",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "moved_capital_months_mult",
+                            "Modifies the delay for how often one can change capital, if their government allows for more frequent switching than once per lifetime. Scripted on capital buildings.",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "Intrigue modifiers",
+                            "Description",
+                            "Type",
+                            "Character [1]",
+                            "Traits",
+                            "Province [2]",
+                            "Councillor",
+                            "Technology",
+                            "Holding [3]",
+                            "Building [4]",
+                            "Laws"
+                        ],
+                        [
+                            "assassinate_chance_modifier",
+                            "Chances to assassinate characters in a province",
+                            "Percent",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "arrest_chance_modifier",
+                            "",
+                            "Percent",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "✓"
+                        ],
+                        [
+                            "plot_power_modifier",
+                            "Plot power for character's plots",
+                            "Percent",
+                            "✓",
+                            "✓",
+                            "X",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "✓"
+                        ],
+                        [
+                            "murder_plot_power_modifier",
+                            "Defaults to 1, and is multiplied with a character's plot power when it comes to murder plots.",
+                            "Percent",
+                            "✓",
+                            "[ ✓ ]",
+                            "X",
+                            "[ ✓ ]",
+                            "",
+                            "",
+                            "",
+                            "[ ✓ ]"
+                        ],
+                        [
+                            "defensive_plot_power_modifier",
+                            "",
+                            "Percent",
+                            "✓",
+                            "[ ✓ ]",
+                            "X",
+                            "[ ✓ ]",
+                            "",
+                            "",
+                            "",
+                            "[ ✓ ]"
+                        ],
+                        [
+                            "plot_discovery_chance",
+                            "Chances to uncover plots in a province",
+                            "Percent",
+                            "✓",
+                            "X",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "[ ✓ ]"
+                        ],
+                        [
+                            "Wealth, prestige, and piety",
+                            "Description",
+                            "Type",
+                            "Character [1]",
+                            "Traits",
+                            "Province [2]",
+                            "Councillor",
+                            "Technology",
+                            "Holding [3]",
+                            "Building [4]",
+                            "Laws"
+                        ],
+                        [
+                            "tax_income",
+                            "Taxes from holding in demesne",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "✓",
+                            "✓",
+                            "[ ✓ ]"
+                        ],
+                        [
+                            "global_tax_modifier",
+                            "Tax gained from every province in a ruler's realm. If used as a trait, properly increases the overall demesne income but is listed as 'Stewardship' bonus.",
+                            "Percent",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "X"
+                        ],
+                        [
+                            "local_tax_modifier",
+                            "Tax gained from every holding in a province",
+                            "Percent",
+                            "",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "",
+                            "✓",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "<holding_type> _tax_modifier",
+                            "Tax gained from castles/cities/temples in demesne",
+                            "Percent",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            "X"
+                        ],
+                        [
+                            "<holding_type> _vassal_tax_modifier",
+                            "Tax gained from vassals of the government type that normally corresponds to that holding",
+                            "Percent",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓"
+                        ],
+                        [
+                            "nomad_tax_modifier",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "monthly_character_prestige",
+                            "Prestige of a character earned each month",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "liege_prestige",
+                            "Gives prestige to building owner and his/her liege",
+                            "",
+                            "✓",
+                            "X",
+                            "X",
+                            "",
+                            "",
+                            "✓",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "add_prestige_modifier",
+                            "Modifier of character prestige gain",
+                            "Percent",
+                            "X",
+                            "X",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "monthly_character_piety",
+                            "Piety of a character earned each month",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "liege_piety",
+                            "Gives piety to building owner and his/her liege",
+                            "",
+                            "✓",
+                            "X",
+                            "X",
+                            "",
+                            "",
+                            "✓",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "add_piety_modifier",
+                            "Modifier of character piety gain",
+                            "Percent",
+                            "X",
+                            "X",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "monthly_character_wealth",
+                            "Wealth of a character earned each month",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "[ ✓ ]"
+                        ],
+                        [
+                            "AI behavior modifiers",
+                            "Description",
+                            "Type",
+                            "Character [1]",
+                            "Traits",
+                            "Province [2]",
+                            "Councillor",
+                            "Technology",
+                            "Holding [3]",
+                            "Building [4]",
+                            "Laws"
+                        ],
+                        [
+                            "ai_rationality",
+                            "Influences the way the AI makes choices, such as whether the AI will compare its own levy size with its enemy levy size if it wants to go to war.",
+                            "Flat",
+                            "X",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "ai_zeal",
+                            "Influences the way the AI deals with religious conflict, primarily whether the AI will join crusades and neighboring holy wars.",
+                            "Flat",
+                            "X",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "ai_greed",
+                            "Influences interactions concerning money, such as the effect of gifts on opinion as well as likelihood to ransom or start embargo wars.",
+                            "Flat",
+                            "X",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "ai_honor",
+                            "Influences the likelihood the AI will honor relationships and alliances, and the chance of attacking despite such relations. Also affects its likelihood of joining plots.",
+                            "Flat",
+                            "X",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "ai_ambition",
+                            "Influences the AI's desire for expansion, primarily affecting the likelihood of wanting to declare war.",
+                            "Flat",
+                            "X",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "AI construction modifiers",
+                            "Description",
+                            "Type",
+                            "Character [1]",
+                            "Traits",
+                            "Province [2]",
+                            "Councillor",
+                            "Technology",
+                            "Holding [3]",
+                            "Building [4]",
+                            "Laws"
+                        ],
+                        [
+                            "ai_feudal_modifier",
+                            "Influences the AI's building creation weight if the ai is feudal, or if tribal but strive to become feudal",
+                            "Flat",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "ai_republic_modifier",
+                            "Influences the AI's building creation weight if the ai is a republic, or if tribal but strive to become a republic",
+                            "Flat",
+                            "X",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "Construction modifiers",
+                            "Description",
+                            "Type",
+                            "Character [1]",
+                            "Traits",
+                            "Province [2]",
+                            "Councillor",
+                            "Technology",
+                            "Holding [3]",
+                            "Building [4]",
+                            "Laws"
+                        ],
+                        [
+                            "build_cost_modifier",
+                            "Flat modifier to the gold cost of a building or new holding. For buildings, this modifier only applies in the affected character's demesne (it does not apply to building cost in vassals' holdings). Non-gold costs (eg. prestige/piety) are unaffected. This modifier stacks additively with all other relevant build cost modifiers. Expected values are between -1 and +1 (eg. build_cost_modifier = -0.05 gives a 5% additive reduction). Is converted to % format for tooltips (ie. easier to understand than the individual modifiers below).",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "build_cost_castle_modifier",
+                            "Flat modifier to the gold cost of a castle building (demesne only) or new castle holding. Is not converted to % format for tooltips. See build_cost_modifier for more details.",
+                            "Flat",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "build_cost_city_modifier",
+                            "Flat modifier to the gold cost of a city building (demesne only) or new city holding. Is not converted to % format for tooltips. See build_cost_modifier for more details.",
+                            "Flat",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "build_cost_temple_modifier",
+                            "Flat modifier to the gold cost of a temple building (demesne only) or new temple holding. Is not converted to % format for tooltips. See build_cost_modifier for more details.",
+                            "Flat",
+                            "✓",
+                            "[ ✓ ]",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "build_cost_tribal_modifier",
+                            "Flat modifier to the gold cost of a tribal building (demesne only) or new tribal holding. Is not converted to % format for tooltips. See build_cost_modifier for more details.",
+                            "Flat",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "build_time_modifier",
+                            "Flat modifier to the construction time of a building (demesne only) or new holding. For buildings, this modifier only applies in the affected character's demesne (it does not apply to building construction time in vassals' holdings). This modifier stacks additively with all other relevant build time modifiers. Expected values are between -1 and +1 (eg. build_time_modifier = -0.05 gives a 5% additive reduction). Is converted to % format for tooltips (ie. easier to understand than the individual modifiers below).",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "build_time_castle_modifier",
+                            "Flat modifier to the construction time of a castle building (demesne only) or new castle holding. Is not converted to % format for tooltips. See build_time_modifier for more details.",
+                            "Flat",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "build_time_city_modifier",
+                            "Flat modifier to the construction time of a city building (demesne only) or new city holding. Is not converted to % format for tooltips. See build_time_modifier for more details.",
+                            "Flat",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "build_time_temple_modifier",
+                            "Flat modifier to the construction time of a temple building (demesne only) or new temple holding. Is not converted to % format for tooltips. See build_time_modifier for more details.",
+                            "Flat",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "build_time_tribal_modifier",
+                            "Flat modifier to the construction time of a tribe building (demesne only) or new tribe holding. Is not converted to % format for tooltips. See build_time_modifier for more details.",
+                            "Flat",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "local_build_cost_modifier",
+                            "Cost of constructing a building in a province",
+                            "Percent",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "X",
+                            "X [1]",
+                            ""
+                        ],
+                        [
+                            "local_build_cost_castle_modifier",
+                            "Cost of constructing a castle building in a province",
+                            "Percent",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "X",
+                            ""
+                        ],
+                        [
+                            "local_build_cost_city_modifier",
+                            "Cost of constructing a city building in a province",
+                            "Percent",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "X",
+                            ""
+                        ],
+                        [
+                            "local_build_cost_temple_modifier",
+                            "Cost of constructing a temple building in a province",
+                            "Percent",
+                            "[ ✓ ]",
+                            "[ ✓ ]",
+                            "[ ✓ ]",
+                            "[ ✓ ]",
+                            "[ ✓ ]",
+                            "X",
+                            "X",
+                            ""
+                        ],
+                        [
+                            "local_build_cost_tribal_modifier",
+                            "Cost of constructing a tribal building in a province",
+                            "Percent",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "X",
+                            ""
+                        ],
+                        [
+                            "local_build_time_modifier",
+                            "Time to construct a building in a province",
+                            "Percent",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "X",
+                            "X [2]",
+                            ""
+                        ],
+                        [
+                            "local_build_time_castle_modifier",
+                            "Time to construct a building in a castle",
+                            "Percent",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "X",
+                            ""
+                        ],
+                        [
+                            "local_build_time_city_modifier",
+                            "Time to construct a building in a city",
+                            "Percent",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "X",
+                            ""
+                        ],
+                        [
+                            "local_build_time_temple_modifier",
+                            "Time to construct a building in a temple",
+                            "Percent",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "X",
+                            ""
+                        ],
+                        [
+                            "local_build_time_tribal_modifier",
+                            "Time to construct a building in a tribe",
+                            "Percent",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "X",
+                            ""
+                        ],
+                        [
+                            "Opinion modifiers",
+                            "Description",
+                            "Type",
+                            "Character [1]",
+                            "Traits",
+                            "Province [2]",
+                            "Councillor",
+                            "Technology",
+                            "Holding [3]",
+                            "Building [4]",
+                            "Laws"
+                        ],
+                        [
+                            "ambition_opinion",
+                            "Changes the trait-holder's opinion of characters from which they want something (e.g., a county)",
+                            "Flat",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "vassal_opinion",
+                            "For traits, changes opinion of direct vassals and courtiers. For artifacts, changes opinion of vassals and below.",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            "✓"
+                        ],
+                        [
+                            "sex_appeal_opinion",
+                            "Changes the opinion of adults interested in your gender. Also changes the opinion of homosexuals of the opposite gender, but only for traits, not for character modifiers or artifacts. Only active for adults below age 45 for women and 65 for men.",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "same_opinion",
+                            "Changes a character's opinion with the same trait as you",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "same_opinion_if_same_religion",
+                            "Changes a character's opinion with the same trait, if they have your religion",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "opposite_opinion",
+                            "Changes a character's opinion with a trait defined in opposites = { } of you",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "liege_opinion",
+                            "Changes your opinion of your liege OR changes your liege's opinion of you (depending on where it is used)",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "general_opinion",
+                            "Changes all characters' opinion of you",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "[ ✓ ]"
+                        ],
+                        [
+                            "twin_opinion",
+                            "Changes your twin's opinion of you",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "dynasty_opinion",
+                            "Changes all dynasty members' opinion of you",
+                            "Flat",
+                            "X",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓"
+                        ],
+                        [
+                            "male_dynasty_opinion",
+                            "Changes all men in your dynasty's opinion of you",
+                            "Flat",
+                            "X",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓"
+                        ],
+                        [
+                            "female_dynasty_opinion",
+                            "Changes all women in your dynasty's opinion of you",
+                            "Flat",
+                            "X",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓"
+                        ],
+                        [
+                            "child_opinion",
+                            "Changes your children's opinion of you",
+                            "Flat",
+                            "X",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓"
+                        ],
+                        [
+                            "oldest_child_opinion",
+                            "Changes your oldest child's opinion of you",
+                            "Flat",
+                            "",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓"
+                        ],
+                        [
+                            "youngest_child_opinion",
+                            "",
+                            "Flat",
+                            "",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓"
+                        ],
+                        [
+                            "spouse_opinion",
+                            "Changes your spouses' opinion of you",
+                            "Flat",
+                            "X",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "X",
+                            ""
+                        ],
+                        [
+                            "male_opinion",
+                            "",
+                            "Flat",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "female_opinion",
+                            "",
+                            "Flat",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "<religion> _opinion",
+                            "Changes the opinion of all characters of that religion toward the character. Custom religions can be added, but must be defined in 00_modifier_definitions.txt first.",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "X [3]"
+                        ],
+                        [
+                            "<religion_group> _opinion",
+                            "Changes the opinion of all characters of that religion group toward the character. Custom religions can be added, but must be defined in 00_modifier_definitions.txt first.",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "]]"
+                        ],
+                        [
+                            "same_religion_opinion",
+                            "Changes same religion members' opinion of you",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "infidel_opinion",
+                            "Opinion of other religion groups",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "< religion_group >_church_opinion",
+                            "",
+                            "Flat",
+                            "?",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "church_opinion",
+                            "Changes the clergy's opinion of you",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "✓",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "temple_opinion",
+                            "",
+                            "Flat",
+                            "",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓"
+                        ],
+                        [
+                            "temple_all_opinion",
+                            "",
+                            "Flat",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "town_opinion",
+                            "",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "city_opinion",
+                            "Changes Burgher vassals' opinion of you",
+                            "Flat",
+                            "X",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓"
+                        ],
+                        [
+                            "castle_opinion",
+                            "Changes Feudal vassals' opinion of you. If used in a province modifier, only has an effect if it is your capital.",
+                            "Flat",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "feudal_opinion",
+                            "Opinion of direct feudal vassals",
+                            "Flat",
+                            "",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "X",
+                            "✓"
+                        ],
+                        [
+                            "tribal_opinion",
+                            "Opinion of tribal vassals (all tribals, including unreformed tribals)",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓"
+                        ],
+                        [
+                            "unreformed_tribal_opinion",
+                            "",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓"
+                        ],
+                        [
+                            "rel_head_opinion",
+                            "Opinion of character's religious head",
+                            "Flat",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "free_invest_vassal_opinion",
+                            "Opinion of vassals with bishops",
+                            "Flat",
+                            "✓",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "clan_sentiment",
+                            "",
+                            "",
+                            "[ ✓ ]",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "Warfare modifiers",
+                            "Description",
+                            "Type",
+                            "Character [1]",
+                            "Traits",
+                            "Province [2]",
+                            "Councillor",
+                            "Technology",
+                            "Holding [3]",
+                            "Building [4]",
+                            "Laws"
+                        ],
+                        [
+                            "levy_size",
+                            "Maximum levies. Does not influence fleet size.",
+                            "Percent",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "",
+                            "✓",
+                            "✓",
+                            "X"
+                        ],
+                        [
+                            "<holding_type> _levy_size",
+                            "Maximum levies of a castle/city/temple",
+                            "Percent",
+                            "",
+                            "",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "global_levy_size",
+                            "Levy size modifier for characters",
+                            "Percent",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "levy_reinforce_rate",
+                            "Time for levies to regenerate",
+                            "Percent",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "",
+                            "✓",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "army_reinforce_rate",
+                            "Time for commanded army, retinue, or horde to regenerate (i.e., if character leads centre flank)",
+                            "Percent",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "phase_ <phase> _attack",
+                            "Increases or decreases the effectiveness of the specified phase, as the attacking army.  e.g., phase_melee_attack .  Phase: melee, skirmish, pursue",
+                            "Percent",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "phase_ <phase> _defense",
+                            "Increases or decreases the effectiveness of the specified phase, as the defending army.",
+                            "Percent",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "<unit>",
+                            "Adds (or removes in case of a negative number) a specified number of the given unit to the holding's levy, indirectly also increasing the holding's garrison size by the same amount.",
+                            "Flat",
+                            "",
+                            "",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "<unit> _max_levy",
+                            "archers_max_levy, etc.",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            "",
+                            ""
+                        ],
+                        [
+                            "<unit> _min_levy",
+                            "archers_min_levy etc.",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "<unit> _offensive",
+                            "",
+                            "Percent",
+                            "",
+                            "",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "✓",
+                            "✓"
+                        ],
+                        [
+                            "<unit> _defensive",
+                            "",
+                            "Percent",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            "",
+                            "✓",
+                            "✓"
+                        ],
+                        [
+                            "<unit> _morale",
+                            "",
+                            "Percent",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "<holding_type> _vassal_min_levy",
+                            "Minimum levy vassals have to provide to their liege. Not cumulative between laws (takes the lowest).",
+                            "Percent",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓"
+                        ],
+                        [
+                            "<holding_type> _vassal_max_levy",
+                            "Maximum levy vassals have to provide to their liege. Not cumulative between laws (takes the highest).",
+                            "Percent",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓"
+                        ],
+                        [
+                            "land_morale",
+                            "Morale of realm army",
+                            "Percent",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "✓",
+                            "X"
+                        ],
+                        [
+                            "land_organisation",
+                            "Morale recovery rate",
+                            "Percent",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "regiment_reinforcement_speed",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "garrison_size",
+                            "Size of holding garrison",
+                            "Percent",
+                            "X",
+                            "X",
+                            "✓",
+                            "✓",
+                            "",
+                            "✓",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "global_garrison_size",
+                            "Garrison size modifier for characters",
+                            "Percent",
+                            "[ ✓ ]",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "garrison_growth",
+                            "Regeneration rate of holding garrison. Doesn't work in 2.2.1 will appear as NONE",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            ""
+                        ],
+                        [
+                            "fort_level",
+                            "Holding fort level",
+                            "Flat",
+                            "X",
+                            "X",
+                            "✓",
+                            "",
+                            "",
+                            "✓",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "global_defensive",
+                            "",
+                            "",
+                            "",
+                            "X",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "land",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "global_supply_limit",
+                            "",
+                            "Percent",
+                            "X",
+                            "✓",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "global_winter_supply",
+                            "Applicable on the capital.",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "supply_limit",
+                            "Amount of soldiers that can remain in a province until attrition occurs",
+                            "Percent",
+                            "X",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "X",
+                            "",
+                            ""
+                        ],
+                        [
+                            "max_attrition",
+                            "Province maximum attrition",
+                            "Percent",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "X",
+                            "",
+                            ""
+                        ],
+                        [
+                            "attrition",
+                            "Amount of attrition received by the troops being led. Not a command modifier",
+                            "Percent",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "days_of_supply",
+                            "Additional days troops can go without supplies before receiving attrition. Not a command modifier",
+                            "Flat",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "siege_defence",
+                            "Siege defence speed",
+                            "Percent",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "siege_speed",
+                            "Siege offence speed",
+                            "Percent",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "global_movement_speed",
+                            "",
+                            "Percent",
+                            "",
+                            "X",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "local_movement_speed",
+                            "Increases movement rate",
+                            "Percent",
+                            "",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            "X",
+                            "X",
+                            ""
+                        ],
+                        [
+                            "galleys_perc",
+                            "Number of galleys",
+                            "Percent",
+                            "X",
+                            "X",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "retinuesize",
+                            "Number of retinues",
+                            "Flat",
+                            "✓",
+                            "X [4]",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "retinuesize_perc",
+                            "Number of retinues",
+                            "Percent",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "retinue_maintenence_cost",
+                            "Applicable on characters, family palaces and the capital. The equivalent for tribal governments is horde_maintenence_cost .",
+                            "",
+                            "[ ✓ ]",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "[ ✓ ]",
+                            ""
+                        ],
+                        [
+                            "horde_maintenence_cost",
+                            "Applicable on characters, family palaces and the capital.",
+                            "",
+                            "[ ✓ ]",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "Technology modifiers",
+                            "Description",
+                            "Type",
+                            "Character [1]",
+                            "Traits",
+                            "Province [2]",
+                            "Councillor",
+                            "Technology",
+                            "Holding [3]",
+                            "Building [4]",
+                            "Laws"
+                        ],
+                        [
+                            "tech_growth_modifier",
+                            "Growth rate of all technology types.",
+                            "Percent",
+                            "X",
+                            "X",
+                            "X",
+                            "✓",
+                            "",
+                            "✓",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "commander_limit",
+                            "Increases the number of commanders a ruler can have. Scripted in buildings for capital settlements.",
+                            "Flat",
+                            "",
+                            "",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "tech_growth_modifier_ <tech_type>",
+                            "Growth rate of cultural/military/economy technology. Cumulative with tech_growth_modifier.",
+                            "Percent",
+                            "X",
+                            "X",
+                            "X",
+                            "✓",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "<tech_type> _techpoints",
+                            "Generation of technology points in province",
+                            "Percent",
+                            "",
+                            "",
+                            "✓",
+                            "✓",
+                            "",
+                            "X [5]",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "Trade modifiers",
+                            "Description",
+                            "Type",
+                            "Character [1]",
+                            "Traits",
+                            "Province [2]",
+                            "Councillor",
+                            "Technology",
+                            "Holding [3]",
+                            "Building [4]",
+                            "Laws"
+                        ],
+                        [
+                            "max_tradeposts",
+                            "Maximum number of trade posts",
+                            "Flat",
+                            "X",
+                            "X",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "tradevalue",
+                            "Trade zone value",
+                            "Flat",
+                            "✓",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "✓",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "trade_route_wealth",
+                            "Increases total Wealth of Trade Route.",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "trade_route_value",
+                            "Increases income of trade post.",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "global_trade_route_wealth",
+                            "Applicable on the capital of holders of a trade post.",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "global_trade_route_value",
+                            "Applicable on the capital of holders of a trade post.",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "global_tradevalue",
+                            "Applicable on the capital of holders of a trade post.",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "global_tradevalue_mult",
+                            "Applicable on the capital of holders of a trade post.",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "multiplicative_trade_post_income_modifier",
+                            "Increases trade post income by the specified percent (1.0 = +100% = double income).",
+                            "Percent",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Population modifiers",
+                            "Description",
+                            "Type",
+                            "Character [1]",
+                            "Traits",
+                            "Province [2]",
+                            "Councillor",
+                            "Technology",
+                            "Holding [3]",
+                            "Building [4]",
+                            "Laws"
+                        ],
+                        [
+                            "population_growth",
+                            "",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            "",
+                            ""
+                        ],
+                        [
+                            "manpower_growth",
+                            "",
+                            "",
+                            "[ ✓ ]",
+                            "",
+                            "X",
+                            "✓",
+                            "",
+                            "✓",
+                            "",
+                            ""
+                        ],
+                        [
+                            "max_population_mult",
+                            "",
+                            "Percent",
+                            "[ ✓ ]",
+                            "",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "max_manpower_mult",
+                            "",
+                            "",
+                            "✓",
+                            "✓",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "[ ✓ ]",
+                            ""
+                        ],
+                        [
+                            "max_population",
+                            "",
+                            "Flat",
+                            "[ ✓ ]",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Custom modifiers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Custom modifiers can be defined in common/modifier_definitions ."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Flag",
+                            "Value",
+                            "Description",
+                            "Code"
+                        ],
+                        [
+                            "show_as_percent",
+                            "bool",
+                            "Show it as a percentage boost, rather than a regular number. Automatically multiplies it by 100 for display as well",
+                            "show_as_percent = yes"
+                        ],
+                        [
+                            "is_good",
+                            "bool",
+                            "Show positive numbers in green",
+                            "is_good = yes"
+                        ],
+                        [
+                            "is_monthly",
+                            "bool",
+                            "Add a \"(monthly)\" to the display",
+                            "is_monthly = no"
+                        ],
+                        [
+                            "is_hidden",
+                            "bool",
+                            "Don't show it at all",
+                            "is_hidden = no"
+                        ],
+                        [
+                            "max_decimals",
+                            "int",
+                            "How many numbers after the decimal point to show",
+                            "max_decimals = 2"
+                        ],
+                        [
+                            "show_value",
+                            "bool",
+                            "Whether to show its value at all. Setting to \"no\" can be useful for showing a modifier unlocks some sort of feature. Note it will only show up when the modifier is not equal to zero",
+                            "show_value = no"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "They are based on an hardcoded convention on their name, similarly to the sympathy_<religion> modifier, which works for any custom religion, not only vanilla religions."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "They are restricted to the following entities:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Special units:",
+                            "children": [
+                                {
+                                    "text": "<special_unit> : defines the modifier providing the troop itself. E.G., \"horse_archers\". It's what you'd use in the building giving the special unit.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "<special_unit>_offensive : Defines the unit's offensive modifier. E.G., horse_archers_offensive",
+                                    "children": []
+                                },
+                                {
+                                    "text": "<special_unit>_defensive : Defines the unit's defensive modifier",
+                                    "children": []
+                                },
+                                {
+                                    "text": "<special_unit>_morale : Defines the unit's morale modifier",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Cultures:",
+                            "children": [
+                                {
+                                    "text": "<culture>_opinion : Gives opinion bonus with specified culture, E.G., norse_opinion",
+                                    "children": []
+                                },
+                                {
+                                    "text": "<culture_group>_opinion : Gives opinion bonus with specified group, E.G., north_germanic_opinion",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Religions:",
+                            "children": [
+                                {
+                                    "text": "<religion>_opinion : Gives opinion bonus with specified religion, E.G., catholic_opinion",
+                                    "children": []
+                                },
+                                {
+                                    "text": "<religion_group>_opinion : Gives opinion bonus with specified group, E.G., muslim_opinion",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Traits:",
+                            "children": [
+                                {
+                                    "text": "<trait>_opinion : Gives opinion bonus with persons who have specified trait, E.G., genius_opinion",
+                                    "children": []
+                                },
+                                {
+                                    "text": "opinion_of_<trait> : Makes the character like characters who have the specified trait, E.G., opinion_of_lustful",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Offmap currency: The name of this token is defined in the offmap itself. Gives monthly offmap currency",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If not matching any convention, custom modifiers with show_value = no can still be used to display a localized text in the tooltip of an element that accepts a modifier ( bloodlines, traits, ...). This allows to describe features that are managed externally via scripting (events, ...)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Custom modifiers are localized via the following keys:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "<modifier> : the description of the modifier",
+                            "children": []
+                        },
+                        {
+                            "text": "<modifier>_EXPLANATION : shows an explanation in places that sum up different modifiers (opinion breakdowns, ...)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Static modifiers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Static modifiers are global modifiers (character, province, or unit), and defined in /common/static_modifiers.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some of these modifiers are referenced from the code."
+                }
+            ]
+        },
+        {
+            "heading": "Culture modifiers",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Culture modifiers can be used to differentiate between different cultures."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Vanilla CK2 uses a single modifier, default_culture_modifier , which does nothing and appears to simply be a placeholder. Modders can use these culture modifiers to, for example, enhance a specific culture's heavy infantry statistics, reduce or increase specific troop type numbers per holding, increase tax income, or any number of other effects."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example, the following is a culture modifier used in the Elder Scrolls Modification to differentiate unit statistics of the Nibenean from other cultures in the modification."
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Event modifiers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Event modifiers are either:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "character modifiers",
+                            "children": []
+                        },
+                        {
+                            "text": "province modifiers",
+                            "children": []
+                        },
+                        {
+                            "text": "holding modifiers (since patch 2.4 )",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "They are stored under common/event_modifiers/ and grouped and referenced by a name."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In addition to their modifier properties, they also have:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "an optional is_visible condition block, to decides if the viewer can see this trait on holder (default is yes). ROOT is the viewer, FROM is the holder.",
+                            "children": []
+                        },
+                        {
+                            "text": "the optional major = yes property",
+                            "children": []
+                        },
+                        {
+                            "text": "a mandatory icon , see vanilla icons below:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "List of vanilla icons (positive index / negative index):"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Martial: 1 / 19",
+                            "children": []
+                        },
+                        {
+                            "text": "Learning: 2 / 20",
+                            "children": []
+                        },
+                        {
+                            "text": "Diplomacy: 3 / 21",
+                            "children": []
+                        },
+                        {
+                            "text": "Stewardship: 4 / 22",
+                            "children": []
+                        },
+                        {
+                            "text": "Intrigue: 5 / 23",
+                            "children": []
+                        },
+                        {
+                            "text": "Money: 6 / 24",
+                            "children": []
+                        },
+                        {
+                            "text": "Prestige: 7 / 25",
+                            "children": []
+                        },
+                        {
+                            "text": "Piety: 8 / 26",
+                            "children": []
+                        },
+                        {
+                            "text": "Titles: 9 / 27",
+                            "children": []
+                        },
+                        {
+                            "text": "Council: 10 / 28",
+                            "children": []
+                        },
+                        {
+                            "text": "Laws: 11 / 29",
+                            "children": []
+                        },
+                        {
+                            "text": "Technology: 12 / 30",
+                            "children": []
+                        },
+                        {
+                            "text": "Military: 13 / 31",
+                            "children": []
+                        },
+                        {
+                            "text": "Plots: 14 / 32",
+                            "children": []
+                        },
+                        {
+                            "text": "Messages: 15 / 33",
+                            "children": []
+                        },
+                        {
+                            "text": "Diplomatic actions: 16 / 34",
+                            "children": []
+                        },
+                        {
+                            "text": "Church: 17 / 35",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters: 18 / 36",
+                            "children": []
+                        },
+                        {
+                            "text": "Prison: 37 / 38",
+                            "children": []
+                        },
+                        {
+                            "text": "Love: 39 / 40",
+                            "children": []
+                        },
+                        {
+                            "text": "Death: 41 / 42",
+                            "children": []
+                        },
+                        {
+                            "text": "Indian religion: 43 / 44",
+                            "children": []
+                        },
+                        {
+                            "text": "Dog: 45 / 65",
+                            "children": []
+                        },
+                        {
+                            "text": "Cat: 46 / 66",
+                            "children": []
+                        },
+                        {
+                            "text": "Owl: 47 / 67",
+                            "children": []
+                        },
+                        {
+                            "text": "Pagan religion: 48 / 49",
+                            "children": []
+                        },
+                        {
+                            "text": "Staff of Asclepius: 50 / 51",
+                            "children": []
+                        },
+                        {
+                            "text": "Mystic: 52 / 53",
+                            "children": []
+                        },
+                        {
+                            "text": "Bonesaw: 54 / 55",
+                            "children": []
+                        },
+                        {
+                            "text": "Horseshoe: 56 / 57",
+                            "children": []
+                        },
+                        {
+                            "text": "Parrot: 58 / 68",
+                            "children": []
+                        },
+                        {
+                            "text": "Ham: 59 / 60",
+                            "children": []
+                        },
+                        {
+                            "text": "Anchor: 61 / 62",
+                            "children": []
+                        },
+                        {
+                            "text": "Jewish religion: 63 / 64",
+                            "children": []
+                        },
+                        {
+                            "text": "Bed: 69 / 70",
+                            "children": []
+                        },
+                        {
+                            "text": "Wolf: 71 / 72",
+                            "children": []
+                        },
+                        {
+                            "text": "Raven: 73 / 74",
+                            "children": []
+                        },
+                        {
+                            "text": "Demon horns: 75 / 76",
+                            "children": []
+                        },
+                        {
+                            "text": "Trident: 77 / 78",
+                            "children": []
+                        },
+                        {
+                            "text": "Stars: 79 / 80",
+                            "children": []
+                        },
+                        {
+                            "text": "Eye: 81 / 82",
+                            "children": []
+                        },
+                        {
+                            "text": "Test/tubes: 83 / 84",
+                            "children": []
+                        },
+                        {
+                            "text": "Science flask: 85 / 86",
+                            "children": []
+                        },
+                        {
+                            "text": "Flower: 87 / 88",
+                            "children": []
+                        },
+                        {
+                            "text": "Rats: 89 / 90",
+                            "children": []
+                        },
+                        {
+                            "text": "Otter: 91 / 92",
+                            "children": []
+                        },
+                        {
+                            "text": "Hedgehog: 93 / 94",
+                            "children": []
+                        },
+                        {
+                            "text": "Taoist: 95 / 96",
+                            "children": []
+                        },
+                        {
+                            "text": "Paper: 97 / 98",
+                            "children": []
+                        },
+                        {
+                            "text": "Bamboo Book: 99 / 100",
+                            "children": []
+                        },
+                        {
+                            "text": "Pagoda: 101 / 102",
+                            "children": []
+                        },
+                        {
+                            "text": "Firework: 103 / 104",
+                            "children": []
+                        },
+                        {
+                            "text": "Torch: 105 / 106",
+                            "children": []
+                        },
+                        {
+                            "text": "Panda: 107 / 108",
+                            "children": []
+                        },
+                        {
+                            "text": "Dragon: 109 / 110",
+                            "children": []
+                        },
+                        {
+                            "text": "Eagle: 111 /112",
+                            "children": []
+                        },
+                        {
+                            "text": "Pregnancy: 113 / 114",
+                            "children": []
+                        },
+                        {
+                            "text": "Evil Sword: 115 / 116",
+                            "children": []
+                        },
+                        {
+                            "text": "Combat Skill: 117 /118",
+                            "children": []
+                        },
+                        {
+                            "text": "Broken Bone: 119 / 120",
+                            "children": []
+                        },
+                        {
+                            "text": "Chicken: 121 / 122",
+                            "children": []
+                        },
+                        {
+                            "text": "Combat Skill (New): 123 / 124",
+                            "children": []
+                        },
+                        {
+                            "text": "Bear: 125 /126",
+                            "children": []
+                        },
+                        {
+                            "text": "Lion: 127 / 128",
+                            "children": []
+                        },
+                        {
+                            "text": "Rain Good: 129 / 130",
+                            "children": []
+                        },
+                        {
+                            "text": "Rain Storm: 131 / 132",
+                            "children": []
+                        },
+                        {
+                            "text": "Sun: 133 / 134",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "These icons are located in gfx/interface/modifier_icons.dds ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Example:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Event modifiers are attached by event to a character/province via add_character_modifier/add_province_modifier effects :"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A full list of event modifiers can be found here ."
+                }
+            ]
+        },
+        {
+            "heading": "Triggered modifiers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Triggered modifiers are similar to character event modifiers, except that they do not need to be attached or detached by script: depending on conditions they will automatically be applied or removed."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For performance reasons, they only apply to playable characters (counts or above). As they are evaluated every day for every landed character in existence, these are very resource intensive."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "They are stored in /common/triggered_modifiers/00_triggered_modifiers.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Structure:"
+                }
+            ]
+        },
+        {
+            "heading": "Religion modifiers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Religion modifiers impact the moral authority of a religion.\nThey are stored under common/religion_modifiers/ ."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Flag",
+                            "Value",
+                            "Description",
+                            "Code"
+                        ],
+                        [
+                            "authority",
+                            "int",
+                            "Percentage of religion moral authority.",
+                            "authority = -10"
+                        ],
+                        [
+                            "years",
+                            "int",
+                            "Duration of the modifier in years.",
+                            "years = 20"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Example:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Religion modifiers can be attached via event with the religion_authority command:"
+                }
+            ]
+        },
+        {
+            "heading": "Society modifiers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The equivalent of religious moral authority for societies is influence."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "They are stored under common/event_modifiers/ ."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Flag",
+                            "Value",
+                            "Description",
+                            "Code"
+                        ],
+                        [
+                            "society_influence",
+                            "int",
+                            "Percentage of society influence.",
+                            "society_influence = 1"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "They can also be capped via static modifier 's static_modifier_cap = 10 ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Society modifiers are attached via event with add_society_modifier command."
+                }
+            ]
+        },
+        {
+            "heading": "Opinion modifiers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Opinion modifiers modify the relations between two characters.\nThey are somehow similar to the opinion_xxx character modifiers, but apply to a single character, rather than a group of character (clergy, mayors, ...). In addition they can contain extra information, such as cause for imprisonment.\nThey are stored under common/opinion_modifiers/."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In patch 2.1.5 some hardcoded opinion modifiers for relatives have been added for brother, half-brother, sister, half-sister, grandfather, grandmother, grandchild, uncle, aunt, nephew and niece."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Flag",
+                            "Value",
+                            "Description",
+                            "Code"
+                        ],
+                        [
+                            "opinion",
+                            "double",
+                            "",
+                            "opinion = -30"
+                        ],
+                        [
+                            "days",
+                            "int",
+                            "Duration in days",
+                            "days = 120"
+                        ],
+                        [
+                            "months",
+                            "int",
+                            "Duration in months",
+                            "months = 120"
+                        ],
+                        [
+                            "years",
+                            "int",
+                            "Duration in years",
+                            "years = 3"
+                        ],
+                        [
+                            "inherit",
+                            "bool",
+                            "Heirs inherit this opinion",
+                            "opinion_supported_cardinal = {\n  opinion = 15\n  months = 1000\n  inherit = yes\n}"
+                        ],
+                        [
+                            "decay",
+                            "bool",
+                            "Linear decay over time",
+                            "common_interests_opinion = {\n  opinion = 20\n  decay = yes\n}"
+                        ],
+                        [
+                            "revoke_reason",
+                            "bool",
+                            "Gives righteous cause to revoke one title",
+                            "declared_war = {\n  opinion = -25\n  months = 160\n  revoke_reason = yes\n}"
+                        ],
+                        [
+                            "prison_reason",
+                            "bool",
+                            "Gives righteous cause to imprison a character",
+                            "opinion_dishonorable = {\n  opinion = -10\n  months = 60\n  prison_reason = yes\n}"
+                        ],
+                        [
+                            "execute_reason",
+                            "bool",
+                            "Gives righteous cause to execute a character",
+                            "opinion_rebel_traitor = {\n  opinion = -100\n  months = 1200\n  prison_reason = yes\n  revoke_reason = yes\n  execute_reason = yes\n  inherit = yes\n}"
+                        ],
+                        [
+                            "banish_reason",
+                            "bool",
+                            "Gives righteous cause to banish a character",
+                            "attempted_murder_of_spouse = {\n  opinion = -70\n  crime = yes\n\n  prison_reason = yes\n  banish_reason = yes\n  execute_reason = yes\n}"
+                        ],
+                        [
+                            "preparing_adventure_against_me",
+                            "bool",
+                            "",
+                            "preparing_adventure_against_me = yes"
+                        ],
+                        [
+                            "preparing_to_invade_me",
+                            "bool",
+                            "Used by Prepared Invasion mechanic",
+                            "preparing_to_invade_me = yes"
+                        ],
+                        [
+                            "preparing_invasion",
+                            "bool",
+                            "Used by Prepared Invasion mechanic",
+                            "preparing_to_invade = {\n  opinion = -10\n  months = 24\n  preparing_invasion = yes\n}"
+                        ],
+                        [
+                            "enemy",
+                            "bool",
+                            "Makes the characters enemies of each other (effectively at war)",
+                            "opinion_looted = {\n  opinion = -40\n  months = 6\n  enemy = yes\n}"
+                        ],
+                        [
+                            "crime",
+                            "bool",
+                            "Character counts as a rival for the is_foe condition (committed a criminal act against me)",
+                            "grievously_offended = {\n  opinion = -30\n  months = 60\n  crime = yes\n  disable_non_aggression_pacts = yes\n}"
+                        ],
+                        [
+                            "disable_non_aggression_pacts",
+                            "bool",
+                            "Temporarily disables all non-aggression pacts between the two characters",
+                            "broken_non_aggression_pact = {\n  opinion = -10\n  years = 3\n  disable_non_aggression_pacts = yes\n}"
+                        ],
+                        [
+                            "non_aggression_pact",
+                            "bool",
+                            "Gives a temporary non-aggression pact between the two characters",
+                            "in_non_aggression_pact = {\n  opinion = 10\n  years = 3\n  non_aggression_pact = yes\n}"
+                        ],
+                        [
+                            "obedient",
+                            "bool",
+                            "The AI will accept all diplomatic interactions from the other character. Also makes the trigger obedient return true.",
+                            "opinion_loyal_servant = {\n  opinion = 50\n  months = 1200\t# For life\n  obedient = yes\n}"
+                        ],
+                        [
+                            "non_interference",
+                            "bool",
+                            "The AI will accept all diplomatic interactions from the other character. Non-interference is considered a subset of obedient, so any obedient character is automatically non-interfering as well. Also makes the trigger non_interference return true.",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Example:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Opinion modifiers can be attached via event, via the opinion effect:"
+                }
+            ]
+        },
+        {
+            "heading": "Command modifiers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These modifiers apply only to the command_modifier clause of traits.\nThey are multiplied by the number of martial points times COMMAND_MODIFIER_MARTIAL_MULTIPLIER = 0.05"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Modifier",
+                            "Description",
+                            "Type"
+                        ],
+                        [
+                            "morale_offence",
+                            "",
+                            "Percentage"
+                        ],
+                        [
+                            "morale_defence",
+                            "",
+                            "Percentage"
+                        ],
+                        [
+                            "defence",
+                            "",
+                            "Percentage"
+                        ],
+                        [
+                            "speed",
+                            "Army movement speed",
+                            "Percentage"
+                        ],
+                        [
+                            "retreat",
+                            "",
+                            "Percentage"
+                        ],
+                        [
+                            "damage",
+                            "",
+                            "Percentage"
+                        ],
+                        [
+                            "siege",
+                            "Reduces siege time",
+                            "Percentage"
+                        ],
+                        [
+                            "random",
+                            "",
+                            "Percentage"
+                        ],
+                        [
+                            "flank",
+                            "Active when character leads a flank",
+                            "Percentage"
+                        ],
+                        [
+                            "center",
+                            "Active when character leads centre",
+                            "Percentage"
+                        ],
+                        [
+                            "cavalry",
+                            "Both knights and light_cavalry unit types.",
+                            "Percentage"
+                        ],
+                        [
+                            "religious_enemy",
+                            "",
+                            "Percentage"
+                        ],
+                        [
+                            "%phase%",
+                            "",
+                            "Percentage"
+                        ],
+                        [
+                            "%unit_type%",
+                            "light_infantry, heavy_infantry, etc.",
+                            "Percentage"
+                        ],
+                        [
+                            "terrain",
+                            "Gives TERRAIN_SPEC_BONUS = 0.2 bonus when fighting in that terrain.",
+                            "Terrain"
+                        ],
+                        [
+                            "narrow_flank",
+                            "",
+                            "Percentage"
+                        ],
+                        [
+                            "winter_supply",
+                            "",
+                            ""
+                        ],
+                        [
+                            "winter_combat",
+                            "",
+                            "Percentage"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For instance:"
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ forumpost:23600210",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forumpost:23600210",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:874495/page-27#post-21629145",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:589686/page-1273#post-20658606",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:589686/page-1362#post-21600911",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

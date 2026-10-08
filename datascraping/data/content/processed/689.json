@@ -1,0 +1,422 @@
+{
+    "pageid": 689,
+    "title": "Title revocation",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A ruler can revoke a direct vassal 's landed title . This weakens vassals and can even make them unlanded courtiers."
+                }
+            ]
+        },
+        {
+            "heading": "Requirements",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Laws must allow revocation:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Without Conclave , you must have at least Limited Crown Authority , or not be subject to a crown authority law.",
+                            "children": []
+                        },
+                        {
+                            "text": "With , you must have the Revocation Allowed law . (Navigation hint: F4, Realm Law, then SCROLL DOWN!)",
+                            "children": []
+                        },
+                        {
+                            "text": "If tribal , independent and without , Tribal organization must be at least Limited.",
+                            "children": []
+                        },
+                        {
+                            "text": "If your vassal is tribal and you are not independent, you probably won't be able to revoke his titles. (This may be a bug.)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The target character must be valid:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A valid reason is required if you are a republic or have a truce. Otherwise, you may revoke without a valid reason, at the cost of angering your landed vassals (almost as bad as tyranny).",
+                            "children": []
+                        },
+                        {
+                            "text": "You cannot revoke titles from a ruler if you have a non-aggression pact .",
+                            "children": []
+                        },
+                        {
+                            "text": "Target is your direct vassal (permanently, i.e. not in revolt)",
+                            "children": []
+                        },
+                        {
+                            "text": "Target is not your regent",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Furthermore, the following restrictions apply to title revocation:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Cannot revoke the last county from a duke+, thus destroying the duchy+ title, if they have count+ vassals. (You must revoke the duchy or retract the vassals first.)",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot revoke the last temple holding from your religious head .",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot revoke the last duchy+ from a merchant republic if the doge lacks extra holdings ( bug? )",
+                            "children": []
+                        },
+                        {
+                            "text": "You must be able to hold the title. For example, religious head titles can only be held by a character of the correct religion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Clan titles and Khans' capital counties can never be revoked (but Khagans can absorb clans instead)",
+                            "children": []
+                        },
+                        {
+                            "text": "The title is neither contested in, nor the justification for, any ongoing war",
+                            "children": []
+                        },
+                        {
+                            "text": "The title was not granted recently (to any character, within the last year)",
+                            "children": []
+                        },
+                        {
+                            "text": "You must have enough prestige (even though prestige is only spent when revoking without justification)",
+                            "children": []
+                        },
+                        {
+                            "text": "Counties cannot be revoked if occupied or under siege",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Revocation reasons",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A claim on the vassal's title allows revoking it."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Certain opinion modifiers allow revoking one title within a limited time:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Traitor :",
+                            "children": [
+                                {
+                                    "text": "a direct vassal who rebelled , and liege won",
+                                    "children": []
+                                },
+                                {
+                                    "text": "a direct vassal who refused to stop backing a plot",
+                                    "children": []
+                                },
+                                {
+                                    "text": "a direct vassal who refused a demand for gavelkind or liege interference in a war , with Late Feudal or Imperial Administration",
+                                    "children": []
+                                },
+                                {
+                                    "text": "if stacked (e.g. failed imprisonment of a character who refused their liege's demand to stop their plot, who then rebelled and lost), allows revoking that many titles instead of just one",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Murderous Traitor (caught while killing my close relative who was under my control)",
+                            "children": []
+                        },
+                        {
+                            "text": "Certain Charges from Intrigue focus : secret illegitimacy, supposed treachery, or membership in a demon-worshipping society",
+                            "children": []
+                        },
+                        {
+                            "text": "Declared War",
+                            "children": []
+                        },
+                        {
+                            "text": "Has Fatwa Issued",
+                            "children": []
+                        },
+                        {
+                            "text": "Witch (mother of demon child )",
+                            "children": []
+                        },
+                        {
+                            "text": "Attempted Abduction (from Demon Worshippers ability)",
+                            "children": []
+                        },
+                        {
+                            "text": "Accused of Apostasy (from Lord Spiritual performing the \"Hunt Apostates\" job action)",
+                            "children": []
+                        },
+                        {
+                            "text": "Broke Feudal Contract (commander was swayed by a war enemy to stop fighting for their liege)",
+                            "children": []
+                        },
+                        {
+                            "text": "Adultery:",
+                            "children": [
+                                {
+                                    "text": "Cuckolded",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Unfaithful wife",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Unfaithful husband (only with full status of women)",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some feudal rulers can freely revoke duchies :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Imperial Administration law allows the Emperor to revoke viceroyal duchies if Charlemagne is enabled, or all duchies if not.",
+                            "children": []
+                        },
+                        {
+                            "text": "Iqta government and Chinese Imperial government allow free revocation of all duchies.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Tribal rulers of other religions , if liege is not tribal or nomadic"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Vassals of other religions , if laws allow it:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Laws that allow religious revocation are Medium Crown Authority or Medium Tribal Organization (for tribal rulers)(without Conclave), and Religious Revoke law (with ).",
+                            "children": []
+                        },
+                        {
+                            "text": "Christians can only use these laws to revoke from infidels or heretics, while Indians and Pagans can revoke even from similar religions.",
+                            "children": []
+                        },
+                        {
+                            "text": "Other vassals of the same religion will be angry (unless you also have a better revoke reason)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Effects",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Attempting to revoke a title from a vassal :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Gives the target character an opinion penalty of -60, regardless of whether you have a reason",
+                            "children": []
+                        },
+                        {
+                            "text": "Gives all other landed vassals an opinion penalty of -15 (for 5 years) if you did not have a valid reason to revoke the title",
+                            "children": []
+                        },
+                        {
+                            "text": "Opinion penalties are doubled when revoking a kingdom",
+                            "children": []
+                        },
+                        {
+                            "text": "Nomadic khans don't care if their Khagan revokes a title from non-nomadic vassals.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the vassal is not in your prison, they choose whether to accept or rebel:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "More likely to rebel if powerful",
+                            "children": []
+                        },
+                        {
+                            "text": "More likely to rebel if in a powerful faction (\"Rebellious\")",
+                            "children": []
+                        },
+                        {
+                            "text": "Merchant republics always rebel",
+                            "children": []
+                        },
+                        {
+                            "text": "If they rebel, they use the version of the Overthrow ruler CB that allows them to call in other vassals, even if the revocation is justified",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Successfully revoking a title:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Gives the target a claim on the revoked title, which further lowers their opinion of you if you continue to hold the title",
+                            "children": []
+                        },
+                        {
+                            "text": "Implicitly retracts the vassalage of the de jure vassals of the revoked title",
+                            "children": []
+                        },
+                        {
+                            "text": "Implicitly retracts outlying vassals, when revoking their primary title",
+                            "children": []
+                        },
+                        {
+                            "text": "If they lose rank (e.g. reduced from duke to count) and were on the council, they are fired",
+                            "children": []
+                        },
+                        {
+                            "text": "If they lose their last settlement, higher titles such as duchies are destroyed (except landless-type titles )",
+                            "children": []
+                        },
+                        {
+                            "text": "If they lose their last title, they flee to a foreign court",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Vassal retraction",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In order to retract vassals, the ruler must be able to revoke titles."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You may demand that your direct vassal allow one of their vassals to serve you directly, with the following exceptions:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Cannot retract vassals who are at war",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot retract baron-tier vassals from their de jure count",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot retract patricians ( oddly , this means you can't retract merchant republics from vassal kings)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Like with title revocation, vassals may refuse by rising in rebellion, unless you hold them as prisoners. Retracting a vassal results in a opinion penalty of -45 if the retracted vassal is de jure part of the target's titles and -20 otherwise. If the ruler did not have a reason, other direct vassals will have opinion penalties of -10 (de jure) or -5. Valid reasons are:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Opinion modifiers such as \"Traitor\" can be used to retract one vassal (instead of revoking one title)",
+                            "children": []
+                        },
+                        {
+                            "text": "Imperial Administration , Iqta Government , Roman Imperial Government , and Chinese Imperial Government allow free retraction of vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "Nomadic khans don't care if a khagan retracts someone else's vassal",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Retracting vassals costs a scaling prestige that is not shown in UI."
+                }
+            ]
+        },
+        {
+            "heading": "Strategy",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Revoking titles is a ruler's primary way of dealing with vassals who have gotten too powerful. Vassals who have acquired multiple landed titles can be brought back in line by the ruler getting claims on their titles and revoking them. It also allows the ridding of troublesome vassals who dislike you or whose line of succession would pass the title out of the realm . It can also be used to simply replace vassals with more desirable ones, such as members of your dynasty."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Vassals who rebel when you try to revoke their titles provide the opportunity to revoke two titles without incurring tyranny. Once you've crushed the revolt, revoke a title you don't have a claim on without incurring tyranny because they are a traitor, then revoke the title you do have a claim on. Because the rebels will be imprisoned after losing the war, the opinion penalties are not a problem. Put them in house arrest to retain the benefits of a vassal who can't cause trouble for as long as possible, or throw them in the oubliette so they'll quickly succeed to an heir who doesn't care that you revoked a title."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Revoking barony and county titles in the Byzantine and Roman Empire takes on greater significance as imperial commanders must be landed; a shrewd emperor who systematically lands his dynasts at the expense of other vassals and assigns them as commanders will have an easier time keeping the imperial title in the dynasty."
+                }
+            ]
+        }
+    ]
+}

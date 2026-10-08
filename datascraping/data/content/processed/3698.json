@@ -1,0 +1,647 @@
+{
+    "pageid": 3698,
+    "title": "Society modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Societies are part of the free patch 2.7 and do not require the Monks and Mystics expansion, although most societies and their content are part of the expansion."
+                }
+            ]
+        },
+        {
+            "heading": "Societies",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Societies are best used to model a profession or lifestyle, since a character may only be a member of one society at a time."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Variable",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "primary_attribute",
+                            "attribute",
+                            "",
+                            "primary_attribute = intrigue"
+                        ],
+                        [
+                            "is_secret",
+                            "bool",
+                            "Whether the society can be joined openly or not, society clothing is visible to non-members, etc.",
+                            "is_secret = yes"
+                        ],
+                        [
+                            "criminal",
+                            "bool",
+                            "Used for the is_criminal trigger",
+                            "is_criminal = yes"
+                        ],
+                        [
+                            "is_religious",
+                            "bool",
+                            "Whether the society is religion-based or not, used for opinion value",
+                            ""
+                        ],
+                        [
+                            "devil_worshipper",
+                            "bool",
+                            "Used for the is_devil_worshipper trigger. Also suppresses the \"religious differences\" opinion modifiers with other members of the same society",
+                            ""
+                        ],
+                        [
+                            "opinion_to_other_members",
+                            "int",
+                            "Opinion modifier applied when both characters are members",
+                            "opinion_to_other_members = +10"
+                        ],
+                        [
+                            "opinion_to_pretenders",
+                            "int",
+                            "Opinion modifier from a member towards someone who is perceived to be a member but is not",
+                            "opinion_to_pretenders = -40"
+                        ],
+                        [
+                            "opinion_to_perceived_members",
+                            "int",
+                            "Opinion modifier from a non-member toward someone who is perceived to be a member",
+                            "opinion_to_perceived_members = -40"
+                        ],
+                        [
+                            "opinion_per_rank_above",
+                            "int",
+                            "Opinion bonus characters in the society get for how much they're outranked by another member. For instance if the bonus is +5, someone at rank 1 will get a +15 bonus with someone at rank 4.",
+                            "opinion_per_rank_above = +5"
+                        ],
+                        [
+                            "society_rank_up_decision",
+                            "decision",
+                            "Decision that ranks up a member in the society",
+                            "society_rank_up_decision = request_to_rank_up_within_society"
+                        ],
+                        [
+                            "sound",
+                            "sfx",
+                            "Sound effect to play while the society is selected in the societies tab. The sound key is defined in interface/sound.sfx",
+                            "sound = monastic_orders_interface"
+                        ],
+                        [
+                            "society_ranks_gfx",
+                            "gfx",
+                            "",
+                            "society_ranks_gfx = generic_ranks"
+                        ],
+                        [
+                            "non_interference",
+                            "conditions",
+                            "Non-interfering AI characters will not take any hostile action towards the character. Only characters within the society will be non-interfering. ROOT is the target of diplomatic actions. FROM is the character taking the action",
+                            ""
+                        ],
+                        [
+                            "non_interference_tooltip",
+                            "localization",
+                            "Localisation key to be shown under \"influence\", explaining what characters are non-interfering",
+                            ""
+                        ],
+                        [
+                            "active",
+                            "conditions",
+                            "Determine if the society is active. If not met, it will be impossible to see or join the society, and no members will be generated for it at game start, and all existing members will be booted out of it within a month. Note that events and the like that reference the society will continue to act as if the society existed normally. Note that the conditions for this trigger are not shown in the UI anywhere, so you may want a global event or similar if this is something that can happen *during* a campaign. ROOT is the society",
+                            ""
+                        ],
+                        [
+                            "indestructible",
+                            "bool",
+                            "Used to determine whether a society is \"indestructible\". Indestructible societies will use the startup_populate trigger to find an existing character to lead the society. It will choose the character in the world who would get the highest society membership score, with landed characters having their score reduced to 1/100th of what they'd otherwise get, since affecting a landed character is much more disruptive than affecting a courtier. If there's no eligible character, the on_society_failed_to_find_new_leader on-action will fire",
+                            "indestructible = yes"
+                        ],
+                        [
+                            "can_join_society",
+                            "conditions",
+                            "Determine which characters can join the society. The condition themselves are often externalized as a scripted trigger .",
+                            "can_join_society = {\n  hidden_trigger = {\n    NAND = {\n      ai = yes\n      is_society_rank_full = { \n        society = the_assassins\n        rank = 1\n      }\n    }\n  }\n  has_assassins_prerequisites = yes\n}"
+                        ],
+                        [
+                            "show_society",
+                            "conditions",
+                            "",
+                            "show_society = {\n  religion = catholic\n}"
+                        ],
+                        [
+                            "potential",
+                            "conditions",
+                            "Rules that must be true for a character to remain in the society. This is normally a subset of the rules of can_join_society .",
+                            "potential = { \n  religion = catholic\n}"
+                        ],
+                        [
+                            "society_rank",
+                            "clause",
+                            "Definition of ranks Variable Type Description Example level int Rank level level = 1 limit int Maximum number of members at that rank. Checked via is_society_rank_full condition. limit = 100 startup_limit int Maximum number of members selected during startup_populate . If omitted, the rank will not be populated automatically. startup_limit = 10 modifier clause modifier = { \n  is_visible = {\n    OR = {\n      society_member_of = the_satanists\n      FROM = { is_society_discovered = yes }\n    }\n  }\n  intrigue = 1\n} decisions List<decision> List of decisions unlocked at that rank. Decisions that are not also listed in the \"powers\" are unlocked without being revealed in the GUI. custom_tooltip localization Localisation key for modifiers in society ranks that is localized and added to the tooltip for rank icons obedient conditions Define when other (AI) characters in the society will be obedient (roughly equivalent to \"debug_yesmen\") towards characters of this rank. ROOT is the rank holder, FROM is the potentially obedient character obedience_tooltip localization The localisation key to be shown for the given rank, explaining what characters are obedient obedience_tooltip = obedience_tooltip powers List<localization or decision> A list of localisation keys or intrigue decisions, describing the benefits and abilities available to a member of that rank.  This is information only and simply used to hint at/call attention to what special actions the player can take when they have achieved that rank. powers = {\n  decision_something\n  some_loc_key\n  }",
+                            "society_rank = {\n  level = 1\n  limit = 100 \n  startup_limit = 10\n  decisions = {\n    prisoner_dark_sacrifice\n  }\n}"
+                        ],
+                        [
+                            "Variable",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "level",
+                            "int",
+                            "Rank level",
+                            "level = 1"
+                        ],
+                        [
+                            "limit",
+                            "int",
+                            "Maximum number of members at that rank. Checked via is_society_rank_full condition.",
+                            "limit = 100"
+                        ],
+                        [
+                            "startup_limit",
+                            "int",
+                            "Maximum number of members selected during startup_populate . If omitted, the rank will not be populated automatically.",
+                            "startup_limit = 10"
+                        ],
+                        [
+                            "modifier",
+                            "clause",
+                            "",
+                            "modifier = { \n  is_visible = {\n    OR = {\n      society_member_of = the_satanists\n      FROM = { is_society_discovered = yes }\n    }\n  }\n  intrigue = 1\n}"
+                        ],
+                        [
+                            "decisions",
+                            "List<decision>",
+                            "List of decisions unlocked at that rank. Decisions that are not also listed in the \"powers\" are unlocked without being revealed in the GUI.",
+                            ""
+                        ],
+                        [
+                            "custom_tooltip",
+                            "localization",
+                            "Localisation key for modifiers in society ranks that is localized and added to the tooltip for rank icons",
+                            ""
+                        ],
+                        [
+                            "obedient",
+                            "conditions",
+                            "Define when other (AI) characters in the society will be obedient (roughly equivalent to \"debug_yesmen\") towards characters of this rank. ROOT is the rank holder, FROM is the potentially obedient character",
+                            ""
+                        ],
+                        [
+                            "obedience_tooltip",
+                            "localization",
+                            "The localisation key to be shown for the given rank, explaining what characters are obedient",
+                            "obedience_tooltip = obedience_tooltip"
+                        ],
+                        [
+                            "powers",
+                            "List<localization or decision>",
+                            "A list of localisation keys or intrigue decisions, describing the benefits and abilities available to a member of that rank.  This is information only and simply used to hint at/call attention to what special actions the player can take when they have achieved that rank.",
+                            "powers = {\n  decision_something\n  some_loc_key\n  }"
+                        ],
+                        [
+                            "plots",
+                            "",
+                            "[ {{{1}}} ]",
+                            ""
+                        ],
+                        [
+                            "ambitions",
+                            "",
+                            "[ {{{1}}} ]",
+                            ""
+                        ],
+                        [
+                            "monthly_currency_gain",
+                            "",
+                            "Defines how much power the member gains every month. The \"currency\" varies depending on the society. Can also be set one-time via events via change_society_currency . See below for more info",
+                            ""
+                        ],
+                        [
+                            "member_score_per_attribute",
+                            "float",
+                            "How much member score a character recieves for every point of society attribute",
+                            "member_score_per_attribute = 3"
+                        ],
+                        [
+                            "member_score_per_rank",
+                            "float",
+                            "How much member score a character recieves for every rank",
+                            "member_score_per_rank = 100"
+                        ],
+                        [
+                            "member_score",
+                            "MTTH",
+                            "Bonus member score based on triggers, ROOT is the member.",
+                            "member_score = {\n  value = 10\n  modifier = {\n    factor = 2\n    trait = diligent\n  }\n}\nOR\nmember_score = {\n  value = 10\n  additive_modifier= {\n    value= 2\n    trait = diligent\n  }\n}"
+                        ],
+                        [
+                            "startup_populate",
+                            "clause",
+                            "Used at game start to find character to lead and join the society.",
+                            ""
+                        ],
+                        [
+                            "associated_religion",
+                            "religion",
+                            "Saves a religion scope to be accessible from script in the same way as character or province religion is.",
+                            ""
+                        ],
+                        [
+                            "society_influence",
+                            "bool",
+                            "If set to no, turns off the display of society influence. Defaults to yes.",
+                            "society_influence = no"
+                        ]
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Variable",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "level",
+                            "int",
+                            "Rank level",
+                            "level = 1"
+                        ],
+                        [
+                            "limit",
+                            "int",
+                            "Maximum number of members at that rank. Checked via is_society_rank_full condition.",
+                            "limit = 100"
+                        ],
+                        [
+                            "startup_limit",
+                            "int",
+                            "Maximum number of members selected during startup_populate . If omitted, the rank will not be populated automatically.",
+                            "startup_limit = 10"
+                        ],
+                        [
+                            "modifier",
+                            "clause",
+                            "",
+                            "modifier = { \n  is_visible = {\n    OR = {\n      society_member_of = the_satanists\n      FROM = { is_society_discovered = yes }\n    }\n  }\n  intrigue = 1\n}"
+                        ],
+                        [
+                            "decisions",
+                            "List<decision>",
+                            "List of decisions unlocked at that rank. Decisions that are not also listed in the \"powers\" are unlocked without being revealed in the GUI.",
+                            ""
+                        ],
+                        [
+                            "custom_tooltip",
+                            "localization",
+                            "Localisation key for modifiers in society ranks that is localized and added to the tooltip for rank icons",
+                            ""
+                        ],
+                        [
+                            "obedient",
+                            "conditions",
+                            "Define when other (AI) characters in the society will be obedient (roughly equivalent to \"debug_yesmen\") towards characters of this rank. ROOT is the rank holder, FROM is the potentially obedient character",
+                            ""
+                        ],
+                        [
+                            "obedience_tooltip",
+                            "localization",
+                            "The localisation key to be shown for the given rank, explaining what characters are obedient",
+                            "obedience_tooltip = obedience_tooltip"
+                        ],
+                        [
+                            "powers",
+                            "List<localization or decision>",
+                            "A list of localisation keys or intrigue decisions, describing the benefits and abilities available to a member of that rank.  This is information only and simply used to hint at/call attention to what special actions the player can take when they have achieved that rank.",
+                            "powers = {\n  decision_something\n  some_loc_key\n  }"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Localization:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "<society_name> : name of the society",
+                            "children": []
+                        },
+                        {
+                            "text": "<society_name>_desc : description of the society",
+                            "children": []
+                        },
+                        {
+                            "text": "<society_name>_leader_desc : title of the leader of the society",
+                            "children": []
+                        },
+                        {
+                            "text": "<society_name>_rank_<N>_male : rank <N> title for male members",
+                            "children": []
+                        },
+                        {
+                            "text": "<society_name>_rank_<N>_female : rank <N> title for female members",
+                            "children": []
+                        },
+                        {
+                            "text": "currency_name_<society_name> : name of the society's currency/power",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Localization commands need to be updated as well: GetSocietyCurrency , GetSocietyRank , GetSocietyName and GetSocietyNameCap ."
+                }
+            ]
+        },
+        {
+            "heading": "Powers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Powers are information-only items that can be shown for members of a given society rank.  Each localisation key specified in the powers list of a given rank is added to the tooltip for that rank, and can be moused over to give additional information to the player.  Any name added to the list requires the following keys in a .csv file in the localisation ."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "power_name : the name of the power",
+                            "children": []
+                        },
+                        {
+                            "text": "power_name _power_desc: the description shown in the tooltip for that power",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Localisation key powers are useful for describing perquisites and benefits that may not be immediately obvious when gaining access to a rank.  For instance, you might include a power that describes how a member of this rank has experience on the battlefield and gains access to additional special events during combat."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Alternatively, you may include decision names in the powers list, referencing the actual names of decisions .  These use the standard localisation keys from decision modding ."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "decision_name : label that is shown as the name of the power/decision, also displayed in intrigue tab",
+                            "children": []
+                        },
+                        {
+                            "text": "decision_name _desc: tooltip when hovering the power/decision",
+                            "children": []
+                        },
+                        {
+                            "text": "decision_name _desc_extra: optional parameter, text shown after the Requirements section in the decision's tooltip",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "See the \"warrior_lodge_norse\" society within /common/societies/00_societies.txt for an example list of powers."
+                }
+            ]
+        },
+        {
+            "heading": "Currency gain",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The monthly_currency_gain is a block that can take several parameters:"
+                }
+            ]
+        },
+        {
+            "heading": "Quests",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Quests are created dynamically via scripting. Quests holders must be member of a society and quest targets may be characters, titles or provinces (or none)."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "To give a quest to the scoped character, without a target:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "To give a quest to the holder with scoped character as the target:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This can also be used to set or update the quest target."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The result of a quest can be set to:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "success using clr_quest = <quest_id>",
+                            "children": []
+                        },
+                        {
+                            "text": "or failure using clr_quest = { id = <quest_id> failure = yes }",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Their reward has to be managed via event scripting as well, typically by rewarding the holder some more power within the society, via change_society_currency command."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Localization:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "<quest_id> : name of the quest",
+                            "children": []
+                        },
+                        {
+                            "text": "<quest_id>_fallback : name of the quest if no target is found. Useful if your loc depends on the target. Needed to ensure it shows up nicely in triggers (E.G., \"Evoke the Sympathy of [FromFrom.GetTitledFirstName]\" would fail in a trigger if you don't have a quest, so you add a fallback of \"Evoke the Sympathy of a Ruler\"). Adding \"_fallback\" will work for the other loc keys too, so can be used if you have different versions of the same quest where not all versions target something",
+                            "children": []
+                        },
+                        {
+                            "text": "<quest_id>_desc : longer description for the quest. It can use $SOCIETY$ for the society (if any), $WHO$ for the character who is doing the quest and $TARGET$ for the target of the quest (if any);;;;;;;;;;;;x",
+                            "children": []
+                        },
+                        {
+                            "text": "<quest_id>_tooltip : tooltip shown for the quest. It can use $SOCIETY$, $WHO$ and $TARGET$ for in the same way as quest_id_DESC;;;;;;;;;;;;x",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "GFX",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Graphics for societies are by default stored under \\gfx\\interface\\societies ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Do not forget to add a reference to any added graphics in \\interface . See Interface modding for more."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can use society icon backgrounds (society_symbol_bg_stone.dds and society_symbol_bg_wood.dds) in gfx\\inventory\\societies to make societies that follow the style of the vanilla societies."
+                }
+            ]
+        },
+        {
+            "heading": "Putting characters in societies",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Required: Forcing AI to participate during normal gameplay",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "AI characters will never join a society or advance to a higher rank , unless they are forced to do so (via decision/event/etc)."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The only exception to this is on new game start, when the startup_populate block forces some characters to join.",
+                            "children": []
+                        },
+                        {
+                            "text": "The base game forces AI to join and rank-up mostly via a single event ( on_five_year_pulse -> MNM.10030 -> MNM.10031 ).",
+                            "children": []
+                        },
+                        {
+                            "text": "If you are adding a new society, you will need to write a similar decision/event which prompts AI characters to join the society (using the join_society command).",
+                            "children": [
+                                {
+                                    "text": "Otherwise, your new society will be empty of everyone but player characters!",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "AI characters completely disregard society quests ."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If they complete a quest (without custom code forcing them to do so), it's totally accidental.",
+                            "children": []
+                        },
+                        {
+                            "text": "If your society relies on AI characters completing their quests (eg. if you're using the society influence mechanic), you will need to write custom decisions/events which prompt them to take the necessary actions",
+                            "children": [
+                                {
+                                    "text": "Eg: For warrior lodge quest duels, check on_yearly_pulse whether they and their quest target can duel right now and, if so, trigger that duel.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "If the quest cannot be automated through such an event, it may be better to ensure that that type of quest is only ever issued to human players.",
+                            "children": [
+                                {
+                                    "text": "Eg: The warrior lodge quest to raid a specific county seems impossible to automate, so either it should either never be issued to AI or it should be redesigned. (Unfortunately, in the base game, it is issued to AI, so it doesn't work very well.)",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "On game start",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If you would like to manually place characters in societies when the game starts, you can do so with the following code in the character's definition:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you would like to prevent historical characters from randomly joining a society at the start of a new game, you can specify easter_egg = yes . And then, optionally, use the commands above to specify exactly which society they should join, and on what date."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For more information on what can be placed in the effect section to influence societies, look at \\common\\societies\\societies.info in the base game."
+                }
+            ]
+        },
+        {
+            "heading": "External links",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "[Mod] Society template / tutorial",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": []
+        }
+    ]
+}

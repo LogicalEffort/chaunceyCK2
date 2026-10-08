@@ -1,0 +1,581 @@
+{
+    "pageid": 2498,
+    "title": "Patch 2.3.X",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.3.X are all patches beginning with 2.3."
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.3",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Patch 2.3.1",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.3.1 was released on the 14th of January, 2015 [1] ."
+                }
+            ]
+        },
+        {
+            "heading": "Major",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed bug where vassal levies could not always be dismissed.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed crash issue on Linux when the AI tried to build settlements.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Minor",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Temple successors now get their liege's religion rather than their top liege's",
+                            "children": []
+                        },
+                        {
+                            "text": "Rebalanced seduction to make it harder to seduce the spouses of great rulers",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Reduced seduction craze a bit",
+                            "children": []
+                        },
+                        {
+                            "text": "Seduction: increased risk of scandal",
+                            "children": []
+                        },
+                        {
+                            "text": "Adjusted default message settings to reduce spam",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a grammar variable bug in event WoL.201",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with event WoL.3050 happening for a single character only",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with event 63103, where vassals of vassals could go independent with Elective Gavelkind succession",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced the Catholic Holy Order regiments in size",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a minor issue with the court where some newborn bastards ended up",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed text bug in event WoL.11000, which referred to the recipient rather than the actor",
+                            "children": []
+                        },
+                        {
+                            "text": "Better tooltips in the event options for WoL.11000",
+                            "children": []
+                        },
+                        {
+                            "text": "Better tooltips in event WoL.11006",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some problems with the 'inbred' trait calculations",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'real_fathers' console command",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing text EVTOPTA_WOL_415",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where the culture group trigger and religion group trigger did not properly check against other characters, making Indian Subjugation wars impossible to use.",
+                            "children": []
+                        },
+                        {
+                            "text": "Christian pilgrim events now check for character's capital location rather than current location when checking for available destinations.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the WoL scholarship events where an event might start repeating incorrectly.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a faulty text tag reference in a Carousing boardgame event.",
+                            "children": []
+                        },
+                        {
+                            "text": "Cooldown for Carousing is now visible in tooltip.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where characters could sometimes get both the Bastard and Legitimate Bastard traits.",
+                            "children": []
+                        },
+                        {
+                            "text": "Heliopolis is now a temple holding instead of a city holding.",
+                            "children": []
+                        },
+                        {
+                            "text": "Moved Kabul Zunist holy site to Nagarahara temple holding (in the same province).",
+                            "children": []
+                        },
+                        {
+                            "text": "Moved Multan Zunist holy site to Mulasthana temple holding (in the same province).",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated faulty localisation function in the last event of the business focus trade route chain",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash when hovering an option in the event that let's you end the rivalry of a converted Christian",
+                            "children": []
+                        },
+                        {
+                            "text": "Hungary should now get a crown authority law when forming from the Magyar decision",
+                            "children": []
+                        },
+                        {
+                            "text": "The form Hungary decision no longer creates exponential amounts of troops",
+                            "children": []
+                        },
+                        {
+                            "text": "Reworked Holmgang events to use personal combat skill rather than martial skill",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced mean time to happen for Holmgang if you have War focus",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a rare case when duels could break",
+                            "children": []
+                        },
+                        {
+                            "text": "Duels now potentially give the kinslayer trait",
+                            "children": []
+                        },
+                        {
+                            "text": "Shortened the text of one outcome of duels to avoid long names making the text too large for the event window",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Modding",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed an error with change_variable for titles",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Converter",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed outdated modifiers in special national ideas, all global revolt risk has been changed to global unrest modifiers",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the four missing province mappings in eastern europe",
+                            "children": []
+                        },
+                        {
+                            "text": "Added unique modifiers to some christian heresies",
+                            "children": []
+                        },
+                        {
+                            "text": "Made sure to update the colors of all heresies to their CK2 variant of color",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed so messalian and nestorian are converted correctly.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added proper icons for norse personal deities",
+                            "children": []
+                        },
+                        {
+                            "text": "Arabic cultures now map to their corresponding one in EU4",
+                            "children": []
+                        },
+                        {
+                            "text": "Steppe cultures now part of same culture group as turkish",
+                            "children": []
+                        },
+                        {
+                            "text": "Moved visigothic to iberian culture group",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.3.2",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.3.2 is a hotfix released on 2015-01-14 [2] that deals with some problems created by Patch 2.3.1 ."
+                }
+            ]
+        },
+        {
+            "heading": "Major",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed so you can build holdings again",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Minor",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed the break-up interaction with your lovers.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.3.3",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.3.3 was released on the 16th of February, 2015 [3] ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is a very minor patch to iron out some multiplayer lobby issues and prepare the converter for EU4:El Dorado .\nIts checksum is DAQH."
+                }
+            ]
+        },
+        {
+            "heading": "Major",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed issues in lobby when players were loading saves",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Converter",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added copy folder to sunset invasion scenario conversion",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.3.4",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.3.4 was released on the 8th of April, 2015; a small addition was made on May 5th, 2015 [4] ."
+                }
+            ]
+        },
+        {
+            "heading": "Major",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed CTD issue caused by character flags not being saved properly",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Minor",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Now unborn children of dead popes no longer inherit a claim on the papacy when they are born.",
+                            "children": []
+                        },
+                        {
+                            "text": "You no longer feel bad for having a romantic relationship with your spouse.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added console command 'add_lover'",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a problem with delayed events having the exact same random seed as the firing scope",
+                            "children": []
+                        },
+                        {
+                            "text": "Seduction Focus: AI will not try to seduce targets that already have lovers (unless lustful, etc)",
+                            "children": []
+                        },
+                        {
+                            "text": "Seduction Focus: AI seducers less likely to acquire multiple lovers",
+                            "children": []
+                        },
+                        {
+                            "text": "Seduction Focus: Married women and concubines are less likely to fall for seduction if they like their husband better than the seducer (unless lustful, arbitrary, etc.)",
+                            "children": []
+                        },
+                        {
+                            "text": "Seduction Focus: Toned down AI seduction attempts of player spouses and concubines even more",
+                            "children": []
+                        },
+                        {
+                            "text": "Seduction Focus: It takes much longer to attempt seduction of distant targets",
+                            "children": []
+                        },
+                        {
+                            "text": "Seduction Focus: More personality checks for married women and consorts",
+                            "children": []
+                        },
+                        {
+                            "text": "Seduction Focus: Added missing \"Seduction in the Wild\" event (WoL.431)",
+                            "children": []
+                        },
+                        {
+                            "text": "Intrigue focus : Spying on an adulterer (your spouse, consort or the other party) can now uncover the affair",
+                            "children": []
+                        },
+                        {
+                            "text": "Players can no longer see other lovers of their spouses and concubines in the interface without using the 'charinfo' console command",
+                            "children": []
+                        },
+                        {
+                            "text": "Hunting Focus: Fixed a bug with duplicate events fired (from WoL.5066)",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where only the last character was visible in the end game list of played characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where the AI did not always build buildings.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with the trade route chain that could create the trade route for the other party instead.",
+                            "children": []
+                        },
+                        {
+                            "text": "Toned down courtier lover creation event (456)",
+                            "children": []
+                        },
+                        {
+                            "text": "Seduction events: Fixed some issues where execution would break incorrectly",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the broken 'remove_claim' effect when used in CB's like depose anti-pope.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added events to attain the Strategist trait through War focus .",
+                            "children": []
+                        },
+                        {
+                            "text": "New courtiers added and credits changed to agree with the deluxe addition promise.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.3.5",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.3.5 was released on the 9th of June, 2015 [5] ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is a very minor patch to update the converter for EU4:Common Sense ."
+                }
+            ]
+        },
+        {
+            "heading": "Converter",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Updated government calculation to be up to date with EU4 1.12",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the localisation issues on Mac and Linux with country names",
+                            "children": []
+                        },
+                        {
+                            "text": "Ibadi is now its own main religion like it should be",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.3.6",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.3.6 was released on the 11th of June, 2015 [6] ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is a hotfix corrects new bug introduced in Patch 2.3.5 ."
+                }
+            ]
+        },
+        {
+            "heading": "Major",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed a new bug with events that was introduced in v2.3.5.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Forum, Crusader Kings II - 2.3.1 PATCH RELEASED - Checksum UKYK , 2015-01-14",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum, Crusader Kings II - 2.3.2 PATCH RELEASED - Checksum MMUR , 2015-01-14",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum, Crusader Kings II - 2.3.3 PATCH RELEASED - Checksum DAQH , 2015-02-16",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum, Crusader Kings II - 2.3.4 PATCH RELEASED [checksum RYEW] , 2015-04-08",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum, Weekly Dev Diary #5 - Clan Management , 2015-06-09",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum, Crusader Kings II - 2.3.6 PATCH RELEASED [checksum JWMQ] , 2015-06-11",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

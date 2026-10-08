@@ -1,0 +1,952 @@
+{
+    "pageid": 2504,
+    "title": "Seduction",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Seduction is a focus on the arts of attraction. It enables the \"seduce\" diplomacy option, focusing your seduction attempts on a specific character."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The seduction focus is useful for increasing opinion and gaining lovers . It allows both men and women to produce large numbers of bastard children, which can be legitimized into the player's dynasty and inherit titles from both parents."
+                }
+            ]
+        },
+        {
+            "heading": "Seduction skill",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Success in many seduction events gives a chance to \"level up\" in skill: first to Aspiring Seducer , then Seducer , then optionally to Master seducer or Master seductress . Each level significantly improves chance of success in both targeted seduction and random seduction events. In the final event, you also have the option of taking Hedonist or declining the lifestyle traits; these options both leave you at the Seducer level. Bonus +50 sex appeal from Master seducer and Master seductress expires when character reaches age of 65."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Level",
+                            "Type",
+                            "Sex appeal",
+                            "Intrigue",
+                            "Diplomacy"
+                        ],
+                        [
+                            "Aspiring seducer",
+                            "Character modifier",
+                            "+15 sex appeal",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Seducer",
+                            "Character modifier",
+                            "+30 sex appeal",
+                            "+1 intrigue",
+                            ""
+                        ],
+                        [
+                            "Master seducer or Master seductress",
+                            "Lifestyle trait",
+                            "+50 sex appeal",
+                            "+2 intrigue",
+                            "+1 diplomacy"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Targeted seduction",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can select a character to seduce in their diplomacy menu. You must both be free capable adults, attracted to each other's gender, and not celibate . You can no longer seduce your lovers, your former lovers, your parents, or your children past patch version 2.4.5. You cannot seduce your spouse or concubines this way: instead, they can become lovers through random events requiring the Family or Seduction focus, respectively. You cannot seduce more than one person at a time."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the seduce action is not available in the target's diplomacy screen, you may already be seducing someone else. You can either wait for the previous seduction event to resolve, or you can right-click your own portrait to Stop seducing."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "After selecting a love interest, you will occasionally make a \"move\": either an attempt to increase opinion or an attempt to bed. Your character automatically makes this choice based on their personal opinion of you. Personal opinion is similar to opinion , but does not take state diplomacy, laws or any other such state concerns into account."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "With personal opinion below 0, the seducer will always attempt to woo.",
+                            "children": []
+                        },
+                        {
+                            "text": "With personal opinion between 0 and 39, there is a 61% chance to attempt to woo and a 39% chance to attempt to bed.",
+                            "children": []
+                        },
+                        {
+                            "text": "With personal opinion 40+, the seducer will always attempt to bed.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Moves normally happen every 20–40 days. If the seducer is a man and his love interest is a queen+ (or wife/consort of a king+), moves happen every 60–90 days instead. Large distances also make moves less frequent."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In some situations, the moves may not be successful in creating an opportunity, so you may be prompted to stop seducing or asked if you want to continue the seduction attempt. \n(Unlike swaying , once seduction has been successful, the love interest either becomes a lover , or you leave them. The seduction action is then complete, and you are free to pursue someone else.)"
+                }
+            ]
+        },
+        {
+            "heading": "Attempts to woo",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Wooing attempts come in three flavors: \"love letter\", \"gift\", and \"gossip\". In each case, the wooed character can choose to be attracted (+25 for 60 months), repelled (-15 for 24 months), or silent."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "AI response depends not on current opinion, but on traits: the personality of the target, the \"seduction level\" of the seducer, and relative attractiveness (genetic traits)."
+                }
+            ]
+        },
+        {
+            "heading": "Attempts to bed",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There are three flavors with varying complexity. Success always depends on seduction level, personal opinion (boosts at +20, +40, and +60), and whether or not the target is a close relative, (decreased chance of success unless target is Messalian , Zoroastrian , arbitrary , lustful , or hedonist ) but can also depend on the choices you make."
+                }
+            ]
+        },
+        {
+            "heading": "Dance",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Dancing is the simplest flavor. The target gets two chances to accept or reject. If encouraged, the seducer can then choose to increase opinion (+20 yearning for 24 months) or attempt a tumble. Again, the target can accept or rebuff, with AI response depending on opinion and the seducer's level."
+                }
+            ]
+        },
+        {
+            "heading": "Kitchen meeting",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In this flavor, you make a choice that affects your chance of success."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Confess love : good on targets who are kind , honest , zealous , shy , trusting , age under 25",
+                            "children": []
+                        },
+                        {
+                            "text": "Lewd suggestion : good on targets who are hedonist , lustful , gregarious , deceitful . Bad on women under 25 unless they are lustful.",
+                            "children": []
+                        },
+                        {
+                            "text": "Quote poetry : good on targets who are poet , scholar , mystic , high learning, high theology education. Half base chance of other options.",
+                            "children": []
+                        },
+                        {
+                            "text": "Sexy whisper : highest chance of success, but only available to masters of seduction",
+                            "children": []
+                        },
+                        {
+                            "text": "Ask about star sign : good on targets who are mystic , erudite , scholar , or fellow members of the Hermetics society . The seducer must be a member of the Hermetics. More likely to succeed if the seducer is a rank 3 or higher Hermetic.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Court picnic",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The picnic flavor is the most complex. Hoping to get the target alone, you have three choices with different risks and rewards."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Find an ally",
+                            "children": [
+                                {
+                                    "text": "The friend can assist (resulting in choices similar to the kitchen meeting), refuse, or tip off the target's spouse",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Leave a note",
+                            "children": [
+                                {
+                                    "text": "Everyone in the target's court has a chance to enter a lottery to find the note:",
+                                    "children": [
+                                        {
+                                            "text": "100%: The target",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "50%: Anyone who already has an opinion modifier indicating they suspect you (e.g. \"Seducing my spouse\")",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "10%: Spouse, father, or liege",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "2%: Other courtiers",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "If found by a spouse who is also a ruler, you will be imprisoned, and you probably won't be able to ransom your way out (-100 \"rival\" and -25 \"chasing spouse\")",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Flirt discretely",
+                            "children": [
+                                {
+                                    "text": "Opinion boost without tumble",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Tumbling",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There is a chance of pregnancy :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Up to 50% chance, when both characters have at least 60% fertility (and for AI-controlled characters, fewer than 4 children) [1]",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Along with a 50% chance to transmit certain diseases :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Only if one of the characters is infected with Lover's Pox, Great Pox, or Aztec Disease",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "After the wild night, you get a choice about how to continue the relationship :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Make them your lover, for a +40 opinion boost and a moderate ongoing chance of pregnancy",
+                            "children": []
+                        },
+                        {
+                            "text": "Cease seduction",
+                            "children": []
+                        },
+                        {
+                            "text": "Continue seduction (by re-selecting them the next day)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You also get a hidden level up event :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Chance to gain Lustful (or lose Chaste )",
+                            "children": []
+                        },
+                        {
+                            "text": "Chance to level up seduction skill",
+                            "children": []
+                        },
+                        {
+                            "text": "Chance to level up intrigue education",
+                            "children": []
+                        },
+                        {
+                            "text": "Chance to gain 'court tomcat' or 'court vixen' character modifier",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There may be a chance of discovery and scandal ; see below."
+                }
+            ]
+        },
+        {
+            "heading": "Scandal",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "After a tumble, a courtier of the seduced target's court might notice if:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is an adult, not blinded, not leading armies , not a prisoner , and does not have a regent",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not a spouse or concubine of either paramour",
+                            "children": []
+                        },
+                        {
+                            "text": "Either:",
+                            "children": [
+                                {
+                                    "text": "Suspects the seducer (opinion modifiers \"Seducing my friend\", \"Seducing my child\", or \"Seducing my spouse\")",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Both:",
+                                    "children": [
+                                        {
+                                            "text": "Has a reason to watch the seducer or target (liege, rival, close relative, lover, or suspects the seducer)",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "Has intrigue skill at least as high as both the seducer and the target",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Unlike the risk in the \"leave a note to meet by the stream\" event, the courtier noticing here does not have to be at the same location."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "One random eligible character gets a 25% chance to notice. If the character suspects the seducer or beats both paramours by 3 intrigue, they get a 50% chance instead."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A character who notices can :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Go public (likely if zealous )",
+                            "children": []
+                        },
+                        {
+                            "text": "Let it pass (likely if kind ) (never, if rival of either character)",
+                            "children": []
+                        },
+                        {
+                            "text": "Blackmail the seducer (for 20% of yearly income) (likely if greedy ) (cannot blackmail own children or unmarried men in minor scandals) (cannot blackmail if spouse or consort of either character)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The effects of a publicized scandal are generally worse for the seducer, for women, and for married characters. If there are multiple reasons for a relationship to be scandalous, all effects apply, with the exception of the effects below \"close relative\" when it applies."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Character",
+                            "Effects if seducer",
+                            "Effects if seduced"
+                        ],
+                        [
+                            "Both male",
+                            "-500 prestige -250 piety 20 years Known Sodomite (general_opinion = -10, church_opinion = -10)",
+                            "20 years Known Sodomite"
+                        ],
+                        [
+                            "Both female",
+                            "-100 prestige -50 piety",
+                            "None"
+                        ],
+                        [
+                            "The older character Age difference ≥ 25",
+                            "5 years Cradle Robber (-5 general opinion)"
+                        ],
+                        [
+                            "Priest, monk, or nun Christian",
+                            "20 years Adulterous Priest (-5 general opinion, -10 church opinion) -100 piety",
+                            "20 years Adulterous Priest (-5 general opinion, -10 church opinion)"
+                        ],
+                        [
+                            "Close relative",
+                            "If not Zoroastrian or Messalian (initial divine marriage religions only ) Incestuous Adulterer or Incestuous Adulteress -100 prestige -50 piety Break [skip everything below]",
+                            "Regardless of religion(!) Incestuous Adulterer (-10 general opinion, -10 church opinion) or Incestuous Adulteress (-20 general opinion, -20 church opinion) Break"
+                        ],
+                        [
+                            "Married man",
+                            "If not Pagan: 20 years Adulterer (-5 general opinion, -5 church opinion)",
+                            "Regardless of religion: 20 years Adulterer (-5 general opinion, -5 church opinion)"
+                        ],
+                        [
+                            "Woman",
+                            "20 years Adulteress (-10 general opinion, -10 church opinion) -50 piety (-100 if married)",
+                            "20 years Adulteress (-10 general opinion, -10 church opinion)"
+                        ],
+                        [
+                            "Man Seduced a female ruler",
+                            "Prestige gain based on woman's rank: +25 for a countess, +50 for a duchess, +100 for a queen, +200 for an empress",
+                            "N/A"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "-500 prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "-250 piety",
+                            "children": []
+                        },
+                        {
+                            "text": "20 years Known Sodomite (general_opinion = -10, church_opinion = -10)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "20 years Known Sodomite",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "-100 prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "-50 piety",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "None"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "5 years Cradle Robber (-5 general opinion)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "20 years Adulterous Priest (-5 general opinion, -10 church opinion)",
+                            "children": []
+                        },
+                        {
+                            "text": "-100 piety",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "20 years Adulterous Priest (-5 general opinion, -10 church opinion)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If not Zoroastrian or Messalian (initial divine marriage religions only )",
+                            "children": [
+                                {
+                                    "text": "Incestuous Adulterer or Incestuous Adulteress",
+                                    "children": []
+                                },
+                                {
+                                    "text": "-100 prestige",
+                                    "children": []
+                                },
+                                {
+                                    "text": "-50 piety",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Break [skip everything below]",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Regardless of religion(!)",
+                            "children": [
+                                {
+                                    "text": "Incestuous Adulterer (-10 general opinion, -10 church opinion) or",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Incestuous Adulteress (-20 general opinion, -20 church opinion)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Break",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If not Pagan:",
+                            "children": [
+                                {
+                                    "text": "20 years Adulterer (-5 general opinion, -5 church opinion)",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Regardless of religion:",
+                            "children": [
+                                {
+                                    "text": "20 years Adulterer (-5 general opinion, -5 church opinion)",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "20 years Adulteress (-10 general opinion, -10 church opinion)",
+                            "children": []
+                        },
+                        {
+                            "text": "-50 piety (-100 if married)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "20 years Adulteress (-10 general opinion, -10 church opinion)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Prestige gain based on woman's rank:",
+                            "children": [
+                                {
+                                    "text": "+25 for a countess, +50 for a duchess, +100 for a queen, +200 for an empress",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "N/A"
+                }
+            ]
+        },
+        {
+            "heading": "Random events",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Flirting at confession (if Christian )",
+                            "children": []
+                        },
+                        {
+                            "text": "Seduce guard (if attracted to men)",
+                            "children": [
+                                {
+                                    "text": "If you choose to \"make him a squire\", a new lover appears at your court with the traits attractive and strong .",
+                                    "children": []
+                                },
+                                {
+                                    "text": "If you choose to \"make him your bodyguard\", you gain the character modifier \"Bodyguard Lover\", giving +1 martial and +10% plot discovery chance.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Chance of Lover's Pox, Cruel, Pregnancy",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Seduce maid (if attracted to women)",
+                            "children": [
+                                {
+                                    "text": "If you choose to \"make her a lady\", a new lover appears at your court with the traits attractive and quick .",
+                                    "children": []
+                                },
+                                {
+                                    "text": "If you choose to \"make her a spy\", you gain the character modifier \"Maidservant Lover\", giving +1 intrigue and +10% plot discovery chance.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Chance of Lover's Pox, Cruel , Pregnancy",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Seduce rose bush (if lunatic and attracted to women)",
+                            "children": [
+                                {
+                                    "text": "25% chance of scarred",
+                                    "children": []
+                                },
+                                {
+                                    "text": "If male, 50% chance to be followed by a baby with the attractive trait being found in the garden. You will have the choice to declare the child yours.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Seduce centaur (if lunatic and attracted to men)",
+                            "children": []
+                        },
+                        {
+                            "text": "Seduce jailer (if female and imprisoned )",
+                            "children": [
+                                {
+                                    "text": "Chance of discovery or escape",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Seduce concubine",
+                            "children": [
+                                {
+                                    "text": "Chance to forgive abduction, increase opinion, decrease opinion, become lover",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Seduce your future spouse to make them a lover, so you have increased opinion and fertility as a couple once you marry."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Don't worry about pregnancy in this case. You can legitimize the child, and your spouse will be happy because they are the child's other parent.",
+                            "children": []
+                        },
+                        {
+                            "text": "Make sure your \"future spouse\" doesn't marry someone else first! Having them in your court or in a betrothal prevents this.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Repeated one-night stands give you more chances at pregnancy and leveling up than making someone your steady lover. Choose \"love and leave\", but immediately make them your seduction target again."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Have many children , form lots of alliances , and either:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Legitimize few, essentially appointing your heir .",
+                            "children": []
+                        },
+                        {
+                            "text": "Legitimize all, and use your large family to get your grandchildren on all the thrones .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Make your children heirs to foreign titles by seducing rulers and heirs. Focus on primogeniture and gavelkind titles, as these are the most predictable. You can also try to make your children be junior heirs for some elective gavelkind titles."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Make your children claimants on foreign titles . You may be able to press their claims for easy expansion. If you educate them with the target realm's culture and good ruler traits, unhappy vassals may support them as faction claimants. High diplomacy and brave also improve their chances of becoming adventurers , and you can join their adventure wars."
+                }
+            ]
+        },
+        {
+            "heading": "For women",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Safe practice : Women who do not want to produce bastard children can target eunuchs or seduce men while pregnant ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Cuckoldry : Women may sleep around for fertility and eugenics while planning to pass off children as their husband's. It is best to choose a trusting husband for this, but if you have high intrigue, you can usually pull this off against any low-intrigue husband."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Legitimizing : Alternatively, women may try to arrange for their children to inherit titles from various fathers. This requires each biological father to acknowledge but not legitimize , so you can then legitimize the child into your own dynasty. To minimize the chances of the child being denounced, you should focus on fathers who are Just , Kind , and not zealous Christians. You should especially avoid non-dynastic men over 50 who are desperate for a son, as they are just as likely to legitimize the child into their own dynasty."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The risks and costs of the latter strategy differ depending on whether you are married. If unmarried, will lose 50 piety for becoming pregnant, which may interfere with legitimizing the children (costs 20 piety). If married, your husband must find out ( paranoid husbands are best for this), and you will be known as an adulteress upon the husband's discovery."
+                }
+            ]
+        },
+        {
+            "heading": "For men",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "One strategy is to seduce unmarried women in other courts (so you're safe if someone finds a note), and then invite or marry them into your court once they are pregnant (so the children are under your control). Note that as of 2.4.3, \"unimportant\" lowborn characters in a large court will die quickly, and being your lover or pregnant with your child does not qualify them as important. Getting them married does."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Sleeping with unmarried women, or wives of paranoid and high-intrigue men, gives you the highest chance of the option to declare the child yours."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "As the known father, you can legitimize bastard children at birth for free. You can also legitimize children later by spending piety, like mothers can, but you must ensure the child is under your control (they will normally be in the mother's court)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can also aim to increase the size of your dynasty by creating cuckold children in other marriages. If the husband is trusting or has much lower intrigue than his wife, the child will usually be considered theirs and legitimate. This can be useful if the husband is also a member of your dynasty; if the affair goes undetected, the child will be a legitimate member of your dynasty. Affairs with matrilineally-married women of your own dynasty can also work, but watch out for inbreeding."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you want to only have bastard children (e.g. to choose one to legitimize as your heir), consider marrying an infertile woman (celibate or over 45)."
+                }
+            ]
+        },
+        {
+            "heading": "Staying safe",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Avoid scandal by finding or creating opportunities where no character is eligible to notice. In particular, your intrigue skill or your target's intrigue skill should exceed that of everyone in the target's court who is the target's {liege, parent, child, or sibling}."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Don't leave a note if seducing the unlanded spouse of a ruler, as this evidence can land you in prison. Also be wary of leaving a note if the target is important to you. If another character finds it, they will start watching you ( Seducing my friend , etc), making it unsafe to continue pursuing the target."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Protect yourself and your children against plots . Your spouse should have low intrigue, and preferably be kind or honest so they cannot start a murder plot. Ideally your spymaster has high intrigue (to improve plot discovery chance), high opinion of your children, and high AI honor ."
+                }
+            ]
+        },
+        {
+            "heading": "Avoid being cuckolded",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Rulers have several reasons to care about their spouse's fidelity. You may be concerned for the health of your spouse, hoping for predictable succession, or simply jealous."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Of particular concern (to male rulers) is a wife becoming pregnant with another man's child. This can be important with gavelkind succession, or if you have positive genetic traits you want your children to inherit. If you have low intrigue skill or are trusting , you're unlikely to even find out whether your wife's children are your own."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Here are some tips for ensuring your wife's fidelity:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Avoid marrying women who are :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "attractive : they are very likely to be targeted for seduction, though they do tend to reject attempts.",
+                            "children": []
+                        },
+                        {
+                            "text": "lustful : they are likely to fall for seduction attempts. On the flip-side, lustful increases fertility.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Marry a woman who is :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "unlikely to be targeted. (AI rulers will never target women who are chaste , ugly , dwarf , inbred , imbecile , clubfooted , harelip , hunchback . However, this might cause congenital traits to find their way into your dynasty!)",
+                            "children": []
+                        },
+                        {
+                            "text": "a lesbian. ( Homosexual women will never cheat on you with another man. They may sleep with other women, but they will not get pregnant this way. On the flipside, they also have reduced fertility. A lustful lesbian is a good compromise as they still have +5% fertility.)",
+                            "children": []
+                        },
+                        {
+                            "text": "\"rejecting seduction attempts\". (Women with this modifier will not cheat on you. The modifier does however wear off.)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Become your wife's lover . AI rulers will never try to seduce a character who has a lover and isn't (lustful, hedonist , a master of seduction, or a ruler using the seduction focus)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Imprison your wife . Women in jail cannot cheat on you. Their skills still contribute to your state attributes, though their diplomacy skill will be reduced."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Assign your wife to lead troops . Characters leading troops cannot seduce or be seduced. This is only possible under a few circumstances."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Eliminate seducers from the realm . AI rulers only seduce within the same realm. You may be able to kill, castrate, imprison, or unland them. For direct vassals, you can instead appoint them as commanders and have them constantly lead troops."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Turn the Way of Life DLC off .  No one can choose the seduction focus (or any other focus) and target your wife.  There are still events in the vanilla game which can cause your wife to be unfaithful, especially if she is a ruler with a ranking higher or equal to count. It is also possible to disable AI seduction using a game rule while leaving the rest of the DLC enabled."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ /Crusader Kings II/events/wol_seduction_events.txt , event WoL.98",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

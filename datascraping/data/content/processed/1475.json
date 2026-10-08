@@ -1,0 +1,1152 @@
+{
+    "pageid": 1475,
+    "title": "Patch 2.0",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.0 was released on the 18th of November 2013 [1] alongside the Sons of Abraham expansion."
+                }
+            ]
+        },
+        {
+            "heading": "Major changes",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Ironman mode",
+                            "children": []
+                        },
+                        {
+                            "text": "Steam Achievements",
+                            "children": []
+                        },
+                        {
+                            "text": "Religious (non-heretic) rebels",
+                            "children": []
+                        },
+                        {
+                            "text": "Women can now die in childbirth, and there can be other complications, like illness and sickly infants",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a bottleneck logic to battles where the defender benefits from the surrounding terrain to make the opponent fight on his terms",
+                            "children": []
+                        },
+                        {
+                            "text": "Being outflanked is now much more devastating, especially through the center or from two sides",
+                            "children": []
+                        },
+                        {
+                            "text": "Support for the metaserver dropped",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Gameplay",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Waived the creation conditions (culture, religion) for most kingdoms and empires for human players",
+                            "children": []
+                        },
+                        {
+                            "text": "Having a marriage alliance now increases opinion by 30 (quite useful vs liege or vassals)",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced the overall revolt risk",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where you could not fire the leader of the right flank if the left flank had no leader",
+                            "children": []
+                        },
+                        {
+                            "text": "You now get and lose the -1 \"raised troops\" opinion penalty from vassals every 61 days instead of every 73 days",
+                            "children": []
+                        },
+                        {
+                            "text": "You no longer get any liege levies from vassals with a negative opinion of you",
+                            "children": []
+                        },
+                        {
+                            "text": "There is now a +50 opinion bonus when a liege is the primary defender in a war against foreigners",
+                            "children": []
+                        },
+                        {
+                            "text": "Increased the opinion bonus to +75 when a liege is the primary defender in a holy war (and improved the check)",
+                            "children": []
+                        },
+                        {
+                            "text": "A Holding owner's personal martial skill now affects the levy size (exported as HOLDING_LEVY_SIZE_OWNER_MARTIAL_BASE and HOLDING_LEVY_SIZE_OWNER_MARTIAL_MULT)",
+                            "children": []
+                        },
+                        {
+                            "text": "Armies on ships are capped at 50% morale",
+                            "children": []
+                        },
+                        {
+                            "text": "Levy maintenance costs increased by 50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Mercenary maintenance increased by 20%",
+                            "children": []
+                        },
+                        {
+                            "text": "Increased the cost of reinforcing retinues by 20%",
+                            "children": []
+                        },
+                        {
+                            "text": "Levy sizes now depend on the de jure region they are in (the most in the capital county, the least outside the capital empire.)",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer allowed to retract barony tier vassals from their de jure count",
+                            "children": []
+                        },
+                        {
+                            "text": "Murderers are now revealed in Observe mode (no \"suspicious accidents\")",
+                            "children": []
+                        },
+                        {
+                            "text": "Non-theocracy lieges are now only allowed to create single county or barony temple vassals (bishoprics)",
+                            "children": []
+                        },
+                        {
+                            "text": "Non-theocracy lieges can no longer create neighboring county tier bishops",
+                            "children": []
+                        },
+                        {
+                            "text": "You are now only allowed to have a certain percentage of counties under theocracy vassals (MAX_THEOCRACY_COUNTIES_IN_REALM)",
+                            "children": []
+                        },
+                        {
+                            "text": "You are now only allowed to have a certain percentage of counties under republic vassals (MAX_REPUBLIC_COUNTIES_IN_REALM)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added major events for the enabling of Christian Crusades (the CB) and Holy Orders",
+                            "children": []
+                        },
+                        {
+                            "text": "Added major events for the enabling of Muslim Jihads (the CB) and Holy Orders",
+                            "children": []
+                        },
+                        {
+                            "text": "Added major events for the enabling of Pagan Great Holy Wars (the CB)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added some more detail to many heresies (Cathars can have female priests, etc.)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added heads of religion for five heresies : d_fraticelli, d_iconoclast, d_yazidi, d_ibadi and d_hurufi",
+                            "children": []
+                        },
+                        {
+                            "text": "Added major decisions to create the Fraticelli and Iconoclast religious heads",
+                            "children": []
+                        },
+                        {
+                            "text": "Can now elect females as bishops in versions of Christianity scripted to allow that",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with mercenaries and holy orders not disbanding their special troops",
+                            "children": []
+                        },
+                        {
+                            "text": "Rebalanced the Volley Harass combat tactic",
+                            "children": []
+                        },
+                        {
+                            "text": "Pagan festivals now provide the advertised opinion boost to vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "Heirs denied the chance to join the Varangian Guard no longer get the event where they return home upon inheriting",
+                            "children": []
+                        },
+                        {
+                            "text": "The Saoyshant Descendant trait is now properly granted to grandchildren when becoming the Saoyshant",
+                            "children": []
+                        },
+                        {
+                            "text": "The Saoyshant Descendant trait is now granted to all descendants regardless of gender",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed the checks in certain events for the obsolete Duchy of Oxford",
+                            "children": []
+                        },
+                        {
+                            "text": "The heretic_friend_timer modifier is now properly hidden in event 100180",
+                            "children": []
+                        },
+                        {
+                            "text": "Councillors in Republics now use titles appropriate to their religion and culture",
+                            "children": []
+                        },
+                        {
+                            "text": "The Pentarchy events will now only trigger for Orthodox Byzantine/Roman rulers",
+                            "children": []
+                        },
+                        {
+                            "text": "Baron-tier Patricians are now able to fabricate claims",
+                            "children": []
+                        },
+                        {
+                            "text": "Eunuchs will no longer ask to be given a title",
+                            "children": []
+                        },
+                        {
+                            "text": "Concubines will no longer have marriage ambitions as they cannot get married",
+                            "children": []
+                        },
+                        {
+                            "text": "Concubines can now have the ambition to have a daughter",
+                            "children": []
+                        },
+                        {
+                            "text": "Added non-Christian/non-Muslim option to event 4140",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters of a religion where priests are not allowed to marry will now divorce their wives if ordained",
+                            "children": []
+                        },
+                        {
+                            "text": "Traits blocking inheritance no longer apply for Temple titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some bugs with how dead spouses are handled",
+                            "children": []
+                        },
+                        {
+                            "text": "Most rebel units now disband if they win",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the 'potential' check of traits after a religion change",
+                            "children": []
+                        },
+                        {
+                            "text": "Made adventures a bit less common",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrected some minor errors in various pulse events",
+                            "children": []
+                        },
+                        {
+                            "text": "Increased the default bishop opinion of the Pope",
+                            "children": []
+                        },
+                        {
+                            "text": "Increased the opinion of their liege for invested bishops",
+                            "children": []
+                        },
+                        {
+                            "text": "Lowered the opinion bonus for bishops vs their liege under Free Investiture",
+                            "children": []
+                        },
+                        {
+                            "text": "Slightly lowered tax rates from bishops to both the Pope and antipopes",
+                            "children": []
+                        },
+                        {
+                            "text": "New randomly generated bishops and mayors now get the local liege's culture rather than the top liege's",
+                            "children": []
+                        },
+                        {
+                            "text": "Installing an antipope as Pope now makes him like you a lot more",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event where rebels kill random characters after taking a holding (TOG.1190)",
+                            "children": []
+                        },
+                        {
+                            "text": "Cut the Bektashi Shiite heresy",
+                            "children": []
+                        },
+                        {
+                            "text": "The decisions to create Hungary and Leon can no longer be taken when at war",
+                            "children": []
+                        },
+                        {
+                            "text": "Norse Pagan Reformed barons now use the correct title",
+                            "children": []
+                        },
+                        {
+                            "text": "Event 100180 will no longer trigger for heretic characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Event 39001 will no longer trigger for heretic characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where minor baronies could go independent when they should not",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the war score in revoke vassal title plots",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced the amount of non-claimant adventures out of player empires",
+                            "children": []
+                        },
+                        {
+                            "text": "Female rulers can now always get married, even in religions with polygamy and concubinage",
+                            "children": []
+                        },
+                        {
+                            "text": "Made prepared invasions by AI vassals in player empires rarer",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash bug with real fathers set from event effects sometimes being deleted",
+                            "children": []
+                        },
+                        {
+                            "text": "The Aztecs, Mongols and Seljuks now spawn with more but smaller regiments",
+                            "children": []
+                        },
+                        {
+                            "text": "Added more severe opinion penalties to assassination plots being discovered",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where counties could be deprived of _any_ holder through 'gain_settlements_under_title' and related event effects",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the subjugation CB where the winner could become the vassal of the loser",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with event 3686 where you could fall in love with close relatives",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a rare memory leak in diplomatic actions",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a minor glitch with the Aztec emperor appearing in and leaving your court on arrival",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where the grant minor title message would always say \"REGENT\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug preventing the granting of bishoprics to females even if the religion allows it",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where the \"cousin\" relation would not always be correctly calculated",
+                            "children": []
+                        },
+                        {
+                            "text": "A character's original birth name is now shown in the tooltip if he or she has a regnal name (e.g. popes)",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaked the outcome of the Improve Relations chancellor job. The effect lasts longer, but is less powerful and somewhat harder to get.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a potential CTD in declare war interaction",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a CTD caused by attacking siege leader dying while siegeview was open",
+                            "children": []
+                        },
+                        {
+                            "text": "When ransoming a courtier that has money, that character's money will now be used towards paying the ransom, and if they have enough money for the whole ransom their liege will not have to pay anything at all",
+                            "children": []
+                        },
+                        {
+                            "text": "Opinion boost for releasing a prisoner is now +5 opinion per tier of their primary title (so +5 for a Baron, +10 for a Count etc.).",
+                            "children": []
+                        },
+                        {
+                            "text": "Entering observe mode will now automatically lift FoW",
+                            "children": []
+                        },
+                        {
+                            "text": "Charinfo console command is now a proper toggle and does not require additional input",
+                            "children": []
+                        },
+                        {
+                            "text": "Failing flank is much more punishing now, a surrounded flank or a failing mid-flank are catastrophic.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaked Teutonic order to be more infantry oriented.",
+                            "children": []
+                        },
+                        {
+                            "text": "Holy orders and Mercenaries are now split into several sub units which can be put on different flanks or different units.",
+                            "children": []
+                        },
+                        {
+                            "text": "Now generates courtiers to mercenaries and holy orders so they can be put as leader for the sub-units.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some bugs with the customization DLC's renaming of landed titles with cultural names.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where fabricate claims plot wouldn't end when the title was destroyed",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where all constructed settlements were counted as trade posts",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug for multiplayer character selection which enabled multiple people to play as the same character",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where invaders of the same kingdom weren't hostile towards each other",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where removal of certain traits caused the game to stop responding",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where attached units would remain attached even if the leading unit was an enemy",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where AI didn't invite people to the fabricate claim plot",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where you could having a landed title with zero holdings under its control",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where character attributes for characters were in some cases incorrectly read",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where all baron subvassals were transferred upon title usurpation",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Interface",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed a bug where titular titles would hide certain other titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where character editor property values went out of range",
+                            "children": []
+                        },
+                        {
+                            "text": "Family tree now shows dynasty relation",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where dead popes would have the incorrect character portrait",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug for the title loss notification for republics.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the ruler consort title being shown for the spouse a day after the ruler dies",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug in some messages with duplicate titles (\"King King Karlmann\")",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with some dynasty names of event spawned characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Dying a \"natural death\" below the age of 45 is now called dying of \"poor health\" instead",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a missing tooltip for why you cannot nominate a bishop successor if the current bishop is not of your religion",
+                            "children": []
+                        },
+                        {
+                            "text": "If there has only been a single ruler by a certain first name, the regnal number is no longer shown",
+                            "children": []
+                        },
+                        {
+                            "text": "Improved the entry texts in the title history view a bit",
+                            "children": []
+                        },
+                        {
+                            "text": "The black bastard blood drop is now shown correctly with the new bastard dynasty system",
+                            "children": []
+                        },
+                        {
+                            "text": "Lowered the priority of faction messages to reduce spam",
+                            "children": []
+                        },
+                        {
+                            "text": "Lowered the priority of heir choices under elective monarchy to reduce spam",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'Random Character' button when selecting character",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'Split in Half' button for units",
+                            "children": []
+                        },
+                        {
+                            "text": "Player will no longer get a notification of being besieged if the besieging army is too small to take the settlement.",
+                            "children": []
+                        },
+                        {
+                            "text": "Support for native clipboard functionality.",
+                            "children": []
+                        },
+                        {
+                            "text": "Support to select text using keyboards",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Quick-Split icon menu to quickly split army based on mercenaries, holy orders and retinues.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaked amount of ships and shipbuilding tech for merchant republics.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Database",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Changed some time period inappropriate names in Serbia",
+                            "children": []
+                        },
+                        {
+                            "text": "Changes to the bastard children of Antso IV of Navarra",
+                            "children": []
+                        },
+                        {
+                            "text": "Added the missing mother for Jeanne de Beaumont",
+                            "children": []
+                        },
+                        {
+                            "text": "Various title corrections in the Latin Empire bookmark",
+                            "children": []
+                        },
+                        {
+                            "text": "København is now called Hafn when held by Norse characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Changed some time period inappropriate names in Malta and added Greek versions",
+                            "children": []
+                        },
+                        {
+                            "text": "Changes to the Plantagenet monarchs",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrections for the Dukes of Silesia and other related characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Changed some time period inappropriate names in Estonia",
+                            "children": []
+                        },
+                        {
+                            "text": "Louis II of Italy now has the correct Wikipedia link",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixes and additions for FitzAlans and early Stewarts",
+                            "children": []
+                        },
+                        {
+                            "text": "Additions and corrections to the Roman Emperors of the Byzantine Empire title history",
+                            "children": []
+                        },
+                        {
+                            "text": "Eudokia is now the Byzantine Empress for six months in 1067",
+                            "children": []
+                        },
+                        {
+                            "text": "Added additional names for Ecumenical Patriarchs to choose from",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the dynasty of the several bastards belonging to the de Barcelona dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "The Duke of Portucale now has an heir in 867",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixes to several Slavic dynasty names",
+                            "children": []
+                        },
+                        {
+                            "text": "Character 217501 now has the correct Wikipedia link",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated Counts of Gilan to ensure proper regnal numbers",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrections to Wladyslaw II the Exile and his close family",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a dynasty for Grand Prince Feodor of Novgorod",
+                            "children": []
+                        },
+                        {
+                            "text": "Hubert de Burgh is now correctly the Earl of Kent and Baron of Montgomery",
+                            "children": []
+                        },
+                        {
+                            "text": "Miscellaneous Capetian/Valois fixes",
+                            "children": []
+                        },
+                        {
+                            "text": "Anglo-Saxon England now has feudal elective law",
+                            "children": []
+                        },
+                        {
+                            "text": "Added new Coats of Arms for Dregovichs, Severians and Radimichs",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced effects of terrain on movement speed",
+                            "children": []
+                        },
+                        {
+                            "text": "Battles in Crusade-type wars now only have half the normal impact on warscore",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "AI",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Powerful kings and emperors will now sometimes set up antipopes",
+                            "children": []
+                        },
+                        {
+                            "text": "Cynical rulers may now sometimes switch back to Free Investiture law",
+                            "children": []
+                        },
+                        {
+                            "text": "AI characters will now hold Pagan festivals",
+                            "children": []
+                        },
+                        {
+                            "text": "Magyars are now more willing to convert even before 930",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where the AI would sometimes not marry at all if the only suitable candidates were of too low rank",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug that was causing AI armies consisting of a single large regiment to endlessly split off and reabsorb empty regiments",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Will no longer split a stack if the split would create a tiny useless army",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Now takes culture, religion and province wealth into consideration when choosing capitals",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Much higher prio on holding to the counties in its primary duchy",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: More prio on keeping its demesne concentrated in a few duchies",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Will no longer accept a matrilineal marriage if the betrothal was non-matrilineal and vice versa",
+                            "children": []
+                        },
+                        {
+                            "text": "When marrying betrothed characters, the AI will now always propose the type of marriage agreed upon in the betrothral",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some inconsistencies in AI battle odds evaluation",
+                            "children": []
+                        },
+                        {
+                            "text": "Increased AI prio on building shipyards",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug that was preventing the AI from starting wars against characters with only barony level holdings",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Higher prio on helping friendly armies in battle",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Better at coordinating attacks together with their allies",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug that was causing the defensive war AI to not work correctly",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Will no longer accept giving away women as concubines to characters whose religion they will not intermarry with",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Will no longer destroy King titles if AI_EMPEROR_CREATES_KINGDOMS is set to 1",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where the AI would incorrectly calculate retreating units as potential combatants when deciding to move to a province",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Fixed a bug where two AI armies from the same country would change their orders back and forth due to reacting to what the other army was doing",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Will no longer retreat from incoming enemies if it is already moving to attack those enemies",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Muslim characters no longer consider prestige effects when determining who to marry",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug that was preventing the AI from reinforcing allies in battle if the enemy army was moving before starting the battle",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: More prio on besieging contested provinces when the enemy has ticking warscore",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Better at coordinating its armies between fronts",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Better at coordinating its armies with allies",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Will now keep imprisoned characters that they don't want to execute/banish/revoke locked up for a while instead of instantly releasing them. The minimum lockup time depends on the importance of the character.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed several 'lockups' in army AI where armies would get stuck bouncing between two destinations",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Will now consider the actual composition of an army when determining its strength, rather than just looking at numbers",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Now factors in effects of terrain when determining whether to attack with an army",
+                            "children": []
+                        },
+                        {
+                            "text": "Rationality now affects how well AI will calculate odds of success when attacking with its armies",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Will no longer overcommit when pursuing small enemy stacks",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Less priority on pursuing small stacks when there are more important targets",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Will now prefer fighting in its own territory when in a defensive war against opponents of superior or equal strength",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Will now consolidate several armies into a large HK stack when fighting a defensive war against a superior opponent",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Will now create Hunter-Killer stacks to chase enemy armies",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: More prio on keeping its armies close together when advancing in enemy territory",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Will now lift sieges to attack enemy armies when appropriate",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Will now split up its armies into medium-sized stacks to avoid attrition",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Will no longer assault unless it has at least 10:1 numbers",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Modding",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added support in traits for tolerance of other religion groups",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'on_vassal_accepts_religious_conversion', which now basically handles all the logic of the Demand Conversion interaction",
+                            "children": []
+                        },
+                        {
+                            "text": "Added \"evil_god_names\" to religions, to be used in event texts",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a priest title to religions, that can be used in text",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'is_father_real_father'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'any_spouse_even_if_dead'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'priests_can_inherit' to religions",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'historical' (character)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'score' console command cheat",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'score'",
+                            "children": []
+                        },
+                        {
+                            "text": "MTTH in on_action events should now be written 'weight_multiplier'. Added log error.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added proper event id system for errors logs, including the namespace",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'family_palace' event target",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'on_become_doge' on-action",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'republic_total_num_of_trade_posts'",
+                            "children": []
+                        },
+                        {
+                            "text": "Events with 'hide_window' now fire a valid event option if there are any",
+                            "children": []
+                        },
+                        {
+                            "text": "Added system for events marked 'notification' to be shown as messages rather than full pop-up windows",
+                            "children": []
+                        },
+                        {
+                            "text": "Added on-action 'on_county_religion_change'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'has_heresies'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event target 'parent_religion_head'",
+                            "children": []
+                        },
+                        {
+                            "text": "The event target 'religion_head' now also works in province scope",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'any_province_holding'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added effect 'any_province_holding'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added effect 'random_province_holding'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added succession law 'Appointment' for feudal vassals of Holy Orders (titles revert back to the liege on death)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event effect 'banish_religion = X'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'can_retire_to_monastery' flag to religions",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'jewish_opinion' to traits",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'dynasty = culture' possibility to the 'create_character' effect",
+                            "children": []
+                        },
+                        {
+                            "text": "The trigger 'has_empty_holding' now also counts holdings under construction",
+                            "children": []
+                        },
+                        {
+                            "text": "Exported LEVY_MAINTENANCE_FACTOR to defines",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'monthly_income' field to landed titles for extra income",
+                            "children": []
+                        },
+                        {
+                            "text": "Temporary modifiers can now be inherited",
+                            "children": []
+                        },
+                        {
+                            "text": "Exported some AI raid parameters to defines",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'hold_election' event effect for merchant republics",
+                            "children": []
+                        },
+                        {
+                            "text": "Added support for female versions of event pictures",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'force_picture' field to events, to ignore cultural, religious, and gender variants of event pictures",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the effect 'random_sibling' (it included dead siblings)",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some bugs with the 'can_marry' trigger",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'GetFromFromRelation' text",
+                            "children": []
+                        },
+                        {
+                            "text": "Added on_action 'on_adulthood'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added battle_warscore_mult setting to cb_types, this modifies the warscore gained from battles in wars using that CB",
+                            "children": []
+                        },
+                        {
+                            "text": "Increased the number of galleys gained from shipyards",
+                            "children": []
+                        },
+                        {
+                            "text": "Exported define AI_ALWAYS_CREATES_DUCHIES",
+                            "children": []
+                        },
+                        {
+                            "text": "Exported define BASE_AI_ARMY_SIZE",
+                            "children": []
+                        },
+                        {
+                            "text": "Added prevent decadence trait value.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed so titles can have their own graphical culture type.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added support for any triggers to count matches.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added various new on_action hooks to support the achievements.",
+                            "children": []
+                        },
+                        {
+                            "text": "added like_better_than trigger",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event scope text hooks for dates.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Converter",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed trigger issues for the default national ideas from EU4. Now you should get national ideas based on your culture.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Jerusalem Ideas.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Knights Templar Ideas.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Israel Ideas.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Jewish religion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Jewish cultures.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added support for major heresies to be converted to EU4.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing horde files.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where Aztec became eastern tech group.",
+                            "children": []
+                        },
+                        {
+                            "text": "Now the Holy Roman Emperor no longer gets cores on his old vassals in EU4.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Forum, Crusader Kings II - 2.0 PATCH RELEASED - Checksum WGPN , 2013-11-18",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

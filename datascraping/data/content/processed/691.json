@@ -1,0 +1,470 @@
+{
+    "pageid": 691,
+    "title": "Execution",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Execution is a diplomatic action that can be used on one's prisoners . It is the most basic of the actions that kill prisoners ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When a character is executed, their titles and wealth are passed down normally, as if they died by any other means."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Their artifact would not be passed down, a.k.a. they will disappear if they don't have any heir)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Executing a relative or a member of your dynasty will give your character a Kinslayer trait if you are eligible."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Executions:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "cost 20 piety for members of your religion (zero for infidels)",
+                            "children": []
+                        },
+                        {
+                            "text": "invoke -10 tyranny unless you have a reason:",
+                            "children": [
+                                {
+                                    "text": "Executing characters captured in war is tyranny-free (as long as you are still at war)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Executing foreigners only upsets people in the foreign realm",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Some opinion modifiers allow execution, such as \"Attempted Murder\"",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Lowborn characters can be executed free of tyranny",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Excommunicated characters can be executed free of tyranny",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the Conclave DLC is active, a ruler may choose to allow the council to vote on whether a person should be executed or not."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "With Monks and Mystics it is possible to mass execute a large number of prisoners according to filters chosen."
+                }
+            ]
+        },
+        {
+            "heading": "Execution methods",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Reaper's Due [1] introduces 31 different kinds of execution. The various kinds of execution are randomised from the list of possible execution methods. It is hence not possible to decide in which way a prisoner is to be executed, but a random method will be chosen (unless you are a cannibal and devour your prisoner). Each method has a weight for use in the randomisation. There can then be additional modifiers for the weight; and some methods are limited to certain regions/traits/religions. Note that unless explicitly specified then having one of the required traits or one of the required religions will make the execution method able to trigger. Otherwise everything required is needed; except for hung, drawn, and quartered where having one of the required traits or a West Germanic culture is sufficient. The weight modifiers have their requirements written next to them."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Weight",
+                            "Weight modifier",
+                            "Region",
+                            "Trait",
+                            "Religion",
+                            "Government",
+                            "Culture/culture group"
+                        ],
+                        [
+                            "Crushed to death",
+                            "200",
+                            "",
+                            "",
+                            "Cruel , Wroth",
+                            "Aztec, Aztec reformed",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Suffocation in ash",
+                            "300",
+                            "2, victim is homosexual",
+                            "",
+                            "",
+                            "Aztec, Aztec reformed",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Burnt at the stake",
+                            "150",
+                            "4, heretic 2, female, kinslayer , the ruler having one of the following opinion modifiers of the executee: Traitor, rebel traitor, regicide traitor, killed close kin, witch, takfir, unfaithful wife, cuckolded, charge heresiarch, charge infidel, charge deviant, charge traitor",
+                            "",
+                            "",
+                            "",
+                            "Not nomadic",
+                            ""
+                        ],
+                        [
+                            "Hung, drawn, and quartered",
+                            "200",
+                            "0.5, kind , temperate , charitable 4, the ruler having one of the following opinion modifiers of the executee: declared war, dishonorable, traitor, rebel traitor, regicide traitor, killed close kin, refused abdicate title, refused order, witch, takfir, unfaithful wife, cuckolded, charge heresiarch, charge infidel, charge deviant, charge traitor, charge slanderer, abuse of office.",
+                            "",
+                            "Cruel, wroth",
+                            "Not Aztec, not Aztec reformed",
+                            "Not tribal, not nomadic",
+                            "West Germanic"
+                        ],
+                        [
+                            "Mauled by bear",
+                            "50",
+                            "8, hunter 3, cruel",
+                            "Not India, not Africa",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Mauled by lion",
+                            "100",
+                            "8, hunter 3, cruel",
+                            "Africa",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Snake pit",
+                            "50",
+                            "2, deceitful",
+                            "",
+                            "",
+                            "",
+                            "Not nomadic",
+                            ""
+                        ],
+                        [
+                            "Disembowelment",
+                            "200",
+                            "",
+                            "",
+                            "Cruel, wroth",
+                            "Aztec, Aztec reformed",
+                            "Not nomadic",
+                            ""
+                        ],
+                        [
+                            "Boiled to death",
+                            "200",
+                            "",
+                            "Europe, India",
+                            "Cruel",
+                            "",
+                            "Not nomadic",
+                            ""
+                        ],
+                        [
+                            "Sawed in half",
+                            "200",
+                            "",
+                            "",
+                            "Cruel",
+                            "",
+                            "Not nomadic",
+                            ""
+                        ],
+                        [
+                            "Hunted",
+                            "400",
+                            "",
+                            "",
+                            "Hunter, Game Master",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Buried alive",
+                            "200",
+                            "3, gardener",
+                            "",
+                            "Gardener , cruel, wroth",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Hung",
+                            "200",
+                            "2, kind, temperate, charitable 4, victim is lowborn",
+                            "",
+                            "",
+                            "Not Aztec, not Aztec reformed",
+                            "Not nomadic",
+                            ""
+                        ],
+                        [
+                            "Walled up alive",
+                            "200",
+                            "3, architect, Murder-Builder bloodline",
+                            "",
+                            "Wroth, cruel, architect , Murder-Builder bloodline",
+                            "",
+                            "Not nomadic, not tribal",
+                            ""
+                        ],
+                        [
+                            "Beheading",
+                            "300",
+                            "3, kind 2, temperate, charitable",
+                            "",
+                            "Not lowborn",
+                            "",
+                            "Not nomadic",
+                            ""
+                        ],
+                        [
+                            "Drowned in wine",
+                            "250",
+                            "",
+                            "",
+                            "Hedonist , drunkard ; also requires not lowborn",
+                            "Not Aztec, not Aztec reformed",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Slowly flayed to death",
+                            "200",
+                            "2, hunter",
+                            "",
+                            "Hunter, cruel; also requires not kind",
+                            "",
+                            "Not nomadic",
+                            ""
+                        ],
+                        [
+                            "Impaled on a stake",
+                            "1200",
+                            "",
+                            "",
+                            "Impaler",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Mauled by tiger",
+                            "50",
+                            "8, hunter 3, cruel",
+                            "India",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Execution by elephant",
+                            "200",
+                            "10, victim controls religion 2, emperor, king",
+                            "India, Persia, East Africa, Arabia",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Pierced on a growing bamboo",
+                            "300",
+                            "",
+                            "India",
+                            "Cruel, wroth",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Stoning",
+                            "100",
+                            "2, cruel, wroth 4, victim is homosexual",
+                            "",
+                            "",
+                            "Aztec, Aztec reformed, Christian, Muslim",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Crucifixion",
+                            "200",
+                            "",
+                            "",
+                            "",
+                            "Muslim, Not Christian",
+                            "",
+                            "Persian, Roman"
+                        ],
+                        [
+                            "Blood eagle",
+                            "200",
+                            "2, cruel, wroth 5, rival",
+                            "",
+                            "",
+                            "Germanic, Germanic reformed",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Scaphism",
+                            "250",
+                            "2, cruel, wroth",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "Persian"
+                        ],
+                        [
+                            "Drowned",
+                            "250",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "Not nomadic, not tribal",
+                            "Celtic, Norse"
+                        ],
+                        [
+                            "Garotting",
+                            "300",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "Iberian"
+                        ],
+                        [
+                            "Trampled to death by horses",
+                            "300",
+                            "4, rival",
+                            "",
+                            "",
+                            "",
+                            "Nomadic",
+                            ""
+                        ],
+                        [
+                            "Back breaking",
+                            "700",
+                            "",
+                            "",
+                            "Not lowborn",
+                            "",
+                            "Nomadic",
+                            ""
+                        ],
+                        [
+                            "Breaking wheel",
+                            "250",
+                            "",
+                            "Europe",
+                            "Cruel",
+                            "",
+                            "Not nomadic, not tribal",
+                            ""
+                        ],
+                        [
+                            "Gored by boar",
+                            "50",
+                            "8, cruel 3, hunter",
+                            "Europe",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "2, female, kinslayer , the ruler having one of the following opinion modifiers of the executee: Traitor, rebel traitor, regicide traitor, killed close kin, witch, takfir, unfaithful wife, cuckolded, charge heresiarch, charge infidel, charge deviant, charge traitor"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "4, the ruler having one of the following opinion modifiers of the executee: declared war, dishonorable, traitor, rebel traitor, regicide traitor, killed close kin, refused abdicate title, refused order, witch, takfir, unfaithful wife, cuckolded, charge heresiarch, charge infidel, charge deviant, charge traitor, charge slanderer, abuse of office."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "3, cruel"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "3, cruel"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "4, victim is lowborn"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "2, temperate, charitable"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "3, cruel"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "2, emperor, king"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "4, victim is homosexual"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "5, rival"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "3, hunter"
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ See in 00_execution_methods.txt",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

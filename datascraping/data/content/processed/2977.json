@@ -1,0 +1,2404 @@
+{
+    "pageid": 2977,
+    "title": "Duel",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A duel is an engagement in personal combat between two characters."
+                }
+            ]
+        },
+        {
+            "heading": "Challenge to duel for honor [1]",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Rulers have access to a Duel diplomatic action if they have War focus , membership in a Warrior Lodge , or a bloodline that \"Enables dueling\"."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Unless the dueling game rule is set to \"Unrestricted\", the initiator must have one of the following reasons to challenge the target:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Rivalry",
+                            "children": []
+                        },
+                        {
+                            "text": "Foe (certain opinion modifiers toward the initiator, including \"Cuckolded\" and \"Attempted Murder\")",
+                            "children": []
+                        },
+                        {
+                            "text": "Target is Excommunicated ; initiator is Zealous and same religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Target is Decadent ; initiator is Zealous and Muslim",
+                            "children": []
+                        },
+                        {
+                            "text": "Initiator has a mission to duel target ( Warrior Lodge quest)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Both characters must be in good shape to duel:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Duelers are NOT inaccessible",
+                            "children": []
+                        },
+                        {
+                            "text": "Duelers are NOT pregnant",
+                            "children": []
+                        },
+                        {
+                            "text": "Duelers have NOT recently been in any duel (within 3 months)",
+                            "children": []
+                        },
+                        {
+                            "text": "Duelers do NOT have the character modifier Bedridden or Severe Illness",
+                            "children": []
+                        },
+                        {
+                            "text": "Duelers must each be at peace (for courtiers, this means that their liege must be at peace)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Challenge to duel for strong claim [1]",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With the Holy Fury DLC, a tribal ruler can use a diplomatic action to challenge another tribal ruler to a duel over a strong claim . Both rulers must be independent or in the same realm, the claim must be over the defendant's primary title. Many of the other requirements and mechanics are the same as in duels for honor , as listed above."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you lose a Strong Claim duel and die, and the winner is a member of your dynasty, you may switch play to the other character. This makes Strong Claim duels a potentially effective way to consolidate titles after a gavelkind split, at the price of culling dynasts."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you are the current title holder, you have the choice of rejecting the duel, at the cost of getting Craven ."
+                }
+            ]
+        },
+        {
+            "heading": "Other duels",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Battlefield duels [2]",
+                            "children": []
+                        },
+                        {
+                            "text": "Germanic men may get an event suggesting they challenge a disliked character to a Holmgang . Opinion must be below -40. Possible opponents are the liege, any vassal, or any fellow vassal.",
+                            "children": []
+                        },
+                        {
+                            "text": "Confronting a spouse's lover may result in a duel.",
+                            "children": []
+                        },
+                        {
+                            "text": "As a method of suicide , you may challenge a rival to a duel that you intend to lose. Unlike other methods of suicide, this is considered an honorable death.",
+                            "children": []
+                        },
+                        {
+                            "text": "When attempting to establish a warrior lodge bloodline , you will face a series of increasingly difficult duels.",
+                            "children": []
+                        },
+                        {
+                            "text": "dueling one's love interest's spouse during the \"Courtly Love\" event chain [3]",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Since Crusader Kings II was developed over the better part of a decade, and the duel mechanic changed significantly over that time period, some duels use different code and thus a different mechanic to calculate the result.\nHaving high personal combat skill and an opponent with low personal combat skill usually makes better outcomes more likely though."
+                }
+            ]
+        },
+        {
+            "heading": "Dueling process game mechanics",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The process of the duels that have been updated to (or were created with) the Holy Fury duel mechanic, uses a scripted effect called \"send_duel_result_event_effect\" to determine the duel outcome.\nThis scripted effect makes use of a big random list to calculate the probabilities for the different outcomes of a duel and then randomly picks a result from the eligible ones. [4]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The following tables and explanations try to illuminate the way the game calculates the duel outcomes and thus what the respective probabilities of outcomes are."
+                }
+            ]
+        },
+        {
+            "heading": "Eligible outcomes for duels [4]",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Outcome of the duel",
+                            "conditions"
+                        ],
+                        [
+                            "Outcome of the duel",
+                            "none of",
+                            "at least one of",
+                            "all of"
+                        ],
+                        [
+                            "LETHAL for both",
+                            "has_character_flag = mock_duel has_character_flag = is_legendary_duel has_character_flag = claim_duel@event_target:combatant_2",
+                            "has_character_flag = is_battlefield_duel is_member_of_any_warrior_lodge_trigger = yes has_focus = focus_war event_target:combatant_1 = { has_character_flag = flag_duel_no_draws } event_target:combatant_2 = { has_character_flag = flag_duel_no_draws }",
+                            ""
+                        ],
+                        [
+                            "LETHAL for attacker",
+                            "has_character_flag = mock_duel has_character_flag = is_legendary_duel",
+                            "has_character_flag = claim_duel@event_target:combatant_2 has_character_flag = is_battlefield_duel is_member_of_any_warrior_lodge_trigger = yes has_focus = focus_war event_target:combatant_1 = { has_character_flag = flag_duel_no_draws } event_target:combatant_2 = { has_character_flag = flag_duel_no_draws } event_target:combatant_1 = { has_character_flag = deadly_duel@event_target:combatant_2 }",
+                            ""
+                        ],
+                        [
+                            "LETHAL for defender",
+                            "has_character_flag = mock_duel has_character_flag = is_legendary_duel",
+                            "has_character_flag = claim_duel@event_target:combatant_2 has_character_flag = is_battlefield_duel is_member_of_any_warrior_lodge_trigger = yes has_focus = focus_war event_target:combatant_1 = { has_character_flag = flag_duel_no_draws } event_target:combatant_2 = { has_character_flag = flag_duel_no_draws } event_target:combatant_1 = { has_character_flag = deadly_duel@event_target:combatant_2 }",
+                            ""
+                        ],
+                        [
+                            "Attacker wounded someone",
+                            "event_target:combatant_1 = { has_character_flag = flag_duel_no_draws } event_target:combatant_2 = { has_character_flag = flag_duel_no_draws } has_character_flag = is_legendary_duel has_character_flag = claim_duel@event_target:combatant_2",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Defender wounded someone",
+                            "event_target:combatant_1 = { has_character_flag = flag_duel_no_draws } event_target:combatant_2 = { has_character_flag = flag_duel_no_draws } has_character_flag = is_legendary_duel has_character_flag = claim_duel@event_target:combatant_2",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Defender runs away",
+                            "",
+                            "event_target:combatant_2 = { OR = { trait = craven trait = weak } } any_owned_bloodline = { has_bloodline_flag = bloodline_legendary_warrior }",
+                            ""
+                        ],
+                        [
+                            "Attacker runs away",
+                            "has_character_flag = is_legendary_duel",
+                            "event_target:combatant_1 = { OR = { trait = craven trait = weak } }",
+                            ""
+                        ],
+                        [
+                            "Both wounded... (attacker wins?) -- \"stalemates\"",
+                            "event_target:combatant_1 = { has_character_flag = flag_duel_no_draws } event_target:combatant_2 = { has_character_flag = flag_duel_no_draws } has_character_flag = is_legendary_duel has_character_flag = claim_duel@event_target:combatant_2",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Both wounded... (defender wins?) -- \"stalemates\"",
+                            "event_target:combatant_1 = { has_character_flag = flag_duel_no_draws } event_target:combatant_2 = { has_character_flag = flag_duel_no_draws } has_character_flag = is_legendary_duel has_character_flag = claim_duel@event_target:combatant_2",
+                            "",
+                            ""
+                        ],
+                        [
+                            "LETHAL/PRISON for defender (BATTLE ONLY)",
+                            "has_character_flag = mock_duel has_character_flag = is_legendary_duel has_character_flag = claim_duel@event_target:combatant_2",
+                            "is_member_of_any_warrior_lodge_trigger = yes has_focus = focus_war event_target:combatant_1 = { has_character_flag = flag_duel_no_draws } event_target:combatant_2 = { has_character_flag = flag_duel_no_draws }",
+                            "has_character_flag = is_battlefield_duel event_target:combatant_1 = { is_landed = yes } event_target:combatant_2 = { ai = yes }"
+                        ],
+                        [
+                            "LEGENDARY BLOODLINES: LETHAL for attacker",
+                            "has_character_flag = claim_duel@event_target:combatant_2 has_character_flag = mock_duel has_character_flag = is_battlefield_duel event_target:combatant_1 = { has_character_flag = flag_duel_no_draws } event_target:combatant_2 = { has_character_flag = flag_duel_no_draws }",
+                            "",
+                            "is_member_of_any_warrior_lodge_trigger = yes has_character_flag = is_legendary_duel has_dlc = \"Holy Fury\""
+                        ],
+                        [
+                            "LEGENDARY BLOODLINES: LETHAL for defender",
+                            "has_character_flag = claim_duel@event_target:combatant_2 has_character_flag = mock_duel has_character_flag = is_battlefield_duel event_target:combatant_1 = { has_character_flag = flag_duel_no_draws } event_target:combatant_2 = { has_character_flag = flag_duel_no_draws }",
+                            "",
+                            "is_member_of_any_warrior_lodge_trigger = yes has_character_flag = is_legendary_duel has_dlc = \"Holy Fury\""
+                        ],
+                        [
+                            "LEGENDARY BLOODLINES: LETHAL for both",
+                            "has_character_flag = WL_desc_X has_character_flag = WL_desc_Y has_character_flag = WL_desc_Z has_character_flag = claim_duel@event_target:combatant_2 has_character_flag = mock_duel has_character_flag = is_battlefield_duel event_target:combatant_1 = { has_character_flag = flag_duel_no_draws } event_target:combatant_2 = { has_character_flag = flag_duel_no_draws }",
+                            "",
+                            "is_member_of_any_warrior_lodge_trigger = yes has_character_flag = is_legendary_duel has_dlc = \"Holy Fury\""
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "has_character_flag = mock_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = is_legendary_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = claim_duel@event_target:combatant_2",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "has_character_flag = is_battlefield_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "is_member_of_any_warrior_lodge_trigger = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "has_focus = focus_war",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_1 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_2 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "has_character_flag = mock_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = is_legendary_duel",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "has_character_flag = claim_duel@event_target:combatant_2",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = is_battlefield_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "is_member_of_any_warrior_lodge_trigger = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "has_focus = focus_war",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_1 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_2 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_1 = { has_character_flag = deadly_duel@event_target:combatant_2 }",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "has_character_flag = mock_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = is_legendary_duel",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "has_character_flag = claim_duel@event_target:combatant_2",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = is_battlefield_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "is_member_of_any_warrior_lodge_trigger = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "has_focus = focus_war",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_1 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_2 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_1 = { has_character_flag = deadly_duel@event_target:combatant_2 }",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "event_target:combatant_1 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_2 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = is_legendary_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = claim_duel@event_target:combatant_2",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "event_target:combatant_1 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_2 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = is_legendary_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = claim_duel@event_target:combatant_2",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "event_target:combatant_2 = {",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "any_owned_bloodline = { has_bloodline_flag = bloodline_legendary_warrior }",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "has_character_flag = is_legendary_duel",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "event_target:combatant_1 = {",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "event_target:combatant_1 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_2 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = is_legendary_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = claim_duel@event_target:combatant_2",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "event_target:combatant_1 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_2 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = is_legendary_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = claim_duel@event_target:combatant_2",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "has_character_flag = mock_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = is_legendary_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = claim_duel@event_target:combatant_2",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "is_member_of_any_warrior_lodge_trigger = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "has_focus = focus_war",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_1 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_2 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "has_character_flag = is_battlefield_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_1 = { is_landed = yes }",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_2 = { ai = yes }",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "has_character_flag = claim_duel@event_target:combatant_2",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = mock_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = is_battlefield_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_1 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_2 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "is_member_of_any_warrior_lodge_trigger = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = is_legendary_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "has_dlc = \"Holy Fury\"",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "has_character_flag = claim_duel@event_target:combatant_2",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = mock_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = is_battlefield_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_1 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_2 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "is_member_of_any_warrior_lodge_trigger = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = is_legendary_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "has_dlc = \"Holy Fury\"",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "has_character_flag = WL_desc_X",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = WL_desc_Y",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = WL_desc_Z",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = claim_duel@event_target:combatant_2",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = mock_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = is_battlefield_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_1 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        },
+                        {
+                            "text": "event_target:combatant_2 = { has_character_flag = flag_duel_no_draws }",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "is_member_of_any_warrior_lodge_trigger = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "has_character_flag = is_legendary_duel",
+                            "children": []
+                        },
+                        {
+                            "text": "has_dlc = \"Holy Fury\"",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "combatant_1 refers to the attacker, combatant_2 refers to the defender, the ROOT scope is also the attacker. (The Root scope is the scope that's implied, when no explicit scope is given.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Further explanations of the in-game conditions",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The following table explains the in-game conditions a bit more."
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Condition",
+                            "Explanation"
+                        ],
+                        [
+                            "has_character_flag = mock_duel",
+                            "The attacker has the character flag mock_duel , i.e. the duel is part of certain Warrior Lodge event chains that should usually have less severe outcomes regarding injuries.\nFor example: the event \"HF.500\" which initiates a \"practice duel event chain\" for a member of a Warrior Lodge [5] [6] the event \"HF.10003\" which is the start of the \"warrior lodge initiation event chain\" [7] [6] dueling \"for practice and honor\" as a warrior lodge member for a quest (flag set in event \"HFP.10095\")"
+                        ],
+                        [
+                            "has_character_flag = is_legendary_duel",
+                            "The attacker has the character flag is_legendary_duel , i.e. the duel is part of a Warrior Lodge legendary journey to create a Warrior Lodge bloodline [8] [9]"
+                        ],
+                        [
+                            "has_character_flag = claim_duel@event_target:combatant_2",
+                            "The attacker has the character flag claim_duel@event_target:combatant_2 , i.e. the duel is part of a challenge for a claim [1] [10] [4]"
+                        ],
+                        [
+                            "has_character_flag = is_battlefield_duel",
+                            "The attacker has the character flag is_battlefield_duel , i.e. the duel happens during a battle on the battlefield [2] [4]"
+                        ],
+                        [
+                            "is_member_of_any_warrior_lodge_trigger = yes",
+                            "The attacker is a member of a Warrior Lodge [11]"
+                        ],
+                        [
+                            "has_focus = focus_war",
+                            "The attacker currently uses the war focus [12]"
+                        ],
+                        [
+                            "event_target:combatant_1 = { has_character_flag = flag_duel_no_draws }",
+                            "The attacker has the character flag flag_duel_no_draws , i.e. the duel is triggered by some special events.\nFor example: the event \"HF.23214\" called \"stumbling on small mercenary band\" can get triggered when a settlement is looted by someone with a raiding trait ( , , , , ) which can lead to a duel with this flag. [13] [6] the event \"61215\" that starts of the event chain \"regency series, courtier wants to replace regent\" can lead to a duel with this flag between the regent and the challenger [14] [6]"
+                        ],
+                        [
+                            "event_target:combatant_2 = { has_character_flag = flag_duel_no_draws }",
+                            "The defender has the character flag flag_duel_no_draws , i.e. the duel is triggered by some special events.\nFor example: the event \"HF.23214\" called \"stumbling on small mercenary band\" can get triggered when a settlement is looted by someone with a raiding trait ( , , , , ) which can lead to a duel with this flag. [13] [6] the event \"61215\" that starts of the event chain \"regency series, courtier wants to replace regent\" can lead to a duel with this flag between the regent and the challenger [14] [6]"
+                        ],
+                        [
+                            "event_target:combatant_1 = { has_character_flag = deadly_duel@event_target:combatant_2 }",
+                            "The attacker has the character flag deadly_duel@event_target:combatant_2 , i.e. the duel is part of a Warrior Lodge mission, during which the lodge member is supposed to duel and kill someone. [15]"
+                        ],
+                        [
+                            "event_target:combatant_2 = { OR = { trait = craven trait = weak } }",
+                            "The defender is either Craven or Weak"
+                        ],
+                        [
+                            "event_target:combatant_1 = { OR = { trait = craven trait = weak }",
+                            "The attacker is either Craven or Weak"
+                        ],
+                        [
+                            "any_owned_bloodline = { has_bloodline_flag = bloodline_legendary_warrior }",
+                            "The attacker has a Bloodline with the bloodline flag bloodline_legendary_warrior , i.e. a Legendary Warrior Bloodline [16]"
+                        ],
+                        [
+                            "event_target:combatant_1 = { is_landed = yes }",
+                            "The attacker holds at least 1 \"landed title\", i.e. titles like Baronies , Counties , non-titular Duchies , non-titular Kingdoms , non-titular Empires and not just \" landless titles \" like the Papacy, Patriarchates, Holy Orders, Mercenary Companies, etc."
+                        ],
+                        [
+                            "event_target:combatant_2 = { ai = yes }",
+                            "The defender is not a character controlled by a player."
+                        ],
+                        [
+                            "has_dlc = \" Holy Fury \"",
+                            "checks if the Holy Fury Expansion is active"
+                        ],
+                        [
+                            "has_character_flag = WL_desc_X",
+                            "The attacker has the character flag WL_desc_X , i.e. the duel happens during the final parts of a Warrior Lodge legendary journey to create a Warrior Lodge bloodline , in particular this duel is against an \"old and deadly fencer\" [8] [9]"
+                        ],
+                        [
+                            "has_character_flag = WL_desc_Y",
+                            "The attacker has the character flag WL_desc_Y , i.e. the duel happens during the final parts of a Warrior Lodge legendary journey to create a Warrior Lodge bloodline , in particular this duel is against a \"giant\" [8] [9]"
+                        ],
+                        [
+                            "has_character_flag = WL_desc_Z",
+                            "The attacker has the character flag WL_desc_Z , i.e. the duel happens during the final parts of a Warrior Lodge legendary journey to create a Warrior Lodge bloodline , in particular this duel is against an actual \"bear\" [8] [9]"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "i.e. the duel is part of certain Warrior Lodge event chains that should usually have less severe outcomes regarding injuries.\nFor example:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "the event \"HF.500\" which initiates a \"practice duel event chain\" for a member of a Warrior Lodge [5] [6]",
+                            "children": []
+                        },
+                        {
+                            "text": "the event \"HF.10003\" which is the start of the \"warrior lodge initiation event chain\" [7] [6]",
+                            "children": []
+                        },
+                        {
+                            "text": "dueling \"for practice and honor\" as a warrior lodge member for a quest (flag set in event \"HFP.10095\")",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "i.e. the duel is part of a Warrior Lodge legendary journey to create a Warrior Lodge bloodline [8] [9]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "i.e. the duel is part of a challenge for a claim [1] [10] [4]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "i.e. the duel happens during a battle on the battlefield [2] [4]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "i.e. the duel is triggered by some special events.\nFor example:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "the event \"HF.23214\" called \"stumbling on small mercenary band\" can get triggered when a settlement is looted by someone with a raiding trait ( , , , , ) which can lead to a duel with this flag. [13] [6]",
+                            "children": []
+                        },
+                        {
+                            "text": "the event \"61215\" that starts of the event chain \"regency series, courtier wants to replace regent\" can lead to a duel with this flag between the regent and the challenger [14] [6]",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "i.e. the duel is triggered by some special events.\nFor example:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "the event \"HF.23214\" called \"stumbling on small mercenary band\" can get triggered when a settlement is looted by someone with a raiding trait ( , , , , ) which can lead to a duel with this flag. [13] [6]",
+                            "children": []
+                        },
+                        {
+                            "text": "the event \"61215\" that starts of the event chain \"regency series, courtier wants to replace regent\" can lead to a duel with this flag between the regent and the challenger [14] [6]",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "i.e. the duel is part of a Warrior Lodge mission, during which the lodge member is supposed to duel and kill someone. [15]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "i.e. a Legendary Warrior Bloodline [16]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "i.e. titles like Baronies , Counties , non-titular Duchies , non-titular Kingdoms , non-titular Empires and not just \" landless titles \" like the Papacy, Patriarchates, Holy Orders, Mercenary Companies, etc."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "i.e. the duel happens during the final parts of a Warrior Lodge legendary journey to create a Warrior Lodge bloodline , in particular this duel is against an \"old and deadly fencer\" [8] [9]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "i.e. the duel happens during the final parts of a Warrior Lodge legendary journey to create a Warrior Lodge bloodline , in particular this duel is against a \"giant\" [8] [9]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "i.e. the duel happens during the final parts of a Warrior Lodge legendary journey to create a Warrior Lodge bloodline , in particular this duel is against an actual \"bear\" [8] [9]"
+                }
+            ]
+        },
+        {
+            "heading": "Weights of duel outcomes [4]",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "paragraph",
+                    "text": "After the eligibility for the duel outcomes is determined, it is necessary to determine the weight of the different possibilities to get to the actual probabilities of the random list ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For that the table below lists the base weight and the (additive) modifiers with their different conditions."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Like in the earlier table, combatant_1 refers to the attacker, combatant_2 refers to the defender, the ROOT scope is also the attacker. (The Root scope is the scope that's implied, when no explicit scope is given.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The conditions are explained in further sections of this article."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Duel Outcomes Conditions for Additive Weights",
+                            "LETHAL for both",
+                            "LETHAL for attacker",
+                            "LETHAL for defender",
+                            "Attacker wounded someone",
+                            "Defender wounded someone",
+                            "Defender runs away",
+                            "Attacker runs away",
+                            "Both wounded... (attacker wins?) -- \"stalemates\"",
+                            "Both wounded... (defender wins?) -- \"stalemates\"",
+                            "LETHAL/PRISON for defender (BATTLE ONLY)",
+                            "LEGENDARY BLOODLINES: LETHAL for attacker",
+                            "LEGENDARY BLOODLINES: LETHAL for defender",
+                            "LEGENDARY BLOODLINES: LETHAL for both"
+                        ],
+                        [
+                            "base weight",
+                            "5",
+                            "5",
+                            "5",
+                            "10",
+                            "10",
+                            "10",
+                            "10",
+                            "5",
+                            "5",
+                            "5",
+                            "10",
+                            "10",
+                            "1"
+                        ],
+                        [
+                            "duel_result_score_the_worst_trigger = yes",
+                            "",
+                            "10",
+                            "",
+                            "",
+                            "100",
+                            "",
+                            "10",
+                            "",
+                            "",
+                            "",
+                            "60",
+                            "",
+                            ""
+                        ],
+                        [
+                            "duel_result_score_terrible_trigger = yes",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "80",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "duel_result_score_bad_trigger = yes",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "60",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "duel_result_score_ok_trigger = yes",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "40",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "duel_result_score_decent_trigger = yes",
+                            "1",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "5",
+                            "5",
+                            "",
+                            "",
+                            "",
+                            "1"
+                        ],
+                        [
+                            "duel_result_score_good_trigger = yes",
+                            "",
+                            "",
+                            "",
+                            "40",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "duel_result_score_great_trigger = yes",
+                            "",
+                            "",
+                            "",
+                            "60",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "duel_result_score_fantastic_trigger = yes",
+                            "",
+                            "",
+                            "",
+                            "80",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "duel_result_score_the_best_trigger = yes",
+                            "",
+                            "",
+                            "10",
+                            "100",
+                            "",
+                            "10",
+                            "",
+                            "",
+                            "",
+                            "10",
+                            "",
+                            "60",
+                            ""
+                        ],
+                        [
+                            "duel_result_score_low_group_trigger = yes",
+                            "",
+                            "5",
+                            "",
+                            "",
+                            "60",
+                            "",
+                            "10",
+                            "",
+                            "5",
+                            "",
+                            "50",
+                            "",
+                            ""
+                        ],
+                        [
+                            "duel_result_score_high_group_trigger = yes",
+                            "",
+                            "",
+                            "5",
+                            "60",
+                            "",
+                            "10",
+                            "",
+                            "5",
+                            "",
+                            "5",
+                            "",
+                            "50",
+                            ""
+                        ],
+                        [
+                            "is_the_worst_duelist_trigger = yes",
+                            "",
+                            "40",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "10",
+                            "",
+                            "",
+                            "",
+                            "80",
+                            "",
+                            ""
+                        ],
+                        [
+                            "is_terrible_duelist_trigger = yes",
+                            "",
+                            "30",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "60",
+                            "",
+                            ""
+                        ],
+                        [
+                            "is_bad_duelist_trigger = yes",
+                            "",
+                            "20",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "40",
+                            "",
+                            ""
+                        ],
+                        [
+                            "is_the_best_duelist_trigger = yes",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "10",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "duelist_skill_is_high_group_trigger = yes",
+                            "",
+                            "",
+                            "",
+                            "20",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "event_target:combatant_2 = { is_the_worst_duelist_trigger = yes }",
+                            "",
+                            "",
+                            "40",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "40",
+                            "",
+                            "80",
+                            ""
+                        ],
+                        [
+                            "event_target:combatant_2 = { is_terrible_duelist_trigger = yes }",
+                            "",
+                            "",
+                            "30",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "30",
+                            "",
+                            "60",
+                            ""
+                        ],
+                        [
+                            "event_target:combatant_2 = { is_bad_duelist_trigger = yes }",
+                            "",
+                            "",
+                            "20",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "20",
+                            "",
+                            "40",
+                            ""
+                        ],
+                        [
+                            "event_target:combatant_2 = { duelist_skill_is_high_group_trigger = yes }",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "20",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "is_the_best_duelist_trigger = yes event_target:combatant_2 = { is_the_best_duelist_trigger = yes }",
+                            "1",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "5",
+                            "5",
+                            "",
+                            "",
+                            "",
+                            "1"
+                        ],
+                        [
+                            "is_the_worst_duelist_trigger = yes event_target:combatant_2 = { is_the_worst_duelist_trigger = yes }",
+                            "5",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "5",
+                            "5",
+                            "",
+                            "",
+                            "",
+                            "5"
+                        ],
+                        [
+                            "duelist_skill_is_high_group_trigger = yes event_target:combatant_2 = { duelist_skill_is_low_group_trigger = yes }",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "10",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "duelist_skill_is_low_group_trigger = yes event_target:combatant_2 = { duelist_skill_is_high_group_trigger = yes }",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "10",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "has_character_flag = attacker_using_poison@event_target:combatant_2",
+                            "",
+                            "",
+                            "30",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "has_character_flag = poison_can_fail_against@event_target:combatant_2",
+                            "",
+                            "",
+                            "-25",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "has_character_flag = defender_using_poison@event_target:combatant_1",
+                            "",
+                            "30",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "has_character_flag = poison_can_fail_against@event_target:combatant_1",
+                            "",
+                            "-25",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "event_target:dueling_weapon_2 = { has_artifact_flag = gun\n} NOT = {\nevent_target:dueling_weapon_1 = {\nhas_artifact_flag = gun\n}\n}",
+                            "",
+                            "30",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "event_target:dueling_weapon_1 = { has_artifact_flag = gun\n} NOT = {\nevent_target:dueling_weapon_2 = {\nhas_artifact_flag = gun\n}\n}",
+                            "",
+                            "",
+                            "30",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "has_character_flag = mock_duel any_owned_bloodline = { has_bloodline_flag = bloodline_legendary_warrior }",
+                            "",
+                            "",
+                            "",
+                            "20",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "event_target:combatant_2 = { is_the_worst_dueler_compared_to_prev_trigger = yes\n}",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "40",
+                            ""
+                        ],
+                        [
+                            "event_target:combatant_2 = { is_terrible_dueler_compared_to_prev_trigger = yes\n}",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "30",
+                            ""
+                        ],
+                        [
+                            "event_target:combatant_2 = { is_bad_dueler_compared_to_prev_trigger = yes\n}",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "20",
+                            ""
+                        ],
+                        [
+                            "event_target:combatant_2 = { is_ok_dueler_compared_to_prev_trigger = yes\n}",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "10",
+                            ""
+                        ],
+                        [
+                            "event_target:combatant_2 = { is_good_dueler_compared_to_prev_trigger = yes\n}",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "10",
+                            "",
+                            ""
+                        ],
+                        [
+                            "event_target:combatant_2 = { is_great_dueler_compared_to_prev_trigger = yes\n}",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "20",
+                            "",
+                            ""
+                        ],
+                        [
+                            "event_target:combatant_2 = { is_fantastic_dueler_compared_to_prev_trigger = yes\n}",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "30",
+                            "",
+                            ""
+                        ],
+                        [
+                            "event_target:combatant_2 = { is_the_best_dueler_compared_to_prev_trigger = yes\n}",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "40",
+                            "",
+                            ""
+                        ],
+                        [
+                            "event_target:combatant_2 = { duelist_skill_compared_to_prev_low_group_trigger = yes\n}",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "20",
+                            ""
+                        ],
+                        [
+                            "event_target:combatant_2 = { duelist_skill_compared_to_prev_high_group_trigger = yes\n}",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "20",
+                            "",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "event_target:combatant_2 = { is_the_best_duelist_trigger = yes }"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "event_target:combatant_2 = { is_the_worst_duelist_trigger = yes }"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "event_target:combatant_2 = { duelist_skill_is_low_group_trigger = yes }"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "event_target:combatant_2 = { duelist_skill_is_high_group_trigger = yes }"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "has_artifact_flag = gun\n}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "NOT = {\nevent_target:dueling_weapon_1 = {\nhas_artifact_flag = gun\n}\n}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "has_artifact_flag = gun\n}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "NOT = {\nevent_target:dueling_weapon_2 = {\nhas_artifact_flag = gun\n}\n}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "any_owned_bloodline = { has_bloodline_flag = bloodline_legendary_warrior }"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "is_the_worst_dueler_compared_to_prev_trigger = yes\n}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "is_terrible_dueler_compared_to_prev_trigger = yes\n}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "is_bad_dueler_compared_to_prev_trigger = yes\n}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "is_ok_dueler_compared_to_prev_trigger = yes\n}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "is_good_dueler_compared_to_prev_trigger = yes\n}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "is_great_dueler_compared_to_prev_trigger = yes\n}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "is_fantastic_dueler_compared_to_prev_trigger = yes\n}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "is_the_best_dueler_compared_to_prev_trigger = yes\n}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "duelist_skill_compared_to_prev_low_group_trigger = yes\n}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "duelist_skill_compared_to_prev_high_group_trigger = yes\n}"
+                }
+            ]
+        },
+        {
+            "heading": "Calculating and Grouping \"duel_result_score\"",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In order to determine which weights actually get applied from the previous table, the \"duel_result_score\" needs to be calculated and then assigned to the appropriate 'duel result score trigger'. [4] [17]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The \"duel_result_score\" is calculated as:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "<<duel_result_score>> = 50 + << personal combat skill of the attacker>> - << personal combat skill of the defender>>  + <<sum of bonuses and maluses>>"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "With <<sum of bonuses and maluses>> being summed up from the \"extra bonuses and maluses to duel_result_score\"-table below."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Condition",
+                            "Additive Modifier"
+                        ],
+                        [
+                            "Attacker is pagan",
+                            "3"
+                        ],
+                        [
+                            "Attacker is Wroth",
+                            "1"
+                        ],
+                        [
+                            "Duellists are rivals",
+                            "5"
+                        ],
+                        [
+                            "Defender has budding romance opinion towards attacker",
+                            "6"
+                        ],
+                        [
+                            "Attacker has terrible opinion modifier (i.e. \"Hate\", \"Tortured Me\", \"Mutilated Me\", \"In Prison\") towards defender and is neither Stressed nor Depressed",
+                            "12"
+                        ],
+                        [
+                            "Attacker has no strong feelings (i.e. attacker opinion of defender is less than 0)",
+                            "1"
+                        ],
+                        [
+                            "Defender has Wroth",
+                            "-1"
+                        ],
+                        [
+                            "Defender is pagan",
+                            "-3"
+                        ],
+                        [
+                            "Defender is friend or lover",
+                            "-3"
+                        ],
+                        [
+                            "Attacker has budding romance opinion towards defender",
+                            "-3"
+                        ],
+                        [
+                            "Attacker has terrible opinion modifier (i.e. \"Hate\", \"Tortured Me\", \"Mutilated Me\", \"In Prison\") towards defender and is either Stressed or Depressed",
+                            "-6"
+                        ],
+                        [
+                            "Attacker has terrible opinion modifier (i.e. \"Hate\", \"Tortured Me\", \"Mutilated Me\", \"In Prison\") towards defender and is both Stressed and Depressed",
+                            "-12"
+                        ],
+                        [
+                            "Defender has no strong feelings (i.e. defender opinion of attacker is less than 5)",
+                            "-1"
+                        ]
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "duel_result_score",
+                            "duel_result_score_X_trigger",
+                            "duel_result_score_X_group_trigger"
+                        ],
+                        [
+                            "less than 0",
+                            "duel_result_score_the_worst_trigger",
+                            "duel_result_score_low_group_trigger"
+                        ],
+                        [
+                            "duel_result_score_low_group_trigger",
+                            "0-14",
+                            "duel_result_score_terrible_trigger"
+                        ],
+                        [
+                            "duel_result_score_low_group_trigger",
+                            "15-29",
+                            "duel_result_score_bad_trigger"
+                        ],
+                        [
+                            "duel_result_score_low_group_trigger",
+                            "30-44",
+                            "duel_result_score_ok_trigger"
+                        ],
+                        [
+                            "45-59",
+                            "duel_result_score_decent_trigger",
+                            "duel_result_score_medium_group_trigger"
+                        ],
+                        [
+                            "60-74",
+                            "duel_result_score_good_trigger",
+                            "duel_result_score_high_group_trigger"
+                        ],
+                        [
+                            "duel_result_score_high_group_trigger",
+                            "75-89",
+                            "duel_result_score_great_trigger"
+                        ],
+                        [
+                            "duel_result_score_high_group_trigger",
+                            "90-104",
+                            "duel_result_score_fantastic_trigger"
+                        ],
+                        [
+                            "duel_result_score_high_group_trigger",
+                            "at least 105",
+                            "duel_result_score_the_best_trigger"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Grouping of the duelists' personal combat skills [17]",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In order to determine which weights actually get applied for the duel outcome , it is necessary to group the personal combat skills of the duelists according to the following table."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "personal combat skill",
+                            "is_the_X_duelist_trigger",
+                            "duelist_skill_is_X_group_trigger"
+                        ],
+                        [
+                            "less than 0",
+                            "is_the_worst_duelist_trigger",
+                            "duelist_skill_is_low_group_trigger"
+                        ],
+                        [
+                            "duelist_skill_is_low_group_trigger",
+                            "0-14",
+                            "is_terrible_duelist_trigger"
+                        ],
+                        [
+                            "duelist_skill_is_low_group_trigger",
+                            "15-29",
+                            "is_bad_duelist_trigger"
+                        ],
+                        [
+                            "30-44",
+                            "is_ok_duelist_trigger",
+                            "duelist_skill_is_medium_group_trigger"
+                        ],
+                        [
+                            "duelist_skill_is_medium_group_trigger",
+                            "45-59",
+                            "is_decent_duelist_trigger"
+                        ],
+                        [
+                            "duelist_skill_is_medium_group_trigger",
+                            "60-74",
+                            "is_good_duelist_trigger"
+                        ],
+                        [
+                            "75-89",
+                            "is_great_duelist_trigger",
+                            "duelist_skill_is_high_group_trigger"
+                        ],
+                        [
+                            "duelist_skill_is_high_group_trigger",
+                            "90-104",
+                            "is_fantastic_duelist_trigger"
+                        ],
+                        [
+                            "duelist_skill_is_high_group_trigger",
+                            "at least 105",
+                            "is_the_best_duelist_trigger"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Using Poison in the Duel (Intrigue Option) [10]",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Duelists with at least 12 intrigue  (and the Holy Fury DLC ), can sometimes [18] use a special option to use poison during a duel."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This sets the character flag attacker_using_poison@event_target:combatant_2 for the attacker and/or the character flag defender_using_poison@event_target:combatant_1 for the defender, depending on which of the duelists chooses the option (i.e. attacker, defender or both)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the opponent of a duelist trying to use poison either has at least as much intrigue as the poisoner or has a spymaster with that much intrigue, that likes them (opinion ≥ 15), then they get the character flag poison_can_fail_against@event_target:combatant_2 (if the poisoner is the attacker) or poison_can_fail_against@event_target:combatant_1 (if the poisoner is the defender) whichever is appropriate."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "These poison_can_fail_against character flags negate a big part of the random list weights of the using_poison character flags ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Taking the option to use poison for a duel (that is not a duel for a claim) will change character traits in the following way:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If Honest , lose Honest",
+                            "children": []
+                        },
+                        {
+                            "text": "If not Honest , gain Deceitful",
+                            "children": []
+                        },
+                        {
+                            "text": "If Deceitful and Brave , lose Brave",
+                            "children": []
+                        },
+                        {
+                            "text": "If Deceitful and not Brave , gain Craven",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Influence of Equipped Weapon on Duel Outcome",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The game sets a weapon for each duelist using the effect \"set_dueling_weapon_effect\" in which either the equipped ( artifact ) weapon gets saved in a variable, or a random character flag is set to choose the weapons that are used in a duel.\nAside from the influence of using handguns (that is described in the table below), the weapons selection is only to generate different flavor text and has no relevance for the duel outcome. [10] [2] [4] [9] [17] [19]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The duel outcome is of course influenced by the change in personal combat skill caused by equipped weapons artifacts ."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Condition",
+                            "Explanation"
+                        ],
+                        [
+                            "event_target:dueling_weapon_2 = { has_artifact_flag = gun\n} NOT = {\nevent_target:dueling_weapon_1 = {\nhas_artifact_flag = gun\n}\n}",
+                            "The artifact equipped in the weapons slot of the defender has the artifact flag \"gun\", and the artifact equipped in the weapons slot of the attacker has not the artifact flag \"gun\"; i.e. The defender has the handgun from the hermetic society equipped the attacker does not. [20]"
+                        ],
+                        [
+                            "event_target:dueling_weapon_1 = { has_artifact_flag = gun\n} NOT = {\nevent_target:dueling_weapon_2 = {\nhas_artifact_flag = gun\n}\n}",
+                            "The artifact equipped in the weapons slot of the attacker has the artifact flag \"gun\", and the artifact equipped in the weapons slot of the defender has not the artifact flag \"gun\"; i.e. The attacker has the handgun from the hermetic society equipped the defender does not. [20]"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "has_artifact_flag = gun\n}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "NOT = {\nevent_target:dueling_weapon_1 = {\nhas_artifact_flag = gun\n}\n}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "the artifact equipped in the weapons slot of the attacker has not the artifact flag \"gun\"; i.e."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The defender has the handgun from the hermetic society equipped the attacker does not. [20]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "has_artifact_flag = gun\n}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "NOT = {\nevent_target:dueling_weapon_2 = {\nhas_artifact_flag = gun\n}\n}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "the artifact equipped in the weapons slot of the defender has not the artifact flag \"gun\"; i.e."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The attacker has the handgun from the hermetic society equipped the defender does not. [20]"
+                }
+            ]
+        },
+        {
+            "heading": "Grouping of the Difference between the Personal Combat Skills of Defender and Attacker [17]",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In order to determine which weights actually get applied for the duel outcome , it is necessary to subtract the personal combat skill of the attacker from the personal combat skill of the defender and group the result according to the table below:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "<<combat_rating_diff>> = << Personal Combat Skill of Defender>> - << Personal Combat Skill of Attacker>>",
+                            "event_target:combatant_2 = {is_X_dueler_compared_to_prev_trigger = yes }",
+                            "event_target:combatant_2 = {duelist_skill_compared_to_prev_X_group_trigger = yes }"
+                        ],
+                        [
+                            "<<combat_rating_diff>> ≤ -91",
+                            "event_target:combatant_2 = {is_the_worst_dueler_compared_to_prev_trigger = yes }",
+                            "event_target:combatant_2 = {duelist_skill_compared_to_prev_low_group_trigger = yes }"
+                        ],
+                        [
+                            "event_target:combatant_2 = {duelist_skill_compared_to_prev_low_group_trigger = yes }",
+                            "-90 ≤ <<combat_rating_diff>> ≤ -41",
+                            "event_target:combatant_2 = {is_terrible_dueler_compared_to_prev_trigger = yes }"
+                        ],
+                        [
+                            "event_target:combatant_2 = {duelist_skill_compared_to_prev_low_group_trigger = yes }",
+                            "-40 ≤ <<combat_rating_diff>> ≤ -16",
+                            "event_target:combatant_2 = {is_bad_dueler_compared_to_prev_trigger = yes }"
+                        ],
+                        [
+                            "event_target:combatant_2 = {duelist_skill_compared_to_prev_low_group_trigger = yes }",
+                            "-15 ≤ <<combat_rating_diff>> ≤ -6",
+                            "event_target:combatant_2 = {is_ok_dueler_compared_to_prev_trigger = yes }"
+                        ],
+                        [
+                            "-5 ≤ <<combat_rating_diff>> ≤ 4",
+                            "event_target:combatant_2 = {is_decent_dueler_compared_to_prev_trigger = yes }",
+                            "event_target:combatant_2 = {duelist_skill_compared_to_prev_medium_group_trigger = yes }"
+                        ],
+                        [
+                            "5 ≤ <<combat_rating_diff>> ≤ 14",
+                            "event_target:combatant_2 = {is_good_dueler_compared_to_prev_trigger = yes }",
+                            "event_target:combatant_2 = {duelist_skill_compared_to_prev_high_group_trigger = yes }"
+                        ],
+                        [
+                            "event_target:combatant_2 = {duelist_skill_compared_to_prev_high_group_trigger = yes }",
+                            "15 ≤ <<combat_rating_diff>> ≤ 39",
+                            "event_target:combatant_2 = {is_great_dueler_compared_to_prev_trigger = yes }"
+                        ],
+                        [
+                            "event_target:combatant_2 = {duelist_skill_compared_to_prev_high_group_trigger = yes }",
+                            "40 ≤ <<combat_rating_diff>> ≤ 89",
+                            "event_target:combatant_2 = {is_fantastic_dueler_compared_to_prev_trigger = yes }"
+                        ],
+                        [
+                            "event_target:combatant_2 = {duelist_skill_compared_to_prev_high_group_trigger = yes }",
+                            "90 ≤ <<combat_rating_diff>>",
+                            "event_target:combatant_2 = {is_the_best_dueler_compared_to_prev_trigger = yes }"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Example of Probability Calculation for Duel Outcomes",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To illustrate the duel mechanic let's assume that your character with a personal combat skill of 70 has the war focus and is thus able to use the diplomatic action to challenge their rival with a personal combat skill of 50 to a duel (for honor)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Let's further assume that neither is weak nor craven , nor has any bloodlines, nor is a member of a warrior lodge.\nLet's also assume, that the attacker uses a gun while the defender does not. But only the defender uses poison, but the attacker has high enough intrigue to get the possibility of countering it."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This eliminates all the \"LEGENDARY BLOODLINES\" outcomes (no warrior lodge means no legendary journey, which means no \"has_character_flag = is_legendary_duel\"), the \"attacker/defender runs away\" outcomes (neither the traits nor the bloodlines that can trigger those are there) and the \"LETHAL/PRISON for defender (BATTLE ONLY)\" outcome (the duel is not on a battlefield, thus no \"has_character_flag = is_battlefield_duel\"). [21]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Thus leaving only these outcomes:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "LETHAL for both",
+                            "children": []
+                        },
+                        {
+                            "text": "LETHAL for attacker",
+                            "children": []
+                        },
+                        {
+                            "text": "LETHAL for defender",
+                            "children": []
+                        },
+                        {
+                            "text": "Attacker wounded someone",
+                            "children": []
+                        },
+                        {
+                            "text": "Defender wounded someone",
+                            "children": []
+                        },
+                        {
+                            "text": "Both wounded... (attacker wins?) -- \"stalemates\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Both wounded... (defender wins?) -- \"stalemates\"",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Now that the eligibility of the duel outcomes is determined, let's calculate the duel_result_score (let's assume aside from the rivalry and the \"no strong feelings\" modifiers, there are no further extra bonuses):"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "duel_result_score = 50 (base) + 70 (personal combat skill of the attacker) - 50 (personal combat skill of the defender) + 6 (duelists are rivals) + 1 (attacker has no strong feelings) - 1 (defender has no strong feelings) = 76"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "That means that the duel_result_score falls within the range of the duel_result_score_great_trigger and the duel_result_score_high_group_trigger ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It's further necessary to convert the personal combat skill numbers to the appropriate ranges:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Personal combat skill of the attacker is 70 thus falls within the range of is_good_duelist_trigger and duelist_skill_is_medium_group_trigger ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Personal combat skill of the defender is 50 thus falls within the range of is_decent_duelist_trigger and duelist_skill_is_medium_group_trigger ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Now let's proceed to the calculation of the weight of the outcomes:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "LETHAL for both: weight = 5 (base) = 5"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "LETHAL for attacker: weight = 5 (base) + 30 (defender is using poison) - 25 (poison can fail against attacker) = 10"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "LETHAL for defender: weight = 5 (base) + 5 (duel_result_score_high_group_trigger) + 30 (attacker has gun, defender does not) = 40"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Attacker wounded someone: weight = 10 (base) + 60 (duel_result_score_great_trigger) + 60 (duel_result_score_high_group_trigger) = 130"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Defender wounded someone: weight = 10 (base) = 10"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Both wounded... (attacker wins?) -- \"stalemates\": weight = 5 (base) + 5 (duel_result_score_high_group_trigger) = 10"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Both wounded... (defender wins?) -- \"stalemates\": weight = 5 (base) = 5"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "That means the total weight of all possible outcomes is 5 + 10 + 40 + 130 + 10 + 10 + 5 = 210 ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Which in turn means the probabilities for the different outcomes are:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "LETHAL for both:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "probability = 5/210 = 2.38%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "LETHAL for attacker:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "probability = 10/210 = 4.76%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "LETHAL for defender:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "probability = 40/210 = 19.05%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Attacker wounded someone:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "probability = 130/210 = 61.90%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Defender wounded someone:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "probability = 10/210 = 4.76%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Both wounded... (attacker wins?) -- \"stalemates\":"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "probability = 10/210 = 4.76%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Both wounded... (defender wins?) -- \"stalemates\":"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "probability = 5/210 = 2.38%"
+                }
+            ]
+        },
+        {
+            "heading": "Special event driven duels",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Courtly Love duel [3]",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This table shows the success chance when trying to duel one's love interest's spouse during the \"Courtly Love\" event chain from the Crusader Kings: Chronicles events:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Sources",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ 1.0 1.1 1.2 /Crusader Kings II/decisions/hf_warrior_lodge_decisions.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ 2.0 2.1 2.2 /Crusader Kings II/events/HF_battle_events.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ 3.0 3.1 /Crusader Kings II/events/gbc_events.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ 4.0 4.1 4.2 4.3 4.4 4.5 4.6 4.7 4.8 /Crusader Kings II/common/scripted_effects/01_scripted_effects_duels.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ /Crusader Kings II/events/HF_warrior_lodge_flavor_events.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ 6.0 6.1 6.2 6.3 6.4 6.5 /Crusader Kings II/common/on_actions/00_on_actions.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ /Crusader Kings II/events/hf_warrior_lodge_events.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ 8.0 8.1 8.2 8.3 /Crusader Kings II/events/hf_warrior_lodge_legends_events.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ 9.0 9.1 9.2 9.3 9.4 /Crusader Kings II/common/scripted_effects/06_scripted_effects_legendary_bloodlines.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ 10.0 10.1 10.2 /Crusader Kings II/events/hfp_duel_events.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ /Crusader Kings II/common/scripted_triggers/02_scripted_triggers_warrior_lodges.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ /Crusader Kings II/common/objectives/00_focuses.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ 13.0 13.1 /Crusader Kings II/events/HF_religious_events.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ 14.0 14.1 /Crusader Kings II/events/regency_events.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ /Crusader Kings II/events/HF_warrior_lodge_mission_events.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ /Crusader Kings II/common/bloodlines/03_legendary_warrior_lodge_bloodlines.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ 17.0 17.1 17.2 17.3 /Crusader Kings II/common/scripted_triggers/01_scripted_triggers_combat.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ attacker_using_poison@event_target:combatant_2 can get set in either \"HFP.10096\" for 'normal' duels (if the \"mock_duel\"-flag isn't set) or in \"HF.10096\" for \"claim duels\". defender_using_poison@event_target:combatant_1 (if the \"mock_duel\"-flag isn't set) can get set in \"HFP.10095\".\nThat means that only the attacker can use poison during a claim duel.",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ While duels with the \"mock_duel\" flag overwrite the use of equipped artifacts like the handgun, that has no effect on the duel outcome since the duel outcomes that get more weight from using a handgun are not triggered in duels with the \"mock_duel\" flag anyway",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ 20.0 20.1 /Crusader Kings II/common/artifacts/00_artifacts.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Table of the eligible duel outcomes",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

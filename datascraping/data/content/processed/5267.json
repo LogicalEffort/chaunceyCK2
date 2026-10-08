@@ -1,0 +1,145 @@
+{
+    "pageid": 5267,
+    "title": "Bloodline modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Bloodlines are modifiers that can be inherited through characters."
+                }
+            ]
+        },
+        {
+            "heading": "Definition",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Bloodline types are defined in folder common/bloodlines :"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "inheritance",
+                            "all_descendants/matrilineal/patrilineal/no_inheritance",
+                            "Optional. Sets the inheritance rules for the bloodline type. Defaults to all_descendants.",
+                            "inheritance = all_descendants"
+                        ],
+                        [
+                            "matrilineal_override",
+                            "bool",
+                            "Optional. If set, in matrilineal marriages or when there's no known father, the mother will be able to pass on the bloodline even if it is patrilineal, and the father will be able to pass on the bloodline even if it is matrilineal. Defaults to \"yes\"; set to \"no\" to disable.",
+                            "matrilineal_override = yes"
+                        ],
+                        [
+                            "allow_bastards",
+                            "bool",
+                            "Optional. Sets the bastard rules for the bloodline type. Defaults to no.",
+                            "allow_bastards = no"
+                        ],
+                        [
+                            "flags",
+                            "List",
+                            "Optional. Sets default flags for bloodlines created of this type.",
+                            ""
+                        ],
+                        [
+                            "command_modifier",
+                            "List< Command modifier >",
+                            "Optional. Defines command modifiers that should affect all members of the bloodline.",
+                            ""
+                        ],
+                        [
+                            "<modifiers>",
+                            "Modifiers",
+                            "Optional. Defines character modifiers that should affect all members of the bloodline.",
+                            ""
+                        ],
+                        [
+                            "picture",
+                            "gfx",
+                            "Optional. What picture to use for the bloodline in the bloodline window. If not defined, GFX_bloodlines_placeholder_symbol will be used.",
+                            "gfx = GFX_something_or_other"
+                        ],
+                        [
+                            "active",
+                            "Conditions",
+                            "What's required of the bloodline holder in order to get the effect. If not defined, they'll always get the effect. ROOT is the holder. FROM is the bloodline."
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bloodline founder",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Bloodlines are attached via history command create_bloodline on the founder of the bloodline:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "To be cascaded correctly, bloodlines require history of dynasties to be flawless:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "To inherit an inheritance = patrilineal through the mother, marriage has to be set as matrilineal in character history, if applicable.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bloodline features",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Special features can be scripted for a given bloodline type:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Add a custom modifier to associate a localization key to describe the feature. For instance bloodline_effect_always_viking = 1 with localization bloodline_effect_always_viking;Raiding can give the §GViking Traits§!;",
+                            "children": []
+                        },
+                        {
+                            "text": "Add a bloodline flag that corresponds to the feature: flags = { bloodline_viking }",
+                            "children": []
+                        },
+                        {
+                            "text": "Check the flag in event trigger or effects, to achieve the desired feature:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "any_owned_bloodline = { has_bloodline_flag = bloodline_viking }"
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": []
+        }
+    ]
+}

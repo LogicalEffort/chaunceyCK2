@@ -1,0 +1,390 @@
+{
+    "pageid": 3286,
+    "title": "Prosperity",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Prosperity is a mechanism that allows provinces which have not been besieged, raided, or ravaged by disease for a long time to gain certain bonuses, such as extra tax income and faster replenishment of levies. Independent dukes or higher can set one of their demesne provinces to be their Crown Focus for additional yearly increase and events. On the flip side, prolonged diseases or sieges in a province will cause Depopulation , resulting in reduced taxes and slower levy replenishment. Prosperity (and Depopulation) require The Reaper's Due DLC."
+                }
+            ]
+        },
+        {
+            "heading": "Levels of Prosperity",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "",
+                            "Points required",
+                            "Local tax modifier",
+                            "Levy reinforce rate",
+                            "Local revolt risk",
+                            "Supply limit",
+                            "Local build cost modifier",
+                            "Local build time modifier",
+                            "Disease resistance"
+                        ],
+                        [
+                            "",
+                            "Prospering",
+                            "100",
+                            "0.1",
+                            "0.2",
+                            "-0.01",
+                            "",
+                            "",
+                            "",
+                            "-0.1"
+                        ],
+                        [
+                            "",
+                            "Flourishing",
+                            "250",
+                            "0.2",
+                            "0.4",
+                            "-0.015",
+                            "1",
+                            "-0.025",
+                            "-0.025",
+                            "-0.15"
+                        ],
+                        [
+                            "",
+                            "Booming",
+                            "500",
+                            "0.3",
+                            "0.6",
+                            "-0.02",
+                            "2",
+                            "-0.05",
+                            "-0.05",
+                            "-0.20"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Crown Focus",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Rulers can set a province as their Crown Focus if they are:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Duke tier or higher",
+                            "children": []
+                        },
+                        {
+                            "text": "Not nomadic",
+                            "children": []
+                        },
+                        {
+                            "text": "Any of:",
+                            "children": [
+                                {
+                                    "text": "Independent",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Vassal duke with 35 realm size",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Vassal king with 55 realm size",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Vassal with republic, merchant republic , or holy order government",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A crown focus province gains a small bonus to its hidden prosperity value each year, as long as it is not occupied or experiencing an epidemic disease ."
+                }
+            ]
+        },
+        {
+            "heading": "Effects of high prosperity in crown focus provinces",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A crown focus province that already has a high prosperity level is eligible for special events. These events are more frequent with high stewardship and learning skills."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "At prosperity level 2, a province with a different culture can be converted at the cost 100% of your yearly income. It also converts the province's religion and removes the nomad agitation modifier, if relevant.",
+                            "children": []
+                        },
+                        {
+                            "text": "At prosperity level 3, a new Holding slot can be created for 250% of yearly income.",
+                            "children": []
+                        },
+                        {
+                            "text": "At prosperity level 3, various positive modifiers can be added to the province:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Bonus",
+                            "Requirements"
+                        ],
+                        [
+                            "Jewish Settlement",
+                            "+25% city tax",
+                            "Christian, Zoroastrian or Muslim; no \"Expelled the Jews\" modifier; no \"Minority Settlement\" modifier (in the province)"
+                        ],
+                        [
+                            "Minority Settlement",
+                            "+25% city tax",
+                            "not Christian, Zoroastrian or Muslim; no \"Jewish Settlement\" modifier (in the province)"
+                        ],
+                        [
+                            "Glorious Monument",
+                            "+0.5 Prestige",
+                            ""
+                        ],
+                        [
+                            "Merchant Harbor",
+                            "+50% galleys",
+                            "province is coastal"
+                        ],
+                        [
+                            "Scholar Foundation",
+                            "+0.03 military tech points +0.03 cultural tech points +0.03 economic tech points",
+                            ""
+                        ],
+                        [
+                            "Great Library",
+                            "+25% technology spread rate",
+                            ""
+                        ],
+                        [
+                            "Center of worship",
+                            "+0.25 Piety +25% temple tax",
+                            ""
+                        ],
+                        [
+                            "Logging Company",
+                            "-15% build cost -15% build time",
+                            "province terrain is forest or jungle"
+                        ],
+                        [
+                            "Ore Mine",
+                            "+10% tax -10% build cost",
+                            "province terrain is mountain"
+                        ],
+                        [
+                            "Regimental Ground",
+                            "+15% levy",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "no \"Expelled the Jews\" modifier;"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "no \"Minority Settlement\" modifier (in the province)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "no \"Jewish Settlement\" modifier (in the province)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "+0.03 cultural tech points"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "+0.03 economic tech points"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "+25% temple tax"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "-15% build time"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "-10% build cost"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that the \"Jewish Settlement\" and the \"Minority Settlement\" modifier are basically the same. They are split into two different modifiers just for historical/roleplaying purposes."
+                }
+            ]
+        },
+        {
+            "heading": "Increasing prosperity",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Each province has a hidden prosperity value that can increase in small increments. When it reaches 100/250/500, the prosperity level increases."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Every province has a chance to gain points yearly. The chance increases with owner stewardship skill, owner prosperity bloodline, \"sign of prosperity\" from adulthood rites, heavy rain, great works , or a local trade post . The chance decreases with war (especially being the primary attacker), various province maluses, or tribal government. The amount of this passive increase depends on the terrain , with coastal provinces getting a boost if they contain a city."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The ambition to \"See the Realm Prosper\":"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Enables some flavor events that increase prosperity",
+                            "children": []
+                        },
+                        {
+                            "text": "If peace is successfully maintained for 5 years, the ambition succeeds and adds 35 points to every eligible province in the entire realm (not just demesne!)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Councilors can increase prosperity:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Certain job actions add 6 points when successful:",
+                            "children": [
+                                {
+                                    "text": "Marshal: train troops",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Steward: oversee construction",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Spymaster: study technology",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Spiritual: advance cultural technology",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Passive Job flavour events for council members:",
+                            "children": [
+                                {
+                                    "text": "Any councilor with 12+ skill and Smart can trigger a \"good at job\" event",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Marshal or steward with 15+ skill can offer to improve capital",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Many peacetime decisions increase prosperity:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Most feasts and festivals add 8 points",
+                            "children": []
+                        },
+                        {
+                            "text": "A completed tournament adds 15 points",
+                            "children": []
+                        },
+                        {
+                            "text": "Ancestor Worship can increase prosperity if you wish for economic assistance",
+                            "children": []
+                        },
+                        {
+                            "text": "For defensive pagans, having certain patron deities may increase prosperity",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Other events:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A fleet returning with loot adds 12 points in your capital. Limited to once every 5 years (unless you change capital).",
+                            "children": []
+                        },
+                        {
+                            "text": "Several events from Way of Life , with the Business focus",
+                            "children": []
+                        },
+                        {
+                            "text": "Random opportunity to perform charity, if you have a province with a Hospital",
+                            "children": []
+                        },
+                        {
+                            "text": "Random opportunity to invest in provincial apothecaries, if you have a Court Physician",
+                            "children": []
+                        },
+                        {
+                            "text": "When a Master Engineer improves your demesne province, prosperity also increases.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Loss of prosperity",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Disease, looting, and sieges can wipe the progress toward the next prosperity level, and sometimes even drop an entire level. Occupation of holdings will often reset the province's prosperity level to 0."
+                }
+            ]
+        }
+    ]
+}

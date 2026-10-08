@@ -1,0 +1,880 @@
+{
+    "pageid": 2058,
+    "title": "Patch 2.1",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.1 was released on 2014-03-25 [1] alongside the Rajas of India expansion."
+                }
+            ]
+        },
+        {
+            "heading": "Major",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Major map revisions and additions: East Africa, Armenia, Central Asia, Siberia and India",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Steam matchmaking support",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Steam Workshop support",
+                            "children": []
+                        },
+                        {
+                            "text": "Added diplomatic range, blocking diplomacy and councillor actions vs too distant characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Factions will now revolt as a single unified realm under a temporary title",
+                            "children": []
+                        },
+                        {
+                            "text": "Added attrition for units that have been \"out-of-supply\" for too long (can't live off the land in neutral counties, etc)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added support to change window mode setting: fullscreen, borderless or windowed",
+                            "children": []
+                        },
+                        {
+                            "text": "New unit type system allowing for more flexible unit types , including War Elephants, Camel Warriors and Horse Archers",
+                            "children": []
+                        },
+                        {
+                            "text": "Blocked \"North Korea Mode\"; you now lose huge parts of all income and levies if your demesne is too big",
+                            "children": []
+                        },
+                        {
+                            "text": "Save games are now compressed by default (can be toggled on and off)",
+                            "children": []
+                        },
+                        {
+                            "text": "Major memory and performance optimizations",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Minor",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added opinion malus for holding a character in prison.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added opinion malus for former lovers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters can now have up to five lovers at the same time.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaks and improvements to many events and decisions.",
+                            "children": []
+                        },
+                        {
+                            "text": "Scripted civil wars in history files should now work properly. When scripting civil wars, defender must always be added before attacker for them to work properly.",
+                            "children": []
+                        },
+                        {
+                            "text": "Now possible to revoke honorary titles . Revoking an honorary title with a positive opinion modifier will anger the previous holder.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added support for multiple lovers .",
+                            "children": []
+                        },
+                        {
+                            "text": "Impregnation of lovers is now handled in the code.",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated all events to use the new scripting logic for friends, rivals and lovers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters will no longer get 'Marriage Ties' opinion bonus towards their spouse.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug that was preventing vassals from being able to be called into war under certain CBs that were scripted to allow it.",
+                            "children": []
+                        },
+                        {
+                            "text": "CBs that call other vassals into a revolt will now automatically call all vassals when war is declared.",
+                            "children": []
+                        },
+                        {
+                            "text": "Sons asking for titles can now start an adventure for one of your titles if refused. Especially common among Muslims. (event 37000)",
+                            "children": []
+                        },
+                        {
+                            "text": "Timur and Seljuk now arrive in a more involved fashion and need to survive before they launch their great gambit",
+                            "children": []
+                        },
+                        {
+                            "text": "Children can no longer pick up the religion or culture of a guardian if the guardian does not share the religion or culture of his employer",
+                            "children": []
+                        },
+                        {
+                            "text": "The Nestorians are no longer a heresy, and have their own holy order (The Order of St Addai)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added the Messalian heresy (Nestorian)",
+                            "children": []
+                        },
+                        {
+                            "text": "Made the Paulician heresy (Orthodox)",
+                            "children": []
+                        },
+                        {
+                            "text": "You can no longer usurp the sole primary title off of someone with a different religion if he has any holdings within it",
+                            "children": []
+                        },
+                        {
+                            "text": "You no longer get an opinion bonus from your vassals for defending against rebels, adventurers and the like",
+                            "children": []
+                        },
+                        {
+                            "text": "You can no longer call allies to help you defend against peasant, heretic and religious rebels",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a decision to conscript merchant ships if playing a ruler with overseas holdings",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced piety gained from battles",
+                            "children": []
+                        },
+                        {
+                            "text": "Increased piety cost of Muslim Invasion CB",
+                            "children": []
+                        },
+                        {
+                            "text": "Whether a character is too insignificant for anyone to care if you execute them is now determined by whether they have any titles, claims, or titled close relatives",
+                            "children": []
+                        },
+                        {
+                            "text": "Children, incapable characters and prisoners can no longer join factions",
+                            "children": []
+                        },
+                        {
+                            "text": "The decision to acknowledge bastards as your own now works again",
+                            "children": []
+                        },
+                        {
+                            "text": "Becoming infirm will now abort self improval ambitions",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters now lose the ambition to get married upon becoming eunuchs or homosexual",
+                            "children": []
+                        },
+                        {
+                            "text": "Cathar women can now have the same career ambitions as men",
+                            "children": []
+                        },
+                        {
+                            "text": "Can no longer reform the Orthodox religion, instead one has the Decision to restore the Ecumenical Patriarchate",
+                            "children": []
+                        },
+                        {
+                            "text": "Events can no longer make tech points negative",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a rare crash related to loading savegames with events referring invalid characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Cathar vassals no longer have negative opinions for liege or liege's heir being female",
+                            "children": []
+                        },
+                        {
+                            "text": "Expelling holy orders now blocks further Decisions towards them",
+                            "children": []
+                        },
+                        {
+                            "text": "Holy Orders can no longer ask for the right to build castles in the lands of vassals of someone who has expelled them",
+                            "children": []
+                        },
+                        {
+                            "text": "If a Holy Order is your vassal when you expel it, it will be set free",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing decision to expel the Bektashi Order",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer possible to hire holy orders that you've expelled",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced the number of standing troops of the Knights of Calatrava and Santiago",
+                            "children": []
+                        },
+                        {
+                            "text": "After a successful decadence revolt, the new ruler only gets weak unpressed claims on vassals who choose independence",
+                            "children": []
+                        },
+                        {
+                            "text": "Increased chances that vassals will choose independence after successful decadence revolts",
+                            "children": []
+                        },
+                        {
+                            "text": "Doubled the Prestige that newborn characters get from their dynasty at birth",
+                            "children": []
+                        },
+                        {
+                            "text": "Doubled the Prestige you get from the dynasty of your spouse when marrying",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing de jure capitals to the Kingdom of Anatolia and the Duchies of Spoleto and Latium",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a prisoner age check to event 50010",
+                            "children": []
+                        },
+                        {
+                            "text": "Added updated flags for titles within the Arabian, Mali and Byzantine de jure empires",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a couple of location triggers in Christian monastery events.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug in bookmarks reading of files",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed duchies names not showing properly in de-jure duchy map mode",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Camel Warriors retinue type to Arabic culture",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed crash bug when units die of attrition",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaked max attrition just so slightly",
+                            "children": []
+                        },
+                        {
+                            "text": "Improved the Sons of Abraham version of the heresy appearance event (SoA.4000)",
+                            "children": []
+                        },
+                        {
+                            "text": "Strengthened adventurers in general",
+                            "children": []
+                        },
+                        {
+                            "text": "The king of Jerusalem is no longer allowed to vassalize the Knights Templar or the Knights of St John if they are too powerful already",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaked the cultural conversion events a bit, mainly to improve the special Mongol conversion factor",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrected the terrain in many provinces",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where saves where primary title was dynamic didn't have CoA",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug that if the primary title was dynamic the character was not auto selected after loading",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where kicking someone out of the lobby would make that character unselectable",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where selecting a player in the outliner would sometimes navigate to an incorrect province",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where map borders were not correctly loaded when going into multiplayer",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where map names were not correctly loaded when going into multiplayer",
+                            "children": []
+                        },
+                        {
+                            "text": "Cash, Prestige, and piety commands can now be used with values smaller than 1",
+                            "children": []
+                        },
+                        {
+                            "text": "Text field cursor position fixed in multiple cases",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where children would lose their guardian upon reload",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where only a single opposite trait would be removed",
+                            "children": []
+                        },
+                        {
+                            "text": "Famagusta is no longer an Abbasid vassal in 867",
+                            "children": []
+                        },
+                        {
+                            "text": "Loot bar regrows more slowly now",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue where event flags would sometimes not clear properly after tournaments, feasts and similar events",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the triggers for a number of minor events where people could get the event even if they didn't have the correct religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed broken trigger for the Decadent Warrior achievement",
+                            "children": []
+                        },
+                        {
+                            "text": "Cut \"succession wars\" and all (mostly obsolete) mechanics to do with vassal revolt risk",
+                            "children": []
+                        },
+                        {
+                            "text": "Jews can now also hire the Abyssinian and Nubian mercs",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a nasty bug where whole Patrician families could be genocided on succession",
+                            "children": []
+                        },
+                        {
+                            "text": "Added events for the rise of the Ghaznavids",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a negative opinion modifier for vassal kings vs their emperor liege",
+                            "children": []
+                        },
+                        {
+                            "text": "Improved or fixed religion triggers in many events",
+                            "children": []
+                        },
+                        {
+                            "text": "Improved localization for a number of older events",
+                            "children": []
+                        },
+                        {
+                            "text": "Minor tweaks to effects for many events",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a special decision to form the HRE",
+                            "children": []
+                        },
+                        {
+                            "text": "Events are now saved and loaded from saves",
+                            "children": []
+                        },
+                        {
+                            "text": "Compressed saves are now saved with meta data to improve performance",
+                            "children": []
+                        },
+                        {
+                            "text": "Localisation of other languages now defaults to English",
+                            "children": []
+                        },
+                        {
+                            "text": "Flags now appear and disappear when you're the correct height above the ground",
+                            "children": []
+                        },
+                        {
+                            "text": "Saving the game with a dynamic title now saves the correct COA and automatically reselects the character you played upon loading",
+                            "children": []
+                        },
+                        {
+                            "text": "Some minor changes to the save games format to improve backward compatibility",
+                            "children": []
+                        },
+                        {
+                            "text": "Save games list now show if the save is unsupported",
+                            "children": []
+                        },
+                        {
+                            "text": "Added equal-opportunity tumbling of courtiers for women and homosexuals.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Interface",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Family view now uses a larger siblings box if character's religion does not allow secondary spouses or concubines.",
+                            "children": []
+                        },
+                        {
+                            "text": "The \"Threats\" tab in the Intrigue View is now filled with appropriate characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Added an \"Adventurer Threat\" alert (replacing the old \"Angry Vassal\" one)",
+                            "children": []
+                        },
+                        {
+                            "text": "When choosing educate character for a child, a suitable guardian will now be pre-picked (for the cases where you don't want to bother to pick one yourself).",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a new tab to dynastic view that shows friends, rivals, in-laws and lovers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Religion/Culture filter in character finder now actually filters by religion/culture instead of religon/culture group.",
+                            "children": []
+                        },
+                        {
+                            "text": "Pressing the skull icon will now navigate to the killer (if he is known)",
+                            "children": []
+                        },
+                        {
+                            "text": "Court tab now shows councillors as well",
+                            "children": []
+                        },
+                        {
+                            "text": "Improved a lot of title and culture colors",
+                            "children": []
+                        },
+                        {
+                            "text": "Added opinion modifiers to the trait tooltip",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed tooltips for trigger 'has_guardian' and 'has_regent'",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrected the tooltip for the trigger 'any_claim'",
+                            "children": []
+                        },
+                        {
+                            "text": "Pressing on red character skulls now navigates to the murderer",
+                            "children": []
+                        },
+                        {
+                            "text": "Character view now shows the correct piety icon for the selected character",
+                            "children": []
+                        },
+                        {
+                            "text": "Expel Jormsvikings was missing localisation",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "AI",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Much less likely to plot against characters they have a high opinion of.",
+                            "children": []
+                        },
+                        {
+                            "text": "Much less likely to form factions against characters they have a high opinion of.",
+                            "children": []
+                        },
+                        {
+                            "text": "Improved guardian selection logic.",
+                            "children": []
+                        },
+                        {
+                            "text": "More prio on converting demesne provinces over vassal provinces.",
+                            "children": []
+                        },
+                        {
+                            "text": "Less willing to marry young male characters to older women.",
+                            "children": []
+                        },
+                        {
+                            "text": "Will now detach and move away if their parent stack is suffering severe attrition.",
+                            "children": []
+                        },
+                        {
+                            "text": "Will now keep attrition-free event troops mostly consolidated instead of spreading them out.",
+                            "children": []
+                        },
+                        {
+                            "text": "Now takes terrain and unit quality into account when determining whether to run away from enemies.",
+                            "children": []
+                        },
+                        {
+                            "text": "Smarter about when to assault if there are enemy troops nearby.",
+                            "children": []
+                        },
+                        {
+                            "text": "Better at determining who to attach to in war.",
+                            "children": []
+                        },
+                        {
+                            "text": "Better at coordinating with allies in war.",
+                            "children": []
+                        },
+                        {
+                            "text": "Will no longer declare suicidal faction independence wars that only have a fraction of their liege's power.",
+                            "children": []
+                        },
+                        {
+                            "text": "Now smarter about when to hire mercenaries in a war.",
+                            "children": []
+                        },
+                        {
+                            "text": "Less willing to fold to independence, pretender and antiking factions.",
+                            "children": []
+                        },
+                        {
+                            "text": "Will now never fold to a very weak faction.",
+                            "children": []
+                        },
+                        {
+                            "text": "Will stop more plots.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Hordes will now be more prone to head in the \"right\" direction.",
+                            "children": []
+                        },
+                        {
+                            "text": "Will now execute dynasty decisions.",
+                            "children": []
+                        },
+                        {
+                            "text": "Smarter about title revocation .",
+                            "children": []
+                        },
+                        {
+                            "text": "Will not start claimant factions for old women, or a parent of the current ruler.",
+                            "children": []
+                        },
+                        {
+                            "text": "Muslim characters are more likely to pick up the 'Gain a Title' ambition.",
+                            "children": []
+                        },
+                        {
+                            "text": "Foreign rulers are now generally quite willing to take on wards as hostages",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Modding",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added support for multiple lovers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Can now block minor titles from being revokable.",
+                            "children": []
+                        },
+                        {
+                            "text": "The faction power level at which you get a warning alert is now scriptable.",
+                            "children": []
+                        },
+                        {
+                            "text": "Now possible to script vassal_opinion, liege_opinion and sex_appeal_opinion into modifiers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Now possible to mod whether character interactions require a character to have their cost in prestige/piety on hand to use the interaction.",
+                            "children": []
+                        },
+                        {
+                            "text": "Now possible to mod out character interactions entirely through defines.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added new define NOT_SPOUSE_FERTILITY_MULT that governs impregnation chance between non-married lovers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added new define MARRIED_LOVERS_FERTILITY_MULT that governs impregnation chance between married lovers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added triggers num_of_lovers, num_of_spouses, num_of_consorts, is_lover.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added scopes random_consort, random_lover, any_lover.",
+                            "children": []
+                        },
+                        {
+                            "text": "Friends and rivals can now be added and removed with add_friend, add_rival, remove_friend and remove_rival.",
+                            "children": []
+                        },
+                        {
+                            "text": "is_friend and is_rival now check correctly against rival/friend rather than high/low opinion.",
+                            "children": []
+                        },
+                        {
+                            "text": "pacifist in religion groups is now called ai_peaceful.",
+                            "children": []
+                        },
+                        {
+                            "text": "pacifist=yes in religions now denotes religions with decreased aggression and stable realms. Only works on Jain religion if player does not own Rajas of India.",
+                            "children": []
+                        },
+                        {
+                            "text": "pacifist=yes in script now checks if character belongs to a pacifist religion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Can now script AI conversion behaviour for religions & religion groups.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added MAX_JOINED_FACTIONS to defines, sets how factions a character can be a part of (including led ones).",
+                            "children": []
+                        },
+                        {
+                            "text": "Added scriptable static modifiers for characters of different ages(0-15, 16-19, 20-29, 30-49, 50-69 and 70+).",
+                            "children": []
+                        },
+                        {
+                            "text": "Added allow_join to factions, this restricts whether characters can join factions.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added peace_piety_gain for religions",
+                            "children": []
+                        },
+                        {
+                            "text": "Added designated heir functionality",
+                            "children": []
+                        },
+                        {
+                            "text": "Added flag 'feminist = yes' to religion scripts (defines that a religion is not prejudiced against female rulers).",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'is_lowborn'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'num_of_dynasty_members'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added the ability to change the name of piety for religions.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added real_tier, lower_real_tier_than, higher_real_tier_than triggers. These work like a regular tier check except that they ignore temporary titles.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added peace_piety_gain for religions",
+                            "children": []
+                        },
+                        {
+                            "text": "Added designated heir functionality",
+                            "children": []
+                        },
+                        {
+                            "text": "Mercenaries have now been moved to their own script file",
+                            "children": []
+                        },
+                        {
+                            "text": "Implemented scriptable troop types.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed portage crash bug.",
+                            "children": []
+                        },
+                        {
+                            "text": "Support for ocean to ocean rivers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a 'character_modifier' to religions",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a 'character_modifier' to cultures",
+                            "children": []
+                        },
+                        {
+                            "text": "Added character_modifier for religions",
+                            "children": []
+                        },
+                        {
+                            "text": "Can now define ranges of sea zones to make life easier.",
+                            "children": []
+                        },
+                        {
+                            "text": "Can now define seperate oceans to help the pathfinding.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'has_overseas_holdings'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'Player' text promotion",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'is_within_diplo_range'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'de_jure_counties' console command (shows a map mode)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a 'manifest_destiny_invasion' CB for various special cases",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some issues with marriage texts, the 'on_marriage' action and modding",
+                            "children": []
+                        },
+                        {
+                            "text": "Added effect 'copy_random_personality_trait'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'reincarnated' trigger",
+                            "children": []
+                        },
+                        {
+                            "text": "Added effect 'set_reincarnation'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event target 'reincarnation'",
+                            "children": []
+                        },
+                        {
+                            "text": "History action 'add_matrilineal_spouse' now has been fixed",
+                            "children": []
+                        },
+                        {
+                            "text": "Added error logs for incorrectly scripted birth and death dates",
+                            "children": []
+                        },
+                        {
+                            "text": "Added handling and error logs of incorrectly scripted mothers and fathers (fixes certain crashes)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'secondary_event_pictures' to religions and culture",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'can_copy_personality_trait_from'",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Converter",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Color table for converter is now in 0-255 range instead of 0-1",
+                            "children": []
+                        },
+                        {
+                            "text": "Color table for converter can now script per CK2 title tag as well",
+                            "children": []
+                        },
+                        {
+                            "text": "Key provinces of Europe is now scriptable",
+                            "children": []
+                        },
+                        {
+                            "text": "Border provinces of Europe is now scriptable",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Forum, Crusader Kings II: Rajas of India - Patchnotes and Ask us anything! [2.1.1 CFYM] , 2014-03-18",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

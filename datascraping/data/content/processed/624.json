@@ -1,0 +1,876 @@
+{
+    "pageid": 624,
+    "title": "Assassination",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Assassination is a plot to murder a character ."
+                }
+            ]
+        },
+        {
+            "heading": "Plotting",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Players can start murder plots by selecting \"Plot to Kill\" in the target's diplomacy menu, or by clicking the \"Choose a Plot\" button to the bottom left of the target's portrait."
+                }
+            ]
+        },
+        {
+            "heading": "Inviting conspirators",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can get a list showing who would accept, and who would accept with a bribe , among the target's courtiers and vassals. The \"auto-invite\" checkbox quietly invites everyone from this list."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the target is a vassal, their fellow vassals and their liege are also valid conspirators. Not all eligible vassals are displayed on the plot window , so one may go to their liege's character view, select the vassal tab, and right-click each vassal (including barons)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the target is a vassal baron, valid conspirators include the liege's courtiers."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the target is a courtier of a vassal baron, valid conspirators include not only the baron and their other courtiers, but also the baron's liege, the baron's liege's courtiers, and the baron's fellow vassals."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the target is in a patrician 's court, members of other patricians' courts in the same merchant republic are eligible to join the plot."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Characters are more likely to accept an invitation to a plot if they like the plotter, dislike the target, and have traits such as deceitful that reduce ai_honor . When targeting a child who is not a ruler(?), the diplomacy skill of the guardian or primary parent(?) is checked instead of the child's."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Dishonorable trait",
+                            "ai_honor",
+                            "Honorable trait",
+                            "ai_honor"
+                        ],
+                        [
+                            "Deceitful",
+                            "-25",
+                            "Honest",
+                            "+25"
+                        ],
+                        [
+                            "Paranoid",
+                            "-10",
+                            "Trusting",
+                            "+10"
+                        ],
+                        [
+                            "Arbitrary",
+                            "-10",
+                            "Just",
+                            "+10"
+                        ],
+                        [
+                            "Greedy",
+                            "-10",
+                            "Charitable",
+                            "+10"
+                        ],
+                        [
+                            "Envious",
+                            "-10",
+                            "Kind",
+                            "+10"
+                        ],
+                        [
+                            "Cruel",
+                            "-5",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Wroth",
+                            "-5",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Impaler",
+                            "-15",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Cannibal",
+                            "-10",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "",
+                            "Tribalist",
+                            "+10"
+                        ],
+                        [
+                            "",
+                            "",
+                            "Aries",
+                            "+40"
+                        ],
+                        [
+                            "",
+                            "",
+                            "Pisces",
+                            "+40"
+                        ],
+                        [
+                            "",
+                            "",
+                            "Sagittarius",
+                            "+20"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Plot power",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The plotter and conspirators contribute plot power . Each character's plot power contribution depends on their intrigue skill and position. When targeting a ruler, council members have double plot power. When targeting a child, the guardian and regent have additional plot power. Plot head must have personal contribution of at least 2.5% to attempt to kill, for both the head and conspirators."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Your plot becomes more likely to fire :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "When you reach certain plot power thresholds :",
+                            "children": [
+                                {
+                                    "text": "The plotter sees an opportunity (requires being at the target's location):",
+                                    "children": [
+                                        {
+                                            "text": "1.4x for every 10% of the plotter's personal contribution, up to 90%.",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "1.4x at 150% of the plotter's personal contribution",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "3x at 100%",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "3x at 150%",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "3x at 200%",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "A plot backer sees an opportunity (minimum 50% to attempt):",
+                                    "children": [
+                                        {
+                                            "text": "1.6x for every 10% of the backer's personal contribution, up to 90%.",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "3x at 100%",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "3x at 150%",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "3x at 200%",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Roughly linearly :",
+                            "children": [
+                                {
+                                    "text": "With the total contribution from conspirators (each has a chance to fire the plot)",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example, suppose you have 110% plot power, with 50% personal contribution and 60% from conspirators. Adding a second set of identical conspirators would show a total of 170% plot power. But the actual effect would be to double the number of event targets ( 2x ) and get you to past one more 3x threshold, for a total of a 6x speedup."
+                }
+            ]
+        },
+        {
+            "heading": "Assassination plans",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The conspirator who sets the attempt in motion must pay to do so (usually 1 or 0.5 of yearly income), unless plot power is 100% or they have a specific skill of level 10."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The chance of success is dependent on the plan used and the target's traits. Paranoid characters are more likely to survive in most plans, while Trusting characters are significantly more likely to be killed in most plans. In most plots the base chance of survival is 25%. If the victim has a relevant trait, the base chance is ignored. For example, Archer Ambush, the base survival chance is 25%, but the victim is Trusting so the chance of survival is 10%, the base chance is ignored. If the victim has more than one trait, each save chance counts. For example, the victim is not only Trusting but also Craven . Then we get a 10% chance to survive from trusting, and a 50% chance to survive from craven. We only need one of the chances to survive. Therefore, when Poisoning wine, even if the victim is a Gluttonous but Paranoid , the chance of survival is still at least 66%."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Every time an attempt is made, whether it succeeds or fails, there is a chance the conspirators will be identified. If the murder was successful, there is a 25% chance of discovering the murderer. If the victim survived, the chance is 50%."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Plan",
+                            "Target conditions [1]",
+                            "Requirement for extra investment",
+                            "Relevant traits and Survival chances"
+                        ],
+                        [
+                            "Infanticide",
+                            "Age less than 5",
+                            "Intrigue at least 10",
+                            "Brave - 66%, Gregarious - 50%, Trusting - 10%"
+                        ],
+                        [
+                            "Falling accident",
+                            "Age between 5 and 15",
+                            "Intrigue at least 10",
+                            "Paranoid - 66%, Trusting - 10%"
+                        ],
+                        [
+                            "Hunting Accident",
+                            "Age between 5 and 15",
+                            "Intrigue at least 10",
+                            "Paranoid , Gregarious - 50%, Trusting - 10%"
+                        ],
+                        [
+                            "Boating Accident",
+                            "Age between 5 and 15",
+                            "Learning at least 10",
+                            "Paranoid - 66%, Diligent - 50%, Trusting - 10%"
+                        ],
+                        [
+                            "Poisoned wine",
+                            "Age at least 16",
+                            "Learning at least 10",
+                            "Paranoid - 66%, Temperate - 50%, Gluttonous - 10%"
+                        ],
+                        [
+                            "Manure Explosion",
+                            "Age at least 16",
+                            "Stewardship at least 10",
+                            "Paranoid - 66%, Diligent - 50%, Trusting - 10%"
+                        ],
+                        [
+                            "Poisonous Snake",
+                            "Age at least 16",
+                            "Learning at least 10",
+                            "Craven - 66%, Paranoid - 50%, Slothful - 10%"
+                        ],
+                        [
+                            "Balcony Plummet",
+                            "Age at least 16",
+                            "Intrigue at least 10",
+                            "Paranoid - 66%, Diligent - 50%, Trusting - 10%"
+                        ],
+                        [
+                            "Disguised Highwaymen",
+                            "Age at least 16",
+                            "Intrigue at least 10",
+                            "Paranoid - 66%, Diligent - 50%, Trusting - 10%"
+                        ],
+                        [
+                            "Carriage Accident",
+                            "Age at least 16",
+                            "Intrigue at least 10",
+                            "Paranoid - 66%, Diligent - 50%, Trusting - 10%"
+                        ],
+                        [
+                            "Archer Ambush",
+                            "Age at least 16, ruler",
+                            "Martial at least 10",
+                            "Paranoid - 66%, Craven - 50%, Trusting - 10%"
+                        ],
+                        [
+                            "Decadent Debauchery",
+                            "Age at least 16, Decadent",
+                            "Intrigue at least 10",
+                            "For some reason, in this plot the chance of survival is the chance of death, the rules are the same. Slothful - 66%, Proud - 66%, Hedonist - 50%, Gluttonous - 50%, Drunkard - 10%, Lustful - 10%"
+                        ],
+                        [
+                            "Prison Break",
+                            "Age at least 5, imprisoned",
+                            "Intrigue at least 10",
+                            "Paranoid - 66%, Craven - 50%, Trusting - 10%"
+                        ],
+                        [
+                            "Bathtub Drowning",
+                            "Age at least 5, Incapable",
+                            "Intrigue at least 10",
+                            "Strong - 66%, Diligent - 50%, Weak - 10%"
+                        ],
+                        [
+                            "Child",
+                            "In hiding , not an adult",
+                            "Always",
+                            "n/a"
+                        ],
+                        [
+                            "Ninja",
+                            "In hiding , adult",
+                            "Always",
+                            "n/a"
+                        ],
+                        [
+                            "Poisoned food",
+                            "In hiding , adult",
+                            "Always",
+                            "n/a"
+                        ],
+                        [
+                            "Bribed guard",
+                            "In hiding , adult",
+                            "Always",
+                            "n/a"
+                        ],
+                        [
+                            "Snake charmer",
+                            "In hiding , adult",
+                            "Always",
+                            "n/a"
+                        ],
+                        [
+                            "Incapable",
+                            "In hiding , Incapable",
+                            "Always",
+                            "n/a"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "the rules are the same."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Slothful - 66%, Proud - 66%, Hedonist - 50%, Gluttonous - 50%,"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Drunkard - 10%, Lustful - 10%"
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Increase your state diplomacy and state intrigue",
+                            "children": []
+                        },
+                        {
+                            "text": "Focus on crossing total plot power thresholds (50%, 100%, 150%, or 200%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Remove the target's spymaster, especially if the likely replacements are pliable or incompetent",
+                            "children": []
+                        },
+                        {
+                            "text": "Be at the target's location by leading troops (stay safe by checking the epidemic and revolt risk map modes )",
+                            "children": []
+                        },
+                        {
+                            "text": "Seduce possible conspirators, if safe and nearby",
+                            "children": []
+                        },
+                        {
+                            "text": "Target new rulers, who have a short reign penalty and won't bother to fire a spymaster who hates them, before factions fire",
+                            "children": []
+                        },
+                        {
+                            "text": "Target parents first if you want to kill a child",
+                            "children": []
+                        },
+                        {
+                            "text": "Be a member of the Assassins secret society. Starting from the second rank you can invite other members into your plot to assassinate someone, even if they are in far-away courts. Well-placed bribes to landless characters created from the Assassin mission \"Train Protege\" can make even the most impossible assassination possible.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Court packing",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Marry courtiers into the target's court who have high intrigue and are likely to join the plot. Characters are more willing to join assassination plots if they like you, dislike the target, and have low ai_honor. So try to send characters who are:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Different culture group (-10 opinion)",
+                            "children": []
+                        },
+                        {
+                            "text": "Envious (-15 opinion of liege, -10 honor)",
+                            "children": []
+                        },
+                        {
+                            "text": "Deceitful (-25 honor)",
+                            "children": []
+                        },
+                        {
+                            "text": "Greedy (increased bribe effect, -10 honor)",
+                            "children": []
+                        },
+                        {
+                            "text": "Opposite traits to target",
+                            "children": []
+                        },
+                        {
+                            "text": "Ambition is not obj_get_married (+10 opinion of new liege for 2 years)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Remember that you can't send highborn characters off to marry lowborns. Avoid sending spouses to close relatives of the target, as they will get +15 opinion (marriage ties)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You may be able to invite courtiers attracted to your character for free if you have high diplomacy and seduction focus."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is especially useful if you can place a new spymaster. AI rulers are reluctant to appoint spymasters with strongly negative opinion, so focus on low ai_honor rather than low opinion."
+                }
+            ]
+        },
+        {
+            "heading": "Discovery",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Discovery of the plot",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The chance of a plot being discovered is dependent on the target's intrigue, or state intrigue if the target is a ruler. As with other plots, there is a chance of it being leaked by its backers. It is also possible for a character to become suspicious of an assassination plot without knowing who its backers are. Characters who are Paranoid are ten times more likely to get a whiff of plots against them, their spouses and their children. Any plot backer having an Intrigue lower than 3 or being an Imbecile , Slow , a Drunkard , or a Lunatic makes this happen more quickly."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "As with any plot, when an assassination plot is discovered, anyone involved can be asked to stop backing it as a diplomatic action . The head of the plot can be imprisoned without incurring tyranny . Imprisoning the head of the plot will end it. Plot backers can be righteously imprisoned if they are asked to end the plot and refuse."
+                }
+            ]
+        },
+        {
+            "heading": "Discovery of assassination attempts",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You are implicated if you are the plot leader or the plotter who set the plot in motion. The target of the plot will get a stacking \"Attempted Murder\" opinion modifier towards your character (-200). Similarly, the target's parents and children will have a -50 opinion penalty while siblings will have a -25 penalty."
+                }
+            ]
+        },
+        {
+            "heading": "Discovery of successful assassination",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You will receive the Known Murderer modifier, -10 opinion penalty with everyone (50 years, non-stacking). If the character was your relative or of your dynasty, you will additionally gain a Kinslayer trait , further reducing opinions of you."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The murdered character's close kin will be especially angry (-30). Their parents and children will additionally consider you a rival (-100 opinion and may try to murder you)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You also get the \"Dishonorable\" opinion modifier with relatives of your target, all rulers in the realm of your target, and the target's religious head . \"Dishonorable\" is -10 opinion, allows righteous imprisonment, stacks, and lasts for five years."
+                }
+            ]
+        },
+        {
+            "heading": "Going into hiding",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Characters may go into hiding if they are aware of a plot on their life, even if they do not know who the plotter is. Rulers can also send unlanded spouses or children into hiding if they are targeted."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Going into hiding cancels an in-motion murder attempt if there is one. Plans possible against a target in hiding require 100% plot power, trigger less frequently, and are far less likely to succeed (base 18% chance of killing the target, 27% with extra investment). If they fail, there is a high chance of discovery."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "However, a character who is in hiding is subjected to reduced Diplomacy, lowered vassal opinion, monthly Prestige loss, and events that inflict negative traits . A character who spends time in hiding can gain Lunatic , Celibate , Depressed , Ill , Pneumonic , Gluttonous , Slothful , Shy , Craven , Content , Possessed , or Drunkard . It is also possible to gain Paranoid , Zealous , Hedonist , Scholar , Mystic , and Poet ."
+                }
+            ]
+        },
+        {
+            "heading": "AI murder plots",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "General targets",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "AI characters will only murder characters (other than spouses) for the following reasons:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Reason",
+                            "Target",
+                            "Conditions"
+                        ],
+                        [
+                            "",
+                            "Inherit",
+                            "Holder of title",
+                            "{Plotter, child, or spouse} is heir"
+                        ],
+                        [
+                            "",
+                            "Become heir",
+                            "Heir to title",
+                            "{Plotter, child, or spouse} is pretender"
+                        ],
+                        [
+                            "",
+                            "Insanity",
+                            "Any character with same liege",
+                            "Plotter is Lunatic or Possessed"
+                        ],
+                        [
+                            "",
+                            "Bloodline",
+                            "Any character with same liege",
+                            "Plotter has a murderous bloodline ( any pure murder bloodline or immortality quest bloodline)"
+                        ],
+                        [
+                            "",
+                            "Rivalry",
+                            "Rival"
+                        ],
+                        [
+                            "",
+                            "Jealousy",
+                            "Lover of spouse"
+                        ],
+                        [
+                            "",
+                            "The Assassins",
+                            "Quest target",
+                            "Members of The Assassins may accept a quest to murder a specific character"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The plot must be allowed:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Plotter must by at least 16 and not be imprisoned or Incapable",
+                            "children": []
+                        },
+                        {
+                            "text": "Target is not plotter's child",
+                            "children": []
+                        },
+                        {
+                            "text": "No blood oath",
+                            "children": []
+                        },
+                        {
+                            "text": "Within diplomatic range",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "AI characters will only use this plot if:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Not Honest , Kind , or Just",
+                            "children": []
+                        },
+                        {
+                            "text": "Target is not lover or child of lover",
+                            "children": []
+                        },
+                        {
+                            "text": "Target is not friend",
+                            "children": []
+                        },
+                        {
+                            "text": "Target is not on a pilgrimage",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Factors affecting the AI's desire to start the plot:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "very likely if target is character's target in Assassins quest",
+                            "children": []
+                        },
+                        {
+                            "text": "0.2x if religion is pacifist",
+                            "children": []
+                        },
+                        {
+                            "text": "0.01x if Content (unless Lunatic or Possessed)",
+                            "children": []
+                        },
+                        {
+                            "text": "2x if Envious , and heir or pretender to target's title",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5x if Arbitrary",
+                            "children": []
+                        },
+                        {
+                            "text": "2x if Cruel or Deceitful",
+                            "children": []
+                        },
+                        {
+                            "text": "3x if Ambitious",
+                            "children": []
+                        },
+                        {
+                            "text": "2x if murderous bloodline",
+                            "children": []
+                        },
+                        {
+                            "text": "2x to 8x against AI-controlled siblings, when the plotter is Muslim and a child of an independent ruler",
+                            "children": []
+                        },
+                        {
+                            "text": "2x to 8x against the top liege's dynasty if the dynasty is powerful within the realm",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Furthermore, except when killing a murder quest target, opinion must be low:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Opinion must always be below +25",
+                            "children": []
+                        },
+                        {
+                            "text": "Opinion must be below 0 unless Deceitful , Envious , or Ambitious",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Spouse slaying",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "AI characters will only murder a spouse for the following reasons:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Reason",
+                            "Target",
+                            "Conditions"
+                        ],
+                        [
+                            "",
+                            "Loves heir",
+                            "Husband",
+                            "Plotter loves child (opinion 75+) who is heir to husband's title"
+                        ],
+                        [
+                            "",
+                            "Barren",
+                            "Wife",
+                            "Plotter is ruler (or primary heir) and has no living sons. Wife over 40."
+                        ],
+                        [
+                            "",
+                            "Infidelity",
+                            "Spouse",
+                            "Spouse has a lover"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "AI characters will only use this plot if:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Not Honest or Kind",
+                            "children": []
+                        },
+                        {
+                            "text": "Low opinion",
+                            "children": []
+                        },
+                        {
+                            "text": "Target is not on a pilgrimage",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Defense strategies",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Select your spymaster wisely:",
+                            "children": [
+                                {
+                                    "text": "A spymaster with high intrigue skill increases plot discovery chance and decreases plot power against you(?).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "A spymaster with high ai_honor and/or opinion will be less inclined to join plots against you . Avoid traits such as Deceitful .",
+                                    "children": []
+                                },
+                                {
+                                    "text": "A spymaster with high ai_honor and/or of your dynasty will be less inclined to join plots against your family members .",
+                                    "children": []
+                                },
+                                {
+                                    "text": "A spymaster who is Diligent can give you a modifier that permanently increases your character's plot power defense by +15% (with Conclave DLC).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "A spymaster who is below count tier (and not a patrician ) will not have unpredictable \"political concerns\" influence their inclination to join plots against you.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Marry a spouse who is Honest or Kind (will never start murder plots) or at least not Deceitful , Envious , or Ambitious (lowers the opinion threshold for starting plots).",
+                            "children": []
+                        },
+                        {
+                            "text": "Avoid being in the same province as someone who might start an assassination plot against you. If a rival resides in your court, lead troops elsewhere.",
+                            "children": []
+                        },
+                        {
+                            "text": "Remove characters from your court if they have low opinion and/or low ai_honor, so they cannot join plots against you.",
+                            "children": []
+                        },
+                        {
+                            "text": "If you are aware of a plot against you, and the plot power is below 50%, you are safe as long as you are not in the same province.",
+                            "children": [
+                                {
+                                    "text": "Use the \" stop backing plot \" interaction and justly revoke vassal titles if they treacherously refuse.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "If the plotter is in your court, assign them to lead troops in another province, or lead troops in another province yourself.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Includes that the target is not incapable , not imprisoned and not in hiding unless stated otherwise.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

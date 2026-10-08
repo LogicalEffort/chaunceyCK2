@@ -1,0 +1,949 @@
+{
+    "pageid": 208,
+    "title": "Religion modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Religions and religion groups are defined within the /common/religions folder."
+                }
+            ]
+        },
+        {
+            "heading": "Religion group",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Each religion belongs to a religion group, for instance:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Catholic and Orthodox religions belong to the Christian group,",
+                            "children": []
+                        },
+                        {
+                            "text": "Sunni and Shiite religions belong to the Muslim group.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that some behaviors are hardcoded based on vanilla religion groups:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "pagan_group: unreformed Pagans cannot demand religious conversion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The religion group is defined as a group tag with an alphanumerical ID. A religion group must have graphical_culture defined, and one or more religion."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "An example of a religion group definition (with religions) would be:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Below is a list of all parameters that can be set for religion groups."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Attribute",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "color",
+                            "color",
+                            "The color used for the coalitions -per religion group- map mode",
+                            "color = { 0.25 0.5 0.75 }"
+                        ],
+                        [
+                            "graphical_culture",
+                            "ID",
+                            "Only used for the display of CoA frames on the map.",
+                            "graphical_culture = norsegfx"
+                        ],
+                        [
+                            "has_coa_on_barony_only",
+                            "boolean",
+                            "This line determines whether or not the religion will utilise random graphics for their COAs above barony level: has_coa_on_barony_only = yes : Generate random CoA for baronies, but use gfx/flags/ for higher tiers. has_coa_on_barony_only = no : Generate random CoA for all tiers, and ignore completely gfx/flags/.",
+                            "has_coa_on_barony_only = yes"
+                        ],
+                        [
+                            "hostile_within_group",
+                            "bool",
+                            "Decides if holy orders will fight other religions within the same group, also blocks interfaith marriage within group.",
+                            ""
+                        ],
+                        [
+                            "crusade_cb",
+                            "ID",
+                            "Defines whether a religion group can have crusades/jihads. In vanilla CKII, this only applies to the Christian, Muslim and Israelite religion groups.",
+                            "crusade_cb = crusade"
+                        ],
+                        [
+                            "playable",
+                            "boolean",
+                            "Defines whether characters of this religion are playable. Does not apply to the \"muslim\" group, as it can only be enabled by Sword of Islam",
+                            "playable = yes"
+                        ],
+                        [
+                            "ai_peaceful",
+                            "boolean",
+                            "Will make Hordes lose their super aggressiveness, upon conversion to this religion",
+                            "ai_peaceful = yes"
+                        ],
+                        [
+                            "ai_fabricate_claims",
+                            "boolean",
+                            "",
+                            "ai_fabricate_claims = no"
+                        ],
+                        [
+                            "merge_republic_interface",
+                            "boolean",
+                            "Determines if a religion will try to merge their interface with the republic interface. If yes then when a republic and searching for a texture for their religion's interface they will look for <texture_name>_republic and use that version of the texture instead of the religion's normal one. Defaults to no.",
+                            "merge_republic_interface = yes"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "has_coa_on_barony_only = yes : Generate random CoA for baronies, but use gfx/flags/ for higher tiers.",
+                            "children": []
+                        },
+                        {
+                            "text": "has_coa_on_barony_only = no : Generate random CoA for all tiers, and ignore completely gfx/flags/.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In the base game all heresies and their parent religions are in the same group as each other (Cathar are considered Christian, Druze are considered Muslim etc) but this is not necessary. Heresies can be assigned to a different group, which allows them to be hostile not only to their parent religion but to all other religions in that group (for example a Catholic heresy which believed that Jesus was actually Zeus would normally only be hostile to Catholics, but could be placed in its own group to also be hostile to Orthodoxy, Miaphysites and so on). This does not impede the religion's ability to take over from its parent religion."
+                }
+            ]
+        },
+        {
+            "heading": "Religion",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Below is a list of all parameters that can be set for religions. Note that everything from investiture and below is optional."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Attribute",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "ai_convert_same_group",
+                            "int",
+                            "Determines if AI sends court chaplain to proselytize on religions of same religious group: 0: never try to convert 1: try to convert if ai_zeal is high 2: always try to convert",
+                            "ai_convert_same_group = 2"
+                        ],
+                        [
+                            "ai_convert_other_group",
+                            "int",
+                            "Determines if AI sends court chaplain to proselytize on religions of other religious groups: 0: never try to convert 1: try to convert if ai_zeal is high 2: always try to convert",
+                            "ai_convert_other_group = 1"
+                        ],
+                        [
+                            "graphical_culture",
+                            "ID",
+                            "Only used for the display of CoA frames on the map.",
+                            "graphical_culture = norsegfx"
+                        ],
+                        [
+                            "icon",
+                            "int",
+                            "Defines which icon will be used for the religion in-game. The value is ignored for heresies (unless the heresy becomes mainstream religion), and the heresy_icon of the parent religion will be used instead.",
+                            "icon = 1"
+                        ],
+                        [
+                            "color",
+                            "color",
+                            "The color used when drawing the religion map mode RGB format with a range of 0.0–1.0. To determine a value from the RGB, simply divide by 255, e.g. 180 ÷ 255 = 0.7",
+                            "color = { 0.25 0.5 0.75 }"
+                        ],
+                        [
+                            "crusade_name",
+                            "key",
+                            "Defines a localization key for the name of the religion's crusade. Only applicable to religion group groups with crusade_cb = crusade defined.",
+                            "crusade_name = \"CRUSADE\""
+                        ],
+                        [
+                            "scripture_name",
+                            "key",
+                            "Defines a localization key for the religion's holy text.",
+                            "scripture_name = THE_BIBLE"
+                        ],
+                        [
+                            "god_names",
+                            "list<key>",
+                            "Defines localization keys for the religion's deity or deities, within curly brackets and separated by spaces.",
+                            "god_names = { GOD_GOD GOD_THE_LORD }"
+                        ],
+                        [
+                            "high_god_name",
+                            "key",
+                            "Localization key for high god",
+                            "high_god_name = GOD_GOD"
+                        ],
+                        [
+                            "evil_god_names",
+                            "list<key>",
+                            "Defines localization keys for the religion's evil deity or deities, within curly brackets and separated by spaces.",
+                            "evil_god_names = { SATAN LUCIFER THE_DEVIL }"
+                        ],
+                        [
+                            "piety_name",
+                            "key",
+                            "Defines localization keys for the religion's piety.",
+                            "piety_name = KARMA"
+                        ],
+                        [
+                            "priest_title",
+                            "key",
+                            "Defines localization key for temple holders",
+                            "priest_title = PRIEST"
+                        ],
+                        [
+                            "investiture",
+                            "bool",
+                            "Determines if it is possible to appoint bishops. Is modified by Investiture law. Only works for christian group, cannot be combined with autocephaly",
+                            "investiture = yes"
+                        ],
+                        [
+                            "can_demand_religious_conversion",
+                            "bool",
+                            "Determines if a character of this religion can demand conversion to it from other characters. Must also be allowed in the government.",
+                            "can_demand_religious_conversion = yes"
+                        ],
+                        [
+                            "can_excommunicate",
+                            "bool",
+                            "Determines if the religious head can excommunicate members of the religion",
+                            "can_excommunicate = yes"
+                        ],
+                        [
+                            "can_grant_divorce",
+                            "bool",
+                            "Determines if the religious head can grant divorces to members of the religion",
+                            "can_grant_divorce = yes"
+                        ],
+                        [
+                            "can_grant_invasion_cb",
+                            "cb",
+                            "Determines if the religious head can grant the invasion Casus Belli",
+                            "can_grant_invasion_cb = invasion"
+                        ],
+                        [
+                            "can_grant_claim",
+                            "bool",
+                            "Determines if the religious head can grant claims (actually not working)",
+                            "can_grant_claim = yes"
+                        ],
+                        [
+                            "can_call_crusade",
+                            "bool",
+                            "Determines if the religious head can call crusades",
+                            "can_call_crusade = yes"
+                        ],
+                        [
+                            "can_have_antipopes",
+                            "bool",
+                            "Activates Antipope",
+                            "can_have_antipopes = yes"
+                        ],
+                        [
+                            "can_retire_to_monastery",
+                            "bool",
+                            "Activates order to take the vows diplomatic action",
+                            "can_retire_to_monastery = yes"
+                        ],
+                        [
+                            "parent",
+                            "religion",
+                            "Makes the religion a heresy of its parent religion. The parent religion must be defined before. Note: reformed pagans can have heresies, but they need to be defined after both reformed and unreformed religions.",
+                            "parent = catholic"
+                        ],
+                        [
+                            "priests_can_marry",
+                            "bool",
+                            "Determines if the clergy can get married",
+                            "priests_can_marry = yes"
+                        ],
+                        [
+                            "priests_can_inherit",
+                            "bool",
+                            "Whether priests are excluded from succession",
+                            "priests_can_inherit = no"
+                        ],
+                        [
+                            "feminist",
+                            "bool",
+                            "Nullifies the negative opinion modifier that vassals normally get if the ruler is female or has female heir",
+                            "feminist = yes"
+                        ],
+                        [
+                            "pacifist",
+                            "bool",
+                            "Denotes religions with decreased aggression and stable realms. Only works on Jain religion if player does not own Rajas of India.",
+                            "pacifist = yes"
+                        ],
+                        [
+                            "bs_marriage",
+                            "bool",
+                            "Allows brother-sister marriages",
+                            "bs_marriage = yes"
+                        ],
+                        [
+                            "pc_marriage",
+                            "bool",
+                            "Allows parent-child marriages",
+                            "pc_marriage = yes"
+                        ],
+                        [
+                            "psc_marriage",
+                            "bool",
+                            "Disallow uncle-niece and aunt-nephew marriages",
+                            "psc_marriage = no"
+                        ],
+                        [
+                            "cousin_marriage",
+                            "bool",
+                            "Disallow cousin marriages",
+                            "cousin_marriage = no"
+                        ],
+                        [
+                            "matrilineal_marriages",
+                            "bool",
+                            "Disallow matrilineal marriages",
+                            "matrilineal_marriages = no"
+                        ],
+                        [
+                            "intermarry",
+                            "religion",
+                            "Specifies if members tend to marry those of specific other religions/religion group",
+                            "intermarry = norse_pagan_reformed"
+                        ],
+                        [
+                            "max_wives",
+                            "int",
+                            "Determines the max number of wives members of the religion can have. As well as the number of potential wives automatically generated for the court.",
+                            "max_wives = 4"
+                        ],
+                        [
+                            "allow_viking_invasion",
+                            "bool",
+                            "Allows the \"Prepare Invasion\" diplo action",
+                            "allow_viking_invasion = yes"
+                        ],
+                        [
+                            "allow_looting",
+                            "bool",
+                            "Allows looting",
+                            "allow_looting = yes"
+                        ],
+                        [
+                            "seafarer",
+                            "bool",
+                            "A.I. will prefer coastal provinces when raiding.",
+                            "seafarer = yes"
+                        ],
+                        [
+                            "allow_rivermovement",
+                            "bool",
+                            "Allows river navigation",
+                            "allow_rivermovement = yes"
+                        ],
+                        [
+                            "female_temple_holders",
+                            "bool",
+                            "Allows female temple vassals",
+                            "female_temple_holders = yes"
+                        ],
+                        [
+                            "male_temple_holders",
+                            "bool",
+                            "Allows male temple vassals. Defaults to yes.",
+                            "male_temple_holders = no"
+                        ],
+                        [
+                            "short_reign_opinion_year_mult",
+                            "integer",
+                            "Opinion penalty multiplier to short reign years. Override the define SHORT_REIGN_OPINION_MULT = 2.",
+                            "short_reign_opinion_year_mult = 3"
+                        ],
+                        [
+                            "aggression",
+                            "double",
+                            "AI aggression factor",
+                            "aggression = 1.5"
+                        ],
+                        [
+                            "max_consorts",
+                            "int",
+                            "Max number of consorts / concubines",
+                            "max_consorts = 3"
+                        ],
+                        [
+                            "religious_clothing_head",
+                            "int",
+                            "Index of frames to use for the religious head cloths & headgear. See portrait modding .",
+                            "religious_clothing_head = 3"
+                        ],
+                        [
+                            "religious_clothing_priest",
+                            "int",
+                            "Index of frames to use for priest cloths & headgear. See portrait modding .",
+                            "religious_clothing_priest = 3"
+                        ],
+                        [
+                            "secondary_event_pictures",
+                            "",
+                            "[ {{{1}}} ]",
+                            "secondary_event_pictures = norse_pagan"
+                        ],
+                        [
+                            "autocephaly",
+                            "bool",
+                            "Autocephaly behavior",
+                            "autocephaly = yes"
+                        ],
+                        [
+                            "pentarchy",
+                            "bool",
+                            "Pentarchy behavior. Implies autocephaly = yes .",
+                            "pentarchy = yes"
+                        ],
+                        [
+                            "divine_blood",
+                            "bool",
+                            "Sacred Xwedodah close-kin marriage mechanics",
+                            "divine_blood = yes"
+                        ],
+                        [
+                            "has_heir_designation",
+                            "bool",
+                            "Allows to designate heir",
+                            "has_heir_designation = yes"
+                        ],
+                        [
+                            "defensive_attrition",
+                            "bool",
+                            "Defensive attrition in provinces",
+                            "defensive_attrition = yes"
+                        ],
+                        [
+                            "ignores_defensive_attrition",
+                            "bool",
+                            "Used for religions that do not have defensive attrition, but will still not get the penalty towards such religions.",
+                            "ignores_defensive_attrition = yes"
+                        ],
+                        [
+                            "heresy_icon",
+                            "int",
+                            "Heresy icon. Note that this has to be set in the parent religion, not at heresy level.",
+                            "heresy_icon = 7"
+                        ],
+                        [
+                            "independence_war_score_bonus",
+                            "int",
+                            "Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP",
+                            "independence_war_score_bonus = 30"
+                        ],
+                        [
+                            "peace_prestige_loss",
+                            "bool",
+                            "Lose Prestige while at peace",
+                            "peace_prestige_loss = yes"
+                        ],
+                        [
+                            "peace_piety_gain",
+                            "double",
+                            "Gain piety while at peace (piety per month)",
+                            "peace_piety_gain = 1.0"
+                        ],
+                        [
+                            "raised_vassal_opinion_loss",
+                            "bool",
+                            "Determines whether raised vassal levies cause negative opinion overtime against the liege.",
+                            "raised_vassal_opinion_loss = no"
+                        ],
+                        [
+                            "reformed",
+                            "religion",
+                            "Note: the reformed religion needs to precede the unreformed religion in the file.",
+                            "reformed = aztec_reformed"
+                        ],
+                        [
+                            "reformer_head_of_religion",
+                            "bool",
+                            "Make the character that reforms this religion the head of the new reformed faith. Must be set on the reformed religion. The title of the reformed religion (d_<religion_reformed>) must NOT have primary = yes , otherwise it will cause game over. landless = yes may not be an issue [ ? ] You also need to do some government modding otherwise character will get nogovernment. In government potentials replace NOT = { religion = norse_pagan_reformed } into the more generic NOT = { primary_title = { is_landless_type_title = no } }",
+                            "reformer_head_of_religion = yes"
+                        ],
+                        [
+                            "pre_reformed",
+                            "bool",
+                            "Makes the pagan religion pre-reformed. Note that these religions won't appear in the ledger.",
+                            "pre_reformed = yes"
+                        ],
+                        [
+                            "unit_modifier",
+                            "unit modifiers",
+                            "Modifiers for units",
+                            ""
+                        ],
+                        [
+                            "unit_home_modifier",
+                            "unit modifiers",
+                            "Modifiers for units on home territory",
+                            ""
+                        ],
+                        [
+                            "character_modifier",
+                            "character modifiers",
+                            "Modifier for all characters of this religion",
+                            "character_modifier = { learning = 4 }"
+                        ],
+                        [
+                            "expel_modifier",
+                            "modifiers",
+                            "[ {{{1}}} ]",
+                            "expel_modifier = expelled_jewish"
+                        ],
+                        [
+                            "landed_kin_prestige_bonus",
+                            "bool",
+                            "Gives a prestige bonus for having landed ' kings as vassal.",
+                            "landed_kin_prestige_bonus = yes"
+                        ],
+                        [
+                            "allow_in_ruler_designer",
+                            "bool",
+                            "Prevents the religion from appearing in Ruler Designer , typically pagan reformed religions.",
+                            "allow_in_ruler_designer = no"
+                        ],
+                        [
+                            "dislike_tribal_organization",
+                            "bool",
+                            "Vassals of this religion will disapprove and form factions if their liege increases tribal organization. Typically used for unreformed pagans, that should first convert to a Monotheistic religion before attempting to go feudal.",
+                            "dislike_tribal_organization = yes"
+                        ],
+                        [
+                            "uses_decadence",
+                            "bool",
+                            "Decadence will be used if the religion AND government of a character is scripted to use decadence.",
+                            "uses_decadence = yes"
+                        ],
+                        [
+                            "uses_jizya_tax",
+                            "bool",
+                            "",
+                            "uses_jizya_tax = yes"
+                        ],
+                        [
+                            "attacking_same_religion_piety_loss",
+                            "bool",
+                            "",
+                            "attacking_same_religion_piety_loss = yes"
+                        ],
+                        [
+                            "hard_to_convert",
+                            "bool",
+                            "Checked via is_hard_to_convert character/province trigger.",
+                            "hard_to_convert = yes"
+                        ],
+                        [
+                            "men_can_take_consorts",
+                            "bool",
+                            "If set, men can take female consorts. Defaults to yes. No effect if max_consorts is 0.",
+                            "men_can_take_consorts = yes"
+                        ],
+                        [
+                            "women_can_take_consorts",
+                            "bool",
+                            "If set, women can take male consorts. Defaults to no. No effect if max_consorts is 0.",
+                            "women_can_take_consorts = yes"
+                        ],
+                        [
+                            "interface_skin",
+                            "interface",
+                            "The Interface this religion provides",
+                            "interface_skin = { pagan_interface }"
+                        ],
+                        [
+                            "castes",
+                            "bool",
+                            "Whether the religion uses a caste system.",
+                            "castes = yes"
+                        ],
+                        [
+                            "caste_opinions",
+                            "bool",
+                            "Whether the religion uses the caste opinion modifiers.",
+                            "caste_opinions = yes"
+                        ],
+                        [
+                            "has_coa_on_barony_only",
+                            "bool",
+                            "Works the same way as the religion group parameter of the same name. If set, overrides what's set for the religion group.",
+                            "has_coa_on_barony_only = yes"
+                        ],
+                        [
+                            "join_crusade_if_bordering_hostile",
+                            "bool",
+                            "If set to yes, the AI won't refrain from joining a crusade simply because it borders a heathen/heretic realm.",
+                            "join_crusade_if_bordering_hostile = yes"
+                        ],
+                        [
+                            "merge_republic_interface",
+                            "boolean",
+                            "Determines if a religion will try to merge their interface with the republic interface. If yes then when a republic and searching for a texture for their religion's interface they will look for <texture_name>_republic and use that version of the texture instead of the religion's normal one. Defaults to no. Overrides the religion group's value if set.",
+                            "merge_republic_interface = yes"
+                        ],
+                        [
+                            "rel_head_defense",
+                            "boolean",
+                            "If set to yes, people of that religion are likely to join in defence of their religious head when attacked by a different religion.",
+                            "rel_head_defense = yes"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "0: never try to convert",
+                            "children": []
+                        },
+                        {
+                            "text": "1: try to convert if ai_zeal is high",
+                            "children": []
+                        },
+                        {
+                            "text": "2: always try to convert",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "0: never try to convert",
+                            "children": []
+                        },
+                        {
+                            "text": "1: try to convert if ai_zeal is high",
+                            "children": []
+                        },
+                        {
+                            "text": "2: always try to convert",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The title of the reformed religion (d_<religion_reformed>) must NOT have primary = yes , otherwise it will cause game over. landless = yes may not be an issue [ ? ]",
+                            "children": []
+                        },
+                        {
+                            "text": "You also need to do some government modding otherwise character will get nogovernment. In government potentials replace NOT = { religion = norse_pagan_reformed } into the more generic NOT = { primary_title = { is_landless_type_title = no } }",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Example",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Localization",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "<religion_name>: short name of the religion. Used with [Religion.GetName]",
+                            "children": []
+                        },
+                        {
+                            "text": "<religion_name>_DESC: description in religion tooltip",
+                            "children": []
+                        },
+                        {
+                            "text": "<religion_name>_full: longer name, shown on the map and in most UIs, and [Religion.GetFullName]",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Adding icons",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Adding new religious icons is a fairly simple process."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "First you will need to modify both religion_icon_strip.dds and religion_icon_strip_small.dds under gfx\\interface and gfx\\interface\\shattered_random (for random world)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In religion_icon_strip.dds, expand the canvas of the image to the right by 32 pixels for each new icon; in religion_icon_strip_small expand it by 20 pixels for each new icon."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Once you have added your new icons, you will need to edit the file generalstuff.gfx under the interface folder."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Increase the value of \"noOfFrames\" by the number of icons you have added. Once done, you can then use your new icons in your religions, from left to right, the first frame index is 0.)"
+                }
+            ]
+        },
+        {
+            "heading": "Religious head",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Religious heads can be established via the landed titles entries. You must first create a title of any rank, and add the variable controls_religion = X into that title's entry. For example;"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The holder of the above title will thus appear as the Religious head for the Monophysite religion. The religion = monophysite line is also recommended to ensure any/all random characters generated for that title will be of the same religion, without it, if the province within which the capital = variable is set is catholic, you may end up with a Catholic Religious Head of the Monophysite Faith."
+                }
+            ]
+        },
+        {
+            "heading": "Anti Pope",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Although can_have_antipopes controls whether a religion can have antipopes or not."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The interface, however, only accept Catholic and Fraticelli to render the name of antipopes, location_ruler_title text and opinion value properly,"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Strings and value will not be processed for any other religions. Sadly, it's hard coded in the executable. There is nothing we can do to fix it."
+                }
+            ]
+        },
+        {
+            "heading": "Holy sites",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Holy sites are flagged at county level via the landed titles entries."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For maintenance it is preferable to override only the counties and flag the holy sites via a separate file under /common/landed_titles/, without duplicating landed_titles.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is also possible to define holy sites for heresies, though the game will fallback to the one of parent religion if not used."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If fewer than five holy sites are allocated to a religion this will be reported in the error log. If more than five holy sites are assigned then the game will crash as soon as that religion's religion screen is opened."
+                }
+            ]
+        },
+        {
+            "heading": "Pentarchy",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "pentarchy allows multiple religion heads in one religion. It could be more or less than five, however the interface would look like broken."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The pentarchy seats are flagged at a title via the landed titles entries."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "All Orthodox/Iconoclast/Monothelite/Paulician/Bogomilist see b_antioch as a seat of pentarchy,"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "while only Bogomilst refuse b_hagiasophia and take d_roc as a seat of pentarchy instead."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Pentarchy will activate for a title holder with theocracy_governments group(mostly, but vary on muslims) when their religion matches the pentarchy value."
+                }
+            ]
+        },
+        {
+            "heading": "Crusade target weights",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Crusade target weights are set inside landed titles entries."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that the A.I. will never start a crusade in case there are no targets weights for that religion."
+                }
+            ]
+        },
+        {
+            "heading": "Papal succession",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "See interface modding"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Trivia: If an offmap governor title has succ_papal_succession , it will not fire on_offmap_governor_changed on a new holder.  Have to use on_rel_head_chosen or on_new_holder(_inheritance/usurpation) instead.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Reformation",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If a religion has a reformed version within its code, it will inherit the on-action for reformation."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you want to change the interface for reformation, you can edit file in folder \"religion_features\" and search for \"buttons\" to change. Then you need to change ui in the file \"religion_reformation.gui\", which set in '\\common\\religion_features'."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example, you can edit the"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "and change it to:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "in the \"00_feature.txt\" and then add:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "in the \"religion_reformation.gui\" in order to set third doctrine in the Reformation."
+                }
+            ]
+        },
+        {
+            "heading": "Interface",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With patch 3.0 the interface corresponding to a certain faith can be modded by adding the variable interface_skin = { x } . X represents the name of the interface folder in gfx/interface. \nMore interfaces can be mixed, in vanilla this happens to the Zoroastrian, Indian (2 interfaces), to the Zun, African and Taoist religions (3 interfaces) and to the Bon religion (4 interfaces)"
+                }
+            ]
+        },
+        {
+            "heading": "Religion Features",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Religion features is exclusive for reformed culture."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you want to add religion features to existing religion (Catholic, Orthodox, Muslim), you can edit file \"00_religions.txt\" in /common/religions folder."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can find the faith you would like to change and add"
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example, you can add enatic clan to Catholic faith as below:"
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Title modding , for specifying holy sites",
+                            "children": []
+                        },
+                        {
+                            "text": "Moral authority modifiers",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,224 @@
+{
+    "pageid": 393,
+    "title": "Attrition",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Attrition happens when the number of troops in a province is higher than the supply limit of that province."
+                }
+            ]
+        },
+        {
+            "heading": "Supply limit",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The supply limit of a province is based on terrain and modifiers."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Additive modifiers are:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Base Supply is 5K.",
+                            "children": []
+                        },
+                        {
+                            "text": "Terrain Supply is 5K for plains and farmland, 4K for steppe, 3K for forests and hills, 2K for mountains and jungle, 1K for deserts and arctic.",
+                            "children": []
+                        },
+                        {
+                            "text": "Disease penalty is -4K for each epidemic disease .",
+                            "children": []
+                        },
+                        {
+                            "text": "Winter penalty is -2K (mild), -3K (normal), or -5K (severe).",
+                            "children": [
+                                {
+                                    "text": "The worst possible winter in a province is determined by its climate. Climate is shown in tooltips.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Winter can start as early as Oct 1 and always ends by April 1 (June 1 in arctic areas), while severe winters can turn mild in April and May.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Percentage modifiers are:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Coastal Province : +50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Province holdings:",
+                            "children": [
+                                {
+                                    "text": "Own realm holdings: +50% per holding",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Occupied holdings : +25% per holding",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Neutral holdings : +25% per holding (same religion group, and neither raiding nor at war)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Hostile holdings : -10% per holding (different religion group, and neither raiding nor at war)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Controlled neighbor holding : up to +75%",
+                            "children": [
+                                {
+                                    "text": "Only stacks with own/occupied holdings up to a total of 75%.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Occupied holdings also count as controlling a neighboring holding, allowing large armies to secure a supply route through hostile kingdoms.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Technology boost from military organization in capital: +12.5% per level, up to +100%.",
+                            "children": []
+                        },
+                        {
+                            "text": "Pagan homeland : *0.12, if the religion of the province is an unreformed pagan and the realm ruler is the same form of paganism.",
+                            "children": [
+                                {
+                                    "text": "If Military Organization IV has been researched in your capital county, or if a fort is constructed in the pagan county, this modifier is nullified.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Unreformed pagans are immune to the Pagan Homeland modifier, allowing unreformed pagans of different faiths to fight each other with impunity.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Reformed pagans are immune to the unreformed version of their own branch of paganism, but not other unreformed pagan faiths. With , reformed pagan faiths with the Unrelenting doctrine ignore pagan attrition.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Tengri and Aztec pagans don't get this modifier. Aztecs are subjected to increased attrition from other pagans, while Tengri attackers ignore pagan attrition. With , reformed Tengri must have either the Unrelenting or Eternal Riders doctrine to ignore pagan attrition.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The supply limit has a floor of 1000 soldiers (possible in provinces with multiple epidemic diseases present or with \"Highway Robber Band\" county modifier)."
+                }
+            ]
+        },
+        {
+            "heading": "Use of supply",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "All non-shattered units in a province use supply. Thus, neutral and friendly units can cause your units to take attrition. Giving ally orders can reduce the risk of friendly units contributing to exceeding the supply limit."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you have a unit selected, province tooltips are updated to include \"Total troops when our armies arrive\"."
+                }
+            ]
+        },
+        {
+            "heading": "Monthly attrition (over supply limit)",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If an army exceeds the supply limit of a province, a percentage of troops will die every month due to attrition:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Base land attrition: 5%",
+                            "children": []
+                        },
+                        {
+                            "text": "Terrain modifier: +2.5% for forests and hills. +10% for mountains, arctic, and deserts",
+                            "children": []
+                        },
+                        {
+                            "text": "Epidemic disease: +5%",
+                            "children": []
+                        },
+                        {
+                            "text": "Winter: 10% if mild, 15% if normal, 20% if severe",
+                            "children": []
+                        },
+                        {
+                            "text": "Army leader: -0.1% x martial skill of army's centre commander .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The value above represents a maximum attrition that can occur.  However, if the percentage of troops over the supply limit is low, only a portion of the maximum attrition will occur."
+                }
+            ]
+        },
+        {
+            "heading": "Monthly attrition (out of supplies)",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Armies begin suffering minor attrition when they are no longer in or adjacent to their realm. The monthly percentage becomes more severe the longer they have been out of supply. This makes it dangerous to attack a distant enemy if you must march over neutral or hostile land."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Armies aboard ships do not suffer attrition, but time aboard ships is considered time out of supply. This reduces the effectiveness of unloading ships onto neutral lands to prevent the need to have an amphibious assault battle."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You are always in supply within your own realm, even when attacking a fellow vassal. Occupying a holding extends supply to neighboring provinces. Armies besieging a holding are also supplied if there is free loot available in the province; this free loot will be slowly depleted even if the army is not raiding."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Nomadic horde troops are not affected by \"out of supply\" attrition; this is to complement certain nomadic CBs which can target non-bordering realms."
+                }
+            ]
+        },
+        {
+            "heading": "Event Based loss of troops (Siege Events)",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Although not technically attrition, the besieging army stands to lose numbers due to siege events. This is significant if the besieging army is only marginally outnumbering the defenders, as such events may stop the siege progress. It is possible to deactivate such events from the \"Game Rules\", and it's notable that doing so would not disable the achievements."
+                }
+            ]
+        }
+    ]
+}

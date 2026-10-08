@@ -1,0 +1,673 @@
+{
+    "pageid": 24,
+    "title": "A Game of Thrones",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A Game of Thrones is a mod for CKII based on the award-winning A Song of Ice and Fire series by George R.R. Martin."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Authors have finalized development with version 2.0 and no other major additions will be provided (excluding book related expansions), the mod will still be fixed in case of bugs."
+                }
+            ]
+        },
+        {
+            "heading": "Bookmarks",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The mod currently offers the following scenarios:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The Bleeding Years (Previously: The Seven Kingdoms): -4 AL (7996 using the mod's dating)",
+                            "children": []
+                        },
+                        {
+                            "text": "War of Conquest : -2 AL (7998)",
+                            "children": []
+                        },
+                        {
+                            "text": "Faith Militant : 43 AL (8043)",
+                            "children": []
+                        },
+                        {
+                            "text": "The Rogue Prince : 106 AL (8106)",
+                            "children": []
+                        },
+                        {
+                            "text": "Dance of Dragons : 129 AL (8129)",
+                            "children": []
+                        },
+                        {
+                            "text": "Conquest of Dorne : 157 AL (8157)",
+                            "children": []
+                        },
+                        {
+                            "text": "Blackfyre Rebellion : 195AL (8195)",
+                            "children": []
+                        },
+                        {
+                            "text": "After the Spring : 211 AL (8211)",
+                            "children": []
+                        },
+                        {
+                            "text": "War of the Ninepenny Kings : 259 AL (8259)",
+                            "children": []
+                        },
+                        {
+                            "text": "War of the Usurper aka Robert's Rebellion : 282 AL (8282)",
+                            "children": []
+                        },
+                        {
+                            "text": "The Crowned Stag : 284 AL (8284)",
+                            "children": []
+                        },
+                        {
+                            "text": "The Greyjoy Rebellion : 289 AL (8289)",
+                            "children": []
+                        },
+                        {
+                            "text": "A Game of Thrones : 297 AL (8297). This scenario is a joke scenario, nominally based on book 1 of the series.",
+                            "children": []
+                        },
+                        {
+                            "text": "A Clash of Kings : 299 AL (8299). This scenario is based on book 2 of the series.",
+                            "children": []
+                        },
+                        {
+                            "text": "A Feast for Crows : 300AL (8300). This scenario is set at the start of the book by the same name (book 4) and contains spoilers from all books.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The Official Sub-Mods let's you customize your gameplay by replacing character frames or deleting Essos from the game. Creators also let's you play before The Doom with additional eras submods:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Ghiscari Wars (3000 - 3200)",
+                            "children": []
+                        },
+                        {
+                            "text": "Andal Invasion (6478 - 6699)",
+                            "children": []
+                        },
+                        {
+                            "text": "Rhoynish Wars (7100 - 7300)",
+                            "children": []
+                        },
+                        {
+                            "text": "Valyrian Freehold (7600 - 7800)",
+                            "children": []
+                        },
+                        {
+                            "text": "Century of Blood (7886 - 7974)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Mechanics",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "While the game mainly focuses on translating standard CKII to a Westerosi setting, that necessitates some differences in gameplay."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Here is a list of the most important changes:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The years are counted from the Long Night (8000 years before Aegon's Landing), making 282 AL the year 8282 because there are plans to add a scenario set before Aegon's Landing and the CK2 engine doesn't accept negative dates.",
+                            "children": []
+                        },
+                        {
+                            "text": "Each holding has an additional building. Specific to cultures , all baronies and bishoprics have special upgrades. These all start at a certain level, and cannot be upgraded further. Other, vanilla buildings (such as Castle Village) can be upgraded normally. These provide the overwhelming majority of levy troops in each province, making individual provinces more valuable than in the base game.",
+                            "children": []
+                        },
+                        {
+                            "text": "The number of troops one can field is much higher than in the vanilla - the Crownlands themselves can easily field from 5 to 10 thousand men, and they are one of the less sizable forces. However, levies replenish much slower than in the base game and the battles are more decisive.",
+                            "children": []
+                        },
+                        {
+                            "text": "One can build additional holdings in a province, but due to the hardcoded 'one of every type of holding' requirement, these will be usually temples.",
+                            "children": []
+                        },
+                        {
+                            "text": "Everyone in Westeros, with the exception of the northern Night's Watch duchy, are sworn to the Iron Throne in post conquest scenarios. Due to a number of reasons, even absolute crown authority allows vassals to wage war on other vassals.",
+                            "children": []
+                        },
+                        {
+                            "text": "Megawar setup: every time a succession occurs, there is a good chance of a succession crisis. When this happens, all Lords Paramount (kings) are made independent. They are able to join the King of the Iron Throne, the rebels, or declare independence. Usually, the king will win a succession crisis, but it is certainly not a hard and fast rule. The same thing happens whenever a war is declared on a King of the Iron Throne.",
+                            "children": []
+                        },
+                        {
+                            "text": "95% of all Westerosi provinces are connected by land and straits. Only the Arbor in the far southwest, and the Iron Islands to the northwest are disconnected. However, the Iron Islands are connected to each other.",
+                            "children": []
+                        },
+                        {
+                            "text": "Boats, for the majority of provinces, are not a reality. Only a handful of provinces  - including Dragonstone - have a fleet at all. Only the Ironborn of the Iron Islands have large navies, as boats are included in their cultural buildings . Specifically, the North is never to have boats, at least not ones available to the AI due to AI problems.",
+                            "children": []
+                        },
+                        {
+                            "text": "To ensure that the High Valyrian culture is limited to the Targaryen dynasty only, randomly generated High Valyrian courtiers die off naturally at a young age. Similarly, province culture spread is disabled for the High Valyrian culture.",
+                            "children": []
+                        },
+                        {
+                            "text": "Mercenary forces are hardcoded. Their numbers will rise as time passes, but will seem small for Westeros.",
+                            "children": []
+                        },
+                        {
+                            "text": "Some plot events are connected to the events of the books. However, they might play out in a completely different way.",
+                            "children": []
+                        },
+                        {
+                            "text": "Education (the one you pay for) affects the child's education (e.g. brilliant commander) traits. Other traits (e.g. lustful) are determined by the guardian (the one you choose in a standard way). You may pay for a poor level of education, a standard level and a high level of education.",
+                            "children": []
+                        },
+                        {
+                            "text": "Duel outcomes are affected by your traits, and not by the martial stat. Valyrian swords and traits such as strong and tall increase your odds of winning. If you get a duel chain lasting for several clicks, do not worry - it is WAD and the duel will ultimately reach its conclusion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Valyrian swords are tied to a particular dynasty and inheritable. You also have a small chance of gaining a Valyrian blade in combat, by taking a settlement and ambition events.",
+                            "children": []
+                        },
+                        {
+                            "text": "You can't marry someone who is widowed or a silent sister or a maester or a member of Night's Watch.",
+                            "children": []
+                        },
+                        {
+                            "text": "The chance of taming a dragon depends on various factors, among them visiting the provinces of King's Landing, Dragonstone and Summerhall; being a Targaryen; being High Valyrian.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Troubleshooting",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If you experience a problem with the mod, check the mechanics section below, as some things are intended for the mod. If the issue is not listed here, report it on the Paradox forums or on the mod forums . Known bugs are listed in this thread .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Do NOT click on various characters ('flick' through them) before starting the scenario, as the scenario may be messed up. This is a vanilla bug, however, it's results are much more disastrous in AGOT.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If you are unable to launch the mod or get a black screen, check the settings.txt file in the mod folder first - it has to match the vanilla settings.txt (i.e. the one in your CKII folder).",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If you are using a Mac and the mod crashes, try deleting the loading screens from the mod folder.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Do NOT choose Crowned Stag immediately after any of the new scenarios (the three first in the list) . It might cause weird results. To avoid this, select Robert's Rebellion, then select The Crowned Stag again.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "FAQ",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "What is this?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A Game of Thrones is a total conversion mod for Crusader Kings II, based on George R. R. Martin's fantasy novel series, A Song of Ice and Fire."
+                }
+            ]
+        },
+        {
+            "heading": "Who can I play?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can play as any landed feudal noble in Westeros or Essos, any Wildling/Pirate warlord, the Night's Watch or the merchant republics of the Free Cities, Slaver's Bay and Qarth (DLC required)"
+                }
+            ]
+        },
+        {
+            "heading": "What is \"NB+ AGoT Edition\"?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "It's a submod which changes the way borders are drawn and other nice gfx adjustments. Here's the original mod (thanks to EOOQE for making it compatible with our mod)."
+                }
+            ]
+        },
+        {
+            "heading": "What are some of the new features?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Knights, Maesters, our new \"Megawar\" system for handling civil wars, the Night's Watch, one-on-one duels between characters, several different kinds of magic, and much more."
+                }
+            ]
+        },
+        {
+            "heading": "Is Essos in the mod?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Yes"
+                }
+            ]
+        },
+        {
+            "heading": "I haven't read all the books. Is it safe for me to play this mod?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To a limited extent."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "All scenarios contain setting spoilers. If it's really important to you to not know who the Lord of Winterfell in 255 was, we suggest not playing the mod at all. If you only care about avoiding spoilers for the events of the books and show, however, you'll be safe so long as you follow these instructions:\nDon't read the house descriptions on the Game Over screen.\nDon't go mucking around in the mod's source files, especially the character history files.\nChoose your scenario wisely."
+                }
+            ]
+        },
+        {
+            "heading": "Which scenarios contain spoilers?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The Bleeding Years: No Spoilers",
+                            "children": []
+                        },
+                        {
+                            "text": "War of Conquest: No Spoilers",
+                            "children": []
+                        },
+                        {
+                            "text": "The Dance of the Dragons: The Princess and the Queen Novella",
+                            "children": []
+                        },
+                        {
+                            "text": "Conquest of Dorne: No Spoilers",
+                            "children": []
+                        },
+                        {
+                            "text": "The Blackfyre Rebellion: No Spoilers",
+                            "children": []
+                        },
+                        {
+                            "text": "After the Spring: No Spoilers",
+                            "children": []
+                        },
+                        {
+                            "text": "War of the Usurper: No Spoilers",
+                            "children": []
+                        },
+                        {
+                            "text": "The Crowned Stag: Spoilers - A Dance with Dragons (Books)",
+                            "children": []
+                        },
+                        {
+                            "text": "The Greyjoy Rebellion: Spoilers - A Dance with Dragons (Books)",
+                            "children": []
+                        },
+                        {
+                            "text": "A Clash of Kings: Spoilers - A Game of Thrones, A Clash of Kings, A Storm of Swords, A Dance with Dragons (Books) Season One, Season Two (Show)",
+                            "children": []
+                        },
+                        {
+                            "text": "A Feast for Crows: Spoilers - All books and all seasons of the show. Don't even click on it unless you've read all books!",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "What DLC does the mod need/use?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The mod should run fine no matter which DLC is enabled/disabled."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "However some of the DLC does add content to the mod, here is an overview:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Main Expansions:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The Sword of Islam: Adds only the ability for the player to have multiple wives as a character of the Valyrian religion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Legacy of Rome: Adds castration and blinding capability as well as a couple of flavour events. It does NOT add retinues.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Republic: Allows the Merchant Republic realms to be played, namely the Free Cities, Meereen, Yunkai, Astapor and the Guilds of Qarth. These realms will still be active even without the DLC.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Old Gods: Enables the concubine system for Drowned God and Harpy followers (Pre-DLC system will be used if not enabled). Also adds much flavour, including berserkers, adventurers, new rebels and runestones. Raiding is available for drowned god, wildlings and pirates even without this DLC.",
+                            "children": []
+                        },
+                        {
+                            "text": "Sons of Abraham: Enables the council of the Most Devout and their election of the High Septon. Also adds many religious flavour events, including various Holy Order events/decisions.",
+                            "children": []
+                        },
+                        {
+                            "text": "Rajas of India: Adds flavour to various far eastern cultures, including tiger hunts, gurus and the reincarnation events",
+                            "children": []
+                        },
+                        {
+                            "text": "Charlemagne: Adds the chronicle, custom kingdoms (existing titular kingdoms are still available without DLC) and a 'hero knight' flavour event",
+                            "children": []
+                        },
+                        {
+                            "text": "Way of life: Enables the focus system, allowing a ruler to pick any of the foci available with all associated events decisions. Seduction focus replaces 'visit chambers' interaction when DLC is enabled",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Lords: Adds the nomad mechanics for Dothraki/Jogos Nhai (DLC now required to play these), landless adventurer mechanics for Ironborn, the wolf flavour events and land trade routes.",
+                            "children": []
+                        },
+                        {
+                            "text": "Conclave: Adds the enhanced council/favour mechanics, new education focus system, dynamic mercenaries plus other misc flavour",
+                            "children": []
+                        },
+                        {
+                            "text": "The Reaper's Due: Adds improved epimedic and illness mechanics, including hospitals and court physician treatment events. Adds prosperity and depopulation, as well as other flavour events.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Minor DLC:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Monks and Mystics: Adds subversive religious cults you can join with your character.",
+                            "children": []
+                        },
+                        {
+                            "text": "Ruler Designer: Fully compatible with the mod",
+                            "children": []
+                        },
+                        {
+                            "text": "Customiser: Fully compatible with the mod",
+                            "children": []
+                        },
+                        {
+                            "text": "EU4 Converter: Not compatible",
+                            "children": []
+                        },
+                        {
+                            "text": "Music Packs: The mod's soundtrack currently overrides them, however deleting \"A Game of Thrones/music/songs.txt\" will re-enable vanilla music",
+                            "children": []
+                        },
+                        {
+                            "text": "West African Unit Pack/Portraits: Used for the Summer Islanders, Basilisk Islanders and Sothoryos",
+                            "children": []
+                        },
+                        {
+                            "text": "East African Unit Pack/Portraits: Used for the Naathi",
+                            "children": []
+                        },
+                        {
+                            "text": "Mongol Portraits: Used for the Nefer and Yi Ti",
+                            "children": []
+                        },
+                        {
+                            "text": "Turkish Portraits/units: Used for Lengi",
+                            "children": []
+                        },
+                        {
+                            "text": "Spanish Portraits/units: Used for Moraqi",
+                            "children": []
+                        },
+                        {
+                            "text": "Celtic Portraits/units: Used for Ibbenese",
+                            "children": []
+                        },
+                        {
+                            "text": "All other Face/Unit Packs: Not used",
+                            "children": []
+                        },
+                        {
+                            "text": "Dynasty Coat of Arms Packs: Not used",
+                            "children": []
+                        },
+                        {
+                            "text": "Sunset Invasion: Some things may happen if enabled...",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "I have a copy of the HBO show's opening theme that I acquired completely legitimately. How can I use it as my main menu music?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Convert it to .ogg format, move it to your Crusader Kings II\\mod\\A Game of Thrones\\music folder, and rename it crusaderkings2_maintitle"
+                }
+            ]
+        },
+        {
+            "heading": "What is the 'Old Frames' option in the installer?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Paradox changed the style of the character frames in patch 2.4, selecting this option retains the old style of frames from before this."
+                }
+            ]
+        },
+        {
+            "heading": "I'm a Wildling and I have no idea what I'm doing.",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Wildlings don't respect dynastic ties the way Southerners do. They'll only follow strong leaders. The Wildlings receive a free Invasion CB on all their neighbors, and they receive significant military bonuses from having high prestige, but these bonuses come at two dangerous costs. First, Wildling provinces are ruled only at the Wildlings' pleasure. Anger the people too much, and you may find a revolt on your hands. Second, don't expect any higher-tier titles you create to outlast you - Wildling higher lordships and kingdoms dissolve on their rulers' deaths. As a Wildling, you'll find that power is easy to gain, and much more difficult to keep."
+                }
+            ]
+        },
+        {
+            "heading": "I'm making a CK2 mod and would like to use your Duel Engine or any other part of the mod, or I'd like to use your Duel Engine as a standalone mod.",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Altering or using content from the main AGOT mod for use in a submod or another vanilla mod is fine, permission is granted to all who wish to do so. \nIf using content in a vanilla mod please credit \"the AGOT team\"."
+                }
+            ]
+        },
+        {
+            "heading": "My character has like 25 martial, why is he losing to guys with really low martial in duels?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Martial ability, being a command rating, has no effect on duel outcomes. Traits are what determines this. The combat traits are the most important, whilst others like strong, weak and valyrian swords also contribute."
+                }
+            ]
+        },
+        {
+            "heading": "Are there supposed to be random silent sisters showing up in the Kingsguard/Nightswatch's court?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Yes, the game populates courts with random females. If you move, the game simply adds more, this is the compromise we arrived at"
+                }
+            ]
+        },
+        {
+            "heading": "Why are all High Septons called High Septon I?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A new High Septon extends the practice of septons giving up their family names by renouncing any kind of individual name. This is due to the belief that the individual becoming High Septon is no longer a man but an avatar of the gods."
+                }
+            ]
+        },
+        {
+            "heading": "Fabricating claims isn't working/happening too often, what have you done to it?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The chances of fabricating a claim have not been altered from vanilla, so having loads of claims or none at all in a certain period of time can happen."
+                }
+            ]
+        },
+        {
+            "heading": "I am a French speaker, why are the dynasty names in English?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For French users: si vous voulez jouer avec les dynasties traduites, rendez vous dans Mes Documents/Paradox/mod/A Game of Thrones/Traduction dynastie/FAQ où vous trouverez la démarche à suivre pour jouer avec les noms des Maisons en français."
+                }
+            ]
+        },
+        {
+            "heading": "I am a Mac user; how come the mod doesn't work and how do I fix it?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "See this post ."
+                }
+            ]
+        },
+        {
+            "heading": "Why can't I play as Renly in A Clash of Kings?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "BOOK/SEASON 2 SPOILERS AHEAD:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "We decided that moving the start of the scenario to after Renly's death provided better balance. The old setup with Renly alive and the original events is still possible to play by manually moving the start date to 11th Feb 8299."
+                }
+            ]
+        },
+        {
+            "heading": "Why are my wars ending inconclusively sometimes?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Flicking through different dates and characters on the character selection screen may cause wars to end inconclusively instantly when the game starts. This is a vanilla bug, if it does happen simply restart without flicking."
+                }
+            ]
+        },
+        {
+            "heading": "How do I colonise a ruin?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Ruined provinces are now colonised via a province decision, which is accessed by right clicking on the shield/coat of arms of the province."
+                }
+            ]
+        },
+        {
+            "heading": "I selected the A Game of Thrones bookmark, but the commander of the Dragon's Gate keeps killing everyone! What gives?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "V1.4 was released on April Fools' Day. Though most of the content of this release was legitimate, the A Game of Thrones bookmark is a joke playing on George R. R. Martin's propensity for killing off characters. If you wish to play in the setting of the first book, manually changing the start date should fix the issue."
+                }
+            ]
+        }
+    ]
+}

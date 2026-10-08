@@ -1,0 +1,1776 @@
+{
+    "pageid": 380,
+    "title": "Console commands",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Console commands are instructions to the game that players can use to cheat, experiment, or work around bugs."
+                }
+            ]
+        },
+        {
+            "heading": "Opening the console",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Keep in mind that the console is not accessible in Ironman !"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you don't use Ironman for your current game, you can open the console by typing any of the following:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "` grave accent or backtick",
+                            "children": [
+                                {
+                                    "text": "On US keyboards, located to the left of 1",
+                                    "children": []
+                                },
+                                {
+                                    "text": "on Linux/US international layouts , this is Alt Gr + `",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "§ section sign",
+                            "children": [
+                                {
+                                    "text": "On German/Nordic keyboards, this is ⇧Shift + 3 This may also be the combo of left shift and the §| key to the left of the number 1 on the number row.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "On Spanish and Italian keyboards, this is is Alt + 2 + 1",
+                                    "children": []
+                                },
+                                {
+                                    "text": "On Portuguese keyboards, this is Alt Gr + 4 or Alt + 0167",
+                                    "children": []
+                                },
+                                {
+                                    "text": "On French keyboards, this is ⇧Shift + ! and Alt + 2 + 1",
+                                    "children": []
+                                },
+                                {
+                                    "text": "On Windows, Alt + NumPad 2 + NumPad 1 enters a §.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "On macOS (US), ⌥Option + 6 enters a §.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "List of commands",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Below is a list of commands and any parameter they accept (in order, if more than one) with a description of what the command will do."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "For \" Character \" scope, if none is given then it will default to the player (some commands excepted, such as age). Most targeted commands accept character ids as the optional 2nd parameter, notable exceptions are religion / culture which if the character id is added it must be the first parameter (\"religion orthodox\" or \"religion 555 orthodox\"). If no parameters are listed then assume that it has a single optional character id parameter.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "For \"None\" scope there is only one way to use it, for \"Global\" scope it will toggle things globally, example: marry_anyone allows ALL characters to marry anyone.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Character attributes (diplomacy, intrigue, etc.) normally range from 0-20. However, as the attributes are stored in signed bytes, it ranges from -128 to 127. Correspondingly, the maximum base value a character can achieve is 127. Nonetheless, upon loading a savegame, the base value will be reduced to 100 - if it was above this value.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "<Character ID> can be found by using the Charinfo function and hovering over the person's name.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "<Province ID> corresponds to the \"ID\" number found in the chart of Counties .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Replace spaces in parameter names with underscore (_).",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "NOTE: ANY COMMAND BEGINNING WITH \"debug_\" IS ACCESSIBLE ONLY BY DEVELOPERS—NOT BY PLAYERS.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Scope",
+                            "Command",
+                            "Alias",
+                            "Parameter",
+                            "Parameter",
+                            "Description"
+                        ],
+                        [
+                            "Character",
+                            "add_artifact",
+                            "",
+                            "<Artifact Name>",
+                            "<Character ID> (OPTIONAL)",
+                            "Adds an artifact to the given character"
+                        ],
+                        [
+                            "Character",
+                            "get_all_artifacts",
+                            "",
+                            "<Character ID> (OPTIONAL)",
+                            "",
+                            "Give all artifacts to target character, or the player's character if no target is specified"
+                        ],
+                        [
+                            "Character",
+                            "destroy_artifact",
+                            "",
+                            "<Artifact Name>",
+                            "<Character ID> (OPTIONAL)",
+                            "Removes an artifact from the given character, destroying it"
+                        ],
+                        [
+                            "Character",
+                            "add_diplomacy",
+                            "",
+                            "<Character ID>",
+                            "<Delta>",
+                            "Modifies the base of a character's diplomacy attribute"
+                        ],
+                        [
+                            "Character",
+                            "add_intrigue",
+                            "",
+                            "<Character ID>",
+                            "<Delta>",
+                            "Modifies the base of a character's intrigue attribute"
+                        ],
+                        [
+                            "Character",
+                            "add_learning",
+                            "",
+                            "<Character ID>",
+                            "<Delta>",
+                            "Modifies the base of a character's learning attribute"
+                        ],
+                        [
+                            "Character",
+                            "add_martial",
+                            "",
+                            "<Character ID>",
+                            "<Delta>",
+                            "Modifies the base of a character's martial attribute"
+                        ],
+                        [
+                            "Character",
+                            "add_stewardship",
+                            "",
+                            "<Character ID>",
+                            "<Delta>",
+                            "Modifies the base of a character's stewardship attribute"
+                        ],
+                        [
+                            "Character",
+                            "add_offmap_currency",
+                            "",
+                            "<Offmap Power>",
+                            "<Amount>",
+                            "Gives the player currency with the specified offmap power. For example, to add grace with China: add_offmap_currency offmap_china 5000"
+                        ],
+                        [
+                            "Character",
+                            "add_trait",
+                            "",
+                            "<Trait Name>",
+                            "<Character ID>",
+                            "Adds a trait to the character. Opposites traits are checked. Trait names are all lower case. If no character ID is inputted, the trait will be given to the character you are currently playing instead. The same thing also proves true with the remove_trait, add_modifier and remove_modifier commands."
+                        ],
+                        [
+                            "Character",
+                            "remove_trait",
+                            "",
+                            "<Trait Name>",
+                            "<Character ID>",
+                            "Removes a trait from the character"
+                        ],
+                        [
+                            "Character",
+                            "add_modifier",
+                            "",
+                            "<Modifier Name>",
+                            "<Character ID>, <Days>",
+                            "Adds a modifier to a character. Input -1 for days to have the modifier become permanent."
+                        ],
+                        [
+                            "Character",
+                            "remove_modifier",
+                            "",
+                            "<Modifier Name>",
+                            "<Character ID>",
+                            "Removes a modifier from a character"
+                        ],
+                        [
+                            "Character",
+                            "age",
+                            "",
+                            "<Character ID>",
+                            "<Delta>",
+                            "Modifies a character's age"
+                        ],
+                        [
+                            "Character",
+                            "banish",
+                            "",
+                            "<Character ID> (banished)",
+                            "",
+                            "Banishes a character"
+                        ],
+                        [
+                            "Character",
+                            "capital",
+                            "",
+                            "<Province ID>",
+                            "",
+                            "Moves player capital to province"
+                        ],
+                        [
+                            "Character",
+                            "clr_moved_capital",
+                            "",
+                            "<Character ID> (OPTIONAL)",
+                            "",
+                            "Clears the moved capital-flag of a character."
+                        ],
+                        [
+                            "Character",
+                            "cash",
+                            "wealth",
+                            "<Amount> (OPTIONAL)",
+                            "",
+                            "Adds gold to the player (default 5000). Putting a - before the amount will subtract that amount instead."
+                        ],
+                        [
+                            "Character",
+                            "claim",
+                            "",
+                            "<Title Name>",
+                            "<Character ID> (OPTIONAL)",
+                            "Gives a claim to yourself or another character"
+                        ],
+                        [
+                            "Character",
+                            "coalition",
+                            "",
+                            "<Character 01 ID>",
+                            "<Character 02 ID>",
+                            "<Character 01> starts/joins/leaves a coalition against <Character 02>"
+                        ],
+                        [
+                            "Character",
+                            "council_positions",
+                            "",
+                            "<Character ID or Title Name>",
+                            "",
+                            "Shows the ai scores of each council position"
+                        ],
+                        [
+                            "Character",
+                            "clr_focus",
+                            "",
+                            "<Character ID> (OPTIONAL)",
+                            "",
+                            "Clears the focus of the specified character (or the player character, if no-one is specified) ( WARNING: Clearing other characters' focuses sometimes works... and sometimes crashes the game. Save first!)"
+                        ],
+                        [
+                            "Character",
+                            "culture",
+                            "",
+                            "<Character ID> (OPTIONAL)",
+                            "<Culture>",
+                            "Sets a character's culture"
+                        ],
+                        [
+                            "Character",
+                            "decadence",
+                            "",
+                            "<Delta>",
+                            "",
+                            "Modifies the Decadence of the player's Dynasty relative to unmodified decadence"
+                        ],
+                        [
+                            "Character",
+                            "decision",
+                            "",
+                            "<Decision ID>",
+                            "<Character ID>",
+                            "Executes a decision"
+                        ],
+                        [
+                            "Character",
+                            "die",
+                            "",
+                            "",
+                            "",
+                            "Die a natural death"
+                        ],
+                        [
+                            "Character",
+                            "enforce_peace",
+                            "",
+                            "<Amount>",
+                            "",
+                            "Triggers the enforce peace mechanic in the player's realm. Council must be empowered, other requirements are waived. <Amount> seems to be ignored, confirmation needed."
+                        ],
+                        [
+                            "Character",
+                            "liege_enforce_peace",
+                            "",
+                            "<Amount>",
+                            "",
+                            "Triggers the enforce peace mechanic in the player's liege's realm. Council must be empowered, other requirements are waived. <Amount> seems to be ignored, confirmation needed."
+                        ],
+                        [
+                            "Character",
+                            "enable_ambition",
+                            "",
+                            "<Character ID>",
+                            "",
+                            "Allows a character to pick a new ambition"
+                        ],
+                        [
+                            "Character",
+                            "event",
+                            "",
+                            "<Event ID>",
+                            "<Character ID> or <Province ID> (OPTIONAL)",
+                            "Executes an event for yourself or for another character or province. If no character or province ID is provided, the event is executed for the player character. Note: All triggers are ignored when an event is executed from the console (ie. the event will execute even if it would normally be impossible)."
+                        ],
+                        [
+                            "Debug",
+                            "testevent",
+                            "",
+                            "<Event ID>",
+                            "<Character ID> or <Province ID> (OPTIONAL)",
+                            "Tests an event without triggering it, outputting a list of passed/failed triggers to the console. If no character or province ID is provided, the event is tested for the player character. Note: All triggers without tooltips will completely omitted from the output (eg. any check for character/province/global flags which doesn't have an explicit custom_tooltip )."
+                        ],
+                        [
+                            "Character",
+                            "favor_get",
+                            "",
+                            "<Character ID>",
+                            "",
+                            "Get a favor from character"
+                        ],
+                        [
+                            "Character",
+                            "favor_grant",
+                            "",
+                            "<Character ID>",
+                            "",
+                            "Grant a favor to a character"
+                        ],
+                        [
+                            "Character",
+                            "gfx_culture",
+                            "",
+                            "<Character ID> (OPTIONAL)",
+                            "<Culture>",
+                            "Sets a character's gfx culture based on default graphical_culture of a culture"
+                        ],
+                        [
+                            "Character",
+                            "give_birth",
+                            "",
+                            "<Character ID>",
+                            "",
+                            "Forces a pregnant character to instantly give birth. Note: This is impossible via modding (there is no equivalent script command that can do this)."
+                        ],
+                        [
+                            "Character",
+                            "give_title",
+                            "",
+                            "<Title Name>",
+                            "<Character ID>",
+                            "Gives a title to a character"
+                        ],
+                        [
+                            "Character",
+                            "infamy",
+                            "",
+                            "<Delta>",
+                            "",
+                            "Modifies the player character's threat"
+                        ],
+                        [
+                            "Character",
+                            "imprison",
+                            "",
+                            "<Character ID>(jailed)",
+                            "<Character ID>(jailor)",
+                            "Imprisons a character by another character"
+                        ],
+                        [
+                            "Character",
+                            "join_society",
+                            "",
+                            "<Society Key>",
+                            "",
+                            "Join a society. Valid society names are: monastic_order_benedictine, monastic_order_dominican, monastic_order_orthodox, monastic_order_nestorian, monastic_order_monophysite, monastic_order_hindu, monastic_order_buddhist, monastic_order_jain, hermetics, the_assassins, the_satanists, the_trollcrafters, the_cult_of_kali, the_cold_ones, the_plaguebringers, and secret_religious_society_<religion>"
+                        ],
+                        [
+                            "Character",
+                            "leave_society",
+                            "",
+                            "<Society Key> (OPTIONAL)",
+                            "",
+                            "Leave a society"
+                        ],
+                        [
+                            "Character",
+                            "log_missing_adjectives",
+                            "",
+                            "",
+                            "",
+                            "Logs any title that has no adjective loc key defined (E.G., if the title \"k_title\" is defined, but no loc \"k_title_adj\" is defined)"
+                        ],
+                        [
+                            "Character",
+                            "kill",
+                            "",
+                            "<Character ID>",
+                            "",
+                            "Kills a character"
+                        ],
+                        [
+                            "Character",
+                            "kill_yourself",
+                            "",
+                            "<Character ID>",
+                            "",
+                            "Kills your character. Does not work (\"Not today QA!\"). Use die instead."
+                        ],
+                        [
+                            "Character",
+                            "move",
+                            "",
+                            "<Character ID>(Mover)",
+                            "<Character ID>(Move To)",
+                            "Moves a character to a character's court"
+                        ],
+                        [
+                            "Character",
+                            "neg_opinion",
+                            "",
+                            "<Character ID>(Hater)",
+                            "<Character ID>(Hated)",
+                            "Adds a negative opinion between two characters"
+                        ],
+                        [
+                            "Character",
+                            "nickname",
+                            "",
+                            "<Nickname>",
+                            "<Character ID>",
+                            "Gives a character or the player a nickname"
+                        ],
+                        [
+                            "Character",
+                            "piety",
+                            "",
+                            "<Amount> (OPTIONAL)",
+                            "",
+                            "Adds piety to the player (default 5000)"
+                        ],
+                        [
+                            "Character",
+                            "play",
+                            "",
+                            "<Character ID>",
+                            "",
+                            "Switches to play a character (WARNING: This deletes and resets the chronicle of your current character each time you switch.)"
+                        ],
+                        [
+                            "Character",
+                            "prestige",
+                            "",
+                            "<Amount> (OPTIONAL)",
+                            "",
+                            "Adds prestige to the player (default 5000)"
+                        ],
+                        [
+                            "Character",
+                            "run",
+                            "",
+                            "<file name>",
+                            "",
+                            "Executes script commands from a text file.  The file must be in the Documents/Paradox Interactive/Crusader Kings 2/  folder (as appropriate for your OS).  Commands will be executed in the scope of the player's character."
+                        ],
+                        [
+                            "Character",
+                            "score",
+                            "",
+                            "<Amount> (OPTIONAL)",
+                            "",
+                            "Adds score to the player (default 5000)"
+                        ],
+                        [
+                            "Character",
+                            "techpoints",
+                            "",
+                            "",
+                            "",
+                            "Adds 1000 technology points of each type to the player"
+                        ],
+                        [
+                            "Character",
+                            "max_tech",
+                            "",
+                            "<Province ID> (OPTIONAL)",
+                            "",
+                            "Maxes out tech in all provinces, or in specified province"
+                        ],
+                        [
+                            "Character",
+                            "recalc_succ",
+                            "",
+                            "<Character ID>",
+                            "",
+                            "Recalculate the succession for a character or the player"
+                        ],
+                        [
+                            "Character",
+                            "religion",
+                            "",
+                            "<Character ID> (OPTIONAL)",
+                            "<Religion>",
+                            "Sets a character's religion or player if character not supplied"
+                        ],
+                        [
+                            "Character",
+                            "secret_religion",
+                            "",
+                            "<Character ID> (OPTIONAL)",
+                            "<Religion>",
+                            "Sets a character's secret religion."
+                        ],
+                        [
+                            "Character",
+                            "set_government",
+                            "",
+                            "<Government Tag>",
+                            "<Character ID>  (OPTIONAL)",
+                            "Changes government to specified type (accepted inputs are merchant_republic_government, nomadic_government, feudal_government, theocracy_government, tribal_government, republic_government, muslim_government, theocratic_feudal_government, chinese_imperial_government, confucian_bureaucracy, order_government, roman_imperial_government)"
+                        ],
+                        [
+                            "Character",
+                            "titleowner",
+                            "",
+                            "<Title Name>",
+                            "<Character ID> (OPTIONAL)",
+                            "Reports or sets the holder of a title. Does not include tribal capital holdings."
+                        ],
+                        [
+                            "Character",
+                            "validate_government",
+                            "",
+                            "<Character ID> (OPTIONAL)",
+                            "",
+                            "Validates government of a character"
+                        ],
+                        [
+                            "Character",
+                            "validate_laws",
+                            "",
+                            "<Character ID>",
+                            "",
+                            "Validates the laws of a characters primary holding"
+                        ],
+                        [
+                            "Character",
+                            "validate_lieges",
+                            "",
+                            "<Title Name>",
+                            "",
+                            "Validates the liege of a title"
+                        ],
+                        [
+                            "Character",
+                            "set_char_flag",
+                            "",
+                            "<Flag>",
+                            "<Character ID>(OPTIONAL)",
+                            "Sets a flag for a character"
+                        ],
+                        [
+                            "Character",
+                            "clr_char_flag",
+                            "",
+                            "<Flag>",
+                            "<Character ID>(OPTIONAL)",
+                            "Clears a flag from a character"
+                        ],
+                        [
+                            "Character",
+                            "set_society_grandmaster",
+                            "",
+                            "<Character ID> (OPTIONAL)",
+                            "",
+                            "Sets the grandmaster of the society you're in to the given character"
+                        ],
+                        [
+                            "Character",
+                            "show_all_societies",
+                            "",
+                            "",
+                            "",
+                            "Shows all societies in list of society view"
+                        ],
+                        [
+                            "Character",
+                            "society_rank_up",
+                            "",
+                            "<Amount> (OPTIONAL)",
+                            "",
+                            "Ranks player up in society (default 1)"
+                        ],
+                        [
+                            "Character",
+                            "society_rank_down",
+                            "",
+                            "<Amount> (OPTIONAL)",
+                            "",
+                            "Ranks player down in society (default 1)"
+                        ],
+                        [
+                            "Character",
+                            "society_currency",
+                            "",
+                            "<Amount> (OPTIONAL)",
+                            "",
+                            "Adds society currency to the player (default 5000)"
+                        ],
+                        [
+                            "Character",
+                            "quickbuild",
+                            "",
+                            "",
+                            "",
+                            "Player's constructions are finished immediately"
+                        ],
+                        [
+                            "Character",
+                            "usurp",
+                            "",
+                            "<Title Name>",
+                            "<Character ID>",
+                            "Sets a title to be usurped by a character; if title currently does not exist, creates the title instead."
+                        ],
+                        [
+                            "Global",
+                            "activate_artifacts",
+                            "",
+                            "",
+                            "",
+                            "All artifacts are always active regardless of activation triggers. Disabled as of at least 3.0.0."
+                        ],
+                        [
+                            "Global",
+                            "allow_laws",
+                            "",
+                            "",
+                            "",
+                            "Toggles the ability to change laws freely"
+                        ],
+                        [
+                            "Global",
+                            "real_fathers",
+                            "",
+                            "",
+                            "",
+                            "Shows the true fathers in the family tree"
+                        ],
+                        [
+                            "Global",
+                            "charinfo",
+                            "debug_mode",
+                            "<Character ID>",
+                            "",
+                            "Adds debugging information to character, title and event tooltips Reveals your spouse's other lovers"
+                        ],
+                        [
+                            "Global",
+                            "de_jure_counties",
+                            "",
+                            "",
+                            "",
+                            "Shows de jure counties map mode"
+                        ],
+                        [
+                            "Global",
+                            "discover_plots",
+                            "",
+                            "",
+                            "",
+                            "Toggles auto plot discovery"
+                        ],
+                        [
+                            "Global",
+                            "fow",
+                            "",
+                            "<Province ID> (OPTIONAL)",
+                            "",
+                            "Turns off fog of war in a province or in general"
+                        ],
+                        [
+                            "Global",
+                            "game_speed",
+                            "",
+                            "<Speed>",
+                            "",
+                            "Sets the game speed, from 0 to 4"
+                        ],
+                        [
+                            "Global",
+                            "game_paused",
+                            "",
+                            "<true/false> (OPTIONAL)",
+                            "",
+                            "Toggles/sets the game paused state, argument must be lowercase"
+                        ],
+                        [
+                            "Global",
+                            "get_offmap_holder",
+                            "",
+                            "<Offmap Power>",
+                            "",
+                            "Displays the name and character id of the current holder of an offmap power"
+                        ],
+                        [
+                            "Global",
+                            "set_offmap_status",
+                            "",
+                            "<Offmap Power>",
+                            "<Status>",
+                            "Sets the status of the specified offmap power (e.g. china_stable, china_unrest, china_civil_war, china_mongol_invasion, china_jurchen_invasion, china_famine, china_plague, china_golden_age)"
+                        ],
+                        [
+                            "Global",
+                            "set_offmap_policy",
+                            "",
+                            "<Offmap Power>",
+                            "<Policy>",
+                            "Sets the policy of the specified offmap power (e.g. china_open, china_isolationist, china_expansionist)"
+                        ],
+                        [
+                            "Global",
+                            "kill_offmap_ruler",
+                            "",
+                            "<Offmap Power>",
+                            "",
+                            "Kills the ruler specified offmap power"
+                        ],
+                        [
+                            "Global",
+                            "kill_offmap_dynasty",
+                            "",
+                            "<Offmap Power>",
+                            "",
+                            "Kills the ruler specified offmap power, and generates a new one of a different dynasty"
+                        ],
+                        [
+                            "Global",
+                            "manpower",
+                            "",
+                            "<Amount> (OPTIONAL)",
+                            "",
+                            "Adds nomadic manpower to a nomad player character (default 5000)"
+                        ],
+                        [
+                            "Global",
+                            "population",
+                            "",
+                            "<Amount> (OPTIONAL)",
+                            "",
+                            "Adds nomadic population to a nomad player character (default 5000)"
+                        ],
+                        [
+                            "Global",
+                            "marry_anyone",
+                            "",
+                            "",
+                            "",
+                            "Toggles the ability to marry anyone"
+                        ],
+                        [
+                            "Global",
+                            "morehumans",
+                            "humans",
+                            "<Amount>",
+                            "",
+                            "Adds more humans"
+                        ],
+                        [
+                            "Global",
+                            "neg_diplo",
+                            "",
+                            "",
+                            "",
+                            "Toggles the ability to send diplomatic messages that will be refused"
+                        ],
+                        [
+                            "Global",
+                            "nextsong",
+                            "",
+                            "",
+                            "",
+                            "Changes the currently playing soundtrack"
+                        ],
+                        [
+                            "Global",
+                            "listsongs",
+                            "",
+                            "",
+                            "",
+                            "Shows all available songs"
+                        ],
+                        [
+                            "Global",
+                            "outbreak",
+                            "",
+                            "<Disease>",
+                            "",
+                            "Starts specified disease outbreak in a random province. Black Death may only start in Kundina and Jiuquan"
+                        ],
+                        [
+                            "Global",
+                            "plots_known",
+                            "",
+                            "",
+                            "",
+                            "Toggles all plots to always be known"
+                        ],
+                        [
+                            "Global",
+                            "recalc_council",
+                            "",
+                            "",
+                            "",
+                            "Will recalc the council positions of each council member"
+                        ],
+                        [
+                            "Global",
+                            "reload_succession_voting",
+                            "",
+                            "",
+                            "",
+                            "Reloads succession voting patterns"
+                        ],
+                        [
+                            "Global",
+                            "set_flag",
+                            "",
+                            "<Flag>",
+                            "",
+                            "Sets a global flag"
+                        ],
+                        [
+                            "Global",
+                            "clr_flag",
+                            "",
+                            "<Flag>",
+                            "",
+                            "Clears a global flag"
+                        ],
+                        [
+                            "Global",
+                            "set_prov_flag",
+                            "",
+                            "<Flag>",
+                            "<Province ID>",
+                            "Sets a flag for a province"
+                        ],
+                        [
+                            "Global",
+                            "clr_prov_flag",
+                            "",
+                            "<Flag>",
+                            "<Province ID>",
+                            "Clears a flag from a province"
+                        ],
+                        [
+                            "Global",
+                            "validate_cultural_names",
+                            "",
+                            "",
+                            "",
+                            "Validates cultural title names"
+                        ],
+                        [
+                            "Global",
+                            "spawn_disease",
+                            "",
+                            "<Disease>",
+                            "<Province ID>",
+                            "Spawn specified disease in chosen province. Black Death will start in either Kundina or Jiuquan"
+                        ],
+                        [
+                            "None",
+                            "character_stats",
+                            "",
+                            "",
+                            "",
+                            "Displays various game statistics, such as number of characters, plots, and fertility."
+                        ],
+                        [
+                            "None",
+                            "dynasty_stats",
+                            "",
+                            "",
+                            "",
+                            "Displays various dynasty statistics, including the number of unique dynasties and how many historical dynasties have died off."
+                        ],
+                        [
+                            "None",
+                            "destroy_settlement",
+                            "",
+                            "<Title Name>",
+                            "",
+                            "Destroys a holding. Takes a barony title (b_<name>) or destroys the capital of a county title (c_<name>)"
+                        ],
+                        [
+                            "None",
+                            "murder",
+                            "",
+                            "<Character ID>(Murderer)",
+                            "<Character ID>(Victim)",
+                            "One character attempts to murder another. Takes two more optional arguments: [<Auto success>( 1/0 )] [<Auto discover>( 1/0 )]"
+                        ],
+                        [
+                            "None",
+                            "pollinate",
+                            "",
+                            "<Character ID>(Mother)",
+                            "<Character ID>(Father)",
+                            "Impregnates a character by another character"
+                        ],
+                        [
+                            "None",
+                            "cuckoo",
+                            "",
+                            "<Character ID>(Mother)",
+                            "<Character ID>(Father)",
+                            "Impregnates a character by another character, father unknown"
+                        ],
+                        [
+                            "None",
+                            "revolt",
+                            "",
+                            "<Province ID>",
+                            "",
+                            "Starts a Revolt in a province"
+                        ],
+                        [
+                            "None",
+                            "succ",
+                            "",
+                            "<Succession Type>",
+                            "",
+                            "Changes the succession type (WARNING: Dangerous). Valid values: gavelkind, elective_gavelkind, tanistry, seniority, primogeniture, feudal_elective, ultimogeniture, turkish_succession, papal_succession, appointment, open_elective, catholic_bishopric, patrician_elective, nomad_succession, offmap_succession"
+                        ],
+                        [
+                            "None",
+                            "add_lover",
+                            "",
+                            "<Character ID>",
+                            "<Character ID>",
+                            "Makes a character the lover of another character"
+                        ],
+                        [
+                            "None",
+                            "add_friend",
+                            "",
+                            "<Character 01 ID>",
+                            "<Character 02 ID> (OPTIONAL)",
+                            "Makes the character your friend"
+                        ],
+                        [
+                            "None",
+                            "remove_friend",
+                            "",
+                            "<Character 01 ID>",
+                            "<Character 02 ID> (OPTIONAL)",
+                            "Removes the character as your friend"
+                        ],
+                        [
+                            "None",
+                            "add_rival",
+                            "",
+                            "<Character 01 ID>",
+                            "<Character 02 ID> (OPTIONAL)",
+                            "Makes a character your rival"
+                        ],
+                        [
+                            "None",
+                            "remove_rival",
+                            "",
+                            "<Character 01 ID>",
+                            "<Character 02 ID> (OPTIONAL)",
+                            "Removes the character as your rival"
+                        ],
+                        [
+                            "None",
+                            "flip_mapmodes",
+                            "",
+                            "",
+                            "",
+                            "Cycles to the next map mode each day"
+                        ],
+                        [
+                            "None",
+                            "province_religion",
+                            "prov_rel",
+                            "<Province ID>",
+                            "<Religion>",
+                            "Sets a province's religion"
+                        ],
+                        [
+                            "None",
+                            "run_commands_from_file",
+                            "rcff, runcmdff",
+                            "<File Name>",
+                            "",
+                            "Reads a file where each line is executed as a console command"
+                        ],
+                        [
+                            "Debug",
+                            "clear",
+                            "",
+                            "",
+                            "",
+                            "Clears the console"
+                        ],
+                        [
+                            "Debug",
+                            "debug_ai",
+                            "",
+                            "<Character ID>",
+                            "recalc (OPTIONAL)",
+                            "Displays AI strategy for a character (empty ID to turn off)"
+                        ],
+                        [
+                            "Debug",
+                            "debug_aistrength",
+                            "",
+                            "",
+                            "",
+                            "Prints some AI Strength data"
+                        ],
+                        [
+                            "Debug",
+                            "debug_assert",
+                            "",
+                            "",
+                            "",
+                            "Toggles asserts on/off"
+                        ],
+                        [
+                            "Debug",
+                            "debug_bloom",
+                            "",
+                            "",
+                            "",
+                            "Toggles Bloom on/off"
+                        ],
+                        [
+                            "Debug",
+                            "debug_borders",
+                            "",
+                            "",
+                            "",
+                            "Toggles Borders on/off"
+                        ],
+                        [
+                            "Debug",
+                            "debug_crash",
+                            "",
+                            "",
+                            "",
+                            "Force game to crash"
+                        ],
+                        [
+                            "Debug",
+                            "debug_citysprawl",
+                            "",
+                            "",
+                            "",
+                            "Toggles Citysprawl on/off"
+                        ],
+                        [
+                            "Debug",
+                            "debug_dumpevents",
+                            "",
+                            "",
+                            "",
+                            "Dump Event data to dump_events.txt"
+                        ],
+                        [
+                            "Debug",
+                            "debug_events",
+                            "",
+                            "",
+                            "",
+                            "Start Counting events"
+                        ],
+                        [
+                            "Debug",
+                            "debug_hires",
+                            "",
+                            "",
+                            "",
+                            "Toggles Terrain Hires mode on/off"
+                        ],
+                        [
+                            "Debug",
+                            "debug_info",
+                            "",
+                            "",
+                            "",
+                            "Toggles Debug info"
+                        ],
+                        [
+                            "Debug",
+                            "debug_lines",
+                            "",
+                            "",
+                            "",
+                            "Toggles Debuglines"
+                        ],
+                        [
+                            "Debug",
+                            "debug_lockcamera",
+                            "",
+                            "",
+                            "",
+                            "Toggles Camera locked on/off"
+                        ],
+                        [
+                            "Debug",
+                            "debug_name",
+                            "",
+                            "",
+                            "",
+                            "Generates names for provinces"
+                        ],
+                        [
+                            "Debug",
+                            "debug_nogui",
+                            "",
+                            "",
+                            "",
+                            "Toggles GUI on/off"
+                        ],
+                        [
+                            "Debug",
+                            "debug_nomen",
+                            "noman, nomen, nm",
+                            "",
+                            "",
+                            "Toggles Nomen"
+                        ],
+                        [
+                            "Debug",
+                            "debug_nomouse",
+                            "",
+                            "",
+                            "",
+                            "Toggles mouse scrollwheel on/off"
+                        ],
+                        [
+                            "Debug",
+                            "debug_postfx",
+                            "",
+                            "",
+                            "",
+                            "Toggles PostFX on/off"
+                        ],
+                        [
+                            "Debug",
+                            "debug_rivers",
+                            "",
+                            "",
+                            "",
+                            "Toggles Rivers on/off"
+                        ],
+                        [
+                            "Debug",
+                            "debug_sky",
+                            "",
+                            "",
+                            "",
+                            "Toggles Sky on/off"
+                        ],
+                        [
+                            "Debug",
+                            "debug_smooth",
+                            "",
+                            "",
+                            "",
+                            "Toggle framesmoothing"
+                        ],
+                        [
+                            "Debug",
+                            "debug_terrain",
+                            "",
+                            "",
+                            "",
+                            "Toggles Terrain on/off"
+                        ],
+                        [
+                            "Debug",
+                            "debug_textures",
+                            "",
+                            "",
+                            "",
+                            "Writes Texture info to application debug log"
+                        ],
+                        [
+                            "Debug",
+                            "debug_ti",
+                            "",
+                            "",
+                            "",
+                            "Toggles Terra Incognita on/off"
+                        ],
+                        [
+                            "Debug",
+                            "debug_tooltip",
+                            "",
+                            "",
+                            "",
+                            "Toggles Tooltips on/off"
+                        ],
+                        [
+                            "Debug",
+                            "debug_trees",
+                            "",
+                            "",
+                            "",
+                            "Toggles Trees on/off"
+                        ],
+                        [
+                            "Debug",
+                            "debug_triggerassert",
+                            "",
+                            "",
+                            "",
+                            "Force game to throw an assert"
+                        ],
+                        [
+                            "Debug",
+                            "debug_volume",
+                            "",
+                            "<Volume Delta>",
+                            "",
+                            "Modifies music volume"
+                        ],
+                        [
+                            "Debug",
+                            "debug_water",
+                            "",
+                            "",
+                            "",
+                            "Toggles Water on/off"
+                        ],
+                        [
+                            "Debug",
+                            "debug_wireframe",
+                            "",
+                            "",
+                            "",
+                            "Toggles forced wireframe on/off"
+                        ],
+                        [
+                            "Debug",
+                            "debug_yesmen",
+                            "yesman, yesmen, ym",
+                            "",
+                            "",
+                            "Toggles Yesmen; the AI will accept all diplomatic offers from the user. For example, request invasions from the Pope."
+                        ],
+                        [
+                            "Debug",
+                            "debug_zoom",
+                            "",
+                            "",
+                            "",
+                            "Zooms in the game"
+                        ],
+                        [
+                            "Debug",
+                            "eventinfo",
+                            "",
+                            "",
+                            "",
+                            "Prints the number of running events (adds debug info to character status info)"
+                        ],
+                        [
+                            "Debug",
+                            "guibounds",
+                            "gui",
+                            "",
+                            "",
+                            "Toggles GUI bounds debug"
+                        ],
+                        [
+                            "Debug",
+                            "fullscreen",
+                            "",
+                            "",
+                            "",
+                            "Toggles fullscreen"
+                        ],
+                        [
+                            "Debug",
+                            "hello",
+                            "",
+                            "<Character ID or Title Name>",
+                            "",
+                            "Opens the character screen or title screen"
+                        ],
+                        [
+                            "Debug",
+                            "help",
+                            "",
+                            "<Command Name> (OPTIONAL)",
+                            "",
+                            "Print out all console commands or a specific command description"
+                        ],
+                        [
+                            "Debug",
+                            "helplog",
+                            "",
+                            "",
+                            "",
+                            "Print out all console commands to game.log"
+                        ],
+                        [
+                            "Debug",
+                            "noai",
+                            "",
+                            "",
+                            "",
+                            "Toggles AI"
+                        ],
+                        [
+                            "Debug",
+                            "numcoas",
+                            "",
+                            "",
+                            "",
+                            "Prints the number of used coat of arms"
+                        ],
+                        [
+                            "Debug",
+                            "observe",
+                            "",
+                            "",
+                            "",
+                            "Switches to observer mode, by playing no character at all, and no longer shows messages or pauses the game. Ctrl+clicking a character takes partial control, pausing only on succession and call-to-arms."
+                        ],
+                        [
+                            "Debug",
+                            "print_player_events",
+                            "",
+                            "",
+                            "",
+                            "Print all player events to player_events.txt"
+                        ],
+                        [
+                            "Debug",
+                            "print_ai_events",
+                            "",
+                            "",
+                            "",
+                            "Print all ai events to ai_events.txt"
+                        ],
+                        [
+                            "Debug",
+                            "print_global_flags",
+                            "pgf",
+                            "",
+                            "",
+                            "Print all global flags"
+                        ],
+                        [
+                            "Debug",
+                            "print_global_variables",
+                            "print_global_vars, pgv",
+                            "",
+                            "",
+                            "Print all global variables"
+                        ],
+                        [
+                            "Debug",
+                            "print_holding_numbers",
+                            "",
+                            "",
+                            "",
+                            "Prints the number of holdings defined for each non-wasteland county, sorted by # of holdings. Useful if you want to ensure all counties can support up to 7 slots."
+                        ],
+                        [
+                            "Debug",
+                            "print_randomlog",
+                            "",
+                            "",
+                            "",
+                            "Dumps content of the randomlog to randomlog.log"
+                        ],
+                        [
+                            "Debug",
+                            "refresh_portraits",
+                            "",
+                            "",
+                            "",
+                            "Sets all character portraits to be refreshed asap"
+                        ],
+                        [
+                            "Debug",
+                            "reload",
+                            "",
+                            "<File Name>",
+                            "",
+                            "Reloads the gui or lua file"
+                        ],
+                        [
+                            "Debug",
+                            "reloadevents",
+                            "",
+                            "",
+                            "",
+                            "Reloads the event database"
+                        ],
+                        [
+                            "Debug",
+                            "reloadfx",
+                            "",
+                            "map/mapname/postfx or *.fx filename",
+                            "",
+                            "Reloads the shader"
+                        ],
+                        [
+                            "Debug",
+                            "reloadgovernmentflavor",
+                            "",
+                            "",
+                            "",
+                            "Reloads the government flavor"
+                        ],
+                        [
+                            "Debug",
+                            "reloadinterface",
+                            "",
+                            "",
+                            "",
+                            "Reloads the entire interface"
+                        ],
+                        [
+                            "Debug",
+                            "reloadloc",
+                            "",
+                            "",
+                            "",
+                            "Reloads the localisation"
+                        ],
+                        [
+                            "Debug",
+                            "reloadpositions",
+                            "",
+                            "",
+                            "",
+                            "Reloads the council position database"
+                        ],
+                        [
+                            "Debug",
+                            "reloadtexture",
+                            "",
+                            "<Texture File Name>",
+                            "",
+                            "Reloads the specified texture"
+                        ],
+                        [
+                            "Debug",
+                            "save_without_ironman",
+                            "",
+                            "<Save Name>",
+                            "",
+                            "Saves the current game without Ironman"
+                        ],
+                        [
+                            "Debug",
+                            "spawnactor",
+                            "",
+                            "<Actorname>",
+                            "<Animation> (OPTIONAL)",
+                            "<Title Name> OPTIONAL Spawns an actor with an optional animation and tabard title"
+                        ],
+                        [
+                            "Debug",
+                            "timer",
+                            "",
+                            "",
+                            "",
+                            "Prints out debug timing info"
+                        ],
+                        [
+                            "Debug",
+                            "timer_start",
+                            "",
+                            "",
+                            "",
+                            "Starts debug timing"
+                        ],
+                        [
+                            "Debug",
+                            "timer_restart",
+                            "",
+                            "",
+                            "",
+                            "Restarts (resets and starts) debug timing"
+                        ],
+                        [
+                            "Debug",
+                            "timer_reset",
+                            "",
+                            "",
+                            "",
+                            "Resets debug timing"
+                        ],
+                        [
+                            "Debug",
+                            "timer_stop",
+                            "",
+                            "",
+                            "",
+                            "Stops debug timing"
+                        ],
+                        [
+                            "Debug",
+                            "timer_dump",
+                            "",
+                            "",
+                            "",
+                            "Dumps debug timing info"
+                        ],
+                        [
+                            "Debug",
+                            "ct",
+                            "",
+                            "",
+                            "",
+                            "Puts timer info in clipboard"
+                        ],
+                        [
+                            "Debug",
+                            "version",
+                            "",
+                            "",
+                            "",
+                            "Print out current version of the game"
+                        ],
+                        [
+                            "Debug",
+                            "window",
+                            "wnd",
+                            "<open/close>",
+                            "<window name>",
+                            "Opens or closes the specified window"
+                        ],
+                        [
+                            "Debug",
+                            "wipe_achievements",
+                            "",
+                            "",
+                            "",
+                            "Wipe out all CK2 Steam achievements . WARNING: CANNOT BE UNDONE!"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "( WARNING: Clearing other characters' focuses sometimes works... and sometimes crashes the game. Save first!)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: All triggers are ignored when an event is executed from the console (ie. the event will execute even if it would normally be impossible)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: All triggers without tooltips will completely omitted from the output (eg. any check for character/province/global flags which doesn't have an explicit custom_tooltip )."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: This is impossible via modding (there is no equivalent script command that can do this)."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adds debugging information to character, title and event tooltips",
+                            "children": []
+                        },
+                        {
+                            "text": "Reveals your spouse's other lovers",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Variables",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Character ID: Found using the 'charinfo' command.  It is listed on with the usual mouse-over stats.",
+                            "children": []
+                        },
+                        {
+                            "text": "Province ID: See provinces",
+                            "children": []
+                        },
+                        {
+                            "text": "Title Name:",
+                            "children": [
+                                {
+                                    "text": "Found using the 'charinfo' command. Hovering over a title's shield/coat-of-arms shows you the name of the title as 'Tag'.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Titles follow a convention. It is usually a predictable name with Empires starting with \"e_\", Kingdoms with \"k_\", Duchies with \"d_\", Counties with \"c_\", and Settlements (baronies/bishoprics/cities/patrician houses) with \"b_\".",
+                                    "children": [
+                                        {
+                                            "text": "An example would be e_britannia for \"Empire of Britannia\".",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "Some exceptions exist. For example:",
+                                            "children": [
+                                                {
+                                                    "text": "e_hre for the Holy Roman Empire",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "text": "d_western_isles for the duchy of the isles",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "text": "c_french_leon for the county of Leon in Brittany",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "text": "b_st_davids for the bishopric of Tyddewi in Dyfed",
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "Be aware, that other cultures may have different names for the same titles!",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "Refer to common/landed_titles/landed_titles.txt for titles that can neither be found in game, nor guessed.",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Nickname: See nicknames , format is nick_the_xxx",
+                            "children": []
+                        },
+                        {
+                            "text": "Trait Name: See traits",
+                            "children": []
+                        },
+                        {
+                            "text": "Settlement Name: see Title Name above. Only titles starting with \"b_\" or \"c_\" are settlements.",
+                            "children": []
+                        },
+                        {
+                            "text": "Disease Name: One of the epidemic diseases",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        }
+    ]
+}

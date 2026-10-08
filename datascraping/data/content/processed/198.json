@@ -1,0 +1,3327 @@
+{
+    "pageid": 198,
+    "title": "Scopes",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Scopes are used in scripting to select entities in order to check for conditions or apply commands ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Scopes always have a bracketed block on the right side:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "But not all bracketed blocks are scopes: some are function blocks ( option , trigger , mean_time_to_happen ,...), operators ( AND ), flow control statements ( if , limit ), or clause for complex conditions or commands ( create_character , ...)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Ten types of scopes can be created from script: character, title/holding, province, war, siege/flank, unit, religion, culture, society, and artifact. There is also a special portrait scope used for portrait rendering rules."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Scopes can be nested (see scope chain ), and are usually relative to the scope from which there are called, except for the ones that are global and can be called from \"Any\" scope."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Triggers and effects in scopes are only evaluated and executed if the scope exists. This can be used with always = yes to check for the existence of a scope in a trigger or for effects that you only want to execute if, for example, a character's religion has a religious head."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that the condition tooltips within any_ scopes are misleading and only show whether the conditions are satisfied for one specific, seemingly randomly-chosen thing contained within the scope, and thus may show that some conditions are false even when the scope itself evaluates to true.  These are best overridden with a custom_tooltip ."
+                }
+            ]
+        },
+        {
+            "heading": "Condition vs command scopes",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "When used within a condition block, a scope allows to check whether any entity is matched by that scope:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When used within a command block, a scope allows to apply commands on each entity matched by that scope:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some scopes only work in a condition block (this is rare), and some only work in effect command blocks (all random_* scopes)."
+                }
+            ]
+        },
+        {
+            "heading": "Count",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "any_ scopes can use count = N . For condition scopes, the scope will evaluate to true only if at least N items match. For effect scopes, the scope will execute for at most N items ( not randomized)."
+                }
+            ]
+        },
+        {
+            "heading": "Limit",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Please help improve this article or section by expanding it with: explain how limit works."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Preferred limit",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "random_ scopes (except for random_quest_target ) allow for one or multiple preferred_limit blocks in addition to the regular limit . When preferred limits are used, the first one that at least one target fulfills will be used in addition to the limit. If no preferred limit is fulfilled, only the base limit gets used. Very useful for when you want to pick a better target when one is available."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The following example would give 1000 gold to a random independent Norwegian with less than 1000 gold, if one exists. If none exists, it'll give it to a random independent North Germanic with less than 1000 gold. If none exists, it'll give it to a random independent ruler of any culture with less than 1000 gold."
+                }
+            ]
+        },
+        {
+            "heading": "Score value",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "any_ scopes can be narrowed to the top scorer(s) by specifying a score_value system:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If there is a tie in score, only 1 (or count ) of the highest-scoring items will be selected, but the pick is not randomized. Set of modifiers can be defined in common/scripted_score_values/ for reuse."
+                }
+            ]
+        },
+        {
+            "heading": "Quickcard",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The most important scopes are shown in this quickcard:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Legend:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "(!) CPU heavy, use with care",
+                            "children": []
+                        },
+                        {
+                            "text": "(scope) deprecated variant, rarely used in vanilla",
+                            "children": []
+                        },
+                        {
+                            "text": "* coming in some next patch [1]",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "List of scopes",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Character",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Character scopes are all scopes that target characters. Most scopes in the game are character scopes. The \"from scope\" column shows what scope(s) it can be called from."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that dead characters are special: they usually need one of the scopes with suffix _even_if_dead to be scoped to (ex: any_child_even_if_dead , and some scopes may not work inside a dead character scope."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Scope",
+                            "Used in vanilla",
+                            "Description",
+                            "Trigger",
+                            "Effect",
+                            "From scope"
+                        ],
+                        [
+                            "c_%character_ID%",
+                            "✓",
+                            "Direct scoping to character by ID. For instance if character has ID 12345: c_12345 = { } This is generally pointless as new character IDs are generated randomly, but it can be used for scripting historical events for characters defined in history with a pre-defined ID.",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "%trait_name%",
+                            "✓",
+                            "In a trigger scope, this scopes to all characters with given trait. In an effect scope, this scopes to a random character with the given trait. The given trait needs to have the flag cached = yes. on_hajj = {\n    NOR = {\n\thas_character_flag = hajj_arrived_in_mecca\n\topinion = { who = ROOT value >= 0 }\n    }\n} Warning : count = N doesn't work in this scope, as it's not an any_ scope.",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "any_allied_character",
+                            "✓",
+                            "Scopes to all allies. Expensive calculation, use with care [2]",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_artifact_owner",
+                            "X",
+                            "Scopes to anyone who has ever owned the artifact , including the current owner. Does not work on artifacts that have the history = no parameter.",
+                            "✓",
+                            "✓",
+                            "Artifact"
+                        ],
+                        [
+                            "any_attacker",
+                            "✓",
+                            "Scopes to all attackers in a war",
+                            "✓",
+                            "✓",
+                            "War"
+                        ],
+                        [
+                            "any_backed_character",
+                            "✓",
+                            "Scopes to all characters whose plots a character is supporting",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_bloodline_member any_bloodline_member_including_dead",
+                            "X",
+                            "Scopes to all members of the current bloodline",
+                            "✓",
+                            "✓",
+                            "Bloodline"
+                        ],
+                        [
+                            "any_character",
+                            "✓",
+                            "Scopes to all characters, except for offmap rulers. WARNING CPU HEAVY",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "any_child any_child_even_if_dead",
+                            "✓",
+                            "Scopes to all of a character's children",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_claimant",
+                            "✓",
+                            "Scopes to all claimants of a title Known bug: Nothing inside this scope will produce tooltips (including custom_tooltip ).",
+                            "✓",
+                            "✓",
+                            "Title"
+                        ],
+                        [
+                            "any_close_relative",
+                            "✓",
+                            "Scopes to all living siblings, children, grandchildren, parents, grandparents, and niblings. NOTE: is_close_relative includes uncles, aunts, and spouse; any_close_relative does not.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_courtier",
+                            "✓",
+                            "Scopes to everyone in the same court as the character. Note that it will match prisoners (even if foreign) and councillors (even if landed).",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_courtier_or_vassal",
+                            "✓",
+                            "Primarily used to find minor title holders: any_courtier_or_vassal = {\n    has_minor_title = title_court_physician\n    liege = { character = PREVPREV }\n} For direct subjects including courtiers abroad, you must use the inefficient any_character scope instead: any_character = {\n    independent = no\n    liege = { character = PREVPREV }\n}",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_crusade_defender",
+                            "✓",
+                            "Scopes to all characters who are defending in a new-style Crusade",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_crusade_participant",
+                            "✓",
+                            "Scopes to all characters who are attacking in a new-style Crusade",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_current_enemy",
+                            "✓",
+                            "Scopes to all characters actively at war with a character. Both characters have to be participating directly in the war, not as vassals",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_de_jure_vassal",
+                            "✓",
+                            "Scopes to all de jure vassals of a character or title.",
+                            "X [3]",
+                            "✓",
+                            "Character, title"
+                        ],
+                        [
+                            "any_defender",
+                            "✓",
+                            "Scopes to all defenders in a war",
+                            "✓",
+                            "✓",
+                            "War"
+                        ],
+                        [
+                            "any_dynasty_member any_dynasty_member_even_if_dead",
+                            "✓",
+                            "Scopes to all members of a character's dynasty . Does not include ROOT . If the current scope is the same as ROOT then this will scope to all dynasty members except the current scope, else this will scope to all dynasty members including the current scope.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_elector_character",
+                            "✓",
+                            "Scopes to all electors of a title",
+                            "✓",
+                            "✓",
+                            "Title"
+                        ],
+                        [
+                            "any_enemy_plotter",
+                            "X",
+                            "Scopes to any character (known/unknown) plotting against the character in scope",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_faction_backer",
+                            "✓",
+                            "Scopes to faction members. Faction field can be used to specify faction (ex: faction = faction_lower_tribal_organization ). Used in the character scope currently leading the faction.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_favor_holder",
+                            "X",
+                            "Scopes to all characters to whom the scoped character owes a favor",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_favor_ower",
+                            "✓",
+                            "Scopes to all characters who owe a favor to the scoped character",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_friend",
+                            "✓",
+                            "Scopes to all of a character's friends",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_host_courtier",
+                            "✓",
+                            "Scopes to all characters in the same court. Shorter version of host = { any_courtier = { ... } }",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "any_independent_ruler",
+                            "✓",
+                            "Scopes to all independent rulers. Doesn't include ROOT . Excludes revolts; to include them, use a broader scope with limit = { liege = { character = PREV } } .",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "any_known_enemy_plotter",
+                            "X",
+                            "Scopes to any known character plotting against the character in scope",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_known_plotter",
+                            "✓",
+                            "Scopes to any plotter whose plot the scoped character knows about",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_kill_list_character",
+                            "✓",
+                            "Scopes to anyone in the character's kill list.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_liege",
+                            "✓",
+                            "Scopes to all lieges a character has, regardless of how many tiers above. This includes liege and top_liege scopes. If THIS is independent, scopes to nothing.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_lover",
+                            "✓",
+                            "Scopes to all lovers a character has",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_neighbor_independent_ruler",
+                            "✓",
+                            "Scopes to all independent rulers whose realm neighbors the realm you are in.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_non_aggression_pact_character",
+                            "✓",
+                            "Scopes to all characters to which someone has a non-aggression pact",
+                            "✓",
+                            "X",
+                            "Character"
+                        ],
+                        [
+                            "any_opinion_modifier_target",
+                            "✓",
+                            "Scopes to all characters the scoped character has an opinion modifier towards any_opinion_modifier_target = {\n    limit = {\n\treverse_has_opinion_modifier = {\n\t    who = PREV\n\t    modifier = opinion_spying_on\n\t}\n    }\n    reverse_remove_opinion = {\n\twho = PREV\n\tmodifier = opinion_spying_on\n    }\n}",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_playable_ruler",
+                            "✓",
+                            "Scopes to all playable rulers currently alive. \"Playable\" means \"at least count tier or a patrician\", even if the character is actually unplayable (eg. due to government). Combined with limit = { ai = no } , it allows to broadcast events to human players. Note: Always excludes ROOT , even if ROOT is playable (eg. the human player).",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "any_player",
+                            "✓",
+                            "Scopes to all players.",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "any_plot_backer",
+                            "✓",
+                            "Scopes to everyone backing the character's plot",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_plotter",
+                            "✓",
+                            "Scopes to all plotters targeting the specified character, specified by target = some_scope . any_plotter = {\n    target = ROOT\n    limit = {\n\tOR = {\n\t    has_plot = plot_kill_character\n\t    has_plot = plot_kill_spouse\n\t}\n    }\n    character_event = { id = CM.6001 }\n}",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_pretender",
+                            "✓",
+                            "Scopes to all pretenders to the currently scoped title",
+                            "✓",
+                            "✓",
+                            "Title"
+                        ],
+                        [
+                            "any_previous_holder",
+                            "✓",
+                            "Scopes to previous holders of a title. NB: Unintuitively, this sometimes includes the current title holder - use with care and test carefully. (Confirmed to include the current holder for merc companies newly created via create_title . Possibly applies to all titles that have no previous ruler in the title history? Needs further testing.)",
+                            "✓",
+                            "X",
+                            "Title"
+                        ],
+                        [
+                            "any_province_character",
+                            "✓",
+                            "Scopes to all characters in the province",
+                            "✓",
+                            "✓",
+                            "Province"
+                        ],
+                        [
+                            "any_province_lord",
+                            "✓",
+                            "Scopes to all landed characters in the province",
+                            "✓",
+                            "✓",
+                            "Province"
+                        ],
+                        [
+                            "any_pupil",
+                            "✓",
+                            "Scopes to all characters that the scope is educating.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_quester",
+                            "X",
+                            "Scopes to all characters with a quest.",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "any_quester_targeting_this",
+                            "✓",
+                            "Scopes to all characters with a quest targeting the current scope.",
+                            "✓",
+                            "✓",
+                            "Character, Title, Province"
+                        ],
+                        [
+                            "any_quest_target",
+                            "X",
+                            "Scopes to all characters, provinces, and titles that are a target of a quest. Note that the script should either be able to handle all three types or filter the target type in the limit.",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "any_realm_character",
+                            "✓",
+                            "Scopes to all characters within the character or the title's sub-realm. Includes both rulers and courtiers. Does not include ROOT . The scope does not include prisoners or wards of characters residing in courts outside the sub-realm. Will include the liege of the (sub-)realm unless the liege is ROOT or the liege is outside the sub-realm (i.e., liege is a councillor, or a prisoner or ward of characters abroad).",
+                            "✓",
+                            "✓",
+                            "Character, title"
+                        ],
+                        [
+                            "any_realm_lord",
+                            "✓",
+                            "Scopes to all rulers (both landed or landless) within the character's sub-realm. It does not include the liege of the (sub-)realm. Unlike the any_courtier or any_realm_character scopes, it does include rulers of the (sub-)realm who are prisoners abroad.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_rival",
+                            "✓",
+                            "Scopes to all of a character's rivals",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_sibling any_sibling_even_if_dead",
+                            "✓",
+                            "Scopes to all of a character's siblings",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_society_member",
+                            "✓",
+                            "Scopes to all members of the society. Note: if current scope is not a society, will scope to all characters in any society.",
+                            "✓",
+                            "✓",
+                            "Society/Any"
+                        ],
+                        [
+                            "any_spouse any_spouse_even_if_dead",
+                            "✓",
+                            "Scopes to all of a character's spouses",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_consort",
+                            "✓",
+                            "Scopes to all of a character's consorts (not only concubines, works for both genders). NOTE : Scope is glitched and will always include the character themself. Include a \"limit = { NOT = { character = PREV } }\" condition inside the scope to make it behave as intended.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_suzerain",
+                            "✓",
+                            "Scopes to all suzerains of the scoped character",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_tributary",
+                            "✓",
+                            "Scopes to all tributaries of the scope",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_unit_leader",
+                            "✓",
+                            "Scopes to all leaders (flank or subunit) in a unit scope (only subunit leaders in effect scopes). In character scope, uses the unit that character is in. If the unit is in combat, every unit on the same side in the battle is included.",
+                            "✓",
+                            "✓",
+                            "Character, Unit"
+                        ],
+                        [
+                            "any_unique_dynasty_vassal",
+                            "✓",
+                            "Scopes to vassals with different dynasties (excluding dynasty of scoped character).",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_unknown_enemy_plotter",
+                            "X",
+                            "Only scopes to the unknown enemy plotters of the scoped Character",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_unknown_plotter",
+                            "✓",
+                            "Only scopes to the unknown plotters of the scoped Character",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_vassal",
+                            "✓",
+                            "Scopes to all direct vassals of a character or title. Does not include courtiers. To scope to all vassals (direct or not) consider using any_realm_character .",
+                            "✓",
+                            "✓",
+                            "Character, title"
+                        ],
+                        [
+                            "any_voter",
+                            "✓",
+                            "Scopes to all voters in a character's council",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_ward",
+                            "✓",
+                            "Scopes to all of a character's wards",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "artifact_owner",
+                            "✓",
+                            "Scopes to all the artifact's owner",
+                            "✓",
+                            "✓",
+                            "Artifact"
+                        ],
+                        [
+                            "attacker",
+                            "✓",
+                            "Scopes to the aggressor in a war",
+                            "✓",
+                            "✓",
+                            "War"
+                        ],
+                        [
+                            "band_creator",
+                            "✓",
+                            "Scopes to the creator of a dynamic mercenary band.",
+                            "✓",
+                            "✓",
+                            "Title"
+                        ],
+                        [
+                            "best_crusade_claimant",
+                            "✓",
+                            "Scopes to the best claimant for that title in context of crusade",
+                            "✓",
+                            "✓",
+                            "Title"
+                        ],
+                        [
+                            "best_fit_character_for_title",
+                            "✓",
+                            "Scopes to a character who should get a chosen title, from a chosen character's perspective. Parameters: title, perspective (from whose perspective we are viewing the title), index (The index of the character in the list) best_fit_character_for_title = {\n    title = PREV \n    perspective = ROOT\n    index = 1 \n    grant_title = PREV\n}",
+                            "X",
+                            "✓",
+                            "Title"
+                        ],
+                        [
+                            "betrothed",
+                            "✓",
+                            "Scopes to the character who the current scoped character is betrothed to.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "biggest_realm_size_relative",
+                            "✓",
+                            "Scopes to relatives with biggest realm size.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "center_flank_leader",
+                            "✓",
+                            "Scopes to the central flank leader of an army",
+                            "✓",
+                            "✓",
+                            "Army"
+                        ],
+                        [
+                            "left_flank_leader",
+                            "✓",
+                            "Scopes to the left flank leader of an army",
+                            "✓",
+                            "✓",
+                            "Army"
+                        ],
+                        [
+                            "right_flank_leader",
+                            "✓",
+                            "Scopes to the right flank leader of an army",
+                            "✓",
+                            "✓",
+                            "Army"
+                        ],
+                        [
+                            "consort",
+                            "✓",
+                            "Scopes to the most recent consort of the scoped character, or to the senior party of a consort",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "controller",
+                            "✓",
+                            "Scopes to the character controlling/occupying a province or holding. If not occupied, scopes to its owner/holder.",
+                            "✓",
+                            "✓",
+                            "Province/holding (barony title)"
+                        ],
+                        [
+                            "crusade_target_char",
+                            "✓",
+                            "Scopes to the character targeted by the active new-style Crusade",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "crusade_beneficiary",
+                            "✓",
+                            "Scopes to the currently scoped character's selected beneficiary for the Crusade",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "crusader_king",
+                            "✓",
+                            "Scopes to the recipient of a new-style Crusade",
+                            "✓",
+                            "✓",
+                            "Any CB effect clause"
+                        ],
+                        [
+                            "current_heir",
+                            "✓",
+                            "Scopes to the heir of the scoped character or title. In character scope, this is the character who inherits the primary title, regardless of dynasty.",
+                            "✓",
+                            "✓",
+                            "Character/Title"
+                        ],
+                        [
+                            "defender",
+                            "✓",
+                            "Scopes to the defender in a war",
+                            "✓",
+                            "✓",
+                            "War"
+                        ],
+                        [
+                            "dynasty_head",
+                            "✓",
+                            "Scopes to the head of the dynasty",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "educator",
+                            "✓",
+                            "Scopes to the educator of a child (Conclave DLC education)",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "employer",
+                            "✓",
+                            "Scopes to the character's employer. Only works for landless characters, as landed rulers are considered their own employer, even if they work on their liege council. NB: Auto-generated in-game tooltips which use the employer scope can sometimes be very misleading [4] , which can be confusing for both players and mod developers. Consider using the liege scope instead of employer ; or, alternatively, wrapping the employer scope in a custom_tooltip .",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "enemy",
+                            "✓",
+                            "Scopes to the enemy in a siege or opposing flank in combat",
+                            "✓",
+                            "✓",
+                            "Siege"
+                        ],
+                        [
+                            "father father_even_if_dead",
+                            "✓",
+                            "Scopes to the character's father. In trigger context, both will scope to dead fathers.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "father_of_unborn",
+                            "✓",
+                            "Scopes to the unborn child's father",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "founder",
+                            "✓",
+                            "Scopes to the founder of the current bloodline",
+                            "✓",
+                            "✓",
+                            "Bloodline"
+                        ],
+                        [
+                            "fort_owner",
+                            "✓",
+                            "Scopes to the owner of the fort in the scoped province",
+                            "✓",
+                            "✓",
+                            "Province"
+                        ],
+                        [
+                            "guardian",
+                            "✓",
+                            "Scopes to the child's guardian",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "governor",
+                            "✓",
+                            "Scopes to the governor of the scope's offmap power. Scope can be the offmap power itself, the offmap power ruler, or the governor title.",
+                            "✓",
+                            "✓",
+                            "Offmap Power/Character/Title."
+                        ],
+                        [
+                            "heir_under_primogeniture_law",
+                            "✓",
+                            "Scopes to the character who'd be heir if Primogeniture succession was enacted Warning: Broken! (Often scopes to some other character - eg. current ruler, current heir. The \"other character\" seems to be consistent between tests, and consistent between trigger and effect, but the exact character chosen follows no known pattern.)",
+                            "✓",
+                            "✓",
+                            "Title"
+                        ],
+                        [
+                            "heir_under_seniority_law",
+                            "✓",
+                            "Scopes to the character who'd be heir if Seniority succession was enacted Warning: Broken! (See heir_under_primogeniture_law for details.)",
+                            "✓",
+                            "✓",
+                            "Title"
+                        ],
+                        [
+                            "heir_under_ultimogeniture_law",
+                            "X",
+                            "Scopes to the character who'd be heir if Ultimogeniture succession was enacted Warning: Broken! (See heir_under_primogeniture_law for details.)",
+                            "✓",
+                            "✓",
+                            "Title"
+                        ],
+                        [
+                            "highest_ranked_relative",
+                            "✓",
+                            "Scopes to relatives with highest feudal tier",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "holder_scope",
+                            "✓",
+                            "Scopes to the owner of the province or title",
+                            "✓",
+                            "✓",
+                            "Title, province"
+                        ],
+                        [
+                            "hospital_owner",
+                            "X",
+                            "Scopes to the owner of the hospital in the scoped province",
+                            "✓",
+                            "✓",
+                            "Province"
+                        ],
+                        [
+                            "host",
+                            "✓",
+                            "Scopes to the owner of where the character resides. Works both for landed and unlanded characters. If character is residing at court, the host would be the liege. For an imprisoned character, this yields their jailer.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "job_chancellor",
+                            "✓",
+                            "Scopes to the character's current Chancellor , if they have one.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "job_marshal",
+                            "✓",
+                            "Scopes to the character's current Marshal , if they have one.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "job_treasurer",
+                            "✓",
+                            "Scopes to the character's current Steward , if they have one. Beware , it's \"treasurer\", not \"steward\"!",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "job_spymaster",
+                            "✓",
+                            "Scopes to the character's current Spymaster , if they have one.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "job_spiritual",
+                            "✓",
+                            "Scopes to the character's current Chaplain , if they have one.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "killer",
+                            "✓",
+                            "Scopes to the killer of a character",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "leader",
+                            "✓",
+                            "Scopes to the leader of a force in a siege, or of a flank (but not subunit) in combat, or the leader of a society",
+                            "✓",
+                            "✓",
+                            "Siege/Flank/Society"
+                        ],
+                        [
+                            "least_populous_clan_vassal(_except_me)",
+                            "X",
+                            "Scopes to the clan with the smallest population in the realm. To scope directly to the clan title use least_prestigious_clan(_except_me)",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "least_prestigious_clan_vassal(_except_me)",
+                            "X",
+                            "Scopes to the clan with the least prestige in the realm. To scope directly to the clan title use least_prestigious_clan(_except_me)",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "liege",
+                            "✓",
+                            "Scopes to a character's direct liege",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "liege_before_war",
+                            "✓",
+                            "Scopes to whoever was the character's liege before his rebellion",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "lover",
+                            "✓",
+                            "Scopes to the character's lover",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "mercenary_employer",
+                            "✓",
+                            "Scopes to ruler currently hiring this mercenary band or holy order. Crashes the game if the title only offers galleys!",
+                            "✓",
+                            "✓",
+                            "Title"
+                        ],
+                        [
+                            "most_participating_attacker",
+                            "✓",
+                            "Scopes to the attacker that's done the most in a war",
+                            "✓",
+                            "✓",
+                            "War"
+                        ],
+                        [
+                            "most_participating_crusader",
+                            "✓",
+                            "Scopes to the non-theocracy attacker that's done the most in a war",
+                            "[ {{{1}}} ]",
+                            "✓",
+                            "War"
+                        ],
+                        [
+                            "most_participating_defender",
+                            "✓",
+                            "Scopes to the defender that's done the most in a war",
+                            "✓",
+                            "✓",
+                            "War"
+                        ],
+                        [
+                            "most_popular_vassal",
+                            "✓",
+                            "Scopes to a the most popular vassal who meets its limit clause. Seems to use an average of opinion among all vassals (including mayors). Used to determine the new ruler when the \"Oust ruler\" faction is successful.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "most_populous_clan_vassal(_except_me)",
+                            "X",
+                            "Scopes to the clan with the greatest population in the realm. To scope directly to the clan title use most_populous_clan(_except_me)",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "most_prestigious_clan_vassal(_except_me)",
+                            "X",
+                            "Scopes to the clan with the most prestige in the realm. To scope directly to the clan title use most_prestigious_clan(_except_me)",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "mother mother_even_if_dead",
+                            "✓",
+                            "Scopes to the character's mother. In trigger context, both will scope to dead mothers.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "new_character",
+                            "✓",
+                            "Scopes to the character previously created in the event, via create_character or similar command.",
+                            "X",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "official_crusade_recipient",
+                            "✓",
+                            "Scopes to the recipient shown in the new-style Crusade window, if one exists. Usually a claimant or the current title holder.",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "offmap_prev_ruler",
+                            "✓",
+                            "Scopes to the previous ruler of the scope's offmap power. Scope can be the offmap power itself, the current offmap power ruler, the governor, or the governor title.",
+                            "✓",
+                            "✓",
+                            "Offmap Power/Character/Title"
+                        ],
+                        [
+                            "offmap_ruler",
+                            "✓",
+                            "Scopes to the ruler of the scope's offmap power. Scope can be the offmap power itself, the governor, or the governor title.",
+                            "✓",
+                            "✓",
+                            "Offmap Power/Character/Title"
+                        ],
+                        [
+                            "original_artifact_owner original_owner",
+                            "✓",
+                            "Scopes to the original owner of the artifact. Both scopes function identically.",
+                            "✓",
+                            "✓",
+                            "Artifact"
+                        ],
+                        [
+                            "owner",
+                            "✓",
+                            "Scopes to the owner of the province, title, artifact or army",
+                            "✓",
+                            "✓",
+                            "Title, Province, Artifact, Army"
+                        ],
+                        [
+                            "parent_religion_head",
+                            "✓",
+                            "Scopes to the religion head of the parent religion. Scopes to nothing for non-heretic characters.",
+                            "✓",
+                            "✓",
+                            "Character,Province"
+                        ],
+                        [
+                            "player_heir",
+                            "✓",
+                            "Scopes to the scope's heir as listed on the character sheet (i.e. the character you would be playing if you were playing the scope and the scope died) rather than the heir to the primary title of the scope.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "plot_target_char",
+                            "✓",
+                            "Scopes to the character that's being plotted against",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "preferred_war_target",
+                            "✓",
+                            "Scopes to the character's attack target",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "previous_artifact_owner",
+                            "X",
+                            "Scopes to the previous owner of the artifact. Does not work on artifacts that have the history = no parameter.",
+                            "✓",
+                            "✓",
+                            "Artifact"
+                        ],
+                        [
+                            "previous_owner",
+                            "X",
+                            "Scopes to the previous owner of the wonder.",
+                            "✓",
+                            "✓",
+                            "Wonder"
+                        ],
+                        [
+                            "quest_target",
+                            "✓",
+                            "Scopes to current target of the character's quest. Can be a character, province, or title depending on the quest.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_allied_character",
+                            "✓",
+                            "Scopes to an ally",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_artifact_owner",
+                            "X",
+                            "Scopes to a random character from those who have ever owned the artifact , including the current owner. Does not work on artifacts that have the history = no parameter.",
+                            "X",
+                            "✓",
+                            "Artifact"
+                        ],
+                        [
+                            "random_backed_character",
+                            "✓",
+                            "Scopes to a random character the character is backing. Cannot be used as a trigger",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_bloodline_member random_bloodline_member_including_dead",
+                            "X",
+                            "Scopes to a random member of the current bloodline",
+                            "?",
+                            "?",
+                            "Bloodline"
+                        ],
+                        [
+                            "random_character",
+                            "✓",
+                            "Scopes a random character in the game, excluding offmap rulers. Cannot be used as a trigger. Note: This scope doesn't apply commands to ROOT .",
+                            "X",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "random_child random_child_even_if_dead",
+                            "✓",
+                            "Scopes to a random child of the character. Cannot be used as a trigger",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_close_relative",
+                            "✓",
+                            "Scopes to a random close relative of the character.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_courtier",
+                            "✓",
+                            "Scopes to a random courtier of the character, including prisoners. Cannot be used as a trigger.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_courtier_or_vassal",
+                            "✓",
+                            "Scopes to a random courtier or vassal of the character. Cannot be used as a trigger.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_crusade_defender",
+                            "✓",
+                            "Scopes to a random defender in a new-style Crusade",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_crusade_participant",
+                            "✓",
+                            "Scopes to a random attacker in a new-style Crusade",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_current_enemy",
+                            "✓",
+                            "Scopes to a random enemy of the character. Both characters must be participating directly in the war, not as vassals.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_dynasty_member random_dynasty_member_even_if_dead",
+                            "✓",
+                            "Scopes to a random member of the character's dynasty. Does not include ROOT . If the current scope is the same as ROOT then this will scope to all dynasty members except the current scope, else this will scope to all dynasty members including the current scope.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_elector_character",
+                            "X",
+                            "Scopes to a random elector of the scoped title",
+                            "X",
+                            "✓",
+                            "Title"
+                        ],
+                        [
+                            "random_enemy_plotter",
+                            "X",
+                            "",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_favor_holder",
+                            "X",
+                            "Scopes to a random character to whom the scoped character owes a favor",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_favor_ower",
+                            "X",
+                            "Scopes to a random characters who owes a favor to the scoped character",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_friend",
+                            "✓",
+                            "Scopes to a random friend of the character.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_host_courtier",
+                            "✓",
+                            "Scopes to a random character in the same court. Shorter version of host = { random_courtier = { ... } }",
+                            "X",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "random_independent_ruler",
+                            "✓",
+                            "Scopes to a random independent ruler. Doesn't include ROOT .",
+                            "X",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "random_known_enemy_plotter",
+                            "X",
+                            "",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_known_plotter",
+                            "X",
+                            "",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_lover",
+                            "✓",
+                            "Scopes to a random lover.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_neighbor_independent_ruler",
+                            "✓",
+                            "Scopes to a random independent ruler whose realm neighbors the realm you are in.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_non_aggression_pact_character",
+                            "✓",
+                            "Scopes to a random character with a non-aggression pact toward current character.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_opinion_modifier_target",
+                            "✓",
+                            "Scopes to a random character the scoped character has an opinion modifier towards",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_playable_ruler",
+                            "✓",
+                            "Scopes to a random playable ruler. \"Playable\" means \"at least count tier or a patrician\", even if the character is actually unplayable (eg. due to government).",
+                            "X",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "random_player",
+                            "✓",
+                            "Scopes to a random player.",
+                            "X",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "random_plotter",
+                            "X",
+                            "",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_pretender",
+                            "✓",
+                            "Scopes to a random pretender to the currently scoped title.",
+                            "X",
+                            "✓",
+                            "Title"
+                        ],
+                        [
+                            "random_province_character",
+                            "✓",
+                            "Scopes to a random character in the province.",
+                            "X",
+                            "✓",
+                            "Province"
+                        ],
+                        [
+                            "random_province_lord",
+                            "✓",
+                            "Scopes to a random landed character in the province.",
+                            "X",
+                            "✓",
+                            "Province"
+                        ],
+                        [
+                            "random_pupil",
+                            "✓",
+                            "Scopes to a random character that the scope is educating.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_quester",
+                            "X",
+                            "Scopes to a random character with a quest.",
+                            "X",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "random_quester_targetting_this",
+                            "X",
+                            "Scopes to a random character with a quest targeting the current scope.",
+                            "X",
+                            "✓",
+                            "Character, Title, Province"
+                        ],
+                        [
+                            "random_quest_target",
+                            "✓",
+                            "Scopes to all characters, provinces, and titles that are a target of a quest. Note that the script should either be able to handle all three types or filter the target type in the limit.",
+                            "X",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "random_realm_character",
+                            "✓",
+                            "Scopes to a random character in the character or title's sub-realm. Includes both rulers and courtiers. Does not include ROOT . The scope does not include prisoners or wards of characters residing in courts outside the sub-realm. Will include the liege of the (sub-)realm unless the liege is ROOT or the liege is outside the sub-realm (i.e., liege is a councillor, or a prisoner or ward of a characters abroad).",
+                            "X",
+                            "✓",
+                            "Character, title"
+                        ],
+                        [
+                            "random_realm_lord",
+                            "✓",
+                            "Scopes to a random ruler (both landed or landless) in the character or title's sub-realm. It does not include the liege of the (sub-)realm. Unlike the random_courtier or random_realm_character scopes, it does include rulers of the (sub-)realm who are prisoners abroad.",
+                            "X",
+                            "✓",
+                            "Character, title"
+                        ],
+                        [
+                            "random_rival",
+                            "✓",
+                            "Scopes to a random rival of the character.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_sibling random_sibling_even_if_dead",
+                            "✓",
+                            "Scopes to a random sibling of the character.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_society_member",
+                            "✓",
+                            "Scopes to a random member of the society. Note: if current scope is not a society, will scope to a random character that is in any society.",
+                            "X",
+                            "✓",
+                            "Society/Any"
+                        ],
+                        [
+                            "random_spouse random_spouse_even_if_dead",
+                            "✓",
+                            "Scopes to a random spouse of the character.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_consort",
+                            "✓",
+                            "Scopes to a random consort of the character (not only concubines, works for both genders).",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_tributary",
+                            "X",
+                            "Scopes to all tributaries of the scope",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_unit_leader",
+                            "✓",
+                            "Scopes to a random leader (flank or subunit) in a unit scope. In character uses the unit that character is in. If the unit is in combat, every unit on the same side in the battle is included.",
+                            "X",
+                            "✓",
+                            "Character, Unit"
+                        ],
+                        [
+                            "random_unknown_enemy_plotter",
+                            "X",
+                            "",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_unknown_plotter",
+                            "X",
+                            "",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_vassal",
+                            "✓",
+                            "Scopes to a random vassal of the character or title.",
+                            "X",
+                            "✓",
+                            "Character, title"
+                        ],
+                        [
+                            "random_voter",
+                            "X",
+                            "Scopes to a random voter on the council",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_ward",
+                            "✓",
+                            "Scopes to a random ward of the character.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "real_father real_father_even_if_dead",
+                            "✓",
+                            "Scopes to the character's real father, if the character's known father is not their genetic parent.  This will select the genetic parent even if the cuckolding is unknown.  If character's known father is their actual father, produces no result.  See true_father or true_father_even_if_dead if you would prefer to return the actual father every time.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "reincarnation_scope",
+                            "✓",
+                            "Scopes to the character that currently scoped character is the reincarnation of",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "regent",
+                            "✓",
+                            "Scopes to the character's regent",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "religion_head",
+                            "✓",
+                            "Scopes to the character's religious head (s). Does NOT includes antipopes",
+                            "✓",
+                            "✓",
+                            "Character/Province"
+                        ],
+                        [
+                            "rightful_religious_head_scope",
+                            "✓",
+                            "Scopes to the character's rightful religious head. Includes antipopes",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "ruler",
+                            "✓",
+                            "Scopes to the province's owner. Rarely used, owner being preferred.",
+                            "✓",
+                            "✓",
+                            "Province"
+                        ],
+                        [
+                            "spouse",
+                            "✓",
+                            "Scopes to the character's primary spouse",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "spouse_even_if_dead",
+                            "✓",
+                            "Scopes to the character's primary spouse, even if dead",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "strongest_clan_vassal(_except_me)",
+                            "✓",
+                            "Scopes to the clan with the greatest military strength in the realm. To scope directly to the clan title use strongest_clan(_except_me)",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "supported_claimant",
+                            "✓",
+                            "",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "suzerain",
+                            "✓",
+                            "Scopes to the suzerain of a tributary character",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "title_to_get_rid_of",
+                            "✓",
+                            "Scopes to titles over the demesne limit",
+                            "✓",
+                            "✓",
+                            "Title"
+                        ],
+                        [
+                            "top_liege",
+                            "✓",
+                            "Scopes to a character's independent liege. If the character is independent, scopes to the same exact character.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "trade_post_owner",
+                            "✓",
+                            "Scopes to the owner of the trade post",
+                            "✓",
+                            "✓",
+                            "Province, Title"
+                        ],
+                        [
+                            "true_father",
+                            "X",
+                            "Scopes to the real_father if one exists; otherwise it scopes to the father.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "true_father_even_if_dead",
+                            "X",
+                            "",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "twin",
+                            "X",
+                            "Scopes to the character's twin. WARNING: If mods add additional twins (triplets, etc.), these scopes may produce unpredictable results.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "twin_even_if_dead",
+                            "X",
+                            "",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "weakest_clan_vassal(_except_me)",
+                            "X",
+                            "Scopes to the clan with the smallest military strength in the realm. To scope directly to the clan title use weakest_clan(_except_me)",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This is generally pointless as new character IDs are generated randomly, but it can be used for scripting historical events for characters defined in history with a pre-defined ID."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Warning : count = N doesn't work in this scope, as it's not an any_ scope."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Known bug: Nothing inside this scope will produce tooltips (including custom_tooltip )."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Primarily used to find minor title holders:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For direct subjects including courtiers abroad, you must use the inefficient any_character scope instead:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "\"Playable\" means \"at least count tier or a patrician\", even if the character is actually unplayable (eg. due to government)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Combined with limit = { ai = no } , it allows to broadcast events to human players."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: Always excludes ROOT , even if ROOT is playable (eg. the human player)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "NB: Unintuitively, this sometimes includes the current title holder - use with care and test carefully. (Confirmed to include the current holder for merc companies newly created via create_title . Possibly applies to all titles that have no previous ruler in the title history? Needs further testing.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "NB: Auto-generated in-game tooltips which use the employer scope can sometimes be very misleading [4] , which can be confusing for both players and mod developers. Consider using the liege scope instead of employer ; or, alternatively, wrapping the employer scope in a custom_tooltip ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Warning: Broken! (Often scopes to some other character - eg. current ruler, current heir. The \"other character\" seems to be consistent between tests, and consistent between trigger and effect, but the exact character chosen follows no known pattern.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Warning: Broken! (See heir_under_primogeniture_law for details.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Warning: Broken! (See heir_under_primogeniture_law for details.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "\"Playable\" means \"at least count tier or a patrician\", even if the character is actually unplayable (eg. due to government)."
+                }
+            ]
+        },
+        {
+            "heading": "Title",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Title scopes are all scopes that target titles."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Title scopes of baron tier are also referred as holding scopes , and certain triggers/commands will only work in holdings (E.g. add_building)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Extra holdings (trade posts, hospitals and forts) do not have a corresponding holding/title scope, and are instead managed from their parent province scope [5] ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The \"from scope\" column shows what scope(s) it can be called from."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Scope",
+                            "Used in vanilla",
+                            "Description",
+                            "Trigger",
+                            "Effect",
+                            "From scope"
+                        ],
+                        [
+                            "%title_ID%",
+                            "✓",
+                            "Scopes to a title based on its id (starting with b_, c_, d_, k_, or e_). For instance: e_byzantium = { }",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "%faction_ID%",
+                            "✓",
+                            "Scopes to the subject title of the scoped character's faction, if applicable",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_claim",
+                            "✓",
+                            "Scopes to all titles a character has claims upon",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_defacto_liege",
+                            "✓",
+                            "Scopes to all de facto liege titles of a character or title. Does not work in character effect scope.",
+                            "✓",
+                            "✓",
+                            "Character, Title"
+                        ],
+                        [
+                            "any_dejure_liege",
+                            "✓",
+                            "Scopes to all de jure liege titles of a character or title. Does not work in character effect scope.",
+                            "✓",
+                            "✓",
+                            "Character, Title"
+                        ],
+                        [
+                            "any_de_jure_liege_title",
+                            "✓",
+                            "Scopes to all de jure liege titles of a character or title.",
+                            "X",
+                            "✓",
+                            "Character, Title"
+                        ],
+                        [
+                            "any_de_jure_vassal_title",
+                            "✓",
+                            "Scopes to all titles that are dejure part of a character or title's realm",
+                            "✓ (2.5)",
+                            "✓",
+                            "Character, Title"
+                        ],
+                        [
+                            "any_direct_de_jure_vassal_title",
+                            "✓",
+                            "Scopes to all titles that are dejure part of a title's realm",
+                            "✓",
+                            "✓",
+                            "Title"
+                        ],
+                        [
+                            "any_demesne_title",
+                            "✓",
+                            "Scopes to all titles a character holds. If used inside a trigger and the character is not a ruler, scopes to all titles their liege holds. score_value clause does not work on this scope (it is ignored by the game engine). The less efficient but more broad any_landed_title scope has to be used instead if you want to combine it with a score_value clause and/or count parameter in an effect.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_eldership_title",
+                            "✓",
+                            "Scopes to all titles with Eldership succession to which the scoped character is an elector",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_feud_rival_clan",
+                            "✓",
+                            "Scopes to all clan titles in a feud with the currently scoped clan title",
+                            "✓",
+                            "✓",
+                            "Title"
+                        ],
+                        [
+                            "any_heir_title",
+                            "✓",
+                            "Scopes to all titles to which the character is the current heir",
+                            "✓",
+                            "X",
+                            "Character"
+                        ],
+                        [
+                            "any_landed_title",
+                            "✓",
+                            "Scopes to all titles that exist in the game database or current game state (includes all created dynamic titles as well, i.e., nomadic clan titles, custom kingdoms/empires). The scope name is a misnomer, the scope includes both landed and landless titles. Functionally identical to the any_title scope, except that this scope also works in triggers. score_value clause and/or count parameter can be used inside this scope in effects unlike the any_title and any_title_under scopes. WARNING CPU HEAVY",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "any_mercenary_band",
+                            "✓",
+                            "Scopes to all mercenary bands",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "any_potential_tribal_county",
+                            "X",
+                            "",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_pretender_title",
+                            "✓",
+                            "Scopes to all titles to which the scoped character is a pretender",
+                            "✓",
+                            "X",
+                            "Character"
+                        ],
+                        [
+                            "any_province_holding",
+                            "✓",
+                            "Scopes to all holdings of a province*",
+                            "✓",
+                            "✓",
+                            "Province"
+                        ],
+                        [
+                            "any_quest_target",
+                            "X",
+                            "Scopes to all characters, provinces, and titles that are a target of a quest. Note that the script should either be able to handle all three types or filter the target type in the limit.",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "any_realm_title",
+                            "✓",
+                            "Scopes to all titles within a character's sub-realm.",
+                            "✓",
+                            "X",
+                            "Character"
+                        ],
+                        [
+                            "any_title",
+                            "✓",
+                            "Scopes to all titles that exist in the game database or current game state (includes all created dynamic titles as well, i.e., nomadic clan titles, custom kingdoms/empires). Functionally identical to the any_landed_title scope, except that this scope only works in effects. score_value clause does not work on this scope (it is ignored by the game engine). The any_landed_title scope has to be used instead if you want to combine it with a score_value clause and/or count parameter in an effect. WARNING CPU HEAVY",
+                            "X",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "any_title_under",
+                            "✓",
+                            "Scopes to all titles held by the character or characters they control. score_value clause does not work on this scope (it is ignored by the game engine). The less efficient but more broad any_landed_title scope has to be used instead if you want to combine it with a score_value clause and/or count parameter in an effect.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "blood_brother",
+                            "✓",
+                            "Scopes to the clan title of the blood brother of the scoped clan title",
+                            "✓",
+                            "✓",
+                            "Clan"
+                        ],
+                        [
+                            "capital_holding",
+                            "✓",
+                            "Scopes to the character's capital holding title. Note: this is different from capital_scope which scopes to the capital province.",
+                            "✓",
+                            "✓",
+                            "Character, province"
+                        ],
+                        [
+                            "clan_title",
+                            "✓",
+                            "Scopes to the clan of a nomad.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "county",
+                            "✓",
+                            "Scopes to the county a barony is in, or scopes from province to corresponding county title",
+                            "✓",
+                            "✓",
+                            "Province, Title (barony only)"
+                        ],
+                        [
+                            "crownlaw_title",
+                            "✓",
+                            "Scopes to the title giving a character or title its crown laws",
+                            "✓",
+                            "✓",
+                            "Character, title"
+                        ],
+                        [
+                            "crusade_target",
+                            "✓",
+                            "Scopes to the target of the ongoing crusade of the character's religion",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "crusade_target_title",
+                            "✓",
+                            "Scopes to the target of the ongoing new-style Crusade",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "defacto_liege_title",
+                            "✓",
+                            "Scopes to the title a title de facto belongs to",
+                            "✓",
+                            "✓",
+                            "Title"
+                        ],
+                        [
+                            "dejure_liege_title",
+                            "✓",
+                            "Scopes to the title a character or title de jure belongs to",
+                            "✓",
+                            "✓",
+                            "Character, title"
+                        ],
+                        [
+                            "duchy",
+                            "✓",
+                            "Scopes to the duchy a province belongs to. (From county scope, you must use dejure_liege_title instead)",
+                            "✓",
+                            "✓",
+                            "Province"
+                        ],
+                        [
+                            "empire",
+                            "✓",
+                            "Scopes to the empire a title belongs to",
+                            "✓",
+                            "✓",
+                            "Province, Title (any except empires)"
+                        ],
+                        [
+                            "family_palace",
+                            "✓",
+                            "Scopes to the family palace title of a patrician.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "governor_title",
+                            "X",
+                            "Scopes to the governor title of the scope. Scope can be the offmap power itself, the offmap power ruler, or the governor.",
+                            "✓",
+                            "✓",
+                            "Offmap Power/Character"
+                        ],
+                        [
+                            "invasion_target",
+                            "X",
+                            "",
+                            "✓",
+                            "✓",
+                            ""
+                        ],
+                        [
+                            "kingdom",
+                            "✓",
+                            "Scopes to the kingdom a title belongs to",
+                            "✓",
+                            "✓",
+                            "Province, Title (duchy or below)"
+                        ],
+                        [
+                            "least_populous_clan(_except_me)",
+                            "X",
+                            "Scopes to the clan with the smallest population in the realm. To scope directly to the title holder use least_populous_clan_vassal(_except_me)",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "least_prestigious_clan(_except_me)",
+                            "X",
+                            "Scopes to the clan with the least prestige in the realm. To scope directly to the title holder use least_prestigious_clan_vassal(_except_me)",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "most_populous_clan(_except_me)",
+                            "X",
+                            "Scopes to the clan with the greatest population in the realm. To scope directly to the title holder use most_populous_clan_vassal(_except_me)",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "most_prestigious_clan(_except_me)",
+                            "✓",
+                            "Scopes to the clan with the most prestige in the realm. To scope directly to the title holder use most_prestigious_clan_vassal(_except_me)",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "new_title",
+                            "✓",
+                            "Scopes to the title previously created in the same scope via create_title command.",
+                            "X",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "plot_target_title",
+                            "✓",
+                            "Scopes to the title of the character the character is plotting against",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "primary_title",
+                            "✓",
+                            "Scopes to the character's primary title",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "quest_target",
+                            "✓",
+                            "Scopes to current target of the character's quest. Can be a character, province, or title depending on the quest.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_claim",
+                            "✓",
+                            "Scopes to a random title the character has a claim upon.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_demesne_title",
+                            "✓",
+                            "Scopes to a random title the character holds.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_direct_de_jure_vassal_title",
+                            "✓",
+                            "Scopes to a random title that is dejure part of the scoped title's realm",
+                            "X",
+                            "✓",
+                            "Title"
+                        ],
+                        [
+                            "random_eldership_title",
+                            "✓",
+                            "Scopes to a random title using Eldership succession to which the scoped character is an elector",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_landed_title",
+                            "✓",
+                            "Scopes to a random title that exist in the game database or current game state (includes all created dynamic titles as well, i.e., nomadic clan titles, custom kingdoms/empires). The scope name is a misnomer, the scope includes both landed and landless titles. WARNING CPU HEAVY",
+                            "X",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "random_potential_tribal_county",
+                            "✓",
+                            "Scopes to a county suitable for tribal takeover",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_province_holding",
+                            "✓",
+                            "Scopes to a random holding of a province",
+                            "X",
+                            "✓",
+                            "Province"
+                        ],
+                        [
+                            "random_quest_target",
+                            "X",
+                            "Scopes to all characters, provinces, and titles that are a target of a quest. Note that the script should either be able to handle all three types or filter the target type in the limit.",
+                            "X",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "random_realm_title",
+                            "✓",
+                            "Scopes to a random title within a character's sub-realm.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "realm",
+                            "✓",
+                            "Scopes to the independent realm the character or title is part of. It is the equivalent of top_liege for titles.",
+                            "✓",
+                            "✓",
+                            "Character, title"
+                        ],
+                        [
+                            "strongest_clan(_except_me)",
+                            "✓",
+                            "Scopes to the clan with the greatest military strength in the realm. To scope directly to the title holder use strongest_clan_vassal(_except_me)",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "succ_law_title",
+                            "✓",
+                            "Scopes to a title where has_law trigger can be used to check succession law.",
+                            "✓",
+                            "✓",
+                            "Title"
+                        ],
+                        [
+                            "supported_claimant_title",
+                            "✓",
+                            "Scopes to the subject title of the scoped character's claimant faction",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "thirdparty_title_scope",
+                            "✓",
+                            "Only valid if thirdparty title is involved in the war",
+                            "✓",
+                            "✓",
+                            "War"
+                        ],
+                        [
+                            "weakest_clan(_except_me)",
+                            "X",
+                            "Scopes to the clan with the smallest military strength in the realm. To scope directly to the title holder use weakest_clan_vassal(_except_me)",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For instance: e_byzantium = { }"
+                }
+            ]
+        },
+        {
+            "heading": "Province",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Province scopes are all scopes that target provinces."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Extra holdings (trade posts, hospitals and forts) are targeted via province scope, using conditions/commands with the name of the extra holding in it ( has_fort , fort_has_building , etc.) [6]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The \"from scope\" column shows what scope(s) it can be called from."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Scope",
+                            "Used in vanilla",
+                            "Description",
+                            "Trigger",
+                            "Effect",
+                            "From scope"
+                        ],
+                        [
+                            "%province_ID%",
+                            "✓",
+                            "Scopes to a province based on its id (number from 1 to (max_provinces - 1) where max_provinces is coded into map/default.map). For instance: 290 = { # Uppland }",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "any_connected_province",
+                            "✓",
+                            "Scopes to all provinces in the targeted sub-realm that are connected to this province. Takes the same parameters as the is_connected_to trigger , except for target .",
+                            "?",
+                            "?",
+                            "Province"
+                        ],
+                        [
+                            "any_demesne_province",
+                            "✓",
+                            "Scopes to all provinces in a character's demesne.",
+                            "✓",
+                            "✓ (v2.6.1)",
+                            "Character"
+                        ],
+                        [
+                            "any_disconnected_province",
+                            "✓",
+                            "Scopes to all provinces in the targeted sub-realm that aren't connected to this province. Takes the same parameters as the is_connected_to trigger , except for target .",
+                            "✓",
+                            "✓",
+                            "Province"
+                        ],
+                        [
+                            "any_neighbor_province",
+                            "✓",
+                            "Scopes to all border provinces, including sea provinces when used inside a trigger scope. If bordering sea provinces need to be scoped inside an effect scope, the less efficient any_province or random_province needs to be used instead. Example code that would scope to bordering sea provinces inside an effect scope: random_province = {\n\tlimit = {\n\t\tNOT = { province = PREV }\n\t\tany_neighbor_province = { province = PREVPREV }\n\t\tis_land = no # Include if you only want to scope to sea provinces\n\t}\n\n\t# Do something to this randomly chosen bordering sea province\n}",
+                            "✓",
+                            "✓",
+                            "Province"
+                        ],
+                        [
+                            "any_province",
+                            "✓",
+                            "Scopes to all provinces. WARNING CPU HEAVY",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "any_fort",
+                            "X",
+                            "Scopes to all provinces in which the character owns a fort",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_hospital",
+                            "X",
+                            "Scopes to all provinces in which the character owns a hospital",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_quest_target",
+                            "X",
+                            "Scopes to all characters, provinces, and titles that are a target of a quest. Note that the script should either be able to handle all three types or filter the target type in the limit.",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "any_realm_province",
+                            "✓",
+                            "Scopes to all provinces in the character's sub-realm.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_trade_post",
+                            "✓",
+                            "Scopes to all provinces in which the character owns a trade post",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_trade_route_province",
+                            "✓",
+                            "Scopes to all provinces on a trade route",
+                            "✓",
+                            "✓",
+                            "Province"
+                        ],
+                        [
+                            "capital_scope",
+                            "✓",
+                            "Scopes to the character's (or title's, if a capital has been defined in landed_titles definitions) capital province",
+                            "✓",
+                            "✓",
+                            "Character, Title"
+                        ],
+                        [
+                            "location",
+                            "✓",
+                            "Scopes to the character's location (or county or barony title's province)",
+                            "✓",
+                            "✓",
+                            "Character, title, unit"
+                        ],
+                        [
+                            "plot_target_province",
+                            "✓",
+                            "Scopes to the province that the character's plot is targeting",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "quest_target",
+                            "✓",
+                            "Scopes to current target of the character's quest. Can be a character, province, or title depending on the quest.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_connected_province",
+                            "X",
+                            "Scopes to a random province in the targeted sub-realm that is connected to this province. Takes the same parameters as the is_connected_to trigger , except for target .",
+                            "X",
+                            "✓",
+                            "Province"
+                        ],
+                        [
+                            "random_demesne_province",
+                            "✓",
+                            "Scopes to a random province in the character's demesne.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_disconnected_province",
+                            "✓",
+                            "Scopes to a random province in the targeted sub-realm that isn't connected to this province. Takes the same parameters as the is_connected_to trigger , except for target .",
+                            "X",
+                            "✓",
+                            "Province"
+                        ],
+                        [
+                            "random_fort",
+                            "X",
+                            "Scopes to a random province in which the character owns a fort",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_hospital",
+                            "X",
+                            "Scopes to a random province in which the character owns a hospital",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_neighbor_province",
+                            "✓",
+                            "Scopes to a random bordering land (non-sea) province.",
+                            "X",
+                            "✓",
+                            "Province"
+                        ],
+                        [
+                            "random_province",
+                            "✓",
+                            "Scopes to a random province province",
+                            "X",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "random_quest_target",
+                            "✓",
+                            "Scopes to all characters, provinces, and titles that are a target of a quest. Note that the script should either be able to handle all three types or filter the target type in the limit.",
+                            "X",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "random_realm_province",
+                            "✓",
+                            "Scopes to a random province in the character's sub-realm.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_trade_post",
+                            "✓",
+                            "Scopes to a random province in which the character owns a trade post",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "sea_zone",
+                            "✓",
+                            "If the scoped province has a port, scopes to the sea province which is adjacent to that port. [7] Note: Unknown behaviour if the scoped province does not have a port. (Was previously believed to scope to all adjacent sea zones, but this seems to be incorrect.)",
+                            "✓",
+                            "✓",
+                            "Province"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For instance: 290 = { # Uppland }"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Example code that would scope to bordering sea provinces inside an effect scope:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: Unknown behaviour if the scoped province does not have a port."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Was previously believed to scope to all adjacent sea zones, but this seems to be incorrect.)"
+                }
+            ]
+        },
+        {
+            "heading": "Offmap power",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Offmap power scopes allow scoping to particular offmap powers, such as China."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Scope",
+                            "Used in vanilla",
+                            "Description",
+                            "Trigger",
+                            "Effect",
+                            "From scope"
+                        ],
+                        [
+                            "%offmap_name%",
+                            "✓",
+                            "Direct scoping to the offmap power by name.",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "offmap_power",
+                            "✓",
+                            "Scopes to the offmap power of the scope. Scope can be the offmap power ruler, the governor, or the governor title.",
+                            "✓",
+                            "✓",
+                            "Character/Title"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "War",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "War scope allows to scope to on-going wars.\nThere are very few trigger and effects available in war scope ( using_cb , war_score , war_title , end_war , days_since_last_hostile_action )."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Scope",
+                            "Used in vanilla",
+                            "Description",
+                            "Trigger",
+                            "Effect",
+                            "From scope"
+                        ],
+                        [
+                            "any_war",
+                            "✓",
+                            "Scopes to any war the character is participating in as an active member; a liege participating would not count. When used in title scope, checks all wars for that title.",
+                            "✓",
+                            "✓",
+                            "Character, Title"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When used in title scope, checks all wars for that title."
+                }
+            ]
+        },
+        {
+            "heading": "Siege/Flank",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Siege (or flank) scopes allow to scope to on-going combats. They are different from unit scopes."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Scope",
+                            "Used in vanilla",
+                            "Description",
+                            "Trigger",
+                            "Effect",
+                            "From scope"
+                        ],
+                        [
+                            "siege",
+                            "✓",
+                            "Scopes to the siege the character is participating in",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "combat",
+                            "✓",
+                            "Scopes to the flank the character is leading, as primary leader or subunit leader [8]",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Unit",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Unit scope allows to scope to an army (outside of a battle/siege) or fleet. It is rarely used in vanilla, and there are very few triggers or effects that work in these scopes ( loot , set_looting , set_can_toggle_looting )."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Scope",
+                            "Used in vanilla",
+                            "Description",
+                            "Trigger",
+                            "Effect",
+                            "From scope"
+                        ],
+                        [
+                            "any_army",
+                            "✓",
+                            "Scopes to all armies belonging to the character.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_controlled_unit",
+                            "X",
+                            "Scopes to all units controlled by the character (?).",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_fleet",
+                            "X",
+                            "Scopes to all fleet belonging to the character.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_unit",
+                            "X",
+                            "Scopes to all units belonging to the character.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_army",
+                            "X",
+                            "Scopes to an armies belonging to the character.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_controlled_unit",
+                            "X",
+                            "Scopes to a unit controlled by the character (?).",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_fleet",
+                            "X",
+                            "Scopes to a fleet belonging to the character.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_unit",
+                            "X",
+                            "Scopes to a unit belonging to the character.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Religion",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Scope",
+                            "Used in vanilla",
+                            "Description",
+                            "Trigger",
+                            "Effect",
+                            "From scope"
+                        ],
+                        [
+                            "%religion_name%",
+                            "✓",
+                            "Scopes to a religion based on its name. Can also be used for religion groups, in which case it scopes to the first religion in the group. For instance: catholic = { }",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "crusade_religion_targeting_us",
+                            "✓",
+                            "Scopes to the religion of the new-style Crusade targeting the current scope",
+                            "✓",
+                            "✓",
+                            "Character/Title/Society"
+                        ],
+                        [
+                            "parent_religion",
+                            "✓",
+                            "Scopes to the parent religion of the current scope.",
+                            "✓",
+                            "✓",
+                            "Character/Province/Religion/Society/Title"
+                        ],
+                        [
+                            "religion_scope",
+                            "✓",
+                            "Scopes to the religion of the current scope.",
+                            "✓",
+                            "✓",
+                            "Character/Province/Society"
+                        ],
+                        [
+                            "secret_religion_scope",
+                            "✓",
+                            "Scopes to the secret religion of the character.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "true_religion_scope",
+                            "✓",
+                            "Scopes to the true religion of the character.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For instance: catholic = { }"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: most scopes/commands/conditions that work in religion scope can also be used in character scope"
+                }
+            ]
+        },
+        {
+            "heading": "Culture",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Scope",
+                            "Used in vanilla",
+                            "Description",
+                            "Trigger",
+                            "Effect",
+                            "From scope"
+                        ],
+                        [
+                            "%culture_name%",
+                            "X",
+                            "Scopes to a culture based on its name. Can also be used for culture groups, in which case it scopes to the first culture in the group. For instance: norse = { }",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "culture_scope",
+                            "✓",
+                            "Scopes to the culture of the character or province.",
+                            "✓",
+                            "✓",
+                            "Character/Province"
+                        ],
+                        [
+                            "gfx_culture_scope",
+                            "✓",
+                            "Scopes to the culturegfx of the character.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For instance: norse = { }"
+                }
+            ]
+        },
+        {
+            "heading": "Society",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Scope",
+                            "Used in vanilla",
+                            "Description",
+                            "Trigger",
+                            "Effect",
+                            "From scope"
+                        ],
+                        [
+                            "%society_name%",
+                            "✓",
+                            "Scopes to a society statically, based on its name. Example: the_satanists = { } .",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "discovered_society",
+                            "X",
+                            "Scopes to the society the character is perceived to be a member of, regardless of membership status",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "secret_religious_cult",
+                            "✓",
+                            "Scopes to the secret religious cult of the character's true religion, or otherwise the secret religious cult of the religion of the scope.",
+                            "✓",
+                            "✓",
+                            "Character/Province/Religion"
+                        ],
+                        [
+                            "society",
+                            "✓",
+                            "Scopes to the society the character is a member of",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Artifact",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Scope",
+                            "Used in vanilla",
+                            "Description",
+                            "Trigger",
+                            "Effect",
+                            "From scope"
+                        ],
+                        [
+                            "any_artifact",
+                            "✓",
+                            "Scopes to any artifact. Used within character scope.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "new_artifact",
+                            "✓",
+                            "Scopes to the artifact just created using add_artifact.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_artifact",
+                            "✓",
+                            "Scopes to a random artifact. Used within character scope.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bloodline",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Scope",
+                            "Used in vanilla",
+                            "Description",
+                            "Trigger",
+                            "Effect",
+                            "From scope"
+                        ],
+                        [
+                            "any_bloodline",
+                            "✓",
+                            "Scopes to any created bloodline",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "any_owned_bloodline",
+                            "✓",
+                            "Scopes to any bloodline owned by the character",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "new_bloodline",
+                            "✓",
+                            "Scopes to the newly created bloodline",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_bloodline",
+                            "X",
+                            "Scopes to a random created bloodline",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "random_owned_bloodline",
+                            "✓",
+                            "Scopes to any bloodline owned by the character",
+                            "X",
+                            "✓",
+                            "Character"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Wonder",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Scope",
+                            "Used in vanilla",
+                            "Description",
+                            "Trigger",
+                            "Effect",
+                            "From scope"
+                        ],
+                        [
+                            "any_demesne_wonder",
+                            "✓",
+                            "Scopes to any wonder located which exists (or has begun construction) within your personal demesne",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_demesne_wonder_upgrade",
+                            "X",
+                            "Scopes to any wonder upgrade which exists (or has begun construction) located within your personal demesne.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_previous_wonder_owner",
+                            "X",
+                            "Scopes to any character who previously owned this wonder.",
+                            "✓",
+                            "✓",
+                            "Wonder"
+                        ],
+                        [
+                            "any_realm_wonder",
+                            "✓",
+                            "Scopes to any wonder which exists (or has begun construction) within the borders of your realm",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_realm_wonder_upgrade",
+                            "✓",
+                            "Scopes to any wonder upgrade which exists (or has begun construction) within the borders of your realm.",
+                            "✓",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "any_upgrade_on_wonder",
+                            "✓",
+                            "Scopes to any upgrade (completed or uncompleted) on wonder",
+                            "✓",
+                            "✓",
+                            "Wonder"
+                        ],
+                        [
+                            "any_wonder",
+                            "✓",
+                            "Scopes to any wonder which exists (or has begun construction) in the world",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "any_wonder_owner",
+                            "X",
+                            "Scopes to any character who owns a wonder.",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "any_wonder_upgrade",
+                            "✓",
+                            "Scopes to any wonder upgrade which exists (or has begun construction) in the world.",
+                            "✓",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "location",
+                            "✓",
+                            "Scopes to the province of the wonder.",
+                            "✓",
+                            "✓",
+                            "Wonder or wonder upgrade"
+                        ],
+                        [
+                            "original_wonder_owner",
+                            "✓",
+                            "Scopes to the character who put down the first stones of the wonder (original creator/starter). From wonder scope.",
+                            "✓",
+                            "✓",
+                            "Wonder"
+                        ],
+                        [
+                            "previous_wonder_owner",
+                            "X",
+                            "Scopes to the character who was previously the owner of a wonder.",
+                            "✓",
+                            "✓",
+                            "Wonder"
+                        ],
+                        [
+                            "random_demesne_wonder",
+                            "✓",
+                            "Scopes to a random wonder in a province owned by the scoped character",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_demesne_wonder_upgrade",
+                            "X",
+                            "Scopes to a random wonder upgrade which exists (or has begun construction) located within your personal demesne.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_previous_wonder_owner",
+                            "X",
+                            "Scopes to a random character who previously owned this wonder.",
+                            "X",
+                            "✓",
+                            "Wonder"
+                        ],
+                        [
+                            "random_realm_wonder",
+                            "✓",
+                            "Scopes to a random wonder in the realm of the scoped character",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_realm_wonder_upgrade",
+                            "✓",
+                            "Scopes to a random wonder upgrade which exists (or has begun construction) within the borders of your realm.",
+                            "X",
+                            "✓",
+                            "Character"
+                        ],
+                        [
+                            "random_upgrade_on_wonder",
+                            "X",
+                            "Scopes to a random upgrade (completed or uncompleted) on the scoped wonder",
+                            "X",
+                            "✓",
+                            "Wonder"
+                        ],
+                        [
+                            "random_wonder",
+                            "✓",
+                            "Scopes to a random wonder which exists (or has begun construction) in the world",
+                            "X",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "random_wonder_owner",
+                            "X",
+                            "Scopes to a random character who owns a wonder.",
+                            "X",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "random_wonder_upgrade",
+                            "X",
+                            "Scopes to a random wonder upgrade which exists (or has begun construction) in the world.",
+                            "X",
+                            "✓",
+                            "Any"
+                        ],
+                        [
+                            "wonder",
+                            "✓",
+                            "Scopes to the parent wonder",
+                            "✓",
+                            "✓",
+                            "Wonder upgrade, Province"
+                        ],
+                        [
+                            "wonder_owner",
+                            "✓",
+                            "Scopes to the character who currently is the top liege (owner) of the wonder.",
+                            "✓",
+                            "✓",
+                            "Wonder"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ forum:774248/page-32#post-22178309",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum:774248",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ https://forum.paradoxplaza.com/forum/index.php?posts/19782549",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forumpost:29777680",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:589686/page-1586#post-23235019",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:589686/page-1586#post-23235019",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forumpost:31496624 and forumpost:31497686",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:774248/page-32#post-22178309",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

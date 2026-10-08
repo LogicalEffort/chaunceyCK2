@@ -1,0 +1,782 @@
+{
+    "pageid": 30,
+    "title": "Breeding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Breeding is the idea of marrying someone with genetic traits in order to pass those traits on to offspring and heirs . These traits are given at birth, and at any time only a small percentage of the character population in Crusader Kings II will have them."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "These traits range from great to terrible, and good genetic traits can be a great boon to any ruler. Getting beneficial genetic traits into a dynasty is what breeding is all about."
+                }
+            ]
+        },
+        {
+            "heading": "Marriage",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "As the positive traits are quite rare, the player is recommended to go out of their way to obtain them. With a little bit of luck they could end up staying in the family for a long time. On the other hand, negative genetic traits should be avoided when possible, unless the advantage cancels out the risk. With a streak of bad luck, bad genetic traits could end up plaguing a dynasty for generations to come. If the player somehow ends up with one of them, it might be a good idea to (if possible) marry someone with a positive trait opposite in effect to it, as that will somewhat decrease the chance of the heirs having mediocre attributes and relations penalties because of it."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "With that being said, some of the lesser negative traits (such as Clubfooted or Lisp ) can be somewhat useful for getting a few more points to use in the Ruler Designer , as typically about 85% of the born offspring are unaffected and it is usually possible to ensure that one of them becomes the heir(ess) ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Since genetic traits are random, breeding programs frequently require either:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Feudal elective succession",
+                            "children": []
+                        },
+                        {
+                            "text": "Open succession",
+                            "children": []
+                        },
+                        {
+                            "text": "Designated heir succession",
+                            "children": []
+                        },
+                        {
+                            "text": "Or a willingness to advance children through your line of succession with disqualification or murder .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Even with two Genius parents, there is no guarantee that the offspring will be a Genius too, but if the player character raises several children , the odds of at least one of them getting this trait are moderately high ( ~66% in a scenario with two Genius parents and three sons born)."
+                }
+            ]
+        },
+        {
+            "heading": "Pregnancy",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A married couple's fertility decides the ability and likelihood of conception. With Conclave DLC active, it is recommended to get the ambition Groom an Heir , which increases fertility by +20% . Without the Conclave DLC activated, the ambition Have a Son/Daughter increases fertility by +25% ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is also possible for the wife to get Pregnant through events, e.g., if the male character becomes rather angry with the death of his firstborn son, or through Seduction focus events."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Two months after conception, the player will be notified and the wife will gain the Pregnant trait and approximately seven months later, a child will be born."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that pregnant women can be incapacitated by a Troubled Pregnancy, triggering a regency if she is a ruler in her own right; the Final Months of a pregnancy will always trigger a regency for female rulers unless the Pregnancy Flavor game rule has been set to \"Limited\" or \"Off.\"."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Pregnancy chance is also affected by FERTILITY_BASE_MULT = 0.5, and the following relationship multipliers:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Relationship",
+                            "Multiplier",
+                            "Modding"
+                        ],
+                        [
+                            "Secondary wife or concubine",
+                            "0.5",
+                            "SECONDARY_SPOUSE_FERTILITY_MULT"
+                        ],
+                        [
+                            "Lover (not spouse)",
+                            "0.5",
+                            "NOT_SPOUSE_FERTILITY_MULT"
+                        ],
+                        [
+                            "Spouse and lover",
+                            "1.5",
+                            "MARRIED_LOVERS_FERTILITY_MULT"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Birth",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Essentially, everything is decided at birth and not at conception:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Child's sex is a simple 50/50% chance",
+                            "children": []
+                        },
+                        {
+                            "text": "As for congenital traits , each have an inheritance chance built in, which ranges from +15% to +50%",
+                            "children": []
+                        },
+                        {
+                            "text": "There is a small chance of genetic traits randomly showing up at childbirth despite neither parent possessing any trait",
+                            "children": []
+                        },
+                        {
+                            "text": "The baby may get the Sickly trait and the mother may die while giving birth",
+                            "children": []
+                        },
+                        {
+                            "text": "Whether or not a pregnancy results in Twin , it is decided at conception; all of the twins' traits (including their genders) are decided at birth, as usual.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: Some genetic traits can also be acquired later in life, such as getting Stutter from one of the outcomes of a childhood event."
+                }
+            ]
+        },
+        {
+            "heading": "Inbreeding",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Characters whose parents have shared ancestors are at risk of being born with the Inbred trait, severely limiting their skills, fertility , and lifespan."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The risk is higher when the parents are more closely related (specifically, with more shared ancestors ). As such, it is recommended to maintain a high degree of separation when marrying and avoid union between close relatives, unless there is a significant advantage."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The chance of the Inbred and Lunatic traits depends on the number of unique ancestors the child has in the past five generations (the first of the five generations being their parents), with a 0% chance of both when all ancestors are unique, rapidly increasing as the number of ancestors shrinks. Missing ancestors (i.e., characters without parents) are assumed to all be unique."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Number of unique ancestors",
+                            "Chance of Inbred",
+                            "Chance of Lunatic"
+                        ],
+                        [
+                            "At least 32",
+                            "0-10%",
+                            "0-2%"
+                        ],
+                        [
+                            "28-31",
+                            "23.25-25.5%",
+                            "4.65-5.1%"
+                        ],
+                        [
+                            "23-27",
+                            "35-39%",
+                            "7-7.8%"
+                        ],
+                        [
+                            "18-22",
+                            "80-88%",
+                            "16-17.6%"
+                        ],
+                        [
+                            "17 or fewer",
+                            "100%",
+                            "27-36.6%"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Once inbreeding has taken root, it has a 25% chance of being passed on to the affected character's children (assuming this marriage is not also incestuous, in which case it is amplified by the above chances). Therefore, it is difficult to uproot."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Inbreeding is also a major concern for Zoroastrians and others who benefit from incestuous marriages . Thus, concubinage becomes particularly important for them."
+                }
+            ]
+        },
+        {
+            "heading": "Non-congenital lineage traits",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Muslims",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Sayyid trait is based on agnatic descent from close relatives of the Prophet Muhammad. If a character marries a woman possessing the Sayyid trait, her sons will be Mirza . However, a Mirza 's child will not become Mirza . Because each of these traits offer a +5 opinion bonus with all Muslims and make it easier to become a Caliph , they are desirable for Muslim rulers."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the player is not running a Sayyid dynasty , it is very difficult to breed it into the dynastic line. The player is required to invite a Sayyid into court and pass the Notable Status of Women law so the player will be able to form a matrilineal marriage , or convert the character to a religion that allows for such a marriage . Next, the Sayyid character should be married matrilineally to a woman of the player's dynasty . If a male child of this union inherits, the dynasty will have the Sayyid trait from this point forward."
+                }
+            ]
+        },
+        {
+            "heading": "Bastards",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Children born outside of marriage or concubinage are considered bastards . Initially, they have the Bastard trait, preventing them from inheriting or passing on the dynasty of their parents. However, a parent can choose to make them a Legitimized bastard , allowing them to inherit, but the -1 diplomacy attribute penalty remains."
+                }
+            ]
+        },
+        {
+            "heading": "Byzantines",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Children born to a ruling Emperor of the Byzantine Empire automatically receive Born in the purple with a +5 vassal opinion bonus and priority in succession ."
+                }
+            ]
+        },
+        {
+            "heading": "Children of concubines",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Children of concubines get the Child of consort trait. They can inherit normally but incur a -1 diplomacy attribute penalty."
+                }
+            ]
+        },
+        {
+            "heading": "Zoroastrians",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A Zoroastrian ruler who fully controls the Persian Empire can earn the Saoshyant trait. All of their descendants benefit from the Saoshyant descendant trait, regardless of gender."
+                }
+            ]
+        },
+        {
+            "heading": "Castes",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Most characters following Dharmic religions are assigned to one of three castes:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Brahmin are temple rulers",
+                            "children": []
+                        },
+                        {
+                            "text": "Kshatriya rule over castle holdings, and",
+                            "children": []
+                        },
+                        {
+                            "text": "Vaishya are city rulers.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Each caste has a different advantage, but followers of the Hindu religion have -30 opinion penalty toward rulers whose caste does not match their holding type. Children inherit the lower one of the castes their parents have."
+                }
+            ]
+        },
+        {
+            "heading": "List of genetic traits",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Positive",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Name",
+                            "Command",
+                            "ID",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "Health",
+                            "Birth %",
+                            "Inherit %",
+                            "Opinions",
+                            "Other modifiers",
+                            "Miscellaneous",
+                            "Cost"
+                        ],
+                        [
+                            "",
+                            "Attractive",
+                            "fair",
+                            "53",
+                            "+1",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "1%",
+                            "15%",
+                            "+30 Attraction",
+                            "",
+                            "Opposite of Ugly",
+                            "16"
+                        ],
+                        [
+                            "",
+                            "Genius",
+                            "genius",
+                            "56",
+                            "+5",
+                            "+5",
+                            "+5",
+                            "+5",
+                            "+5",
+                            "",
+                            "0.5%",
+                            "15%",
+                            "+5 Vassal",
+                            "+10 Personal Combat Skill +30 Rationality",
+                            "Enables the Clever Ambush combat tactic. Opposite of Imbecile , Slow , and Quick",
+                            "30"
+                        ],
+                        [
+                            "",
+                            "Quick",
+                            "quick",
+                            "57",
+                            "+3",
+                            "+3",
+                            "+3",
+                            "+3",
+                            "+3",
+                            "",
+                            "1%",
+                            "15%",
+                            "",
+                            "+5 Personal Combat Skill +15 Rationality",
+                            "Enables the Clever Ambush combat tactic. Opposite of Imbecile , Slow and Genius",
+                            "15"
+                        ],
+                        [
+                            "",
+                            "Strong",
+                            "strong",
+                            "61",
+                            "+1",
+                            "+2",
+                            "",
+                            "",
+                            "",
+                            "+1",
+                            "1%",
+                            "15%",
+                            "+10 Attraction +5 Vassal +10 Tribal",
+                            "+10% Fertility +10 Personal Combat Skill",
+                            "Opposite of Weak",
+                            "25"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Negative",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Name",
+                            "Command",
+                            "ID",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "Health",
+                            "Birth %",
+                            "Inherit %",
+                            "Opinions",
+                            "Other modifiers",
+                            "Miscellaneous",
+                            "Cost"
+                        ],
+                        [
+                            "",
+                            "Clubfooted",
+                            "clubfooted",
+                            "48",
+                            "",
+                            "-1",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "0.5%",
+                            "15%",
+                            "-10 Attraction +5 Same Trait",
+                            "-5 Personal Combat Skill",
+                            "",
+                            "-4"
+                        ],
+                        [
+                            "",
+                            "Dwarf",
+                            "dwarf",
+                            "55",
+                            "",
+                            "-1",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "0.25%",
+                            "25%",
+                            "-30 Attraction +5 Same Trait",
+                            "-15 Personal Combat Skill",
+                            "Inherit chance increases to 50% if both parents have the Dwarf trait. Opposite of Giant",
+                            "-14"
+                        ],
+                        [
+                            "",
+                            "Harelip",
+                            "harelip",
+                            "49",
+                            "-1",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "0.5%",
+                            "15%",
+                            "-10 Attraction +5 Same Trait",
+                            "",
+                            "",
+                            "-4"
+                        ],
+                        [
+                            "",
+                            "Hunchback",
+                            "hunchback",
+                            "50",
+                            "",
+                            "-1",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "0.5%",
+                            "15%",
+                            "-30 Attraction +5 Same Trait -5 Vassal",
+                            "",
+                            "",
+                            "-19"
+                        ],
+                        [
+                            "",
+                            "Imbecile",
+                            "imbecile",
+                            "59",
+                            "-8",
+                            "-8",
+                            "-8",
+                            "-8",
+                            "-8",
+                            "",
+                            "0.5%",
+                            "15%",
+                            "-30 Attraction -10 Vassal",
+                            "-30 Personal Combat Skill -30 Rationality",
+                            "Opposite of Slow , Quick , and Genius",
+                            "-65"
+                        ],
+                        [
+                            "",
+                            "Inbred",
+                            "inbred",
+                            "60",
+                            "-5",
+                            "-5",
+                            "-5",
+                            "-5",
+                            "-5",
+                            "-1.5",
+                            "",
+                            "25%",
+                            "-30 Attraction -10 Vassal",
+                            "-30% Fertility -20 Personal Combat Skill -20 Rationality",
+                            "Inherit chance increases to 50% if both parents have the Inbred trait",
+                            "-71"
+                        ],
+                        [
+                            "",
+                            "Lisp",
+                            "lisp",
+                            "51",
+                            "-1",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "0.5%",
+                            "15%",
+                            "+5 Same Trait",
+                            "",
+                            "Enables the Confused Orders combat tactic",
+                            "-1"
+                        ],
+                        [
+                            "",
+                            "Slow",
+                            "slow",
+                            "58",
+                            "-3",
+                            "-3",
+                            "-3",
+                            "-3",
+                            "-3",
+                            "",
+                            "1%",
+                            "15%",
+                            "",
+                            "-5 Personal Combat Skill -15 Rationality",
+                            "Opposite of Imbecile , Quick , and Genius",
+                            "-15"
+                        ],
+                        [
+                            "",
+                            "Stutter",
+                            "stutter",
+                            "52",
+                            "-1",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "0.5%",
+                            "15%",
+                            "+5 Same Trait",
+                            "",
+                            "Enables the Confused Orders combat tactic",
+                            "-4"
+                        ],
+                        [
+                            "",
+                            "Ugly",
+                            "ugly",
+                            "54",
+                            "-1",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "1%",
+                            "10%",
+                            "-20 Attraction",
+                            "",
+                            "Opposite of Attractive",
+                            "-11"
+                        ],
+                        [
+                            "",
+                            "Weak",
+                            "weak",
+                            "62",
+                            "",
+                            "-1",
+                            "",
+                            "",
+                            "",
+                            "-1",
+                            "1%",
+                            "15%",
+                            "-10 Attraction -5 Vassal -10 Tribal",
+                            "-5% Fertility -10 Personal Combat Skill",
+                            "Opposite of Strong",
+                            "-22"
+                        ],
+                        [
+                            "",
+                            "Giant",
+                            "giant",
+                            "327",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "-0.5",
+                            "0.5%",
+                            "5%",
+                            "+5 Vassal +10 Tribal -5 Attraction",
+                            "-20% Fertility +10 Personal Combat Skill",
+                            "Opposite of Dwarf",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Left-Handed",
+                            "lefthanded",
+                            "337",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "0.75%",
+                            "25%",
+                            "+5 Same Trait -10 Christian Church -10 Muslim",
+                            "+15 Personal Combat Skill",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Freckles",
+                            "freckles freckles_2 freckles_3 freckles_4 freckles_5",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "2.5%",
+                            "40%",
+                            "",
+                            "",
+                            "Only affects portrait Trait icon is hidden, but can be viewed using observe command",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Strategy",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In order to deal with dynasty characters with negative genetic traits , the following actions may be taken into account:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If descendants are in the line of succession : The player could try to disqualify them from succession",
+                            "children": []
+                        },
+                        {
+                            "text": "If descendants are not in the line of succession : It is much easier to just arrange a marriage into other important dynasties , which also has the possibility of introducing the defect into those dynasties' gene pools. In the long term, this \"infection\" has the potential to erode their power through generations of dysgenic leaders.",
+                            "children": []
+                        },
+                        {
+                            "text": "Alternatively,  if no options for disinheritance is available, one might attempt to liquidate the unprofitable assets.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Summary",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Avoid marriages among close relatives; ensure that the groom and bride at least do not share any grandparent",
+                            "children": []
+                        },
+                        {
+                            "text": "Avoid marriages with spouses bearing negative genetic traits",
+                            "children": []
+                        },
+                        {
+                            "text": "Look for candidates of marriage who possess positive genetic traits",
+                            "children": []
+                        },
+                        {
+                            "text": "Should the player happens upon a negative genetic traits , it is possible to marry spouses with positive traits opposite in effect to it (e.g., Quick as opposed to Slow ), for it will decrease the chance of heirs receiving a large hit to their stats .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Bastard",
+                            "children": []
+                        },
+                        {
+                            "text": "Education , Education with Conclave DLC",
+                            "children": []
+                        },
+                        {
+                            "text": "Marriage",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
