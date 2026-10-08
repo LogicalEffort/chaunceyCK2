@@ -6,6 +6,8 @@ DB_PATH = os.environ.get("CHAUNCEY_DB", "ck2_units_sample.db")
 MODEL = os.environ.get("CHAUNCEY_MODEL", "llama3.1")
 EMBED_MODEL = "nomic-embed-text"
 COLLECTION = "ck2_wiki"
+# Link to a wiki page by its ID.
+WIKI_URL = "https://ck2.paradoxwikis.com/?curid={pageid}"
 
 CHROMA_DIR = str(Path(__file__).resolve().parents[2] / "db")
 
