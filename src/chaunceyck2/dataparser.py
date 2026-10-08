@@ -2,6 +2,9 @@ import re
 import sys
 import json
 from chaunceyck2.constants import *
+from chaunceyck2.store import get_store, replace_page
+from langchain_core.documents import Document
+
 
 def tidy(text: str) -> str:
     text = re.sub(r"\s+([,.;:)])", r"\1", text)   # "Morale ;" -> "Morale;"
@@ -131,13 +134,39 @@ def chunk_page(page: dict) -> tuple[list[dict], str | None]:
             })
     return chunks, version
 
+def page_documents(page: dict) -> list[Document]:
+    """Returns the page's chunks as Documents, ready to store."""
+    chunks, version = chunk_page(page)
+    page_id = page["pageid"]
+
+    # Facts shared by every chunk on the page.
+    page_metadata = {
+        "page_id": page_id,
+        "title": page["title"],
+        "url": WIKI_URL.format(pageid=page_id),
+    }
+    if version:
+        page_metadata["verified_version"] = version
+
+    return [
+        Document(
+            id=f"{page_id}:{chunk['section_index']}:{chunk['chunk_index']}",
+            page_content=chunk["text"],
+            metadata={**page_metadata, "heading_path": chunk["heading_path"]},
+        )
+        for chunk in chunks
+    ]
+
+
 ######Temporary function to test
 if __name__ == "__main__":
-    page = json.load(open(sys.argv[1], encoding="utf-8"))
-    chunks, version = chunk_page(page)
-    print(f"{len(chunks)} chunks, version {version}")
-    for chunk in chunks:
-        print(f"\n--- [{chunk['section_index']}:{chunk['chunk_index']}] {len(chunk['text'])} chars")
-        print(chunk["text"])
+    store = get_store()
+    for path in sys.argv[1:]:
+        page = json.load(open(path, encoding="utf-8"))
+        docs = page_documents(page)
+        replace_page(store, page["pageid"], docs)
+        print(f"{path}: stored '{page['title']}' as {len(docs)} chunks")
+
+
 
 
