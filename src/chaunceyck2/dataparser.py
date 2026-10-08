@@ -1,7 +1,7 @@
 import re
 import sys
 import json
-
+from chaunceyck2.constants import *
 
 def tidy(text: str) -> str:
     text = re.sub(r"\s+([,.;:)])", r"\1", text)   # "Morale ;" -> "Morale;"
@@ -26,6 +26,28 @@ def render_table(rows: list[list[str]]) -> str:
         lines.append(f"{row[0]}: {'; '.join(cells) or 'no modifiers'}")
     return "\n".join(lines)
 
+def is_record_table(rows: list[list[str]]) -> bool:
+    # One entity per row with descriptive cells, e.g. the bloodline tables.
+    return any(len(cell) > LONG_CELL_CHARS for row in rows[1:] for cell in row)
+
+
+def render_rows(rows: list[list[str]]) -> list[str]:
+    # One labelled record per row: "Name: Blood of Caradog\nFounder: ..."
+    header, *body = rows
+    records = []
+    for row in body:
+        if len(row) != len(header):
+            # A merged cell was lost in the export, so the columns can't be trusted.
+            print(f"warning: row has {len(row)} cells, header has {len(header)}: {header}", file=sys.stderr)
+            records.append(" | ".join(tidy(cell) for cell in row if cell))
+            continue
+        records.append("\n".join(
+            f"{name}: {tidy(value)}" if name else tidy(value)
+            for name, value in zip(header, row) if value
+        ))
+    return records
+
+
 def render_block(block: dict) -> str:
     if block["type"] == "paragraph":
         return tidy(block["text"])
@@ -35,11 +57,87 @@ def render_block(block: dict) -> str:
         return render_table(block["rows"])
     raise ValueError(f"Unknown block type: {block['type']}")
 
+def pack_blocks(blocks: list[dict]) -> list[str]:
+    # Join a lead-in paragraph ("Sources of troops include:") to the block after it.
+    units = []
+    glue = False
+    for block in blocks:
+        text = render_block(block)
+        if glue:
+            units[-1] += "\n" + text
+        else:
+            units.append(text)
+        glue = block["type"] == "paragraph" and text.endswith(":")
+
+    # Fill each chunk until the next unit would push it past the limit.
+    chunks = []
+    prev_unit = None
+    for unit in units:
+        if chunks and len(chunks[-1]) + len(unit) <= MAX_CHUNK_CHARS:
+            chunks[-1] += "\n\n" + unit
+        elif prev_unit and len(prev_unit) <= OVERLAP_CHARS:
+            chunks.append(prev_unit + "\n\n" + unit)
+        else:
+            chunks.append(unit)
+        prev_unit = unit
+    return chunks
+
+def chunk_section(blocks: list[dict]) -> list[str]:
+    chunks = []
+    run = []   # consecutive blocks to pack together
+    for block in blocks:
+        if block["type"] == "table" and is_record_table(block["rows"]):
+            chunks += pack_blocks(run)
+            run = []
+            chunks += render_rows(block["rows"])
+        else:
+            run.append(block)
+    return chunks + pack_blocks(run)
+
+
+def chunk_page(page: dict) -> tuple[list[dict], str | None]:
+    """Returns the page's chunks and the game version from its banner, if it has one."""
+    title = page["title"]
+    version = None
+    chunks = []
+    stack = []   # headings of the sections we're currently inside, as (level, heading)
+
+    for section_index, section in enumerate(page["sections"]):
+        level, heading = section["level"], section["heading"]
+
+        # Leave any sections at this level or deeper, then enter this one.
+        while stack and stack[-1][0] >= level:
+            stack.pop()
+        stack.append((level, heading))
+        heading_path = " > ".join([title] + [h for _, h in stack])
+        # The level-1 lead section isn't a parent of the sections after it.
+        if level == 1:
+            stack.clear()
+
+        blocks = []
+        for block in section["content"]:
+            if block["type"] == "paragraph" and BANNER_RE.match(block["text"]):
+                match = VERSION_RE.search(block["text"])
+                version = match.group(1) if match else version
+                continue
+            blocks.append(block)
+
+        for chunk_index, body in enumerate(chunk_section(blocks)):
+            chunks.append({
+                "section_index": section_index,
+                "chunk_index": chunk_index,
+                "heading_path": heading_path,
+                "text": f"{heading_path}\n\n{body}",
+            })
+    return chunks, version
+
 ######Temporary function to test
 if __name__ == "__main__":
     page = json.load(open(sys.argv[1], encoding="utf-8"))
-    for section in page["sections"]:
-        print(f"\n=== {section['heading']} (level {section['level']})")
-        for block in section["content"]:
-            print(render_block(block), end="\n\n")
+    chunks, version = chunk_page(page)
+    print(f"{len(chunks)} chunks, version {version}")
+    for chunk in chunks:
+        print(f"\n--- [{chunk['section_index']}:{chunk['chunk_index']}] {len(chunk['text'])} chars")
+        print(chunk["text"])
+
 
