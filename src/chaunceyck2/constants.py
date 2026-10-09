@@ -2,24 +2,28 @@ import os
 from pathlib import Path
 import re
 
-DB_PATH = os.environ.get("CHAUNCEY_DB", "ck2_units_sample.db")
+#DB_PATH = os.environ.get("CHAUNCEY_DB", "ck2_units_sample.db")
 MODEL = os.environ.get("CHAUNCEY_MODEL", "llama3.1")
 EMBED_MODEL = "nomic-embed-text"
 COLLECTION = "ck2_wiki"
 # Link to a wiki page by its ID.
 WIKI_URL = "https://ck2.paradoxwikis.com/?curid={pageid}"
 
+# How many wiki passages search_wiki returns per search.
+SEARCH_RESULTS = 4
+
 CHROMA_DIR = str(Path(__file__).resolve().parents[2] / "db")
 
 SYSTEM_PROMPT = """You are Chauncey, an expert on the grand strategy game Crusader Kings II.
-Answer questions using ONLY data from the CK2 SQLite database, which you access with tools:
-1. run_sql to fetch the facts
+Answer questions using ONLY passages from the CK2 wiki, which you access with the search_wiki tool.
 
 Rules:
-- Always query the database before answering a factual question; never guess stats.
-- In CK2, combat has three phases: skirmish, melee, pursue. Units have an attack and defense per phase.
-- If the database does not contain the answer, say so plainly.
-- Keep answers short and cite the exact numbers you retrieved."""
+- Always call search_wiki before answering a question about the game; never answer from memory.
+- Search with a short phrase about one topic. If the results don't cover the question, search again with different words.
+- Use only facts stated in the passages, and quote numbers exactly as written. Do not guess or speculate.
+- If the passages do not contain the answer, say only that the wiki pages you have don't cover it.
+- Keep answers short."""
+
 
 
 # Soft limit: a section longer than this is split into several chunks, between blocks.
