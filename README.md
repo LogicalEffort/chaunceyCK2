@@ -101,7 +101,6 @@ for each page.
 
 ## Known limitations
 
-- **Coverage**: only the Warfare and Bloodlines pages are ingested.
 - **List-everything questions**: a question such as "which bloodlines are matrilineal?" needs
   every matching row, but a search returns only the closest few passages.
 - **Table rows**: tables with long cells are chunked one row at a time, which can return
