@@ -1,5 +1,5 @@
 import sys
-from chaunceyck2.constants import MODEL
+from chaunceyck2.constants import MODEL, cli_logo
 from chaunceyck2.agent import build_agent, ask
 
 
@@ -8,6 +8,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         print(ask(agent, " ".join(sys.argv[1:])))
     else:
+        cli_logo()
         print(f"Chauncey ({MODEL}) ready. Ctrl+C to quit.")
         while True:
             try:
@@ -16,3 +17,7 @@ if __name__ == "__main__":
                 break
             if q:
                 print("Chauncey:", ask(agent, q))
+
+
+
+
