@@ -4,7 +4,7 @@ Chauncey answers questions about Crusader Kings II from pages of the
 [CK2 wiki](https://ck2.paradoxwikis.com). It runs locally: an Ollama chat model
 searches a ChromaDB vector store of wiki passages and answers only from what it finds.
 
-Chauncey currently runs as a console program, with two wiki pages ingested (Warfare and Bloodlines).
+Chauncey currently runs as a console program, with all wiki pages ingested.
 
 ## How it works
 
