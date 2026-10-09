@@ -1,0 +1,565 @@
+{
+    "pageid": 1317,
+    "title": "Raiding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Pagan and Hindu rulers, tribal and nomadic rulers of any religion , along with certain cultures , may raid enemy provinces without bothering to declare war . Culture overrides government type so Norse, Turks, etc... can always raid no matter their form of government. Bringing home loot can be a major source of wealth and prestige ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any province on the map can be raided (barring relationships or settled adventurer - see below) however you won't get Province Loot (i.e. gold - shown as an orange bar in the province view) and Prestige unless the province is either:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "a neighbouring province (adjacent to your demesne or your vassal's demesne). You get the Province Loot and Prestige immediately.",
+                            "children": []
+                        },
+                        {
+                            "text": "a province where you have ships in adjacent waters. The Province Loot and Prestige will be transferred to the fleet, and will be added to your treasury when the fleet docks.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you raid a province without either of the above requirements, you will get no gold if you successfully siege down a holding, but you can still get prisoners to ransom as well as artifacts."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For an army to raid, it must be set to a \"raiding\" stance before it leaves your territory. Armies can only enter this stance while you are at peace. As long as you remain at peace, looter armies only cost 10% maintenance."
+                }
+            ]
+        },
+        {
+            "heading": "Cultures, Religions and Government types which can raid",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can raid if you fulfill one of the three conditions below:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Government : Tribal and Nomadic rulers can raid",
+                            "children": []
+                        },
+                        {
+                            "text": "Religion : Hindus , Qarmatian, and most Pagans can raid, except Aztec, unreformed Zun, Hellenic, Generic pagans and reformed pagan faiths with the Peaceful nature. Reformed pagan faiths with other natures can raid even if the unreformed faith could not.",
+                            "children": []
+                        },
+                        {
+                            "text": "Culture : all Altaic, all Tibeto-Burman, Hungarians (Magyar), Nahua (Aztec), Norse (not other North Germanic), Berber (not other Arabic), Nepali (not other Indo-Aryan), Daju (not other East African)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "However, vassals who are eligible to raid must also have a top liege who is allowed to raid, or they will be unable to do so. The vassal and top liege do not need to have the same reason they can raid, nor does a vassal's direct liege need to be eligible. For example, an Anglo-Saxon Catholic Tribal Chief under an independent Anglo-Saxon Catholic Feudal Duke may not raid, but that same Chief would be allowed to raid if that same Duke were in turn a vassal of a Norse Catholic Feudal King."
+                }
+            ]
+        },
+        {
+            "heading": "Raiding and relations",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can raid anyone who is not your liege, your vassal or your tributary/suzerain. For example, nomad vassal clans may raid each other. If your vassal raids you, you can imprison him without tyranny. (Do not be misled by the tooltips \"Rulers can raid infidel neighbors for loot\" and \"Can raid overseas with ships\". These refer to AI behavior; players can also raid co-religionists and can always use ships to support raids.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Raiding a realm makes you hostile for 180 days (from the last raiding). All rulers count-tier and above who control holdings in the county will have the opinion \"Pillaged my Lands: -40\" for the same time period."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You cannot raid a county if you have a non-aggression pact with the top liege or any of their vassals who control the county. Truces, however, do not prevent raiding."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Vassals don't mind if their troops are raised for looting (only while sieging). Vassals will be angry for each 60 days when their troops are moving or when their troops are looting free loot after all holdings have been sacked."
+                }
+            ]
+        },
+        {
+            "heading": "Raiding and Settled Adventurers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If a province has the Settled Adventurer modifier, it cannot be raided until that trait expires."
+                }
+            ]
+        },
+        {
+            "heading": "Raiding free loot",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Even a small band of raiders can ransack the countryside for loot. The base available loot in a province is roughly 2/3 of the total annual income for all holdings in that province. Of this loot:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "some is protected by walls. The protected amount is equal to the sum of the fort levels in all (un-sacked) or unoccupied holdings in the province, multiplied by 4.",
+                            "children": []
+                        },
+                        {
+                            "text": "the remainder may be looted freely, by leaving raiding troops in the province",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The speed of looting depends on the size of your raiding party (up to 500) and the \"max loot\" in the province (regardless of whether it is protected by fortifications or already plundered).  It takes 100 days to fully loot a province, although your raiders will usually have to pause when they encounter fortifications."
+                }
+            ]
+        },
+        {
+            "heading": "Sacking holdings",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With enough raiders, holdings may be sieged down as well. The mechanics are similar to occupation sieges, but a given siege has only one goal: sacking or occupation. Note that raiding cannot be toggled on unless the army is in friendly territory and the ruler is at peace."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Sacking a holding:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Loots a large amount of money (roughly double the annual income of the holding). The formula is:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Lets more of the free loot be gathered.",
+                            "children": []
+                        },
+                        {
+                            "text": "Causes a penalty on demesne income and prevents from sacking again for 3 years.",
+                            "children": []
+                        },
+                        {
+                            "text": "May destroy buildings or holdings:",
+                            "children": [
+                                {
+                                    "text": "Has a 10% chance of destroying a random building in that holding.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Has a 5% chance of destroying the holding entirely, if the holding has fewer than 4 buildings. The capital holding can't be destroyed.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Always destroys any building or holding currently being constructed.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Nomad raiders can further plunder, destroying a building and gaining population (from tribes) or tech points (from other holdings)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Sacking infidel temples increases moral authority . Likewise, sacking a temple belonging to your religion will decrease your own moral authority.",
+                            "children": []
+                        },
+                        {
+                            "text": "Has a chance of imprisoning any courtiers in the province.",
+                            "children": []
+                        },
+                        {
+                            "text": "With The Old Gods or Holy Fury : May give the Viking or Pirate trait, if the character is eligible (see Traits#Raiding )",
+                            "children": []
+                        },
+                        {
+                            "text": "With Monks and Mystics or Holy Fury : May steal artifacts from the holding owner or from characters present in the holding (Only on a capital holding of the province, so no looting artifacts from baronies unless you give them the county)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Raid defense",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Consider building forts at border counties as raiding armies will be forced to siege the fort first, allowing you to gather levies before the county's more valuable holdings are threatened."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If raiding armies are threatened, they will usually board ships and look for another realm to pillage. Most defenders find this sufficient. It is imperative that defenders force raiding armies to flee as quickly as possible if the province has a large percentage of free loot; lost free loot decreases the province's tax value. This is more critical for nomads as their counties' free loot is not protected by the fort levels of holdings and they cannot build forts; parking some horde troops on provinces with Silk Road trade posts is advised."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "However, if a defending army can catch and defeat a raiding army, its owner is prohibited from raiding the target ruler for 5 years (only if the game rules has shattered retreat enabled).  These fights, while not strictly necessary, can be a useful source of commander practice or military research points . Several methods can be used to catch raiders without giving them a chance to run to their ships:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Dock a fleet that holds a large army. (To avoid the \"amphibious landing\" penalty, be careful to select the fleet rather than the army.)",
+                            "children": []
+                        },
+                        {
+                            "text": "Assign a commander who increases army movement speed , such as an Organizer , once they begin to flee.",
+                            "children": []
+                        },
+                        {
+                            "text": "Raise levies from the looted province, just before the looters reach their ships. These levies don't have to defeat the raiders; they just need to hold out long enough for the main army to arrive.",
+                            "children": []
+                        },
+                        {
+                            "text": "Attack with a small force, then have a large force join.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Germanic pagans are the best raiders"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "769 start date : the \"Viking Age\" begins in the year 800, giving independent rulers of Norse culture free shipyards in all realm provinces with the correct culture. Coastal provinces in the independent ruler's demesne (not held by vassals) also get free shipbuilding technology.",
+                            "children": []
+                        },
+                        {
+                            "text": "867 start date: Germanic pagans and Hindu rulers begin with ships.",
+                            "children": []
+                        },
+                        {
+                            "text": "Germanic pagans have the unique ability (among unrefomed pagans) to navigate major rivers such as the Rhine; they also only pay 10% maintenance on their ships.",
+                            "children": [
+                                {
+                                    "text": "Reformed pagans which wish to have both bonuses have to select the Sea-Bound doctrine during reformation; Germanic pagans can select their unique Sons of Ragnarok doctrine to keep the bonuses after reformation.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Rivers are no longer navigable once the average fort level of the adjacent provinces exceeds 10.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Raid rich provinces"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Use the economy map mode to identify rich provinces",
+                            "children": []
+                        },
+                        {
+                            "text": "Consider targets such as Venice (capital of merchant republic), provinces with coastal Silk Road trade post. (With , remember that Silk Road profitability can be affected by China's status.)",
+                            "children": []
+                        },
+                        {
+                            "text": "Come back after the loot bar refills",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Sack holdings"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Focus on provinces with more cities/churches than castles, or provinces with squishy county capitals",
+                            "children": []
+                        },
+                        {
+                            "text": "Appoint a commander with the Siege Leader trait for quicker sieges",
+                            "children": []
+                        },
+                        {
+                            "text": "If your religion or government type allows taking of concubines , consider distant targets such as Constantinople; Constantinople itself is a \"hard\" target as its capital has additional fort levels.",
+                            "children": []
+                        },
+                        {
+                            "text": "You can send your ships for a loot drop-off while waiting for a siege to end",
+                            "children": []
+                        },
+                        {
+                            "text": "Come back after 3 years",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Raid islands"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Exploit the AI's inability to use boats.",
+                            "children": []
+                        },
+                        {
+                            "text": "Islands in the Mediterranean have mild climates, allowing you to commit large armies to raid and overcome significant penalties when storming islands like Venice and Malta.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Beware of changes in supply limit"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Winters, epidemics and highway bands can reduce a county's supply limit considerably, making sieges and sacking of holdings more difficult.",
+                            "children": []
+                        },
+                        {
+                            "text": "Consider raiding in latitudes with mild winters (e.g. Mediterranean)",
+                            "children": []
+                        },
+                        {
+                            "text": "Time your raids to avoid winters, especially if the intended targets have high chances of harsh winter.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Avoid temples of your own religion"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Decreasing the moral authority of your own religion is usually not a good idea.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Avoid retaliation"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "AI rulers will not raise levies in provinces where you currently have troops, even if they outnumber you",
+                            "children": []
+                        },
+                        {
+                            "text": "Each liege (duke, king, emperor) should be weak or distracted by war",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Flee when threatened"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Appoint a commander with the Organizer trait for movement speed",
+                            "children": []
+                        },
+                        {
+                            "text": "Retreat into ships",
+                            "children": []
+                        },
+                        {
+                            "text": "If caught in a hopeless battle, order retreat (right-click a destination) rather than waiting for morale to drop",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Raid and sack before war"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "This lets you take on a sequence of small armies, rather than one large army, because:",
+                            "children": [
+                                {
+                                    "text": "Enemies will not have the aid of allies during the raid.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Enemies (AI) will not raise troops in provinces where you have troops.",
+                                    "children": [
+                                        {
+                                            "text": "If your army is large enough, you can even sack the holding with the levies still unraised, killing them without a battle.",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Remember that getting 100% warscore requires winning a \"major battle\" (>5% warscore in 1 battle) or occupying all enemy territory.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Raid and sack during war"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Requires the use of non-levy armies, because armies cannot be set to loot while at war. Retinues are probably the best choice; holy orders may be too expensive to maintain in an offensive war and do not work against non-religious enemies. Nomads can easily make use of this strategy due to their usage of horde troops . Tribal rulers may use certain event troops or their tribal retinues for this strategy.",
+                            "children": []
+                        },
+                        {
+                            "text": "Use a single army in \"raid mode\", then switch to \"occupy mode\" immediately after sacking (and order a fast assault).",
+                            "children": []
+                        },
+                        {
+                            "text": "Or, put both a \"raid army\" and an \"occupy army\" in a province, with the raid army arriving first. Immediately after sacking, order both armies to move out, then order the occupy army to stay.",
+                            "children": []
+                        },
+                        {
+                            "text": "Help your vassals in their external wars by raiding their targets.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Raid and sack after war"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "This lets you take advantage of supply limit bonuses during the war, then assault-sack the weakened holdings",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Use vassal levies to raid"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Vassals do not mind their levies being raised while those levies are raiding a county, and don't mind their ships being raised while those ships are carrying any amount of loot. This is true even if they normally mind their levies being raised. However, do not hesitate to supplement with your demesne troops as maintenance costs of raiding troops is only 10%.",
+                            "children": [
+                                {
+                                    "text": "Nomadic and tribal rulers cannot use vassals' troops to raid as they call their vassal clans/tribal vassals' to war as allies. However, if they have vassal barons located at coastal counties, they can raise fleet levies.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Raid for prisoners"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "For ransom: Choose wealthy capitals with heirs/close relatives residing in them.",
+                            "children": []
+                        },
+                        {
+                            "text": "For sacrifices ( reformed pagan with Bloodthirsty Gods doctrine): Choose realms which follow a different religion.",
+                            "children": []
+                        },
+                        {
+                            "text": "For raking up kills ( murder bloodlines ): execute infidel prisoners (no Piety cost) and let prisoners of same religion rot in dungeons.",
+                            "children": []
+                        },
+                        {
+                            "text": "For getting rivals (to duel to create the duelist bloodline ): Give prisoners Ambitious in adolescence to make them rivals. You need at least two attributes at 12 or above, and the child must have been captured before age 12 and be in house arrest .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adventurers#Raiding adventurers",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

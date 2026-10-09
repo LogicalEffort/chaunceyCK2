@@ -32,7 +32,11 @@ def process_list(list_element):
     return processed_items
 
 def process_table(table_element):
-    rows = table_element.find_all("tr")
+    rows = [
+        row for row in table_element.find_all("tr")
+        if row.find_parent("table") == table_element
+    ]
+
     processed_rows = []
 
     active_rowspans = []
@@ -78,7 +82,7 @@ def process_page(raw_file, page):
         page_id = raw_data["pageid"]
         title = raw_data["title"]
 
-        output_path = Path(f"data/content/processed/{page_id}.json")
+        output_path = Path(f"data/content/processedv2/{page_id}.json")
 
         if output_path.exists():
             print("Already processed ", title)
@@ -159,6 +163,9 @@ def process_page(raw_file, page):
                 current_section["content"].append(list_data)
 
             elif element.name == "table":
+                if element.find_parent("table") is not None:
+                    continue
+
                 table_data = {
                     "type": "table",
                     "rows": process_table(element)
@@ -183,7 +190,7 @@ def process_page(raw_file, page):
 
 
 raw_folder = Path("data/content/raw")
-processed_folder = Path("data/content/processed")
+processed_folder = Path("data/content/processedv2")
 
 processed_folder.mkdir(parents=True, exist_ok=True)
 

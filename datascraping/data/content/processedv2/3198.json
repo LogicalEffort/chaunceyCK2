@@ -1,0 +1,241 @@
+{
+    "pageid": 3198,
+    "title": "Ze Lunatic (Conclave)",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This is a list of all events from /Crusader Kings II/events/ze_lunatic.txt ."
+                }
+            ]
+        },
+        {
+            "heading": "Event ID",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Name"
+                        ],
+                        [
+                            "ZE.15000",
+                            "Horse Chancellor"
+                        ],
+                        [
+                            "ZE.15001",
+                            ""
+                        ],
+                        [
+                            "ZE.15002",
+                            "Immortal Horse"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Events",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Horse Chancellor",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Trigger conditions Has Conclave DLC Has Lunatic trait Has Game Rule \"Absurd Events\" turned on Has appointed a Chancellor Doesn't have a character of Horse culture as Chancellor",
+                            "Mean time to happen 420 months"
+                        ],
+                        [
+                            "Glitterhoof, I appoint thee as the [Root.GetChancellorName] of the realm. Current Chancellor fired A new character is created named \"Glitterhoof\" with the race and culture of Horse and the traits: Horse Imbecile Stubborn Fair Strong Fired character gains opinion modifier towards liege for 5 years: opinion_fired_from_council ( –15 Opinion) If player has Immortal Immortal trait, event ZE.15001 is fired after 10 in-game days. If player has Jade Dragon DLC, event JD.60007 (Protect the Horse) is fired after 30 in-game days."
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Has Conclave DLC",
+                            "children": []
+                        },
+                        {
+                            "text": "Has Lunatic trait",
+                            "children": []
+                        },
+                        {
+                            "text": "Has Game Rule \"Absurd Events\" turned on",
+                            "children": []
+                        },
+                        {
+                            "text": "Has appointed a Chancellor",
+                            "children": []
+                        },
+                        {
+                            "text": "Doesn't have a character of Horse culture as Chancellor",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "420 months",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Current Chancellor fired",
+                            "children": []
+                        },
+                        {
+                            "text": "A new character is created named \"Glitterhoof\" with the race and culture of Horse and the traits: Horse Imbecile Stubborn Fair Strong",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fired character gains opinion modifier towards liege for 5 years:",
+                            "children": [
+                                {
+                                    "text": "opinion_fired_from_council ( –15 Opinion)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "If player has Immortal Immortal trait, event ZE.15001 is fired after 10 in-game days.",
+                            "children": []
+                        },
+                        {
+                            "text": "If player has Jade Dragon DLC, event JD.60007 (Protect the Horse) is fired after 30 in-game days.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "ZE.15001",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Trigger conditions ZE.15001",
+                            "Is triggered only by yes"
+                        ],
+                        [
+                            "N/A Event ZE.15002 is fired"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "ZE.15001",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "yes"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Event ZE.15002 is fired",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Immortal Horse",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Trigger conditions Has Lunatic trait Has Immortal trait ZE.15001",
+                            "Is triggered only by yes"
+                        ],
+                        [
+                            "I shall offer [From.GetFirstName] my magical blood! Glitterhoof from \"Horse Chancellor\" event gets Immortal trait. Immortality is my gift, and my gift alone! None"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Has Lunatic trait",
+                            "children": []
+                        },
+                        {
+                            "text": "Has Immortal trait",
+                            "children": []
+                        },
+                        {
+                            "text": "ZE.15001",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "yes"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Glitterhoof from \"Horse Chancellor\" event gets Immortal trait.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "None",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

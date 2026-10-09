@@ -1,0 +1,191 @@
+{
+    "pageid": 3844,
+    "title": "Optimization",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Optimization is a set of mechanisms and techniques that ensures that the game performance remains acceptable after hundred years."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The game performance mainly depends on the number of living characters, on whom events need to be processed, and that need to be kept in the save files. [1] The number of characters is itself closely tied to the number of provinces.\nBut it is worth noting that courts are only generated for characters above baron level (except for patricians), so adding more barons has considerably less of an effect on performance than adding more counts."
+                }
+            ]
+        },
+        {
+            "heading": "Pruning",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Pruning is the removal of unimportant characters, so that the number of courtiers remains reasonable and game performance acceptable due to events & decisions processed on courtiers."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It balances out the random character generation used to populate courts, since characters may not die naturally as fast as new ones get generated."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Pruned characters are killed with death reason death_vanished , aka \"vanished without a trace\"."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Pruning is controlled by:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "NDefines.NEngine.COURT_PRUNE_SIZE = 10 : courts larger than this will be checked for pruning each month",
+                            "children": []
+                        },
+                        {
+                            "text": "NDefines.NEngine.HEALTH_IMMUNITY_TO_PRUNING = 7 : if a character has that much health, they won't be pruned",
+                            "children": []
+                        },
+                        {
+                            "text": "NDefines.NEngine.PRUNE_MINIMAL_AGE = 40",
+                            "children": []
+                        },
+                        {
+                            "text": "Courtiers who have minor titles, friends, lovers, consorts or rivals are excluded",
+                            "children": []
+                        },
+                        {
+                            "text": "Immortal characters are excluded",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters marked as special interest by the player are excluded.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There's also a related scripted trigger used in some mass disease events:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that another trigger of pruning is the inheritance of a title: rather than moving all characters of the old court of the title to the court of the new holder, some characters are pruned."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Due to a different behavior, [2] these characters die of death_natural reason and some of the checks above (immortal, ...) are bypassed."
+                }
+            ]
+        },
+        {
+            "heading": "Health Penalty",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "All unimportant characters(look above) receive health penalty depending on court size."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Court Size",
+                            "Health Penalty"
+                        ],
+                        [
+                            "0..9",
+                            "-1 Health"
+                        ],
+                        [
+                            "10..19",
+                            "-1.5 Health"
+                        ],
+                        [
+                            "20..29",
+                            "-2 Health"
+                        ],
+                        [
+                            "30+",
+                            "-3 Health"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Court size is hardcoded but health penalties are governed by parameter"
+                }
+            ]
+        },
+        {
+            "heading": "Fertility Penalty",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Reduces the number of children characters can have by one. It affect anyone who does not have a close relative that is landed, as long as there are at least 30 people in the court.\nGoverned by NDefines.NCharacter.COURT_SIZE_CHILD_PENALTY_THRESHOLD parameter."
+                }
+            ]
+        },
+        {
+            "heading": "Save compression",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "This article is a Stub ,  which means that it does not sufficiently cover its subject matter. Please help expand this article if you can."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Script optimizations",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "This article is a Stub ,  which means that it does not sufficiently cover its subject matter. Please help expand this article if you can."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ forum:962057",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ https://forum.paradoxplaza.com/forum/index.php?threads/2-7-1-ovsf-immortals-pruned-as-unimportant.1009237/",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

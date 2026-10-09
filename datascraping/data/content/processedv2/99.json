@@ -1,0 +1,1454 @@
+{
+    "pageid": 99,
+    "title": "Council",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Council is a group of specialized characters helping to rule the realm. There are five council positions, each linked to one of the attributes ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Each councilor has three possible jobs , also known as abilities or missions. A councilor can only perform one job at a time, and cannot lead troops while assigned to a job. Once assigned to a job, they get the working status."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A councilor's skill in the linked attribute affects their performance in jobs and boosts your state attribute . Their skills in other attributes is largely unimportant. However, high intrigue skill can make them dangerous if disloyal, due to their doubled plot power."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Firing councilors will incur an opinion malus (-5 for 2 years with \"Recently fired\" and -15 for 15 years with \"Fired from council\") with them and prevent them from being reappointed for some time."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Vassal patricians in merchant republics and khans in khaganates expect a place on the council. There is an opinion penalty if they are not appointed as councilors."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In the Byzantine and Roman Empire, councilors have a say in the imperial succession due to the empire's unique imperial elective system. In addition, the Marshal is a potential successor, barring mutilation."
+                }
+            ]
+        },
+        {
+            "heading": "Positions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Job",
+                            "Primary attribute",
+                            "Dignity",
+                            "Opinion modifier",
+                            "Monthly salary",
+                            "Monthly prestige",
+                            "Monthly piety"
+                        ],
+                        [
+                            "",
+                            "Chancellor",
+                            "Diplomacy",
+                            "0.33",
+                            "+10",
+                            "0.10",
+                            "0.75",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Marshal",
+                            "Martial",
+                            "0.33",
+                            "+10",
+                            "0.10",
+                            "0.75",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Steward",
+                            "Stewardship",
+                            "0.33",
+                            "+10",
+                            "0.10",
+                            "0.75",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Spymaster",
+                            "Intrigue",
+                            "0.10",
+                            "+10",
+                            "0.10",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Court Chaplain",
+                            "Learning",
+                            "0.15",
+                            "+10",
+                            "0.10",
+                            "",
+                            "0.5"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Prestige, piety, and salary are scaled by rank: doubled for councilors of dukes, tripled for councilors of kings, quadrupled for councilors of emperors. Furthermore, salaries are tripled in merchant republics."
+                }
+            ]
+        },
+        {
+            "heading": "Variant names",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The names of councillors listed above are considered the \"default\"; they are the ones used for Western European Catholics. With different religion or culture they may have different names. This does not affect their functions (except for Muslims, whose Imam / Mullah performs charity instead of improving religious relations)."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Culture/Religion",
+                            "Chancellor",
+                            "Marshal",
+                            "Steward",
+                            "Spymaster",
+                            "Court Chaplain"
+                        ],
+                        [
+                            "Orthodox",
+                            "—",
+                            "—",
+                            "—",
+                            "—",
+                            "Ecclesiarch or Patriarch 1"
+                        ],
+                        [
+                            "Miaphysite",
+                            "—",
+                            "—",
+                            "—",
+                            "—",
+                            "Court Chaplain or Patriarch 1"
+                        ],
+                        [
+                            "Sunni",
+                            "—",
+                            "—",
+                            "—",
+                            "—",
+                            "Court Imam"
+                        ],
+                        [
+                            "—",
+                            "—",
+                            "—",
+                            "—",
+                            "Court Imam",
+                            "Ibadi"
+                        ],
+                        [
+                            "Shia",
+                            "—",
+                            "—",
+                            "—",
+                            "—",
+                            "Court Mullah"
+                        ],
+                        [
+                            "Pagan (other than Germanic/Aztec/Hellenic/African/Bön)",
+                            "—",
+                            "—",
+                            "—",
+                            "—",
+                            "Diviner"
+                        ],
+                        [
+                            "African (religion)",
+                            "—",
+                            "—",
+                            "—",
+                            "—",
+                            "Chief Diviner"
+                        ],
+                        [
+                            "—",
+                            "—",
+                            "—",
+                            "—",
+                            "Chief Diviner",
+                            "Bön"
+                        ],
+                        [
+                            "Germanic",
+                            "—",
+                            "—",
+                            "—",
+                            "—",
+                            "Seer (male) / Seeress (female)"
+                        ],
+                        [
+                            "Aztec (religion)",
+                            "Cihuacoatl",
+                            "Tlacateccatl",
+                            "Petlacalcatl",
+                            "Tillancalqui",
+                            "Sahagun"
+                        ],
+                        [
+                            "Zoroastrian",
+                            "Astabadh",
+                            "Eran Spahbod",
+                            "Darik-Pat",
+                            "—",
+                            "Mobad"
+                        ],
+                        [
+                            "Greek",
+                            "Magistros",
+                            "Protostrator",
+                            "Sakellarios",
+                            "Mystikos",
+                            "—"
+                        ],
+                        [
+                            "Arabic",
+                            "Grand Vizier",
+                            "—",
+                            "—",
+                            "—",
+                            "—"
+                        ],
+                        [
+                            "Grand Vizier",
+                            "—",
+                            "—",
+                            "—",
+                            "—",
+                            "Iranian"
+                        ],
+                        [
+                            "Grand Vizier",
+                            "—",
+                            "—",
+                            "—",
+                            "—",
+                            "Turkish"
+                        ],
+                        [
+                            "Grand Vizier",
+                            "—",
+                            "—",
+                            "—",
+                            "—",
+                            "West African"
+                        ],
+                        [
+                            "Jewish",
+                            "—",
+                            "—",
+                            "—",
+                            "—",
+                            "Court Rabbi"
+                        ],
+                        [
+                            "Eastern",
+                            "—",
+                            "—",
+                            "—",
+                            "—",
+                            "Upadhyaya (male) / Upadhyayani (female)"
+                        ],
+                        [
+                            "Tibetan (Bödpa/Tangut)",
+                            "Lönchen",
+                            "—",
+                            "Gnyer",
+                            "—",
+                            "Banchenpo (male) / Banchenmo (female)"
+                        ],
+                        [
+                            "Taoist",
+                            "Chief Minister",
+                            "Xingjun Sima",
+                            "Treasurer",
+                            "—",
+                            "Libationer"
+                        ],
+                        [
+                            "Chief Minister",
+                            "Xingjun Sima",
+                            "Treasurer",
+                            "—",
+                            "Libationer",
+                            "Han"
+                        ],
+                        [
+                            "Chief Minister",
+                            "Treasurer",
+                            "—",
+                            "Libationer",
+                            "Jurchen",
+                            "—"
+                        ],
+                        [
+                            "Hellenic",
+                            "—",
+                            "—",
+                            "—",
+                            "—",
+                            "Augur (male) / Seeress (female)"
+                        ],
+                        [
+                            "Khurmazta",
+                            "—",
+                            "—",
+                            "—",
+                            "—",
+                            "Moypat"
+                        ],
+                        [
+                            "Manichean",
+                            "—",
+                            "—",
+                            "—",
+                            "—",
+                            "Didaskalos"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "1 Normally Ecclesiarch / Court Chaplain. If you are a king or emperor and not the Ecumenical Patriarch's / Coptic Pope's liege, your chaplain's title is Patriarch and he is your realm's religious head (he appears in the church's list of autocephalous patriarchs )."
+                }
+            ]
+        },
+        {
+            "heading": "Requirements",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In all cases your councillors must not be incapable or in prison. They must be your courtiers or direct vassals."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Most council positions are only open to men. The exceptions are as follows:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The Spymaster may be your wife or mother. If you appoint your wife, note that her Intrigue is only added to your state Intrigue once as your spymaster, not one and a half times as both your spymaster and your wife. Additionally, pagans may appoint female pagan spymasters. Muslim rulers may also appoint their secondary wives as spymasters.",
+                            "children": []
+                        },
+                        {
+                            "text": "Religions that allow female temple holders also allow female spirituals (Pagans other than Aztec, Tengri and Zunist; Cathar, Messalian, Bogomilist; Mazdaki, Manichean; Buddhist)",
+                            "children": []
+                        },
+                        {
+                            "text": "Cathars/Messalians may appoint coreligionists to all council positions, regardless of gender.",
+                            "children": []
+                        },
+                        {
+                            "text": "Some characters have flags marking them as an exception to the usual rules. If they have it, they may be appointed to the appropriate position despite being female or a child. For example, the Marshal position is open to Jeanne d'Arc and Germanic pagan women appointed as Shieldmaiden .",
+                            "children": []
+                        },
+                        {
+                            "text": "Conclave DLC adds Status of Women laws, gradually opening all secular council positions to women.",
+                            "children": []
+                        },
+                        {
+                            "text": "There some Female councillor events . Women appointed through these events generally can't be appointed again if they lose the position. Be careful that if the Status of Women laws do not allow for a women to take that council position but you do allow her through the event, then everyone in the realm will have a -20 Scandalous Councillor opinion toward you (including the female councillor). Stackable to 30 with 2 women. Also even though the tooltip says no time expiration, thus implying that the -20 is permanent, it goes away after 5 years of firing the female councillor .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The lord spiritual must share the liege's religion, and has additional requirements depending on religion:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Non-Muslims:",
+                            "children": [
+                                {
+                                    "text": "Can only appoint courtiers, theocratic vassals (such as bishops), or clan leaders.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Hindus must be Brahmin caste or ascetic to hold the office of Upadhyaya.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Hindus must be Kshatriya caste to hold the office of Marshal.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Muslims:",
+                            "children": [
+                                {
+                                    "text": "Can only appoint characters with one of the religious education traits .",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Cannot fire their imam (except indirectly, e.g. by causing them to become imprisoned or transferring vassalage).",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Chancellor",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Abilities",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Improve Diplomatic Relations",
+                            "children": [
+                                {
+                                    "text": "Success: A four-year +20 opinion modifier with a random local ruler (who is either count+ tier or your direct vassal). Can stack multiple.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Failure: A two-year -20 opinion modifier with a random local ruler (including barons).",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Fabricate Claims (not available to nomads )",
+                            "children": [
+                                {
+                                    "text": "Success: Creates a strong uninheritable claim, usually on a county .",
+                                    "children": [
+                                        {
+                                            "text": "The tier of the claimed title depends on secondary rolls:",
+                                            "children": [
+                                                {
+                                                    "text": "Kingdom claim : Requires the \"Become King\" ambition , but works on any de jure kingdom. Chancellor must be stationed in a county which is both de jure a part of the kingdom in question and within the demesne of the king. Once per lifetime. The chance of this occurring depends on the value of the Chancellor's diplomacy: 20% chance if Diplomacy is 22 or above, 10% chance if Diplomacy is between 18 and 21, 5% chance if Diplomacy is between 15 and 17, 2% chance if Diplomacy is 14 or below. Costs 2 years' income.",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "text": "Duchy claim : Chancellor must be stationed in a county which is both de jure a part of the duchy in question and within the demesne of the duke. The chance of this occurring depends on the value of the Chancellor's diplomacy: 10% if the chancellor's diplomacy attribute is between 15 and 17, 20% if between 18 and 19, and 30% if 20 or above. Costs 2 years' income.",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "text": "County claim : This is the result if the conditions or rolls for higher title claims fail. Costs 1 year's income.",
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "Lose prestige based on your current tier, and lose scaled_wealth based on the tier of the claimed title. You are allowed to go negative.",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Failure: The target gets an event letting them attempt to assassinate or bribe the chancellor.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Sow Dissent",
+                            "children": [
+                                {
+                                    "text": "Success: A negative temporary opinion modifier both ways from the vassal at the targeted province and his liege.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Failure: Discovery and negative opinion of sender.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Improve Clan Sentiment (nomads only; replaces Fabricate Claims )",
+                            "children": [
+                                {
+                                    "text": "Success : Improves the clan sentiment (not the same as regular opinion) of another clan towards yours.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Marshal",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Abilities",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Suppress Revolts",
+                            "children": [
+                                {
+                                    "text": "+1% chance/skill of imprisoning characters in province.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "-1% chance/skill of revolt in province.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Train Troops (not available to nomads )",
+                            "children": [
+                                {
+                                    "text": "Levy size +2.5%/skill. Applies to every holding directly held by the liege in the province.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Reinforce rate +5%/skill. Applies to every holding directly held by the liege in the province.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success : +50% reinforcement rate for 1 year in province, and its prosperity increases.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Failure : Anger vassal with Ambitious or Deceitful traits, -200% province reinforcement rate for 6 months.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Train Warriors (nomads only; replaces Train Troops )",
+                            "children": [
+                                {
+                                    "text": "+1.5%/skill Manpower growth.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Research Military Tech (not available to tribes )",
+                            "children": [
+                                {
+                                    "text": "+5% Military tech spread rate/skill.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success : Local lord with 8+ Military skill and either 7+ Diplomacy or Gregarious trait gets improved relations, 50 Military points.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Failure : Marshal wounded (75% chance) or maimed (25% chance).",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Organize raid (only for tribes; replaces Research Military Tech )",
+                            "children": [
+                                {
+                                    "text": "Success : Get event troops (Three stacks each 2.5% of realm levies, minimum of 100 and maximum of 3000), which must be used to raid within 5 months or else be disbanded, costing money. Must be at peace to trigger.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Steward",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Abilities",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Administer Realm",
+                            "children": [
+                                {
+                                    "text": "Applies to random demesne province.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success : One of three positive Province modifier added (New Roads: -15% Local Build Cost , Inspired Peasantry: -15% Local Build Time , Harvest Festivals: +15% Local Tax Modifier ).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Failure : Negative Province modifier added (Smugglers' Ring: +50% Local Build Time, +25% Local Build Cost, -10% Disease Resistance ).",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Collect Taxes (not available to tribes or nomads)",
+                            "children": [
+                                {
+                                    "text": "+2.5% tax/skill. Applies to every holding directly held by the liege in the province.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success : Get bonus money equal to 50% of annual income.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Failure : Steward is chased by peasants and potentially wounded or killed; liege loses 10-15 prestige.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Failure : Peasants angered; increasing revolt risk and annoying local lords.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Oversee Construction",
+                            "children": [
+                                {
+                                    "text": "-2.5% construction time/skill.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success : Steward becomes permanent Master Builder, reducing construction time by a further 5% wherever present (this continues to apply even if fired from stewardship job).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Failure : Local noble sabotages building, decreasing relations and increasing build time by 30% for one year.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Research Economy Tech (not available to tribes)",
+                            "children": [
+                                {
+                                    "text": "+5% Economy tech spread speed/skill, from other provinces to this one",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Build Legend (only for tribes)",
+                            "children": [
+                                {
+                                    "text": "+0.1 Prestige per skill per month",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success : Get event troops (Three stacks, each 7.5% of realm levies, minimum of 100 and maximum of 3000), which must be used in battle within one year (plus or minus three months) or else be disbanded, costing prestige.) Troops are automatically disbanded when war ends, although they will remain if another war was declared before ending the first one.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Settle Tribe (only for tribes)",
+                            "children": [
+                                {
+                                    "text": "Success : Target province converts to owner culture. (Can target only provinces in your own demesne)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Failure : Steward injured.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Collect Tribute (only for nomads)",
+                            "children": [
+                                {
+                                    "text": "Must be sent to a vassal or tributary, excluding the Steward.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success : collects 1 year of income of target (minimum 5 wealth, more likely if target has high opinion (above 25 ), is Charitable , Content , and/or Craven ). -15 opinion Squeezed for extra tribute modifier for 10 years.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Failure : relations penalty (more likely if target has low opinion (below -25 ) and/or is Greedy ). -15 opinion Refused extra tribute modifier for 5 years.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Spymaster",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Abilities",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Scheme",
+                            "children": [
+                                {
+                                    "text": "+1% increased chance of detecting plots per skill, in a given province [Who must be in the province? Plotter? Backers? Target?]",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success: An event allowing you to discourage a vassal from being a member of factions in your realm.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success: An event allowing you to encourage a fellow vassal to join your faction.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success/Failure: Discovers a local character's plot. Survival depends on the plotter's opinion of the spymaster.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Failure: The spymaster is attacked by thugs. Survival depends on Martial skill.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Build Spy Network",
+                            "children": [
+                                {
+                                    "text": "+0.5% plot power per skill point",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success: Liege can attempt to blackmail a male homosexual ruler",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success: Liege can accuse a ruler of corruption and attempt to fine them",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Study Technology",
+                            "children": [
+                                {
+                                    "text": "Must be placed in province you do not control, with at least one tech further advanced than your capital.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Technology spreads from target to capital (faster based on skill) (multiplicative with other councilors in \"Research\" jobs)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success: Gain 50 tech points in a random field. Faster with Intrigue up to 22, and with the Scholarship focus. Slower with the Dogmatic religious doctrine.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Failure: The ruler of the target province discovers the spymaster, likely imprisoning him/her.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bonuses",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Discovers plots. If you have no Spymaster, you will not discover any plots.",
+                            "children": []
+                        },
+                        {
+                            "text": "If the Spymaster is plotting against you, they won't tell you! It is very important to for your Spymaster to have a high opinion of you. Ideally they also have high ai_honor , although most traits that increase Intrigue skill also decrease ai_honor.",
+                            "children": []
+                        },
+                        {
+                            "text": "Removes fog of war from the job province and all neighboring provinces, making both \"Study Technology\" and \"Build Spy Network\" useful for scouting.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Court Chaplain",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Abilities",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Proselytize in own realm",
+                            "children": [
+                                {
+                                    "text": "Success: A vassal or courtier in the province converts to your religion (high frequency).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success: The county is converted to your religion (low frequency).",
+                                    "children": [
+                                        {
+                                            "text": "More likely if councilor has the correct culture for the province, with high moral authority , and with high skill (up to 22 learning). See Religious_conversion#Court_Chaplain_2 for details.",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Failure: The chaplain is attacked, being killed or injured. You lose 10 Prestige.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Failure: The chaplain accuses a vassal of heresy. The vassal gives you an event in which you can choose to back them up or back up your chaplain. You get an opinion bonus with one and a penalty with the other.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Failure: Local population resists conversion, causing increased revolt risk for 1 year.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Proselytize in pagan capital",
+                            "children": [
+                                {
+                                    "text": "Success: Allowed to stay. Liege gains 20 piety. (May be imprisoned instead.)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success: Converts pagan courtier. (May be imprisoned afterward.)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success: Attempts to convert pagan ruler. (Expelled if unsuccessful.)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Research Cultural Tech (not available to tribes)",
+                            "children": [
+                                {
+                                    "text": "+5% cultural spread rate/level",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success: The chaplain finds a great philosopher. You get an event with the option of paying money to gain 50 Cultural tech points.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Failure: The chaplain converts to a heresy and gives you an event allowing you to choose to do the same or imprison them. If you choose to practice the heresy in secret, the chaplain will also practice the heresy in secret.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Improve Religious Relations (non-Muslim only)",
+                            "children": [
+                                {
+                                    "text": "Success: A local religious ruler gives you +40 opinion for two years (high frequency).",
+                                    "children": [
+                                        {
+                                            "text": "Useful for your religious head , especially the Pope. Try to pick a province where the Pope personally holds all churches.",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Success: A local religious ruler gets a -15 opinion penalty toward their religious head.",
+                                    "children": [
+                                        {
+                                            "text": "Potentially useful for vassal Catholic bishops, so they pay taxes to you instead of the Pope",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Perform Charity (Muslim only)",
+                            "children": [
+                                {
+                                    "text": "-1% revolt risk per skill in the target province.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success: You gain 15 piety",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success: Improved relations with vassal of same religion",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Failure: The imam / mullah is attacked by a mob, being wounded or killed.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Failure: The imam / mullah embezzles money. You may pardon or imprison him.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Build Zeal (Tribes only)",
+                            "children": [
+                                {
+                                    "text": "+0.05 piety per skill per month",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Success : Raise zealot event troops . Three stacks, each 7.5% of realm levies, minimum of 100 and maximum of 3000. If not used in a religious war within one year (plus or minus three months) or explicitly disbanded, they will leave, costing piety.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Good traits for councilors",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Depending on your councilors' skills and traits, they may be able to trigger additional events, regardless of their current mission."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Job",
+                            "Councilor requirements",
+                            "Liege requirements",
+                            "DLC",
+                            "Event"
+                        ],
+                        [
+                            "Chancellor",
+                            "12+ skill and Smart",
+                            "Not tribal or nomadic",
+                            "",
+                            "Choice of +25 feudal vassal opinion or +25 republic vassal opinion Capital prospers (if The Reaper's Due is enabled)"
+                        ],
+                        [
+                            "Chancellor",
+                            "Diligent",
+                            "",
+                            "",
+                            "Improved opinion from a random vassal, with spouse, or with all courtiers"
+                        ],
+                        [
+                            "Chancellor",
+                            "Diligent or (12+ and Gregarious )",
+                            "Adult None of",
+                            "",
+                            "For a favor , chancellor helps you become multilingual (+1 diplomacy, +1 learning)"
+                        ],
+                        [
+                            ""
+                        ],
+                        [
+                            "Marshal",
+                            "12+ skill and Smart",
+                            "",
+                            "",
+                            "Choice of +10% morale (global) or +10% levy size (where marshal is working) Capital prospers"
+                        ],
+                        [
+                            "Marshal",
+                            "Wroth and landless",
+                            "",
+                            "",
+                            "Liege may imprison the marshal for a chance to become Just"
+                        ],
+                        [
+                            "Marshal",
+                            "Diligent or Lunatic",
+                            "",
+                            "",
+                            "Spend 30 wealth on experiments that may yield +50 military tech points"
+                        ],
+                        [
+                            ""
+                        ],
+                        [
+                            "Steward",
+                            "12+ skill and Smart",
+                            "<50 wealth and 2% revolt risk",
+                            "",
+                            "Choice of +10% tax income (?) or -5% revolt risk (demesne provinces) Capital prospers"
+                        ],
+                        [
+                            "Steward",
+                            "Just",
+                            "",
+                            "",
+                            "-5% revolt risk in a random demesne province ( Justice Prevails )"
+                        ],
+                        [
+                            "Steward",
+                            "Kind or Charitable",
+                            "Epidemic in demesne",
+                            "",
+                            "reduce_disease = 0.33"
+                        ],
+                        [
+                            "Steward",
+                            "Cruel",
+                            "",
+                            "",
+                            "Extra tax"
+                        ],
+                        [
+                            "Steward",
+                            "Diligent",
+                            "",
+                            "",
+                            "Remove thieves guild from demesne province"
+                        ],
+                        [
+                            "Steward",
+                            "Diligent",
+                            "",
+                            "",
+                            "If another councilor steals from the royal treasury, you are more likely to find out"
+                        ],
+                        [
+                            "Steward",
+                            "Greedy",
+                            "",
+                            "",
+                            "Liege may seize steward's wealth (Only without Conclave )"
+                        ],
+                        [
+                            "Steward",
+                            "BELOW 8 skill and Proud",
+                            "Can borrow from Jews",
+                            "",
+                            "-50 wealth via forced loan from Jews, but liege can become more Just or more Patient"
+                        ],
+                        [
+                            "Steward",
+                            "15+ skill and Ambitious",
+                            "",
+                            "",
+                            "+300 wealth; an additional +200 wealth and become Just if you then let the steward purchase a county from you."
+                        ],
+                        [
+                            "Steward",
+                            "15+ skill and Any of",
+                            "Adult Less than 10 stewardship",
+                            "",
+                            "Join your steward on a full day's work Gain Honest and Just (or an alternative stewardship bonus) Or leave early to become Greedy or Wroth , if you prefer."
+                        ],
+                        [
+                            ""
+                        ],
+                        [
+                            "Spymaster",
+                            "12+ skill and Smart",
+                            "",
+                            "",
+                            "Choice of +10% arrest chance or +10% plot power Capital prospers"
+                        ],
+                        [
+                            "Spymaster",
+                            "Diligent or Lunatic",
+                            "",
+                            "",
+                            "Precautionary safety measures"
+                        ],
+                        [
+                            ""
+                        ],
+                        [
+                            "Spiritual",
+                            "12+ skill and Smart",
+                            "",
+                            "",
+                            "Choice of +25 church opinion or +0.1 monthly piety (For Muslims: +0.2 monthly piety) Capital prospers"
+                        ],
+                        [
+                            "Spiritual",
+                            "Zealous and 350 wealth",
+                            "250 wealth",
+                            "",
+                            "Spiritual offers to pay 250g toward the construction of a new temple , if you also spend 250g."
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Other trait considerations",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Councilors have increased plot power against you. Watch out for councilors who have traits that increase inclination to join assassination plots, such as Deceitful . This is especially crucial if they have low opinion of you, high intrigue skill, or the spymaster position."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For the post of Marshal, consider appointing a character with high Martial score, but also have the Craven trait, since such characters are usually not good commanders."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "With Conclave :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Marshal and Court Chaplain with certain traits may trigger an \"abuse of office\" event that gives them 100 wealth. This isn't possible for honest , kind or just councilor. If the councilor is a courtier, you'll have an opportunity to seize or inherit this wealth. This event is more likely if he is greedy , arbitrary or deceitful , and less likely if he is craven or slothful . Beware: for the Marshal , his location province (usually the capital) will get 3 years of peasant unrest modifier giving -50% taxes and 10% revolt risk.",
+                            "children": []
+                        },
+                        {
+                            "text": "Councilors who are Content are more likely to select the Loyalist stance . On the other hand, content vassals rarely join factions , so they are less important to pacify with council jobs. They are useful to have on the council when voting for law changes.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "With The Reaper's Due :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Landed rulers who are Paranoid may go into seclusion even when there is no epidemic disease present in their capital. They will be unable to trigger mission events or clear fog of war while in seclusion. Frequent seclusion is especially problematic for a Chancellor, as being in seclusion reduces Diplomacy skill.",
+                            "children": []
+                        },
+                        {
+                            "text": "You may wish to appoint the same character as Lord Spiritual and Court Physician . Both depend on learning skill, and the +10 opinion from the council position will sometimes earn you better treatment for your diseases. If you choose to do so, traits that affect court physician efficacy should be your primary concern.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Exclusive to Conclave DLC",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Council power and voting",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Depending on your council laws , some actions will require a council vote . Bypassing the council's decision is considered an act of tyranny . Vassals may create a faction to demand increased council power; they are more likely to do so if the council is not empowered."
+                }
+            ]
+        },
+        {
+            "heading": "Powerful vassals",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With the Conclave DLC active, a player's most powerful vassals will clamor for a seat on their liege's council. Those who are eligible for a position, but do not have one, get a -40 opinion penalty toward their liege (except if the powerful vassal is in hiding ). This can stack with similar opinion penalties for patricians in a merchant republic or khans in a khaganate ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The maximum number of \"powerful vassals\" is one less than the maximum number of council seats; this means that kings and emperors usually have more \"powerful vassals\" as they can have Advisors. This maximum number allows for the fact that most rulers cannot appoint a powerful vassal as Court Chaplain. Also, vassals must have a certain level of military power compared to their liege before they qualify as \"powerful\", and barons cannot be \"powerful vassals\" of dukes or higher."
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Nomads usually do not have a fixed number of powerful vassals; Khagans should aim for 3 vassal clans (or less, for the 2 Advisor and Marshal slot as nomads tend to have high Martial scores) so that councilors can be chosen based on competency, while khans should choose their CBs carefully while waging war so as not to acquire count or duke vassals.",
+                            "children": []
+                        },
+                        {
+                            "text": "Consider manipulating competent vassals to become \"powerful\" ones by lawfully revoking titles of powerful but incompetent councilors; realms with Iqta or Imperial Administration can do this by redistributing duchies.",
+                            "children": []
+                        },
+                        {
+                            "text": "If not using viceroyalties, consider educating the heirs of powerful vassals so that they can remain in the same council job upon succession.",
+                            "children": []
+                        },
+                        {
+                            "text": "Conversely, engineer powerful vassals to enter regencies so that they vacate their seats, allowing you to appoint competent councilors as replacements. In particular, you can fire powerful vassals who went into hiding.",
+                            "children": []
+                        },
+                        {
+                            "text": "Consider creating a powerful vassal theocracy . The priest can serve as Lord Spiritual, possibly freeing another council position for a competent sycophant.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Councilors not joining factions",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "When the council is empowered to vote on War Declarations, councilors cannot join factions while the council is content. The council is considered discontent for several years after succession or tyrannically bypassing a council vote. Tribal councilors are not prevented from joining factions. Nomadic councilors can always join factions; nomadic realms have council laws whereby all powers (except \"council authority\") are in the council's favour, and the Khagan is unable to reclaim any powers. However, nomadic realms do not have the \"council authority\" law, allowing the Khagan to fire powerful vassals from the council."
+                }
+            ]
+        },
+        {
+            "heading": "Advisors",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Advisors are extra voting positions in kingdoms and empires. Kings have 1 advisor slot and emperors have 2 slots. The council must be empowered for advisor slots to appear. Advisor seats are only visible in the \"My Council\" tab."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Advisors do not affect state attributes or job action performance, so their skills are unimportant. These seats are typically given to \"powerful vassals\" whose abilities are too low for any standard council seat. Advisors can be useful as active commanders , since they are not busy with job actions. Also, note that in the Byzantine and Roman Empire, advisors are considered electors for imperial elective."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Councilors can be swapped into advisor roles instead of being fired. This is useful if a poorly skilled vassal uses a favor to force their way onto the council, or you wish to make adjustments due to your powerful vassals passing away and their heirs having a different skillset from them. To ensure the correct advisor takes the main council seat, right-click the existing advisor rather than the main councilor."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "During a regency , if the regent happens to be a councilor, swapping the regent/councilor into an Advisor slot can increase the relevant state attribute. However, the regent/Advisor still only has 1 vote when voting on actions to be taken; the other vote defaults to \"no\" as 1 seat is considered to be empty."
+                }
+            ]
+        },
+        {
+            "heading": "Exclusive to Monks and Mystics DLC",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Offmap job actions",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Every councillor has an additional council job option, which keeps them busy without having them go to a specified place (except for Spymaster, where Scheme becomes off map instead)."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Chancellor - Perform Statecraft : increases threat decay speed, and can fire events which improve relations with random vassals, neighbours, or liege.",
+                            "children": []
+                        },
+                        {
+                            "text": "Marshal - Organize the Army : lowers the upkeep cost of retinues (or horde troops ), and can fire events to train existing or find new commanders .",
+                            "children": []
+                        },
+                        {
+                            "text": "Steward - Administer Realm : increases the speed of cultural conversion in owned provinces, and can fire events adding economic bonuses to any province.",
+                            "children": []
+                        },
+                        {
+                            "text": "Spymaster - Sabotage : target province will suffer damage, gain unrest, and may even be made easier to siege.",
+                            "children": []
+                        },
+                        {
+                            "text": "Court Chaplain - Hunt Apostates :  hunts for members of secret societies, or characters with secret religions. If any are caught, you are given several options on how to deal with the character:",
+                            "children": [
+                                {
+                                    "text": "Burn the character at the stake for some Piety (you can get the Kinslayer trait for this)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Imprison the character and brand them.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Brand them.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Let them go free. This annoys the Chaplain, causing a loss of opinion.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Chaplains with low Learning have a chance to accuse innocent characters.\nThis job cannot root out members of a secret society if the liege or the Chaplain happens to be a member of that society. This applies for secret religions as well if either character secretly believes in that religion."
+                }
+            ]
+        },
+        {
+            "heading": "Artifact hunting",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Your councilors can hunt for artifacts , and their traits may affect their success. See Selecting councilors for artifact-hunting abilities ."
+                }
+            ]
+        },
+        {
+            "heading": "Jewish Councilors",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If you are not openly Jewish , and you have a Jewish Chancellor , Steward or Spymaster , you may receive on occasion 50 technology points in Culture, Economy and Military respectively. The MTTH is 280 months, halved if you are using the scholarship focus ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You may get Jewish courtiers on occasion by event. If you have Conclave , you may buy a favor to invite Jewish courtiers (including commanders but not councilors) over. In order to keep them in your court (to exclude them from standard pruning on ruler's death), you need to marry them (to anyone) or to give them a barony."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Having Jewish councilors prevents powerful vassals from having a council seat, which can be a problem. Zealous Jewish characters will have a significantly reduced opinion of you."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Beware that a zealous Court Chaplain may wish to burn or expel courtiers of other religions (event 75050). Refusing his request will give -25 opinion to all Zealous realm characters for 5 years."
+                }
+            ]
+        },
+        {
+            "heading": "Source",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Events and effects of the councilor jobs can be found in the following files:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/job_chancellor.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/job_marshal.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/job_steward.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/job_spymaster.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/job_lord_spiritual.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/job_flavour_events.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/job_offmap.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/ze_chancellor_events.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/ze_marshal_events.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/ze_council_events_steward.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/ze_spymaster_events.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/ze_lord_spiritual_events.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/soa_jewish_events.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/common/job_actions/00_job_actions.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/common/job_titles/00_job_titles.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/common/on_actions/00_on_actions.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/culture_conversion_events.txt"
+                }
+            ]
+        }
+    ]
+}

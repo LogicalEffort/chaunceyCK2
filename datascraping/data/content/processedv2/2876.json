@@ -1,0 +1,1425 @@
+{
+    "pageid": 2876,
+    "title": "Realm laws",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Realm laws are laws concerning how the realm is governed."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "They require the Conclave DLC, and replace both demesne laws and crown authority when the DLC is active."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that nomads only have the \"Status of Women\" law and vassal obligation laws available to them."
+                }
+            ]
+        },
+        {
+            "heading": "Laws which are unchanged",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Viceroyalty and centralization laws remain unchanged, but are now found on this tab."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Laws controlling title revocation and inheritance by characters outside the realm are now passed separately, rather than being components of crown authority."
+                }
+            ]
+        },
+        {
+            "heading": "Vassal obligations",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The new laws allow rulers to shift the focus of the obligations of the realm's vassals, between more taxes or more levies. Thus, they trade off taxes vs levies, rather than taxes and levies vs opinion. Obligation laws now determine the minimum vassal levies, replacing one of the features of crown authority."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Nobles and tribals prefer tax-shifted obligations, while burghers prefer levy-shifted obligations. These tend to be the opposite of what their lieges prefer. Opinion bonuses and penalties from law changes are only temporary, however."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Iqta government does not have Noble and Church obligation laws. This means that, as the game views Iqta as a variation of Feudal government, Muslim rulers do not get any taxes or levies from vassal theocracies of different religions(as there is no Church obligation law to define the taxes and levies to be provided), so it is highly recommended that Muslim players revoke every title owned by vassal theocracies to get rid of them and redistribute the titles among Muslims, as they will actually provide taxes and levies under Iqta obligation law.\nSimilarly, Feudal governments and Theocracies do not have Iqta obligation laws, but their Iqta vassals will still provide taxes and levies per the liege's Noble obligation law."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that at the default level, Nobles do pay some tax, which is not the case if Conclave is not active."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For all but Tribal Obligations, Legalism 5 and 6 is needed for the Focused and Heavily Focused obligation on either side, respectively."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Since independent tribal rulers can't collect taxes or raise liege levies from tribal vassals, Tribal obligation laws are effectively useless until you reform to another government type."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Subtype",
+                            "Heavily Tax Focused",
+                            "Tax Focused",
+                            "Slightly Tax Focused",
+                            "Tax Shifted",
+                            "Balanced",
+                            "Levy Shifted",
+                            "Slightly Levy Focused",
+                            "Levy Focused",
+                            "Heavily Levy Focused"
+                        ],
+                        [
+                            "Feudal",
+                            "+40% Noble Vassal Tax -80% Noble Vassal Max Levy",
+                            "+35% Noble Vassal Tax +10% Noble Vassal Min Levy -70% Noble Vassal Max Levy",
+                            "+30% Noble Vassal Tax +20% Noble Vassal Min Levy -60% Noble Vassal Max Levy",
+                            "+25% Noble Vassal Tax +30% Noble Vassal Min Levy -50% Noble Vassal Max Levy",
+                            "+20% Noble Vassal Tax +40% Noble Vassal Min Levy -40% Noble Vassal Max Levy",
+                            "+15% Noble Vassal Tax +50% Noble Vassal Min Levy -30% Noble Vassal Max Levy",
+                            "+10% Noble Vassal Tax +60% Noble Vassal Min Levy -20% Noble Vassal Max Levy",
+                            "+5% Noble Vassal Tax +70% Noble Vassal Min Levy -10% Noble Vassal Max Levy",
+                            "+80% Noble Vassal Min Levy"
+                        ],
+                        [
+                            "Iqta",
+                            "+45% Noble Vassal Tax -85% Noble Vassal Max Levy",
+                            "+40% Noble Vassal Tax +5% Noble Vassal Min Levy -75% Noble Vassal Max Levy",
+                            "+35% Noble Vassal Tax +15% Noble Vassal Min Levy -65% Noble Vassal Max Levy",
+                            "+30% Noble Vassal Tax +25% Noble Vassal Min Levy -55% Noble Vassal Max Levy",
+                            "+25% Noble Vassal Tax +35% Noble Vassal Min Levy -45% Noble Vassal Max Levy",
+                            "+20% Noble Vassal Tax +45% Noble Vassal Min Levy -35% Noble Vassal Max Levy",
+                            "+15% Noble Vassal Tax +55% Noble Vassal Min Levy -25% Noble Vassal Max Levy",
+                            "+10% Noble Vassal Tax +65% Noble Vassal Min Levy -15% Noble Vassal Max Levy",
+                            "+5% Noble Vassal Tax +75% Noble Vassal Min Levy -5% Noble Vassal Max Levy"
+                        ],
+                        [
+                            "Burgher",
+                            "+50% Burgher Vassal Tax -100% Burgher Vassal Max Levy",
+                            "+45% Burgher Vassal Tax -80% Burgher Vassal Max Levy",
+                            "+40% Burgher Vassal Tax +10% Burgher Vassal Min Levy -70% Burgher Vassal Max Levy",
+                            "+35% Burgher Vassal Tax +20% Burgher Vassal Min Levy -60% Burgher Vassal Max Levy",
+                            "+30% Burgher Vassal Tax +30% Burgher Vassal Min Levy -50% Burgher Vassal Max Levy",
+                            "+25% Burgher Vassal Tax +40% Burgher Vassal Min Levy -40% Burgher Vassal Max Levy",
+                            "+20% Burgher Vassal Tax +50% Burgher Vassal Min Levy -30% Burgher Vassal Max Levy",
+                            "+15% Burgher Vassal Tax +60% Burgher Vassal Min Levy -20% Burgher Vassal Max Levy",
+                            "+10% Burgher Vassal Tax +70% Burgher Vassal Min Levy -10% Burgher Vassal Max Levy"
+                        ],
+                        [
+                            "Church",
+                            "+70% Clergy Vassal Tax -100% Clergy Vassal Max Levy",
+                            "+60% Clergy Vassal Tax -90% Clergy Vassal Max Levy",
+                            "+50% Clergy Vassal Tax -80% Clergy Vassal Max Levy",
+                            "+40% Clergy Vassal Tax +10% Clergy Vassal Min Levy -70% Clergy Vassal Max Levy",
+                            "+30% Clergy Vassal Tax +20% Clergy Vassal Min Levy -60% Clergy Vassal Max Levy",
+                            "+20% Clergy Vassal Tax +30% Clergy Vassal Min Levy -50% Clergy Vassal Max Levy",
+                            "+10% Clergy Vassal Tax +40% Clergy Vassal Min Levy -40% Clergy Vassal Max Levy",
+                            "+50% Clergy Vassal Min Levy -30% Clergy Vassal Max Levy",
+                            "+60% Clergy Vassal Min Levy -20% Clergy Vassal Max Levy"
+                        ],
+                        [
+                            "Tribal",
+                            "+40% Tribal Vassal Tax -100% Tribal Vassal Max Levy",
+                            "+35% Tribal Vassal Tax -90% Tribal Vassal Max Levy",
+                            "+30% Tribal Vassal Tax -80% Tribal Vassal Max Levy",
+                            "+25% Tribal Vassal Tax +10% Tribal Vassal Min Levy -70% Tribal Vassal Max Levy",
+                            "+20% Tribal Vassal Tax +20% Tribal Vassal Min Levy -60% Tribal Vassal Max Levy",
+                            "+15% Tribal Vassal Tax +30% Tribal Vassal Min Levy -50% Tribal Vassal Max Levy",
+                            "+10% Tribal Vassal Tax +40% Tribal Vassal Min Levy -40% Tribal Vassal Max Levy",
+                            "+5% Tribal Vassal Tax +50% Tribal Vassal Min Levy -30% Tribal Vassal Max Levy",
+                            "+60% Tribal Vassal Min Levy -20% Tribal Vassal Max Levy"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+40% Noble Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-80% Noble Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+35% Noble Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+10% Noble Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-70% Noble Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+30% Noble Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+20% Noble Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-60% Noble Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+25% Noble Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+30% Noble Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-50% Noble Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+20% Noble Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+40% Noble Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-40% Noble Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+15% Noble Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+50% Noble Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-30% Noble Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+10% Noble Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+60% Noble Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-20% Noble Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+5% Noble Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+70% Noble Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-10% Noble Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+80% Noble Vassal Min Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+45% Noble Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-85% Noble Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+40% Noble Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+5% Noble Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-75% Noble Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+35% Noble Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+15% Noble Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-65% Noble Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+30% Noble Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+25% Noble Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-55% Noble Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+25% Noble Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+35% Noble Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-45% Noble Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+20% Noble Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+45% Noble Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-35% Noble Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+15% Noble Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+55% Noble Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-25% Noble Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+10% Noble Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+65% Noble Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-15% Noble Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+5% Noble Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+75% Noble Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-5% Noble Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+50% Burgher Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-100% Burgher Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+45% Burgher Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-80% Burgher Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+40% Burgher Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+10% Burgher Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-70% Burgher Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+35% Burgher Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+20% Burgher Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-60% Burgher Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+30% Burgher Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+30% Burgher Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-50% Burgher Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+25% Burgher Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+40% Burgher Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-40% Burgher Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+20% Burgher Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+50% Burgher Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-30% Burgher Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+15% Burgher Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+60% Burgher Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-20% Burgher Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+10% Burgher Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+70% Burgher Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-10% Burgher Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+70% Clergy Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-100% Clergy Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+60% Clergy Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-90% Clergy Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+50% Clergy Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-80% Clergy Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+40% Clergy Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+10% Clergy Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-70% Clergy Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+30% Clergy Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+20% Clergy Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-60% Clergy Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+20% Clergy Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+30% Clergy Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-50% Clergy Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+10% Clergy Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+40% Clergy Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-40% Clergy Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+50% Clergy Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-30% Clergy Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+60% Clergy Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-20% Clergy Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+40% Tribal Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-100% Tribal Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+35% Tribal Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-90% Tribal Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+30% Tribal Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "-80% Tribal Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+25% Tribal Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+10% Tribal Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-70% Tribal Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+20% Tribal Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+20% Tribal Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-60% Tribal Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+15% Tribal Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+30% Tribal Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-50% Tribal Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+10% Tribal Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+40% Tribal Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-40% Tribal Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+5% Tribal Vassal Tax",
+                            "children": []
+                        },
+                        {
+                            "text": "+50% Tribal Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-30% Tribal Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+60% Tribal Vassal Min Levy",
+                            "children": []
+                        },
+                        {
+                            "text": "-20% Tribal Vassal Max Levy",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Tribal organization",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To increase tribal organization, a tribal ruler must be independent and have at least a ducal title."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For the effects of this law without Conclave enabled, see Demesne Laws ."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Law",
+                            "Privileges",
+                            "Penalty"
+                        ],
+                        [
+                            "Min Tribal organization",
+                            "Unreformed pagan tribals +5 opinion",
+                            ""
+                        ],
+                        [
+                            "Low Tribal organization",
+                            "Enables low centralization Implements Empowered council (aka voting on laws) Implements \"War declaration\" committee ( +2 vassal limit)",
+                            "Unreformed pagan tribals -5 opinion"
+                        ],
+                        [
+                            "Medium Tribal organization",
+                            "Enables medium centralization Implements \"Title revocation\" committee Implements \"Title grant\" committee +4 vassal limit due to 2 committees implemented",
+                            "Unreformed pagan tribals -10 opinion"
+                        ],
+                        [
+                            "High Tribal organization",
+                            "Enables high centralization Implements \"Imprisonment\" committee Implements \"Banishment\" committee Implements \"Execution\" committee +6 vassal limit due to 3 committees implemented",
+                            "Unreformed pagan tribals -20 opinion"
+                        ],
+                        [
+                            "Absolute Tribal organization",
+                            "Enables absolute centralization Enables possibility of absolute rule (can now roll back on council laws) Allows adopting of Feudalism Allows founding of Merchant republic",
+                            "Unreformed pagan tribals -30 opinion"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Unreformed pagan tribals +5 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Enables low centralization",
+                            "children": []
+                        },
+                        {
+                            "text": "Implements Empowered council (aka voting on laws)",
+                            "children": []
+                        },
+                        {
+                            "text": "Implements \"War declaration\" committee ( +2 vassal limit)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Unreformed pagan tribals -5 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Enables medium centralization",
+                            "children": []
+                        },
+                        {
+                            "text": "Implements \"Title revocation\" committee",
+                            "children": []
+                        },
+                        {
+                            "text": "Implements \"Title grant\" committee",
+                            "children": []
+                        },
+                        {
+                            "text": "+4 vassal limit due to 2 committees implemented",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Unreformed pagan tribals -10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Enables high centralization",
+                            "children": []
+                        },
+                        {
+                            "text": "Implements \"Imprisonment\" committee",
+                            "children": []
+                        },
+                        {
+                            "text": "Implements \"Banishment\" committee",
+                            "children": []
+                        },
+                        {
+                            "text": "Implements \"Execution\" committee",
+                            "children": []
+                        },
+                        {
+                            "text": "+6 vassal limit due to 3 committees implemented",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Unreformed pagan tribals -20 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Enables absolute centralization",
+                            "children": []
+                        },
+                        {
+                            "text": "Enables possibility of absolute rule (can now roll back on council laws)",
+                            "children": []
+                        },
+                        {
+                            "text": "Allows adopting of Feudalism",
+                            "children": []
+                        },
+                        {
+                            "text": "Allows founding of Merchant republic",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Unreformed pagan tribals -30 opinion",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Administration type",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Law",
+                            "Privileges",
+                            "Other effects",
+                            "Requirements",
+                            "ID"
+                        ],
+                        [
+                            "Feudal Administration",
+                            "",
+                            "",
+                            "",
+                            "ze_administration_laws_0"
+                        ],
+                        [
+                            "Late Feudal Administration",
+                            "Enables Primogeniture and Ultimogeniture succession Vassals who refuse liege interference in wars are seen as traitors",
+                            "",
+                            "Legalism III",
+                            "ze_administration_laws_1"
+                        ],
+                        [
+                            "Imperial Administration",
+                            "Free revocation of viceroyal duchies Free revocation of duchies (without Charlemagne ) Free retraction of vassals, even from kings",
+                            "Also enacts Duchy Viceroyalties law +25 vassal limit ; net vassal limit increase is +15 -10 vassal opinion",
+                            "Emperor Majesty V All laws in favor of ruler: Absolute rule Regulated inheritance Religious title revocation (unless Chinese Imperial government or Cosmopolitan religion , which cannot adopt this law and do not require it for Imperial Administration)",
+                            "ze_administration_laws_2"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Enables Primogeniture and Ultimogeniture succession",
+                            "children": []
+                        },
+                        {
+                            "text": "Vassals who refuse liege interference in wars are seen as traitors",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Legalism III",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Free revocation of viceroyal duchies",
+                            "children": []
+                        },
+                        {
+                            "text": "Free revocation of duchies (without Charlemagne )",
+                            "children": []
+                        },
+                        {
+                            "text": "Free retraction of vassals, even from kings",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Also enacts Duchy Viceroyalties law",
+                            "children": []
+                        },
+                        {
+                            "text": "+25 vassal limit ; net vassal limit increase is +15",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 vassal opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Emperor",
+                            "children": []
+                        },
+                        {
+                            "text": "Majesty V",
+                            "children": []
+                        },
+                        {
+                            "text": "All laws in favor of ruler:",
+                            "children": [
+                                {
+                                    "text": "Absolute rule",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Regulated inheritance",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Religious title revocation (unless Chinese Imperial government or Cosmopolitan religion , which cannot adopt this law and do not require it for Imperial Administration)",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Vassal wars",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Law",
+                            "Description",
+                            "Opinion",
+                            "Requirements",
+                            "ID"
+                        ],
+                        [
+                            "Allowed",
+                            "Vassals may fight against enemies both within and without the realm so long as Realm Peace is not enforced.",
+                            "",
+                            "",
+                            "vassal_wars_law_0"
+                        ],
+                        [
+                            "External",
+                            "Vassals are forbidden from declaring war on enemies within the realm, but may attack external enemies so long as Realm Peace is not enforced.",
+                            "-5 feudal opinion",
+                            "Imperial Administration",
+                            "vassal_wars_law_1"
+                        ],
+                        [
+                            "Illegal",
+                            "Vassals are forbidden from declaring war both within and without the realm.",
+                            "-10 feudal opinion",
+                            "Imperial Administration",
+                            "vassal_wars_law_2"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Realm peace can be temporarily enforced via the Council tab regardless of the standing law."
+                }
+            ]
+        },
+        {
+            "heading": "Advantages of restricting vassal wars",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Peace improves the economy, especially with prosperity ( ) and the Silk Road ( or )",
+                            "children": []
+                        },
+                        {
+                            "text": "Vassals' levies contribute to siege defense",
+                            "children": []
+                        },
+                        {
+                            "text": "May help keep any one vassal from growing too powerful",
+                            "children": []
+                        },
+                        {
+                            "text": "Restricting internal wars may encourage vassals to focus on external wars, which expand your realm",
+                            "children": []
+                        },
+                        {
+                            "text": "Restricting external wars prevents vassals from launching holy wars, which risks tanking the religion's moral authority if they lose.",
+                            "children": []
+                        },
+                        {
+                            "text": "Helps keep your borders looking sexy.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Advantages of allowing vassal wars",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Difficulty of getting Imperial Administration ; energies may have better returns if spent on other endeavours.",
+                            "children": [
+                                {
+                                    "text": "Available only to emperors",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Faction rebellion is less likely, because:",
+                            "children": [
+                                {
+                                    "text": "Feudal vassals have increased opinion",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Faction members have decreased strength due to war losses",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Faction leaders cannot issue ultimatums while they are at war",
+                                    "children": []
+                                },
+                                {
+                                    "text": "A faction to \"increase council power\" is less appealing when it only increases council power. (It can also nullify vassal war laws.)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "External vassal wars can expand your realm without incurring as much threat",
+                            "children": []
+                        },
+                        {
+                            "text": "May choose to allow vassal wars that benefit you, while intervening in wars that do not",
+                            "children": []
+                        },
+                        {
+                            "text": "May revoke titles from vassals who refuse individual demands for peace (with The Reaper's Due and at least Late Feudal Administration)",
+                            "children": []
+                        },
+                        {
+                            "text": "More characters gain leadership traits by participating in battles",
+                            "children": []
+                        },
+                        {
+                            "text": "A more hostile landscape for attacking enemies, due to the scattered armies of warring vassals",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Status of Women",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Through legislation, it is now possible to empower women by allowing them to take positions on the council . Most council positions first become available to women related to the ruler (dynasty members, close relatives, wives, and concubines), landed vassals, and in some cases nuns . It is possible to enable the highest level of the law by default with the game rules."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "At the second highest level, it is possible for Muslims and nomads to pass Agnatic-Cognatic succession , which in turn allows matrilineal marriage . At the highest level, it is possible to pass the Absolute Cognatic succession law, and female rulers do not suffer opinion penalties. These changes are more significant to Muslims and nomads , who previously could only use Agnatic succession and patrilineal marriage. The ability to appoint female commanders expands your talent pool as well. However, it also enables female claimants to wage adventurer wars against you."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Level",
+                            "Technology",
+                            "Opens position",
+                            "To these women",
+                            "Other effects"
+                        ],
+                        [
+                            "Traditional",
+                            "",
+                            "Spymaster",
+                            "Wife, Mother",
+                            ""
+                        ],
+                        [
+                            "Marginal",
+                            "Tolerance III",
+                            "Advisor",
+                            "Landed vassals",
+                            ""
+                        ],
+                        [
+                            "Marginal",
+                            "Tolerance III",
+                            "",
+                            "Spymaster",
+                            "Relatives, landed vassals, nuns"
+                        ],
+                        [
+                            "Significant",
+                            "Tolerance IV",
+                            "Chancellor Steward",
+                            "Relatives, landed vassals, nuns",
+                            ""
+                        ],
+                        [
+                            "Notable",
+                            "Tolerance V",
+                            "Marshal",
+                            "Relatives, landed vassals",
+                            "Allows agnatic-cognatic succession for Muslims and nomads"
+                        ],
+                        [
+                            "Full",
+                            "Tolerance VI",
+                            "All positions above; Commander",
+                            "All women",
+                            "Allows cognatic succession No opinion penalty for female ruler No opinion penalty for female heir Female rulers are less vulnerable to weak claims"
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

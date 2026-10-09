@@ -1,0 +1,1207 @@
+{
+    "pageid": 2777,
+    "title": "Patch 2.5.X",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.5.X are all patches beginning with 2.5, and linked to Conclave expansion."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For mod compatibility see patch 2.5 mod compatibility guide ."
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.5",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Patch 2.5.1",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.5.1 was released on 2016-02-02 as Day 1 patch for Conclave expansion. [1]"
+                }
+            ]
+        },
+        {
+            "heading": "Major",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "NAP can now be formed with close relatives (siblings etc.) of different dynasties",
+                            "children": []
+                        },
+                        {
+                            "text": "Great Feasts, Grand Tournament and Furusiyya events have been reworked to be triggered and not MTTH, increasing performance slightly",
+                            "children": []
+                        },
+                        {
+                            "text": "Rebalanced ai council position selection to make it harder to acquire loyalists and made close relatives a bit more loyal.",
+                            "children": []
+                        },
+                        {
+                            "text": "The ai is better at using favors to get the council to approve laws",
+                            "children": []
+                        },
+                        {
+                            "text": "AI councillors use request support and call in favor on each other to pass laws",
+                            "children": []
+                        },
+                        {
+                            "text": "AI councillors use request support and call in favor on each other to protect themselves from imprisonment",
+                            "children": []
+                        },
+                        {
+                            "text": "AI councillors that dislike their liege try to get more support from other councillors",
+                            "children": []
+                        },
+                        {
+                            "text": "AI more prone to accept Request Support if both character dislike the liege",
+                            "children": []
+                        },
+                        {
+                            "text": "AI will try to get good marriages on characters owing them favors",
+                            "children": []
+                        },
+                        {
+                            "text": "AI no longer cares for having a cb when considering alliance offers",
+                            "children": []
+                        },
+                        {
+                            "text": "AI won't accept request support actions if it has called favors on someone else",
+                            "children": []
+                        },
+                        {
+                            "text": "AI won't accept buy favor actions if it has called favors on someone else",
+                            "children": []
+                        },
+                        {
+                            "text": "AI councillors won't try to get support from other councillors while giving support to someone else",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Minor",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Lieges of Trade Post owners will no longer burn mentioned Trade Posts",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters with unfaithful concubines will now gain proper opinion modifiers",
+                            "children": []
+                        },
+                        {
+                            "text": "Halved frequency of Mu'tazila vassals asking lieges to change their beliefs",
+                            "children": []
+                        },
+                        {
+                            "text": "Council Appointment Offer from Liege no longer expires after a day",
+                            "children": []
+                        },
+                        {
+                            "text": "Renegotiate Non-Aggression Pact interaction no longer appears if it's disabled between characters or if one of them is landless",
+                            "children": []
+                        },
+                        {
+                            "text": "Governments no longer allow to freely revoke titles from tribals of same faith",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed so culture and names are updated properly for some provinces when picking between bookmarks",
+                            "children": []
+                        },
+                        {
+                            "text": "Holy orders, adventurers and mercs can no longer start factions",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issues in Form Non-Aggression Pact interaction",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issues with Pact list not showing certain Non-Aggression Pacts",
+                            "children": []
+                        },
+                        {
+                            "text": "Game no longer crash if continue button loads a save game outside a subfolder while player is in subfolder",
+                            "children": []
+                        },
+                        {
+                            "text": "Dead vassals don't show up in the character selection screen anymore",
+                            "children": []
+                        },
+                        {
+                            "text": "keyboard shortcuts in the character selection screen",
+                            "children": []
+                        },
+                        {
+                            "text": "fixed a nasty oos possibility due to multithreading",
+                            "children": []
+                        },
+                        {
+                            "text": "Children who were being educated but didn't have a guardian now go back home when they turn adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixes Revolters going independant when revolt leader loses all land (the war becomes invalidated instead)",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed crash caused by dead guy refusing to leave his coalition against an infamous enemy",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed console command that let's you spawn in a sprite on the map.",
+                            "children": []
+                        },
+                        {
+                            "text": "Speed up AI diplomacy evaluation by removing unnessecary debug code.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed so teenage hormones do not affect incapable characters, no longer gets their love event.",
+                            "children": []
+                        },
+                        {
+                            "text": "Can now hide your daughter if someone is out to get her.",
+                            "children": []
+                        },
+                        {
+                            "text": "Muslims unless they are sinful will no longer die from poisoned wine.",
+                            "children": []
+                        },
+                        {
+                            "text": "Plot backers who are Muslim unless they are sinful will no longer get drunk and spill the beans.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed wife giving advice events from firing when councillors were not hired.",
+                            "children": []
+                        },
+                        {
+                            "text": "Non-independent allies now share vision with other allies in a war.",
+                            "children": []
+                        },
+                        {
+                            "text": "Incapable people are no longer capable of killing people.",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer makes council position buttons clickable if you are not on council.",
+                            "children": []
+                        },
+                        {
+                            "text": "AI will no longer try to assign adviser titles to someone who already has it (which means it will actually be capable of assigning it now)",
+                            "children": []
+                        },
+                        {
+                            "text": "The writers of the chronicle will no longer try to cover-up the warning of the coming of Xuhmalz, the demon lord, whom left a message set in stone.",
+                            "children": []
+                        },
+                        {
+                            "text": "Getting killed by assassins no longer forces you to die twice.",
+                            "children": []
+                        },
+                        {
+                            "text": "AI-rulers will now consider changing their obligation laws to better suit their needs.",
+                            "children": []
+                        },
+                        {
+                            "text": "Councillors are now more prone to approve title grants to unlanded characters when you're above demesne limit.",
+                            "children": []
+                        },
+                        {
+                            "text": "The vote window is properly aligned with the interaction position",
+                            "children": []
+                        },
+                        {
+                            "text": "The vote window won't be shown when there's no vote",
+                            "children": []
+                        },
+                        {
+                            "text": "The tooltip for changing a law now shows what the members of the council stand on the issue",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed crash when a character dies and disbands armies that ends as combat that the player is part of",
+                            "children": []
+                        },
+                        {
+                            "text": "Favor duration increased from 12 to 36 months",
+                            "children": []
+                        },
+                        {
+                            "text": "Increased the chance from 25% to 75% for the AI using favors to force interactions",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer possible to call a favor on someone already under the influence of a favor",
+                            "children": []
+                        },
+                        {
+                            "text": "Council voter list aligned",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Modding",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed so free vassal levies thing muslims had is no longer hardcoded.",
+                            "children": []
+                        },
+                        {
+                            "text": "relative_power_including_allies_attacker and relative_power_including_allies_defender also includes potential coalition strength now.",
+                            "children": []
+                        },
+                        {
+                            "text": "Renamed owes_favor trigger; now called owes_favor_to.",
+                            "children": []
+                        },
+                        {
+                            "text": "Renamed holds_favor trigger; now called holds_favor_on.",
+                            "children": []
+                        },
+                        {
+                            "text": "Renamed owed_favor_activated trigger; now called owed_favor_activated_by.",
+                            "children": []
+                        },
+                        {
+                            "text": "Renamed held_favor_activated trigger; now called held_favor_activated_on.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added effect for any_favor_ower.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added effect for any_favor_holder.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Converter",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed error with province Hoya in converter",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed graphical culture for south indians",
+                            "children": []
+                        },
+                        {
+                            "text": "Hansa no longer becomes Lübeck",
+                            "children": []
+                        },
+                        {
+                            "text": "Native americans are no longer anatolian beyliks in the converter",
+                            "children": []
+                        },
+                        {
+                            "text": "Dravidian nations no longer need to be two religions at once to get their idea set in the converter",
+                            "children": []
+                        },
+                        {
+                            "text": "Pictish is no longer forever alone in Celtic group, they joined the Gaelic club",
+                            "children": []
+                        },
+                        {
+                            "text": "Andalucian nations should now get their Granadan ideas",
+                            "children": []
+                        },
+                        {
+                            "text": "EU4 now properly recognize the Jews as a culture and do not say Jewish empires do not exist.",
+                            "children": []
+                        },
+                        {
+                            "text": "Mamelukes ideas should now be applied properly",
+                            "children": []
+                        },
+                        {
+                            "text": "Lappish now properly becomes Sapmi culture",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a bunch of new nation tags to the converter and fixed some out dated ones",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed new way to generate governments for the converter if you have conclave",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.5.1.1",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.5.1.1 was released on 2016-02-05 and is a hotfix for problems related to focuses, in particular for user that don't use both Conclave and Way of Life. [2]"
+                }
+            ]
+        },
+        {
+            "heading": "Minor",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed a bug that caused children to not get a proper education outcome if you had the Conclave dlc enabled but not the Way of Life dlc.",
+                            "children": []
+                        },
+                        {
+                            "text": "Players can no longer pick focuses that they aren't eligible for",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue where an under-age vassal ruler couldn't pick childhood or education focus for yourself unless you had the Way of Life dlc enabled.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.5.2",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.5.2 was released on 2016-03-03 and includes a rework of Coalitions into Defensive Pacts, Battle and Retreat changes as well as a lot of minor fixes, for example adding a \"Next song\"-button, and mod fixes. [3]"
+                }
+            ]
+        },
+        {
+            "heading": "Major",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Reworked Coalitions into Defensive Pacts:",
+                            "children": []
+                        },
+                        {
+                            "text": "Renamed Infamy to Threat, and Coalition to Defensive Pact",
+                            "children": []
+                        },
+                        {
+                            "text": "Defensive Pacts are entirely Defensive and will never launch Offensive wars against the target",
+                            "children": []
+                        },
+                        {
+                            "text": "Coalition/Defensive Pact Mapmode now only shows the Defensive Pacts against selected Realms",
+                            "children": []
+                        },
+                        {
+                            "text": "Split up defensive pacts based on religious groups",
+                            "children": []
+                        },
+                        {
+                            "text": "Threat level controls the size of realms which are allowed to join defensive pacts to protect themselves from a threat",
+                            "children": []
+                        },
+                        {
+                            "text": "Threat level controls how far away realms can be in order to join in defensive pacts",
+                            "children": []
+                        },
+                        {
+                            "text": "AI Realms with equal or greater troop strength than a target will never join Defensive Pacts against them",
+                            "children": []
+                        },
+                        {
+                            "text": "Your own religious group have a lower defensive pact distance",
+                            "children": []
+                        },
+                        {
+                            "text": "As a Realm's threat increases, the different Defensive Pacts will be willing to work together to contain them.",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated Threat alert tooltip with detailed information",
+                            "children": []
+                        },
+                        {
+                            "text": "Maximum Threat from a single source capped at 100%",
+                            "children": []
+                        },
+                        {
+                            "text": "Maximum threat from a province capped at 15%",
+                            "children": []
+                        },
+                        {
+                            "text": "Minimum threat from a province set to 2%",
+                            "children": []
+                        },
+                        {
+                            "text": "Minimum monthly threat decay set to 0.21%",
+                            "children": []
+                        },
+                        {
+                            "text": "Maximum monthly threat decay set to 0.4%",
+                            "children": []
+                        },
+                        {
+                            "text": "Claims for yourself now only gives 85% threat.",
+                            "children": []
+                        },
+                        {
+                            "text": "Claims for someone else now only gives 50% threat.",
+                            "children": []
+                        },
+                        {
+                            "text": "Dejure claim for yourself now only gives 50% threat.",
+                            "children": []
+                        },
+                        {
+                            "text": "Dejure claim for someone else now only gives 30% threat.",
+                            "children": []
+                        },
+                        {
+                            "text": "Liberate nomad duchy generates only 75% of threat",
+                            "children": []
+                        },
+                        {
+                            "text": "Battle and Retreat changes:",
+                            "children": []
+                        },
+                        {
+                            "text": "Made battles give 25% more warscore, to get battle warscore closer to what it was before the casualty reduction",
+                            "children": []
+                        },
+                        {
+                            "text": "Won battle vs hosts give twice the warscore",
+                            "children": []
+                        },
+                        {
+                            "text": "Shattered retreat no longer count distance through sea or wasteland",
+                            "children": []
+                        },
+                        {
+                            "text": "Added attrition during shattered retreat",
+                            "children": []
+                        },
+                        {
+                            "text": "Shattered armies ignore leader attrition reduction",
+                            "children": []
+                        },
+                        {
+                            "text": "Shattered retreat now considers province size (through movement cost) when computing distance to target",
+                            "children": []
+                        },
+                        {
+                            "text": "Looters who shatter won't be able to loot that province's owner for a while anymore",
+                            "children": []
+                        },
+                        {
+                            "text": "Looters will shatter to their boats if they can",
+                            "children": []
+                        },
+                        {
+                            "text": "Total Warscore from battles capped at 75% for attacker",
+                            "children": []
+                        },
+                        {
+                            "text": "Shattered retreat favors slightly coastal provinces adjacent to boats you can embark in",
+                            "children": []
+                        },
+                        {
+                            "text": "Added faction to force abdication of kings and emperors",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed game over caused by daughters running away and becoming mercenaries",
+                            "children": []
+                        },
+                        {
+                            "text": "Added events for skilled educators to influence children during adolescence",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a button for playing the next song",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a setting for ignoring context sensitive music (ie regardless of culture and if being in war or not).",
+                            "children": []
+                        },
+                        {
+                            "text": "Added additional favor events",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Groom an Heir ambition",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed instant OOS between different platforms",
+                            "children": []
+                        },
+                        {
+                            "text": "AI no longer transforms matrilineal betrothal into regular marriages (and vice versa)",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer possible to break betrothal set up as from a favor",
+                            "children": []
+                        },
+                        {
+                            "text": "Added new law, Council Authority",
+                            "children": []
+                        },
+                        {
+                            "text": "Added character modifier Rejecting Seduction Attempts",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters with Rejecting Seduction Attempts can not be targeted by the seduce decision",
+                            "children": []
+                        },
+                        {
+                            "text": "Added options to seduction targets to ask seducers to go away",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Minor",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed some issues with characters not resetting their hosts",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue with Blot event making the host a lover instead of the intended target",
+                            "children": []
+                        },
+                        {
+                            "text": "Faction for Elective Succession has been tweaked to appear less frequently",
+                            "children": []
+                        },
+                        {
+                            "text": "Council allows their liege to hand out demesne if vastly above demesne limit",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue where duplicate laws were set when granting titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Ask Liege for Title now only grants counties",
+                            "children": []
+                        },
+                        {
+                            "text": "Added favor effect to counter offer event asking broke liege to sell land",
+                            "children": []
+                        },
+                        {
+                            "text": "Brilliant Strategist will now also apply one random leadership trait",
+                            "children": []
+                        },
+                        {
+                            "text": "Added assert details for undeclared opinion modifiers",
+                            "children": []
+                        },
+                        {
+                            "text": "It is no longer possible to ask liege for land if they have a regent",
+                            "children": []
+                        },
+                        {
+                            "text": "AI children will more often gain childhood traits",
+                            "children": []
+                        },
+                        {
+                            "text": "Made tooltip to show options leading to childhood traits",
+                            "children": []
+                        },
+                        {
+                            "text": "Added new traits Brawny and Frail, which are similar to Strong and Weak but non-congenital.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added the traits Shrewd and Dull, which are similar to Quick and Slow but non-congenital.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added scripted triggers which check for related traits, e.g. is_strong_trigger checks for either strong or robust. Others are: is_dumb_trigger, is_weak_trigger, and is_smart_trigger",
+                            "children": []
+                        },
+                        {
+                            "text": "Various events and decisions etc which checked for strong/weak/quick/slow etc now also check for brawny/frail/shrewd/dull",
+                            "children": []
+                        },
+                        {
+                            "text": "Added text for the outliner when new conclave alerts are disabled",
+                            "children": []
+                        },
+                        {
+                            "text": "Events adding Strong or Weak now add Brawny or Frail",
+                            "children": []
+                        },
+                        {
+                            "text": "Most events adding Slow or Imbecile now add Dull instead, exception is when upgrading to slow from imbecile",
+                            "children": []
+                        },
+                        {
+                            "text": "Events giving Quick or Genius now add Shrewd (except demon child ). It is possible to stack Shrewd with quick/genius",
+                            "children": []
+                        },
+                        {
+                            "text": "Event 64080 shall no longer cause men to impregnate themselves",
+                            "children": []
+                        },
+                        {
+                            "text": "Viceroys can no longer switch primary titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Close relatives can now form alliances",
+                            "children": []
+                        },
+                        {
+                            "text": "Vassals in hiding are no longer upset about not being on the council",
+                            "children": []
+                        },
+                        {
+                            "text": "Added confirm pop-up when clicking on Abandon Game in MP",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a problem where the wrong council vote result was received for Declare War Interaction",
+                            "children": []
+                        },
+                        {
+                            "text": "Top bar buttons and their corresponding shortcuts are now disabled if you are in observer mode",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer able to CTA character into wars with a religious head that is different from their religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Allies attached to a retreating army can no longer be engaged",
+                            "children": []
+                        },
+                        {
+                            "text": "AI no longer declare war on player during Learning Scenario",
+                            "children": []
+                        },
+                        {
+                            "text": "People with NAPs with their liege will no longer join Factions against their liege",
+                            "children": []
+                        },
+                        {
+                            "text": "People who have a NAP with their liege will leave factions against their liege if they're in one (e.g. they got the NAP after joining the faction)",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed revolters against a viceroy becoming independent on that viceroy's death",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed characters not becoming vassals of people who usurp their main title if they had a liege before hand",
+                            "children": []
+                        },
+                        {
+                            "text": "Divorces and event-based marriage breaking now remove non aggression pacts",
+                            "children": []
+                        },
+                        {
+                            "text": "Councilors who get replaced correctly get the fired from council opinions",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Councilors for Major Revolt leaders not being sent home when the revolt ends and they are no longer a vassal of said leader",
+                            "children": []
+                        },
+                        {
+                            "text": "Inherited opinions against a Liege's successor are now more comprehensive in what they include",
+                            "children": []
+                        },
+                        {
+                            "text": "If you manage to seduce your spouse it will no longer be considered a scandalous act of incest (unless you are married under by certain religious ceremonies) because you are related (being spouses to each other), even if you are keeping it in the family.",
+                            "children": []
+                        },
+                        {
+                            "text": "The ai will no longer install vassals of vassals as anti-popes that are automatically invalidated due to not being their direct vassals.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added some fixes to mercenary events.",
+                            "children": []
+                        },
+                        {
+                            "text": "Increased the negative opinion for powerful vassals not being part of the council.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some issues in succession law triggers when you're part of a Duke or Count tier independent realm.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a number of new insults and compliments to the dynamic insult/compliment system for traits.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added special childish insults/compliments to many traits. Younger children will now use these instead of the adult ones.",
+                            "children": []
+                        },
+                        {
+                            "text": "Committing suicide now gives you a strong negative general opinion modifier.",
+                            "children": []
+                        },
+                        {
+                            "text": "Mercenary bands you own can be renamed using the customization dlc",
+                            "children": []
+                        },
+                        {
+                            "text": "The realm view interface updates automatically when a title is being renamed",
+                            "children": []
+                        },
+                        {
+                            "text": "Imbecile characters use childish insults",
+                            "children": []
+                        },
+                        {
+                            "text": "Changed the name of \"Context sound\" setting to \"Dynamic ambient sounds\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Realm peace properly blocked when council is discontent",
+                            "children": []
+                        },
+                        {
+                            "text": "AI with high vassal opinions are more prone to go against the will of the council",
+                            "children": []
+                        },
+                        {
+                            "text": "AI with low rationality (insanity) are more prone to go against the will of the council",
+                            "children": []
+                        },
+                        {
+                            "text": "AI will go against the council if it wants to declare war, but the council says no to every war",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Peter Skager to the credits",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Timor Khanagov to the credits",
+                            "children": []
+                        },
+                        {
+                            "text": "AI will no longer spam the player with request council support requests",
+                            "children": []
+                        },
+                        {
+                            "text": "DLC and mod tab texts aligned in launcher",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed rare crash in papal election",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated councillor spend liege favor to change law tooltip",
+                            "children": []
+                        },
+                        {
+                            "text": "Council discontent tooltips are now more clear regarding laws and councillors joining factions",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where females no longer got +0.5 health from birth",
+                            "children": []
+                        },
+                        {
+                            "text": "Next song buttons shows current song in tooltip",
+                            "children": []
+                        },
+                        {
+                            "text": "Primogeniture and ultimogeniture no longer blocked if the character stands to inherit titles that could potentially make the inheritance illegal (will block if those titles are actually inherited instead)",
+                            "children": []
+                        },
+                        {
+                            "text": "Holy orders will join defensive pacts in the same manner as religious heads",
+                            "children": []
+                        },
+                        {
+                            "text": "AI more accepting to council support if risking imprisonment",
+                            "children": []
+                        },
+                        {
+                            "text": "Non dynastic or close kin children in your court get auto assigned educations at age 15",
+                            "children": []
+                        },
+                        {
+                            "text": "Only independent characters can be part of defensive pacts",
+                            "children": []
+                        },
+                        {
+                            "text": "Powerful vassal trigger added",
+                            "children": []
+                        },
+                        {
+                            "text": "Powerful vassals are decided by realm size using age as tiebreaker",
+                            "children": []
+                        },
+                        {
+                            "text": "Change mercenary composition adds newlines in tooltips",
+                            "children": []
+                        },
+                        {
+                            "text": "Script: replaced \"SIEGE_DAMAGE\" define with \"ATTACKER_SIEGE_DAMAGE\" and \"DEFENDER_SIEGE_DAMAGE\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Buy favor can no longer be used on children",
+                            "children": []
+                        },
+                        {
+                            "text": "Buy favor can no longer be used on imprisoned, in hiding or incapable characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Minimum buy favor cost is based on tier of target, characters closely related to higher tier characters count as the higher tier",
+                            "children": []
+                        },
+                        {
+                            "text": "Start faction tooltip updated to show the need for council voting on war declaration",
+                            "children": []
+                        },
+                        {
+                            "text": "Change_mercenary_composition shows correct amount of troops in tooltip",
+                            "children": []
+                        },
+                        {
+                            "text": "Members of your court may no longer fire your chaplain via the ZE.5030 event",
+                            "children": []
+                        },
+                        {
+                            "text": "Pagan and Nomad subjugation now give their opinion bonus again",
+                            "children": []
+                        },
+                        {
+                            "text": "Surviving the judgment of Zun now removes imprison reasons and negative modifiers with liege",
+                            "children": []
+                        },
+                        {
+                            "text": "Changed order of effects in join holy order events to ensure married people move correctly",
+                            "children": []
+                        },
+                        {
+                            "text": "Renamed b_stribo to Stribro",
+                            "children": []
+                        },
+                        {
+                            "text": "Added text to the option for ZE.2029",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed borders on some education events",
+                            "children": []
+                        },
+                        {
+                            "text": "Reworked the Roman borders restored event to check for region rather than some of the huge duchy list",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed capitalization in EVTOPTC38234",
+                            "children": []
+                        },
+                        {
+                            "text": "Desc for haughty now states it can develop into Arbitrary, rather than Haughty",
+                            "children": []
+                        },
+                        {
+                            "text": "hold_a_furusiyya now sets and checks for the do_not_disturb flag",
+                            "children": []
+                        },
+                        {
+                            "text": "Improved check for cannibal at feast",
+                            "children": []
+                        },
+                        {
+                            "text": "Added subjugated opinion modifier to the pagan and nomad subjugation CBs.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed betrothal forced through favors not being saved",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Mercenary captains not getting any money if the band doesn't have a creator",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with the tooltip for the is_powerful_vassal trigger.",
+                            "children": []
+                        },
+                        {
+                            "text": "Muslim rulers try to change from elective to turkish when they can",
+                            "children": []
+                        },
+                        {
+                            "text": "Improved handling of heads of religion who are subjugated by Nomads",
+                            "children": []
+                        },
+                        {
+                            "text": "Kids with faith focus should change to educator's religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Status of women 4 law should correctly allow female councillors",
+                            "children": []
+                        },
+                        {
+                            "text": "Some tactics which did not correctly check leader martial now do so",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters should no longer be able to owe favors to themselves",
+                            "children": []
+                        },
+                        {
+                            "text": "The tooltip for effects should now be less prone to lie about things that will happen if it fails to scope to dead characters.",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed excessive error logging for dynamic flags causing flooding issues of the error log.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added independent trigger to avoid adding favors to yourself",
+                            "children": []
+                        },
+                        {
+                            "text": "Deactivated event telemetry in final version",
+                            "children": []
+                        },
+                        {
+                            "text": "The Rise of the Shi'a Caliphate event should now be able to fire again.",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters with positive relations with their liege will not start overthrow factions",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with granting a title to an unlanded courtier of a vassal",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with some wars being invalidated when they shouldn't",
+                            "children": []
+                        },
+                        {
+                            "text": "Can no longer form alliances with characters you're at war with",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Modding",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added infamy trigger to test if a character have threat higher than asked for value.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added change_infamy effect to add or remove threat from a character.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added infamy_modifier to casus belli which will be multiplied with the resulting infamy from a war.",
+                            "children": []
+                        },
+                        {
+                            "text": "Can now script a revoke trigger for minor titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a define if faction membership is blocked by having a non-aggression pact with your liege: NON_AGGRESSION_PACT_BLOCKS_FACTIONS.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue where the any_army and random_army scopes in effects ignored the limit trigger assigned to them.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger: is_multiplayer_host_character = yes/no.",
+                            "children": []
+                        },
+                        {
+                            "text": "The text command \"GetID\" now also work on titles and provinces which will return the title tag (eg \"k_france\") and the province ID respectively.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a define for the fort discount on new holding construction: FORT_CONSUMED_IN_SETTLEMENT_CONTRUCTION.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a define if titular duchy titles should count towards duchy limit for vassal opinion: TITULAR_TITLES_COUNT_TOWARDS_DUCHY_LIMIT.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Scope: real_father_even_if_dead.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added effects: any_child_even_if_dead, random_child_even_if_dead, any_dynasty_member_even_if_dead, random_dynasty_member_even_if_dead, any_sibling_even_if_dead, random_sibling_even_if_dead, any_spouse_even_if_dead, random_spouse_even_if_dead.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added triggers: any_child_even_if_dead, any_dynasty_member_even_if_dead, any_sibling_even_if_dead.",
+                            "children": []
+                        },
+                        {
+                            "text": "\"disallow_random_traits = yes\" should now blocks more trait correction and generation so that scripted characters with this entry should get their explicit trait setup. The only exception is that children still should get education trait(s) removed.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue in num_title_realm_provs trigger when you had a title as the current scope and a character in the \"who\" scope.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.5.2.1",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.5.2.1 was released on 2016-05-30 and updates the EU4 converter :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Updated CKII->EUIV converter to work with EUIV version 1.17 .",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed CKII->EUIV converter telemetry event not being sent.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.5.2.2",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.5.2.2 was released on 2016-06-02 [4] and includes bugfixes for the EU4 converter :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed name conversion not working on Linux and Mac",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed tech icons being incorrect and fetishist icon using the old one.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Crusader Kings II - 2.5.1 patch - NOT for problem reports! [checksum OBWK]",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Crusader Kings II - 2.5.1.1 Hot Fix - NOT for problem reports! [checksum XKJY]",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Crusader Kings II - 2.5.2 patch - NOT for problem reports! [checksum YZAZ",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum, Update on the CK2 -> EU4 converter , 2016-06-02",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

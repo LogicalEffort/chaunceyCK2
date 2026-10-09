@@ -1,0 +1,2092 @@
+{
+    "pageid": 429,
+    "title": "Kingdoms",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A Kingdom is the title tier below empire and above duchy , and the most common rank for independent realms . It is generally held by a King ranked character; emperors also usually hold the kingdom title which their capital belongs to de jure .The portrait of kings (or equivalent) has a golden border."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "To create or usurp a de jure kingdom title, a character is required to:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Control at least 51% of the title's de jure counties",
+                            "children": []
+                        },
+                        {
+                            "text": "Already control a kingdom or empire , or else hold two or more duchy titles. Note that these duchy titles do not have to be located within the kingdom the character intends to found or usurp",
+                            "children": []
+                        },
+                        {
+                            "text": "Payment of 400 wealth plus 200 piety (or equivalent). If the player character activates the Become king ambition , all costs are halved. In addition, wealth cost is gradually reduced as the character amasses piety, with 50% discount at 1000 piety.",
+                            "children": []
+                        },
+                        {
+                            "text": "Meet specific religious and/or cultural conditions (since Patch 2.0 most conditions only apply to the AI).",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "De jure duchies within a kingdom may be assimilated into another kingdom over time through de jure drift , and many kingdoms do not de facto control all of their de jure territory at most start dates. For example, in 1066, the Duchy of Toulouse is part of the de jure Kingdom of Aquitaine, but is entirely controlled by the King of France. Thus, if the King of France keeps Toulouse for at least 100 years, that duchy will become de jure territory of France. (Time required for complete assimilation may be changed by the player on game rules panel at game session start)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A king-tier character will have a Casus Belli for each county in their de jure kingdom they do not control. Additionally, independent counts located in their de jure kingdom or have the same culture as the king are more likely to accept diplomatic vassalization if offered."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A kingdom without any de jure lands is titular . Some of them can be created if the character owns a designated capital county and meets certain criteria, listed below. If a duchy is assimilated into a titular kingdom, it is no longer considered titular and the assimilated duchy becomes de jure territory of the new kingdom."
+                }
+            ]
+        },
+        {
+            "heading": "Mechanics unlocked at king rank",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Separate succession laws for each held kingdom or empire",
+                            "children": []
+                        },
+                        {
+                            "text": "Crown laws for each held kingdom or empire:",
+                            "children": [
+                                {
+                                    "text": "Investiture : Enables appointment of Catholic bishop characters either by the liege or by the Pope . If Conclave DLC is active, it is accessible under realm laws tab;",
+                                    "children": []
+                                },
+                                {
+                                    "text": "If the Conclave Expansion is inactive, the Crown Authority law is enabled. At each new level, this law allows title revocation , control of vassal inheritance, war among vassals, and unlocks additional succession types",
+                                    "children": []
+                                },
+                                {
+                                    "text": "On the other hand, if the Conclave DLC is active, the laws below replace Crown Authority and are located under realm laws tab:",
+                                    "children": [
+                                        {
+                                            "text": "Controlled Realm Inheritance: Enables the liege to forbid inheritance of lower titles by characters living outside the realm ;",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "Vassal War Declaration: The king-ranked character allows free wars among their vassals , or permits vassals to wage external wars only, or disallows vassals to wage war at all.",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Council (requires the Conclave DLC): Receives +1 Advisor slot as an extra voting position which is visible only under \"My Council\" tab (if the council is empowered to vote on law changes)",
+                            "children": [
+                                {
+                                    "text": "The \"council authority\" council law also becomes available if the king is feudal.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Coronation (Requires Holy Fury and the character being Catholic/Fraticelli and feudal)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Nomenclature",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The proper title of a king-rank character and their respective land titles are generated according to the combination of their religion , government type and culture , for instance:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "King-tier Greek characters are titled despots",
+                            "children": []
+                        },
+                        {
+                            "text": "Arabic or Turkish kings are known as sultans",
+                            "children": []
+                        },
+                        {
+                            "text": "Iranian kings are called shahs and West African kings are mansas",
+                            "children": []
+                        },
+                        {
+                            "text": "Altaic and Mongol kings are known as khans",
+                            "children": []
+                        },
+                        {
+                            "text": "Indian kings are known as maharajas and Tibetan kings are gyalpos",
+                            "children": []
+                        },
+                        {
+                            "text": "Merchant republic rulers who attain king-tier titles are known as prince mayors, but Latin and Byzantine cultures use serene doge, while Muslims call them wali-maliks",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters who are granted kingdom viceroyalties are titled viceroys, or exarchs if liege is from Byzantine culture group.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Custom kingdoms",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With the Charlemagne DLC, rulers can create a custom de jure kingdom. This decision is available to independent dukes with 1000 prestige as well as either 35 holdings in their realms , or else three duchy titles."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Custom kingdoms are named after their creator's primary duchy (although they can be renamed with the Customization Pack DLC) and belong to the same de jure empire that the ruler's previous de jure kingdom was part of."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When you create a custom kingdom, only duchies in your realm that have no existing kingdom become dejure of your custom kingdom. The same applies to custom empires and realm kingdoms."
+                }
+            ]
+        },
+        {
+            "heading": "List of de jure kingdoms",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Any kingdom on this list with its requirements listed as N/A is impossible to be created or usurped , and therefore will only be on the map in campaigns where the kingdom exists at game start."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "CoA",
+                            "Kingdom",
+                            "De Jure Duchies",
+                            "De Jure Empire (s)",
+                            "Requirements",
+                            "AI additional requirements",
+                            "Culture [1]",
+                            "ID",
+                            "Capital",
+                            "Other names"
+                        ],
+                        [
+                            "",
+                            "Abyssinia",
+                            "Axum, Semien, Afar, Gondar, Wag, Gojjam, Damot, Shewa, Berbera",
+                            "Abyssinia",
+                            "",
+                            "",
+                            "Ethiopian",
+                            "k_abyssinia",
+                            "Gondar",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Africa",
+                            "Tunis, Tripolitana, Cyrenaica, Kabylia, Syrte, Mzab, Jerid",
+                            "Maghreb",
+                            "",
+                            "",
+                            "Berber",
+                            "k_africa",
+                            "Tunis",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Alania",
+                            "Alania, Caspian Steppe, Azov, Derbent",
+                            "Pontic Steppe",
+                            "",
+                            "Alan culture",
+                            "Alan",
+                            "k_alania",
+                            "Alania",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Al-Jazira",
+                            "Kermanshah, Mosul, Jazira, Mudar",
+                            "Persian Empire",
+                            "",
+                            "",
+                            "Levantine",
+                            "k_mesopotamia",
+                            "Mosul",
+                            "Assyria"
+                        ],
+                        [
+                            "",
+                            "Anatolia",
+                            "Anatolia, Thracesia, Charsianon, Nikaea, Cilicia, Samos, Cibyrrhaeot, Bucellarian, Cyprus",
+                            "Byzantine Empire",
+                            "",
+                            "",
+                            "Greek",
+                            "k_anatolia",
+                            "Ikonion (Konya)",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Andalusia",
+                            "All: Granada. Before 1085: Toledo, from 1147 to 1249: Algarve, from 1147 to 1212: Badajoz, before 1212: Cordoba, from 1212 to 1266: Murcia, before 1249: Seville.",
+                            "Hispania",
+                            "",
+                            "Arabic culture group",
+                            "Andalusian",
+                            "k_andalusia",
+                            "Cordoba",
+                            "Baetica, Granada"
+                        ],
+                        [
+                            "",
+                            "Andhra",
+                            "Vengi, Udayagiri",
+                            "Deccan Empire",
+                            "",
+                            "",
+                            "Telugu",
+                            "k_andhra",
+                            "Udayagiri",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Aquitaine",
+                            "Aquitaine, Toulouse, Gascogne, Poitou, Auvergne, Bourbon.  769 and 867 only: Barcelona.",
+                            "Francia",
+                            "",
+                            "",
+                            "Occitan",
+                            "k_aquitaine",
+                            "Bordeaux",
+                            "Aquitania"
+                        ],
+                        [
+                            "",
+                            "Arabia",
+                            "Arabia, Medina, Sanaa, Oman, Nefoud, Damman",
+                            "Arabian Empire",
+                            "",
+                            "",
+                            "Bedouin",
+                            "k_arabia",
+                            "Mecca",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Aragon",
+                            "769 and 867: None (titular). 1066 and later: Aragon, Barcelona. 1212: Mallorca, Valencia",
+                            "Hispania",
+                            "",
+                            "Christian religion",
+                            "Castilian",
+                            "k_aragon",
+                            "Zaragoza",
+                            "Tarraconensis"
+                        ],
+                        [
+                            "",
+                            "Armenia",
+                            "Armenia, Mesopotamia, Edessa, Coloneia, (Azerbaijan)",
+                            "Byzantine Empire",
+                            "",
+                            "Christian religion group",
+                            "Armenian",
+                            "k_armenia",
+                            "Ani",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Asturias",
+                            "Asturias (769 and 867 only)",
+                            "Hispania",
+                            "Has not been replaced by Leon (Leon has no holder or previous holder)",
+                            "",
+                            "Castilian",
+                            "k_asturias",
+                            "Asturias",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Badajoz (769 to 1147 only)",
+                            "Algarve, Badajoz, Beja",
+                            "Hispania",
+                            "",
+                            "",
+                            "",
+                            "k_badajoz",
+                            "Badajoz",
+                            "Lusitania"
+                        ],
+                        [
+                            "",
+                            "Bavaria [2]",
+                            "Bavaria, Nordgau, Salzburg, Austria, Styria, Tyrol",
+                            "Germania (769), Holy Roman Empire (other)",
+                            "",
+                            "",
+                            "German",
+                            "k_bavaria",
+                            "Regensburg",
+                            "Raetia"
+                        ],
+                        [
+                            "",
+                            "Bengal",
+                            "Vanga, Varendra, Gauda, Nadia, Suhma",
+                            "Bengal Empire",
+                            "",
+                            "",
+                            "Bengali",
+                            "k_bengal",
+                            "Laksmanavati",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Bihar",
+                            "Tirabhukti, Kasi, Jharkand, Magadha",
+                            "Bengal Empire",
+                            "",
+                            "",
+                            "Bengali",
+                            "k_bihar",
+                            "Magadha",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Bohemia",
+                            "Bohemia, Moravia (other than 867)",
+                            "Germania (769), Wendish Empire (867), Holy Roman Empire (from 15 Sept. 1066)",
+                            "",
+                            "",
+                            "Bohemian",
+                            "k_bohemia",
+                            "Praha",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Brittany",
+                            "Brittany, Penthieve, Upper Brittany",
+                            "Francia",
+                            "",
+                            "Celtic culture group",
+                            "Breton",
+                            "k_brittany",
+                            "Vannes",
+                            "Bertangaland, Arymôr, Bhriotáin, Bretagne, Armorica"
+                        ],
+                        [
+                            "",
+                            "Bulgaria",
+                            "Vidin, Turnovo, Karvuna",
+                            "Byzantine Empire",
+                            "",
+                            "",
+                            "Bulgarian",
+                            "k_bulgaria",
+                            "Tyrnovo",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Burgundy",
+                            "Provence, Savoy, Dauphine, Upper Burgundy",
+                            "Francia",
+                            "",
+                            "",
+                            "Occitan",
+                            "k_burgundy",
+                            "Provence",
+                            "Lugdunensis"
+                        ],
+                        [
+                            "",
+                            "Carinthia [3]",
+                            "Carinthia, Carniola, Friuli",
+                            "Germania (769), Holy Roman Empire (other)",
+                            "",
+                            "South Slavic culture group",
+                            "Carantanian",
+                            "k_carinthia",
+                            "Krain",
+                            "Carantania"
+                        ],
+                        [
+                            "",
+                            "Castille",
+                            "769 and 867: None (titular). From 1066: Castille, from 1085: Toledo, from 1212: Cordoba, from 1249: Sevilla, from 1266: Murcia",
+                            "Hispania",
+                            "",
+                            "Christian religion group",
+                            "Castilian",
+                            "k_castille",
+                            "Burgos",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Chernigov",
+                            "Bryansk, Chernigov, Karachev, Murom, Novosil, Ryazan",
+                            "Russia",
+                            "",
+                            "North Germanic culture group or East Slavic culture group",
+                            "Russian",
+                            "k_chernigov",
+                            "Chernigov",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Crimea",
+                            "Cherson, Crimea, Wild Fields",
+                            "Pontic Steppe",
+                            "",
+                            "Khazar culture, Alan culture or Gothic culture",
+                            "",
+                            "k_crimea",
+                            "Crimea",
+                            "Gothia"
+                        ],
+                        [
+                            "",
+                            "Croatia",
+                            "Bosnia, Croatia, Dalmatia, Slavonia, Syrmia",
+                            "Byzantine Empire",
+                            "",
+                            "",
+                            "Croatian",
+                            "k_croatia",
+                            "Zadar",
+                            "Dalmatia"
+                        ],
+                        [
+                            "",
+                            "Cumania",
+                            "Yaik, Turgay, Ob, Tarbagatai, Irtysh, Ishim Kimak, Kirghiz, Khazakh, Ubakan",
+                            "Tartaria",
+                            "",
+                            "Cuman culture",
+                            "Cuman",
+                            "k_cuman",
+                            "Sarkel",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Daylam",
+                            "Gilan, Mazandaran, Tabriz, Azerbaijan, Dihistan",
+                            "Persian Empire",
+                            "",
+                            "",
+                            "Persian",
+                            "k_daylam",
+                            "Gilan",
+                            "Hyrcania"
+                        ],
+                        [
+                            "",
+                            "Delhi",
+                            "Kuru, Haritanaka, Mathura, Vodamayutja",
+                            "Rajastan",
+                            "",
+                            "",
+                            "Hindustani",
+                            "k_delhi",
+                            "Delhi",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Denmark",
+                            "Skane, Sjaelland, Slesvig. 867 and later: Holstein",
+                            "Scandinavia",
+                            "",
+                            "",
+                            "Danish",
+                            "k_denmark",
+                            "Sjaelland",
+                            "Danmark"
+                        ],
+                        [
+                            "",
+                            "Egypt",
+                            "Alexandria, Damietta, Cairo, Aswan, Sinai",
+                            "Arabian Empire",
+                            "",
+                            "",
+                            "Egyptian",
+                            "k_egypt",
+                            "Cairo",
+                            "Kemet"
+                        ],
+                        [
+                            "",
+                            "England",
+                            "Northumberland, Lancaster, York, Norfolk, Bedford, Warwick (Mercia), Gloucester, Kent, Somerset",
+                            "Britannia",
+                            "",
+                            "",
+                            "Saxon",
+                            "k_england",
+                            "Middlesex",
+                            "Lloegyr, Sasana, Britannia"
+                        ],
+                        [
+                            "",
+                            "Epirus",
+                            "Cephalonia, Dyrrachion, Epirus, Ohrid",
+                            "Byzantine Empire",
+                            "",
+                            "",
+                            "",
+                            "k_epirus",
+                            "Epieros",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Estonia",
+                            "Estonia, Sakala",
+                            "Scandinavia",
+                            "",
+                            "",
+                            "Estonian",
+                            "k_estonia",
+                            "Kalevan",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Finland",
+                            "Ostrobothnia, Karelia, Finland, Savonia",
+                            "Scandinavia",
+                            "",
+                            "North Germanic or Finno Ugric culture group",
+                            "Finnish",
+                            "k_finland",
+                            "Finland",
+                            "Suomi"
+                        ],
+                        [
+                            "",
+                            "France",
+                            "Berry, Anjou, Normandy, Orleans, Valois, Flanders. In 867 and later, also Burgundy, Champagne",
+                            "Francia",
+                            "",
+                            "",
+                            "French",
+                            "k_france",
+                            "Ile de France",
+                            "769, 867, and 936: West Francia (becomes France if no longer held by a Karling)"
+                        ],
+                        [
+                            "",
+                            "Frisia",
+                            "Holland, Gelre",
+                            "Francia (769), Holy Roman Empire (other)",
+                            "",
+                            "Dutch culture",
+                            "Dutch",
+                            "k_frisia",
+                            "Holland",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Galicia (769 to 1212 only)",
+                            "Before 1109: Portucale. Before 1212: Galicia. After 1212: None (titular).",
+                            "Hispania",
+                            "",
+                            "Christian religion",
+                            "Portuguese",
+                            "k_spanish_galicia",
+                            "Coruña",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Galicia-Volhynia",
+                            "Galich, Red Ruthenia, Volhynia",
+                            "Russia",
+                            "",
+                            "North Germanic culture group or East Slavic culture group",
+                            "Russian",
+                            "k_galicia-volhynia",
+                            "Vladimir Volynsky",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Georgia",
+                            "Kartli, Derbent, Abkhazia",
+                            "Byzantine Empire",
+                            "",
+                            "",
+                            "Georgian",
+                            "k_georgia",
+                            "Kartli",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Germany",
+                            "Thuringia, Köln, Franconia, Baden, Swabia. 867 and later: Brunswick. 1066 and later, also Saxony, Brandenburg, Meissen",
+                            "Germania (769), Holy Roman Empire (other)",
+                            "",
+                            "",
+                            "German",
+                            "k_germany",
+                            "Würzburg",
+                            "769 and 867: East Francia (becomes Germany if no longer held by a Karling)"
+                        ],
+                        [
+                            "",
+                            "Ghana",
+                            "Ghana, Tagant, Timbuktu",
+                            "Mali",
+                            "",
+                            "",
+                            "Soninke",
+                            "k_ghana",
+                            "Ghana",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Gondwana",
+                            "Dahala, Ratanpur",
+                            "Bengal Empire",
+                            "",
+                            "",
+                            "Hindustani",
+                            "k_gondwana",
+                            "Tripuri",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Great Moravia (867 only)",
+                            "Moravia",
+                            "Wendish Empire",
+                            "",
+                            "",
+                            "Slovien",
+                            "k_moravia",
+                            "Brno",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Greece",
+                            "Aegean Islands, Thessalonika, Athens, Achaia, Krete,",
+                            "Byzantine Empire",
+                            "",
+                            "Greek culture",
+                            "Greek",
+                            "k_byzantium",
+                            "Thessaloniki",
+                            "Hellas"
+                        ],
+                        [
+                            "",
+                            "Guge",
+                            "Purang, Ngari, Ladakh",
+                            "Tibet",
+                            "",
+                            "",
+                            "Zhangzhung",
+                            "k_guge",
+                            "Tsaparang",
+                            "Zhangzhung, Xiangxiong"
+                        ],
+                        [
+                            "",
+                            "Gujarat",
+                            "Gurjara Mandala, Anartta, Saurashtra, Lata",
+                            "Rajastan",
+                            "",
+                            "",
+                            "Gujarati",
+                            "k_gujarat",
+                            "Sarasvata Mandala",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Hausaland",
+                            "Air, Hausaland, Kebbi",
+                            "Kanem-Bornu",
+                            "",
+                            "",
+                            "Hausa",
+                            "k_hausaland",
+                            "Kano",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Hungary (Avaria or Pannonia in certain conditions)",
+                            "Pecs, Esztergom, Nyitra, Ungvar, Pest, Translyvania, Temes",
+                            "Carpathia",
+                            "Magyar culture group or Avar culture",
+                            "",
+                            "Hungarian",
+                            "k_hungary",
+                            "Esztergom",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Iraq",
+                            "Baghdad, Samarra, Tigris, Basra",
+                            "Persian Empire",
+                            "",
+                            "",
+                            "Levantine",
+                            "k_iraq",
+                            "Baghdad",
+                            "Babylonia"
+                        ],
+                        [
+                            "",
+                            "Ireland",
+                            "Ulster, Connacht, Meath, Leinster, Munster",
+                            "Britannia",
+                            "",
+                            "",
+                            "Irish",
+                            "k_ireland",
+                            "Dublin",
+                            "Irland, Éire, Iuerthon, Iwerddon, Iwerzhon, Hibernia"
+                        ],
+                        [
+                            "",
+                            "Italy",
+                            "Verona, Susa, Lombardy, Genoa, Modena, Tuscany, Pisa",
+                            "Italia",
+                            "",
+                            "Christian religion group",
+                            "Italian",
+                            "k_italy",
+                            "Pavia",
+                            "769: Lombardy, until held by a ruler without Lombard culture"
+                        ],
+                        [
+                            "",
+                            "Jerusalem",
+                            "Oultrejordain, Ascalon, Jerusalem, Galilee",
+                            "Arabian Empire",
+                            "Christian religion. (Gives 5000 prestige and 2000 piety on creation)",
+                            "",
+                            "Levantine",
+                            "k_jerusalem",
+                            "Jerusalem",
+                            "Yerusholaim, Yerushalaim, Philistia, Judea"
+                        ],
+                        [
+                            "",
+                            "Kabulistan",
+                            "Kabul, Zabulistan",
+                            "Persian Empire",
+                            "",
+                            "",
+                            "Afghan",
+                            "k_afghanistan",
+                            "Kabul",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Kanem",
+                            "Bornu, Fezzan, Kanem, Wadai",
+                            "Kanem-Bornu",
+                            "",
+                            "",
+                            "Kanuri",
+                            "k_kanem",
+                            "Djimi",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Kamarupa",
+                            "Kamarupanagara, Para Lauhitya, Sutiya",
+                            "Bengal Empire",
+                            "",
+                            "",
+                            "Assamese",
+                            "k_kamarupa",
+                            "Kamarupanagara",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Karnata",
+                            "Kalyani, Gangavadi, Nulambavadi, Raichur Doab",
+                            "Deccan Empire",
+                            "",
+                            "",
+                            "Kannada",
+                            "k_karnata",
+                            "Kalyani",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Kashmir",
+                            "Kashmir, Pamir, Uttaranchal",
+                            "Tibet",
+                            "",
+                            "",
+                            "Panjabi",
+                            "k_kashmir",
+                            "Kasmira",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Kham",
+                            "Dege, Qamdo, Nyingchi",
+                            "Tibet",
+                            "",
+                            "",
+                            "Bödpa",
+                            "k_kham",
+                            "Qamdo",
+                            "Kang"
+                        ],
+                        [
+                            "",
+                            "Khazaria",
+                            "Aqtobe, Sakmara, Itil, Bandja, Aryrau, Sarkel",
+                            "Pontic Steppe",
+                            "",
+                            "Khazar culture or Jewish religion group",
+                            "Khazar",
+                            "k_khazaria",
+                            "Itil",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Khorasan",
+                            "Khorasan, Herat, Merv, Balkh",
+                            "Persian Empire",
+                            "",
+                            "",
+                            "Persian",
+                            "k_khorasan",
+                            "Nishapur",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Khotan",
+                            "Kashgar, Khotan, Karashar, Kumul",
+                            "Turan",
+                            "",
+                            "",
+                            "",
+                            "k_khotan",
+                            "Khotan",
+                            "Altishahr, Hvamna, Uyghurstan, Xiyu, Ytarimypoy"
+                        ],
+                        [
+                            "",
+                            "Kievan Rus (Ruthenia in 769 and 867)",
+                            "Kiev,  Minsk, Pereyaslavl, Polotsk, Smolensk, Turov",
+                            "Russia",
+                            "",
+                            "North Germanic culture group or East Slavic culture group",
+                            "Russian",
+                            "k_ruthenia",
+                            "Kiev",
+                            "Könugarðr, Könugård, Kønugård"
+                        ],
+                        [
+                            "",
+                            "Kosala",
+                            "Kanyakubja, Saryupara, Jejakabhukti",
+                            "Rajastan",
+                            "",
+                            "",
+                            "Hindustani",
+                            "k_kosala",
+                            "Kanyakubja",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Lanka",
+                            "Lanka, Sinhala",
+                            "Deccan Empire",
+                            "",
+                            "",
+                            "Sinhala",
+                            "k_lanka",
+                            "Dakhina Desa",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Lapland",
+                            "Sápmi, Kola, Finnmark",
+                            "Scandinavia",
+                            "",
+                            "Finno-Ugric culture group",
+                            "Sami",
+                            "k_sapmi",
+                            "Sápmi",
+                            "Norðrríki, Nordarike, Lappi, Sápmi"
+                        ],
+                        [
+                            "",
+                            "León",
+                            "All: León. 769 and 867 only: Castille. 1066: Asturias. 1126: Galicia 1212: Badajoz",
+                            "Hispania",
+                            "Replaces Asturias by the king's decision: Create León",
+                            "Christian religion group",
+                            "Castilian",
+                            "k_leon",
+                            "León",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Lithuania",
+                            "Pruthenia, Latgalia, Lithuania, Livonia, Courland, Samogitia, Yatvingia",
+                            "Wendish Empire",
+                            "",
+                            "",
+                            "Lithuanian",
+                            "k_lithuania",
+                            "Aukshayts",
+                            "Prussia"
+                        ],
+                        [
+                            "",
+                            "Lotharingia",
+                            "Luxembourg, Upper Lorraine, Lower Lorraine, Alsace, Brabant. In 769, also Burgundy, Champagne",
+                            "Francia (769), Holy Roman Empire (other)",
+                            "",
+                            "",
+                            "Frankish",
+                            "k_lotharingia",
+                            "Luxembourg",
+                            "769: Middle Francia (becomes Austrasia if no longer held by a Karling)"
+                        ],
+                        [
+                            "",
+                            "Maghreb",
+                            "Adrar, Alger, Fes, Marrakech, Sijilmasa, Sous, Tahert, Tangier, Tlemcen",
+                            "Maghreb",
+                            "",
+                            "",
+                            "Berber",
+                            "k_mauretania",
+                            "Marrakech",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Maharastra",
+                            "Vidharba, Konkana, Nasikya, Devagiri, Rattapadi",
+                            "Deccan Empire",
+                            "",
+                            "",
+                            "Marathi",
+                            "k_maharastra",
+                            "Devagiri",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Mali",
+                            "Bambuk, Manding, Yatenga",
+                            "Mali",
+                            "",
+                            "",
+                            "Mandé",
+                            "k_mali",
+                            "Niani",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Malwa",
+                            "Dadhipadra (Avanti), Akara Dasarna, Anupa",
+                            "Rajastan",
+                            "",
+                            "",
+                            "Hindustani",
+                            "k_malwa",
+                            "Ujjayini",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Mongolia",
+                            "Beshbaliq, Altay, Otuken, Khangai, Uvs, Kara-Khorum, Baygal, Gobi Altay, Barkul, Juyan, Ikh Bogd",
+                            "Tartaria",
+                            "",
+                            "",
+                            "Mongol",
+                            "k_mongolia",
+                            "Kara-khorum",
+                            "Uyghur, Kirghiz"
+                        ],
+                        [
+                            "",
+                            "Navarra",
+                            "Navarra",
+                            "Hispania",
+                            "",
+                            "Basque culture, Christian religion group",
+                            "Basque",
+                            "k_navarra",
+                            "Navarra. Before 1066: Aragon",
+                            "Vasconia"
+                        ],
+                        [
+                            "",
+                            "Nenetsia",
+                            "Bjarmia, Kargopol, Mezen, Pechora, Velks, Zavarot",
+                            "Volga-Ural",
+                            "",
+                            "Nenets culture",
+                            "Nenets",
+                            "k_nenets",
+                            "Zavarot",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Nepal",
+                            "Kathmandu, Gorkha",
+                            "Tibet",
+                            "",
+                            "",
+                            "Nepali",
+                            "k_nepal",
+                            "Kathmandu",
+                            "Nibo'er"
+                        ],
+                        [
+                            "",
+                            "Norway",
+                            "Iceland, Orkney, Agder, Vestlandet, Ostlandet, Oppland, Trondelag, Jamtland",
+                            "Scandinavia",
+                            "",
+                            "",
+                            "Norwegian",
+                            "k_norway",
+                            "Bergenshus",
+                            "Noregr, Norge"
+                        ],
+                        [
+                            "",
+                            "Novgorod",
+                            "Novgorod, Pskov, Veps",
+                            "Russia",
+                            "",
+                            "East Slavic, Finno-Ugric or North Germanic culture group",
+                            "Russian",
+                            "k_rus",
+                            "Novgorod",
+                            "Garðaríki, Mordvinia"
+                        ],
+                        [
+                            "",
+                            "Nubia",
+                            "Nobatia, Nubia (Makuria), Sennar, Hayya (Blemmyia)",
+                            "Abyssinia",
+                            "",
+                            "Christian religion group",
+                            "Nubian",
+                            "k_nubia",
+                            "Makuria",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Oghuz",
+                            "Aral, Emba, Syr Darya, Usturt",
+                            "Turan",
+                            "",
+                            "",
+                            "Turkish",
+                            "k_turkestan",
+                            "Yangikent",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Orissa",
+                            "Daksina Kosala, Tosali, Kalinga, Dandakaranya",
+                            "Bengal Empire",
+                            "",
+                            "",
+                            "Oriya",
+                            "k_orissa",
+                            "Kataka",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Papal States",
+                            "Ancona, Ferrara, Latium, Spoleto",
+                            "Italia",
+                            "Only exists under the Pope. If Pope loses de jure Papal States, holder can create Romagna instead, replacing Papal States (see Romagna below).",
+                            "?",
+                            "Italian",
+                            "k_papacy",
+                            "Rome",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Perm",
+                            "Bashkiria, Komi, Perm, Ural, Veliky Ustug, Votyaki, Zyriane",
+                            "Volga-Ural",
+                            "",
+                            "Finno-ugric culture group",
+                            "Komi",
+                            "k_perm",
+                            "Perm",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Persia",
+                            "Mafaza, Fars, Khozistan, Jibal, Kurdistan",
+                            "Persian Empire",
+                            "",
+                            "",
+                            "Persian",
+                            "k_persia",
+                            "Esfahan",
+                            "Parthicum"
+                        ],
+                        [
+                            "",
+                            "Poland",
+                            "Mazovia, Greater Poland, Silesia, Lesser Poland, Kuyavia",
+                            "Wendish Empire",
+                            "",
+                            "",
+                            "Polish",
+                            "k_poland",
+                            "Krakowskie",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Pomerania",
+                            "Mecklenburg, Pomerania, Pomeralia. In 769 and 867: also Brandenburg, Meissen; and only in 867 Saxony",
+                            "Wendish Empire",
+                            "",
+                            "Pagan religion group",
+                            "Pomeranian",
+                            "k_pomerania",
+                            "Stettin",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Portugal",
+                            "Before 1109: None (titular). from 1109: Portucale, from 1147: Beja, from 1249: Algarve",
+                            "Hispania",
+                            "",
+                            "Christian religion",
+                            "Portuguese",
+                            "k_portugal",
+                            "Lisboa",
+                            "Lusitania"
+                        ],
+                        [
+                            "",
+                            "Punjab",
+                            "Trigarta, Multan, Lahore, Gandhara",
+                            "Rajastan",
+                            "",
+                            "",
+                            "Panjabi",
+                            "k_punjab",
+                            "Lahur",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Rajputana",
+                            "Maru, Jangladesh, Stravani, Medapata, Ajmer",
+                            "Rajastan",
+                            "",
+                            "",
+                            "Rajput",
+                            "k_rajputana",
+                            "Ajayameru",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Romagna",
+                            "Ancona, Ferrara, Latium, Spoleto",
+                            "Italia",
+                            "Cannot exist under the Pope. If Pope gets de jure Romagna, he creates Papal States, replacing Romagna (see Papal States above).",
+                            "Ownership of Papal States",
+                            "Italian",
+                            "k_romagna",
+                            "Ravenna",
+                            "Ravenna"
+                        ],
+                        [
+                            "",
+                            "Sardinia and Corsica",
+                            "Sardinia, Corsica",
+                            "Italia",
+                            "",
+                            "",
+                            "Sardinian",
+                            "k_sardinia",
+                            "Cagliari",
+                            "Sardenya i Còrsega, Sardhnia kai thn Korsikn, Sardegna e Corsica"
+                        ],
+                        [
+                            "",
+                            "Saxony (769 only)",
+                            "Brunswick, Holstein, Saxony",
+                            "Germania",
+                            "",
+                            "Saxon or Anglo-Saxon culture",
+                            "Saxon",
+                            "k_saxony",
+                            "Brunswick",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Scotland",
+                            "Galloway (Strathclyde), The Isles, Lothian, Albany, Moray (Fortriu), Mann",
+                            "Britannia",
+                            "",
+                            "",
+                            "Scottish",
+                            "k_scotland",
+                            "Gowrie",
+                            "Skotland, Skottland, Alban, Alba, Pictland, Caledonia"
+                        ],
+                        [
+                            "",
+                            "Serbia",
+                            "Rashka, Duklja",
+                            "Byzantine Empire",
+                            "",
+                            "",
+                            "Serbian",
+                            "k_serbia",
+                            "Rashka (Rascia)",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Sibir",
+                            "Om, Sibir, Tobol, Vasyugan, Yugra",
+                            "Tartaria",
+                            "",
+                            "",
+                            "Khanty",
+                            "k_sibir",
+                            "Sibir",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Sicily",
+                            "Benevento, Capua, Apulia, Salerno, Calabria, Sicily",
+                            "Byzantine Empire",
+                            "",
+                            "",
+                            "Italian",
+                            "k_sicily",
+                            "Palermo",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Sindh",
+                            "Sauvira, Bhakkar",
+                            "Rajastan",
+                            "",
+                            "",
+                            "Sindhi",
+                            "k_sindh",
+                            "Debul",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Sistan",
+                            "Baluchistan, Sistan",
+                            "Persian Empire",
+                            "",
+                            "",
+                            "Baloch",
+                            "k_baluchistan",
+                            "Makran",
+                            "Sagistan, Baluchistan"
+                        ],
+                        [
+                            "",
+                            "Songhay",
+                            "Gurma, Songhay",
+                            "Mali",
+                            "",
+                            "",
+                            "Songhay",
+                            "k_songhay",
+                            "Gao",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Sweden",
+                            "Uppland, Norrland, Ostergotland, Vastergotland, Norrland, Bergslagen, Smaland, Tioharad",
+                            "Scandinavia",
+                            "",
+                            "",
+                            "Swedish",
+                            "k_sweden",
+                            "Uppland",
+                            "Sviþjod, Svea Rike"
+                        ],
+                        [
+                            "",
+                            "Syria",
+                            "Aleppo, Antioch, Tripoli, Damascus, Syria",
+                            "Arabian Empire",
+                            "",
+                            "",
+                            "Levantine",
+                            "k_syria",
+                            "Damascus",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Tamilakam",
+                            "Chola Nadu, Pandya Nadu, Chera Nadu, Tondai Nadu",
+                            "Deccan Empire",
+                            "",
+                            "",
+                            "Tamil",
+                            "k_tamilakam",
+                            "Cholamandalam",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Telingana",
+                            "Warangal, Racakonda",
+                            "Deccan Empire",
+                            "",
+                            "",
+                            "Telugu",
+                            "k_telingana",
+                            "Orangallu",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Thrace",
+                            "Abydos, Optimatoi, Thrace",
+                            "Byzantine Empire",
+                            "",
+                            "",
+                            "Greek",
+                            "k_thrace",
+                            "Constantinople",
+                            "Thracia"
+                        ],
+                        [
+                            "",
+                            "Transoxiana",
+                            "Ferghana, Khiva, Khuttal, Samarkand",
+                            "Turan",
+                            "",
+                            "",
+                            "Persian",
+                            "k_khiva",
+                            "Khiva",
+                            "Sogdiana, Margiana"
+                        ],
+                        [
+                            "",
+                            "Trebizond",
+                            "Trebizond, Armeniacon, Paphlagonia",
+                            "Byzantine Empire",
+                            "",
+                            "",
+                            "Greek",
+                            "k_trebizond",
+                            "Trapezous",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Valencia (769 to 1212 only)",
+                            "Mallorca, Murcia, Valencia",
+                            "Hispania",
+                            "",
+                            "",
+                            "",
+                            "k_valencia",
+                            "Valencia",
+                            "Carthaginensis"
+                        ],
+                        [
+                            "",
+                            "Venice",
+                            "Venice",
+                            "Italia",
+                            "Be a republic. May be recreated with the Create the Kingdom of Venice Decision",
+                            "",
+                            "Italian",
+                            "k_venice",
+                            "Venice",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Vladimir",
+                            "Moskva, Rostov, Tver, Vladimir, Vologda",
+                            "Russia",
+                            "",
+                            "East Slavic, Finno-Ugric or North Germanic culture group",
+                            "Russian",
+                            "k_vladimir",
+                            "Vladimir",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Volga Bulgaria",
+                            "Bolgar, Cheremisa, Mari, Mordva, Qazan",
+                            "Volga-Ural",
+                            "",
+                            "Altaic culture group",
+                            "Bolghar",
+                            "k_volga_bulgaria",
+                            "Bulgar",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Wales",
+                            "Gwynedd, Deheubarth, Cornwall, Powys (769 only).",
+                            "Britannia",
+                            "",
+                            "Celtic culture",
+                            "Welsh",
+                            "k_wales",
+                            "Gwynedd",
+                            "Brythoniaid, Kembre, Bhreatain Bheag, Demetia"
+                        ],
+                        [
+                            "",
+                            "Wallachia",
+                            "Wallachia, Moldau",
+                            "Carpathia",
+                            "",
+                            "Vlach culture",
+                            "Vlach",
+                            "k_dacia",
+                            "Tirgoviste",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Xia",
+                            "Jiuquan, Qinghai, Nagormo, Nangqen",
+                            "Tibet",
+                            "",
+                            "",
+                            "Tangut",
+                            "k_xixia",
+                            "Jiuquan",
+                            "Minyak, Tuyuhun, Amdo, Qinghai, Tangghut"
+                        ],
+                        [
+                            "",
+                            "Yarlung",
+                            "Lhasa, Yarlung, Shigatse, Nagchu, Sumparu, Bhutan",
+                            "Tibet",
+                            "",
+                            "",
+                            "Bödpa",
+                            "k_yarlung",
+                            "Lhasa",
+                            "Ü-Tsang, Tufan, Tubo"
+                        ],
+                        [
+                            "",
+                            "Yemen",
+                            "Hadramut, Sanaa, Taizz",
+                            "Arabian Empire",
+                            "",
+                            "",
+                            "Bedouin",
+                            "k_yemen",
+                            "Taizz",
+                            "Himyar"
+                        ],
+                        [
+                            "",
+                            "Zhetysu",
+                            "Chui, Ili, Zhetysu",
+                            "Turan",
+                            "",
+                            "",
+                            "Karluk",
+                            "k_zhetysu",
+                            "Almaty",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "List of titular kingdoms",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If the Horse Lords DLC is active, vassal khans of nomadic realms hold a titular kingdom-tier title named after their clans.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "CoA",
+                            "Kingdom",
+                            "Requirements",
+                            "Additional AI requirements",
+                            "Culture [1]",
+                            "ID",
+                            "Capital"
+                        ],
+                        [
+                            "",
+                            "Almohad",
+                            "N/A",
+                            "",
+                            "",
+                            "k_almohad",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Al-Murabitids",
+                            "N/A",
+                            "",
+                            "",
+                            "k_al-murabitids",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Amalfi",
+                            "Create the Kingdom of Amalfi Decision as a republic.",
+                            "",
+                            "",
+                            "k_amalfi",
+                            "Amalfi"
+                        ],
+                        [
+                            "",
+                            "Antioch",
+                            "Create the Principality of Antioch decision.",
+                            "",
+                            "",
+                            "k_antioch",
+                            "Antioch"
+                        ],
+                        [
+                            "",
+                            "Austria [4]",
+                            "Become the Archduke of Austria decision",
+                            "",
+                            "German",
+                            "k_austria",
+                            "Österreich"
+                        ],
+                        [
+                            "",
+                            "Avaria",
+                            "N/A (its name and COA is applied to k_hungary in the 769 bookmark )",
+                            "",
+                            "Avar",
+                            "k_avaria",
+                            "Esztergom"
+                        ],
+                        [
+                            "",
+                            "Aydin",
+                            "N/A",
+                            "",
+                            "",
+                            "k_aydin",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Beni Helal",
+                            "N/A",
+                            "",
+                            "",
+                            "k_beni_helal",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Bosnia",
+                            "Create Kingdom of Bosnia decision",
+                            "",
+                            "Bosnian",
+                            "k_bosnia",
+                            "Vrhbosna"
+                        ],
+                        [
+                            "",
+                            "Candar",
+                            "N/A",
+                            "",
+                            "Turkish",
+                            "k_candar",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Collegium Pontificum",
+                            "Reform Hellenism. Always exists after reformation.",
+                            "",
+                            "",
+                            "k_hellenic_pagan",
+                            "Rome"
+                        ],
+                        [
+                            "",
+                            "Cyprus",
+                            "Create the Kingdom of Cyprus decision",
+                            "",
+                            "",
+                            "k_cyprus",
+                            "Famagusta"
+                        ],
+                        [
+                            "",
+                            "Ecumenical Patriarchy",
+                            "Create the Ecumenical Patriarchy decision",
+                            "",
+                            "",
+                            "k_orthodox",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Eretnid",
+                            "N/A",
+                            "",
+                            "",
+                            "k_eretnid",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Eastern Marches",
+                            "Gather the lands of the Eastern Marches decision. The name and Coat of Arms of the Eastern Marches is dependent on the player's choice ( Austria , Styria , Bavaria or Carinthia ).",
+                            "",
+                            "",
+                            "k_eastern_marches",
+                            "Österreich/Graz/Regensburg/Kärnten (depending on decision taken)"
+                        ],
+                        [
+                            "",
+                            "Franconia",
+                            "Form the Grand Duchy of Franconia decision",
+                            "",
+                            "",
+                            "k_franconia",
+                            "Würzburg"
+                        ],
+                        [
+                            "",
+                            "Genoa",
+                            "Create the Kingdom of Genoa Decision as a republic.",
+                            "",
+                            "Italian",
+                            "k_genoa",
+                            "Genoa"
+                        ],
+                        [
+                            "",
+                            "Germiyan",
+                            "N/A",
+                            "",
+                            "",
+                            "k_germiyan",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Great Moravia",
+                            "N/A (Tribal)",
+                            "",
+                            "Slovien",
+                            "k_moravia",
+                            "Brno"
+                        ],
+                        [
+                            "",
+                            "Hammadid",
+                            "N/A",
+                            "",
+                            "",
+                            "k_hammadid",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Hansa",
+                            "Create the Hansa decision (player) or by event after 1170 (AI)",
+                            "",
+                            "German",
+                            "k_hansa",
+                            "Lübeck"
+                        ],
+                        [
+                            "",
+                            "Israel",
+                            "Create Israel decision",
+                            "",
+                            "",
+                            "k_israel",
+                            "Jerusalem"
+                        ],
+                        [
+                            "",
+                            "Kafsid",
+                            "N/A",
+                            "",
+                            "",
+                            "k_kafsid",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Karaman",
+                            "N/A",
+                            "",
+                            "Turkish",
+                            "k_karaman",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Liao",
+                            "Exists in 936",
+                            "",
+                            "Khitan",
+                            "k_liao",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Lombardy",
+                            "N/A (its name and COA is applied to k_italy in the 769 bookmark )",
+                            "",
+                            "Lombard",
+                            "k_lombardy",
+                            "Pavia"
+                        ],
+                        [
+                            "",
+                            "Magyar",
+                            "N/A (Tribal)",
+                            "",
+                            "Hungarian",
+                            "k_magyar",
+                            "Pest"
+                        ],
+                        [
+                            "",
+                            "Marinid",
+                            "N/A",
+                            "",
+                            "",
+                            "k_marinid",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Mentese",
+                            "N/A",
+                            "",
+                            "Turkish",
+                            "k_mentese",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Naples",
+                            "Title must have existed in the past (start dates after 1302.8.31)",
+                            "",
+                            "Italian",
+                            "k_naples",
+                            "Napoli"
+                        ],
+                        [
+                            "",
+                            "Ottoman Turks",
+                            "N/A",
+                            "",
+                            "Turkish",
+                            "k_ottoman",
+                            ""
+                        ],
+                        [
+                            "",
+                            "The Papacy",
+                            "Always exists",
+                            "",
+                            "",
+                            "k_papal_state",
+                            "Rome"
+                        ],
+                        [
+                            "",
+                            "Pechenegs",
+                            "N/A (Tribal)",
+                            "",
+                            "Pecheneg",
+                            "k_pechenegs",
+                            "Oleshye"
+                        ],
+                        [
+                            "",
+                            "Pisa",
+                            "Create the Kingdom of Pisa Decision as a republic.",
+                            "",
+                            "Italian",
+                            "k_pisa",
+                            "Pisa"
+                        ],
+                        [
+                            "",
+                            "Rum",
+                            "N/A",
+                            "",
+                            "Turkish",
+                            "k_rum",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Sakya Trizin",
+                            "Exists in 1073",
+                            "",
+                            "Bödpa",
+                            "k_sakya_trizin",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Saruhan",
+                            "N/A",
+                            "",
+                            "Turkish",
+                            "k_saruhan",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Saxony",
+                            "Form the Grand Duchy of Saxony decision",
+                            "",
+                            "German",
+                            "k_saxon",
+                            "Braunschweig"
+                        ],
+                        [
+                            "",
+                            "Swabia",
+                            "Form the Grand Duchy of Swabia decision",
+                            "",
+                            "German",
+                            "k_swabia",
+                            "Schwaben"
+                        ],
+                        [
+                            "",
+                            "Swiss Confederation",
+                            "Create the Swiss Confederation decision",
+                            "",
+                            "German",
+                            "k_switzerland",
+                            "Bern"
+                        ],
+                        [
+                            "",
+                            "Taurica",
+                            "Control County of Cherson",
+                            "",
+                            "",
+                            "k_taurica",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Tekke",
+                            "N/A",
+                            "",
+                            "",
+                            "k_tekke",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Trinacria",
+                            "Catholic religion or Catholic heresy. Title must have existed in the past (start date after 1282.3.20)",
+                            "",
+                            "Italian",
+                            "k_trinacria",
+                            "Palermo"
+                        ],
+                        [
+                            "",
+                            "Teutonic State",
+                            "Must be the \"Teutonic Order\" Holy order .",
+                            "",
+                            "German",
+                            "k_teutonic_state",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Zenata",
+                            "N/A",
+                            "",
+                            "",
+                            "k_zenata",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Zirid",
+                            "N/A",
+                            "",
+                            "",
+                            "k_zirid",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Ziyanids",
+                            "N/A",
+                            "",
+                            "",
+                            "k_ziyanids",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Tribal titles cannot assimilate land, and are automatically destroyed if their ruler acquires a non-tribal title of the same rank. Tribal titles no longer exists from patch 2.2 onwards."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Settling from nomadic to tribal will also create a king tier titular title based on selected county if one don't already have a king title or greater."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "[1] The predefined culture of a kingdom is relevant to liberation revolts . [2] It is also possible to create a Kingdom of Bavaria with different de jure land. See entry \"Eastern Marches\" in the table \"List of titular kingdoms\". [3] It is also possible to create a Kingdom of Carinthia with different de jure land. See entry \"Eastern Marches\" in the table \"List of titular kingdoms\". [4] It is also possible to create a Kingdom of Austria with different de jure land. See entry \"Eastern Marches\" in the same table."
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Duchies",
+                            "children": []
+                        },
+                        {
+                            "text": "Provinces",
+                            "children": []
+                        },
+                        {
+                            "text": "Empires",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

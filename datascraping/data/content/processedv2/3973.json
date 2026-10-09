@@ -1,0 +1,70 @@
+{
+    "pageid": 3973,
+    "title": "JD china succession events",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These are events concerning China succesion from the Jade Dragon DLC."
+                }
+            ]
+        },
+        {
+            "heading": "Test events for delayed event bouncing (disabled)",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Name"
+                        ],
+                        [
+                            "JD.10001",
+                            "#initial event fired (hidden)"
+                        ],
+                        [
+                            "JD.10002",
+                            "#delayed event that sends actual event to whomever (hidden)"
+                        ],
+                        [
+                            "JD.10003",
+                            "#Actual important and visible event for player"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "China succession events",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Name"
+                        ],
+                        [
+                            "JD.10005",
+                            "In case of dynasty change... (fired from om_action: on_offmap_ruler_changed)"
+                        ],
+                        [
+                            "JD.10006",
+                            "on_startup event for dealing with old saves not having a proper name or government for the Chinese Empire..."
+                        ],
+                        [
+                            "JD.31000",
+                            "(China succesion logging)"
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,231 @@
+{
+    "pageid": 2520,
+    "title": "Graphics modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There are two parts to graphics modding:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Assets (images or models), stored inside /gfx folder",
+                            "children": []
+                        },
+                        {
+                            "text": "Logical names (starting with GFX_ prefix) mapping to these assets, defined inside /interface/*.gfx files.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Logical names are then either referenced from other script files, or are based on naming convention hardcoded in the engine."
+                }
+            ]
+        },
+        {
+            "heading": "Editors",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Some recommended editors include:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "GIMP",
+                            "children": []
+                        },
+                        {
+                            "text": "Paint.NET",
+                            "children": []
+                        },
+                        {
+                            "text": "Photoshop",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Formats",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": ".tga ( Truevision Targa )",
+                            "children": []
+                        },
+                        {
+                            "text": ".dds ( DirectDraw Surface ): requires a plugin to use with GIMP or Photoshop , but works natively with Paint.NET.",
+                            "children": []
+                        },
+                        {
+                            "text": ".xac/.xsm: licensed format for 3D models and animations",
+                            "children": []
+                        },
+                        {
+                            "text": ".mesh/.anim: Paradox developed format for 3D models and animations. Used first in EU4 and in CK2 since Patch 2.2 ( Charlemagne ). Can be converted to via the JoroDox mod making tool .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Folders",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Characters",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This folder contains bits of faces that are stuck together to form portraits."
+                }
+            ]
+        },
+        {
+            "heading": "Coats of arms",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Contains flag frames and CoA pattern & frames."
+                }
+            ]
+        },
+        {
+            "heading": "Flags",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Flags are used for titles above baronies, but only for religions where has_coa_on_barony_only = yes .\nThe game typically crashes if the flag is any of the following: is not 128x128, is not 24-bit, or is uncompressed."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Warning: a missing flag for a title in flags\\ folder will cause wrong flags to appear for most titles, due to a shift. \na good way to work around this while working on other aspects of the mod, is to give the nations placeholder flags."
+                }
+            ]
+        },
+        {
+            "heading": "Fonts",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "See [Tutorial] Custom Map Fonts ."
+                }
+            ]
+        },
+        {
+            "heading": "Interface",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Main game loads from /interface/ for christian religion group, but some assets are overridden when playing religions from other groups:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "from /indian_interface folder for indian_group religion group",
+                            "children": []
+                        },
+                        {
+                            "text": "from /muslim_interface folder for muslim religion group",
+                            "children": []
+                        },
+                        {
+                            "text": "from /zoroastrian_interface folder for zoroastrian_group religion group",
+                            "children": []
+                        },
+                        {
+                            "text": "from /jews_interface folder for jewish_group religion group",
+                            "children": []
+                        },
+                        {
+                            "text": "from /pagan_interface folder for pagan_group religion group",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "New religion groups load from /interface/ folder, and cannot have their own interface."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Mods cannot override assets in religion group folders, as the override is only processed for main game."
+                }
+            ]
+        },
+        {
+            "heading": "Loading screens",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For optimal compression, loading screens should be saved with DTX1 compression / no mimaps."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The order loading screens appear is random, except:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "load_0.dds, which is used as splash screen",
+                            "children": []
+                        },
+                        {
+                            "text": "the image with highest file name (ex: load_13.dds) has a far more likely chance (50% as of patch 2.8.2 ) to appear first.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "JoroDox mod making tool",
+                            "children": []
+                        },
+                        {
+                            "text": "Clausewitz Maya Exporter",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

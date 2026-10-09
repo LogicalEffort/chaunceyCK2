@@ -1,0 +1,671 @@
+{
+    "pageid": 2485,
+    "title": "Decision modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Decisions are optional actions that the player or the AI can take, and which appear in the diplomacy or intrigue screens (depending on the type)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Decisions are different from events , which trigger outside of the control of the player. Complex decisions will usually trigger a chain of events."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Decisions need to be in the /decisions/ folder."
+                }
+            ]
+        },
+        {
+            "heading": "Intrigue decisions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Intrigue decisions are declared inside a block decisions = { } or plot_decisions = { } , and are shown in the Intrigue view."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "They appear in the order they are loaded based on alphabetical file order in decision folder."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that decisions are very delicate: any syntax error, or unidentified keyword, will break them and cause section headings to be badly displayed in the intrigue screen."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Special scopes :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "ROOT is the decision taker",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Structure",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Localization",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "decision_name : label displayed in intrigue tab",
+                            "children": []
+                        },
+                        {
+                            "text": "decision_name _desc: tooltip when hovering the decision",
+                            "children": []
+                        },
+                        {
+                            "text": "decision_name _desc_extra: optional parameter, text shown after the Requirements section in the decision's tooltip",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Icon",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To define an icon for the decision, you need a spriteType with name GFX_ decision_name in a .gfx file inside interface/ folder."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Vanilla decision icons are 28px x 28px DDS files with transparent background, the icon itself being 24px x 20px with a 2px black border."
+                }
+            ]
+        },
+        {
+            "heading": "Dynasty and Vassal decisions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "vassal_decision and dynasty_decisions have been deprecated in favor of targeted_decision with specific filters"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "These decisions appear once for every dynasty or vassal in the intrigue menu, they have been made semi-redundant by targeted decisions but one can still use them if they prefer. Keep in mind that vassal does not necessarily mean a direct vassal, it can be anybody at all just, it is like a normal decision but appears once per person."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "They are declared inside a block vassal_decisions = { } or dynasty_decisions = { } , and are shown in the Intrigue view."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Special scopes :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "FROM is the decision taker",
+                            "children": []
+                        },
+                        {
+                            "text": "ROOT is the decision target",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Structure",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Localization",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "decision_name : label displayed in intrigue tab",
+                            "children": []
+                        },
+                        {
+                            "text": "decision_name _desc: tooltip when hovering the decision",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Icon",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To define an icon for the decision, you need a spriteType with name GFX_ decision_name in a .gfx file inside the interface/ folder."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Vanilla decision icons are 28px x 28px DDS files with transparent background, the icon itself being 24px x 20px with a 2px black border."
+                }
+            ]
+        },
+        {
+            "heading": "Targeted decisions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Targeted decisions are declared inside a block targeted_decisions = { } or targetted_decisions = { } (either will work), and are shown in the Diplomacy view. Note that adding targeted decisions with add_decision to a technology within technology.txt seems to make the decision unusable on unlanded characters."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Special scopes :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "FROM is the decision taker",
+                            "children": []
+                        },
+                        {
+                            "text": "ROOT is the targeted character",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In order to limit CPU load, filter and ai_target_filter specify the types of targeted characters (for the player / the AI respectively), for which potential and allow blocks will be evaluated:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "self : self MUST be set for decisions targeting only the taker",
+                            "children": []
+                        },
+                        {
+                            "text": "spouse : decision taker spouses",
+                            "children": []
+                        },
+                        {
+                            "text": "court : all characters in the decision taker host court, including prisoners, and characters currently away (wards, prisoners, etc.), not including the decision taker",
+                            "children": []
+                        },
+                        {
+                            "text": "home_court : all characters in the decision taker home court, including prisoners, and characters currently away (wards, prisoners, etc.), not including the decision taker",
+                            "children": []
+                        },
+                        {
+                            "text": "vassals : direct vassal rulers of the decision taker employer",
+                            "children": []
+                        },
+                        {
+                            "text": "sub_realm : all characters below the decision taker employer, not including the decision taker themself",
+                            "children": []
+                        },
+                        {
+                            "text": "realm : all characters in the same top realm as the decision taker, not including the decision taker themself",
+                            "children": []
+                        },
+                        {
+                            "text": "dynasty : all members of the same dynasty, not including the decision taker themself",
+                            "children": []
+                        },
+                        {
+                            "text": "close_relatives : Includes children, grandchildren, parents, siblings, and nieces/nephews",
+                            "children": []
+                        },
+                        {
+                            "text": "rivals : decision taker's rivals plus any character that have an opinion modifier with 'crime = yes' set (the same set of characters the 'is_foe' trigger evaluates)",
+                            "children": []
+                        },
+                        {
+                            "text": "friends : decision taker's friends",
+                            "children": []
+                        },
+                        {
+                            "text": "liege : the decision taker's liege, unless independent",
+                            "children": []
+                        },
+                        {
+                            "text": "religious_head : the decision taker's religious head, unless they are the head of their religion",
+                            "children": []
+                        },
+                        {
+                            "text": "society : characters in the same society as the decision taker, not including the decision taker themself.",
+                            "children": []
+                        },
+                        {
+                            "text": "vassal_wars : All vassals' wars",
+                            "children": []
+                        },
+                        {
+                            "text": "independent_rulers : All independent rulers",
+                            "children": []
+                        },
+                        {
+                            "text": "all : all living characters ( to be avoided, very CPU heavy ! )",
+                            "children": []
+                        },
+                        {
+                            "text": "none : No one. Mainly useful for banning the AI from using a decision",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Additionally, all , court , home_court , sub_realm , realm , dynasty , independent_rulers and society have \"_including_me\" versions (e.g. court_including_me ) which also include the decision taker."
+                }
+            ]
+        },
+        {
+            "heading": "Structure",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "AI acceptance",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "AI acceptance is an optional section for targeted decisions to indicate whether the AI will accept the decision. Note that how the AI responds is unaffected by this system; it is meant as a way to communicate the outcome to the player. It is up to the person scripting to make the AI actually act in accordance with the \"yes\" or \"maybe\" shown. Only \"no\" has a mechanical effect, blocking the decision entirely."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If ai_acceptance is defined, AI acceptance will show in the decision, similar to how it shows for many interactions. The \"Do It!\" button will be greyed out if the score is below or equal to Zero. The exact value will be saved to the local variable local_ai_acceptance_score , similar to how 3rd party score is saved. It will be saved for player-controlled targets as well, even if show_maybe_for_human is used."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "An example AI acceptance section:"
+                }
+            ]
+        },
+        {
+            "heading": "Localization",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "decision_name : label in diplomacy menu",
+                            "children": []
+                        },
+                        {
+                            "text": "decision_name _desc: label displayed when selecting the action. [Root.GetTitledFirstName] can be used to display the target name.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Settlement decisions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Settlement decisions are possible vs all settlements and are shown in the Settlement Diplomacy view, not the Intrigue view. They are declared inside a block settlement_decisions = { } and use the same structure and localisation as targeted decisions."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Special scopes :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "FROM is the decision taker",
+                            "children": []
+                        },
+                        {
+                            "text": "ROOT is the targeted settlement",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In order to limit CPU load, filter / ai_target_filter specify the types of targeted settlement (for the player / the AI respectively), for which potential and allow blocks will be evaluated:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "capital : decision taker's capital",
+                            "children": []
+                        },
+                        {
+                            "text": "owned : all settlements owned by the character",
+                            "children": []
+                        },
+                        {
+                            "text": "vassal_owned : all settlements owned by the character's employer's direct vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "sub_realm_owned : all settlements below the character's employer",
+                            "children": []
+                        },
+                        {
+                            "text": "realm_owned : all settlements in the same top realm as the character",
+                            "children": []
+                        },
+                        {
+                            "text": "dynasty_owned : all settlements owned by a character of the same dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "all : all settlements ( to be avoided, very CPU heavy! )",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Similarly there are also trade_post_decisions = { } , fort_decisions = { } , and hospital_decisions = { } ."
+                }
+            ]
+        },
+        {
+            "heading": "Title decisions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Title decisions are possible vs all titles and are shown in the Title Diplomacy View, not the Intrigue View. They are declared inside a block title_decisions = { }"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Special scopes :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "FROM is the decision taker",
+                            "children": []
+                        },
+                        {
+                            "text": "ROOT is the targeted title",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In order to limit CPU load, filter / ai_target_filter specify the types of targeted settlement (for the player / the AI respectively), for which potential and allow blocks will be evaluated:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "capital : decision taker's capital",
+                            "children": []
+                        },
+                        {
+                            "text": "primary_title",
+                            "children": []
+                        },
+                        {
+                            "text": "owned : all titles owned by the character",
+                            "children": []
+                        },
+                        {
+                            "text": "vassal_owned : all titles owned by direct vassal rulers of the character's employer",
+                            "children": []
+                        },
+                        {
+                            "text": "sub_realm_owned : all titles below the character's employer",
+                            "children": []
+                        },
+                        {
+                            "text": "realm_owned : all titles in the same top realm as the character",
+                            "children": []
+                        },
+                        {
+                            "text": "dynasty_owned : all titles owned by members of the same dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "all : all titles ( to be avoided, very CPU heavy! )",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Society Decisions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Added in Patch 2.7. Society decisions are declared inside a block society_decisions = { } . They will only be evaluated for characters who are in any society. They can be used to make the same decision available for members of different societies. Apart from this, they are identical to regular Decision ."
+                }
+            ]
+        },
+        {
+            "heading": "Offmap Decisions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In Patch 2.8, offmap powers received decisions which are activated through the unique offmap power interface."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Similar to society decisions, these are surrounded in their own offmap_decisions = { } block, and are virtually identical to standard decisions.  However, offmap_decisions also have a single unique parameter, button_name , which corresponds to the name of a button defined in the buttons section of an offmap power:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Button names are localised, but the localisation key must match between all three files: in the offmap power, in the offmap_decision, and in the corresponding GUI file."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Offmap decisions can also take a third party, as detailed below."
+                }
+            ]
+        },
+        {
+            "heading": "Third Parties",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Since Patch 2.8 , decisions, which needs a target, can take a second one too, who will be the third party of it. This is possible for targeted, offmap, settlement and title decisions, but usually only used for the first two."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Additional special scope :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "FROMFROM is the third party",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "third_party_filter and ai_third_party_filter use the same syntax filter and ai_target_filter in targeted decisions do, as well as an additional artifacts filter."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "They can take one more parameter, third_party_score = { } . The scopes will be sorted based on that score and it will be a variable , stored as local_third_party_score . The base value can be defined with factor = #Base value , then it is possible to modify it with modifier = { } and additive_modifier = { } ."
+                }
+            ]
+        },
+        {
+            "heading": "Structure",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Pre-triggers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Pre-triggers or fast triggers are special conditions at the root of decisions, that allow the AI to quickly exit evaluation of a decision if it doesn’t meet the pre-trigger, without having to evaluate the trigger block. [1] [2] It is recommended that they be used when possible so as to reduce the time spent by the AI evaluating the decision. Note that the pre-trigger currently only applies to the AI, not to the player."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There’s no limit to how many pre-triggers, other than there only being one of each ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Warning: some pre-triggers have a different name than the equivalent normal condition!"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The following decision pre-triggers currently exist for decisions:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Pre-trigger",
+                            "Type",
+                            "Scope",
+                            "Description",
+                            "Equivalent trigger"
+                        ],
+                        [
+                            "only_playable",
+                            "bool",
+                            "character",
+                            "In script, \"playable\" does not actually mean that the player can play the character. What it means is: count-tier or above, or a patrician, and is not a landless rebel. Using this pre-trigger completely eliminates evaluation of the event for anyone who does not meet the criteria, meaning that the event is checked for the ~1000 playable characters in the game, rather than all ~20k",
+                            "is_playable"
+                        ],
+                        [
+                            "only_rulers",
+                            "bool",
+                            "character",
+                            "Excludes untitled characters. This is a lesser version of only_playable , as it includes barons, rebels, etc. (i.e. anyone holding a title).",
+                            "is_ruler"
+                        ],
+                        [
+                            "only_independent",
+                            "bool",
+                            "character",
+                            "Excludes vassals and tributaries. Implies only_playable .",
+                            "independent"
+                        ],
+                        [
+                            "is_in_society",
+                            "bool",
+                            "character",
+                            "Excludes characters not belonging to a society (= yes) or belonging to a society (= no).",
+                            "is_in_society"
+                        ],
+                        [
+                            "ai = no",
+                            "bool",
+                            "character",
+                            "Excludes the decision from all non-player characters. Added in Patch 2.8.",
+                            "ai = no"
+                        ],
+                        [
+                            "is_mercenary = yes",
+                            "bool",
+                            "unknown",
+                            "Does not block the decision for human-controlled characters. Possibly forces AI-controlled characters to: (1) always attempt to take the decision at the start of every war (or perhaps also at the specified interval during wars?), and (2) never attempt the decision at any other time [3] . (IE: It should be read as, \"AI will try to take this decision at the same time they are deciding whether to hire mercenaries.\") Warning: Not well understood! The only documentation is this comment in the code: \"decisions with the 'is_mercenary' will not be calculated from the script\" . Notably, in the base game, this is only used for decisions that you would want to take at during a war (eg. spawning event troops), and all such decisions also have ai_will_do = { factor = 0 } . The interpretation above is mostly speculation - the exact functionality inside the game engine is unknown. Use with care and test thoroughly!",
+                            "(none)"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Possibly forces AI-controlled characters to: (1) always attempt to take the decision at the start of every war (or perhaps also at the specified interval during wars?), and (2) never attempt the decision at any other time [3] . (IE: It should be read as, \"AI will try to take this decision at the same time they are deciding whether to hire mercenaries.\")"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Warning: Not well understood! The only documentation is this comment in the code: \"decisions with the 'is_mercenary' will not be calculated from the script\" . Notably, in the base game, this is only used for decisions that you would want to take at during a war (eg. spawning event troops), and all such decisions also have ai_will_do = { factor = 0 } . The interpretation above is mostly speculation - the exact functionality inside the game engine is unknown. Use with care and test thoroughly!"
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Modifiers",
+                            "children": []
+                        },
+                        {
+                            "text": "Localization",
+                            "children": []
+                        },
+                        {
+                            "text": "Law modding",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Forum:611797",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Official mod optimization tips",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forumpost:31256693",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

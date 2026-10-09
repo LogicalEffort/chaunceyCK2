@@ -1,0 +1,762 @@
+{
+    "pageid": 234,
+    "title": "Government",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Government type is the form of government that a character lives under or rules by. It dictates the available succession laws and holdings of a character, and some government types have unique mechanics."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There are several ways to change government type during the game. Special decisions allow tribes and nomads to become more \"settled\". Inheriting a title, or dying with a landed heir, can also result in the player experiencing a change in government type."
+                }
+            ]
+        },
+        {
+            "heading": "List of government types",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Government",
+                            "Group",
+                            "Description",
+                            "Special mechanics",
+                            "Settlements held without penalties",
+                            "ID tag"
+                        ],
+                        [
+                            "",
+                            "Government",
+                            "Group",
+                            "Description",
+                            "Special mechanics",
+                            "ID tag",
+                            "Castles",
+                            "Cities",
+                            "Temples",
+                            "Tribes"
+                        ],
+                        [
+                            "",
+                            "Feudal",
+                            "Feudal",
+                            "Feudal government is a government in which the realm is organised around the Feudal system , where power is delegated to nobles who are given grants of land in exchange for troops. Non-Christian feudal rulers require the appropriate religion DLC ( ) to be playable.",
+                            "Not available to Muslims and (Böns or Buddhists) in Tibetan culture group",
+                            "✓",
+                            "",
+                            "",
+                            "If same culture",
+                            "feudal_government"
+                        ],
+                        [
+                            "",
+                            "Iqta",
+                            "Feudal",
+                            "Iqta government is similar to feudal; it rules according to the Arabic Iqta system rather than the feudal system. Requires the Sword of Islam DLC to be playable.",
+                            "Requires title holder to be Muslim . Realm laws are changed by spending piety. Allows decadence. Without the Conclave DLC, there is no voting on law change.",
+                            "✓",
+                            "",
+                            "✓",
+                            "If same culture",
+                            "muslim_government"
+                        ],
+                        [
+                            "",
+                            "Monastic Feudal",
+                            "Feudal",
+                            "The Monastic Feudal government is unique to Tibeto-Burman cultures of either the Buddhist or Bön faiths, and allows holding Temples in addition to Castles. Monastic Feudal rulers can also construct Gompa Monastery buildings in Castle holdings. Playable with the appropriate religion DLC: The Old Gods or Jade Dragon for Bön; Rajas of India for Buddhism.",
+                            "Must be (Böns or Buddhists) in Tibetan culture group. Realm laws are changed by spending piety. Gompa monasteries can be built in castles and are active only under this government form.",
+                            "✓",
+                            "",
+                            "✓",
+                            "If same culture",
+                            "theocratic_feudal_government"
+                        ],
+                        [
+                            "",
+                            "Chinese Imperial",
+                            "Feudal",
+                            "The Chinese Imperial government, much like the ordinary Feudal government, revolves around vassals owing fealty to their liege, who in this case is considered to be the divine Child of Heaven, and ruler of all. The Imperial government is unique to those who would claim the throne of China, much to the displeasure of the head of the current Imperial Dynasty, who rules from China proper. The decision to adopt Chinese Imperialism requires the Jade Dragon DLC.",
+                            "Capital move cooldown 200 months. No opinion penalties from wrong government. No opinion penalties from wrong religion even for marriage proposal. Cannot demand conversion. Can revoke duchies and retract vassals without tyranny. Requires Khitan/Tangut/Jurchen culture or Chinese culture group and primary title to be an empire that adopted imperialism. +1 Piety per month. +10 vassal limit. Cannot create Religious mandate law. Cannot create empires. Cannot be elective unless demanded by faction. Emperor can own cities.",
+                            "✓",
+                            "✓",
+                            "",
+                            "If same culture",
+                            "chinese_imperial_government"
+                        ],
+                        [
+                            "",
+                            "Holy Order",
+                            "Feudal",
+                            "The most pious followers of their religion might join Holy Orders in an attempt to defend the faith from outside forces. Coming to the defense of any Lord or Lady who might be attacked by infidels, they are the stalwart protectors of the faithful. These orders have strict hierarchies, passing from one leader to next within the order. Since there is no dynastic persistence, holy orders are not playable .",
+                            "Cannot imprison and revoke landed title without just reason. Revoking titles from (holy order holders) and revoking baronies and retracting vassals is considered just. Cannot create or usurp or be granted kingdoms and empires. Holy order vassals give full taxes and levies regardless of opinion.",
+                            "✓",
+                            "",
+                            "✓",
+                            "✓",
+                            "order_government"
+                        ],
+                        [
+                            "",
+                            "Imperial",
+                            "Feudal",
+                            "An Imperial government differs from its feudal counterpart by placing a larger focus on urban areas and a centralized court whose influence affects internal politics. It's available only to the Byzantine and Roman Empires . Councilors and Commanders hold a varying degree of influence, depending on their prestige and competence, which they can use to support or oppose the official heir of the Empire. (NB: While defined as Feudal, this form of Government is essentially more of a Military Republic and several tooltips even use texts belonging to Merchant Republics, such as ones about usurping kingdoms)",
+                            "Capital move cooldown 2000 months. Cannot imprison without just reason. Does not get wrong government opinion penalty. Cannot create empires. Cannot usurp empires and kingdoms. Can retract vassals without tyranny. Cannot be granted a kingdom or empire from character with different government.",
+                            "✓",
+                            "✓",
+                            "",
+                            "If same culture",
+                            "roman_imperial_government"
+                        ],
+                        [
+                            "",
+                            "Nomadic",
+                            "Nomadic",
+                            "The only succession law is the Agnatic Nomad succession law, in which the male relative (uncle, brother, son or nephew) of the same culture with the most prestige inherits. Nomads are mostly centered around managing other nomadic clans in their realm\nNomadic rulers can only hold the Nomadic capital (a special holding type that is only available to Nomads and exists only in their capital province) without penalty, and gain benefits from having empty land in their realm (increasing their manpower and population, which they use to recruit troops for their horde). Requires the Horse Lords DLC to be playable. Non-Christian nomads do not require the relevant DLC in order to play as rulers of certain religions (e.g. The Old Gods for pagans and Zoroastrians). However, if they convert to other government types without converting to a playable religion first, it's game over .",
+                            "Capital move cooldown 120 months. Cannot construct castles and cities. Calls nomadic vassals to wars. Does not recieve levies or taxes from nomadic vassals. Realm laws are changed by spending prestige. Revocation allowed even without laws. Raiding. Cannot demand conversion. Cannot change culture. De jure law effects ignored. Males can take up to 3 concubines. -4 Commanders. Vassals give max levies and taxes regardless of opinion. Tyranny actions against non-nomads do not incur tyranny penalty with nomads, but do against other settled governments. Nomadic vassals do not take up vassal limit. Ignores religious differences regarding marriage proposals and concubinage. Can pillage owned non-nomadic holdings. Can settle in castles to become feudal, in tribes to become tribal, in coastal cities to become merchant republic. Can abandon provinces to temporarily increase population growth. If capital is in Planins, desert or steppe, LC, HC and CA get +5% attack. if capital is in hills, mountains or artic, LC, HC and CA get +5% defense.",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "nomadic_government"
+                        ],
+                        [
+                            "",
+                            "Merchant republic",
+                            "Republic",
+                            "Merchant republic is a government in which the realm centers around trade , and leaders are elected from the five patrician families rather than inheriting according to specific laws. Within each family, inheritance is by Seniority , where the oldest member of the family inherits. It is formed when a coastal province has a city as its capital, and the burgher holding the county title receives at least a ducal title. Requires The Republic DLC to be playable.",
+                            "",
+                            "✓",
+                            "✓",
+                            "",
+                            "If same culture",
+                            "merchant_republic_government"
+                        ],
+                        [
+                            "",
+                            "Republic",
+                            "Republic",
+                            "Republic is a government in which the ruler is elected from the citizenry. Because there is no dynastic persistence between rulers, Republic governments are not playable .",
+                            "",
+                            "✓",
+                            "✓",
+                            "",
+                            "If same culture",
+                            "republic_government"
+                        ],
+                        [
+                            "",
+                            "Confucian Bureaucracy",
+                            "Republic",
+                            "Used only by the Western Protectorate. Because each new governor is appointed by China, this government is not playable . In games without the Jade Dragon DLC, this government only exists in the 769 bookmark and from February 1227 onwards.",
+                            "Cannot revoke titles and/or imprison without just reason. Does not get wrong religion opinion penalty. Does not get wrong government opinion penalty. Cannot demand conversion. Cannot create kingdoms and empires. Cannot inherit titles unless from appointment. Non-nomadic vassals give max taxes and levies regardless of opinion. Characters with this government are generated with stewardship education and have same culture and religion as the emperor of China.",
+                            "✓",
+                            "✓",
+                            "",
+                            "If same culture",
+                            "confucian_bureaucracy"
+                        ],
+                        [
+                            "",
+                            "Theocracy",
+                            "Theocracy",
+                            "Theocracy is a government in which the realm is ruled by the clergy in the name of religion . Rulers are appointed or elected from the clergy. Since there is no dynastic persistence, theocracy governments are not playable .",
+                            "",
+                            "✓",
+                            "",
+                            "✓",
+                            "If same culture",
+                            "theocracy_government"
+                        ],
+                        [
+                            "",
+                            "Tribal",
+                            "Tribal",
+                            "Tribal is a government which is settled but doesn't construct advanced holdings. The only succession law available to unreformed pagan tribes is the Elective gavelkind law, which splits the realm between all the sons of the ruler. Like nomads, tribes benefit from empty land in their realm. Non-Christian tribal rulers require the appropriate religion DLC ( ) to be playable.",
+                            "Tribal vassals take up vassal limit. Can build tribes that cost prestige, but cannot build cities and castles. Allows decadence if Muslim. Allows raiding. De jure law effects are ignored. Males can take up to 3 concubines. Cannot revoke titles from tribal vassals of different religion without tyranny. Taxes and levies from tribal vassals or calling them to arms is determined by tribal organization and independence.",
+                            "",
+                            "",
+                            "",
+                            "✓",
+                            "tribal_government"
+                        ],
+                        [
+                            "",
+                            "Landless",
+                            "Landless",
+                            "Landless government refers to people who have no rule whatsoever. It is normally only found on deceased characters who did not hold any titles at the time of death. When found on living characters, it is usually the result of save corruptions in a non-adventurer, or if you are a religious head of a theocratic religion, while being of that religion for example pope as catholic. It is called \"nogovernment\" in code. Landless government has no holdings it can hold without penalty.",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(NB: While defined as Feudal, this form of Government is essentially more of a Military Republic and several tooltips even use texts belonging to Merchant Republics, such as ones about usurping kingdoms)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Nomads are mostly centered around managing other nomadic clans in their realm\nNomadic rulers can only hold the Nomadic capital (a special holding type that is only available to Nomads and exists only in their capital province) without penalty, and gain benefits from having empty land in their realm (increasing their manpower and population, which they use to recruit troops for their horde). Requires the Horse Lords DLC to be playable. Non-Christian nomads do not require the relevant DLC in order to play as rulers of certain religions (e.g. The Old Gods for pagans and Zoroastrians). However, if they convert to other government types without converting to a playable religion first, it's game over ."
+                }
+            ]
+        },
+        {
+            "heading": "Changing government",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There are several ways to change the government type of the player character or succession line."
+                }
+            ]
+        },
+        {
+            "heading": "Among feudal governments",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The three basic variants of feudalism are determined by religion and culture:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Muslims use Iqta government",
+                            "children": []
+                        },
+                        {
+                            "text": "Bön or Buddhist rulers from a Tibeto-Burman culture use Monastic Feudal",
+                            "children": []
+                        },
+                        {
+                            "text": "All others use standard Feudal",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Chinese Imperial government can only be adopted by decision . It can be abandoned by having a heir of an ineligible culture, which will create an event where you can choose between converting your heir to your culture or abandoning Chinese Imperial Government. When adopted, the empire title becomes a titular title ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Roman) Imperial government can only be adopted by having the Byzantine Empire (or Roman Empire) as primary and having Imperial elective succession. The government will change automatically the next time the game checks government eligibility, e.g. after a save and load."
+                }
+            ]
+        },
+        {
+            "heading": "Between government groups",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Government may need to be updated. Please update this article to reflect recent events or newly available information, and remove this template when finished. Please see the talk page for more information."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "From",
+                            "",
+                            "To",
+                            "Method",
+                            "Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "Nomadic decisions Main article: Nomadism#Changing_government_type"
+                        ],
+                        [
+                            "",
+                            "→",
+                            "",
+                            "Settle as a Tribe in <tribal holding or capital>",
+                            "To use a nomadic capital, it must have a lv2 council building",
+                            "All (personally held) nomadic counties build tribal holdings The capital is converted to your religion and culture Additional provinces converted per 5000 pop+manpower Vassal khans will settle as tribal along with you Horde troops are disbanded, but gain 200 event troops (140 Light Cavalry and 60 Horse Archers) per fully nomadic province. AI will not use this decision if his capital is in the Steppe region, or he has at least 7 steppes counties in his realm. AI will only take this decision if he has at least 20 counties in his realm."
+                        ],
+                        [
+                            "",
+                            "→",
+                            "",
+                            "Settle as Feudal in <castle or mosque>",
+                            "Muslims may use a mosque instead of a castle",
+                            "All nomadic counties are lost Additional provinces converted per 5000 pop+manpower Horde troops are disbanded, but gain 200 event troops (140 Light Cavalry and 60 Horse Archers) per fully nomadic province."
+                        ],
+                        [
+                            "",
+                            "→",
+                            "",
+                            "Found a Merchant Republic in <city>",
+                            "Players are limited to coastal cities",
+                            "All nomadic counties are lost Additional provinces converted per 5000 pop+manpower Horde troops are disbanded, but gain 200 event troops (140 Light Cavalry and 60 Horse Archers) per fully nomadic province. Tribal (or non-lowborn republic) vassals may become patricians."
+                        ],
+                        [
+                            "Tribal decisions Main article: Tribalism#Changing_government_type"
+                        ],
+                        [
+                            "",
+                            "→",
+                            "",
+                            "Adopt Feudalism",
+                            "Peace Organized religion Capital is tribe with Hillfort IV (or a castle) If a vassal: Liege is feudal, republic, or (organized) theocracy If independent: Absolute Tribal Organization",
+                            "Tribes are upgraded to castles Cities and temples may be built"
+                        ],
+                        [
+                            "",
+                            "→",
+                            "",
+                            "Found Merchant Republic",
+                            "Peace Organized religion Independent Duke or higher Male Capital is coastal Capital is tribe with Market IV (or a city)",
+                            "Tribes are upgraded to cities Castles and temples may be built Tribal (or non-lowborn republic) vassals may become patricians. AI never uses this decision"
+                        ],
+                        [
+                            "Inheritance"
+                        ],
+                        [
+                            "",
+                            "→",
+                            "",
+                            "Inheritance conflict",
+                            "",
+                            "Inherit a higher tier title, or die with your heir holding a same rank title. If a character inherits a higher-tiered title their government type changes to that of the higher tier. If they inherit an equal or lower-tiered title their government type remains the same. This can be used to convert a tribal realm to feudal even if their religion is unreformed pagan. Note that you cannot grant a kingdom to a ruler with a different government type, so you'll have to arrange for your heir to be independent and able to create the kingdom title themselves, or perhaps press a claim for them instead."
+                        ],
+                        [
+                            "",
+                            "→",
+                            "Any",
+                            "Settle a son",
+                            "Conquered settled land",
+                            "Strangely, inheriting a khaganate does not change your heir's government to nomadic. Vassal clans remain vassals but are not very useful."
+                        ],
+                        [
+                            "Any",
+                            "→",
+                            "",
+                            "Inherit clan from vassal",
+                            "Empire rank. Nomads exist.",
+                            "Press a claim on a khanate, such that you have a vassal clan Arrange to inherit your vassal's clan Strangely, inheriting a clan changes your government type to nomadic. (Does the khan have to be of your dynasty? Because of the claim war outcome, the succession rules, or both? Does this actually work in the same version as the method above for going in the opposite direction??)"
+                        ],
+                        [
+                            "",
+                            "→",
+                            "",
+                            "Abdicate to mayor",
+                            "Duke, coastal capital",
+                            "This method is very fragile and requires taking advantage of several game bugs."
+                        ],
+                        [
+                            "",
+                            "→",
+                            "",
+                            "Break Chinese Imperialism",
+                            "Emperor, Jade Dragon DLC",
+                            "This method also requires taking advantage of several game bugs."
+                        ],
+                        [
+                            "",
+                            "→",
+                            "",
+                            "Non-coastal capital on succession",
+                            "Capital of realm is not coastal, realm is independent, current ruler has died",
+                            "If an independent Merchant Republic's capital becomes landlocked (e.g. by losing the old one in a war, or by moving the capital with the \"Traditional Capital\" feature) it will not turn into a regular Republic. Instead, if the current ruler dies before a coastal capital can be restored, the realm will turn Feudal upon succession, with the election winner becoming the Duke/King/Emperor of the realm. Any Republican vassals will still maintain their government type however, and those with coastal capitals can themselves become Merchant Republics."
+                        ],
+                        [
+                            "Special methods"
+                        ],
+                        [
+                            "Any",
+                            "→",
+                            "Any",
+                            "Console commands",
+                            "Not ironman",
+                            "The command set_government can be used to change any character's government type."
+                        ],
+                        [
+                            "Any",
+                            "→",
+                            "Any",
+                            "Select another character",
+                            "Not ironman",
+                            "While loading a game, you may select another character before clicking \"Play\". The play console command does the same thing, more quickly. You lose your chronicle , score , and list of characters of special interest. The rule that you must play as your primary heir is rather arbitrary, and voluntarily switching play upon succession may feel better than abusing the game over escape hatch (below)."
+                        ],
+                        [
+                            "Any",
+                            "→",
+                            "Any",
+                            "Lose all titles without dying",
+                            "Another dynasty member is playable",
+                            "Rather than getting game over , you may be transferred to play as another character — even a ToG adventurer ! (Works only in previous versions)"
+                        ],
+                        [
+                            "Any",
+                            "→",
+                            "",
+                            "Form the Hansa",
+                            "Christian Direct vassal of HRE Own Duchy of Mecklenburg Own County of Lübeck Various other requirements",
+                            "Spend 1000 wealth A city becomes the new capital holding Change government to merchant republic Gain Kingdom of Hansa"
+                        ],
+                        [
+                            "Any",
+                            "→",
+                            "",
+                            "Crusades",
+                            "You may switch to a new title when: Creating a dynamic crusader state (and choosing to abdicate your old titles) You may switch to a new character if a dynasty member becomes a ruler due a Crusade: Recipient of the crusade target kingdom (if you were the most participating crusader) Recipient of a dynamic crusader state Winner of a Children's Crusade"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Nomadic decisions",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "All (personally held) nomadic counties build tribal holdings",
+                            "children": []
+                        },
+                        {
+                            "text": "The capital is converted to your religion and culture",
+                            "children": []
+                        },
+                        {
+                            "text": "Additional provinces converted per 5000 pop+manpower",
+                            "children": []
+                        },
+                        {
+                            "text": "Vassal khans will settle as tribal along with you",
+                            "children": []
+                        },
+                        {
+                            "text": "Horde troops are disbanded, but gain 200 event troops (140 Light Cavalry and 60 Horse Archers) per fully nomadic province.",
+                            "children": []
+                        },
+                        {
+                            "text": "AI will not use this decision if his capital is in the Steppe region, or he has at least 7 steppes counties in his realm. AI will only take this decision if he has at least 20 counties in his realm.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "All nomadic counties are lost",
+                            "children": []
+                        },
+                        {
+                            "text": "Additional provinces converted per 5000 pop+manpower",
+                            "children": []
+                        },
+                        {
+                            "text": "Horde troops are disbanded, but gain 200 event troops (140 Light Cavalry and 60 Horse Archers) per fully nomadic province.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "All nomadic counties are lost",
+                            "children": []
+                        },
+                        {
+                            "text": "Additional provinces converted per 5000 pop+manpower",
+                            "children": []
+                        },
+                        {
+                            "text": "Horde troops are disbanded, but gain 200 event troops (140 Light Cavalry and 60 Horse Archers) per fully nomadic province.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tribal (or non-lowborn republic) vassals may become patricians.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Tribal decisions",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Peace",
+                            "children": []
+                        },
+                        {
+                            "text": "Organized religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Capital is tribe with Hillfort IV (or a castle)",
+                            "children": []
+                        },
+                        {
+                            "text": "If a vassal:",
+                            "children": [
+                                {
+                                    "text": "Liege is feudal, republic, or (organized) theocracy",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "If independent:",
+                            "children": [
+                                {
+                                    "text": "Absolute Tribal Organization",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Tribes are upgraded to castles",
+                            "children": []
+                        },
+                        {
+                            "text": "Cities and temples may be built",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Peace",
+                            "children": []
+                        },
+                        {
+                            "text": "Organized religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Independent",
+                            "children": []
+                        },
+                        {
+                            "text": "Duke or higher",
+                            "children": []
+                        },
+                        {
+                            "text": "Male",
+                            "children": []
+                        },
+                        {
+                            "text": "Capital is coastal",
+                            "children": []
+                        },
+                        {
+                            "text": "Capital is tribe with Market IV (or a city)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Tribes are upgraded to cities",
+                            "children": []
+                        },
+                        {
+                            "text": "Castles and temples may be built",
+                            "children": []
+                        },
+                        {
+                            "text": "Tribal (or non-lowborn republic) vassals may become patricians.",
+                            "children": []
+                        },
+                        {
+                            "text": "AI never uses this decision",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Inheritance",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Note that you cannot grant a kingdom to a ruler with a different government type, so you'll have to arrange for your heir to be independent and able to create the kingdom title themselves, or perhaps press a claim for them instead."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Press a claim on a khanate, such that you have a vassal clan",
+                            "children": []
+                        },
+                        {
+                            "text": "Arrange to inherit your vassal's clan",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Strangely, inheriting a clan changes your government type to nomadic."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Does the khan have to be of your dynasty? Because of the claim war outcome, the succession rules, or both? Does this actually work in the same version as the method above for going in the opposite direction??)"
+                }
+            ]
+        },
+        {
+            "heading": "Special methods",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The rule that you must play as your primary heir is rather arbitrary, and voluntarily switching play upon succession may feel better than abusing the game over escape hatch (below)."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Christian",
+                            "children": []
+                        },
+                        {
+                            "text": "Direct vassal of HRE",
+                            "children": []
+                        },
+                        {
+                            "text": "Own Duchy of Mecklenburg",
+                            "children": []
+                        },
+                        {
+                            "text": "Own County of Lübeck",
+                            "children": []
+                        },
+                        {
+                            "text": "Various other requirements",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Spend 1000 wealth",
+                            "children": []
+                        },
+                        {
+                            "text": "A city becomes the new capital holding",
+                            "children": []
+                        },
+                        {
+                            "text": "Change government to merchant republic",
+                            "children": []
+                        },
+                        {
+                            "text": "Gain Kingdom of Hansa",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You may switch to a new title when:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Creating a dynamic crusader state (and choosing to abdicate your old titles)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You may switch to a new character if a dynasty member becomes a ruler due a Crusade:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Recipient of the crusade target kingdom (if you were the most participating crusader)",
+                            "children": []
+                        },
+                        {
+                            "text": "Recipient of a dynamic crusader state",
+                            "children": []
+                        },
+                        {
+                            "text": "Winner of a Children's Crusade",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Government modding",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

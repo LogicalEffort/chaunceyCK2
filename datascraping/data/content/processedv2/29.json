@@ -1,0 +1,896 @@
+{
+    "pageid": 29,
+    "title": "Levies",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Levies are non-professional troops that can be raised to defend the realm , usually during wars ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In Crusader Kings II, most of your military is based around levies (pronounced /'levi:z/).  During medieval times, feudal realms did not maintain standing armies, instead drafting peasants in times of war."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "However, nomads have standing armies in the form of horde troops , while other rulers who can afford them can have retinues . Under certain circumstances, tribal rulers can have event troops . While tribal rulers can raise their demesne levies, they call their direct tribal vassals into war as allies, instead of raising liege levies from them. However, if the tribal liege is a vassal to a non-tribal ruler, the tribal liege will receive liege taxes and levies from tribal vassals."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Levies reinforce much faster while in friendly territory, making them more suitable for defensive wars and offensive ones involving neighboring realms."
+                }
+            ]
+        },
+        {
+            "heading": "Holding Levy",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The holding levy is the levy of a particular holding, and it determines demesne and liege levies."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Their size depends mostly on the holding type, buildings , and the direct owner's martial skill ."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Building levy is the sum of:",
+                            "children": [
+                                {
+                                    "text": "Holding base levy depending on the holding type: tribe , castle , temple or city",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Additional buildings levy brought by buildings",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Levy size modifiers is the sum of modifiers from:",
+                            "children": [
+                                {
+                                    "text": "Martial skill : 5% * (martial skill - 10). This significantly affects the levy size, e.g., -50% at 0 skill and +50% at 20 skill.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Buildings bonus : Some buildings, such as the Castle Keep, increase levy size as a percentage modifier.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Train troops : A bonus from the Marshal , which is +2.5% per martial attribute point of the Marshal, when assigned to \"Train Troops\" in a province. Only applies to holdings directly held by Counts, Dukes, Kings or Emperors who assign their Marshal to train troops on the province the holding is in.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Religion bonus : Some pagan religions have +10%, +20%, or +30% levy size modifiers.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Tribal incompatibility : Penalties for tribes if the holder and province have different religion or culture:",
+                                    "children": [
+                                        {
+                                            "text": "-15% wrong culture or -25% wrong culture group",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "-15% wrong religion or -25% wrong religion group",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Capital bonus :",
+                                    "children": [
+                                        {
+                                            "text": "If the holding's province is the same as its direct holder's capital , there is a +50% bonus if the holder is an independent ruler, and a +25% bonus if (s)he is a vassal Duke(Duchess) or King(Queen) (no bonus otherwise)",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "If the holding's province is within the de jure Duchy containing the direct holder's capital, there is a +25% bonus if the holder is an independent ruler, and a +15% bonus if (s)he is a vassal Duke(Duchess) or King(Queen) (no bonus otherwise)",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Tribal land bonus : Gives +50% for each empty holding slot within the province (if the capital holding is a tribe ).",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Recently Conquered Holdings",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If a holding's owner changes as the result of war, a Recently Conquered modifier may apply, making it to provide no levies for a year. After that year, levies reinforce slowly during a New Administration period. The duration is the longest of:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Target religion/culture",
+                            "Same religion and culture",
+                            "Different culture",
+                            "Different religion",
+                            "Different culture group",
+                            "Different religion group"
+                        ],
+                        [
+                            "Lasts for",
+                            "1 year",
+                            "5 years",
+                            "7.5 years",
+                            "10 years",
+                            "15 years"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Demesne Levy",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Demesne levies are levies from the holdings you directly hold (your demesne ), depending on their holding levy."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Whenever your demesne levies are raised, the holding levy of each of the holdings you directly own is emptied and placed on the County the holding is in as an army. Until you dismiss them, you pay a monthly maintenance cost and the holding levy of your holdings reinforces more slowly."
+                }
+            ]
+        },
+        {
+            "heading": "Liege Levy",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Liege levies are raised from direct vassals . They can be raised in any County controlled by the vassal, by selecting the County and pressing Z . They can also be raised in the vassal's capital province using the Military tab ( F6 ). Nomadic vassal clans do not provide levies to their liege. Tribal vassals also do not provide liege levies to their tribal liege."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The troop count of a vassal's liege levy is based on all holdings under the vassal (whether held directly by them or through other vassals), laws, your direct vassals' opinion of you and the location of their capital relative to yours ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Whenever liege levies are raised, they replenish more slowly and your vassals pay maintenance costs. Your vassals' opinion of you slowly decreases while their army or ship levies are raised during peacetime (except during raiding sieges for sacking of holdings, or (for ships) carrying loot), or as long as at least one defensive (and no offensive) wars are active except during Crusades/Jihads/Great Holy Wars. When liege levies are raised, their starting morale is low. Thus, it is advised not to send them into combat until some morale has built up."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Depleting a vassal's liege levy does not affect the amount of levies the vassal can raise for themselves should they need to go to war themselves. However, a vassal at war who depleted their levies will reduce the amount of liege levies you can raise."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "First, the number of troops that the vassal \"could provide at most\" is determined by:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Then, the liege levy is determined by:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "where:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Total Holdings Levy : The sum of all levies (red bar) of your direct vassal's demesne holdings and all vassals under them (which thus includes all bonuses listed above under the \"Holding Levy\" section). Note that this is not computed based on the vassal's demesne levies or liege levies; neither the opinion of sub-vassals towards their top liege nor their opinion towards their immediate liege nor the sub-vassal's de jure modifier are relevant.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "De Jure Modifier : Based on the location of the vassal's de facto capital relative to the liege's de facto capital. It was introduced with Patch 2.0 to represent the lower authority of a ruler over vassals located in non de jure parts of the realm. Note that a rebellion leader (such as faction rebellion, or tyranny rebellion) will access 100% of his vassals'/allies' levy, the number as if they are in his de jure county. This ensures that a faction containing many vassals is strong.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Vassal's de facto capital in",
+                            "De Jure Modifier"
+                        ],
+                        [
+                            "De jure County containing liege's de facto capital",
+                            "100%"
+                        ],
+                        [
+                            "De jure Duchy containing liege's de facto capital",
+                            "75%"
+                        ],
+                        [
+                            "De jure Kingdom containing liege's de facto capital",
+                            "50%"
+                        ],
+                        [
+                            "De jure Empire containing liege's de facto capital",
+                            "35%"
+                        ],
+                        [
+                            "Otherwise",
+                            "25%"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Opinion : The opinion modifier of the vassal toward their liege, transformed into a percentage.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Max Levy and Min Levy : They are determined by laws corresponding to the vassal's government type.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that the levy calculation is updated only at the start of the month, so for instance, transfering a vassal results in his levy being immediately impossible to raise since he's no longer a direct vassal, but the levy of the vassal you transfered him to won't increase until the next month."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Also, the military dialog and its tooltips are highly misleading, since they list the number of troops that a vassal \"owns\", which is completely unrelated to anything else in the tooltip and dialog. That value is the amount of non-ship troops that the vassal could raise from his demesne and vassals if he went to war himself, which is not used in any way to compute the levy you could raise from him, and can be either higher or lower (since the opinion and de jure modifiers are different)."
+                }
+            ]
+        },
+        {
+            "heading": "Laws without Conclave",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Without Conclave Expansion, maximum numbers are determined by demesne laws , while minimum numbers are determined by Crown Authority . If no crown laws apply, as is often the case for independent Dukes, the minimum is 0%."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Feudal Levies (Non-Muslim)",
+                            "Minimal Max levy -40% +10 opinion",
+                            "Small Max levy -30% +5 opinion",
+                            "Normal Max levy -20%",
+                            "Maximum Max levy -0% -5 opinion"
+                        ],
+                        [
+                            "City Levies",
+                            "Minimal Max levy -50% +10 opinion",
+                            "Normal Max levy -35%",
+                            "Large Max levy -20% -10 opinion",
+                            "Maximum Max levy -5% -20 opinion"
+                        ],
+                        [
+                            "Temple Levies (Non-Muslim)",
+                            "Minimal Max levy -50% +10 opinion",
+                            "Normal Max levy -40%",
+                            "Large Max levy -30% -10 opinion",
+                            "Maximum Max levy -20% -20 opinion"
+                        ],
+                        [
+                            "Iqta Levies (Muslim)",
+                            "Minimal Max levy -40% +10 opinion",
+                            "Small Max levy -30% +5 opinion",
+                            "Normal Max levy -20%",
+                            "Maximum Max levy -0% -5 opinion"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Non-Muslim)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Max levy -40%",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Max levy -30%",
+                            "children": []
+                        },
+                        {
+                            "text": "+5 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Max levy -20%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Max levy -0%",
+                            "children": []
+                        },
+                        {
+                            "text": "-5 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Max levy -50%",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Max levy -35%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Max levy -20%",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Max levy -5%",
+                            "children": []
+                        },
+                        {
+                            "text": "-20 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Non-Muslim)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Max levy -50%",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Max levy -40%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Max levy -30%",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Max levy -20%",
+                            "children": []
+                        },
+                        {
+                            "text": "-20 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Muslim)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Max levy -40%",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Max levy -30%",
+                            "children": []
+                        },
+                        {
+                            "text": "+5 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Max levy -20%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Max levy -0%",
+                            "children": []
+                        },
+                        {
+                            "text": "-5 opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Crown Authority",
+                            "Autonomous Vassals",
+                            "Limited",
+                            "Medium",
+                            "High",
+                            "Absolute"
+                        ],
+                        [
+                            "Crown Law Minimums",
+                            "0%",
+                            "20%",
+                            "40%",
+                            "60%",
+                            "80%"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Laws with Conclave",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If you use the Conclave DLC, both minimum and maximum numbers are determined by realm laws (under vassal obligations)."
+                }
+            ]
+        },
+        {
+            "heading": "Navy",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "When requesting ships from a vassal, the percentage is doubled. For example, a vassal who provides 20% of their soldiers as levy will provide 40% of their ships."
+                }
+            ]
+        },
+        {
+            "heading": "Exclusive to Jade Dragon DLC",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Rally points",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Rally points are provinces where your raised troops will automatically move to and merge when they get there. Units will choose the nearest county defined as a rally point."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can define any number of rally points, and put them anywhere in your realm, both for land units and ships. Units will only rally to provinces they can walk to or sail to. Land units will not use transports to get there."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you set up a rally point, your troops will not appear in the outliner, but instead the rally point entry will show how many troops are incoming. Disabling the “rally points” section causes the outliner to show individual armies."
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Levies are easy to get plenty of as long as you have a strong demesne and/or your vassals like you. Your priorities should therefore be:"
+                }
+            ]
+        },
+        {
+            "heading": "Maximizing Demesne Levies",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Invite the best Marshal you can find and assign him to \"Train Troops\" at your capital.",
+                            "children": []
+                        },
+                        {
+                            "text": "Hold a large demesne",
+                            "children": [
+                                {
+                                    "text": "To increase your demesne limit: Improve your Stewardship skill, choose a spouse with high Stewardship, increase Centralization Law, consider Gavelkind succession (+30%), obtain a Kingdom (if a Grand Duke) or another Duchy (if a Duke).",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Have a large capital Duchy",
+                            "children": [
+                                {
+                                    "text": "Each province you control within the same Duchy as your capital receives a bonus to levies (+15% if a vassal, +25% if independent)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Change your capital to, and have your marshal \"Train Troops\" in, the province with the best buildings",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Upgrade holdings in your demesne , starting with your capital and other provinces in the same Duchy.",
+                            "children": []
+                        },
+                        {
+                            "text": "Consider holding extra Baronies in your capital , as it will benefit from the Marshal's \"Train Troops\" action, along with your capital holding. Also, you might get bonuses to levy size based on your status (+50% if independent ruler, +25% for vassal Dukes and Kings)",
+                            "children": []
+                        },
+                        {
+                            "text": "Improve your Martial skill , and consider training your heir likewise",
+                            "children": []
+                        },
+                        {
+                            "text": "Research relevant technology. This won't directly give you more levies, but it will make them stronger, and allow you to construct/upgrade military buildings.",
+                            "children": []
+                        },
+                        {
+                            "text": "If tribal , consider the following:",
+                            "children": [
+                                {
+                                    "text": "Ensure that demesne counties share your religion and culture : if not, they'll have reduced levies (and tax income).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Empty holding slots increase levies : as such, try to hold counties with alot of empty holding slots.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Maximizing Vassal Levies",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Keep your vassals happy — especially the ones who can provide the most troops.",
+                            "children": []
+                        },
+                        {
+                            "text": "Once you have factions under control, focus on increasing the opinion of vassals whose opinion is already near or above (min levy / max levy). Increasing opinion up to that point does not increase the levies they provide.",
+                            "children": []
+                        },
+                        {
+                            "text": "Consider changing your capital so that it is at least in the same de jure empire as your largest vassals.",
+                            "children": []
+                        },
+                        {
+                            "text": "If you are an emperor and control large areas outside your de jure empire, try to occupy entire kingdoms so that the kingdoms can de jure drift into your empire. As a king, occupy entire duchies.",
+                            "children": []
+                        },
+                        {
+                            "text": "If tribal, your main concern is to have high opinion with your direct vassals so that they answer your call to arms ; de jure modifiers are only of concern after abandoning tribalism.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The way the levy is calculated means that the vassal structure between your direct vassals and the owner of the holdings makes no difference to the amount of levies you can raise. For example, a King can raise the same levies from a Duke vassal regardless of whether the Duke has the Barons as direct vassals, or there are Counts in between."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "However, the choice of actual direct vassal is very important, since the \"de jure modifier\" and opinion will differ, potentially resulting in up to 8 times more levy. Thus, it is beneficial to put as many holdings as possible in indirect control of vassals with a high \"de jure modifier\" and opinion. For example, the levy of a King would be increased by transferring all Count-rank vassals outside of the de jure Duchy containing the capital, to the Duke holding that Duchy (assuming that Duke's capital is also within the de jure Duchy)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The choice of the actual people holding the proper Baronies (cities, temples, castles, and tribes) is also very important, since their Martial score influences the holding's levy and thus your liege levy, possibly resulting in doubling the levy by switching from a low to high Martial holder."
+                }
+            ]
+        },
+        {
+            "heading": "Setting Ideal Levy Laws (Without Conclave active)",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can increase the levy law to make your vassals be obligated to provide more. However, if their opinion is already low, this will not pay off. Below are the opinion values at which it'll be beneficial to increase or decrease levy laws. In the case of Catholic clergy, it is advisable to set their levy law to Minimum:"
+                }
+            ]
+        },
+        {
+            "heading": "Nobles",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Min -> Small gives more as long as opinion is at 10 or above",
+                            "children": []
+                        },
+                        {
+                            "text": "Small -> Normal gives more as long as opinion is at 15 or above",
+                            "children": []
+                        },
+                        {
+                            "text": "Normal -> Max gives more as long as opinion is at -5 or above",
+                            "children": []
+                        },
+                        {
+                            "text": "Max -> Normal gives more as long as opinion is below -10",
+                            "children": []
+                        },
+                        {
+                            "text": "Normal -> Small gives more as long as opinion is below 10",
+                            "children": []
+                        },
+                        {
+                            "text": "Small -> Min gives more as long as opinion is below 5",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Burghers",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Min -> Normal gives more as long as opinion is at 18 or above",
+                            "children": []
+                        },
+                        {
+                            "text": "Normal -> Large gives more as long as opinion is at 28 or above",
+                            "children": []
+                        },
+                        {
+                            "text": "Large -> Max gives more as long as opinion is at 38 or above",
+                            "children": []
+                        },
+                        {
+                            "text": "Max -> Large gives more as long as opinion is below 28",
+                            "children": []
+                        },
+                        {
+                            "text": "Large -> Normal gives more as long as opinion is below 18",
+                            "children": []
+                        },
+                        {
+                            "text": "Normal -> Min gives more as long as opinion is below 8",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Clergy",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Min -> Normal gives more as long as opinion is at 35 or above",
+                            "children": []
+                        },
+                        {
+                            "text": "Normal -> Large gives more as long as opinion is at 45 or above",
+                            "children": []
+                        },
+                        {
+                            "text": "Large -> Max gives more as long as opinion is at 55 or above",
+                            "children": []
+                        },
+                        {
+                            "text": "Max -> Large gives more as long as opinion is below 45",
+                            "children": []
+                        },
+                        {
+                            "text": "Large -> Normal gives more as long as opinion is below 35",
+                            "children": []
+                        },
+                        {
+                            "text": "Normal -> Min gives more as long as opinion is below 25",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Analysis",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If you're in a Catholic realm, be reminded that Catholic clergy are unreliable when it comes to taxes and levies, since they'll withhold levies from you and pay taxes to the Pope if they like the Pope more than you. In this context, it may be prudent to lower your levy law for clergy. The increased opinion will also increase the probability that Catholic clergy will pay taxes to you. Counter-intuitively, upgrading bisphorics which are under your vassals will consistently give you more troops than if you upgrade bisphorics which are your direct vassals."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Raising levy law will only ever help you if your vassals already like you. As such, running high levy laws is not always a good idea. However, at these opinion numbers, you're unlikely to hurt any other aspect of your realm, so, as long as you benefit levy-wise from raising levy law, you probably should. Be aware that due to the last step of Noble and Iqta obligations increasing levies by more than any other step, Max levies are usually the ideal point for maximizing feudal levies."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You should also do whatever you can to keep all vassals above 0 opinion. Granting them titles, running tournaments, granting their wishes, making them councilors etc. Each point of opinion will increase the percent they're willing to give by 4/5."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You will only ever benefit levy-wise from Crown Authority if you were already getting below the new minimum percent. For example, if you're getting 25% at Medium Crown Authority, and raise it to high, the minimum will now be 30% and you'll be able to raise more levies. If on the other hand, you were getting 35% before and you raise your Crown Authority, you'll now be getting 5% less."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Don't forget that if you intend to raise your own levies, increased capacity translates into greater expenses. Plan accordingly. In addition, remember that after constructing buildings to increase your levy capacity, it takes time for your levies to grow, and the wait is not insignificant, especially if your character has a low Martial score."
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Feudalism",
+                            "children": []
+                        },
+                        {
+                            "text": "Distribution of power guide",
+                            "children": []
+                        },
+                        {
+                            "text": "Warfare",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

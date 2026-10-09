@@ -1,0 +1,301 @@
+{
+    "pageid": 6332,
+    "title": "HF battle events",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/HF_battle_events.txt"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Event",
+                            "Notes"
+                        ],
+                        [
+                            "HFP.10997",
+                            "On-death event to log commander deaths in game.",
+                            "Testing events"
+                        ],
+                        [
+                            "HFP.10998",
+                            "TEST event to set correct paths - how? Fire on the (\"ENEMY\") LIEGE of a commander for testing",
+                            ""
+                        ],
+                        [
+                            "HFP.10999",
+                            "TEST event to set correct paths - fires for a commander (Can also be used to test being a commander)",
+                            ""
+                        ],
+                        [
+                            "HFP.11000",
+                            "Tombola for battle events - fires for a commander leading a unit in battle",
+                            ""
+                        ],
+                        [
+                            "HFP.11001",
+                            "BATTLE EVENT: Killed in action (fired from HFP.11000)",
+                            ""
+                        ],
+                        [
+                            "HFP.11002",
+                            "Follow-up: Home (liege) is informed that their commander has been killed (fired from HFP.11001)",
+                            ""
+                        ],
+                        [
+                            "HFP.11003",
+                            "Follow-up: Enemy COMMANDER is informed that the commander of the opposing forces has been killed AND dropped a weapon (fired from HFP.11001)",
+                            ""
+                        ],
+                        [
+                            "HFP.11004",
+                            "Follow-up: Enemy LIEGE is informed that the commander of the opposing forces has been killed AND dropped a weapon",
+                            "(either a follow-up from HFP.11003, or from HFP.11001 (for the killed commander) if no friendly commander was present)"
+                        ],
+                        [
+                            "HFP.11005",
+                            "Follow-up: Enemy liege *or* commander is informed that the commander of the opposing forces has been killed.",
+                            "(Sent from HFP.11001 (from the killed commander) if no weapon was dropped)"
+                        ],
+                        [
+                            "HFP.11010",
+                            "BATTLE EVENT: Generic Wounded in action (fired from HFP.11000)",
+                            "(\"inspired\" by 243)"
+                        ],
+                        [
+                            "HFP.11011",
+                            "BATTLE EVENT: Maimed in action (fired from HFP.11000)",
+                            "(\"inspired\" by 244)"
+                        ],
+                        [
+                            "HFP.11012",
+                            "BATTLE EVENT: Serious head injury in action (fired from HFP.11000)",
+                            "(inspired by 245)"
+                        ],
+                        [
+                            "HFP.11013",
+                            "BATTLE EVENT: Character skill improves (fired from HFP.11000)",
+                            "(remake of 246)"
+                        ],
+                        [
+                            "HFP.11014",
+                            "BATTLE EVENT: Flat improvement to martial skill (fired from HFP.11000)",
+                            "247"
+                        ],
+                        [
+                            "HFP.11015",
+                            "Follow-up: Liege gets notified about commander doing well, inspiring troops!",
+                            ""
+                        ],
+                        [
+                            "HFP.11016",
+                            "BATTLE EVENT: Tech Increase in Capital (fired from HFP.11000)",
+                            ""
+                        ],
+                        [
+                            "HFP.11017",
+                            "BATTLE EVENT: Gain Commander trait (fired from HFP.11000)",
+                            ""
+                        ],
+                        [
+                            "HFP.11018",
+                            "Follow-up: Enemy COMMANDER/LIEGE is informed that the commander of the opposing forces has dropped an item in exchange for their life (Sent from event: HFP.11011)",
+                            ""
+                        ],
+                        [
+                            "HFP.11019",
+                            "BATTLE EVENT: Follow-up: PTSD follow up (fired from add_battle_PTSD_effect in various places)",
+                            ""
+                        ],
+                        [
+                            "HFP.11020",
+                            "BATTLE EVENT: Gain Commander trait 2 (fired from HFP.11000)",
+                            ""
+                        ],
+                        [
+                            "HFP.11021",
+                            "BATTLE EVENT: Gain Commander trait 3 (fired from HFP.11000)",
+                            ""
+                        ],
+                        [
+                            "HFP.11022",
+                            "BATTLE EVENT: Gain Commander trait 4 (fired from HFP.11000)",
+                            ""
+                        ],
+                        [
+                            "HFP.11023",
+                            "BATTLE EVENT: Marshal leading troops: Unnecessary violence (fired from HFP.11000)",
+                            ""
+                        ],
+                        [
+                            "HFP.11024",
+                            "Follow-up: For Liege: Marshal used unnecessary violence",
+                            ""
+                        ],
+                        [
+                            "HFP.11025",
+                            "BATTLE EVENT: Pet Animal to the rescue! Or choose to duel! (fired from HFP.11000)",
+                            ""
+                        ],
+                        [
+                            "HFP.11026",
+                            "BATTLE EVENT: Find a weapon on the battlefield... (fired from HFP.11000)",
+                            "Warrior Lodge members only"
+                        ],
+                        [
+                            "HFP.11027",
+                            "BATTLE EVENT: Choose a nickname...! \"Call me..\" what? (fired from HFP.11000)",
+                            ""
+                        ],
+                        [
+                            "HFP.11028",
+                            "BATTLE EVENT: Decapitating an enemy (fired from HFP.11000)",
+                            ""
+                        ],
+                        [
+                            "HFP.11029",
+                            "Potential follow-up: Home_liege receives news of the spectacular killing...",
+                            ""
+                        ],
+                        [
+                            "HFP.11030",
+                            "Follow-up: Home commander is rewarded by liege!",
+                            ""
+                        ],
+                        [
+                            "HFP.11031",
+                            "Follow-up: Enemy Commander receives news of their own tragic death... (actual death in earlier event)",
+                            ""
+                        ],
+                        [
+                            "HFP.11032",
+                            "Potential follow-up: Enemy Liege receives news of their commander's tragic death...",
+                            ""
+                        ],
+                        [
+                            "HFP.11033",
+                            "Potential follow-up: Home Commander is notified of rivalry (sent from event above)",
+                            ""
+                        ],
+                        [
+                            "HFP.11034",
+                            "BATTLE EVENT: You become brawny! (fired from HFP.11000)",
+                            ""
+                        ],
+                        [
+                            "HFP.11035",
+                            "Potential follow-up: Fellow commander gets to move a rock.",
+                            ""
+                        ],
+                        [
+                            "HFP.11036",
+                            "BATTLE EVENT: You are impressed by a fellow commander (fired from HFP.11000)",
+                            ""
+                        ],
+                        [
+                            "HFP.11039",
+                            "Potential follow-up: Fellow commander reacts to praise.",
+                            ""
+                        ],
+                        [
+                            "HFP.11037",
+                            "BATTLE EVENT: You reminisce about previous battles (hooked from previous events, fired from HFP.11000)",
+                            ""
+                        ],
+                        [
+                            "HFP.11038",
+                            "BATTLE EVENT: You personally kill a ton of enemies. And get a lodge specific nickname. (fired from HFP.11000)",
+                            ""
+                        ],
+                        [
+                            "HFP.11040",
+                            "Potential follow-up (from battlefield duels): commander_to_the_rescue pushed you out of the way...",
+                            ""
+                        ],
+                        [
+                            "HFP.11041",
+                            "Potential follow-up: for liege (from battlefield duels): commander_to_the_rescue pushed another commander out of the way...",
+                            ""
+                        ],
+                        [
+                            "HFP.11042",
+                            "BATTLE EVENT: a battle duel outcome... Fired from send_duel_result_event_effect (01_scripted_effects_duels.txt)",
+                            ""
+                        ],
+                        [
+                            "HFP.11043",
+                            "Potential follow-up: As the dueling opponent, find out that you killed home_commander... (Fired from the event above)",
+                            ""
+                        ],
+                        [
+                            "HFP.11044",
+                            "Delayed clean-up event: For the enemy_commander (sent from apply_opinion_reward_effect, above, for instance, but multiple places in this file)",
+                            ""
+                        ],
+                        [
+                            "HFP.11045",
+                            "BATTLE EVENT: a battle duel outcome... Fired from send_duel_result_event_effect (01_scripted_effects_duels.txt)",
+                            "Defending AI has to choose whether to be taken prisoner or killed..."
+                        ],
+                        [
+                            "HFP.11046",
+                            "Potential follow-up: As the dueling home_commander, get presented with a choice... (Fired from the event above)",
+                            ""
+                        ],
+                        [
+                            "HFP.11047",
+                            "Potential follow-up: AI (enemy_commander) actually dies and sends notification to their liege...",
+                            ""
+                        ],
+                        [
+                            "HFP.11048",
+                            "Potential follow-up: ROOT (liege) is informed that their commander has been killed (fired from event above)",
+                            "Clone of HFP.11002, but with correct scopes to fit this scenario."
+                        ],
+                        [
+                            "HFP.11049",
+                            "BATTLE EVENT: I saw someone who looked just like my child/friend (fired from HFP.11000)",
+                            ""
+                        ],
+                        [
+                            "HFP.11050",
+                            "BATTLE EVENT: Easy Pickin' (fired from HFP.11000)",
+                            ""
+                        ],
+                        [
+                            "HFP.30200",
+                            "(fired from HFP.11000, possiblity of death by crocodile in African regions)",
+                            ""
+                        ],
+                        [
+                            "HFP.400",
+                            "Chance for Duelist",
+                            "Special Events from Duel/Battle Experience"
+                        ],
+                        [
+                            "HFP.401",
+                            "Chance for Strategist",
+                            ""
+                        ],
+                        [
+                            "HFP.402",
+                            "Duelist Bloodline Earned",
+                            ""
+                        ],
+                        [
+                            "HFP.11051",
+                            "Hidden event to give commanders (who do not have it already) the commander bonus",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

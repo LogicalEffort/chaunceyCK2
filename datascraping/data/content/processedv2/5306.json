@@ -1,0 +1,393 @@
+{
+    "pageid": 5306,
+    "title": "Alternate start modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The common/alternate_start folder is used for defining settings for the alternate start generation, both Shattered World and Random World ."
+                }
+            ]
+        },
+        {
+            "heading": "Setting format",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Settings follow this format: name = { # Name of the setting. Same name in loc will be used, prefixed with \"setting_\". E.G., \"setting_name\" in this case. That key post-fixed with \"_tooltip\" will be used for the tooltip, and with \"_tooltip_delayed\" for the delayed tooltip"
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "paragraph",
+                    "text": "}"
+                }
+            ]
+        },
+        {
+            "heading": "Types",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Settings come in the following types:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "checkbox - Binary state. The \"checked\" option will be used if ticked. \"unchecked\" if not. For no effect, just leave the given option blank or omit it entirely.",
+                            "children": []
+                        },
+                        {
+                            "text": "slider - Discrete number line. The value chosen by the player can be referenced in script, and for some settings will affect code",
+                            "children": []
+                        },
+                        {
+                            "text": "double_slider - Discrete number line where the player sets two values rather than one. The values chosen by the player can be referenced in script, and for some settings will affect code",
+                            "children": []
+                        },
+                        {
+                            "text": "selection - Allows any number of distinct choices. The first one listed will be the default",
+                            "children": []
+                        },
+                        {
+                            "text": "custom - Allows any number of distinct choices. Uses window type with the same name as the option, prefixed with \"alt_setting_\" and post-fixed with \"_entry (E.G., alt_setting_tier_entry). The window type requires buttons with the same name as each choice. The first one listed will be the default. The window type also needs a \"selection_indicator\" icon. This will get moved to the upper-left corner of whichever option is selected",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Parameters",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Settings can set various parameters that will be executed by the code, or referenced by script.\nFull list of parameters with code effects:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can also define any parameter in order to reference it in script with the \"has_alternate_parameter\" trigger. E.G., \"test = hello\" would have no effect, but could be checked in script with has_alternate_parameter = { key = test value = hello }"
+                }
+            ]
+        },
+        {
+            "heading": "Sliders",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The following sliders have code effects:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "female_percentage  # The value here determines the chance of each ruler being female",
+                            "children": []
+                        },
+                        {
+                            "text": "marriage_percentage # The value here determines the chance of each (adult) ruler being married",
+                            "children": []
+                        },
+                        {
+                            "text": "num_counties # The max number of counties a count can be generated with. Counts will continually roll a 50% to get one more county until they either hit this cap, or fail a roll",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Double sliders",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The following double sliders have code effects:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "age_span # The value here determines the bounds within which character ages are generated",
+                            "children": []
+                        },
+                        {
+                            "text": "num_of_children # The value here determines how many children adult rulers have",
+                            "children": []
+                        },
+                        {
+                            "text": "dejure_kingdom_size # The value here determines how big randomly generated kingdoms are",
+                            "children": []
+                        },
+                        {
+                            "text": "dejure_empire_size # The value here determines how big randomly generated empires are",
+                            "children": []
+                        },
+                        {
+                            "text": "MORE TBA",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Execution order",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Settings are executed in priority order. When priority is the same, ties are broken by definition order.\nThe parameters of a setting are executed before the \"effect\" section.\nAll options are executed *after* the generation of counts, but before the game has actually started, unless \"apply_before_generation = yes\" is set. If set, the option is instead executed before character generation."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The on-action \"on_alternate_start\" will be run on game start if an alternate start is used. It fires after the generation is done, the save loaded, and execution of startup stuff completed"
+                }
+            ]
+        },
+        {
+            "heading": "Related triggers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Future:\nis_random_world = yes"
+                }
+            ]
+        },
+        {
+            "heading": "Related effects",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Culture and religion spread",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "It is possible to randomize cultures and religions.\nThe basic process is this:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "0. All cultures/religions are cleared from the map\n1. For every group, a random province is chosen as the seed province (for religions, this is weighted using \"religion_group_spawn\", which can use the special trigger any_religion_distance to check the distance to groups already spawned. Religion group spawn happens in a random order)\n2. Each province that neighbors a group gets its score calculated. Note that this means a province that borders multiple filled out provinces can have multiple entries. Even for the same group\n3. A province is picked by random (weighted proportionally by the score) from the score list, and given the culture/religion group\n4. Step 2 and 3 are repeated until all provinces have a culture/religion group\n5. For each group, the religion/culture is cleared once more. Each culture/religion within that group randomly picks a starting province within the area allocated to the group. Steps 2 through 4 are then run using cultures rather than group"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "On top of normal adjacencies, the adjacencies from the \"adjacencies\" section are used. See the \"adjacencies\" section of this document. These are *required* if your mod has islands, as otherwise they might end up with no culture or religion. Your territory thus has to be fully connected. You can ensure a score of 0 to make sure it only ever spreads via such an adjacency when there are literally no other options though."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Scoring is done by the culture_spread and so on sections. In vanilla you find these in 01_spread.txt. The scopes available are the culture/religion as ROOT, and the province being evaluated as FROM.\nFor the groups, the provided culture/religion scope is the first entry within the group."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can also set the following parameter in religions, cultures, and their groups:\nalternate_start = {\n\tsome_trigger\n}\nThe scope is the culture/religion (first culture/religion in group if on group-level). Can be used to check for specific settings and the like"
+                }
+            ]
+        },
+        {
+            "heading": "Kingdom and empire spread",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Kingdom/empire generation works somewhat similarly to culture and religion.\nHowever, instead of all cultures/religions getting evaluated at the same time, for title generation only a single title is generated at a time."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "On top of normal adjacencies, the adjacencies from the \"adjacencies\" section are used. See the \"adjacencies\" section of this document."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The algorithm is this:\n1. We keep a list of all provinces that are on the border of the duchies handed out so far\n2. We grab a random unassigned duchy that borders one of those provinces. If we're out of border provinces, we just grab a random unassigned duchy\n3. We then grab random duchies that border the just created kingdom until we either hit our target size (random number in the range provided by the slider slider) or we run out of bordering duchies\n4. If we're short of the minimum number of duchies, we try to find a neighboring kingdom to merge with. If the current kingdom is one duchy large, it will merge no matter what. Otherwise, it only merges if that would still leave it under the max duchy limit. E.G., if the min is 3 and the max 10, a 2-duchy kingdom would merge with a neighboring 8-duchy kingdom, but not a 9-duchy kingdom\n5. We return to step 2 until we are out of unassigned duchies\nFor empires, just replace \"duchy/kingdom\" with \"kingdom/empire\"."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "At the end of this process, the game attempts to give away duchies/kingdoms that are only slightly connected to the rest of the kingdom/empire, so as to get more realistic title shapes. This always respects the min and max duchies/kingdoms."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Duchies/kingdoms are picked similarly to provinces in the culture/religion spread; for every province the title being generated currently borders that is not already given to a title, a score is calculated. Note that like culture/religion spread, each unique border pair gets its own score, so if two provinces both border the same two provinces in another duchy, that's a total of four scores. This helps keep the titles compact."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The kingdom scoring is done in dejure_kingdom_spread.\nThe empire scoring is done in dejure_empire_spread.\nROOT is the province being evaluated.\nFROM is the province within the title closest to its geographical center of the title being generated, updated as more duchies/kingdoms are added to it.\nFROMFROM is the province bordering the province being evaluated"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The historical dejure kingdoms/empires get marked as inactive."
+                }
+            ]
+        },
+        {
+            "heading": "Adjacencies",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Adjacencies follow this format:\nadjacencies = {\n\t1 = 2 # The two provinces to connect. Order does not matter; the connection is two-way\n\t2 = 3\n\t...\n}"
+                }
+            ]
+        },
+        {
+            "heading": "Holy site generation",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The game will generate five holy sites for any religion with provinces on the map if the \"holy_sites = random\" parameter is provided."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any province with a county title is eligible for this. The selection ensures the same province cannot be selected twice. Parent religions will be processed before their heresies, ensuring you can base heresy holy sites partially or entirely on parent religion holy sites if you want."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A province is selected at random based on the weighting provided in \"holy_site_spread\"."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "To make nice-looking selection easier, we've added the following triggers:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "\"num_holy_sites_generated < 3\" - Checks how many holy sites exist for the religion at the moment",
+                            "children": []
+                        },
+                        {
+                            "text": "\"holy_site_distance = { target = FROM value < 200 }\" - Checks the distance to the nearest holy site of the target religion",
+                            "children": []
+                        },
+                        {
+                            "text": "\"religion_distance = { target = FROM value > 500 }\" - Checks the distance to the nearest province of the target religion. Be aware that this check can get very expensive if you're not careful. If you can, use holy_site_distance instead",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When holy sites are randomized, the preferred capital of the rel head title will be set to the first generated holy site."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The game makes sure all holy sites end up with a temple, increasing the # of holding slots if necessary. In Nomad titles this will result in no temple, but guarantees enough slots to build one"
+                }
+            ]
+        },
+        {
+            "heading": "Spread notes",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Be aware that the spread calculations use 32-bit fixed point numbers.\nThis means that if the sum of all chances is above roughly 2.1 million, the numbers will go negative and all hell breaks loose. Therefore, try to keep your numbers within reason.\nIt also means that modifiers smaller than 0.001 are not possible; it will be interpreted as 0."
+                }
+            ]
+        },
+        {
+            "heading": "Culture name generation",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The culture naming is very simple. The game will compile a list of every county that has the culture. It will then pick one at random (unweighted), and then 50-50 to pick either the county's adjective or the adjective of the duchy it is in.\nThe exact same thing is done for culture groups, except checking the counties' culture group rather than culture."
+                }
+            ]
+        },
+        {
+            "heading": "Religion name generation",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Religion naming comes in three formats: character name based, dynasty name based, and holy site based.\nThese are equally likely."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "What loc keys to use are defined in \"religion_name_formats\" (02_naming.txt in vanilla).\nNote that all three sections *must* have at least one key, or the game will crash when religion name randomization is used."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If holy site is picked, a random loc key from the \"holy_site\" section will be picked, and a random holy site will get picked and the name of the county inserted."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If character or dynasty based naming is picked, a list of all provinces with the religion will be made, much like for culture generation. One is picked at random, and the culture in that province used to generate the name.\nFor character name based, it will pick a random male name, weighted according to the regular naming weights.\nFor dynasty name based, it will pick a random dynasty of that culture with no restrictions. This pick is unweighted. The last word in the dynasty name will be used if it consists of more than one word. Apostrophes E.G., as in d'Anjou) will be considered as spaces."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It then takes a random loc key from the character/dynasty section, and runs it through localisation."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Gods, piety, and so on get their names randomly selected from the corresponding section in religion_name_formats. These are simply loc keys that provide suitable generic names. Heresies will take their descriptions from heresy_desc rather than desc.\nDescriptions will be unique as long as you have defined at least as many descriptions as there are religions that can spawn on the map, as divided between heresies and non-heresies."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Religions with no provinces will copy their parent religion's naming for gods and so on, while generating a name of their own based on the culture used for the parent religion's name, or its holy sites."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "After the naming has been decided the scripted effect \"randomize_religion_names_effect\" is called. There is no scope. It is used to activate, give holders and rename all religious titles."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When religion names are randomized, the icons will be replaced with the religion icon strips in gfx/interface/shattered_random"
+                }
+            ]
+        },
+        {
+            "heading": "Religion feature generation",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Religions are processed in definition order, except with all base religions first, then heresies. Reformed versions get their features removed, but no new ones generated since that gets handled by reforming the religion.\nFirst, the scripted effect \"reset_religion_features_effect\" is called. The scope provided is the religion as ROOT.\nThen features are picked according to the ai_will_do of the features.\nNote that the FROM scope will be undefined as there is no reformer."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When features are randomized, \"allows_matrilineal_marriage\" in governments will be ignored and assumed to always be \"yes\"."
+                }
+            ]
+        },
+        {
+            "heading": "Random duke/king/empire generation",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Random duke generation works pretty simply.\nWe roll a number from 0 up to and including 99. If it is below the \"duke_ignore_rate\" parameter, we skip this duchy."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "We make a list of all rulers in the duchy. We sort it by # of counties they have in the duchy. Then we grab the one with the most counties. Ties are broken by # of counties held (that is, if they hold more outside the duchy). A ruler is considered to hold their personal counties, and those of any vassal who is at least two levels below the tier being generated (not relevant for dukes, but gives better results for kings and emperors).\nIf they hold at least as many % of the duchy as \"duke_threshold\" duke parameter, we give them the duchy.\nFor the remaining rulers in the area, if they are still count-level and independent, we roll for each a number between 0 and 99. If it is below the \"duke_vassalization_rate\" parameter, they get vassalized by the duke. Rulers with more than half their realm outside the dejure area will not get vassalized"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For kings and emperors, same as above, but replace the word \"duke\".\nAny enclaves (defined as a realm bordering only a single realm, and not being coastal) get vassalized by the realm surrounding them, assuming they're higher tier"
+                }
+            ]
+        }
+    ]
+}

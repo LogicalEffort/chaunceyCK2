@@ -1,0 +1,604 @@
+{
+    "pageid": 28,
+    "title": "Economy",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The economic system in Crusader Kings II is made to reflect the medieval European feudal system . The game has a hierarchical structure where most nobles serve a liege."
+                }
+            ]
+        },
+        {
+            "heading": "Gaining wealth",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Regular income",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Special rules apply to nomads, see below."
+                }
+            ]
+        },
+        {
+            "heading": "Demesne taxes",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The primary source of income for lower-tier feudal rulers, and a major source for a patrician , is usually the personal holdings of their demesne . Stewardship skill influences this demesne income greatly:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Personal and spouse Stewardship influence your demesne limit",
+                            "children": []
+                        },
+                        {
+                            "text": "The skill of your steward improves income in the province where you assign him to collect taxes",
+                            "children": []
+                        },
+                        {
+                            "text": "Total state Stewardship gives a boost to all demesne income",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some buildings also increase the tax income of castle holdings (Castle Walls and Castle Towns); these should be some of the first buildings you invest in, during early game."
+                }
+            ]
+        },
+        {
+            "heading": "Liege taxes",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Your vassals pay you taxes based on your tax rates and their income, combined with their opinion of you - negative opinion means less taxes than usual. (Special rules apply to Catholic theocracies, see below.) Tax rates are part of your demesne laws and set separately for each government type; with Conclave enabled, high tax rates reduce the maximum liege levy, otherwise there is no downside except reduced opinion of you."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Feudal vassals usually generate little income regardless of tax rate, and are better at providing you with large levies.",
+                            "children": []
+                        },
+                        {
+                            "text": "Republican vassals, to the contrary, are militarily weak and excellent for making money, but feudal rulers are limited to < 10% of counties under republican control for this exact reason. Merchant republics also only pay half the republic tax rate, generating little more tax income than a rich city even when large.",
+                            "children": []
+                        },
+                        {
+                            "text": "Theocracies are relatively rich and decently powerful, but if Catholic, they will only pay you taxes if they prefer you to the Pope , which is rarely the case. Also, a vassal pope or antipope will only pay you taxes if he has a positive opinion of you.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Taxes paid by vassals can be seen in the liege's \"Vassals\" tab, and totals for each vassal government type are shown in the liege's demesne screen."
+                }
+            ]
+        },
+        {
+            "heading": "Trade",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Trade posts in coastal or important Silk Road counties can generate a large trade income at a very low construction price. The tax income from cities and the trade income from all trade posts within the associated trade zone is also boosted depending on its size, up to a limit of 50% for cities and 100% for trade posts in a large trade-post zone; in Silk Road counties, an income boost also applies to castles and temples."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "However, only the controller of an important Silk Road county can build a trade post there, which is destroyed if the county changes hands, and trade posts outside the Silk Road can only be built by patricians of a merchant republic , for whom they are usually the primary source of income. They can also be built on the African continent (Trans-Saharan) trade route."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Non-republican rulers can still use republics to increase coastal city income - either take advantage of an existing republic near your lands, or, if you control a (preferably small) coastal duchy, create your own vassal merchant republic ."
+                }
+            ]
+        },
+        {
+            "heading": "For nomad rulers",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Nomads recieve additional gold based on their Population and unused Manpower ."
+                }
+            ]
+        },
+        {
+            "heading": "Warfare",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Winning certain types of wars can increase your wealth:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Expanding your realm will increase your potential tax base. Unlike levies, tax income is not affected by any de jure modifiers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Winning an Embargo war pays money for every trade post on your lands. However, if the trade posts form a big trade zone, your cities within the trade zone might suffer a substantial loss of income; consider only fighting an Embargo war when another merchant republic pays you to do so, the assumption being that the other merchant republic will then build trade posts to replace those razed.",
+                            "children": []
+                        },
+                        {
+                            "text": "Winning a Free Captives war extracts funds.",
+                            "children": []
+                        },
+                        {
+                            "text": "Winning an Extort Tribute war forces the defender to pay 40% of their income until your death. Other types of tributaries provide less income but persist through succession.",
+                            "children": []
+                        },
+                        {
+                            "text": "Winning a defensive war usually results in payments of reparations. The defender's computed income may be largest if you avoid occupying their demesne.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Simply fighting a war can increase your wealth as well:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Sieges result in a small amount of gold, and captured nobles will ransom themselves.",
+                            "children": []
+                        },
+                        {
+                            "text": "As a Catholic, fighting wars against heathens might earn you some funding from the Papacy as well.  However, because you're employing the levies in the first place, this is not always cost-effective (unless you exclusively use levies from your vassals, which presents its own set of problems).",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "But money can also be lost through conflict:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If provinces are sieged or raided, you and your vassals lose tax income, and recovery can take a long time.",
+                            "children": []
+                        },
+                        {
+                            "text": "With The Reaper's Due DLC, prolonged sieges/occupation also decrease prosperity .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Raiding and pillaging",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Pagan, Norse-cultured, or nomadic rulers, and all independent and some vassal tribal rulers, can raid neighbouring counties for gold and prestige, or any coastal county if they have ships. Raiding armies cost only 10% of regular maintenance when otherwise at peace, and need not be large enough to siege holdings (known as sacking in this case), but successful sieges by raiders (at most once every three years) do give you much more gold."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For tribal rulers, raids on rich, but poorly defended and fortified counties are the best way to quickly make money, and a good way to raise much-needed prestige. However, beware of your target's armies - if they engage your raiders and win, you won't get any gold, and won't be able to raid the target realm again for five years. Even after your raid has concluded, the target realm's armies will remain hostile to you for half a year."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Tribal and nomadic rulers can also pillage holdings they control, slowly destroying them (two building levels every six months, or once every ten years for occupied enemy holdings) until no buildings are left, at which point the holding slot becomes empty. This has the following benefits:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "50 gold (some population instead for nomads pillaging tribes) and five technology points per holding and pillaging tick)",
+                            "children": []
+                        },
+                        {
+                            "text": "Tribal rulers: Increased income and levies per empty holding slot if there is a tribe holding in the same county",
+                            "children": []
+                        },
+                        {
+                            "text": "Nomad rulers: Increased maximum population per empty holding slot, for more potential nomad tax and horde troops",
+                            "children": []
+                        },
+                        {
+                            "text": "The land becomes effectively useless for feudal rulers, who will likely make little to no effort to claim it for themselves",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Pillaging also raises revolt risk by a massive 30%, so you should keep some armies near counties where pillaging is in progress. The revolt risk does not stack when pillaging multiple holdings in the same county, though."
+                }
+            ]
+        },
+        {
+            "heading": "Prisoners",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Imprison without tyranny:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Battles",
+                            "children": []
+                        },
+                        {
+                            "text": "Sieges",
+                            "children": []
+                        },
+                        {
+                            "text": "Imprison plotters",
+                            "children": [
+                                {
+                                    "text": "Be notified of new plots: in message settings , set \"minor plot uncovered\" to \"high priority\" or \"popup and pause\"",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Imprisoning the vassal of a vassal is nearly risk-free. If the imprisonment fails, they will abdicate to their heir and flee.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Imprison excommunicated characters",
+                            "children": []
+                        },
+                        {
+                            "text": "With the Intrigue focus , spy on characters to uncover imprisonment reasons, or simply kidnap them",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Turn prisoners into cash:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Banish prisoners who are also your courtiers , seizing all their cash.",
+                            "children": [
+                                {
+                                    "text": "If they're not your courtier, try inviting their spouse to your court before banishing them.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Ransom prisoners who have money or are closely related to landowners.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Inheritance",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Arrange for direct vassals to die without heirs.",
+                            "children": [
+                                {
+                                    "text": "If a direct vassal who has no valid heir dies, you inherit by fallback to appointment. You inherit titles, wealth, artifacts, retinues, and tech points.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Arrange for rich courtiers to die without heirs in your court.",
+                            "children": [
+                                {
+                                    "text": "If a courtier who has no living parents and no living offspring or siblings dies in your court, you inherit their wealth.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Lowborn council members are often wealthy. So are former mayors/bishops, displaced by holy war or title revocation .",
+                                    "children": []
+                                },
+                                {
+                                    "text": "You can use the Character Finder to search for unmarried non-rulers and Join your court = Yes, sorted for oldest first, then click on each portrait to view the Family tab. Invite childless characters with gold to your court and wait for them to die -- or Plot to Kill. This is sometimes called 'oldmining'.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Religious decisions",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These decisions require Sons of Abraham ."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Borrow from holy orders .",
+                            "children": []
+                        },
+                        {
+                            "text": "Borrow 300 gold from Jewish moneylenders.",
+                            "children": [
+                                {
+                                    "text": "Expel Jews (if you are independent), cancelling the debt and giving even more gold (based on your yearly income). Be warned that this action will give your ruler the Arbitrary trait if you owe them.",
+                                    "children": [
+                                        {
+                                            "text": "After 20 years or a succession, welcome the Jews back (if you are king).",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Catholic-specific",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Make your bishops like you more than they like the Pope.",
+                            "children": [
+                                {
+                                    "text": "Check the list on the Religion screen ( F9 ) and appoint any who are close as commanders for +5 opinion.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Invest Content courtiers as bishops.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "As a Catholic emperor, vassalize the Pope.",
+                            "children": [
+                                {
+                                    "text": "As long as the Pope is not asked for papal-related favours, he is likely to have a positive opinion of the liege. Another benefit is that the emperor is protected from excommunication.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Ask the Pope for money.",
+                            "children": [
+                                {
+                                    "text": "A Pope or Antipope with many virtues will collect taxes from more bishops.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Spending wealth",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Money can be spent in many ways, including:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Construction",
+                            "children": [
+                                {
+                                    "text": "Some new buildings generate income and pay for themselves over time",
+                                    "children": [
+                                        {
+                                            "text": "Patricians of merchant republics can build trade posts to increase their income, as can anyone along the Silk Road and Trans-Saharan Route.",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Construction of new holdings and hospital buildings requires significant wealth",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "War",
+                            "children": [
+                                {
+                                    "text": "Supporting demesne levies costs money while they are raised",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Hiring mercenaries and reinforcing retinues costs even more",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Relations",
+                            "children": [
+                                {
+                                    "text": "Bribes to increase opinion from other characters",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Favors to make specific requests from other characters",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Creating or peacefully usurping titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Crafting artifacts with a smith.",
+                            "children": []
+                        },
+                        {
+                            "text": "Coronations for Catholic kings and emperors can be expensive.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "As one can imagine, spending your wealth with the aim of further increasing it is a key part of gameplay."
+                }
+            ]
+        },
+        {
+            "heading": "Debt",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If you have negative wealth:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Warfare will be difficult:",
+                            "children": [
+                                {
+                                    "text": "You cannot declare war while bankrupt",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Your armies will have lowered morale",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Mercenaries may desert, switch sides, or decide to invade your realm",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Negative modifiers may appear in your demesne provinces , causing bad effects for years:",
+                            "children": [
+                                {
+                                    "text": "Bandits (aka Incompetent Ruler ), increasing revolt risk",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Thieves Guild , reducing demesne income",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Highway Robbers , reducing levy size and supply limit",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Smugglers' Ring , slowing construction and making construction more expensive, while increasing disease risk.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Events may allow you to borrow money or ask vassals for money.",
+                            "children": []
+                        },
+                        {
+                            "text": "Construction of great works will be paused.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Luckily, your heir will not inherit the debt. But, they will inherit the negative modifiers in the demesne provinces."
+                }
+            ]
+        },
+        {
+            "heading": "Summary",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Through several different methods, you can increase your income, but if you're not careful, you won't get any (or much) use out of it."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Construct buildings .",
+                            "children": []
+                        },
+                        {
+                            "text": "Without Conclave: find a suitable tax level. Balance it between good opinion and high taxes. Remember that you need good opinion for high vassal levies.",
+                            "children": []
+                        },
+                        {
+                            "text": "If you get the opportunity (as a Catholic ruler), appoint an antipope .",
+                            "children": []
+                        },
+                        {
+                            "text": "Research relevant technology .",
+                            "children": []
+                        },
+                        {
+                            "text": "Create vassal republics .",
+                            "children": []
+                        },
+                        {
+                            "text": "Take control of the Silk Road for your Demense.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

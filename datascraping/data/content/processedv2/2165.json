@@ -1,0 +1,427 @@
+{
+    "pageid": 2165,
+    "title": "Notifications",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "CK2 being a complex sandbox game, the amount of notifications received by the player is vital: too few and opportunities will be missed, too many and game will become a headache."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There are two types of notifications: messages and alerts."
+                }
+            ]
+        },
+        {
+            "heading": "Messages",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Messages are notifications that depend on a configurable priority based on the message source and category."
+                }
+            ]
+        },
+        {
+            "heading": "Sources",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Close relatives",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters of interest: they are marked via the important character toggle after right-click. They are limited to maximum 20 characters (list is visible in the outliner)",
+                            "children": []
+                        },
+                        {
+                            "text": "Other characters: any character not in the previous cases.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Priorities",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Priority",
+                            "Description"
+                        ],
+                        [
+                            "",
+                            "Priority 1",
+                            "Message appears as a popup, similar to events."
+                        ],
+                        [
+                            "",
+                            "Priority 2 (High priority)",
+                            "Message appears in the high priority message feed. Newer message will appear on top of existing ones, and will disappear after a few months."
+                        ],
+                        [
+                            "",
+                            "Priority 3 (Low priority)",
+                            "Message appears in the low priority message feed. Newer message will appear on top of existing ones, and will disappear after a few months."
+                        ],
+                        [
+                            "",
+                            "Priority 4",
+                            "Message appears in the log feed. It can be accessed by clicking the (+) button on the bottom of the screen."
+                        ],
+                        [
+                            "",
+                            "Priority 5",
+                            "Message does not appear"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Settings",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For each category of messages and the source of the message, a priority can be set."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Default settings are in \\common\\Crusader Kings II\\interface\\messagetypes.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Custom settings are saved under \\Documents\\Paradox Interactive\\Crusader Kings II\\interface\\messagetypes_custom.txt"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "After a major patch, custom settings will be reset to the new defaults, so for heavily customised settings, it might be worth keeping a backup and manually merging with the new settings."
+                }
+            ]
+        },
+        {
+            "heading": "Alerts",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Alerts are the circular icons at the top of the screen."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is not possible to add new alerts via modding."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "By right-clicking an alert, you can:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Dismiss it temporarily"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Disable it forever"
+                }
+            ]
+        },
+        {
+            "heading": "Restoring alerts",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In order to restore disabled or dismissed alerts:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Open the outliner category configuration",
+                            "children": []
+                        },
+                        {
+                            "text": "Check the box Disabled Alerts",
+                            "children": []
+                        },
+                        {
+                            "text": "In the outliner, click on the alerts that need to be restored",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "List of alerts",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Alert",
+                            "Details"
+                        ],
+                        [
+                            "",
+                            "Budget Deficit",
+                            "Economy"
+                        ],
+                        [
+                            "",
+                            "Ruler is unmarried",
+                            "Marriage#Potential spouses"
+                        ],
+                        [
+                            "",
+                            "Unmarried Heir",
+                            "Marriage#Potential spouses"
+                        ],
+                        [
+                            "",
+                            "Betrothed can marry",
+                            "Marriage#Betrothal"
+                        ],
+                        [
+                            "",
+                            "Successor Nomination",
+                            "Succession , Feudal elective"
+                        ],
+                        [
+                            "",
+                            "Title Loss on Succession",
+                            "Gavelkind#Strategies"
+                        ],
+                        [
+                            "",
+                            "If your ruler dies now the game will end!",
+                            "Game over , Breeding"
+                        ],
+                        [
+                            "",
+                            "Pick an Ambition",
+                            "Ambitions"
+                        ],
+                        [
+                            "",
+                            "Open Council Position(s)",
+                            "Council"
+                        ],
+                        [
+                            "",
+                            "Children Lack a Guardian",
+                            "Education#Strategies"
+                        ],
+                        [
+                            "",
+                            "Unlanded Son(s)",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Can Press De Jure Claim(s)",
+                            "Claims"
+                        ],
+                        [
+                            "",
+                            "Can Press Weak Claim(s)",
+                            "Claims"
+                        ],
+                        [
+                            "",
+                            "Vassal Levies Raised Too Long",
+                            "Warfare#The Home Front"
+                        ],
+                        [
+                            "",
+                            "Title(s) can be Created",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Title(s) can be Usurped",
+                            ""
+                        ],
+                        [
+                            "",
+                            "You Should Invest in a Technological Advance",
+                            "Technology#Strategy"
+                        ],
+                        [
+                            "",
+                            "Righteous Imprisonment",
+                            "Imprisonment"
+                        ],
+                        [
+                            "",
+                            "Dangerous Faction(s)",
+                            "Factions and Distribution of power guide"
+                        ],
+                        [
+                            "",
+                            "We can call in Allies",
+                            "Alliances , Warfare#Strategies"
+                        ],
+                        [
+                            "",
+                            "We can call in vassals of our former liege",
+                            ""
+                        ],
+                        [
+                            "",
+                            "New Important Decisions are Available",
+                            "Decisions"
+                        ],
+                        [
+                            "",
+                            "Demesne Too Big",
+                            "Demesne limit and Distribution of power guide"
+                        ],
+                        [
+                            "",
+                            "Wrong type of Holding in Demesne",
+                            "Holdings#Strategies"
+                        ],
+                        [
+                            "",
+                            "Truces are Expiring",
+                            "Warfare#Truces"
+                        ],
+                        [
+                            "",
+                            "Vassal Inheritance Warning",
+                            "Inheritance#Inheritance Conflict"
+                        ],
+                        [
+                            "",
+                            "Adventurer Threats",
+                            "Adventurers"
+                        ],
+                        [
+                            "",
+                            "Religion can be Reformed",
+                            "Reformation"
+                        ],
+                        [
+                            "",
+                            "Preparing to Invade",
+                            "Casus Belli#Prepared Invasion"
+                        ],
+                        [
+                            "",
+                            "High Decadence",
+                            "Decadence#Managing Decadence"
+                        ],
+                        [
+                            "",
+                            "Over Vassal Limit",
+                            "Vassal limit"
+                        ],
+                        [
+                            "",
+                            "Pick a Focus",
+                            "Focus"
+                        ],
+                        [
+                            "",
+                            "Special Character Actions Possible",
+                            "Diplomatic actions"
+                        ],
+                        [
+                            "",
+                            "Special Title Actions Possible",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Special Holding Actions Possible",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Special Minor Titles Grantable",
+                            "Honorary titles"
+                        ],
+                        [
+                            "",
+                            "Clans Want More Land",
+                            "Nomadism#Clans"
+                        ],
+                        [
+                            "",
+                            "Over Clan Limit",
+                            "Nomadism#Clans"
+                        ],
+                        [
+                            "",
+                            "Inefficient Land Management",
+                            "Nomadism"
+                        ],
+                        [
+                            "",
+                            "Children lack a Childhood Focus",
+                            "Education (Conclave)"
+                        ],
+                        [
+                            "",
+                            "Children lack an Education Focus",
+                            "Education (Conclave)"
+                        ],
+                        [
+                            "",
+                            "Characters owe you Favors",
+                            "Favors"
+                        ],
+                        [
+                            "",
+                            "Council is Discontent",
+                            "Council"
+                        ],
+                        [
+                            "",
+                            "Your Liege's Council is Discontent",
+                            "Council"
+                        ],
+                        [
+                            "",
+                            "You are enforcing Realm Peace",
+                            "Realm peace"
+                        ],
+                        [
+                            "",
+                            "Realm Peace Enforce",
+                            "Realm peace"
+                        ],
+                        [
+                            "",
+                            "Liege enforcing Realm Peace",
+                            "Realm peace"
+                        ],
+                        [
+                            "",
+                            "Liege has Enforced Realm Peace",
+                            "Realm peace"
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

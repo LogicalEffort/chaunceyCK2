@@ -1,0 +1,280 @@
+{
+    "pageid": 84,
+    "title": "Plot",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A Plot is a scheme where multiple co-plotters cooperate toward a specific goal."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Plots are selected by right-clicking the target character or title. Some plots may also be listed as \"suggested plots\" in the Intrigue screen."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A character can only lead one plot at a time, but can back any number of plots led by others. They can be cancelled, but doing so will often incur a penalty. There is no cooldown to select another. Characters with the incapable trait cannot plot, and characters with the imbecile trait are restricted from using some plots."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For most plots, you must recruit a certain number of backers, generally at least one. When selecting them, each character in the list has an icon showing their willingness to back the plot:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": ": are willing to join",
+                            "children": []
+                        },
+                        {
+                            "text": ": can be bribed to join the plot (can be marked at +100 opinion or close to it, but bribe would not help)",
+                            "children": []
+                        },
+                        {
+                            "text": ": won't join the plot (even if bribed)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that this window doesn't necessarily list all characters that can be invited to join. The \"Auto-invite backers\" checkbox will automatically send invitations to every character willing to join, even if they're not listed here."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You will then be able to execute the plot by decision .  The Kill Character plot, however, does not have a related decision. The plotters instead get occasional chances of killing the target, which occur more frequently when more plotters are involved and with higher plot power."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The plot power is affected by the plot type:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "military plots gain power proportional to the plotters' military strength,",
+                            "children": []
+                        },
+                        {
+                            "text": "intrigue plots gain power in proportion to the plotters' intrigue attributes.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For military plots by vassals, the plot power of vassals of the target is equal to double the ratio of the available levies of the vassal divided by the levies of the liege. Equal-level rulers as the target who are in the same realm contribute the unmodified ratio. Foreign conspirators contribute one-third the ratio of their levies to the target's levies."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For plots by lieges on their vassals, plot power seems to depend on some combination of the plotter's strength relative to their liege and to the plotter's intrigue score relative to the target, but the exact formula is not known."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Plot",
+                            "Requirements",
+                            "Type",
+                            "Execution",
+                            "Bonus"
+                        ],
+                        [
+                            "",
+                            "Gain Vassal's Title ( Revoke [county or duchy] )",
+                            "Not a Patrician Target is not merchant republic No truce or NAP with target Title was not granted in the last year Title is not special (holy order, mercenary, or religious head) One of the following: county outside duke's primary duchy or duke with no de jure counties in his realm or any county in duchy that (1) is held by liege and (2) contains liege's capital or secondary county of a multi-count or you have a tyrannical bloodline Note : if Content , will not appear in suggested plots, but can still be started by right-clicking the desired title",
+                            "Military",
+                            "By decision 80% strength and 1 backer",
+                            "N/A"
+                        ],
+                        [
+                            "",
+                            "Kill Character",
+                            "Not your child No blood oath",
+                            "Intrigue",
+                            "By event",
+                            "N/A"
+                        ],
+                        [
+                            "",
+                            "Kill Spouse",
+                            "Spouse is not also your lover",
+                            "Intrigue",
+                            "By event",
+                            "Until Death Do Us Part achievement"
+                        ],
+                        [
+                            "",
+                            "Fabricate Claim on Liege",
+                            "Target title is direct de jure liege (or any vassal) of your primary title Target title is not a viceroyalty Liege is not parent Not heir to the target title User is feudal or tribal (patricians can't use this plot) Note : if Content , will not appear in suggested plots, but can still be started by right-clicking the desired title",
+                            "Intrigue",
+                            "75% and 3 backers (60% chance) OR 100% and 5 backers (90% chance)",
+                            "N/A"
+                        ],
+                        [
+                            "",
+                            "Fabricate Claim on Fellow Vassal",
+                            "Target title is either: Direct de jure liege title of any of your titles, or De jure vassal or below of your primary title Not heir to the target title User is feudal or tribal Target title is not a viceroyalty Target is feudal or tribal (and at least count tier) Same liege as target",
+                            "Intrigue",
+                            "75% and 3 backers (60% chance) OR 100% and 5 backers (90% chance)",
+                            "+1 Intrigue (if < 10)"
+                        ],
+                        [
+                            "",
+                            "Seize trade post",
+                            "Patrician in a merchant republic Not the current Doge of the republic Target has more trade posts than the plotter One of the plotter's trade posts border the target trade post",
+                            "Intrigue",
+                            "75% and 3 backers",
+                            "N/A"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "( Revoke [county or duchy] )"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Not a Patrician Target is not merchant republic No truce or NAP with target Title was not granted in the last year Title is not special (holy order, mercenary, or religious head) One of the following:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "county outside duke's primary duchy",
+                            "children": []
+                        },
+                        {
+                            "text": "or duke with no de jure counties in his realm",
+                            "children": []
+                        },
+                        {
+                            "text": "or any county in duchy that (1) is held by liege and (2) contains liege's capital",
+                            "children": []
+                        },
+                        {
+                            "text": "or secondary county of a multi-count",
+                            "children": []
+                        },
+                        {
+                            "text": "or you have a tyrannical bloodline",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note : if Content , will not appear in suggested plots, but can still be started by right-clicking the desired title"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "80% strength and 1 backer"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Target title is direct de jure liege (or any vassal) of your primary title",
+                            "children": []
+                        },
+                        {
+                            "text": "Target title is not a viceroyalty",
+                            "children": []
+                        },
+                        {
+                            "text": "Liege is not parent",
+                            "children": []
+                        },
+                        {
+                            "text": "Not heir to the target title",
+                            "children": []
+                        },
+                        {
+                            "text": "User is feudal or tribal (patricians can't use this plot)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note : if Content , will not appear in suggested plots, but can still be started by right-clicking the desired title"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "100% and 5 backers (90% chance)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Target title is either:",
+                            "children": [
+                                {
+                                    "text": "Direct de jure liege title of any of your titles, or",
+                                    "children": []
+                                },
+                                {
+                                    "text": "De jure vassal or below of your primary title",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Not heir to the target title",
+                            "children": []
+                        },
+                        {
+                            "text": "User is feudal or tribal",
+                            "children": []
+                        },
+                        {
+                            "text": "Target title is not a viceroyalty",
+                            "children": []
+                        },
+                        {
+                            "text": "Target is feudal or tribal (and at least count tier)",
+                            "children": []
+                        },
+                        {
+                            "text": "Same liege as target",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "100% and 5 backers (90% chance)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Not the current Doge of the republic Target has more trade posts than the plotter One of the plotter's trade posts border the target trade post"
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Objective modding",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

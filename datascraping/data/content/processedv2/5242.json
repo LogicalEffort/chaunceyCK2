@@ -1,0 +1,2399 @@
+{
+    "pageid": 5242,
+    "title": "Succession voting",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Succession voting is a feature of six succession methods: Elective gavelkind , Tanistry , Eldership , Feudal elective , Princely elective , and Imperial elective ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The succession law determines the voters, the possible candidates, and even how AI voters evaluate candidates."
+                }
+            ]
+        },
+        {
+            "heading": "Comparison of voting methods",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Succession law",
+                            "Candidates",
+                            "Voters",
+                            "Voting behavior (compared to feudal elective)"
+                        ],
+                        [
+                            "Elective gavelkind",
+                            "Ruler dynasty",
+                            "For count titles: No voters other than the ruler For duke+ titles: Direct(?) vassals one or two ranks lower",
+                            "Strongly prefer young adults [Warrior-value voters] Martial skill and personal combat skill"
+                        ],
+                        [
+                            "Ruler dynasty",
+                            "Tanistry",
+                            "Vassals one or two ranks lower",
+                            "Prefer older candidates Non close relatives preferred Claims less important"
+                        ],
+                        [
+                            "Ruler dynasty",
+                            "Eldership",
+                            "Six elders in the realm",
+                            "Prefer older candidates (but avoid voting for other Elders) Stewardship Opinion of candidate more important Opinion of ruler more important Displeased Elders may prefer bad candidates to spite the ruler"
+                        ],
+                        [
+                            "Feudal elective",
+                            "Ruler's close relatives (dynastic or landed count+) Claimants High-tier direct vassals High-tier independent de jure vassals",
+                            "High-tier direct vassals High-tier independent de jure vassals",
+                            "(Basis of comparison)"
+                        ],
+                        [
+                            "Princely elective (HRE)",
+                            "Ruler's close relatives (dynastic or landed count+) Claimants High-tier de jure vassals",
+                            "Seven de jure vassals Priority 1: seven specific titles Priority 2: duke+ theocracies Priority 3: duke+ feudal lords",
+                            "Same religion more important Piety much more important Emperor must be crowned by church to influence voters"
+                        ],
+                        [
+                            "Imperial elective (ERE)",
+                            "Ruler's close relatives Claimants Marshal Commanders",
+                            "Councilors Commanders",
+                            "Prefer adults Prefer high-martial commanders and marshal [Roman voters] Prefer high-diplomacy councilors and minor title holders [Greek voters] Prefer high-intrigue councilors and minor title holders [Byzantine voters] Prefer Born in the Purple or Despot"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Ruler dynasty",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "For count titles:",
+                            "children": [
+                                {
+                                    "text": "No voters other than the ruler",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "For duke+ titles:",
+                            "children": [
+                                {
+                                    "text": "Direct(?) vassals one or two ranks lower",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Strongly prefer young adults",
+                            "children": []
+                        },
+                        {
+                            "text": "[Warrior-value voters] Martial skill and personal combat skill",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Vassals one or two ranks lower",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Prefer older candidates",
+                            "children": []
+                        },
+                        {
+                            "text": "Non close relatives preferred",
+                            "children": []
+                        },
+                        {
+                            "text": "Claims less important",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Six elders in the realm",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Prefer older candidates (but avoid voting for other Elders)",
+                            "children": []
+                        },
+                        {
+                            "text": "Stewardship",
+                            "children": []
+                        },
+                        {
+                            "text": "Opinion of candidate more important",
+                            "children": []
+                        },
+                        {
+                            "text": "Opinion of ruler more important",
+                            "children": []
+                        },
+                        {
+                            "text": "Displeased Elders may prefer bad candidates to spite the ruler",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Ruler's close relatives (dynastic or landed count+)",
+                            "children": []
+                        },
+                        {
+                            "text": "Claimants",
+                            "children": []
+                        },
+                        {
+                            "text": "High-tier direct vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "High-tier independent de jure vassals",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "High-tier direct vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "High-tier independent de jure vassals",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Basis of comparison)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Ruler's close relatives (dynastic or landed count+)",
+                            "children": []
+                        },
+                        {
+                            "text": "Claimants",
+                            "children": []
+                        },
+                        {
+                            "text": "High-tier de jure vassals",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Seven de jure vassals",
+                            "children": [
+                                {
+                                    "text": "Priority 1: seven specific titles",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Priority 2: duke+ theocracies",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Priority 3: duke+ feudal lords",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Same religion more important",
+                            "children": []
+                        },
+                        {
+                            "text": "Piety much more important",
+                            "children": []
+                        },
+                        {
+                            "text": "Emperor must be crowned by church to influence voters",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Ruler's close relatives",
+                            "children": []
+                        },
+                        {
+                            "text": "Claimants",
+                            "children": []
+                        },
+                        {
+                            "text": "Marshal",
+                            "children": []
+                        },
+                        {
+                            "text": "Commanders",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Councilors",
+                            "children": []
+                        },
+                        {
+                            "text": "Commanders",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Prefer adults",
+                            "children": []
+                        },
+                        {
+                            "text": "Prefer high-martial commanders and marshal",
+                            "children": []
+                        },
+                        {
+                            "text": "[Roman voters] Prefer high-diplomacy councilors and minor title holders",
+                            "children": []
+                        },
+                        {
+                            "text": "[Greek voters] Prefer high-intrigue councilors and minor title holders",
+                            "children": []
+                        },
+                        {
+                            "text": "[Byzantine voters] Prefer Born in the Purple or Despot",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Voting behavior",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Most voters will vote for the candidate to whom they assign the highest score. However, a voter who is nominated by the ruler will usually vote for themselves (accepting the nomination), while members of claimant factions will often vote for their preferred claimant."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This section lists score modifiers for Feudal elective . The table above summarizes the ways in which other succession laws cause different voting behavior."
+                }
+            ]
+        },
+        {
+            "heading": "Voting for self",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Candidate = Voter"
+                        ],
+                        [
+                            "+40",
+                            "This is my destiny",
+                            "Self. Ambitious ."
+                        ],
+                        [
+                            "-25",
+                            "I do not like power",
+                            "Self. Not ambitious. Any of: Humble , Content , Craven , Slothful , Stressed , Depressed"
+                        ],
+                        [
+                            "+40",
+                            "I am the rightful heir",
+                            "Self. None of the traits listed above. Is child of the ruler."
+                        ],
+                        [
+                            "+15",
+                            "I like power",
+                            "Self. None of the traits listed above. Is not child of the ruler."
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Nepotism",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Voters prefer to elect their relatives. The ruler is especially interested in electing their children. The ruler also tends to nominate their dynastic heir (except under Eldership): when their dynasty is winning, they will avoid switching nominees or splitting on different titles."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Relationship of candidate to voter",
+                            "Voter"
+                        ],
+                        [
+                            "+10",
+                            "... is of my dynasty",
+                            "Same dynasty (but not close relative)",
+                            ""
+                        ],
+                        [
+                            "+20",
+                            "... is my relative",
+                            "Close relative (but not child)",
+                            ""
+                        ],
+                        [
+                            "+30",
+                            "... is my own child",
+                            "Child",
+                            "Is not the ruler"
+                        ],
+                        [
+                            "+60",
+                            "... is my own child",
+                            "Child",
+                            "Is the ruler"
+                        ],
+                        [
+                            "+50",
+                            "... is the rightful heir",
+                            "Is the ruler's current dynastic heir and NOT a rival",
+                            "Is the ruler"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Sexism",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Electors may vote against women (or against men) based on the title's laws and the voter's religion. Setting the Gender Equality game rule to \"All\" disables sexism-based voting."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Law",
+                            "Candidate",
+                            "Voter"
+                        ],
+                        [
+                            "-30",
+                            "Concerns about realm stability",
+                            "Agnatic-cognatic succession",
+                            "Female",
+                            "Religion does NOT have the feature Enatic Clans, Equality, or Harmonious (Bön)"
+                        ],
+                        [
+                            "-30",
+                            "Concerns about realm stability",
+                            "Enatic-cognatic succession",
+                            "Male",
+                            "Religion does NOT have the feature Agnatic Clans, Equality, or Harmonious (Bön)"
+                        ],
+                        [
+                            "-50",
+                            "Against tradition",
+                            "Status of Women 0 (Traditional)",
+                            "Female",
+                            "Religion does NOT have the feature Enatic Clans, Equality, or Harmonious (Bön)"
+                        ],
+                        [
+                            "-40",
+                            "Against tradition",
+                            "Status of Women 1 (Marginal)",
+                            "Female",
+                            "Religion does NOT have the feature Enatic Clans, Equality, or Harmonious (Bön)"
+                        ],
+                        [
+                            "-20",
+                            "Against tradition",
+                            "Status of Women 2 (Significant)",
+                            "Female",
+                            "Religion does NOT have the feature Enatic Clans, Equality, or Harmonious (Bön)"
+                        ],
+                        [
+                            "-10",
+                            "Against tradition",
+                            "Status of Women 3 (Notable)",
+                            "Female",
+                            "Religion does NOT have the feature Enatic Clans, Equality, or Harmonious (Bön)"
+                        ],
+                        [
+                            "-75",
+                            "She is just a Woman",
+                            "",
+                            "Female",
+                            "Religion has the feature Agnatic Clans"
+                        ],
+                        [
+                            "-75",
+                            "He is just a Man",
+                            "",
+                            "Male",
+                            "Religion has the feature Enatic Clans"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Ageism",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Each succession law has its own age preferences. Voters will not judge themselves on age."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Feudal Elective voters prefer adults who aren't too old, and especially adults close in age to the voter:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Candidate",
+                            "Voter"
+                        ],
+                        [
+                            "-30",
+                            "... is just a baby",
+                            "Age 0 to 4",
+                            ""
+                        ],
+                        [
+                            "-15",
+                            "... is only a child",
+                            "Age 5 to 9",
+                            ""
+                        ],
+                        [
+                            "-10",
+                            "... is only a child",
+                            "Age 10 to 15",
+                            ""
+                        ],
+                        [
+                            "-10",
+                            "... is too young",
+                            "Age 16 to 24",
+                            "Voter age 30+"
+                        ],
+                        [
+                            "-10",
+                            "... is too young",
+                            "Age 25 to 34",
+                            "Voter age 40+"
+                        ],
+                        [
+                            "-10",
+                            "... is past their prime",
+                            "Age 40 to 49",
+                            "Voter age below 40"
+                        ],
+                        [
+                            "-15",
+                            "... is too old",
+                            "Age 50+",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Culturism",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Voters prefer candidates of the same culture , especially if they share the ruler's culture. Culturism is more important for tribal/dynastic succession laws (Elective Gavelkind, Tanistry, Eldership)."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Voter vs candidate",
+                            "Voter vs ruler"
+                        ],
+                        [
+                            "+10",
+                            "... is [my culture]",
+                            "Same culture",
+                            ""
+                        ],
+                        [
+                            "-15",
+                            "... is a stranger to my customs",
+                            "Different culture (in group)",
+                            "Same culture as ruler"
+                        ],
+                        [
+                            "-30",
+                            "... is a foreigner",
+                            "Different culture group",
+                            "Same culture as ruler"
+                        ],
+                        [
+                            "-10",
+                            "... is a foreigner's pet",
+                            "Same culture",
+                            "Different culture from ruler"
+                        ],
+                        [
+                            "-15",
+                            "... is a foreigner's puppet",
+                            "Same culture",
+                            "Different culture group from ruler"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Faithism",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Voters prefer candidates of the same religion . Faithism is less important for tribal/dynastic succession laws."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Voter vs candidate",
+                            "Voter religion"
+                        ],
+                        [
+                            "-25",
+                            "... is an infidel",
+                            "Different religion in the same group, but not their heresy",
+                            "Not Eastern . Neither Cosmopolitan nor Dogmatic."
+                        ],
+                        [
+                            "-50",
+                            "... is a heathen",
+                            "Different religious group. Voter does not have the appropriate sympathy trait .",
+                            "Not Eastern. Neither Cosmopolitan nor Dogmatic."
+                        ],
+                        [
+                            "-50",
+                            "... is a heretic",
+                            "Heresy of voter's religion",
+                            "Not Eastern. Neither Cosmopolitan nor Dogmatic."
+                        ],
+                        [
+                            "-100",
+                            "... is a filthy unbeliever",
+                            "Different religion (any)",
+                            "Dogmatic"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Concerns when the candidate is a ruler",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Conditions"
+                        ],
+                        [
+                            "-15",
+                            "... might rule from abroad",
+                            "Duchy elections only. Voter is de jure. Candidate has a capital outside the de jure duchy."
+                        ],
+                        [
+                            "-30 to -500",
+                            "... is an encroaching foreigner ruler",
+                            "Candidate is a ruler outside of the titleholder's realm"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Barbarism",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With the feudal succession laws (shown here), feudal voters shun tribal candidates. With the tribal laws, the opposite occurs."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Candidate",
+                            "Voter"
+                        ],
+                        [
+                            "-15",
+                            "... is an uncivilized barbarian",
+                            "Neither feudal nor merchant republic",
+                            "Feudal or merchant republic"
+                        ],
+                        [
+                            "-15",
+                            "... is a lazy settler",
+                            "Not nomadic",
+                            "Nomadic"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Prestige",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Candidate"
+                        ],
+                        [
+                            "-20",
+                            "Infamous",
+                            "Prestige below -1000"
+                        ],
+                        [
+                            "-15",
+                            "Infamous",
+                            "Prestige below -500 (but not below -1000)"
+                        ],
+                        [
+                            "-10",
+                            "Infamous",
+                            "Prestige below -250 (but not below -500)"
+                        ],
+                        [
+                            "-5",
+                            "Infamous",
+                            "Prestige below 0 (but not below -250)"
+                        ],
+                        [
+                            "+5",
+                            "Prestigious",
+                            "Prestige at least 250 (but not at least 500)"
+                        ],
+                        [
+                            "+10",
+                            "Prestigious",
+                            "Prestige at least 500 (but not at least 1000)"
+                        ],
+                        [
+                            "+15",
+                            "Prestigious",
+                            "Prestige at least 1000"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Piety",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Candidate"
+                        ],
+                        [
+                            "-20",
+                            "Wicked",
+                            "Piety below -500"
+                        ],
+                        [
+                            "-15",
+                            "Wicked",
+                            "Piety below -250 (but not below -500)"
+                        ],
+                        [
+                            "-10",
+                            "Wicked",
+                            "Piety below -100 (but not below -250)"
+                        ],
+                        [
+                            "-5",
+                            "Wicked",
+                            "Piety below 0 (but not below -100)"
+                        ],
+                        [
+                            "+5",
+                            "Pious",
+                            "Piety at least 100 (but not at least 250)"
+                        ],
+                        [
+                            "+10",
+                            "Pious",
+                            "Piety at least 250 (but not at least 500)"
+                        ],
+                        [
+                            "+15",
+                            "Pious",
+                            "Piety at least 500"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Educational preferences",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Candidate",
+                            "Voter"
+                        ],
+                        [
+                            "+15",
+                            "... is a soldier",
+                            "10+ martial with (martial education or martial lifestyle)",
+                            "Warrior values"
+                        ],
+                        [
+                            "+15",
+                            "... is a diplomat",
+                            "10+ diplomacy with (diplomacy education or diplomacy lifestyle), or 10+ stewardship with (stewardship education or stewardship lifestyle)",
+                            "Diplomatic values"
+                        ],
+                        [
+                            "+15",
+                            "... is a scholar",
+                            "10+ learning with (learning education or learning lifestyle)",
+                            "Spiritual values"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Judgment of childhood traits",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Candidate",
+                            "Voter"
+                        ],
+                        [
+                            "+5",
+                            "... has a promising Playful attitude",
+                            "Playful",
+                            "Warrior values"
+                        ],
+                        [
+                            "+5",
+                            "... has a promising Rowdy attitude",
+                            "Rowdy",
+                            "Warrior values"
+                        ],
+                        [
+                            "+5",
+                            "... has a promising Haughty demeanor",
+                            "Haughty",
+                            "Diplomatic values"
+                        ],
+                        [
+                            "+5",
+                            "... has a promising Conscientious character",
+                            "Conscientious",
+                            "Diplomatic values"
+                        ],
+                        [
+                            "+5",
+                            "... has a promising Curious mind",
+                            "Curious",
+                            "Spiritual values"
+                        ],
+                        [
+                            "+5",
+                            "... is an Idolizer",
+                            "Idolizer",
+                            "Spiritual values"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Judgment of bad health traits",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Candidate",
+                            "Voter"
+                        ],
+                        [
+                            "-25",
+                            "... is Depressed",
+                            "Depressed",
+                            ""
+                        ],
+                        [
+                            "-5",
+                            "... is too Stressed",
+                            "Stressed",
+                            ""
+                        ],
+                        [
+                            "-5",
+                            "... is a Drunkard",
+                            "Drunkard",
+                            "Not Muslim"
+                        ],
+                        [
+                            "-15",
+                            "... is a wicked Drunkard",
+                            "Drunkard",
+                            "Muslim"
+                        ],
+                        [
+                            "-35",
+                            "... is unfit to rule",
+                            "Incapable",
+                            "Not warrior values"
+                        ],
+                        [
+                            "-50",
+                            "... is a drooling corpse waiting to die",
+                            "Incapable",
+                            "Warrior values"
+                        ],
+                        [
+                            "-15",
+                            "... is Infirm",
+                            "Infirm",
+                            "Not diplomatic values"
+                        ],
+                        [
+                            "-30",
+                            "Their mind has turned to mush",
+                            "Infirm",
+                            "Diplomatic values"
+                        ],
+                        [
+                            "-5",
+                            "... is Maimed",
+                            "Maimed",
+                            "Not warrior values"
+                        ],
+                        [
+                            "-15",
+                            "... is a Maimed wreck",
+                            "Maimed",
+                            "Warrior values"
+                        ],
+                        [
+                            "-30",
+                            "... is a stark-raving Lunatic",
+                            "Lunatic",
+                            "Neither tribal nor nomadic. Not Zealous."
+                        ],
+                        [
+                            "-35",
+                            "... is too unstable",
+                            "Possessed",
+                            "Neither tribal nor nomadic. Not Zealous."
+                        ],
+                        [
+                            "-60",
+                            "... has been Possessed by demons",
+                            "Possessed",
+                            "Neither tribal nor nomadic. Zealous."
+                        ],
+                        [
+                            "-15",
+                            "... is Wounded and might die soon",
+                            "Wounded",
+                            "(Voters will judge themselves on wounded and the traits below)"
+                        ],
+                        [
+                            "-15",
+                            "... is being consumed by the Aztec Disease",
+                            "Aztec Disease",
+                            ""
+                        ],
+                        [
+                            "-15",
+                            "... is being consumed by Camp Fever",
+                            "Camp Fever",
+                            ""
+                        ],
+                        [
+                            "-25",
+                            "... has Cancer",
+                            "Cancer",
+                            ""
+                        ],
+                        [
+                            "-25",
+                            "... has been struck by Consumption",
+                            "Consumption",
+                            ""
+                        ],
+                        [
+                            "-35",
+                            "... is being devastated by the Dancing Plague",
+                            "Dancing Plague",
+                            ""
+                        ],
+                        [
+                            "-15",
+                            "... is being consumed by Dysentery",
+                            "Dysentery",
+                            ""
+                        ],
+                        [
+                            "-5",
+                            "... is Sick and might die soon",
+                            "Flu",
+                            ""
+                        ],
+                        [
+                            "-10",
+                            "... is Sick and might die soon",
+                            "Food Poisoning",
+                            ""
+                        ],
+                        [
+                            "-5",
+                            "... is Sick and might die soon",
+                            "Gout",
+                            ""
+                        ],
+                        [
+                            "-15",
+                            "... has been struck by the Great Pox",
+                            "Has Great Pox",
+                            ""
+                        ],
+                        [
+                            "-10",
+                            "... is being consumed by the Slow Fever",
+                            "Has Slow Fever",
+                            ""
+                        ],
+                        [
+                            "-5",
+                            "... is Sick and might die soon",
+                            "Ill",
+                            ""
+                        ],
+                        [
+                            "-50",
+                            "... is a wretched Leper",
+                            "Leper",
+                            ""
+                        ],
+                        [
+                            "-10",
+                            "... is Sick and might die soon",
+                            "Measles",
+                            ""
+                        ],
+                        [
+                            "-25",
+                            "... is being consumed by Pneumonia",
+                            "Pneumonic",
+                            ""
+                        ],
+                        [
+                            "-25",
+                            "... is a Rabid wreck",
+                            "Rabies",
+                            ""
+                        ],
+                        [
+                            "-10",
+                            "... is being consumed by Scurvy",
+                            "Scurvy",
+                            ""
+                        ],
+                        [
+                            "-45",
+                            "... was born Sickly and might die soon",
+                            "Sickly",
+                            ""
+                        ],
+                        [
+                            "-15",
+                            "... has been struck by Small Pox",
+                            "Smallpox",
+                            ""
+                        ],
+                        [
+                            "-35",
+                            "... is about to die from the Plague",
+                            "The Plague",
+                            ""
+                        ],
+                        [
+                            "-15",
+                            "... has been Disfigured beyond recognition",
+                            "Disfigured",
+                            "Not Byzantine culture group. Not warrior values"
+                        ],
+                        [
+                            "-5",
+                            "... has been Disfigured beyond recognition",
+                            "Disfigured",
+                            "Not Byzantine culture group. Warrior values"
+                        ],
+                        [
+                            "-50",
+                            "... has been Disfigured beyond recognition",
+                            "Disfigured",
+                            "Byzantine culture group"
+                        ],
+                        [
+                            "-10",
+                            "... has been Mangled and might die soon",
+                            "Mangled",
+                            "Not warrior values"
+                        ],
+                        [
+                            "-15",
+                            "... has been Mangled and is no longer fit to fight",
+                            "Mangled",
+                            "Warrior values"
+                        ],
+                        [
+                            "-5",
+                            "... is One-Eyed",
+                            "One-Eyed",
+                            ""
+                        ],
+                        [
+                            "-5",
+                            "... is One-Handed",
+                            "One-Handed",
+                            ""
+                        ],
+                        [
+                            "-5",
+                            "... is One-Legged",
+                            "One-Legged",
+                            ""
+                        ],
+                        [
+                            "-10",
+                            "... has been Severly Injured and might die soon",
+                            "Severely Injured",
+                            "Not warrior values"
+                        ],
+                        [
+                            "-10",
+                            "... has been Blinded",
+                            "Blinded",
+                            "Not Byzantine culture group. Not warrior values"
+                        ],
+                        [
+                            "-20",
+                            "... has been Blinded",
+                            "Blinded",
+                            "Not Byzantine culture group. Warrior values"
+                        ],
+                        [
+                            "-75",
+                            "... has been Blinded",
+                            "Blinded",
+                            "Byzantine culture group"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Attraction",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Candidate",
+                            "Voter"
+                        ],
+                        [
+                            "+10",
+                            "... is a very Attractive man/woman",
+                            "Adult At least one attractive trait: Attractive , Groomed , Just , Brave , Gregarious , Master seducer , Master seductress , Brawny , Strong , Socializer No unattractive traits",
+                            "Adult Interested in the candidate's gender Is not a close relative, or follows a divine marriage religion Is not Celibate Is not Chaste and married (except when married to the candidate)"
+                        ],
+                        [
+                            "Adult Interested in the candidate's gender Is not a close relative, or follows a divine marriage religion Is not Celibate Is not Chaste and married (except when married to the candidate)",
+                            "-10",
+                            "... is Ugly",
+                            "Adult At least one unattractive trait: Ugly , Uncouth , 36 others No attractive traits"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "At least one attractive trait: Attractive , Groomed , Just , Brave , Gregarious , Master seducer , Master seductress , Brawny , Strong , Socializer",
+                            "children": []
+                        },
+                        {
+                            "text": "No unattractive traits",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Interested in the candidate's gender",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not a close relative, or follows a divine marriage religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not Celibate",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not Chaste and married (except when married to the candidate)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "At least one unattractive trait: Ugly , Uncouth , 36 others",
+                            "children": []
+                        },
+                        {
+                            "text": "No attractive traits",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Judgment of genetic traits",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Voters with diplomatic values are more concerned with intelligence. Voters with warrior values are more concerned with strength and stature."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Candidate",
+                            "Voter"
+                        ],
+                        [
+                            "+20",
+                            "... is a brilliant man/woman",
+                            "Genius",
+                            "Diplomatic values or spiritual values"
+                        ],
+                        [
+                            "+10",
+                            "... is a brilliant man/woman",
+                            "Genius",
+                            "Neither diplomatic values nor spiritual values"
+                        ],
+                        [
+                            "+10",
+                            "... is a very smart man/woman",
+                            "Quick",
+                            "Diplomatic values or spiritual values"
+                        ],
+                        [
+                            "+5",
+                            "... is a very smart man/woman",
+                            "Quick",
+                            "Neither diplomatic values nor spiritual values"
+                        ],
+                        [
+                            "+5",
+                            "... is a Strong man/woman",
+                            "Strong",
+                            "Not warrior values"
+                        ],
+                        [
+                            "+10",
+                            "... is a Strong man/woman",
+                            "Strong",
+                            "Warrior values"
+                        ],
+                        [
+                            "-5",
+                            "... is Clubfooted",
+                            "Clubfooted",
+                            ""
+                        ],
+                        [
+                            "-15",
+                            "... is a Dwarf",
+                            "Dwarf",
+                            "Not warrior values"
+                        ],
+                        [
+                            "-35",
+                            "... is just a Dwarf",
+                            "Dwarf",
+                            "Warrior values"
+                        ],
+                        [
+                            "-5",
+                            "... has a Harelip",
+                            "Harelip",
+                            ""
+                        ],
+                        [
+                            "-15",
+                            "... is a Hunchback",
+                            "Hunchback",
+                            "Not warrior values"
+                        ],
+                        [
+                            "-30",
+                            "... is a deformed freak",
+                            "Hunchback",
+                            "Warrior values"
+                        ],
+                        [
+                            "-10",
+                            "... is an Imbecile",
+                            "Imbecile",
+                            "Not diplomatic values"
+                        ],
+                        [
+                            "-20",
+                            "... is an unqualified idiot",
+                            "Imbecile",
+                            "Diplomatic values"
+                        ],
+                        [
+                            "-15",
+                            "... is an Inbred freak",
+                            "Inbred",
+                            ""
+                        ],
+                        [
+                            "-5",
+                            "... has a Lisp",
+                            "Lisp",
+                            ""
+                        ],
+                        [
+                            "-5",
+                            "... is Slow -minded",
+                            "Slow",
+                            "Not diplomatic values"
+                        ],
+                        [
+                            "-10",
+                            "... has a feeble mind",
+                            "Slow",
+                            "Diplomatic values"
+                        ],
+                        [
+                            "-5",
+                            "... has a Stutter",
+                            "Stutter",
+                            ""
+                        ],
+                        [
+                            "-5",
+                            "... is Weak",
+                            "Weak",
+                            "Not warrior values"
+                        ],
+                        [
+                            "-10",
+                            "... is a weakling",
+                            "Weak",
+                            "Warrior values"
+                        ],
+                        [
+                            "+5",
+                            "... is Brawny",
+                            "Brawny",
+                            "Not warrior values"
+                        ],
+                        [
+                            "+10",
+                            "... is a healthy, stout man/woman",
+                            "Brawny",
+                            "Warrior values"
+                        ],
+                        [
+                            "-10",
+                            "... is Dull",
+                            "Dull",
+                            "Diplomatic values or spiritual values"
+                        ],
+                        [
+                            "-5",
+                            "... is Dull",
+                            "Dull",
+                            "Neither diplomatic values nor spiritual values"
+                        ],
+                        [
+                            "-5",
+                            "... is Frail",
+                            "Frail",
+                            "Not warrior values"
+                        ],
+                        [
+                            "-10",
+                            "... is Frail",
+                            "Frail",
+                            "Warrior values"
+                        ],
+                        [
+                            "+10",
+                            "... is a Giant",
+                            "Giant",
+                            "Warrior values"
+                        ],
+                        [
+                            "-10",
+                            "... is a monster",
+                            "Giant",
+                            "Not warrior values"
+                        ],
+                        [
+                            "-10",
+                            "... is Lefthanded",
+                            "Left-Handed",
+                            "Christian or Muslim"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Judgment of personality",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Christians generally like green traits (virtues). Other religions vary.",
+                            "children": []
+                        },
+                        {
+                            "text": "Aribtrary characters may vote against negative traits even if they share the same negative trait.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Candidate",
+                            "Voter"
+                        ],
+                        [
+                            "+15",
+                            "... is Chaste",
+                            "Chaste",
+                            "Not Lustful. Christian."
+                        ],
+                        [
+                            "-15",
+                            "... is a prude",
+                            "Chaste",
+                            "Not chaste. Either Lustful or (Pagan other than Bön/Hellenic)"
+                        ],
+                        [
+                            "+15",
+                            "... is Temperate",
+                            "Temperate",
+                            "Not Gluttonous. Either Christian, Muslim, Israelite, Eastern, Bön, or Hellenic"
+                        ],
+                        [
+                            "-15",
+                            "... is too austere",
+                            "Temperate",
+                            "Not Temperate. Either Gluttonous or (Pagan other than Bön/Hellenic)"
+                        ],
+                        [
+                            "+15",
+                            "... is Charitable",
+                            "Charitable",
+                            "Not Greedy. Christian or Muslim."
+                        ],
+                        [
+                            "-15",
+                            "... is a squanderer",
+                            "Charitable",
+                            "Greedy"
+                        ],
+                        [
+                            "+15",
+                            "... is Diligent",
+                            "Diligent",
+                            "Not Slothful"
+                        ],
+                        [
+                            "-15",
+                            "... is a drudge",
+                            "Diligent",
+                            "Slothful"
+                        ],
+                        [
+                            "+15",
+                            "... is Patient",
+                            "Patient",
+                            "Not (Wroth or warrior values)"
+                        ],
+                        [
+                            "-15",
+                            "... is soft",
+                            "Patient",
+                            "Wroth or warrior values"
+                        ],
+                        [
+                            "+15",
+                            "... is Humble",
+                            "Humble",
+                            "Neither Proud nor Envious. Either Christian, Muslim, Israelite, Eastern, Bön, or Hellenic"
+                        ],
+                        [
+                            "-15",
+                            "... is spineless",
+                            "Humble",
+                            "Either Proud, Envious, or (Pagan other than Bön/Hellenic)"
+                        ],
+                        [
+                            "+15",
+                            "... is a charmer",
+                            "Lustful",
+                            "Either Lustful, Hedonist, or (Pagan other than Bön/Hellenic)"
+                        ],
+                        [
+                            "-15",
+                            "... is Lustful",
+                            "Lustful",
+                            "Christian, Muslim, or Israelite. Arbitrary or (neither lustful nor hedonist)"
+                        ],
+                        [
+                            "+15",
+                            "... is a munificent host",
+                            "Gluttonous",
+                            "Either Gluttonous, Hedonist, or (Pagan other than Bön/Hellenic)"
+                        ],
+                        [
+                            "-15",
+                            "... is Gluttonous",
+                            "Gluttonous",
+                            "Christian, Muslim, or Israelite. Arbitrary or (neither gluttonous nor hedonist)"
+                        ],
+                        [
+                            "+15",
+                            "... is parsimonious",
+                            "Greedy",
+                            "Either Greedy or (Pagan other than Bön)"
+                        ],
+                        [
+                            "-15",
+                            "... is Greedy",
+                            "Greedy",
+                            "Christian, Muslim, or Israelite. Arbitrary or (not greedy)"
+                        ],
+                        [
+                            "+15",
+                            "... is cautious",
+                            "Slothful",
+                            "Slothful"
+                        ],
+                        [
+                            "-15",
+                            "... is Slothful",
+                            "Slothful",
+                            "Arbitrary or (not slothful)"
+                        ],
+                        [
+                            "+15",
+                            "... is impetuous",
+                            "Wroth",
+                            "Warrior values"
+                        ],
+                        [
+                            "-15",
+                            "... is Wroth",
+                            "Wroth",
+                            "Not warrior values"
+                        ],
+                        [
+                            "+15",
+                            "... is Proud",
+                            "Proud",
+                            "Not Humble. Pagan other than Bön."
+                        ],
+                        [
+                            "-15",
+                            "... is Proud",
+                            "Proud",
+                            "Christian, Muslim, Israelite, Eastern. Arbitrary, humble, or (theocracy and not proud)"
+                        ],
+                        [
+                            "+5",
+                            "... is Ambitious",
+                            "Ambitious",
+                            "Not Content. Pagan other than Bön."
+                        ],
+                        [
+                            "-5",
+                            "... is Ambitious",
+                            "Ambitious",
+                            "Christian, Muslim, Israelite, Eastern, or Bön. Either Arbitrary or not Ambitious."
+                        ],
+                        [
+                            "-10",
+                            "... is Arbitrary",
+                            "Arbitrary",
+                            "Just or Arbitrary"
+                        ],
+                        [
+                            "+10",
+                            "... is Brave",
+                            "Brave",
+                            "Warrior values. Not (Envious or arbitrary)"
+                        ],
+                        [
+                            "+5",
+                            "... is Brave",
+                            "Brave",
+                            "Not warrior values. Not (Envious or arbitrary)"
+                        ],
+                        [
+                            "-5",
+                            "... is reckless",
+                            "Brave",
+                            "Not warrior values. (Envious or arbitrary)"
+                        ],
+                        [
+                            "+10",
+                            "... is Content",
+                            "Content",
+                            "Buddhist, Jain, unreformed Bön, or pacifist"
+                        ],
+                        [
+                            "-5",
+                            "... is Content",
+                            "Content",
+                            "Pagan (other than Bön or reformed Bön). Not content."
+                        ],
+                        [
+                            "-10",
+                            "... is Craven",
+                            "Craven",
+                            "Not warrior values"
+                        ],
+                        [
+                            "-25",
+                            "... is a vile coward",
+                            "Craven",
+                            "Warrior values"
+                        ],
+                        [
+                            "+10",
+                            "... is considerate",
+                            "Cynical",
+                            "Same religion. Not Zealous. Cosmopolitan, unreformed Hellenic, or Cynical"
+                        ],
+                        [
+                            "-20",
+                            "... is Cynical",
+                            "Cynical",
+                            "Same religion. Neither dogmatic, cosmopolitan, nor cynical. Not an unreformed pagan."
+                        ],
+                        [
+                            "-50",
+                            "... is a blasphemer",
+                            "Cynical",
+                            "Same religion. Dogmatic. Either arbitrary or not cynical."
+                        ],
+                        [
+                            "-10",
+                            "... is Deceitful",
+                            "Deceitful",
+                            "Arbitrary or honest"
+                        ],
+                        [
+                            "+10",
+                            "... is Erudite",
+                            "Erudite",
+                            "Diplomatic values or spiritual values"
+                        ],
+                        [
+                            "+15",
+                            "... is Just",
+                            "Just",
+                            "Neither deceitful nor arbitrary"
+                        ],
+                        [
+                            "-5",
+                            "... is Paranoid",
+                            "Paranoid",
+                            "Neither deceitful nor arbitrary. Not Paranoid"
+                        ],
+                        [
+                            "-15",
+                            "... is untrustworthy",
+                            "Paranoid",
+                            "Neither deceitful nor arbitrary. Paranoid"
+                        ],
+                        [
+                            "-10",
+                            "... is Shy",
+                            "Shy",
+                            "Diplomatic values or warrior values"
+                        ],
+                        [
+                            "+5",
+                            "... is decisive",
+                            "Stubborn",
+                            "Warrior values"
+                        ],
+                        [
+                            "-10",
+                            "... is Stubborn",
+                            "Stubborn",
+                            "Spiritual values"
+                        ],
+                        [
+                            "+25",
+                            "... is Trusting",
+                            "Trusting",
+                            "Deceitful, Ambitious, or Master Schemer"
+                        ],
+                        [
+                            "+10",
+                            "... is Zealous",
+                            "Zealous",
+                            "Same religion. Not (Cosmopolitan, pacifist, or cynical)"
+                        ],
+                        [
+                            "-20",
+                            "... is a fanatic",
+                            "Zealous",
+                            "Same religion. Is (Cosmopolitan, pacifist, or cynical)"
+                        ],
+                        [
+                            "+25",
+                            "... is virtuous",
+                            "Is benevolent",
+                            "Is benevolent: Has at least one benevolent trait ( Just , Kind , Charitable , Patient , or Affectionate ) Has no evil traits"
+                        ],
+                        [
+                            "-25",
+                            "... is docile",
+                            "Is benevolent",
+                            "Is evil: Has no benevolent traits Has at least one evil trait ( Arbitrary , Cruel , or Impaler )"
+                        ],
+                        [
+                            "-25",
+                            "... is evil",
+                            "Is evil",
+                            "Arbitrary or (not evil)"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Has at least one benevolent trait ( Just , Kind , Charitable , Patient , or Affectionate )",
+                            "children": []
+                        },
+                        {
+                            "text": "Has no evil traits",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Has no benevolent traits",
+                            "children": []
+                        },
+                        {
+                            "text": "Has at least one evil trait ( Arbitrary , Cruel , or Impaler )",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Judgment of other traits",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Candidate",
+                            "Voter"
+                        ],
+                        [
+                            "-35",
+                            "If they are elected, there will be no more elections",
+                            "Immortal",
+                            ""
+                        ],
+                        [
+                            "+5",
+                            "... is a learned Physician",
+                            "Renowned Physician",
+                            "Spiritual values"
+                        ],
+                        [
+                            "+5",
+                            "... is Scarred",
+                            "Scarred",
+                            "Warrior values"
+                        ],
+                        [
+                            "+10",
+                            "... is Grievously Scarred",
+                            "Grievously Scarred",
+                            "Warrior values"
+                        ],
+                        [
+                            "+15",
+                            "... has been Horrifically Scarred by countless fights",
+                            "Horrifically Scarred",
+                            "Warrior values"
+                        ],
+                        [
+                            "-10",
+                            "... is a Bastard",
+                            "Bastard",
+                            "Feudal. (Note: a Bastard must be a ruler in order to be eligible in feudal variants, and is never eligible in tribal variants)"
+                        ],
+                        [
+                            "-5",
+                            "... was born out of wedlock",
+                            "Legitimized Bastard , Child of Concubine , or Child of Consort",
+                            "Feudal"
+                        ],
+                        [
+                            "+10",
+                            "... has been Born in the Purple",
+                            "Born in the Purple",
+                            "Byzantine culture group. Not using Imperial Elective succession."
+                        ],
+                        [
+                            "+25",
+                            "... has been Born in the Purple",
+                            "Born in the Purple",
+                            "Byzantine culture group. Imperial Elective succession."
+                        ],
+                        [
+                            "+25",
+                            "... is the Despot !",
+                            "Despot honorary title",
+                            "Byzantine culture group. Imperial Elective succession. Does not stack with Born in the Purple."
+                        ],
+                        [
+                            "+10",
+                            "... is a devout Pilgrim",
+                            "Pilgrim , Indian pilgrim , or Hajjaj",
+                            "Same religion and Zealous"
+                        ],
+                        [
+                            "+15",
+                            "... is a famous Raider",
+                            "Sea King or Sea Queen",
+                            "Warrior values or Sea-Bound doctrine"
+                        ],
+                        [
+                            "-15",
+                            "... is a notorious Raider",
+                            "Sea King or Sea Queen",
+                            "Not (Warrior values or Sea-Bound doctrine)"
+                        ],
+                        [
+                            "+10",
+                            "... is a Shieldmaiden",
+                            "Shieldmaiden",
+                            "Warrior values. Not agnatic clans doctrine."
+                        ],
+                        [
+                            "-10",
+                            "... is an uncouth woman",
+                            "Shieldmaiden",
+                            "Not warrior values. Not agnatic clans doctrine."
+                        ],
+                        [
+                            "-40",
+                            "... is a savage she-warrior",
+                            "Shieldmaiden",
+                            "Not warrior values. Agnatic clans doctrine."
+                        ],
+                        [
+                            "+10",
+                            "... is a descendant of the holy Saoshyant",
+                            "Saoshyant descendant",
+                            "Zoroastrian religious group"
+                        ],
+                        [
+                            "+10",
+                            "... is a daring Adventurer",
+                            "Adventurer",
+                            "Warrior values"
+                        ],
+                        [
+                            "-10",
+                            "... is an opportunistic Adventurer",
+                            "Adventurer",
+                            "Not warrior values"
+                        ],
+                        [
+                            "+5",
+                            "... is a Berserker",
+                            "Berserker",
+                            "Warrior values"
+                        ],
+                        [
+                            "-20",
+                            "... is a savage madman/madwoman",
+                            "Berserker",
+                            "Not warrior values"
+                        ],
+                        [
+                            "-25",
+                            "... has been Excommunicated",
+                            "Excommunicated (for voter)",
+                            "Arbitrary or not excommunicated. Not Zealous. Not cynical."
+                        ],
+                        [
+                            "-75",
+                            "... has been Excommunicated",
+                            "Excommunicated (for voter)",
+                            "Arbitrary or not excommunicated. Zealous"
+                        ],
+                        [
+                            "-25",
+                            "... Sympathises with the heathens",
+                            "At least one religlious sympathy trait",
+                            "(Rare due to requiring pacifism??)"
+                        ],
+                        [
+                            "-10",
+                            "... is out of shape",
+                            "Fat or Malnourished",
+                            "Warrior values"
+                        ],
+                        [
+                            "+5",
+                            "... was Baptized by a notable clergyman",
+                            "Baptized by [a Prince-Bishop]",
+                            "Christian"
+                        ],
+                        [
+                            "+10",
+                            "... was Baptized by the Pope",
+                            "Baptized by [Pope]",
+                            "Same religion (Catholic or Fraticelli)"
+                        ],
+                        [
+                            "+10",
+                            "... was Baptized by the Patriarch",
+                            "Baptized by [Ecumenical Patriarch]",
+                            "Same religion (Orthodox)"
+                        ],
+                        [
+                            "-25",
+                            "... misinterprets [the scriptures]",
+                            "Pagan branch",
+                            "Same religion, opposite pagan branch"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Judgment of kinslayer",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The penalty depends on perspective (other dynasty / same dynasty / dynastic close relative) and degree of Kinslayer. Only the non-tribal variants matter."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Candidate",
+                            "Voter"
+                        ],
+                        [
+                            "-10 to -30",
+                            "",
+                            "Kinslayer",
+                            "Either not kinslayer, or arbitrary."
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Judgment of ruler's nominee",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Score",
+                            "Reasoning",
+                            "Candidate",
+                            "Ruler",
+                            "Voter"
+                        ],
+                        [
+                            "-10",
+                            "... is an unproven, spoiled man/woman",
+                            "Is the ruler's nominee Is not a ruler Is not a councilor At least one of: Decadent Slothful Hedonist Fat Shy",
+                            "",
+                            ""
+                        ],
+                        [
+                            "-10",
+                            "I do not trust the judgment of a Lunatic ruler",
+                            "Is the ruler's nominee",
+                            "Ruler is Lunatic",
+                            "Not (Lunatic, Possessed, Arbitrary, or Zealous)"
+                        ],
+                        [
+                            "-10",
+                            "I do not trust the judgment of a Possessed ruler",
+                            "Is the ruler's nominee",
+                            "Ruler is Possessed",
+                            "Not (Lunatic, Possessed, or Arbitrary)"
+                        ],
+                        [
+                            "+25",
+                            "I trust the judgment of a Just ruler",
+                            "Is the ruler's nominee",
+                            "Ruler is Just",
+                            "Not (Lunatic, Possessed, or Arbitrary)"
+                        ],
+                        [
+                            "-25",
+                            "I will not support the Candidate of a Tyrant",
+                            "Is the ruler's nominee",
+                            "Ruler has opinion modifier \" Tyrant \" from voter",
+                            "Not (Lunatic, Possessed, or Arbitrary)"
+                        ],
+                        [
+                            "-30 to +60",
+                            "(Based on opinion of ruler)",
+                            "Is the ruler's nominee",
+                            "",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is the ruler's nominee",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not a ruler",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not a councilor",
+                            "children": []
+                        },
+                        {
+                            "text": "At least one of:",
+                            "children": [
+                                {
+                                    "text": "Decadent",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Slothful",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Hedonist",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Fat",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Shy",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is the ruler's nominee",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is the ruler's nominee",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is the ruler's nominee",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is the ruler's nominee",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is the ruler's nominee",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Warrior values, diplomatic values, and spiritual values",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Characters will vote according to \"warrior values\", \"diplomatic values\", or \"spiritual values\" depending on their religion and government. [1]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If Holy Fury is not enabled, reformed pagan religions apply the same values as the corresponding old religion."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Values",
+                            "Voters",
+                            "Example voting behavior"
+                        ],
+                        [
+                            "Warrior values",
+                            "Muslim, Germanic, Tengri, Aztec, or reformed with Warmongering nature, OR Tribal or nomadic Not pacifist (e.g. Jain)",
+                            "Elective Gavelkind only: martial skill and personal combat skill Approve of wroth , berserker , stubborn Care more about physical fitness and bravery Prefer martial education or lifestyle"
+                        ],
+                        [
+                            "Diplomatic values",
+                            "Christian group, Jewish group, Zoroastrian group, Hellenic, or reformed with Cosmopolitan nature, AND Merchant republic or any feudal-group government",
+                            "Care more about intelligence Prefer diplomatic/stewardship education or lifestyle"
+                        ],
+                        [
+                            "Spiritual values",
+                            "Eastern religions, Bön, or reformed with Peaceful nature",
+                            "Care more about intelligence Prefer learning education or lifestyle"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Muslim, Germanic, Tengri, Aztec, or reformed with Warmongering nature, OR",
+                            "children": []
+                        },
+                        {
+                            "text": "Tribal or nomadic",
+                            "children": []
+                        },
+                        {
+                            "text": "Not pacifist (e.g. Jain)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Elective Gavelkind only: martial skill and personal combat skill",
+                            "children": []
+                        },
+                        {
+                            "text": "Approve of wroth , berserker , stubborn",
+                            "children": []
+                        },
+                        {
+                            "text": "Care more about physical fitness and bravery",
+                            "children": []
+                        },
+                        {
+                            "text": "Prefer martial education or lifestyle",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Christian group, Jewish group, Zoroastrian group, Hellenic, or reformed with Cosmopolitan nature, AND",
+                            "children": []
+                        },
+                        {
+                            "text": "Merchant republic or any feudal-group government",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Care more about intelligence",
+                            "children": []
+                        },
+                        {
+                            "text": "Prefer diplomatic/stewardship education or lifestyle",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Eastern religions, Bön, or reformed with Peaceful nature",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Care more about intelligence",
+                            "children": []
+                        },
+                        {
+                            "text": "Prefer learning education or lifestyle",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ this_is_warrior_culture_trigger and following, in common\\scripted_triggers\\00_scripted_triggers.txt",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,224 @@
+{
+    "pageid": 3392,
+    "title": "Disease modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": []
+        },
+        {
+            "heading": "Definitions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Diseases are defined in folder common/diseases/ ."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Configuration key",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "rip",
+                            "bool",
+                            "If not specified, the disease will be available in both version (with the same values in both) and doesn't need to be set twice. If rip=no , this will exclude a disease from The Reaper's Due disease database, so that there can be two versions of the disease.",
+                            "rip=no"
+                        ],
+                        [
+                            "contagiousness",
+                            "float",
+                            "Chance that the disease will spread to an adjacent province ?",
+                            "contagiousness = 0.15"
+                        ],
+                        [
+                            "outbreak_chance",
+                            "float",
+                            "Chance that a disease will appear in a province. Notes: With less provinces, you get much more disease - the vanilla numbers are balanced for vanilla map province count !",
+                            "outbreak_chance = 0.01"
+                        ],
+                        [
+                            "effect",
+                            "modifiers",
+                            "Province modifiers applied during an outbreak.",
+                            "effect = {\n\tcity_tax_modifier = -0.5\n\tsupply_limit = -4\n\tmax_attrition = 0.05\n}"
+                        ],
+                        [
+                            "icon",
+                            "int",
+                            "The index of icon frame in GFX_disease_icons",
+                            "icon = 1"
+                        ],
+                        [
+                            "tooltip",
+                            "key",
+                            "Localization key for disease description",
+                            "tooltip = TUBERCULOSIS_INFO"
+                        ],
+                        [
+                            "months",
+                            "int",
+                            "Duration of an outbreak.",
+                            "months = 30"
+                        ],
+                        [
+                            "trait",
+                            "trait",
+                            "Associated epidemic trait when a character gets the disease.",
+                            "trait = has_tuberculosis"
+                        ],
+                        [
+                            "always_get_message",
+                            "bool",
+                            "",
+                            "always_get_message = no"
+                        ],
+                        [
+                            "color",
+                            "color",
+                            "Color for epidemics mapmode.",
+                            "color = { 84 171 176 }"
+                        ],
+                        [
+                            "major",
+                            "bool",
+                            "",
+                            "major = yes"
+                        ],
+                        [
+                            "active",
+                            "bool",
+                            "Whether the disease exists at game start, or needs to get activated via scripting command activate_disease .",
+                            "active = no"
+                        ],
+                        [
+                            "timeperiod",
+                            "clause",
+                            "Validity range for the disease. Key Type Description start_date date Start of timeperiod end_date date End of timeperiod one_only bool Whether the disease will activate multiple times or once in the timeperiod outbreak_chance float can_outbreak conditions Global conditions (total_years_played, global flags, game rules, ...) months int max_total_provinces int spread_through_water bool min_nb_province int Ignored if 0. max_nb_province int Ignored if 0. province_infection_duration int outbreak_scenario int Detailed scenario of epidemics progression, with starting provinces( start_provinces ) and excluded geographical regions ( excluded_regions )",
+                            "timeperiod = {\n\tstart_date = 769.1.1\n\tend_date = 1452.1.1\n\tone_only = no\n} timeperiod = {\n\tstart_date = 1100.1.1\n\tend_date = 1400.1.1\n\t\n\toutbreak_chance = 0.01\n\tcan_outbreak = {\n\t\ttotal_years_played = 25\n\t\tNOT = { has_global_flag = black_death_happened }\n\t\thas_game_rule = {\n\t\t\tname = epidemics\n\t\t\tvalue = delayed_dynamic\n\t\t}\n\t}\n\t\n\tmin_nb_province = 1\n\tmax_nb_province = 15\n\tone_only = yes\n\tprovince_infection_duration = 36\n\t\n\toutbreak_scenario = { # Classic plague\n\t\tchance = 0.30\n\t\tstart_provinces = {\n\t\t\t1448\n\t\t}\n\t\texcluded_regions = {\n\t\t\tcustom_historical_plague_free_zone\n\t\t}\n\t}\n}"
+                        ],
+                        [
+                            "yearly_province_pulse",
+                            "commands",
+                            "",
+                            ""
+                        ],
+                        [
+                            "character_infection_chances",
+                            "clause",
+                            "",
+                            "character_infection_chances = {\n\tmonths = 3\n}"
+                        ],
+                        [
+                            "on_character_infection",
+                            "commands",
+                            "Scripted effects to give the epidemic trait to a character. Typically uses a random_list to specify a ratio of randomly affected characters.",
+                            ""
+                        ],
+                        [
+                            "on_province_infection",
+                            "commands",
+                            "",
+                            ""
+                        ],
+                        [
+                            "disease_gfx",
+                            "",
+                            "",
+                            "disease_gfx = disease_gfx_typhoid_fever"
+                        ],
+                        [
+                            "max_total_provinces",
+                            "int",
+                            "",
+                            "max_total_provinces = 5"
+                        ],
+                        [
+                            "spread_through_water",
+                            "bool",
+                            "",
+                            "spread_through_water = no"
+                        ],
+                        [
+                            "min_nb_province",
+                            "int",
+                            "Ignored if the given value is 0.",
+                            "min_nb_province = 1"
+                        ],
+                        [
+                            "max_nb_province",
+                            "int",
+                            "Ignored if the given value is 0.",
+                            "max_nb_province = 1"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If not specified, the disease will be available in both version (with the same values in both) and doesn't need to be set twice.",
+                            "children": []
+                        },
+                        {
+                            "text": "If rip=no , this will exclude a disease from The Reaper's Due disease database, so that there can be two versions of the disease.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Notes:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "With less provinces, you get much more disease - the vanilla numbers are balanced for vanilla map province count !",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Scripting",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There a a few ways that events can interact with epidemics:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "activate_disease = <disease_name> will allow diseases that are off by default to spawn randomly or via scripting.",
+                            "children": []
+                        },
+                        {
+                            "text": "reduce_disease = <double> will weaken an existing epidemic in a province. reduce_disease = 1 should be able to cancel an epidemic in a province.",
+                            "children": []
+                        },
+                        {
+                            "text": "spawn_disease = <disease_name> will start an epidemic in a province.",
+                            "children": []
+                        },
+                        {
+                            "text": "start_outbreak = <disease_name> will start a epidemic using the information defined in the diseases timeperiod entries",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

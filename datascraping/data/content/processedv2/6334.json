@@ -1,0 +1,501 @@
+{
+    "pageid": 6334,
+    "title": "HF baptism events",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/HF_baptism_events.txt"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Event"
+                        ],
+                        [
+                            "HF.20000",
+                            "Possible Sponsor receives mass baptism request"
+                        ],
+                        [
+                            "HF.20001",
+                            "Converter: Sponsor refused your request to Baptism. Chain ENDS."
+                        ],
+                        [
+                            "HF.20002",
+                            "Converter: Sponsor accepted your request. Non-aggression pact remains, prepare for ceremony."
+                        ],
+                        [
+                            "HF.20003",
+                            "The Baptism itself happens. Converter, his courtiers and provinces are converted."
+                        ],
+                        [
+                            "HF.20004",
+                            "The Baptism itself happens (Sponsor version)"
+                        ],
+                        [
+                            "HF.20093",
+                            "Pope notified of your actions. (Lift excommunication)"
+                        ],
+                        [
+                            "HF.20094",
+                            "Pope notified of your actions. (follow-up from from HF.20093, remove excommunicated trait)"
+                        ],
+                        [
+                            "HF.20005",
+                            "Vassals receive news of the mass baptism and decide what they want to do."
+                        ],
+                        [
+                            "HF.20006",
+                            "Notification: Vassal will baptize (or is already of the converting faith, or was secretly already of converting faith)"
+                        ],
+                        [
+                            "HF.20007",
+                            "Notification: Vassal will not baptize"
+                        ],
+                        [
+                            "HF.20008",
+                            "The Baptism itself happens (Vassals version, convert vassals, their courtiers and provinces when appropriate)"
+                        ],
+                        [
+                            "HF.20009",
+                            "Courtiers\\Vassals of Vassals: your direct liege will convert"
+                        ],
+                        [
+                            "HF.20010",
+                            "A Vassal has become Rival of his liege because of the baptism"
+                        ],
+                        [
+                            "HF.20011",
+                            "Liege is notified of Rivalry"
+                        ],
+                        [
+                            "HF.20012",
+                            "On_conversion: sponsor changes religion in the middle of baptism"
+                        ],
+                        [
+                            "HF.20013",
+                            "Converter be warned! Your sponsor is no longer of the same religion."
+                        ],
+                        [
+                            "HF.20014",
+                            "On_death: sponsor dies before baptism"
+                        ],
+                        [
+                            "HF.20015",
+                            "Converter be warned! Your sponsor is no longer alive. Chain ENDS."
+                        ],
+                        [
+                            "HF.20016",
+                            "On_death: converter dies before baptism"
+                        ],
+                        [
+                            "HF.20017",
+                            "Sponsor be warned! Your converter is no longer alive. Chain ENDS."
+                        ],
+                        [
+                            "HF.20018",
+                            "On_conversion: converter changes religion after baptism"
+                        ],
+                        [
+                            "HF.20019",
+                            "Sponsor be warned! Your converter converted again after his baptism."
+                        ],
+                        [
+                            "HF.20020",
+                            "On_conversion: sponsor changes religion after baptism"
+                        ],
+                        [
+                            "HF.20021",
+                            "Converter be warned! Your sponsor converted after baptism."
+                        ],
+                        [
+                            "HF.20022",
+                            "On_death: sponsor died after baptism"
+                        ],
+                        [
+                            "HF.20023",
+                            "Converter be warned! Your sponsor died after baptism."
+                        ],
+                        [
+                            "HF.20024",
+                            "Addition to religious_events/character_event 39601. Possible sponsor sent missionary, possible convert asks to have a mass baptism."
+                        ],
+                        [
+                            "HF.20025",
+                            "Vassal of vassal informed that his direct liege won't baptize."
+                        ],
+                        [
+                            "HF.20026",
+                            "Cleanup flag for vassals of vassals after mass conversion."
+                        ],
+                        [
+                            "HF.20027",
+                            "On_conversion of deceitful player character fake baptism."
+                        ],
+                        [
+                            "HF.20028",
+                            "Courtiers\\Vassals of Vassals: your direct liege will pretend to convert."
+                        ],
+                        [
+                            "HF.20029",
+                            "Random True Believer vassal has chance to start a rebellion."
+                        ],
+                        [
+                            "HF.20030",
+                            "Other True Believers join the cause"
+                        ],
+                        [
+                            "HF.20031",
+                            "Notify converted players of the revolt"
+                        ],
+                        [
+                            "HF.20092",
+                            "The True Believers have gathered, now time to actually start the war."
+                        ],
+                        [
+                            "HF.20032",
+                            "Notify any vassal in the middle of a baptism that the sponsor changed faith and the whole thing is off"
+                        ],
+                        [
+                            "HF.20033",
+                            "Notify any vassal in the middle of a baptism that the sponsor died and the whole thing is off"
+                        ],
+                        [
+                            "HF.20034",
+                            "On_death: true believer player vassal dies after receiving conversion letter and before the ceremony, give chance to heir to become true believer as well."
+                        ],
+                        [
+                            "HF.20035",
+                            "Does the true believer's heir convert or does he remain faithful to his liege?"
+                        ],
+                        [
+                            "HF.20036",
+                            "Converter: Sponsor sends a new priest to help convert everybody"
+                        ],
+                        [
+                            "HF.20037",
+                            "Hidden Umbrella event for flavor events for the Converter. (single, with double option)."
+                        ],
+                        [
+                            "HF.20038",
+                            "Hidden Umbrella event for flavor events for the Sponsor."
+                        ],
+                        [
+                            "HF.20039",
+                            "Converter: Chance to become Zealous"
+                        ],
+                        [
+                            "HF.20040",
+                            "Converter: Chance to become Cynical"
+                        ],
+                        [
+                            "HF.20041",
+                            "Converter: Chance to become Kind"
+                        ],
+                        [
+                            "HF.20042",
+                            "Converter: Chance to become Humble"
+                        ],
+                        [
+                            "HF.20043",
+                            "Converter: Chance to become Brave"
+                        ],
+                        [
+                            "HF.20044",
+                            "Converter: Chance to become Charitable"
+                        ],
+                        [
+                            "HF.20045",
+                            "Converter: Chance to become Temperate"
+                        ],
+                        [
+                            "HF.20046",
+                            "Converter: Flat piety boon"
+                        ],
+                        [
+                            "HF.20047",
+                            "Sponsor: Give options to help Converter with his tribal realm."
+                        ],
+                        [
+                            "HF.20048",
+                            "Sponsor: Do you wish to travel to your converter's realm?"
+                        ],
+                        [
+                            "HF.20049",
+                            "Converter: Sponsor wants to fund construction of a Church in your demesne."
+                        ],
+                        [
+                            "HF.20050",
+                            "Sponsor: Converter allowed the construction of a new church"
+                        ],
+                        [
+                            "HF.20051",
+                            "Sponsor: Converter denied the construction of a new church"
+                        ],
+                        [
+                            "HF.20052",
+                            "Converter: Sponsor sent you money"
+                        ],
+                        [
+                            "HF.20053",
+                            "Sponsor: Converter is happy about the money"
+                        ],
+                        [
+                            "HF.20054",
+                            "Converter: Sponsor is sending more priests to convert a province."
+                        ],
+                        [
+                            "HF.20055",
+                            "Province is converted easily to sponsor's faith"
+                        ],
+                        [
+                            "HF.20056",
+                            "Province is converted to sponsor's faith, but peasants are upset"
+                        ],
+                        [
+                            "HF.20057",
+                            "Sponsor: Converter allowed the conversion of another province"
+                        ],
+                        [
+                            "HF.20058",
+                            "Sponsor: Converter denied the conversion of another province"
+                        ],
+                        [
+                            "HF.20059",
+                            "Owner of converted province: Your province has been converted"
+                        ],
+                        [
+                            "HF.20060",
+                            "Converter of converted province: Your province has been converted"
+                        ],
+                        [
+                            "HF.20061",
+                            "Owner of converted province: Your province has been converted but has unrest"
+                        ],
+                        [
+                            "HF.20062",
+                            "Converter of converted province: Your province has been converted but has unrest"
+                        ],
+                        [
+                            "HF.20063",
+                            "Converter: Sponsor has decided to pay you a visit."
+                        ],
+                        [
+                            "HF.20064",
+                            "Converter: Prepare for the Sponsor's arrival."
+                        ],
+                        [
+                            "HF.20065",
+                            "Sponsor: The travel"
+                        ],
+                        [
+                            "HF.20066",
+                            "Converter: Sponsor is arriving. Who goes to greet him?"
+                        ],
+                        [
+                            "HF.20067",
+                            "Sponsor: Arrival at the Converter's realm."
+                        ],
+                        [
+                            "HF.20068",
+                            "Converter: Sponsor liked your welcome"
+                        ],
+                        [
+                            "HF.20069",
+                            "Converter: Sponsor did not like your welcome"
+                        ],
+                        [
+                            "HF.20070",
+                            "Sponsor: At the Converter's welcoming feast."
+                        ],
+                        [
+                            "HF.20071",
+                            "Converter: Sponsor liked your feast"
+                        ],
+                        [
+                            "HF.20072",
+                            "Converter: Sponsor did not like your feast"
+                        ],
+                        [
+                            "HF.20073",
+                            "Converter: How do you entertain Sponsor the next days? (Choose attribute to use for persuasion check)."
+                        ],
+                        [
+                            "HF.20074",
+                            "Sponsor: Impressed by Converter's skills"
+                        ],
+                        [
+                            "HF.20075",
+                            "Sponsor: Not impressed by Converter's skills"
+                        ],
+                        [
+                            "HF.20076",
+                            "Converter: Sponsor is impressed, time to make your request."
+                        ],
+                        [
+                            "HF.20077",
+                            "Converter: Sponsor is not impressed, time to make your request."
+                        ],
+                        [
+                            "HF.20078",
+                            "Sponsor: Converter proposed a marriage alliance."
+                        ],
+                        [
+                            "HF.20079",
+                            "Sponsor: Converter declared love."
+                        ],
+                        [
+                            "HF.20080",
+                            "Sponsor: Converter wishes to become friend."
+                        ],
+                        [
+                            "HF.20081",
+                            "Sponsor: Converter asks for nothing."
+                        ],
+                        [
+                            "HF.20082",
+                            "Converter: Sponsor accepted marriage proposal."
+                        ],
+                        [
+                            "HF.20083",
+                            "Converter: Sponsor denied marriage proposal."
+                        ],
+                        [
+                            "HF.20084",
+                            "Converter: Sponsor became lover."
+                        ],
+                        [
+                            "HF.20085",
+                            "Converter: Sponsor did not become lover."
+                        ],
+                        [
+                            "HF.20086",
+                            "Converter: Sponsor became friend."
+                        ],
+                        [
+                            "HF.20087",
+                            "Converter: Sponsor did not become friend."
+                        ],
+                        [
+                            "HF.20088",
+                            "Converter: The sponsor's visit has come to an end."
+                        ],
+                        [
+                            "HF.20089",
+                            "Sponsor: Your visit has come to an end, time to return home."
+                        ],
+                        [
+                            "HF.20090",
+                            "Generic notification event for foreign rulers upon Mass Conversion of a pagan."
+                        ],
+                        [
+                            "HF.20091",
+                            "Hidden safety event to end the sponsor's travel, should something happen to the converter before the chain ends."
+                        ],
+                        [
+                            "HF.20095",
+                            "On_death: converter died after baptism"
+                        ],
+                        [
+                            "HF.20096",
+                            "Sponsor be warned! Your converter died after baptism."
+                        ],
+                        [
+                            "HF.20097",
+                            "Possible Sponsor receives mass baptism request (AI version)"
+                        ],
+                        [
+                            "HF.20098",
+                            "Notify Sponsor that Converter has become incapable in the middle of the visit."
+                        ],
+                        [
+                            "HF.20099",
+                            "Notify Converter that Sponsor has become incapable in the middle of the visit."
+                        ],
+                        [
+                            "HF.20100",
+                            "on_birth event will check which of the parents has greater authority and send this event to the more powerful one. Baby Baptism (only for first current_heir, delayed fired on birth via HFP.20403 for Christian rulers with available notable baptizer)"
+                        ],
+                        [
+                            "HF.20101",
+                            "Pick the godparent for the child's baptism."
+                        ],
+                        [
+                            "HF.20102",
+                            "New Godfather notified of baptism."
+                        ],
+                        [
+                            "HF.20103",
+                            "Parent: Baptism itself happens."
+                        ],
+                        [
+                            "HF.20104",
+                            "Child: Baptism has happened."
+                        ],
+                        [
+                            "HF.20105",
+                            "Spouse: Baptism has happened."
+                        ],
+                        [
+                            "HF.20106",
+                            "Parent: Child has grown enough to be introduced properly to Satanists."
+                        ],
+                        [
+                            "HF.20107",
+                            "Child: introduced to Satanists at a young age."
+                        ],
+                        [
+                            "HF.20108",
+                            "Baby Baptism, second version of the event, firing from targetted-decision, hooks back into the previous chain."
+                        ],
+                        [
+                            "HF.20110",
+                            "Hidden ping from the priest to decide what event to send to the Converter."
+                        ],
+                        [
+                            "HF.20111",
+                            "Ping to Converter and back to random list."
+                        ],
+                        [
+                            "HF.20112",
+                            "Priest gives opportunity to change succession law to Gavelkind from Elective Gavelkind."
+                        ],
+                        [
+                            "HF.20113",
+                            "Priest gives opportunity to apply modifier on capital."
+                        ],
+                        [
+                            "HF.20114",
+                            "Priest gives opportunity to increase attribute."
+                        ],
+                        [
+                            "HF.20115",
+                            "Gain technology."
+                        ],
+                        [
+                            "HF.20116",
+                            "Change culture."
+                        ],
+                        [
+                            "HF.20117",
+                            "Militant faithful arrive."
+                        ],
+                        [
+                            "HF.20118",
+                            "Court Chaplain Makes you change your name."
+                        ],
+                        [
+                            "HF.20119",
+                            "Close relatives switch as well."
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

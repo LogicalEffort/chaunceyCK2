@@ -1,0 +1,204 @@
+{
+    "pageid": 4788,
+    "title": "Tributary type modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": []
+        },
+        {
+            "heading": "Definition",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Each tributary type must be defined in a file in /common/tributary_types/ . A tributary type named \"default\" should always exist. If not, the game should automatically create one. Calling a tributary type \"none\" is an error.\nIf Horse Lords is enabled, all different-culture characters of nomads become tributaries with the \"nomadic\" tributary type - this is hardcoded. (The docs don't specify what happens when no \"nomadic\" tributary type exists, so one should probably always exist.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The following data should be defined for each tributary type (though all of it is optional and can be left out)"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Variable",
+                            "Type",
+                            "Description",
+                            "Default"
+                        ],
+                        [
+                            "tributary_name",
+                            "string",
+                            "Localization string used for tributaries of this type when referring to just one (eg. \"Tributary\", \"Imperial Tributary\")",
+                            ""
+                        ],
+                        [
+                            "tributary_plural",
+                            "string",
+                            "Localization string used for tributaries of that type when referring to multiple (eg. \"Tributaries\", \"Imperial Tributaries\")",
+                            ""
+                        ],
+                        [
+                            "suzerain_name",
+                            "string",
+                            "Localization used for suzerain of the tributary type (eg. \"Suzerain\", \"Imperial Suzerain\")",
+                            ""
+                        ],
+                        [
+                            "tribute_name",
+                            "string",
+                            "Localization string used for whatever is paid (paying $TRIBUTE$, eg. \"paying tribute\") for this tributary type",
+                            "(unknown)"
+                        ],
+                        [
+                            "breaks_at_suzerain_death",
+                            "bool",
+                            "If yes, the tributary relationship breaks when the suzerain dies. If no, it persists.",
+                            "yes"
+                        ],
+                        [
+                            "breaks_at_tributary_death",
+                            "bool",
+                            "If yes, the tributary relationship breaks when the tributary dies. If no, it persists.",
+                            "no"
+                        ],
+                        [
+                            "tributary_can_be_summoned",
+                            "bool",
+                            "If yes, the suzerain can call their tributaries to war. The tributary might be able to decline, depending on tributary_must_defend .",
+                            "yes"
+                        ],
+                        [
+                            "tributary_must_defend",
+                            "bool",
+                            "If yes, the tributary can't reject a defensive call to arms from the suzerain. If no, the tributary can reject calls to arms from their suzerain.",
+                            "yes"
+                        ],
+                        [
+                            "suzerain_can_be_called",
+                            "bool",
+                            "If yes, tributaries can call their suzerain to arms, even if they aren't otherwise allied. The suzerain might be able to decline, depending on suzerain_must_defend",
+                            "yes"
+                        ],
+                        [
+                            "suzerain_must_defend",
+                            "bool",
+                            "If yes, the suzerain can't reject a defensive call to arms from the tributary. If no, the suzerain can reject calls to arms from their tributaries.",
+                            "no"
+                        ],
+                        [
+                            "tributaries_can_infight",
+                            "bool",
+                            "If this is set to no, tributaries of the same type with the same suzerain will not be able to declare war on each other. If this is set to yes (the default), they can declare war on each other. Notes: If this is set to no, tributaries can declare war on each other, but that war is instantly invalidated by the game engine. This property only produces tooltips if it is set to yes. (IE: Any ban on infighting is not obvious in-game.) Tributaries of different types are always able to declare war on each other, as are tributaries with different suzerains.",
+                            "yes"
+                        ],
+                        [
+                            "suzerain_can_join_infighting",
+                            "bool",
+                            "If yes, the suzerain can join one tributary in their war against another of the same type. Warning: Does not work! (No matter the value of this property, tributaries can always call their suzerain into wars between themselves.)",
+                            "yes"
+                        ],
+                        [
+                            "tributaries_can_unite",
+                            "bool",
+                            "If yes, when trying to break free, tributaries will be able to band together against their suzerain. They also will never help their suzerain in wars against another tributary of the same type.",
+                            "(unknown)"
+                        ],
+                        [
+                            "breaks_on_realm_change",
+                            "bool",
+                            "If yes, the tributary relationship ends when the tributary's titles change realms",
+                            "no"
+                        ],
+                        [
+                            "icon",
+                            "integer",
+                            "Which frame of the icon strip to use. Note that using an index already used for another relation type (eg. alliances) will break the tooltip - this includes leaving it blank.",
+                            "(whichever is used to mean \"at war\", likely 1 or 0)"
+                        ],
+                        [
+                            "cbs_against_suzerain",
+                            "list (of CBs)",
+                            "The tributary will only be able to use the CBs in this list against their suzerain. (All others are blocked.)",
+                            "{}"
+                        ],
+                        [
+                            "income_tribute_percentage",
+                            "MTTH",
+                            "Percentage of monthly income paid by the tributary to the suzerain. Only evaluated when relationship is formed, can't be changed afterwards. Should evaluate to between 0 and 1, will be clamped to between those values if not. ROOT is tributary, FROM is suzerain.",
+                            "{ value = 1 }"
+                        ],
+                        [
+                            "reinforce_tribute_percentage",
+                            "MTTH",
+                            "Percentage of troop reinforcements given by the tributary to the suzerain. Only evaluated when relationship is formed, can't be changed afterwards. Should evaluate to between 0 and 1, will be clamped to between those values if not. ROOT is tributary, FROM is suzerain. Is applied as is to the tributary's reinforcement rate (eg. 0.1 means tributary's reinforcements reduced by 10%) and in a scaled manner to the suzerain's (eg. 0.1 means suzerain's reinforcements increased by (10% * tributary's demesne size / suzerain's demesne size)",
+                            "{ value = 1 }"
+                        ],
+                        [
+                            "prestige_to_suzerain",
+                            "MTTH",
+                            "How much prestige the suzerain gains (or loses) per month by having the tributary.",
+                            "{ value = 0 }"
+                        ],
+                        [
+                            "prestige_to_tributary",
+                            "MTTH",
+                            "How much prestige the tributary gains (or loses) per month by being a tributary.",
+                            "{ value = 0 }"
+                        ],
+                        [
+                            "piety_to_suzerain",
+                            "MTTH",
+                            "How much piety the suzerain gains (or loses) per month by having the tributary.",
+                            "{ value = 0 }"
+                        ],
+                        [
+                            "piety_to_tributary",
+                            "MTTH",
+                            "How much piety the tributary gains (or loses) per month by being a tributary.",
+                            "{ value = 0 }"
+                        ],
+                        [
+                            "modifier",
+                            "modifier",
+                            "A character modifier applied to the tributary. Uses tributary_name as the name of the modifier.",
+                            "(no modifier)"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Notes:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If this is set to no, tributaries can declare war on each other, but that war is instantly invalidated by the game engine.",
+                            "children": []
+                        },
+                        {
+                            "text": "This property only produces tooltips if it is set to yes. (IE: Any ban on infighting is not obvious in-game.)",
+                            "children": []
+                        },
+                        {
+                            "text": "Tributaries of different types are always able to declare war on each other, as are tributaries with different suzerains.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Warning: Does not work! (No matter the value of this property, tributaries can always call their suzerain into wars between themselves.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Is applied as is to the tributary's reinforcement rate (eg. 0.1 means tributary's reinforcements reduced by 10%) and in a scaled manner to the suzerain's (eg. 0.1 means suzerain's reinforcements increased by (10% * tributary's demesne size / suzerain's demesne size)"
+                }
+            ]
+        }
+    ]
+}

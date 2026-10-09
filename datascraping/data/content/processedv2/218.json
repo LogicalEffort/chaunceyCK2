@@ -1,0 +1,368 @@
+{
+    "pageid": 218,
+    "title": "Patch 1.06b",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 1.06b was released on 2012-07-04 [1] . The vanilla checksum for this version is LFOE . The savegames of previous version 1.06 should be compatible with this new patch."
+                }
+            ]
+        },
+        {
+            "heading": "Fixes",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "MP : Fixed an OOS issue between people with and without SoI . (Unfortunately, this means modders with SoI cannot just script in any number of wives in other religions.)",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a serious but simple error messing up the Spanish localization text.",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrected a load of German text using ';' in the localization, corrupting the text database.",
+                            "children": []
+                        },
+                        {
+                            "text": "The game will no longer crash if you have the African Unit Pack DLC but not the Sword of Islam",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with 'replace_path' in mods",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug that would not actually detract the empire creation Piety cost",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a problem with the event effects 'gain_settlements_under_title' and 'vassalize_or_take_under_title' where rebel or revolter occupied counties would not be taken in the peace",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrected the English regnal numbers to exclude the Saxon Edwards",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where breaking a truce would not actually cost Prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the event effect 'abdicate_to_most_liked_by' that could cause the new ruler of a non-feudal state to become independent when he should not",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some glitches with betrothals in the Muslim world",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with Heavy Armor tech level 5",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the Ramadan events firing at once if war was declared",
+                            "children": []
+                        },
+                        {
+                            "text": "Religion View: The portrait of the religious head should now age correctly",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the tooltip for usurping emperor tier titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some errors in the Welsh character database",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with 'immortal' marked traits added in the ruler designer or the history",
+                            "children": []
+                        },
+                        {
+                            "text": "Should no longer be possible to get both the Sayyid and Mirza traits",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed two bugs with a dynasty's Coat of Arms changing for no reason",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrected event picture for event 75075",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some events using incorrect form 'only_capable'",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed some duplicate text entries",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrected the religion of Muhammad's ancestors",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrected lots of (harmless) errors in the gui files",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the tooltip for usurping emperor tier titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the NTechnology defines and REN_PROVINCE not being read",
+                            "children": []
+                        },
+                        {
+                            "text": "Invasion AI: Fixed some deadlock situations that could occur when armies were loaded on fleets belonging to the wrong agent",
+                            "children": []
+                        },
+                        {
+                            "text": "Army AI: Fixed a glitch with attrition avoidance when having attached units",
+                            "children": []
+                        },
+                        {
+                            "text": "Page 12 in the Ledger no longer crashes in \"observer\" mode",
+                            "children": []
+                        },
+                        {
+                            "text": "When divorcing a spouse, the \"matrilineal\" marriage status is now correctly reset",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where armies containing Holy Order regiments could be disbanded when the Holy Order itself withdrew its forces for another conflict",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug preventing a host without The Sword of Islam from hosting MP games with those who do and have selected Muslim rulers",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a freeze bug in the lobby when stepping back through history from an advanced date",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with historical scripted non- succession laws being overridden at start",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where landless religion heads could be succeeded by ones of the wrong religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug in some combat tactics that would immediately destroy all enemies of a certain unit type",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Modding",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Exported EMPIRE_CREATION_PIETY_COST to defines",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Others",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The date widget arrows in the lobby no longer stay gone after you've looked at your save games",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a separate set of Muslim feudal (Iqta) laws",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a separate Muslim invasion CB with longer truce and no taking of all occupied provinces",
+                            "children": []
+                        },
+                        {
+                            "text": "The success chance for kill plots now increases drastically past 100% Plot Power",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Decadence revolter special troops now disband after the war",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Empires now cost 400 Piety to create (up from 200)",
+                            "children": []
+                        },
+                        {
+                            "text": "Muslim vassals can no longer declare Holy Wars on rulers of their top liege's religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'creation_requires_capital' field to landed titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Added harsher creation conditions for the Latin Empire",
+                            "children": []
+                        },
+                        {
+                            "text": "Added proper creation conditions for the Caliphates",
+                            "children": []
+                        },
+                        {
+                            "text": "Character modifiers now correctly recalculated when a timed character modifier expires",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer possible to revoke the last landed title off a ruler with significant vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "The chancellor in West African cultures is now called Grand Vizier",
+                            "children": []
+                        },
+                        {
+                            "text": "The minor title 'title_ruler_consort' no longer has separate localization strings - it's now the other gender version of the spouse's ruler title",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'title_female' custom holder title to landed titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Added separate law message for when Muslims pass laws",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event effect 'disband_event_forces'",
+                            "children": []
+                        },
+                        {
+                            "text": "Doubled the opinion penalty for revoking a kingdom",
+                            "children": []
+                        },
+                        {
+                            "text": "Women with ' immortal ' flagged traits no longer grow infertile after 45, and the AI knows this",
+                            "children": []
+                        },
+                        {
+                            "text": "Scripted banned colors for Coats of Arms should now work",
+                            "children": []
+                        },
+                        {
+                            "text": "Tech focuses can no longer change when you inherit someone's title",
+                            "children": []
+                        },
+                        {
+                            "text": "Commander traits are now generated for characters created with the 'create_character' effect with a martial trait",
+                            "children": []
+                        },
+                        {
+                            "text": "The Jizya tax modifier is now shown with an icon on Holdings",
+                            "children": []
+                        },
+                        {
+                            "text": "Changed the name of the 'Empire of Spain' to 'Empire of Hispania'",
+                            "children": []
+                        },
+                        {
+                            "text": "Can no longer transfer Duke or King rank vassals to anyone except their de jure liege",
+                            "children": []
+                        },
+                        {
+                            "text": "Buffed the Christian states of Iberia by giving them more holdings, more initial building upgrades and slightly higher tech",
+                            "children": []
+                        },
+                        {
+                            "text": "When moving an army into a sea zone, it will now prefer loading onto the smallest possible fleet",
+                            "children": []
+                        },
+                        {
+                            "text": "Attached units can no longer lead a siege if the unit they are attached to is also besieging",
+                            "children": []
+                        },
+                        {
+                            "text": "Increased the max number of holdings in many counties in continental Europe, England and the Levantine coast",
+                            "children": []
+                        },
+                        {
+                            "text": "Attached units now move at the same speed",
+                            "children": []
+                        },
+                        {
+                            "text": "Can no longer select holy orders to play in the lobby",
+                            "children": []
+                        },
+                        {
+                            "text": "Vassals with a weak claim on the liege that they can't currently use no longer get an increased revolt risk",
+                            "children": []
+                        },
+                        {
+                            "text": "Diplo AI: Tweaked \"desires better alliance \" factor for marriages",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'decadence' character history command",
+                            "children": []
+                        },
+                        {
+                            "text": "The Seljuks now start at 0% Decadence",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Forum, 1.06b PATCH RELEASED - Checksum LFOE , 2012-06-26",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

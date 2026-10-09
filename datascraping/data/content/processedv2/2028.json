@@ -1,0 +1,1545 @@
+{
+    "pageid": 2028,
+    "title": "Modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Modding , or creating mods , is the act of modifying the behavior of the base game (often referred as vanilla ), either for personal use, or to release publicly to other players, for instance via the Steam Workshop ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "As for all Paradox games, Crusader Kings II is moddable to a great extent."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Motivations of modders may vary widely: better translation to native language, more events or decisions, better map, major overhaul, etc."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Modding is not magic or heresy, anybody can learn to build a mod, and this guide is intended to lower the entry barriers to the world of CKII modding."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Yet, however good the documentation, there is still a learning curve to it, and it cannot replace the need to read some working vanilla code and do lots of trial and error!"
+                }
+            ]
+        },
+        {
+            "heading": "Guidelines",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Create a mod for your modifications : create a personal mod even for small changes, and never modify directly game files in Steam CKII folder, as they may be overwritten without warning.",
+                            "children": []
+                        },
+                        {
+                            "text": "Use a good text editor to edit files and search into multiple files. See text editors .",
+                            "children": []
+                        },
+                        {
+                            "text": "Validate your mod with The Validator , it will save you a lot of pain and time troubleshooting crashes and bugs.",
+                            "children": []
+                        },
+                        {
+                            "text": "Minimize overwrites of vanilla files by adding separate files and loading from folders whenever possible, to improve mod compatibility and maintenance.",
+                            "children": []
+                        },
+                        {
+                            "text": "Use a proper merge tool , to merge between folders , and update modified vanilla files to a new vanilla patch.",
+                            "children": []
+                        },
+                        {
+                            "text": "Backup your work to avoid losing everything. In case of a modding team, consider using a source control system like GitHub to act as backup and also manage collaboration.",
+                            "children": []
+                        },
+                        {
+                            "text": "Use ANSI (Windows-1252) encoding for text files.",
+                            "children": []
+                        },
+                        {
+                            "text": "Indent properly to easily spot unclosed curly braced. Vanilla uses 1 tab for indentation rather than spaces.",
+                            "children": []
+                        },
+                        {
+                            "text": "Use comments starting with # character, to remember reasons for writing tricky stuff.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Text editors",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Here are text editors with CK2 language support:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Notepad++ : CKII language file",
+                            "children": []
+                        },
+                        {
+                            "text": "Sublime Text : Syntax highlighting for Sublime Text 3",
+                            "children": []
+                        },
+                        {
+                            "text": "Atom : language-crusader-kings--i-i",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Mod structure",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "If creating a mod for the first time, see the detailed guide about creating a mod ."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Mods are located in folder ~\\Paradox Interactive\\Crusader Kings II\\mod , which must contain:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "the .mod file, to tell the launcher what to do with the mod-folder.",
+                            "children": []
+                        },
+                        {
+                            "text": "the mod folder or zip containing the mod data. The mod data must have the same file and folder structure as if it was along with CK2game.exe in the game directory. Note that folder and file names are case sensitive on Mac and Linux.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The name of the .mod file must not contain any white-spaces, otherwise it will not auto-select when re-starting the launcher."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The content of the .mod file is:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Key",
+                            "Required?",
+                            "Effect",
+                            "Example"
+                        ],
+                        [
+                            "name",
+                            "Yes",
+                            "Defines the name that shows up in the launcher",
+                            "name = \"My Mod\""
+                        ],
+                        [
+                            "path",
+                            "Yes",
+                            "Defines which folder is the mod's folder. It is relative to ~\\Documents\\Paradox Interactive\\Crusader Kings II\\ folder.",
+                            "path = \"mod/MyMod\""
+                        ],
+                        [
+                            "user_dir",
+                            "No",
+                            "Tells the launcher to store saved games and temporary files in a specific folder. This can be useful for mods incompatible with vanilla saves (because of new titles, flags, religions, cultures, buildings, etc.), so that things don't get mixed up. Warning : do not set user_dir for sub-mods of a main mod, as all user_dir of active mods are concatenated.",
+                            "user_dir = \"MyMod\""
+                        ],
+                        [
+                            "archive",
+                            "No",
+                            "Defines a zip-file instead of a folder. Alternative to path. It is relative to ~\\Documents\\Paradox Interactive\\Crusader Kings II\\ folder. This is the format used for mods downloaded from the Steam Workshop , but when uploading a mod to the workshop, path structure must be used instead.",
+                            "archive = \"mod/mymod.zip\""
+                        ],
+                        [
+                            "replace_path",
+                            "No",
+                            "Tells the launcher to override everything in a folder, and load ONLY from the specified paths inside the mod. This is the only way to effectively remove stuff from vanilla, and is most often used for total conversion mods. Notes: replace_path works with folders, not files . To overwrite a file, just create a file with the same name in the mod. replace_path only affects files in the specified folder, not files in sub-folders within that folder . For instance, replacing \"history\" does not replace \"history/characters\" as well. To reduce mod size and improve mod compatibility, it is usually best to minimize the amount of folders that are replace_path. replace_path is ignored when installing mod in the old Crusader Kings II\\mod folder, hence why user mod folder must be used. Unless you are sure you do need replace_path, you almost certainly don't.",
+                            "replace_path = \"history\" replace_path = \"history/characters\""
+                        ],
+                        [
+                            "dependencies",
+                            "No",
+                            "Tells the launcher that another mod has to be loaded before this one. The other mod will be loaded first, allowing the 2nd mod to override some files (otherwise the 1st mod would win). A dependency is not a hard requirement; you do not need a dependency loaded if the mod has one set. This is simply a way for the mod file to tell the launcher which files should be loaded first. When adding a dependency, refer to its name as specified in the relevant .mod file. Do not use path or file names. If the name of the dependency includes space, you have to enclose the name in quotation marks. \"Mod with space in name\" This is optional for dependency names that don't include spaces. Additionally, uploading a mod to the Steam Workshop will break this formatting. To counter this, prior to uploading, any dependencies excluding spaces in their name must be enclosed in quotation marks \"NameWithoutSpace\" , and any dependencies using spaces must be enclosed in escaped quotation marks. \"\\\"Name With Space\\\"\"",
+                            "dependencies = { \"MyMod\" \"Another Mod\" } dependencies = { \"MyMod\" \"\\\"Another Mod\\\"\" }"
+                        ],
+                        [
+                            "picture",
+                            "No",
+                            "Image under mod folder to serve as banner for Steam Workshop (will be displayed as 268px × 268px JPEG)",
+                            "picture = \"MyMod.jpg\""
+                        ],
+                        [
+                            "tags",
+                            "No",
+                            "List of tags for Steam Workshop . Warning: don't forget quotes for tags that contain spaces.",
+                            "tags = { \"Tag1\" \"Tag 2\" }"
+                        ],
+                        [
+                            "supported_checksums",
+                            "No",
+                            "List of expected checksums for which scripting condition supported_checksums will evaluate to true. This can be used in event modding to display a warning to the player.",
+                            "supported_checksums = { ABCD EFGH }"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Warning : do not set user_dir for sub-mods of a main mod, as all user_dir of active mods are concatenated."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Notes:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "replace_path works with folders, not files . To overwrite a file, just create a file with the same name in the mod.",
+                            "children": []
+                        },
+                        {
+                            "text": "replace_path only affects files in the specified folder, not files in sub-folders within that folder . For instance, replacing \"history\" does not replace \"history/characters\" as well.",
+                            "children": []
+                        },
+                        {
+                            "text": "To reduce mod size and improve mod compatibility, it is usually best to minimize the amount of folders that are replace_path.",
+                            "children": []
+                        },
+                        {
+                            "text": "replace_path is ignored when installing mod in the old Crusader Kings II\\mod folder, hence why user mod folder must be used.",
+                            "children": []
+                        },
+                        {
+                            "text": "Unless you are sure you do need replace_path, you almost certainly don't.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "replace_path = \"history/characters\""
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When adding a dependency, refer to its name as specified in the relevant .mod file. Do not use path or file names. If the name of the dependency includes space, you have to enclose the name in quotation marks. \"Mod with space in name\" This is optional for dependency names that don't include spaces."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Additionally, uploading a mod to the Steam Workshop will break this formatting. To counter this, prior to uploading, any dependencies excluding spaces in their name must be enclosed in quotation marks \"NameWithoutSpace\" , and any dependencies using spaces must be enclosed in escaped quotation marks. \"\\\"Name With Space\\\"\""
+                },
+                {
+                    "type": "paragraph",
+                    "text": "\"Another Mod\" }"
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "paragraph",
+                    "text": "dependencies = { \"MyMod\" \"\\\"Another Mod\\\"\" }"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Below are some examples mod files, depending on the category of the mod:"
+                }
+            ]
+        },
+        {
+            "heading": "Small mod",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Small mods are the most common, and should neither use user_dir nor replace_path in order to keep compatibility with other small mods."
+                }
+            ]
+        },
+        {
+            "heading": "Big mod",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Overhaul mods typically use user_dir as saves wouldn't be loadable outside of the mod anyway.\nFor total conversion mods, replace_path can be used to completely ignore vanilla directories that don't make sense in the context of the mod (history, flags, ...)"
+                }
+            ]
+        },
+        {
+            "heading": "Sub mod",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Sub-mods of a main mod typically use dependencies to be able to override files from main mod."
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Game data",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Console commands , useful for debugging mods.",
+                            "children": []
+                        },
+                        {
+                            "text": "Defines , which allow to influence some hardcoded vanilla behaviors",
+                            "children": []
+                        },
+                        {
+                            "text": "Scopes , conditions , and commands used for scripting",
+                            "children": []
+                        },
+                        {
+                            "text": "Modifiers , used to influence calculations made by the game",
+                            "children": []
+                        },
+                        {
+                            "text": "Map data",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Game structure",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The game data is composed of hierarchy of folders, containing game files."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A mod follows the same folder structure as the base game, so that when loading the game the engine will combine files from vanilla and mod(s).\nIn most folders, the engine will load all the files within, which allows a mod to add new definitions (titles, religions, ...) without having to copy and modify vanilla files.\nTo make use of this, it is important to understand how the scripts are loaded both at file level and definition level."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The behavior when loading a mod is the following:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Engine processes folders and files based on some hardcoded load order .",
+                            "children": []
+                        },
+                        {
+                            "text": "If current folder is defined as replace_path , all vanilla files in that folder will be ignored, and only mod files will be loaded (if any).",
+                            "children": []
+                        },
+                        {
+                            "text": "If the mod folder and vanilla folder both contain files with same names, vanilla files will be ignored and mod version will be used.",
+                            "children": []
+                        },
+                        {
+                            "text": "Inside a given folder, the order in which files are processed is usually alphanumerical on combined vanilla and mod file names, though some folders may have a different behavior.",
+                            "children": []
+                        },
+                        {
+                            "text": "When encountering more than once the same definition (title, religion, decision, ...), the duplicate definition may:",
+                            "children": [
+                                {
+                                    "text": "be ignored (first definition wins)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "fully override the previous definition (last definition wins)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "partially override the previous definition (definitions are merged/additive, which only makes sense if there is actually something to merge: hierarchy, list, etc.)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "coexist/break both (in which case duplicate IDs must be avoided)",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Below is a list of CKII game files and folders, with associated modding guide, and loading behavior."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For loading behavior, the cell colours highlight whether the behaviour is the expected one , strange or requiring some attention , or unexpected and to be avoided ."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "File/Folder",
+                            "What it contains",
+                            "How to mod",
+                            "Loading behavior"
+                        ],
+                        [
+                            ".\\ common\\ achievements.txt defines.lua defines.txt hints.txt region_colors.txt static_modifiers.txt technology.txt",
+                            "General information Defines Steam Achievements POP, general, diplomatic, economic and military variables Defines playable start- and end-date Defines the displayed hints RGB code for each region All difficulty, rank and standard modifiers Technology data",
+                            "Defines Static modifiers Technology modding",
+                            "N/A"
+                        ],
+                        [
+                            ".\\common\\ alternate_start\\",
+                            "",
+                            "Alternate start modding",
+                            "[ ? ] Merge"
+                        ],
+                        [
+                            ".\\common\\ artifact_spawns\\",
+                            "",
+                            "Artifact modding",
+                            "Merge."
+                        ],
+                        [
+                            ".\\common\\ artifacts\\",
+                            "Definitions of artifacts",
+                            "Artifact modding",
+                            "Merge."
+                        ],
+                        [
+                            ".\\common\\ bloodlines\\",
+                            "",
+                            "Bloodline modding",
+                            ""
+                        ],
+                        [
+                            ".\\common\\ bookmarks\\",
+                            "Bookmarks are configured here (scenarios/start dates)",
+                            "Bookmark modding",
+                            "Merge. Bookmarks are listed chronologically in-game, whatever the order in files."
+                        ],
+                        [
+                            ".\\common\\ buildings\\",
+                            "Buildings folder, all buildings are stored here.",
+                            "Building modding",
+                            "Merge, but override of buildings by re-using same name does not work (creates duplicate buildings)"
+                        ],
+                        [
+                            ".\\common\\ cb_types\\",
+                            "Casus Belli folder, all Casus-belli are stored here.",
+                            "Casus Belli modding",
+                            "Merge, but override of casus belli by re-using same name does not work (creates duplicate casus belli)"
+                        ],
+                        [
+                            ".\\common\\ combat_tactics\\",
+                            "Combat tactics definitions.",
+                            "Unit modding",
+                            "[ ? ] Merge, but override of tactic definitions by re-using same name does not work (creates duplicate tactic)."
+                        ],
+                        [
+                            ".\\common\\ council_positions\\",
+                            "Conditions for an A.I. councillor to adopt a certain category of voting behavior.",
+                            "Councillor modding",
+                            "[ ? ]"
+                        ],
+                        [
+                            ".\\common\\ council_voting\\",
+                            "A.I. rules for how councillors from a behavior category will vote",
+                            "Councillor modding",
+                            "[ ? ]"
+                        ],
+                        [
+                            ".\\common\\ cultures\\",
+                            "Cultures folder, all cultures are stored here.",
+                            "Culture modding",
+                            "Merge. Since patch 2.4 cultures are merged like religions, and a new culture may be added to a vanilla culture_group via a separate file."
+                        ],
+                        [
+                            ".\\common\\ death\\",
+                            "Death definitions",
+                            "Death modding",
+                            ""
+                        ],
+                        [
+                            ".\\common\\ death_text\\",
+                            "Flavor text for succession screen",
+                            "Death modding",
+                            ""
+                        ],
+                        [
+                            ".\\common\\ defines\\",
+                            "Defines .",
+                            "Defines",
+                            "[ ? ] Merge. Entries in files override common/defines.lua values."
+                        ],
+                        [
+                            ".\\common\\ disease\\",
+                            "Diseases definitions.",
+                            "Disease modding",
+                            "[ ? ] Merge"
+                        ],
+                        [
+                            ".\\common\\ dynasties\\",
+                            "Dynasties folder, all dynasties are stored here.",
+                            "Dynasty modding .",
+                            "Merge. Duplicate dynasties loaded before vanilla (i.e., 000_ prefix) will overwrite dynasty shields. Duplicates loaded after (i.e., z_ prefix) will overwrite dynasty names. To overwrite both, use duplicate files, one with a preceding prefix and one with a succeeding prefix."
+                        ],
+                        [
+                            ".\\common\\ event_modifiers\\",
+                            "Event_modifiers folder, all event modifiers are stored here",
+                            "Modifiers",
+                            "Merge."
+                        ],
+                        [
+                            ".\\common\\ execution_methods\\",
+                            "Execution methods",
+                            "Death modding",
+                            "[ ? ]"
+                        ],
+                        [
+                            ".\\common\\ game_rules\\",
+                            "Game rules definitions",
+                            "Game rules modding",
+                            "Merge. The rules are displayed in UI based on order of files (alphanumerical on file name), then order of rules within the file."
+                        ],
+                        [
+                            ".\\common\\ government_flavor\\",
+                            "Government naming definitions",
+                            "Government modding",
+                            "[ ? ]"
+                        ],
+                        [
+                            ".\\common\\ governments\\",
+                            "Government definitions",
+                            "Government modding",
+                            "Merge. It is possible to define governments of the same government group in different files."
+                        ],
+                        [
+                            ".\\common\\ graphicalculturetypes\\",
+                            "Graphicalculturetypes folder, all graphical culture types are stored here",
+                            "",
+                            "[ ? ] Merge"
+                        ],
+                        [
+                            ".\\common\\ heir_text\\",
+                            "Flavor text for succession screen",
+                            "Death modding",
+                            ""
+                        ],
+                        [
+                            ".\\common\\ holding_types\\",
+                            "Conditions for being allowed to build each holding type.",
+                            "Holding modding",
+                            "Merge. A holding_type with the same name will append (not replace) triggers. (IE: A holding can only be built if all triggers in all files evaluate to true.) Note that it is not possible to add new holding_types; and that \"some hardcoded restrictions also apply\"."
+                        ],
+                        [
+                            ".\\common\\ job_actions\\",
+                            "Defines councillors actions",
+                            "Councillor modding",
+                            "Merge."
+                        ],
+                        [
+                            ".\\common\\ job_titles\\",
+                            "Defines councillors titles",
+                            "Councillor modding",
+                            "[ ? ]"
+                        ],
+                        [
+                            ".\\common\\ landed_titles\\",
+                            "Landed_titles folder, all landed titles are stored here.",
+                            "Title modding",
+                            "Merge. Merging behaviour is \"complicated and might not have been designed that way intentionally\" [1]"
+                        ],
+                        [
+                            ".\\common\\ laws\\",
+                            "",
+                            "Law modding",
+                            "Merge. A law with the same name as an existing law will append conditions to the allow section, but not the potential section."
+                        ],
+                        [
+                            ".\\common\\ mercenaries\\",
+                            "Stores mercenaries' troop compositions.",
+                            "Title modding",
+                            "[ ? ] Merge"
+                        ],
+                        [
+                            ".\\common\\ minor_titles\\",
+                            "Minor titles, including honorary titles",
+                            "Minor title modding",
+                            "Cannot be overridden, attempts to do so will result in multiple minor titles with the same tags, like traits"
+                        ],
+                        [
+                            ".\\common\\ modifier_definitions\\",
+                            "Defines dynamically defined modifiers, in particular special units modifiers.",
+                            "Unit modding",
+                            "[ ? ] Merge"
+                        ],
+                        [
+                            ".\\common\\ nicknames\\",
+                            "Nicknames folder, all nicknames are stored here",
+                            "Nickname modding",
+                            "Merge."
+                        ],
+                        [
+                            ".\\common\\ objectives\\",
+                            "Objectives folder, all objectives (i.e. ambitions, factions, plots and focuses) are stored here.",
+                            "Objective modding",
+                            "Merge, but override of objectives by re-using same name does not work (creates duplicate objectives)"
+                        ],
+                        [
+                            ".\\common\\ offmap_powers\\ policies\\ statuses\\",
+                            "Defines nations not represented on the map, but with a significant influence over it.",
+                            "Offmap power modding",
+                            "[ ? ] Merge. Does NOT require Jade Dragon DLC."
+                        ],
+                        [
+                            ".\\common\\ on_actions\\",
+                            "On_actions folder, all on_actions are stored here",
+                            "Event modding",
+                            "Merge. Since patch 2.4 on_actions are merged, with new events being added to the previous list for a particular on_action, instead of replacing the list."
+                        ],
+                        [
+                            ".\\common\\ opinion_modifiers\\",
+                            "Opinion modifiers folder, all opinion modifiers are stored here",
+                            "Modifiers",
+                            "[ ? ] Merge"
+                        ],
+                        [
+                            ".\\common\\ province_setup\\",
+                            "Deprecated since patch 3.0 .",
+                            "",
+                            ""
+                        ],
+                        [
+                            ".\\common\\ religion_features\\",
+                            "",
+                            "Religion modding",
+                            "[ ? ] Merge, but features with the same key get duplicated"
+                        ],
+                        [
+                            ".\\common\\ religion_modifiers\\",
+                            "Religion_modifiers folder, all religion modifiers are stored here.",
+                            "Modifiers",
+                            "[ ? ] Merge"
+                        ],
+                        [
+                            ".\\common\\ religions\\",
+                            "Religions folder, all religions are stored here.",
+                            "Religion modding",
+                            "Merge. Vanilla religions can be overridden, without needing to duplicate the whole religion group. Restrictions: need to define reformed religion before the non-reformed."
+                        ],
+                        [
+                            ".\\common\\ religious_titles\\",
+                            "Religious_titles folder, all religious titles are stored here",
+                            "",
+                            "[ ? ] Merge"
+                        ],
+                        [
+                            ".\\common\\ retinue_subunits\\",
+                            "Retinue subunits folder, all retinue subunits are stored here",
+                            "",
+                            "[ ? ] Merge, but retinues with the same key get duplicated"
+                        ],
+                        [
+                            ".\\common\\ save_conversion\\",
+                            "",
+                            "Save game compatibility",
+                            "[ ? ]"
+                        ],
+                        [
+                            ".\\common\\ scripted_effects\\",
+                            "",
+                            "Scripted effects",
+                            "[ ? ] Merge"
+                        ],
+                        [
+                            ".\\common\\ scripted_score_value\\",
+                            "",
+                            "Scripted score value",
+                            "[ ? ] Merge"
+                        ],
+                        [
+                            ".\\common\\ scripted_triggers\\",
+                            "",
+                            "Scripted triggers",
+                            "Merge, but scripted triggers with same name append their conditions rather than replacing the original one."
+                        ],
+                        [
+                            ".\\common\\ societies\\",
+                            "Definition of societies",
+                            "Society modding",
+                            "Merge, but override of societies by re-using same name does not work (creates duplicate societies)"
+                        ],
+                        [
+                            ".\\common\\ special_troops\\",
+                            "Special units definitions",
+                            "Unit modding",
+                            "[ ? ] Merge"
+                        ],
+                        [
+                            ".\\common\\ stories\\",
+                            "Not used.",
+                            "",
+                            "N/A"
+                        ],
+                        [
+                            ".\\common\\ succession_voting\\",
+                            "Succession voting rules and AI behavior",
+                            "Succession modding",
+                            "[ ? ] Merge"
+                        ],
+                        [
+                            ".\\common\\ trade_routes\\",
+                            "Trade route definitions.",
+                            "Trade route modding",
+                            "[ ? ]"
+                        ],
+                        [
+                            ".\\common\\ traits\\",
+                            "Traits folder, all traits are stored here.",
+                            "Trait modding",
+                            "Merge, but traits with same name will co-exist, and generated characters may get both versions of the trait at the same time. The last definition gets assigned to a character when using commands."
+                        ],
+                        [
+                            ".\\common\\ tributary_types\\",
+                            "Tributary relationship definitions.",
+                            "Tributary type modding",
+                            "[ ? ]"
+                        ],
+                        [
+                            ".\\common\\ triggered_modifiers\\",
+                            "Defines global modifiers that trigger under certain conditions",
+                            "Triggered modifiers",
+                            "[ ? ] Merge"
+                        ],
+                        [
+                            ".\\common\\ wonder_upgrades\\",
+                            "Stores the specifications for all Great Work features",
+                            "Great work modding",
+                            "Merge."
+                        ],
+                        [
+                            ".\\common\\ wonders\\",
+                            "Stores the specifications for all Great Works",
+                            "Great work modding",
+                            "Merge."
+                        ],
+                        [
+                            ".\\ connectui\\",
+                            "Appears to be leftover interface for the discontinued Paradox Connect service (used in older Clausewitz games CK2 is based on).",
+                            "Unusable",
+                            ""
+                        ],
+                        [
+                            ".\\ decisions\\",
+                            "Decisions folder, all decisions are stored here",
+                            "Decision modding",
+                            "Merge, but override of decision by re-using same name does not work (breaks the decision effect, that does nothing)"
+                        ],
+                        [
+                            ".\\ dlc\\",
+                            "Contains DLC information and zipped content files",
+                            "DLC files",
+                            "N/A"
+                        ],
+                        [
+                            ".\\ dlc_metadata\\",
+                            "?",
+                            "",
+                            "?"
+                        ],
+                        [
+                            ".\\ eu4_converter\\",
+                            "Europa Universalis 4 Save Converter folder, all files related to the EUIV converter are stored here. Note: vanilla files were moved inside /dlc/dlc030.zip",
+                            "EU4 Converter modding",
+                            "[ ? ]"
+                        ],
+                        [
+                            ".\\ events\\",
+                            "Events folder, all events are stored here.",
+                            "Event modding",
+                            "Merge. If redefining an event in a file loaded alphabetically after the original file, the event will be fully overridden. Developers have discouraged this practice, as that engine behavior is not guaranteed to remain in the future (source ?)"
+                        ],
+                        [
+                            ".\\ gfx\\ ambitions\\ characters\\ coats_of_arms\\ cursors\\ eurfonts\\ event_pictures\\ flags\\ fonts\\ FX\\ interface\\ loadingscreens\\ mapitems\\ models\\ polishfonts\\ titles\\ traits\\",
+                            "Graphics folder, all graphics are stored here.",
+                            "Graphics modding Graphics are mapped to a logical name (GFX_xxx) inside .\\interface\\*.gfx files Warning : a missing flag for a title in flags\\ will cause wrong flags to appear for most titles, due to a shift.",
+                            ""
+                        ],
+                        [
+                            ".\\ history\\",
+                            "Historical data for characters, titles, provinces and wars for the possible start dates. This is a likely the text export of an internal database, which is sometime mentioned in the patch notes. [2]",
+                            "History modding",
+                            "N/A"
+                        ],
+                        [
+                            ".\\history\\ characters\\",
+                            "Historical characters, optionally associated to a dynasty from \\common\\dynasties\\ folder.",
+                            "Character modding",
+                            "[ ? ] Merge. Duplicate character IDs break the character history and must be avoided."
+                        ],
+                        [
+                            ".\\history\\ diplomacy\\",
+                            "Not used",
+                            "N/A",
+                            "N/A"
+                        ],
+                        [
+                            ".\\history\\ offmap_powers\\",
+                            "History of offmap powers (holder, status, ...)",
+                            "Offmap power modding",
+                            "[ ? ] Merge"
+                        ],
+                        [
+                            ".\\history\\ provinces\\",
+                            "History of provinces (holdings built, change of culture or religion)",
+                            "Province modding",
+                            "[ ? ] Merge"
+                        ],
+                        [
+                            ".\\history\\ technology\\",
+                            "Initial technology of provinces, depending on the start date.",
+                            "Technology modding",
+                            "[ ? ]"
+                        ],
+                        [
+                            ".\\history\\ titles\\",
+                            "History of titles (list of successive holders)",
+                            "Note: titles that should be deactivated at game start (ex: reformed religion heads) must have an history file that disables the title.",
+                            "[ ? ] Merge"
+                        ],
+                        [
+                            ".\\history\\ wars\\",
+                            "Important on-going wars (attacker, defender, Casus Belli, war score, ...), usually for historical bookmarks.",
+                            "",
+                            "[ ? ] Merge"
+                        ],
+                        [
+                            ".\\ interface\\ generalstuff.gfx sound.sfx",
+                            "Interface graphics",
+                            "Interface modding Sound modding",
+                            "Loading of *.gfx files is in alphanumerical order. Last spriteType definition loaded overrides previous ones with same name, if any (i.e. use zz_ file prefix to override vanilla sprites). Only sound.sfx is taken into account, other .sfx files are ignored."
+                        ],
+                        [
+                            ".\\interface\\ coat_of_arms\\",
+                            "",
+                            "Coats of arms modding",
+                            "Coat of arms definitions can be split across multiple files. No support for appending existing definitions from a different file."
+                        ],
+                        [
+                            ".\\interface\\ portrait_offsets\\",
+                            ".txt files with external offsets for portrait frames",
+                            "Portrait modding",
+                            ""
+                        ],
+                        [
+                            ".\\interface\\ portrait_properties\\",
+                            "Dynamic rules to select portrait properties values",
+                            "Portrait modding",
+                            "[ ? ]"
+                        ],
+                        [
+                            ".\\interface\\ portrait\\",
+                            "Definitions of spriteType and portraitType elements for portraits.",
+                            "Portrait modding",
+                            "Merge"
+                        ],
+                        [
+                            ".\\ launcher\\",
+                            "Launcher graphics and configuration",
+                            "",
+                            "N/A"
+                        ],
+                        [
+                            ".\\ localisation\\",
+                            "All text data for things like country names and event description, has options for other languages",
+                            "Localisation",
+                            "Full override. If duplicates are in different files, first file loaded wins (i.e. use 00_ file prefix to override vanilla keys). If in same file, last duplicate in file wins. Warning : files must end with .csv extension, or they will not be taken into account."
+                        ],
+                        [
+                            ".\\localisation\\ customizable_localisation\\",
+                            "Custom localisation commands definitions",
+                            "Localisation#Customizable localisation",
+                            "[ ? ] Merge."
+                        ],
+                        [
+                            ".\\ map\\ adjacencies.csv default.map definition.csv geographical_region.txt positions.txt provinces.bmp rivers.bmp terrain.bmp topology.bmp trees.bmp world_normal_height.bmp",
+                            "Map settings, province shapes, continents, regions etc.",
+                            "Map modding",
+                            "N/A"
+                        ],
+                        [
+                            ".\\ map\\statics",
+                            "Map external frame size, and positions of fixed 3D map elements (wonders, etc.)",
+                            "Map modding",
+                            ""
+                        ],
+                        [
+                            ".\\ map\\terrain",
+                            "",
+                            "Map modding",
+                            ""
+                        ],
+                        [
+                            ".\\ mod\\",
+                            "Dummy mod folder, do not store mods here, use local mod folder",
+                            "Mod file",
+                            "Breaks mods, as configurations like replace_path are ignored."
+                        ],
+                        [
+                            ".\\ music\\",
+                            "Music used by the game",
+                            "Music modding",
+                            "[ ? ] All .txt files song elements are loaded."
+                        ],
+                        [
+                            ".\\ sound\\",
+                            "All sounds except music",
+                            "",
+                            "[ ? ]"
+                        ],
+                        [
+                            ".\\ tutorial\\",
+                            "Tutorial configuration",
+                            "",
+                            "[ ? ]"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "achievements.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "defines.lua",
+                            "children": []
+                        },
+                        {
+                            "text": "defines.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "hints.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "region_colors.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "static_modifiers.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "technology.txt",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Defines Steam Achievements",
+                            "children": []
+                        },
+                        {
+                            "text": "POP, general, diplomatic, economic and military variables",
+                            "children": []
+                        },
+                        {
+                            "text": "Defines playable start- and end-date",
+                            "children": []
+                        },
+                        {
+                            "text": "Defines the displayed hints",
+                            "children": []
+                        },
+                        {
+                            "text": "RGB code for each region",
+                            "children": []
+                        },
+                        {
+                            "text": "All difficulty, rank and standard modifiers",
+                            "children": []
+                        },
+                        {
+                            "text": "Technology data",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Defines"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Static modifiers Technology modding"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "policies\\",
+                            "children": []
+                        },
+                        {
+                            "text": "statuses\\",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: vanilla files were moved inside /dlc/dlc030.zip"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Developers have discouraged this practice, as that engine behavior is not guaranteed to remain in the future (source ?)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "ambitions\\",
+                            "children": []
+                        },
+                        {
+                            "text": "characters\\",
+                            "children": []
+                        },
+                        {
+                            "text": "coats_of_arms\\",
+                            "children": []
+                        },
+                        {
+                            "text": "cursors\\",
+                            "children": []
+                        },
+                        {
+                            "text": "eurfonts\\",
+                            "children": []
+                        },
+                        {
+                            "text": "event_pictures\\",
+                            "children": []
+                        },
+                        {
+                            "text": "flags\\",
+                            "children": []
+                        },
+                        {
+                            "text": "fonts\\",
+                            "children": []
+                        },
+                        {
+                            "text": "FX\\",
+                            "children": []
+                        },
+                        {
+                            "text": "interface\\",
+                            "children": []
+                        },
+                        {
+                            "text": "loadingscreens\\",
+                            "children": []
+                        },
+                        {
+                            "text": "mapitems\\",
+                            "children": []
+                        },
+                        {
+                            "text": "models\\",
+                            "children": []
+                        },
+                        {
+                            "text": "polishfonts\\",
+                            "children": []
+                        },
+                        {
+                            "text": "titles\\",
+                            "children": []
+                        },
+                        {
+                            "text": "traits\\",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Graphics are mapped to a logical name (GFX_xxx) inside .\\interface\\*.gfx files Warning : a missing flag for a title in flags\\ will cause wrong flags to appear for most titles, due to a shift."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "generalstuff.gfx",
+                            "children": []
+                        },
+                        {
+                            "text": "sound.sfx",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Sound modding",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Loading of *.gfx files is in alphanumerical order. Last spriteType definition loaded overrides previous ones with same name, if any (i.e. use zz_ file prefix to override vanilla sprites).",
+                            "children": []
+                        },
+                        {
+                            "text": "Only sound.sfx is taken into account, other .sfx files are ignored.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "adjacencies.csv",
+                            "children": []
+                        },
+                        {
+                            "text": "default.map",
+                            "children": []
+                        },
+                        {
+                            "text": "definition.csv",
+                            "children": []
+                        },
+                        {
+                            "text": "geographical_region.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "positions.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "provinces.bmp",
+                            "children": []
+                        },
+                        {
+                            "text": "rivers.bmp",
+                            "children": []
+                        },
+                        {
+                            "text": "terrain.bmp",
+                            "children": []
+                        },
+                        {
+                            "text": "topology.bmp",
+                            "children": []
+                        },
+                        {
+                            "text": "trees.bmp",
+                            "children": []
+                        },
+                        {
+                            "text": "world_normal_height.bmp",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Specific guides",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Troubleshooting - how to find errors in your mod",
+                            "children": []
+                        },
+                        {
+                            "text": "Save-game editing - how to change a save game",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Patch 2.4 mod compatibility guide - how to migrate a mod from patch 2.3.6 to patch 2.4.X",
+                            "children": []
+                        },
+                        {
+                            "text": "Patch 2.5 mod compatibility guide - how to migrate a mod from patch 2.4.5 to patch 2.5.X",
+                            "children": []
+                        },
+                        {
+                            "text": "Patch 2.6 mod compatibility guide - how to migrate a mod from patch 2.5.2 to patch 2.6.X",
+                            "children": []
+                        },
+                        {
+                            "text": "Patch 2.7 mod compatibility guide - how to migrate a mod from patch 2.6.3 to patch 2.7.X",
+                            "children": []
+                        },
+                        {
+                            "text": "Patch 2.8 mod compatibility guide - how to migrate a mod from patch 2.7.2 to patch 2.8.X",
+                            "children": []
+                        },
+                        {
+                            "text": "Patch 3.0 mod compatibility guide - how to migrate a mod from patch 2.8.3.2 to patch 3.0.X",
+                            "children": []
+                        },
+                        {
+                            "text": "Patch 3.1 mod compatibility guide - how to migrate a mod from patch 3.0.X to patch 3.1.X",
+                            "children": []
+                        },
+                        {
+                            "text": "Merging guide - how to merge mod files with a new vanilla patch",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Total conversion guide - Creating a total conversion mod",
+                            "children": []
+                        },
+                        {
+                            "text": "Creating a mod exe installer guide - Advanced guide for creating a Windows installer",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Tools & utilities",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Notepad++ - Editor to change files, is better than normal editor",
+                            "children": []
+                        },
+                        {
+                            "text": "Notepad++ language file for CKII - very helpful to read code",
+                            "children": []
+                        },
+                        {
+                            "text": "The Validator - Support tool to find errors in files",
+                            "children": []
+                        },
+                        {
+                            "text": "EU4:JoroDox mod making tool / Forum thread - View mod files & create CK2 compatible 3D models",
+                            "children": []
+                        },
+                        {
+                            "text": "CK2 Cultures Parser",
+                            "children": []
+                        },
+                        {
+                            "text": "Coat of Arms Builder",
+                            "children": []
+                        },
+                        {
+                            "text": "Portrait Builder - Tool to preview character portraits",
+                            "children": []
+                        },
+                        {
+                            "text": "Scenario Editor",
+                            "children": []
+                        },
+                        {
+                            "text": "Titular Title Generator",
+                            "children": []
+                        },
+                        {
+                            "text": "Text Fixer - alphabetize your localisation file",
+                            "children": []
+                        },
+                        {
+                            "text": "Paradox Province Color Picker",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Advanced tips",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Source Control: Basics",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "It is generally recommended to use source control (eg. Git, using free GitHub hosting) for anything other than a tiny simple mod. Because, once you understand how source control works, it greatly simplifies debugging (as well as avoiding data loss, and many other aspects of mod development)."
+                }
+            ]
+        },
+        {
+            "heading": "Source Control: Symbolic Links",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For the bigger mods using a source control management tool (Git, ...), you may find it useful to create a symbolic link between CKII mod folder and the working directory of the local repository - especially if the mod also has sub-mods."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that you'll still need to copy the .mod file(s) manually, but they rarely change."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Run the following command from the parent directory of main git folder, replacing:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "<mod_path_name> with the value of path attribute from .mod file",
+                            "children": []
+                        },
+                        {
+                            "text": "<git_mod_folder> with the name of the sub-folder that contain mod data (folders common, decisions, events, etc...)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Testing Mods",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Certain, more obscure console commands (that don't show up if you type 'help' in the console) are extremely useful in the process of testing a mod."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "debug_mode / charinfo enables various in-game debugging tools, some of which are not obvious, including:",
+                            "children": [
+                                {
+                                    "text": "Character portraits: ID, health, fertility, character flags & variables, AI behaviour variables",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Provinces: province flags & variables (but province ID is not shown).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Titles: ID, title flags",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Events: Event ID, option ID, names of various scopes (Root/From/FromFrom/etc)",
+                                    "children": [
+                                        {
+                                            "text": "NB: If you ctrl+right-click on an event option, the event code will open in a text editor. You may change the default via the text_editor and text_editor_postfix settings in your settings.txt (see patch 3.0 notes for more details).",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "observe switches you to Observer Mode.",
+                            "children": [
+                                {
+                                    "text": "You will no longer play as any specific character - this will allow the game to run for a long period of time, uninterrupted.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "This also makes every invisible trait and secret religion visible.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "run <filename.txt> runs a script in a txt file located in the in the Documents install directory.",
+                            "children": [
+                                {
+                                    "text": "This script will be executed from the player's scope. (You can scope to other characters/provinces/etc as normal.)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Useful for testing tricky scripts - you can just have the script open in a different window, run it, tweak the script, save it, and run it again. No need for any lengthy recompile processes (see next item)!",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "reloadevents reloads and recompiles every single event.",
+                            "children": [
+                                {
+                                    "text": "This may take a while, depending on your hardware.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Useful if you want to tweak an entire event or chain of events without rebooting the game every time.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "reloadloc reloads the entire localisation table.",
+                            "children": [
+                                {
+                                    "text": "Useful if you spot a typo while testing your mod, or if you are trying to fit as much text in an event frame as possible.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "More Console commands are available on the main page, and are very useful for more specific alterations like adding lovers or killing people."
+                }
+            ]
+        },
+        {
+            "heading": "External links",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Modding - Quick questions",
+                            "children": []
+                        },
+                        {
+                            "text": "User mod Index/Guides/Utilities superthread",
+                            "children": []
+                        },
+                        {
+                            "text": "CK Modding Den Discord",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Mods",
+                            "children": []
+                        },
+                        {
+                            "text": "Modding suggestions",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Forum:774248/page-14#post-19100145",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Patch_2.0#Database",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,268 @@
+{
+    "pageid": 186,
+    "title": "Patch 1.04",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The first major patch. Released 2012-03-05."
+                }
+            ]
+        },
+        {
+            "heading": "Major",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Revised the Message Setting system",
+                            "children": []
+                        },
+                        {
+                            "text": "Religion groups are now marked playable in the religion file (no more hard coded rule)",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Improved marriage acceptance. Smarter about \"Desires Better Alliance \". Values prestige gain or loss higher.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added some useful status info to the delayed character tooltip (similar to the info in debug mode)",
+                            "children": []
+                        },
+                        {
+                            "text": "Cooldown added to excommunications (only for the same Pope though)",
+                            "children": []
+                        },
+                        {
+                            "text": "Doubled the flanking damage bonus in combat",
+                            "children": []
+                        },
+                        {
+                            "text": "Increased the flank leader Martial skill bonus in combat by 50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a CTD that can occur in a rare situation with characters having multiple wars against each other",
+                            "children": []
+                        },
+                        {
+                            "text": "Nerfed taxes given by bishops to Anti-Popes by 50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Holy Orders now cost maintenance if you're in at least one offensive, non-Crusade war",
+                            "children": []
+                        },
+                        {
+                            "text": "Halved all peasant revolt risk factors",
+                            "children": []
+                        },
+                        {
+                            "text": "Added an \"Isolated County\" revolt risk modifier and cut the special events that used to simulate it",
+                            "children": []
+                        },
+                        {
+                            "text": "Peasant Army size is now determined by the biggest holding garrison size (so they will always be dangerous)",
+                            "children": []
+                        },
+                        {
+                            "text": "The Succession War CBs now have the proper success outcome",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the usurpation of titles that would hand over all vassals too",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: More wary of expensive assassinations",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Fixed some issues with the correct Casus Belli choice",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Tweaked vassal revolt risk to depend more on ambition from traits",
+                            "children": []
+                        },
+                        {
+                            "text": "The duchies of Cornwall and Brittany are now de jure part of the Kingdom of Wales",
+                            "children": []
+                        },
+                        {
+                            "text": "Buffed the Caliphates and the Seljuks. Nerfed the Byzantines.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added vassal Seljuk mercs; the Ghilman",
+                            "children": []
+                        },
+                        {
+                            "text": "Now shows a portrait of the target in available player plots",
+                            "children": []
+                        },
+                        {
+                            "text": "Hooked in missing plot icon in available player plots",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Minor",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Upped the chances of dying due to disease a little bit",
+                            "children": []
+                        },
+                        {
+                            "text": "Increased the effects of the genius, quick, slow, imbecile and inbred traits",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced the levy size effect of some of the \"recently occupied\" modifiers",
+                            "children": []
+                        },
+                        {
+                            "text": "Nominated bishops are now properly disinherited at once",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the guardian opinion modifiers given when entrusted with a ward",
+                            "children": []
+                        },
+                        {
+                            "text": "Combat events will not happen until three days into a combat (to avoid commander deaths and such when overrunning tiny forces)",
+                            "children": []
+                        },
+                        {
+                            "text": "When an Anti-Pope is installed in Rome, the old Pope no longer becomes an Anti-Pope",
+                            "children": []
+                        },
+                        {
+                            "text": "Waived the opinion penalty for held elector titles for elective duchies and below",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a CTD issue that could occur in tooltips when hovering over Holding modifiers as they expire",
+                            "children": []
+                        },
+                        {
+                            "text": "Vassal mercs can now always be employed by their liege, no matter their religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Scaled wealth effects and triggers are now based on nominal peacetime income",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an error in the opinion warning when banishing characters (not the correct figure.)",
+                            "children": []
+                        },
+                        {
+                            "text": "The game will now also auto-generate an appropriate number of traits for children with not enough scripted traits",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a text warning/explanation for DoW on a revolter",
+                            "children": []
+                        },
+                        {
+                            "text": "Traits are now read from multiple files, facilitating modding",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with event ids in a namespace",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with flipping \"random god names\" tooltips in fire event effect tooltips",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the decision 'Demand Duchy from liege' with duke tier lieges (should not be available)",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a tooltip issue with the \"any\" type event triggers",
+                            "children": []
+                        },
+                        {
+                            "text": "Better tooltips for event triggers 'higher_tier_than' and 'lower_tier_than'",
+                            "children": []
+                        },
+                        {
+                            "text": "Re-enabled selection of the same type of plot again for players",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with save/reload of the last selected plot/ambition",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with protected inheritance not always working under Gavelkind",
+                            "children": []
+                        },
+                        {
+                            "text": "Exported MAX_ELECTOR_TITLES_LEGALLY_HELD to defines",
+                            "children": []
+                        },
+                        {
+                            "text": "Exported the max duchies held opinion penalty to defines",
+                            "children": []
+                        },
+                        {
+                            "text": "Exported the tax penalty for bishops loyal to the Pope or Anti-Pope to the defines",
+                            "children": []
+                        },
+                        {
+                            "text": "The \"recently conquered\" holding penalties are no longer applied during civil wars or wars between vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Fixed a bug where the AI would grant titles to vassal mercs",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'same_guardian' trigger",
+                            "children": []
+                        },
+                        {
+                            "text": "Slightly nerfed William of Normandy's initial army size",
+                            "children": []
+                        },
+                        {
+                            "text": "Switched the portraits of Harold and William the Conqueror",
+                            "children": []
+                        },
+                        {
+                            "text": "Changed some title colors to conform better to their cultural region",
+                            "children": []
+                        },
+                        {
+                            "text": "Added proper history for the Prince-Bishopric of Agen",
+                            "children": []
+                        },
+                        {
+                            "text": "The Earl of Atholl is now a _legitimate_ bastard",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

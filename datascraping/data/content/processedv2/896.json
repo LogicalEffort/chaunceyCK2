@@ -1,0 +1,1469 @@
+{
+    "pageid": 896,
+    "title": "Retinues",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Legacy of Rome DLC is required."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Retinues are regiments of troops which form a standing army for each ruler. Unlike levies , retinues do not need to be dismissed before declaring war ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Non-tribals must pay a fee to hire retinues. They also have a monthly maintenance cost and can be expensive while reinforcing back to full strength. With the Monks and Mystics DLC, the Marshal can be assigned to a job which reduces the monthly maintenance costs of retinues."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In place of retinues,"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Nomads use horde troops .",
+                            "children": []
+                        },
+                        {
+                            "text": "Tribals use #tribal retinues .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Retinue cap",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Each ruler can only have a retinue of a limited size, dependent on their retinue cap . Different troop types take up differently-sized portions of the cap, with more powerful types (such as heavy cavalry) using more."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The retinue cap is given by the formula:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "where:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Rank is 2 for Counts, 3 for Dukes, 4 for Kings and 5 for Emperors.",
+                            "children": []
+                        },
+                        {
+                            "text": "RealmHoldings is the number of holdings in the realm .",
+                            "children": []
+                        },
+                        {
+                            "text": "BuildingBonus comes from specific buildings :",
+                            "children": [
+                                {
+                                    "text": "Training Grounds in a Castle give 20 cap per level.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Garrisons in a trade post give 20, 30 and 50 retinue cap at each level. This applies to the patrician that controls the trade post, not the ruler of the province where it is built.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The Silk Road Trade Office building , built in Silk Road Trade Posts, gives 50, 100, and 150 retinue cap for each level. This applies to the owner of the trade post.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The Military Warehouse buildings in a patrician 's Family Palace give 200, 400 and 600 retinue cap.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The Royal Palace Great Work gives 250, 500 and 750 retinue cap. This applies to the top liege of the Palace, not the ruler of the province where it is built.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "MilitaryOrganizationTech is the Military Organization technology in the ruler's capital.",
+                            "children": []
+                        },
+                        {
+                            "text": "UnreformedGermanicBonus is 0.5 if the ruler is unreformed Germanic pagan . Their 50% bonus to retinue is multiplicative rather than additive.",
+                            "children": []
+                        },
+                        {
+                            "text": "RoyalPalaceBonus is 0.2 per owned stage 4 Royal Palace Great Work [1] . This bonus is also multiplicative rather than additive.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If a retinue unit is completely wiped out (i.e. all members killed in battle) then it will be disbanded and the retinue cap usage will be decreased by the amount that had been used by the now-destroyed retinue unit."
+                }
+            ]
+        },
+        {
+            "heading": "Reinforcement",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A purchased regiment starts out with a single man and gradually reinforces up to full capacity. \nIf the retinue takes casualties, each regiment will reinforce continually until they are back to full strength."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If a ruler cannot afford the (sometimes steep) cost, reinforcement can be halved or stopped completely on the retinue tab:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "normal reinforcement rate: 2.5% per month.",
+                            "children": []
+                        },
+                        {
+                            "text": "half reinforcement rate: 1.2% per month.",
+                            "children": []
+                        },
+                        {
+                            "text": "no reinforcement.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "At 2.5% per month, a retinue normally takes 40 months to fill. It may be slightly faster due to rounding."
+                }
+            ]
+        },
+        {
+            "heading": "List of retinues",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Retinue regiments can be divided into three types:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Generic retinues are available to all rulers except tribal rulers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Cultural retinues are specific to the ruler's culture .",
+                            "children": []
+                        },
+                        {
+                            "text": "Tribal retinues are exclusive to tribal goverments.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Generic retinues",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Type",
+                            "Composition",
+                            "Retinue cap usage",
+                            "Initial cost (gold)",
+                            "Monthly reinforcement cost",
+                            "Monthly Upkeep",
+                            "Unique Effect"
+                        ],
+                        [
+                            "Shock",
+                            "200 50",
+                            "700",
+                            "98",
+                            "2.1",
+                            "0.175",
+                            "+20% Archer Offense +10% Heavy Infantry Offense +10% Heavy Infantry Defense"
+                        ],
+                        [
+                            "Defence",
+                            "250 50",
+                            "725",
+                            "101",
+                            "2.175",
+                            "0.18125",
+                            "+20% Archer Defense +20% Pikeman Offense +40% Pikeman Defense"
+                        ],
+                        [
+                            "Cavalry",
+                            "200 50",
+                            "900",
+                            "126",
+                            "2.7",
+                            "0.225",
+                            "+20% Light Cavalry Offense +20% Light Cavalry Defense"
+                        ],
+                        [
+                            "Skirmish",
+                            "50 200",
+                            "550",
+                            "77",
+                            "1.65",
+                            "0.1375",
+                            "+20% Archer Offense +10% Archer Defense +10% Heavy Infantry Defense"
+                        ],
+                        [
+                            "Light Skirmish",
+                            "400 150",
+                            "580",
+                            "81",
+                            "1.74",
+                            "0.145",
+                            "+20% Archer Offense +10% Archer Defense +20% Light Infantry Defense +20% Light Infantry Morale"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Cultural retinues",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Starting with patch 2.4, retinues also receive the benefit of the cultural buildings in the capital holding.  In addition, each cultural retinue always has the unique effects outlined in the table below."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "See Combat and the 3 Culture Bonuses for an explanation of how cultural building bonuses can stack with retinue's unique effects, also known as the cultural retinue bonus."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This list is up to date as of the Holy Fury expansion:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Type",
+                            "Culture",
+                            "Composition",
+                            "Retinue cap usage",
+                            "Initial cost (gold)",
+                            "Monthly reinforcement cost",
+                            "Monthly Upkeep",
+                            "Unique effect"
+                        ],
+                        [
+                            "Longbow",
+                            "English Welsh",
+                            "250",
+                            "500",
+                            "70",
+                            "1.5",
+                            "0.125",
+                            "+20% Archer Offense +10% Archer Defense"
+                        ],
+                        [
+                            "Schiltron",
+                            "Scottish",
+                            "400",
+                            "1000",
+                            "140",
+                            "3",
+                            "0.25",
+                            "+20% Pikemen Offense +40% Pikeman Defense +20% Pikeman Morale"
+                        ],
+                        [
+                            "Baltic Warrior",
+                            "Baltic group Finno-Ugric group",
+                            "300",
+                            "900",
+                            "126",
+                            "2.7",
+                            "0.225",
+                            "+30% Heavy Infantry Defense +10% Heavy Infantry Morale"
+                        ],
+                        [
+                            "Horse Archer",
+                            "Altaic group (Except Jurchen) Iranian group",
+                            "120 130",
+                            "880",
+                            "123",
+                            "2.64",
+                            "0.22",
+                            "+20% Horse Archer Offense +12% Horse Archer Morale"
+                        ],
+                        [
+                            "Knight",
+                            "French Norman Occitan German Breton",
+                            "100 150",
+                            "1200",
+                            "168",
+                            "3.6",
+                            "0.3",
+                            "+10% Heavy Cavalry Offense +10% Heavy Cavalry Defense +20% Heavy Cavalry Morale"
+                        ],
+                        [
+                            "Caballero",
+                            "Iberian group",
+                            "400",
+                            "1200",
+                            "168",
+                            "3.6",
+                            "0.3",
+                            "+20% Light Cavalry Offense +20% Light Cavalry Morale"
+                        ],
+                        [
+                            "Pike",
+                            "Italian Dalmatian",
+                            "400",
+                            "1000",
+                            "140",
+                            "3",
+                            "0.25",
+                            "+20% Pikeman Offense +20% Pikeman Defense +40% Pikeman Morale"
+                        ],
+                        [
+                            "Druzhina",
+                            "East Slavic group",
+                            "250",
+                            "750",
+                            "105",
+                            "2.25",
+                            "0.1875",
+                            "+10% Heavy Infantry Offense +50% Heavy Infantry Defense +20% Heavy Infantry Morale"
+                        ],
+                        [
+                            "Housecarl",
+                            "North Germanic group Anglo Saxon Saxon Frisian",
+                            "200",
+                            "600",
+                            "84",
+                            "1.8",
+                            "0.15",
+                            "+40% Heavy Infantry Offense +20% Heavy Infantry Morale"
+                        ],
+                        [
+                            "Hussar",
+                            "Hungarian West Slavic group",
+                            "300",
+                            "900",
+                            "126",
+                            "2.7",
+                            "0.225",
+                            "+60% Light Cavalry Defense +20% Light Cavalry Morale"
+                        ],
+                        [
+                            "Camel Warrior",
+                            "Bedouin Egyptian Levantine",
+                            "250",
+                            "750",
+                            "105",
+                            "2.25",
+                            "0.1875",
+                            "+20% Camel Cavalry Offense +20% Camel Cavalry Defense +20% Camel Cavalry Morale"
+                        ],
+                        [
+                            "Andalusian Cavalry",
+                            "Andalusian",
+                            "400",
+                            "1200",
+                            "168",
+                            "3.6",
+                            "0.3",
+                            "+20% Light Cavalry Offense +40% Light Cavalry Defense +20% Light Cavalry Morale"
+                        ],
+                        [
+                            "Berber Cavalry",
+                            "Berber",
+                            "400",
+                            "1200",
+                            "168",
+                            "3.6",
+                            "0.3",
+                            "+50% Light Cavalry Offense +30% Light Cavalry Morale"
+                        ],
+                        [
+                            "Cataphract",
+                            "Armenian Alan Greek Georgian Gothic",
+                            "150 100",
+                            "1300",
+                            "182",
+                            "3.9",
+                            "0.325",
+                            "+10% Heavy Cavalry Offense +10% Heavy Cavalry Defense +20% Heavy Cavalry Morale"
+                        ],
+                        [
+                            "Gallowglass",
+                            "Irish",
+                            "200",
+                            "600",
+                            "84",
+                            "1.8",
+                            "0.15",
+                            "+40% Heavy Infantry Defense +20% Heavy Infantry Morale"
+                        ],
+                        [
+                            "Ethiopian Skirmisher",
+                            "Ethiopian",
+                            "400",
+                            "280",
+                            "39",
+                            "0.84",
+                            "0.07",
+                            "+50% Light Infantry Offense +30% Light Infantry Defense"
+                        ],
+                        [
+                            "Somali Skirmisher",
+                            "Somali",
+                            "400",
+                            "280",
+                            "39",
+                            "0.84",
+                            "0.07",
+                            "+40% Light Infantry Offense +40% Light Infantry Defense"
+                        ],
+                        [
+                            "Free Warrior",
+                            "West African group Central African group Daju",
+                            "400 100",
+                            "480",
+                            "67",
+                            "1.44",
+                            "0.12",
+                            "+60% Light Infantry Offense +10% Light Infantry Defense +10% Light Infantry Morale"
+                        ],
+                        [
+                            "Gusar",
+                            "South Slavic group",
+                            "150 100",
+                            "1050",
+                            "147",
+                            "3.15",
+                            "0.2625",
+                            "+10% Heavy Cavalry Defense +10% Heavy Cavalry Morale +20% Light Cavalry Offense +20% Light Cavalry Defense"
+                        ],
+                        [
+                            "Goedendag Militia",
+                            "Dutch",
+                            "300 100",
+                            "460",
+                            "64",
+                            "1.38",
+                            "0.115",
+                            "+20% Light Infantry Offense +20% Light Infantry Defense +10% Light Infantry Morale +30% Pikeman Offense +20% Pikeman Defense +10% Pikeman Morale"
+                        ],
+                        [
+                            "Jaguar Warrior",
+                            "Nahua",
+                            "375 125",
+                            "638",
+                            "89",
+                            "1.914",
+                            "0.1595",
+                            "+40% Light Infantry Offense +20% Light Infantry Morale +20% Heavy Infantry Offense +10% Heavy Infantry Morale"
+                        ],
+                        [
+                            "Bar Kochba Guards",
+                            "Israelite group",
+                            "200",
+                            "600",
+                            "84",
+                            "1.8",
+                            "0.15",
+                            "+20% Heavy Infantry Defense +10% Heavy Infantry Morale"
+                        ],
+                        [
+                            "Steel Bow Infantry",
+                            "Indo-Aryan group Dravidian group",
+                            "200 20",
+                            "600",
+                            "84",
+                            "1.8",
+                            "0.15",
+                            "+10% Archer Offense +30% Archer Defense"
+                        ],
+                        [
+                            "Nubian Archers",
+                            "Nubian",
+                            "300",
+                            "600",
+                            "84",
+                            "1.8",
+                            "0.15",
+                            "+20% Archer Offense +20% Archer Defense"
+                        ],
+                        [
+                            "Frankish Heavy Infantry",
+                            "Frankish",
+                            "200",
+                            "600",
+                            "84",
+                            "1.8",
+                            "0.15",
+                            "+20% Heavy Infantry Offense +10% Heavy Infantry Defense +10% Heavy Infantry Morale"
+                        ],
+                        [
+                            "Lombard Heavy Infantry",
+                            "Lombard",
+                            "300",
+                            "900",
+                            "126",
+                            "2.7",
+                            "0.225",
+                            "+10% Heavy Infantry Offense +10% Heavy Infantry Morale"
+                        ],
+                        [
+                            "Suebi Longspearman",
+                            "Suebi",
+                            "200 150",
+                            "515",
+                            "72",
+                            "1.545",
+                            "0.12875",
+                            "+30% Light Infantry Defense +20% Light Infantry Morale +30% Pikeman Defense +20% Pikeman Morale"
+                        ],
+                        [
+                            "Pictish Raiders",
+                            "Pictish",
+                            "375 125",
+                            "512",
+                            "71",
+                            "1.536",
+                            "0.128",
+                            "+30% Light Infantry Offense +10% Light Infantry Defense +20% Light Infantry Morale +10% Archer Offense +10% Archer Morale"
+                        ],
+                        [
+                            "Nubing",
+                            "Han",
+                            "100 250",
+                            "750",
+                            "105",
+                            "2.25",
+                            "0.1875",
+                            "+30% Archers Offense +10% Archers Defense +20% Pikeman Offense +30% Pikeman Defense +10% Pikeman Morale"
+                        ],
+                        [
+                            "Himalayan Mountaineer",
+                            "Tibetan group",
+                            "300 100",
+                            "510",
+                            "71",
+                            "1.53",
+                            "0.1275",
+                            "+50% Light Infantry Offense +30% Light Infantry Defense +10% Light Infantry Morale +20% Light Cavalry Offense +20% Light Cavalry Defense +10% Light infantry Morale"
+                        ],
+                        [
+                            "Tie-Futu",
+                            "Jurchen",
+                            "175 75",
+                            "975",
+                            "136",
+                            "2.925",
+                            "0.24375",
+                            "+10% Knights Offense +10% Knights Defense +10% Light Cavalry Offense +10% Light Cavalry Morale"
+                        ],
+                        [
+                            "Praetorian",
+                            "Roman",
+                            "150 400",
+                            "1450",
+                            "136",
+                            "2.925",
+                            "0.24375",
+                            "+20% Pikemen Offense +20% Pikemen Defense +40% Pikemen Morale +25% Heavy Infantry Offense +25% Heavy Infantry Defense +20% Heavy Infantry Morale"
+                        ],
+                        [
+                            "Guerriers",
+                            "Assyrian",
+                            "200",
+                            "600",
+                            "136",
+                            "2.925",
+                            "0.24375",
+                            "+20% Heavy Infantry Defense +10% Heavy Infantry Morale"
+                        ],
+                        [
+                            "Matoei",
+                            "Coptic",
+                            "200 100",
+                            "700",
+                            "136",
+                            "2.925",
+                            "0.24375",
+                            "+30% Archers Defense +20% Pikemen Defense"
+                        ],
+                        [
+                            "Outremer Knight",
+                            "Outremer",
+                            "100 150",
+                            "1050",
+                            "147",
+                            "2.55",
+                            "0.19625",
+                            "+10% Heavy Cavalry Morale 10% Heavy Cavalry Attack +20% Camel Cavalry Attack +10% Camel Cavalry Morale"
+                        ],
+                        [
+                            "Arberian Stratiotet",
+                            "Arberian",
+                            "200",
+                            "600",
+                            "84",
+                            "1.8",
+                            "0.15",
+                            "+20% Light Cavalry Defense +20% Light Cavalry Attack +40% Light Cavalry Morale"
+                        ],
+                        [
+                            "Sardinian Birrudo",
+                            "Sardinian",
+                            "200 200",
+                            "900",
+                            "126",
+                            "2.7",
+                            "0.225",
+                            "+20% Archers Defense +20% Pikemen Attack +20% Pikemen Defense +40% Pikemen Morale"
+                        ],
+                        [
+                            "Horse",
+                            "Horse",
+                            "300",
+                            "900",
+                            "136",
+                            "2.925",
+                            "0.24375",
+                            "+75% Light Cavalry Defense +75% Light Cavalry Morale"
+                        ],
+                        [
+                            "Cat",
+                            "Cat",
+                            "300",
+                            "210",
+                            "136",
+                            "2.925",
+                            "0.24375",
+                            "+200% Light Infantry Offense +25% Light Infantry Morale"
+                        ],
+                        [
+                            "Bear",
+                            "Bear",
+                            "300",
+                            "900",
+                            "136",
+                            "2.925",
+                            "0.24375",
+                            "+100% Heavy Infantry Offense +25% Heavy Infantry Morale"
+                        ],
+                        [
+                            "Hedgehog",
+                            "Hedgehog",
+                            "300",
+                            "750",
+                            "136",
+                            "2.925",
+                            "0.24375",
+                            "+100% Pikemen Defense +25% Pikemen Morale"
+                        ],
+                        [
+                            "Duck",
+                            "Duck",
+                            "300",
+                            "900",
+                            "136",
+                            "2.925",
+                            "0.24375",
+                            "+50% Heavy Infantry Offense +50% Heavy Infantry Defense +50% Heavy Infantry Morale"
+                        ],
+                        [
+                            "Dog",
+                            "Dog",
+                            "150",
+                            "900",
+                            "136",
+                            "2.925",
+                            "0.24375",
+                            "+75% Heavy Cavalry Defense +100% Heavy Cavalry Morale"
+                        ],
+                        [
+                            "Elephant",
+                            "Elephant",
+                            "100",
+                            "1000",
+                            "136",
+                            "2.925",
+                            "0.24375",
+                            "+50% War Elephants Offense +25% War Elephants Defense"
+                        ],
+                        [
+                            "Dragon",
+                            "Dragon",
+                            "150",
+                            "900",
+                            "136",
+                            "2.925",
+                            "0.24375",
+                            "+75% Heavy Cavalry Offense +100% Heavy Cavalry Morale"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "English",
+                            "children": []
+                        },
+                        {
+                            "text": "Welsh",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Scottish",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Baltic group",
+                            "children": []
+                        },
+                        {
+                            "text": "Finno-Ugric group",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Altaic group (Except Jurchen)",
+                            "children": []
+                        },
+                        {
+                            "text": "Iranian group",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "French",
+                            "children": []
+                        },
+                        {
+                            "text": "Norman",
+                            "children": []
+                        },
+                        {
+                            "text": "Occitan",
+                            "children": []
+                        },
+                        {
+                            "text": "German",
+                            "children": []
+                        },
+                        {
+                            "text": "Breton",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Iberian group",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Italian",
+                            "children": []
+                        },
+                        {
+                            "text": "Dalmatian",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "East Slavic group",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "North Germanic group",
+                            "children": []
+                        },
+                        {
+                            "text": "Anglo Saxon",
+                            "children": []
+                        },
+                        {
+                            "text": "Saxon",
+                            "children": []
+                        },
+                        {
+                            "text": "Frisian",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Hungarian",
+                            "children": []
+                        },
+                        {
+                            "text": "West Slavic group",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Bedouin",
+                            "children": []
+                        },
+                        {
+                            "text": "Egyptian",
+                            "children": []
+                        },
+                        {
+                            "text": "Levantine",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Andalusian",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Berber",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Armenian",
+                            "children": []
+                        },
+                        {
+                            "text": "Alan",
+                            "children": []
+                        },
+                        {
+                            "text": "Greek",
+                            "children": []
+                        },
+                        {
+                            "text": "Georgian",
+                            "children": []
+                        },
+                        {
+                            "text": "Gothic",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Irish",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Ethiopian",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Somali",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "West African group",
+                            "children": []
+                        },
+                        {
+                            "text": "Central African group",
+                            "children": []
+                        },
+                        {
+                            "text": "Daju",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "South Slavic group",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Dutch",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Nahua",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Israelite group",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Indo-Aryan group",
+                            "children": []
+                        },
+                        {
+                            "text": "Dravidian group",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Nubian",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Frankish",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Lombard",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Suebi",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Pictish",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Han",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Tibetan group",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Jurchen",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Roman",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Assyrian",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Coptic",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Outremer",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Arberian",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Sardinian",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Horse",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Cat",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Bear",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Hedgehog",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Duck",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Dog",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Elephant",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Dragon",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Tribal retinues",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "As of patch 3.0, the mechanic of prestige based tribal retinues has replaced the option to \"Raise tribal army\" if is active."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "These retinues are available if you use a tribal government and cost prestige instead of Gold. There are also retinues with piety costs available to defensive pagans."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The costs of these retinues are not affected by reinforce speed, but are affected by Marshal job Organize the Army."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Type",
+                            "Composition",
+                            "Retinue cap usage",
+                            "Initial cost (prestige/piety)",
+                            "Monthly reinforcement cost",
+                            "Monthly Upkeep",
+                            "Unique Effect"
+                        ],
+                        [
+                            "Tribal Warriors",
+                            "150",
+                            "105",
+                            "25",
+                            "0.24",
+                            "0.02",
+                            "+20% Light Infantry Offense +50% Light Infantry Defense +20% Light Infantry Morale"
+                        ],
+                        [
+                            "Trapper",
+                            "100 50",
+                            "170",
+                            "50",
+                            "0.36",
+                            "0.03",
+                            "+60% Light Infantry Defense +30% Light Infantry Morale +40% Archer Offense +20% Archer Defense +10% Archer Morale"
+                        ],
+                        [
+                            "Hunting Party",
+                            "100 50",
+                            "220",
+                            "75",
+                            "0.48",
+                            "0.04",
+                            "+60% Light Infantry Offense +20% Light Infantry Defense +10% Light Infantry Morale +10% Light Cavalry Offense +10% Light Cavalry Defense"
+                        ],
+                        [
+                            "Veteran Warriors",
+                            "100 50",
+                            "220",
+                            "75",
+                            "0.48",
+                            "0.04",
+                            "+30% Light Infantry Offense +30% Light Infantry Defense +30% Light Infantry Morale +10% Heavy Infantry Offense +10% Heavy Infantry Defense"
+                        ],
+                        [
+                            "Steppe Riders",
+                            "50 25",
+                            "250",
+                            "75",
+                            "0.6",
+                            "0.05",
+                            "+10% Light Cavalry Offense +10% Light Cavalry Defense +10% Horse Archer Defense"
+                        ],
+                        [
+                            "Ardent Guardians",
+                            "50 50",
+                            "250",
+                            "75",
+                            "0.72",
+                            "0.06",
+                            "+20% Archer Offense +40% Archer Defense +20% Archer Morale +20% Heavy Infantry Defense +10% Heavy Infantry Morale"
+                        ],
+                        [
+                            "Sworn Defenders",
+                            "75 75",
+                            "203",
+                            "50",
+                            "0.6",
+                            "0.05",
+                            "+60% Light Infantry Defense +40% Light Infantry Morale +40% Archer Defense +20% Archer Morale"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Using retinues for combat",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "By letting you control army composition, retinues can easily beat a messy levy army that has the same total \"cost\". The key is to choose an army composition that lets you:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Excel at one combat phase , and control phases to your advantage.",
+                            "children": []
+                        },
+                        {
+                            "text": "Excel at one combat tactic in each phase, and ensure the tactic is chosen.",
+                            "children": []
+                        },
+                        {
+                            "text": "Appoint a commander whose combat specialization and cultural tactic matches your forces.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When combining retinues with levies, always keep them on separate flanks to avoid polluting the retinue's tactics. A popular choice is retinues in the center and levies on the sides."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Another approach is to engage the enemy first with pure cavalry (likely to roll a Charge tactic), then follow with another army as combat quickly enters the melee phase."
+                }
+            ]
+        },
+        {
+            "heading": "Using retinues for siege",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "An army of pikemen is great at assaulting holdings (computed as melee)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "An army of light infantry is best for carpet sieges and discouraging rebellion, since it is the cheapest per soldier."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Beware of unreformed Pagan provinces, where attrition can be extremely high (unless you have Military Organization level 4). When fighting a war on their lands, assaulting walls may cost less troop losses than attempting to siege. Alternatively, constructing forts can negate attrition due to unreformed paganism."
+                }
+            ]
+        },
+        {
+            "heading": "Using retinues for raiding",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This strategy is better suited for tribal rulers, as their retinues cost Prestige. Using retinues to supplement a raiding party can make raiding faster and opens possibilities for sacking holdings."
+                }
+            ]
+        },
+        {
+            "heading": "Tribal retinues for transition period between tribalism and feudalism",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A newly converted holding will generally have fewer levies than the tribal holding it replaced, since it no longer gets a bonus to levies from empty holding slots. Also, tribal vassals will be unhappy (-20 Wrong Government Type) until they convert, and if you convert to a merchant republic, this penalty will never lapse as vassals can only adopt feudalism. Event troops from council missions and (without )decisions will no longer be available. Thus, hiring and retaining tribal retinues during the transition phase can help the newly-feudal ruler significantly."
+                }
+            ]
+        },
+        {
+            "heading": "External guides",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Comprehensive Retinue Comparisons for Horse Lords 2.4.x",
+                            "children": []
+                        },
+                        {
+                            "text": "Spreadsheet - Crusader Kings 2 Retinues - Horse Lords 2.4",
+                            "children": []
+                        },
+                        {
+                            "text": "A Retinue Composition Efficiency Metric with .xlsx file to test your composition 2.8",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ forum:1496935/#post-27887143",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

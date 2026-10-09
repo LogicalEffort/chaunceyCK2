@@ -1,0 +1,302 @@
+{
+    "pageid": 107,
+    "title": "Moral authority",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Moral authority is an abstraction of a religion 's strength, unity, and respect. Moral authority levels are visible in the Ledger or by hovering the religion icon on any character sheet. Your own religion's moral authority is also visible in the Religion tab, along with its causes."
+                }
+            ]
+        },
+        {
+            "heading": "Effects",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "High moral authority increases the speed and success rate of most types of religious conversion , including the likelihood of Pagans accepting foreign preachers. It also increases the size of holy orders . Low moral authority makes the rise and spread of heresy more likely."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some religious actions require a minimum moral authority:\n5% to call Great holy wars ,\n40% to issue excommunications ,\n50% to sanction invasions ,\n50% to reform a pagan religion without control of all holy sites"
+                }
+            ]
+        },
+        {
+            "heading": "Modifiers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Moral authority is primarily affected by control of holy sites and success or failure in religious wars. The personal qualities of the religious head (if there is one) also matter. Below is a full list of factors that affect moral authority:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Effect",
+                            "Moral Authority",
+                            "Duration"
+                        ],
+                        [
+                            "Base for organized religion (i.e. not unreformed pagan)",
+                            "20%",
+                            "Permanent"
+                        ],
+                        [
+                            "Full control of holy site",
+                            "+10%",
+                            "Permanent"
+                        ],
+                        [
+                            "Partial control of holy site (bishop has religion but liege does not, or vice versa)",
+                            "+5%",
+                            "Permanent"
+                        ],
+                        [
+                            "Full control of unsettled holy site (no temple holding in province)",
+                            "+5%",
+                            "Permanent"
+                        ],
+                        [
+                            "Partial control of unsettled holy site (no temple holding, top liege's religion and county holder's religion differ)",
+                            "+2.5%",
+                            "Permanent"
+                        ],
+                        [
+                            "Diplomacy of religious head",
+                            "+0.5%*point",
+                            "Permanent"
+                        ],
+                        [
+                            "Piety of religious head. Max 25%, which is reached at 1250 piety. Note that negative piety reduces moral authority, with no lower limit.",
+                            "+0.02%*point",
+                            "Permanent"
+                        ],
+                        [
+                            "Religious head controls holy site (does not stack)",
+                            "+5%",
+                            "Permanent"
+                        ],
+                        [
+                            "Antipope exists (Catholic only)",
+                            "-30%*antipope",
+                            "Permanent"
+                        ],
+                        [
+                            "Dogmatic nature ( Holy Fury)",
+                            "+15%",
+                            "Permanent"
+                        ],
+                        [
+                            "Cosmopolitan nature ( Holy Fury)",
+                            "-15%",
+                            "Permanent"
+                        ],
+                        [
+                            "Immoral religious head",
+                            "-10%",
+                            "Permanent"
+                        ],
+                        [
+                            "Looted infidel temple while raiding",
+                            "+1%",
+                            "20 years"
+                        ],
+                        [
+                            "Temple looted",
+                            "-1%",
+                            "20 years"
+                        ],
+                        [
+                            "Built temple",
+                            "+1%",
+                            "20 years"
+                        ],
+                        [
+                            "Neglectful head of religion",
+                            "-1%",
+                            "10 years"
+                        ],
+                        [
+                            "Won/lost holy war",
+                            "+3%/-3%",
+                            "20 years"
+                        ],
+                        [
+                            "Won/lost county conquest",
+                            "+1%/-1%",
+                            "20 years"
+                        ],
+                        [
+                            "Won/lost crusade, jihad or great holy war",
+                            "+10%/-10%",
+                            "30 years"
+                        ],
+                        [
+                            "Won/lost prepared invasion",
+                            "+5%/-5%",
+                            "20 years"
+                        ],
+                        [
+                            "Won religious/heretic revolt",
+                            "+1%",
+                            "10 years"
+                        ],
+                        [
+                            "Lost religious/heretic revolt",
+                            "-5%",
+                            "20 years"
+                        ],
+                        [
+                            "Successful/failed inquisition",
+                            "+2%/-2%",
+                            "20 years"
+                        ],
+                        [
+                            "Successful/failed heretic dialogue",
+                            "+1%/-1%",
+                            "20 years"
+                        ],
+                        [
+                            "Ruler converted to/from religion (only for conversion by decision or event, not \"Demand Conversion\" interaction)",
+                            "+3%/-3%",
+                            "20 years"
+                        ],
+                        [
+                            "Ruler achieved \"Paragon of Virtue\" ambition",
+                            "+1%",
+                            "20 years"
+                        ],
+                        [
+                            "Ruler achieved \"Paragon of Enlightenment\" ambition",
+                            "+1%",
+                            "20 years"
+                        ],
+                        [
+                            "Ruler achieved \"Strengthen Religion\" ambition",
+                            "+2%",
+                            "50 years"
+                        ],
+                        [
+                            "Yielded to/defied Pope",
+                            "+2%/-2%",
+                            "10 years"
+                        ],
+                        [
+                            "Yielded to/defied Patriarch",
+                            "+1%/-1%",
+                            "10 years"
+                        ],
+                        [
+                            "'Rise of the Shia Caliphate' event",
+                            "+30%",
+                            "50 years"
+                        ],
+                        [
+                            "Holy Order formed",
+                            "+5%",
+                            "10 years"
+                        ],
+                        [
+                            "Holy Order expelled",
+                            "-5%",
+                            "20 years"
+                        ],
+                        [
+                            "Deposed antipope (from a successful Antiking faction or Depose Antipope war; prevents installing new antipopes)",
+                            "+5%",
+                            "50 years"
+                        ],
+                        [
+                            "Papacy instituted",
+                            "+10%",
+                            "20 years"
+                        ],
+                        [
+                            "Patriarchy instituted",
+                            "+10%",
+                            "20 years"
+                        ],
+                        [
+                            "Irminsul Destroyed ( CM invasion of Saxony)",
+                            "-10%",
+                            "10 years"
+                        ],
+                        [
+                            "We sacrificed the Head of a false Religion!",
+                            "+3%",
+                            "20 years"
+                        ],
+                        [
+                            "Our Religious Head was sacrificed to Heathen Gods.",
+                            "-3%",
+                            "20 years"
+                        ],
+                        [
+                            "Hold Great Tribal Festival decision",
+                            "+2%",
+                            "3 years"
+                        ],
+                        [
+                            "Build Great Pillar",
+                            "+5%",
+                            "50 years"
+                        ],
+                        [
+                            "Temple desecrated (by demon worshippers )",
+                            "-1%",
+                            "30 years"
+                        ],
+                        [
+                            "Decadent clergy (demon worshipper event)",
+                            "-1%",
+                            "5 years"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The easiest ways for pagans to increase their moral authority are to raid infidel temples and conquer infidel counties .",
+                            "children": []
+                        },
+                        {
+                            "text": "Unreformed pagans may find it helpful to have multiple independent tribal duke+ rulers, who can each use the \"Build Great Pillar\" and \"Hold Great Tribal Festival\" decisions.",
+                            "children": []
+                        },
+                        {
+                            "text": "Ensure that your religion controls as many holy sites as possible.",
+                            "children": [
+                                {
+                                    "text": "Give a holy site to the religious head (or hold it yourself if you're the Caliph or your reformed pagan religion has Temporal leadership). Catholics and Orthodox normally have the religious head controlling a holy site from the start, but other religions don't. Note that non-Iqta and non-Monastic-Feudal characters incur penalties to the temple's tax and levies.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "When reforming a pagan faith, do not choose Autonomous for Leadership, especially if you already have a holy site temple ready to be granted.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Take care if your holy site is another religion's canary province (e.g. Jerusalem for Muslim Jihads, Christian Braunschweig for Christian Crusades).",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

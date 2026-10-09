@@ -1,0 +1,132 @@
+{
+    "pageid": 3833,
+    "title": "Save game compatibility",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Save game compatibility is the ability to load a save file created with version N of vanilla and a mod with the version N+1 of vanilla or that mod, and continue playing without issues."
+                }
+            ]
+        },
+        {
+            "heading": "Keeping save compatibility",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Generally entities cannot be removed or renamed (except if doing some save conversion):"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Removing a culture would result in characters with that culture in the save file getting noculture culture upon loading the save.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In addition you need to be careful about:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adding any traits, since they are not stored by their name in the saves, but the numeric index in which they were loaded at the time. So if a trait is added in vanilla at the last index, it will show up for characters that had the trait with first index in the mod - and all traits will be wrong by 1 index.",
+                            "children": []
+                        },
+                        {
+                            "text": "Adding a new title set to be inactive at game start through a history file ( active = no ), as it will remain active when loading from a save file.",
+                            "children": []
+                        },
+                        {
+                            "text": "Changing the potentials of buildings: building from the save will still be present in the holding when potential doesn't match, but would not appear on the building list.",
+                            "children": []
+                        },
+                        {
+                            "text": "Adding new laws: the \"default\" law will not get determined when loading from a save, so player may not be able to select any law in that group depending on how the conditions are written.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When new counties are added on the map, and loading a save with missing title holder, a random nearby ruler should get the title. However vanilla map extensions have been known to break save compatibility in the past."
+                }
+            ]
+        },
+        {
+            "heading": "Automatic save conversion",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "As of patch 2.7.1 , a new folder common/save_conversion/ allows to apply automatic migration of some entity names when loading a save."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The syntax is:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The supported entities are:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Religions:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Societies:",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Manual save conversion",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For some changes, it is possible to create an on_startup event that does some conversion via scripting:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "changing a modifier or flag into another one, or removing them.",
+                            "children": []
+                        },
+                        {
+                            "text": "removing traits, ...",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Compared to the automatic save conversion, it requires old entity definitions to still be present in the mod (even if not used in the new version), in order to be usable via scripting."
+                }
+            ]
+        }
+    ]
+}

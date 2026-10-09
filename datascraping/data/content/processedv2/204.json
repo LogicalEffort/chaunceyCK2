@@ -1,0 +1,289 @@
+{
+    "pageid": 204,
+    "title": "Building modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Buildings are fairly simple to mod and, in addition to altering buildings themselves, can be used to modify the size of levies and tax income ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Building definitions are located in common\\buildings\\ folder."
+                }
+            ]
+        },
+        {
+            "heading": "Structure",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "potential",
+                            "conditions (province scope)",
+                            "Decides if the building shows up on the buildings list of a holding. FROM is the settlement holder (a character), FROMFROM is the holding (a barony title).",
+                            "potential = { religion = catholic }"
+                        ],
+                        [
+                            "desc",
+                            "Key",
+                            "Localization key for building description, used in the tooltip of the building. Follows <building_name>_desc convention.",
+                            "desc = shipyard_desc"
+                        ],
+                        [
+                            "add_number_to_name",
+                            "bool",
+                            "Makes the game use 1st level building name, and add number after it to name higher level buildings.",
+                            "add_number_to_name = no"
+                        ],
+                        [
+                            "replaces",
+                            "building",
+                            "The replaced building will not be constructible, even if its potential would match. Warning : don't replace a vanilla building that is part of a building chain ! prerequisites don't allow for the replaced building to be checked.",
+                            "ca_steppe_barracks_1 = {\n\treplaces = ca_barracks_1\n}"
+                        ],
+                        [
+                            "trigger",
+                            "conditions (province scope)",
+                            "Requirements to be able to build the building.",
+                            "trigger = { TECH_CASTLE_CONSTRUCTION = 0 }"
+                        ],
+                        [
+                            "is_active_trigger",
+                            "conditions (province scope)",
+                            "The building will not apply its modifiers to the holding, unless the trigger conditions are satisfied.",
+                            "is_active_trigger = {\n location = {\n  OR = {\n   port = yes\n   borders_major_river = yes\n   borders_lake = yes\n  }\n }\n}"
+                        ],
+                        [
+                            "port",
+                            "bool",
+                            "Can only be built on coastal province. Warning : This check fails if the county has no ruler, so beware if your mod relies on letting the game auto create rulers upon starting a new game.",
+                            "port = yes"
+                        ],
+                        [
+                            "prerequisites",
+                            "List<building>",
+                            "Other buildings requirements",
+                            "ca_steppe_barracks_2 = {\n\tprerequisites = { ca_wall_1 }\n}"
+                        ],
+                        [
+                            "not_if_x_exists",
+                            "List<building>",
+                            "Cannot build this building if another is (or others are) built.",
+                            "not_if_x_exists = { ca_walls_1 ca_walls_2 }"
+                        ],
+                        [
+                            "upgrades_from",
+                            "building",
+                            "The building replaces the one it upgrades from, but the modifiers are cumulated.",
+                            "upgrades_from = tb_training_grounds_1"
+                        ],
+                        [
+                            "gold_cost",
+                            "int",
+                            "Gold cost to build the building. Mutually exclusive with prestige and piety cost. (n.b. the \" BUILDING_COST_MULT \" from '/Crusader Kings II/common/defines.lua' also influences the in-game gold price of a building. The vanilla value is set to \"0.5\", i.e. the gold cost of all buildings is increased by 50%)",
+                            "gold_cost = 150"
+                        ],
+                        [
+                            "prestige_cost",
+                            "int",
+                            "Prestige cost to build the building. Mutually exclusive with gold and piety cost.",
+                            "prestige_cost = 300"
+                        ],
+                        [
+                            "piety_cost",
+                            "int",
+                            "Piety cost to build the building. Mutually exclusive with gold and prestige cost.",
+                            "piety_cost = 100"
+                        ],
+                        [
+                            "build_time",
+                            "int",
+                            "Time to build, in days",
+                            "build_time = 365"
+                        ],
+                        [
+                            "ai_creation_factor",
+                            "int",
+                            "Chances for the AI to chose constructing this building.",
+                            "ai_creation_factor = 95"
+                        ],
+                        [
+                            "ai_feudal_modifier",
+                            "int",
+                            "Modifies the ai creation weight if the ai is feudal, or is tribal but strive to become feudal.",
+                            "ai_feudal_modifier = -10"
+                        ],
+                        [
+                            "ai_republic_modifier",
+                            "int",
+                            "Modifies the ai creation weight if the ai is a republic, or is tribal but strive to become a republic.",
+                            "ai_republic_modifier = 5"
+                        ],
+                        [
+                            "extra_tech_building_start",
+                            "double",
+                            "When starting a new game, a building will be pre-built if the province has higher technology than the trigger requirement(s) + the value of extra_building_start + a random number 0-1",
+                            "extra_tech_building_start = 0.4"
+                        ],
+                        [
+                            "scouting",
+                            "bool",
+                            "Determines if the building gives vision of the province where it was built, like a Merchant Republic trade post.",
+                            "scouting = yes"
+                        ],
+                        [
+                            "convert_to_city",
+                            "building",
+                            "If the holding is converted to another type, the building gets converted to the equivalent building",
+                            "convert_to_city = ct_wall_1"
+                        ],
+                        [
+                            "building",
+                            "If the holding is converted to another type, the building gets converted to the equivalent building",
+                            "convert_to_castle",
+                            "convert_to_castle = ca_keep_2"
+                        ],
+                        [
+                            "building",
+                            "If the holding is converted to another type, the building gets converted to the equivalent building",
+                            "convert_to_temple",
+                            "convert_to_temple = tp_town_1"
+                        ],
+                        [
+                            "building",
+                            "If the holding is converted to another type, the building gets converted to the equivalent building",
+                            "convert_to_tribal",
+                            "convert_to_tribal = tb_shipyard_1"
+                        ],
+                        [
+                            "<modifier_name>",
+                            "Building modifiers",
+                            "Modifiers provided by the building, in case is_active_trigger is valid. Modifiers are cumulative for upgraded building, see upgrades_from . Notes: a negative tax_income might be used to simulate an upkeep for the building. holdings can only process one special unit for the entire holding, so once a holding already has a special unit defined (e.g. it has a building built that adds horse archers to the holding's levy), it will ignore all other special unit entries of this type.",
+                            "fort_level = 0.5 light_cavalry = 35\nhorse_archers = 20\nknights = 10"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(n.b. the \" BUILDING_COST_MULT \" from '/Crusader Kings II/common/defines.lua' also influences the in-game gold price of a building. The vanilla value is set to \"0.5\", i.e. the gold cost of all buildings is increased by 50%)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Notes:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "a negative tax_income might be used to simulate an upkeep for the building.",
+                            "children": []
+                        },
+                        {
+                            "text": "holdings can only process one special unit for the entire holding, so once a holding already has a special unit defined (e.g. it has a building built that adds horse archers to the holding's levy), it will ignore all other special unit entries of this type.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Example",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Here is an example from common\\buildings\\00_Castle.txt:"
+                }
+            ]
+        },
+        {
+            "heading": "Localization",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "<building_name> : name of the building",
+                            "children": []
+                        },
+                        {
+                            "text": "<building_name>_desc : description of the building",
+                            "children": []
+                        },
+                        {
+                            "text": "<building_name>_<religion_group> : overridden name by religion group (at least for temple building)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Adding a new building",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "So lets assume you want to add a new building to the game. This guide will give basic instruction on how to create a basic working building. There are more polished and professional ways to attack this task, but they will all build upon the basic file structure and placement included below."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There are several decisions that you have to make in order to create a building that will work correctly. In what type of settlement will the building be located, castle, city, or temple? What type of restrictions will be placed on where the building can be created? What will be the bonuses or traits that this building grants?"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "First locate the \"buildings\" folder inside the CK2 file structure. Usually it is something like: C:\\Program Files\\Steam\\SteamApps\\common\\buildings. Once you have located the \"buildings\" folder you will need to add an entry to the one of these files that corresponds with the type of building you wish to add. For this example I am going to add a simple statue to my castle that will provide some nice bonuses, so I will choose the 00_castle.txt file."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is highly recommended that you use Notepad++ to edit the file and make a backup of this file before you make any changes."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Under the \"castle = {\" heading I am just going to copy the formatting of the first entry making minor changes to create my own building. My favorite starting location is Moray in Scotland, so I will restrict the building to only working in that province. I want the building to always be available for me to build, with modest costs, and some nice bonuses for my troops and income. It will look something like this:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There are tons of different triggers and traits that can be added to buildings to make them unique and powerful! It may be worthwhile just looking at the other entries to learn how to personalize your building. This building will give my lord 50 heavy cavalry, a 50% larger levy, and 5 as income!"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Once these lines have been added to the 00_castle.txt file, the description tags need to be created in the localisation directory, it should be in the same folder where you found the \"common\" folder."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Using Notepad++ copy one of the .csv files and rename it for your own building. Open the file and delete all lines except for the top line (which only serves as a template and is not actually necessary). Follow the format that it explicitly outlines in the template on the top line, making sure not to miss any punctuation marks! If desired you can add these translations, just type the French description you wish to appear in place of the \"FRENCH\" on the appropriate line. I don't play the game in other languages, so I didn't add any translations. Mine looks something like this:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "After completing these steps you should have a Statue you can build in Moray."
+                }
+            ]
+        },
+        {
+            "heading": "Changing restrictions on holdings",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "It is not possible to add new Holding types, but you can define the conditions for being allowed to build each holding type. Definitions for those restrictions are located in the common\\holding_types\\ folder. The only thing supported within a holding is trigger , which defines when it can be built. ROOT is the province, FROM is the builder. Some hardcoded restrictions also apply and cannot be overriden. For example, if you wanted to restrict building temples only to theocratic characters:"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,513 @@
+{
+    "pageid": 5718,
+    "title": "Great work modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Great works, often called wonders in the script, are defined in the files in the /common/wonders/ folder. The features, also called wonder upgrades, are defined in files in /common/wonder_upgrades/ . There are many associated locations for images, 3D models, and gfx keys, which will be covered in their respective sections."
+                }
+            ]
+        },
+        {
+            "heading": "Great works",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This is a general template for a great work definition. The variables are explained in more detail below."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that in the wonder definition the scope ROOT is the character, FROM is empty, FROMFROM the wonder, and FROMFROMFROM the province."
+                }
+            ]
+        },
+        {
+            "heading": "Variables",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Value type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "<name of wonder>",
+                            "string/clause",
+                            "",
+                            "wonder_cathedral_01 = { ..."
+                        ],
+                        [
+                            "picture",
+                            "gfx",
+                            "The files have a _size postfix but that should be excluded here as the code adds the postfix conditionally depending on where the image is shown.",
+                            "wonder_image = GFX_wonder_strip_temple"
+                        ],
+                        [
+                            "model",
+                            "model name",
+                            "Name of the model to use when displaying the wonder on the map. The name is defined in wonder_mesh.gfx",
+                            "model = big_wonder_thing"
+                        ],
+                        [
+                            "default_picture_stage",
+                            "boolean",
+                            "Decides which frame of the wonder image strip frames should be displayed for GUI places where there doesn't already exist a wonder (such as the construction and construction confirmation views) Can be set to 0 to get the damaged state. Defaults to 3.",
+                            "default_picture_stage = 1"
+                        ],
+                        [
+                            "allow_construction",
+                            "boolean",
+                            "Indicates if new construction of new instances of this wonder type should be allowed. Defaults to yes.",
+                            "allow_construction = no"
+                        ],
+                        [
+                            "is_in_water",
+                            "boolean",
+                            "Indicates if the wonder is placed in water. This us used to decide if it should have the sea background instead of province terrain. Defaults to no.",
+                            "is_in_water = yes"
+                        ],
+                        [
+                            "allow_coastal",
+                            "boolean",
+                            "Indicates if the wonder should be allowed to be placed on the coast. If set to true, the sea background will be used for wonders placed in coastal provinces Defaults to no.",
+                            "allow_coastal = yes"
+                        ],
+                        [
+                            "show_model",
+                            "boolean",
+                            "Indicates if the wonder 3D map model should be shown or not. Defaults to yes.",
+                            "show_model = yes"
+                        ],
+                        [
+                            "background_overrides",
+                            "clause",
+                            "Defines what terrain should be used if the province terrain type matches the left hand argument. Left hand argument can be set to \"All\" to force the background to be set to the right hand argument. If left hand argument is \"All\", the right hand argument needs to be a GFX entry on the format \"GFX_wonder_background_<name>\" (note that the size has been omitted as it is deduced in code)",
+                            "background_overrides = {\n         desert = jungle\n         snow = fields\n}"
+                        ],
+                        [
+                            "potential",
+                            "conditions",
+                            "Conditions that determine if the wonder should appear in the construction list.",
+                            "potential = { religion = catholic }"
+                        ],
+                        [
+                            "active",
+                            "conditions",
+                            "Conditions that determine whether the wonder's effects will apply at all and if ongoing construction can proceed.",
+                            "active = { religion = catholic }"
+                        ],
+                        [
+                            "available_upgrades",
+                            "clause",
+                            "A list of upgrades that are unlocked when this stage is finished. Choose upgrades from the common/wonder_upgrades folder.",
+                            "available_upgrades = { upgrade_stained_glass_window upgrade_church_bells }"
+                        ],
+                        [
+                            "flags",
+                            "clause",
+                            "Used for categorizing wonders. Similar to bloodlines and artifacts.",
+                            "flags = { religious_building }"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Defaults to 3."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Defaults to no."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Defaults to no."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If left hand argument is \"All\", the right hand argument needs to be a GFX entry on the format \"GFX_wonder_background_<name>\" (note that the size has been omitted as it is deduced in code)"
+                }
+            ]
+        },
+        {
+            "heading": "Stages",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A great work can have as many stages as you would like, though amounts above fifteen will not have roman numeral icons shown, unless the graphics for these are extended. Both local and owner modifiers are additive. That is, if the first stage gives +5 local tax and +10 vassal opinion, and the second one gives -3 local tax, a wonder with two stages completed will (absent any completed features) have as modifier +2 local tax and +10 vassal opinion."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "allow",
+                            "conditions",
+                            "Conditions that determine if the player should be allowed to build the wonder.",
+                            "allow = { religion = catholic }"
+                        ],
+                        [
+                            "build_time",
+                            "int",
+                            "Defines how long the base build time is in months.",
+                            "build_time = 12"
+                        ],
+                        [
+                            "loot_time",
+                            "int",
+                            "Defines how many months it takes to loot the stage.",
+                            "loot_time = 6"
+                        ],
+                        [
+                            "restore_time",
+                            "int",
+                            "Defines how many months it takes to restore a wonder that is damaged at this stage.",
+                            "restore_time = 9"
+                        ],
+                        [
+                            "gold_cost_flat",
+                            "fixedpoint",
+                            "Defines how much gold will be deducted when the stage construction is initiated.",
+                            "gold_cost_flat = 500"
+                        ],
+                        [
+                            "gold_cost_ticking",
+                            "fixedpoint",
+                            "Defines how much gold will be deducted at the end of each month durign construction.",
+                            "gold_cost_ticking = 10"
+                        ],
+                        [
+                            "restore_cost_flat",
+                            "fixedpoint",
+                            "Defines how much gold will be deducted when restoration is started.",
+                            "restore_cost_flat = 298"
+                        ],
+                        [
+                            "restore_cost_ticking",
+                            "fixedpoint",
+                            "Defines how much gold will be deducted at the end of each month durign restoration.",
+                            "restore_cost_ticking = 3"
+                        ],
+                        [
+                            "upgrade_slots",
+                            "int",
+                            "Defines how many new upgrade slots the stage makes available.",
+                            "upgrade_slots = 2"
+                        ],
+                        [
+                            "local_modifier",
+                            "clause",
+                            "Applies to the province.",
+                            "local_modifier = {\n    local_tax_modifier = 0.25\n}"
+                        ],
+                        [
+                            "owner_modifier",
+                            "clause",
+                            "Applies to the owner.",
+                            "owner_modifier = {\n    monthly_character_prestige = 0.01\n}"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Features",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Features, also called wonder upgrades, are defined thusly:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In the feature definition, ROOT is the character, FROM is the upgrade, FROMFROM the wonder, and FROMFROMFROM the province."
+                }
+            ]
+        },
+        {
+            "heading": "Variables",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "<name of upgrade>",
+                            "string/clause",
+                            "",
+                            "wonder_cathedral_01 = { ..."
+                        ],
+                        [
+                            "picture",
+                            "gfx",
+                            "",
+                            "picture = GFX_wonder_cathedral_bells"
+                        ],
+                        [
+                            "show_in_history",
+                            "boolean",
+                            "Decides if the wonder upgrade should be visible in wonder history Defaults to yes",
+                            "show_in_history = no"
+                        ],
+                        [
+                            "potential",
+                            "conditions",
+                            "Conditions that determine if the feature should appear in the available features list.",
+                            "potential = { religion = catholic }"
+                        ],
+                        [
+                            "allow",
+                            "conditions",
+                            "Conditions that determine if the player should be allowed to build the wonder.",
+                            "allow = { religion = catholic }"
+                        ],
+                        [
+                            "active",
+                            "conditions",
+                            "Conditions that determine whether the feature's effects will apply at all and if ongoing construction can proceed.",
+                            "active = { religion = catholic }"
+                        ],
+                        [
+                            "custom_modifier_text",
+                            "",
+                            "A string which appears in the GUI, listed as an effect from the upgrade (at the bottom of the list), but written by hand by script, not generated from code. For things which are not clear cut modifiers, but rather affecting outcomes of events or other happenings.",
+                            "custom_modifier_text = bells_upgrade_tt"
+                        ],
+                        [
+                            "flags",
+                            "clause",
+                            "Used for categorizing upgrades, but also in combination with custom_modifier_text. Similar to bloodlines and artifacts.",
+                            "flags = { special_effect_bells metal_upgrade }"
+                        ],
+                        [
+                            "build_time",
+                            "int",
+                            "Defines how long the base build time is in days.",
+                            "build_time = 365"
+                        ],
+                        [
+                            "gold_cost_flat",
+                            "fixedpoint",
+                            "Defines how much gold will be deducted when the upgrade construction is initiated.",
+                            "gold_cost_flat = 500"
+                        ],
+                        [
+                            "gold_cost_ticking",
+                            "fixedpoint",
+                            "Defines how much gold will be deducted at the end of each month",
+                            "gold_cost_ticking = 10"
+                        ],
+                        [
+                            "local_modifier",
+                            "clause",
+                            "Modifiers that the upgrade contribute with to the wonder when fully built. This part will be applied to the local province.",
+                            "local_modifier = {\n     revolt_risk = -0.02\n}"
+                        ],
+                        [
+                            "owner_modifier",
+                            "clause",
+                            "Modifiers that the upgrade contribute with to the wonder when fully built. This part will be applied to the top liege character.",
+                            "owner_modifier = {\n     church_opinion = 5\n}"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Graphics",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If you want to give your great work a custom sprite, you will, just as with trait icons, have to create the image several times, in multiple different sizes. Small versions are 92 by 96 pixels, medium are 132 by 132 pixels, and large versions are 150 by 150 pixels. Each image file is really a strip of images: one for each stage, with the first one reserved for the damaged/looted stage. Therefore, vanilla strips are 460 pixels wide in small, 660 in medium and 750 pixels wide in the large version. All of them are located in the folder /gfx/interface/wonder_interface/wonder_strips/ . All images are in the dds format. For consistency with vanilla, name them according to the pattern: wonder_stages_<wonder name>_<size>.dds ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "All images are defined (given gfx keys) in /interface/wonder.gfx . Once you have added your custom image at all required sizes, add your own entry to a (new) gfx file in the same folder, using this template:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Alter the noOfFrames variable if you have additional or fewer stages in your strip. You will have to create three of these entries, for small, medium and large."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "After that, you can refer to your image using the simple GFX_wonder_strip_<wonder_name> key. Do not attach the size suffix: the game will do that automatically whenever it is needed."
+                }
+            ]
+        },
+        {
+            "heading": "Features",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Features are more easily given custom images, as the picture only needs to be made in a single size (50 by 50 pixels), in the folder /gfx/interface/wonder_interface/wonder_upgrades/ . They are typically named wonder_upgrade_<upgrade name>.dds ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "After creating your image, add an entry in a file in the /interface/ folder (where the strips are also located), following this simple template:"
+                }
+            ]
+        },
+        {
+            "heading": "Background images",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can add your own images to be used as a background for your wonder. If you want the adamant tower of Barad-dûr to come with the fiery, volcanic terrain that such a terrible construction would indubitably introduce to its surroundings, you should define a new background image. This must too be done in three sizes (92 by 96, 132 by 132 and 150 by 150 pixels for small, medium and large, respectively), in the /gfx/interface/wonder_interface/wonder_backgrounds/ folder. Also, supply it with three gfx entries, one for each size, in the familiar /interface/ folder, following the familiar template:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "One particular thing about this is that these pictures can sometimes be in strip form and sometimes in plain form. If you want multiple possible volcanic wastelands, put your desired number of variations behind each other in the image file, and increase the noOfFrames variable accordingly. The game will select one at random for your wonder, based on the province ID (meaning a great work in London will always have the same background, even over different campaigns)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Then, you can make your wonder always select this background image using the following syntax in the wonder definition:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can also replace the \"All\" with a specific terrain type, and add several entries in the clause. And again, the size suffix is added by the game, so it should be omitted."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The vanilla background images are selected automatically, based on the terrain type. This code only takes into account the vanilla terrain types. If you added your own terrain types , they will not be linked automatically to the corresponding background images. Therefore, you would have to refer to it in the background overrides, in each and every wonder definition, to ensure any wonder placed on your new terrain would have the correct background:"
+                }
+            ]
+        },
+        {
+            "heading": "3D models",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The 3D models for each wonder are defined in /interface/wonder_mesh.gfx , and the mesh files themselves located in (one of the subfolders of) /gfx/models/Mapitems/great_works/ . A tutorial on how to create the meshes themselves is out of the scope for this page, but the Clausewitz Maya Exporter tool is a good place to get started."
+                }
+            ]
+        },
+        {
+            "heading": "History",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Historical or pre-existing great works can be added in province history files. You first add a date key (e.g. 867.1.1 = { ), which opens a clause where you can put any command you like. The following history commands are available:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Command",
+                            "Value type",
+                            "Description"
+                        ],
+                        [
+                            "build_wonder",
+                            "wonder_type",
+                            "Starts building the first stage of a wonder."
+                        ],
+                        [
+                            "destroy_wonder",
+                            "boolean",
+                            "Removes the wonder from the province regardless of the current stage."
+                        ],
+                        [
+                            "build_wonder_upgrade",
+                            "upgrade type",
+                            "Starts construction of a wonder upgrade of a specific type."
+                        ],
+                        [
+                            "destroy_wonder_upgrade",
+                            "upgrade type",
+                            "Removes the specified upgrade type from the wonder."
+                        ],
+                        [
+                            "set_wonder_stage",
+                            "number",
+                            "Force a wonders stage to be set to <number>."
+                        ],
+                        [
+                            "set_wonder_name",
+                            "localization key string",
+                            "Sets the key used for localizing the name of a wonder."
+                        ],
+                        [
+                            "set_wonder_description",
+                            "localization key string",
+                            "Sets the key used for localizing the description of a wonder."
+                        ],
+                        [
+                            "set_wonder_damaged",
+                            "boolean",
+                            "Sets the damage state of a wonder."
+                        ],
+                        [
+                            "add_custom_history",
+                            "localization key string",
+                            "Adds an entry to the history view containing the text specified by the loc key. Note that this command is NOT available in version 3.1."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that this command is NOT available in version 3.1."
+                }
+            ]
+        },
+        {
+            "heading": "Create a historical great work",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To create a great work that exists upon start of a game, for example, a great harbor for the 936 start, create the following text within the province's folder:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The above code would create a great harbor on that province upon starting the game similar to existing great works such as the Pyramids."
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Province modding",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": []
+        }
+    ]
+}

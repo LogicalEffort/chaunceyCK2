@@ -1,0 +1,280 @@
+{
+    "pageid": 3674,
+    "title": "Patch 2.7 mod compatibility guide",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This guide describes the steps to make a mod compatible with patch 2.7.X from patch 2.6.3 ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that this does not replace the usual step of merging files , in case the mod modifies some vanilla files."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In case of issues, run the latest version of The Validator , and try activating debug launch options, which will now report failed asserts in log files ."
+                }
+            ]
+        },
+        {
+            "heading": "Folders and files",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "\\common\\custom_localisation\\ is moved to \\localisation\\customizable_localisation , so that custom localization commands don't impact the checksum.",
+                            "children": []
+                        },
+                        {
+                            "text": "\\interface\\portrait_properties.txt is now folderized into \\interface\\portrait_properties\\",
+                            "children": []
+                        },
+                        {
+                            "text": "Duplicated portrait.gfx files at the root of \\interface , are now only in \\interface\\portraits",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Scripting",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "New operators ==, >, >=, <, and <= have been introduced:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "However as of patch 2.7 they only work for new triggers (ex: society_rank ) and the old triggers don't support this new syntax. [1]"
+                }
+            ]
+        },
+        {
+            "heading": "Secret religions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A new secret trait should be created for each religion:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Some triggers that exclude some religions may also need to be adapted to the new secret religion traits:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "NOT = {\treligion_group = jewish_group } NOT = { trait = secretly_jewish }"
+                }
+            ]
+        },
+        {
+            "heading": "Artifacts",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Items previously managed as character modifiers, dynasty flags or traits should be migrated to artifacts."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For instance:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "may become:"
+                }
+            ]
+        },
+        {
+            "heading": "Targeted decisions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "ai_target_filter is now mandatory for targeted decisions ( ai_target_filter = self for decisions taken on the character itself).",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Some normal decisions have been converted to targeted decisions with filters:",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Misc",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Missing age variations of portraits (male1, male2, ...) will no longer default. Make sure you have portraitTypes with male, male1, male2, female, female1 and female2 for all your custom ethnicities.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Game rules can be associated to one or multiple groups via group = \"TEXT_KEY_FOR_GROUP\"",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "In minor titles:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "is replaced by: NOT = { \n\tprimary_title = { temporary = yes } \n}"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Religion and religion group opinion modifiers are now dynamic and may be defined in common\\modifier_definitions\\ :",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "They also need to be localized."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "is replaced by: is_ascetic_trigger = yes"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Some obedience / non_interference checks are added in some events:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "French localization: a set of localization commands dedicated for French translations is included in \\localisation\\customizable_localisation\\00_customizable_localisation_FR.txt . For more info: Traduction remaniée - Crusader Kings II 2.7.x (in French)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Region definitions included in map/geographical_region.txt are now interpreted differently. Duchy references now equate to their de jure countries at the start_date defined in common/defines.txt , not their de jure counties in common/landed_titles before history is executed. This change has no effect if no counties change de_jure_liege before the start_date .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Define NDefines.NGraphics.NUMBER_OF_PROPERTIES is now determined automatically from portrait_properties file, and can be removed.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Outstanding bugs",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "In character history, dynasty=0 is ignored for lowborns, and they get assigned a random dynasty [2] . Workaround is to reset the dynasty to none via effect:",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ forum:1003528",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:1016862",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

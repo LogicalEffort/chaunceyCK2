@@ -1,0 +1,134 @@
+{
+    "pageid": 2743,
+    "title": "Minimap modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can mod the minimap, as well as all surrounding buttons. If your custom map is not the same size as the vanilla map, and as a result your minimap will have a different shape as well, then you may want to do some minimap modding."
+                }
+            ]
+        },
+        {
+            "heading": "minimap_area.dds",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This file, located in Crusader Kings II\\gfx\\interface, is the image you see in the bottom right. Make your own. There are three other relevant files:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "minimap_area_bg.dds - this is located behind the minimap image. You can make the image completely transparent, and ignore it. Otherwise it might just get in the way.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "minimap_bg - this is the background (the \"window\") that appears around your minimap whenever you have the mapmode buttons hidden. If you mod your minimap menu so that it is no longer possible to hide the mapmode buttons, then you can ignore this file.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "minimap_bg_big - this is the background you usually see.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "main.gui",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Located in Crusader Kings II\\interface, this is the relevant file to position the minimap and everything around it. Copy the entire file to your mod directory. At the very top of your copied file you will find the following code:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The iconType block does not matter at all! Any changes are ignored by the game, however that does not mean it is wise to remove it. Just let it be as it is."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The positionType block however affects your viewbox. If you change the position to match the size of your custom minimap image, then the viewbox will be able to go everywhere inside your minimap. If your image would be 183 by 180, it would be:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Once that is done, the actual interface modding comes up. First scroll down to this part:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The way the minimap window works is that everything around the minimap_area.dds image moves according to that image. So if you have a square minimap as opposed to the vanilla rectangle minimap, and want to move your minimap slightly up so that it fits within the background frame, then that means everything else needs to be rearranged as well."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "First off, change the size to match your image. For example, my image was 183 by 180, so I now have:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can move the minimap image itself around by changing the position. My 183 by 180 image had to be moved up 30 pixels. Thus the new y would be -248 - 30 = -278 , which results in the following line:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "But if you load your game, everything around the minimap will be out of position! In addition to the background image (and the background image if the mapmode buttons are hidden), there are three buttons, five custom mapmode buttons and a window with all regular mapmode buttons. They all have code similar to the following:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Adjust the position of this iconType, as well as the other ones, to match your new map position. The three buttons (toggle_mapmodes, minimap_lock, and minimap_toggle) can be \"removed\" by moving them out of the way. If you want to disable the hiding of the mapmode buttons, you can simply set the position of that button to be off screen, using some huge value for x or y:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can also do the same with the custom mapmode buttons."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Finally, the regular mapmode buttons themselves are located within a windowType block. If you want to keep the vanilla layout (two horizontal lines of buttons), you can simply change the position of the windowType to move all of the buttons. If you want to change the layout (for example, to two vertical lines), the position of the individual buttons must be adjusted."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Once all this is done, your minimap and its surrounding buttons are ready!"
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Interface modding",
+                            "children": []
+                        },
+                        {
+                            "text": "Map modding , for making custom maps",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        }
+    ]
+}

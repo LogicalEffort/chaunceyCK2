@@ -1,0 +1,527 @@
+{
+    "pageid": 2516,
+    "title": "Intrigue focus",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Characters with the Intrigue focus get +3 intrigue skill and +5% plot power. They can spy on characters to discover plots, get other imprisonment reasons, or slander people. They can also attempt to free certain prisoners and concubines from captivity."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Success rate improves as a character levels up through Amateur Schemer , then Schemer , and finally the Master schemer lifestyle trait."
+                }
+            ]
+        },
+        {
+            "heading": "Spy on",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The intrigue focus enables a new diplomatic interaction, letting you spy on one character in the same realm . Every 40 days, a tombola event fires:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Effect",
+                            "Weight",
+                            "Requirements & modifiers"
+                        ],
+                        [
+                            "No effect",
+                            "200*",
+                            "More or less likely depending on: Difference in intrigue skill (at differences of 3, 5, and 10) Schemer level Schemer level of target"
+                        ],
+                        [
+                            "Discover plot",
+                            "100",
+                            "Target is plotting or backing a plot You do not already know about the plot"
+                        ],
+                        [
+                            "Discover adultery",
+                            "30*",
+                            "Only when spying on your spouse, concubine, or lover(?). Chance increases if target has more lovers. Chance decreases with tomcat/vixen modifiers on target or lovers, and with lovers who are skilled at scheming."
+                        ],
+                        [
+                            "Opportunity to accuse of crime",
+                            "10",
+                            "Target is not an independent ruler Once per target 3x chance if they are a member of a secret religious society or demon-worshipping society."
+                        ],
+                        [
+                            "Opportunity to spread vicious rumors",
+                            "30*",
+                            "Target does not already have Vicious Rumors . 1/2 chance if schemer is temperate, just, kind, or honest. 2x chance if target has at least one embarrassing trait: hedonist, drunkard, impaler, decadent, bastard, inbred, dwarf, homosexual, gluttonous, legit_bastard 2x chance if target has at least one character modifier related to negative sexual reputation (adulterer, sodomite, cradle robber)"
+                        ],
+                        [
+                            "Opportunity to murder",
+                            "4*",
+                            "Target does not have higher intrigue skill. Requires \"Master Schemer\" for full weight."
+                        ],
+                        [
+                            "Opportunity to abduct",
+                            "4*",
+                            "Target does not have higher intrigue skill. Requires \"Master Schemer\" for full weight."
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Difference in intrigue skill (at differences of 3, 5, and 10)",
+                            "children": []
+                        },
+                        {
+                            "text": "Schemer level",
+                            "children": []
+                        },
+                        {
+                            "text": "Schemer level of target",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1/2 chance if schemer is temperate, just, kind, or honest.",
+                            "children": []
+                        },
+                        {
+                            "text": "2x chance if target has at least one embarrassing trait: hedonist, drunkard, impaler, decadent, bastard, inbred, dwarf, homosexual, gluttonous, legit_bastard",
+                            "children": []
+                        },
+                        {
+                            "text": "2x chance if target has at least one character modifier related to negative sexual reputation (adulterer, sodomite, cradle robber)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any outcome other than \"no effect\" gives you a level up chance, even if you choose not to take the opportunity presented."
+                }
+            ]
+        },
+        {
+            "heading": "Opportunity to accuse of crime",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The first available charge is chosen:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Charge",
+                            "Conditions",
+                            "Allows actions"
+                        ],
+                        [
+                            "Charge: Secret Cultist",
+                            "Member of a secret religious society You are not also a member",
+                            "Imprison"
+                        ],
+                        [
+                            "Charge: Witch",
+                            "Member of a devil-worshipping society You are not also a member",
+                            "Imprison, revoke, execute"
+                        ],
+                        [
+                            "Charge: Illegitimate",
+                            "Real father is not known father. Character does not have the Bastard or Legitimized bastard trait.",
+                            "Imprison, revoke"
+                        ],
+                        [
+                            "Charge: Heresiarch",
+                            "Any of the following: Cynical Target and liege conflict on Ashari vs Mutazilite Target and liege have different religions within the same religious group (except Pagan or Indian)",
+                            "Imprison"
+                        ],
+                        [
+                            "Charge: Infidel",
+                            "Target and liege have different Pagan religions",
+                            "Imprison"
+                        ],
+                        [
+                            "Charge: Deviant",
+                            "Any of the following traits: Decadent , Hedonist , Homosexual , Possessed , Lunatic , Arbitrary , Cruel , Impaler , Master seducer , or Master seductress Or any of the following character modifiers from affairs: incestuous_adulterer, incestuous_adulteress, adulterer, adulteress, known_sodomite, cradle_robber, adulterous_priest",
+                            "Imprison"
+                        ],
+                        [
+                            "Charge: Traitor",
+                            "10% chance",
+                            "Imprison, revoke"
+                        ],
+                        [
+                            "Charge: Slanderer",
+                            "90% chance",
+                            "Imprison"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Cynical",
+                            "children": []
+                        },
+                        {
+                            "text": "Target and liege conflict on Ashari vs Mutazilite",
+                            "children": []
+                        },
+                        {
+                            "text": "Target and liege have different religions within the same religious group (except Pagan or Indian)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Or any of the following character modifiers from affairs: incestuous_adulterer, incestuous_adulteress, adulterer, adulteress, known_sodomite, cradle_robber, adulterous_priest"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "All charges are valid imprisonment reasons, but only three are revoke reasons. If you hope to revoke a title, knowledge of who might be a demon worshipper or hidden cuckoo bastard can help you select good targets. Otherwise, you can target characters who don't meet the requirements for any of the specific charges, and hope you eventually roll the 10% for Traitor. (If you roll the 90% for Slanderer, you may keep it to yourself in order to not exhaust the \"once per target\" rule.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You are informed of the charge and given up to 3 options:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Inform the liege (if liege is not incapable, inaccessible, a minor, or at war with you)",
+                            "children": []
+                        },
+                        {
+                            "text": "Expose and denounce (if you are the liege) -- gives you a valid imprisonment reason and in some cases a revoke reason",
+                            "children": []
+                        },
+                        {
+                            "text": "Blackmail to prevent factionalism (if you are the liege)",
+                            "children": []
+                        },
+                        {
+                            "text": "Blackmail to join my faction (if you are fellow vassals)",
+                            "children": []
+                        },
+                        {
+                            "text": "No action",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you inform the liege , the liege gets a similar set of options:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Expose and denounce",
+                            "children": []
+                        },
+                        {
+                            "text": "Blackmail to prevent factionalism",
+                            "children": []
+                        },
+                        {
+                            "text": "No action",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Blackmail is more likely to succeed on characters who are Craven (5x), Proud (3x), Content (3x), Trusting (2x), or Patient (2x). It is more likely to be refused by characters who are Brave (3x), Wroth (3x), Ambitious (3x)."
+                }
+            ]
+        },
+        {
+            "heading": "Opportunity to spread vicious rumors",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You get a chance to slander the target, giving them the character modifier Vicious Rumors , which modifies general opinion by -10 for 5 years."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The target might find out that you were the one to slander them, modifying their opinion of you by -50 for 5 years. The chance is affected by relative intrigue skill and each character's scheming level."
+                }
+            ]
+        },
+        {
+            "heading": "Opportunity to murder",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For 5 wealth you can bribe a guard to kill the target. It has a 50% chance of success, unless the target is paranoid, a master schemer, or has specific character modifiers from the Seduction focus (seduced_loyal_bodyguard or seduced_loyal_spy_maid)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There is also a 50% chance of discovery. The usual penalties for being caught murdering (or attempting to murder) someone apply."
+                }
+            ]
+        },
+        {
+            "heading": "Opportunity to abduct",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For 5 wealth you can attempt to abduct (imprison) the target. It has a 50% chance of success, unless the target is paranoid, a master schemer, or has specific character modifiers from the Seduction focus (seduced_loyal_bodyguard or seduced_loyal_spy_maid)."
+                }
+            ]
+        },
+        {
+            "heading": "Free from captivity",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Valid targets are:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Your direct vassals (including courtiers) who are imprisoned",
+                            "children": []
+                        },
+                        {
+                            "text": "Close relatives who were abducted as concubines",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Discovery of spymaster's plot",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If your spymaster is plotting or backing a plot, you have a chance to become suspicious. The MTTH depends on your schemer level, your relative intrigue skill, and whether you have seduced_loyal_spy_maid."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You have a 2/3 chance to discover the plot. If you do, you have a chance to imprison them. If the plot was to kill you or a close relative, you consider them a traitor and can revoke a title."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you do not discover the plot, there is a 1/2 chance the spymaster becomes more careful, preventing this event chain from firing again."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(If you're Paranoid , you might suspect your spymaster even when they are not plotting, leading to different outcomes.)"
+                }
+            ]
+        },
+        {
+            "heading": "Success: level up event",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "On success in events, chance to:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Level up intrigue education",
+                            "children": []
+                        },
+                        {
+                            "text": "Gain Deceitful (or lose honest)",
+                            "children": []
+                        },
+                        {
+                            "text": "Level up to Amateur Schemer , then Schemer",
+                            "children": []
+                        },
+                        {
+                            "text": "Level up to Master schemer , or choose Impaler instead",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Ambition events",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If your intrigue skill is below 8, the following events can fire, each with a MTTH of 280 months."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The Necklace (once per lifetime)",
+                            "children": []
+                        },
+                        {
+                            "text": "Gossip (once per lifetime)",
+                            "children": []
+                        },
+                        {
+                            "text": "Old Spymaster (once per lifetime)",
+                            "children": []
+                        },
+                        {
+                            "text": "Alchemy",
+                            "children": []
+                        },
+                        {
+                            "text": "Improved Bodyguard",
+                            "children": []
+                        },
+                        {
+                            "text": "Old Assassin",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Improve your schemer level and intrigue education by practicing on easy targets:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Low intrigue skill",
+                            "children": []
+                        },
+                        {
+                            "text": "Revealed a plot indirectly :",
+                            "children": [
+                                {
+                                    "text": "Invited you to join their plot",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Waging a \"war to revoke [vassal title]\"",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Ambition opinion toward liege with no visible reason (indicates a plot to fabricate a claim)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Attempted to kill a spymaster who had been assigned to uncover plots (event 20290)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Likely to be plotting an assassination , so the \"discover plot\" success is possible.",
+                            "children": [
+                                {
+                                    "text": "Possessed and Lunatic characters often plot.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "AI characters are more inclined to start normal murder plots if Ambitious (3x), Deceitful (2x), Cruel (2x), Arbitrary (1.5x), Envious (2x when motivated by personal inheritance)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Searching for characters who are In hiding may hint at unknown murder plots",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Likely to be backing a murder plot :",
+                            "children": [
+                                {
+                                    "text": "AI honor is lowered by Deceitful (-25), Arbitrary (-10), Paranoid (-10), Cruel (-5), Greedy (-10), Wroth (-5), Envious (-10), Impaler (-15), Cannibal (-10)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Embarrassing traits , so the \"spread rumors\" success is more likely.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Use this focus to your advantage :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Imprison your liege, then rebel against them and instantly win the war",
+                            "children": [
+                                {
+                                    "text": "If your liege is not independent, you can even imprison them during a rebellion, as you're still part of the same top realm",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Invite rich courtiers, imprison them, banish them to seize their wealth",
+                            "children": []
+                        },
+                        {
+                            "text": "Imprison troublesome vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "Imprison heirless vassals to inherit their titles, wealth, tech points , and artifacts",
+                            "children": []
+                        },
+                        {
+                            "text": "Gain powerful members for your faction, both through accusation-based threats and through imprisonment (prisoners in the dungeon who request better accommodations can be released for a favor, and the favor can be called in to force them to join your factions)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When offered a lifestyle trait, do not pick Impaler . It does not count as a scheming level, and it prevents you from getting even Amateur Schemer again."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Having vassals with this focus can be useful as they spy on each other and give you imprisonment reasons, but can also be dangerous as they spread rumors about you (or worse). AI characters are more likely to choose this focus if they have an intrigue education, are paranoid, or are deceitful. Tips for avoiding being a target of spying"
+                }
+            ]
+        }
+    ]
+}

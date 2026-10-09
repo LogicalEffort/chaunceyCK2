@@ -1,0 +1,380 @@
+{
+    "pageid": 3332,
+    "title": "Court Physician",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A Court Physician is responsible for treating diseases in their liege's court . It is one of the most important honorary titles . Recruiting or appointing a Court Physician requires The Reaper's Due DLC."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Court physicians are more likely to treat diseases successfully if they are highly skilled and have high opinion of the patient. Before seeking treatment, it may be wise to bestow them gifts and additional honorary titles. It is harder to ensure they like your family, but it helps if they're the same culture/religion/dynasty. Court Physicians also have a chance of removing the Sickly trait from newborns, or give the newborn some health to increase chances of survival."
+                }
+            ]
+        },
+        {
+            "heading": "Symptom treatment",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "When a character gains their first symptom, the court physician will begin treating the symptoms and suggest a preliminary diagnosis."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The best symptom treatment restores up to 2 health and 2 of every attribute. Treatments cannot improve your attributes beyond negating the penalties from disease, but the tooltips do not make this clear."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The treatment tends to be better with a skilled Court Physician (high learning, Renowned Physician trait) and a patient who is Strong or Brawny . Opinion does not matter at this stage."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Court physicians cannot treat an Infection , making Wounded a much more risky trait. However, Infection replaces Severely Injured , with no net health decrease."
+                }
+            ]
+        },
+        {
+            "heading": "Disease treatment",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Once the disease becomes manifest, the court physician will offer up to four treatment options. The more experimental treatments have the best potential outcomes, but lower chance of success and worse failure modes."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Treatment option",
+                            "Branch",
+                            "Good outcome",
+                            "Bad outcome",
+                            "Requirements"
+                        ],
+                        [
+                            "Experimental",
+                            "Regular Experimental",
+                            "+3",
+                            "−3",
+                            "Adult. Not craven . Brave or decent physician."
+                        ],
+                        [
+                            "Experimental",
+                            "Adult. Not craven . Brave or decent physician.",
+                            "Drastic (high cost)",
+                            "Cured",
+                            "0"
+                        ],
+                        [
+                            "Mystic",
+                            "Several (see below)",
+                            "60% chance of Cured, 40% chance of +1",
+                            "50% chance of −1, 50% chance of −2 with additional chance of Possessed , Lunatic , Stressed or Depressed",
+                            "Adult. Physician has Mystic trait. Supernatural events enabled."
+                        ],
+                        [
+                            "Standard",
+                            "",
+                            "+2",
+                            "−1",
+                            ""
+                        ],
+                        [
+                            "Cautious",
+                            "",
+                            "+1",
+                            "0",
+                            "Not brave . Child, craven or paranoid ."
+                        ],
+                        [
+                            "No treatment",
+                            "",
+                            "0",
+                            "0",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Good treatments last 2 years (5 years for Cancer, Gout, or Syphilitic). Bad treatments last 1 year. Neutral treatments, shown above as \"0\", merely prevent seeking treatment again for a short time."
+                }
+            ]
+        },
+        {
+            "heading": "Treatment outcome",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Good outcomes are more likely with:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.44x the patient is Strong or Brawny",
+                            "children": []
+                        },
+                        {
+                            "text": "1.44x physician learning: 10, 15, 20, 25",
+                            "children": []
+                        },
+                        {
+                            "text": "1.2x physician has Renowned Physician trait",
+                            "children": []
+                        },
+                        {
+                            "text": "1.2x physician_good_trigger :",
+                            "children": [
+                                {
+                                    "text": "Either Israelite religion group ,",
+                                    "children": []
+                                },
+                                {
+                                    "text": "or any learned trait ( Renowned Physician , Scholar , Erudite , Faqih , Scholarly theologian , Mastermind theologian )",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "1.2x opinion: −75, −50, −25, 0 (twice), 25, 50, 75",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Bad outcomes are more likely with:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.44x the patient is Weak or Frail",
+                            "children": []
+                        },
+                        {
+                            "text": "1.2 physician_bad_trigger :",
+                            "children": [
+                                {
+                                    "text": "Either a mental disorder trait ( Lunatic , Possessed , Stressed , Depressed , Drunkard ),",
+                                    "children": []
+                                },
+                                {
+                                    "text": "or a severe disability trait ( Inbred , Incapable , Infirm , Blinded , Mangled , Maimed )",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "These modifiers are for the Standard treatment option, but the other treatment options have similar splits between good and bad outcomes."
+                }
+            ]
+        },
+        {
+            "heading": "Drastic experimental treatment",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If the patient selects experimental treatment, there's an additional check for whether the physician attempts a \"drastic\" treatment. A drastic treatment means paying a high cost for significantly better health odds. That cost means a random selection from: Eunuch , Lunatic , Disfigured , One-eyed , One-handed , or One-legged . Except for the first two, they also come with the Severely Injured trait for 100–400 days, with a 70% chance of resolving well and a 30% chance of getting an Infection ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Normally there's a 20% chance of the treatment being drastic, but it's bumped to 50% if the physician has any of the following: physician_good_trigger , learning at least 25 or below 15, Wroth , Arbitrary , Brave , or Ambitious ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Experimental+drastic treatment is recommended for deadly diseases such as Rabies . It is not recommended if becoming an eunuch would end your game. However, once you start aiming for drastic treatments, you might consider continuing until cured, because Severely Injured does not stack. On the other hand, the more likely good outcome from standard treatment may offset the combined health penalties from your disease and your injury, giving greater odds of short term survival."
+                }
+            ]
+        },
+        {
+            "heading": "Mystic treatment",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The mystic treatment option has a large number of different outcomes. Aside from varying in terms of effectiveness, it will have some other impact – usually granting the patient some trait, although sometimes the physician or one of the patient's children might be killed instead.\nThese outcomes are almost always negative. Mystic treatments are thus generally not recommended, aside from possibly in the case of severe diseases when experimental treatments are not an option (such as if the patient is craven)."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Conditions",
+                            "Outcome"
+                        ],
+                        [
+                            "Mirrors and candles",
+                            "Never happens if treatment is terrible (−2)",
+                            "Replaces Paranoid with Trusting , Content with Ambitious , Humble with Proud , Shy with Gregarious , Temperate with Gluttonous , Charitable with Greedy , Diligent with Slothful and Envious with Kind and vice versa."
+                        ],
+                        [
+                            "Sacrificed animals, rubbed in ashes",
+                            "Never happens if both Paranoid and Possessed",
+                            "Gain Paranoid . 25% chance to gain Possessed ."
+                        ],
+                        [
+                            "Conjuring, burnt fingers",
+                            "Doesn't happen if One-handed",
+                            "Gain One-handed . Lose Patient or gain Wroth ."
+                        ],
+                        [
+                            "Improv greatest poem",
+                            "Doesn't happen if Poet",
+                            "Gain Poet ."
+                        ],
+                        [
+                            "Bloodbath",
+                            "Doesn't happen if Cruel",
+                            "Gain Cruel ."
+                        ],
+                        [
+                            "\"Special brew\"",
+                            "Doesn't happen if Drunkard . Half as likely as others.",
+                            "Gain Drunkard ."
+                        ],
+                        [
+                            "Walk on fire",
+                            "Doesn't happen if Brave",
+                            "Gain Brave and Zealous"
+                        ],
+                        [
+                            "Physician tries to drown you",
+                            "Physician must be Zealous or Cruel .",
+                            "Gain Paranoid . Hate physician (imprison reason?)"
+                        ],
+                        [
+                            "Physician sacrifices your child",
+                            "Physician must be Zealous , Cruel , Arbitrary or Impaler . Patient must have healthy non- Inbred child who is not abroad. Half as likely as the others.",
+                            "Healthy child of patient dies. Hate physician (imprison reason)"
+                        ],
+                        [
+                            "Am I the beast?",
+                            "Must not be Possessed or Lunatic .",
+                            "Gain Possessed . 25% change to gain Lunatic ."
+                        ],
+                        [
+                            "The rat will carry your burden",
+                            "Can always happen",
+                            "Lose Ambitious or gain Content . Lose Envious or gain Kind . Lose Deceitful or gain Honest . Lose Wroth or gain Patient . Lose Proud or gain Humble . Lose Greedy or gain Charitable . Lose Gluttonous or gain Temperate ."
+                        ],
+                        [
+                            "Physician suicide",
+                            "Can always happen",
+                            "Physician dies. 25% chance to gain Lunatic ."
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Physician improvement events",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There are three ways for court physicians to gain the Renowned Physician trait."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "By successfully treating your child, parent, sibling, spouse, or lover (RIP.11065)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Use the Seduction focus to have a large family.",
+                            "children": []
+                        },
+                        {
+                            "text": "Consider sending unimportant family members to diseased provinces.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "By studying at a hospital (RIP.4530)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Requires a demesne province has a hospital that has been upgraded with a Library, Pharmacology Laboratory, or Medical Academy. The first of these to become available is the library, with the technology Construction III.",
+                            "children": []
+                        },
+                        {
+                            "text": "Smart and Ambitious physicians are most likely to have the best outcome, which adds the Renowned Physician trait.",
+                            "children": []
+                        },
+                        {
+                            "text": "Diligent and Erudite physicians are also likely to do well.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "By writing a great book (RIP.4030)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Physician asks you to invest 20% of yearly income (minimum 20 wealth)",
+                            "children": []
+                        },
+                        {
+                            "text": "Physicians who are Smart , have high learning skill, and match physician_good_trigger are more likely to succeed.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Diseases",
+                            "children": []
+                        },
+                        {
+                            "text": "Health",
+                            "children": []
+                        },
+                        {
+                            "text": "RIP physician events",
+                            "children": []
+                        },
+                        {
+                            "text": "RIP treatment events",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,500 @@
+{
+    "pageid": 1243,
+    "title": "Open elective",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Open elective is the succession law of holy orders , mercenaries , republics and most theocracies . It is also used as a fallback for titles of independent feudal rulers, that have neither an heir that qualifies under the succession law of the title, valid heirs under the fallback primogeniture or seniority successions, nor feudal vassals that could inherit instead."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Open elective gives the title, upon the death of the title holder, to an eligible courtier of said title holder. If there are no eligible courtiers, one gets generated."
+                }
+            ]
+        },
+        {
+            "heading": "Mechanic",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Holy Orders",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Eligibility",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Potential heirs for holy orders need to be adult male courtiers with the same religion as the title holder and a positive \"succession score\" (cf. next paragraph). Being the prospective heir to a feudal, tribal or theocratic title disqualifies that courtier from the holy order's succession."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Besides that, being imprisoned by a ruler other than the title holder also removes a candidate from the line of succession."
+                }
+            ]
+        },
+        {
+            "heading": "Ranking",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To determine the ranking of the eligible courtiers they get sorted by a 'succession score', with the highest scorer becoming the first in line to inherit."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "That score can be calculated with the following formula: [1]"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "<<age>> is the number of a candidate's completed years of life, i.e. the candidate's age in years without any fractional part",
+                            "children": []
+                        },
+                        {
+                            "text": "<<piety>> is a candidate's piety",
+                            "children": []
+                        },
+                        {
+                            "text": "<<prestige>> is a candidate's prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "<<wealth>> is a candidate's wealth",
+                            "children": []
+                        },
+                        {
+                            "text": "<<rank_of_father>> is 5 for emperors, 4 for kings, 3 for dukes, 2 for counts, 1 for barons, 0 for courtiers or non-existent fathers [2] [3]",
+                            "children": []
+                        },
+                        {
+                            "text": "<<rank_of_mother>> is 5 for empresses, 4 for queens, 3 for duchesses, 2 for countesses, 1 for baronesses, 0 for courtiers or non-existent mothers [2] [3]",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Trunc() stands for the truncate function , i.e. Trunc(x) is x with the fractional part removed"
+                }
+            ]
+        },
+        {
+            "heading": "Tie-breaking",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In case two candidates have the same 'succession score', the candidate that is listed earlier in the save-game file wins. That is often, but not always also the character with the lower character ID ."
+                }
+            ]
+        },
+        {
+            "heading": "Mercenaries",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Eligibility",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Potential heirs for mercenaries need to be adult male courtiers with the same religion as the title holder and a positive \"succession score\" (cf. next paragraph). Being the prospective heir to a feudal, tribal or theocratic title disqualifies that courtier from the mercenary title's succession."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Besides that, being imprisoned by a ruler other than the title holder also removes a candidate from the line of succession."
+                }
+            ]
+        },
+        {
+            "heading": "Ranking",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To determine the ranking of the eligible courtiers they get sorted by a 'succession score', with the highest scorer becoming the first in line to inherit."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "That score can be calculated with the following formula: [1]"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "<<age>> is the number of a candidate's completed years of life, i.e. the candidate's age in years without any fractional part",
+                            "children": []
+                        },
+                        {
+                            "text": "<<piety>> is a candidate's piety",
+                            "children": []
+                        },
+                        {
+                            "text": "<<prestige>> is a candidate's prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "<<wealth>> is a candidate's wealth",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Trunc() stands for the truncate function , i.e. Trunc(x) is x with the fractional part removed"
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Tie-breaking",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In case two candidates have the same 'succession score', the candidate that is listed earlier in the save-game file wins. That is often, but not always also the character with the lower character ID ."
+                }
+            ]
+        },
+        {
+            "heading": "Republics",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Eligibility",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Potential heirs for republics need to be adult male courtiers with the same religion as the title holder and a positive \"succession score\" (cf. next paragraph). Being the prospective heir to a feudal, tribal or theocratic title disqualifies that courtier from the republic's succession."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Besides that, being imprisoned by a ruler other than the title holder also removes a candidate from the line of succession."
+                }
+            ]
+        },
+        {
+            "heading": "Ranking",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To determine the ranking of the eligible courtiers they get sorted by a 'succession score', with the highest scorer becoming the first in line to inherit."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "That score can be calculated with the following formula: [1]"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "<<age>> is the number of a candidate's completed years of life, i.e. the candidate's age in years without any fractional part",
+                            "children": []
+                        },
+                        {
+                            "text": "<<piety>> is a candidate's piety",
+                            "children": []
+                        },
+                        {
+                            "text": "<<prestige>> is a candidate's prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "<<wealth>> is a candidate's wealth",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Trunc() stands for the truncate function , i.e. Trunc(x) is x with the fractional part removed"
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Tie-breaking",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In case two candidates have the same 'succession score', the candidate that is listed earlier in the save-game file wins. That is often, but not always also the character with the lower character ID ."
+                }
+            ]
+        },
+        {
+            "heading": "Theocracies",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Exceptions",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Theocratic titles of religious heads (e.g. the Ecumenical Patriarch, the Coptic Pope (for Miaphysitism), or the Manichean Yamag) always go straight to generating a new character for the title upon succession, even when suitable courtiers are available."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "That doesn't apply though to intermediate religious heads of autocephalous religions like the patriarchs of the Eastern Orthodoxy . Those just follow the succession described below like other theocracies with open elective succession."
+                }
+            ]
+        },
+        {
+            "heading": "Eligibility",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Potential heirs for theocracies need to be adult male courtiers (even if the religion allows female bishops/priests) with the same religion as the title holder and a positive \"succession score\" (cf. next paragraph). Being the prospective heir to a feudal or tribal title disqualifies that courtier from the theocracy's succession."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Besides that, being imprisoned by a ruler other than the title holder also removes a candidate from the line of succession."
+                }
+            ]
+        },
+        {
+            "heading": "Ranking",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To determine the ranking of the eligible courtiers they get sorted by a 'succession score', with the highest scorer becoming the first in line to inherit."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "That score can be calculated with the following formula: [1]"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "<<age>> is the number of a candidate's completed years of life, i.e. the candidate's age in years without any fractional part",
+                            "children": []
+                        },
+                        {
+                            "text": "<<piety>> is a candidate's piety",
+                            "children": []
+                        },
+                        {
+                            "text": "<<prestige>> is a candidate's prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "<<wealth>> is a candidate's wealth",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Trunc() stands for the truncate function , i.e. Trunc(x) is x with the fractional part removed"
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Tie-breaking",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In case two candidates have the same 'succession score', the candidate that is listed earlier in the save-game file wins. That is often, but not always also the character with the lower character ID ."
+                }
+            ]
+        },
+        {
+            "heading": "Feudal Fallback",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Eligibility",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For the fallback succession of tribal and feudal titles male courtiers qualify as potential heirs even underage ones. Women and girls are valid succession candidates, if the title's succession is not exclusively agnatic. The potential heir needs to have the same religious group as the current title holder.\nSome of the usual disqualifications for succession like being heir to a theocracy do apply, others like being a bastard do not apply."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Besides that, being imprisoned by a ruler other than the title holder also removes a candidate from the line of succession. A potential candidate also needs a positive \"succession score\" (cf. next paragraph) to be eligible."
+                }
+            ]
+        },
+        {
+            "heading": "Ranking for agnatic and full cognatic succession",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To determine the ranking of the eligible courtiers they get sorted by a 'succession score', with the highest scorer becoming the first in line to inherit."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "That score can be calculated with the following formula: [1]"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "<<age>> is the number of a candidate's completed years of life, i.e. the candidate's age in years without any fractional part",
+                            "children": []
+                        },
+                        {
+                            "text": "<<piety>> is a candidate's piety",
+                            "children": []
+                        },
+                        {
+                            "text": "<<prestige>> is a candidate's prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "<<wealth>> is a candidate's wealth",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Trunc() stands for the truncate function , i.e. Trunc(x) is x with the fractional part removed"
+                }
+            ]
+        },
+        {
+            "heading": "Ranking for agnatic-cognatic succession",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To determine the ranking of the eligible courtiers they get sorted by a 'succession score', with the highest scorer becoming the first in line to inherit."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "That score can be calculated with the following formula: [1]"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "<<age>> is the number of a candidate's completed years of life, i.e. the candidate's age in years without any fractional part",
+                            "children": []
+                        },
+                        {
+                            "text": "<<piety>> is a candidate's piety",
+                            "children": []
+                        },
+                        {
+                            "text": "<<prestige>> is a candidate's prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "<<wealth>> is a candidate's wealth",
+                            "children": []
+                        },
+                        {
+                            "text": "<<gender_multiplier>> is 1000 for male candidates and 1 for female candidates",
+                            "children": []
+                        },
+                        {
+                            "text": "<<gender_penalty>>  is 999 for female candidates and 0 for male candidates",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Trunc() stands for the truncate function , i.e. Trunc(x) is x with the fractional part removed"
+                }
+            ]
+        },
+        {
+            "heading": "Tie-breaking for agnatic-cognatic succession",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In case two candidates have the same 'succession score', the candidate that is listed earlier in the save-game file wins. That is often, but not always also the character with the lower character ID ."
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Sending Gifts : Increasing the wealth of a candidate courtier through gifts, lets the player pretty much choose which courtier will inherit in case of the title holder's death, which in turn can be used to get a candidate in power that is more likely to accept a vassalization offer, or a child or a woman that can be attacked by weak claims, etc.",
+                            "children": []
+                        },
+                        {
+                            "text": "Sending high prestige courtiers : Marrying high prestige courtiers into a foreign court by using matrilineal marriage for men and regular marriage for women can also influence the open elective succession",
+                            "children": []
+                        },
+                        {
+                            "text": "Imprisoning courtiers : if the player is hostile to the current title holder, due to raiding or war, they might be able to capture courtiers through sieges or battles and thus also remove said courtiers from the succession",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Footnotes",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ 1.0 1.1 1.2 1.3 1.4 1.5 n.b.: due to floating-point arithmetic \"<<wealth>> * 100\" is not always what you'd intuitively expect, e.g. Trunc (0.03f * 100) = 2",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ 2.0 2.1 for this calculation only the titles of actually landed characters count, i.e. the unlanded spouse of a ruler has rank 0, even though the game gives them a Ruler Consort title called emperor/empress/king/queen etc.",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ 3.0 3.1 for parents that are still alive the current rank is the one used, for parents that are dead it's the rank at time of death",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

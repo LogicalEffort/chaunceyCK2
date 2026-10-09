@@ -1,0 +1,780 @@
+{
+    "pageid": 416,
+    "title": "Cities",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Cities are holdings commonly held by republic rulers. They pay the most taxes , and once upgraded give numerous levies, but have a lower fort level than castles and their levies consist more of the lighter soldier types than both castles and temples ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Most characters cannot hold a city within their direct demesne without suffering penalties to taxes, vassal opinion , and levies. Characters with government types that allows for cities in their direct demesne without penalty are merchant republics , Confucian Bureaucracy, Chinese and Roman Imperial."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Cities are worth more when built in a coastal county, as this allows two types of income-increasing buildings to be built and upgraded. Also, patricians of merchant republics can build trade posts in coastal counties, which boosts the income of cities in the county. Rulers of counties on the Silk Road can also build trade posts ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The buildings that can be upgraded in cities focus exclusively on light infantry, archers, and pikemen, as well as increasing income and tech research speed."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Constructing a city (or castle) can prevent a formerly-normadic province from reverting due to nomad agitation ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Hindu characters must be of the Vaishya caste before they can be granted cities."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Granting a city to someone within your dynasty will disqualify them from succession"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that building upgrades stack."
+                }
+            ]
+        },
+        {
+            "heading": "Base Stats",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "All holdings have certain base statistics, providing income, fort level, and levies, so even a newly constructed holding will have some value."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Characteristic",
+                            "Value"
+                        ],
+                        [
+                            "",
+                            "Income",
+                            "12"
+                        ],
+                        [
+                            "",
+                            "Fort level",
+                            "0"
+                        ],
+                        [
+                            "",
+                            "Levies",
+                            "75 light infantry 40 archers"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Fortifications",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These buildings increase fort level, increasing the time it takes an attacking army to siege the holding and reducing the amount of free loot available to raiders."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements"
+                        ],
+                        [
+                            "City Fortifications I",
+                            "50",
+                            "182",
+                            "+0.4 fort level",
+                            "Town Walls I",
+                            ""
+                        ],
+                        [
+                            "City Fortifications II",
+                            "50",
+                            "182",
+                            "+0.4 fort level",
+                            "Town Walls II City Fortifications I",
+                            "Improved Keeps I"
+                        ],
+                        [
+                            "City Fortifications III",
+                            "50",
+                            "182",
+                            "+0.5 fort level",
+                            "City Fortifications II",
+                            "Improved Keeps III"
+                        ],
+                        [
+                            "City Fortifications IV",
+                            "100",
+                            "365",
+                            "+1 fort level",
+                            "City Fortifications III",
+                            "Improved Keeps V"
+                        ],
+                        [
+                            "City Fortifications V",
+                            "100",
+                            "365",
+                            "+1 fort level",
+                            "City Fortifications IV",
+                            "Improved Keeps VII"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Walls",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Walls increase levy size and fort level, raising the defensive capacity. They also slightly increase yearly income from the holding."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements"
+                        ],
+                        [
+                            "Town Walls I",
+                            "50",
+                            "365",
+                            "+0.4 fort level +2.5% levy size +0.2 income",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Town Walls II",
+                            "50",
+                            "547",
+                            "+0.4 fort level +2.5% levy size +0.2 income",
+                            "Town Walls I",
+                            "Improved Keeps II"
+                        ],
+                        [
+                            "Town Walls III",
+                            "100",
+                            "730",
+                            "+0.4 fort level +5% levy size +0.2 income",
+                            "Town Walls II",
+                            "Improved Keeps IV"
+                        ],
+                        [
+                            "Town Walls IV",
+                            "100",
+                            "1095",
+                            "+0.5 fort level +5% levy size +0.2 income",
+                            "Town Walls III",
+                            "Improved Keeps VI"
+                        ],
+                        [
+                            "Town Walls V",
+                            "150",
+                            "1460",
+                            "+1.0 fort level +7.5% levy size +0.5 income",
+                            "Town Walls IV",
+                            "Improved Keeps VIII"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Merchant Republic Arsenal",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These buildings may only be built in the capital of a merchant republic ."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements"
+                        ],
+                        [
+                            "Arsenal I",
+                            "200",
+                            "1460",
+                            "+1.0 fort level +25% garrison size +7.5% levy size 15 galleys",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Arsenal II",
+                            "400",
+                            "1460",
+                            "+1.5 fort level +20% garrison size +7.5% levy size 15 galleys",
+                            "Arsenal I",
+                            "Town Infrastructure IV"
+                        ],
+                        [
+                            "Arsenal III",
+                            "600",
+                            "2190",
+                            "+2.0 fort level +25% garrison size +12.5% levy size 15 galleys",
+                            "Arsenal II",
+                            "Town Infrastructure VII"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Militia Training Grounds",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Militia Training Grounds are one of the most important buildings in cities. They increase percentage-wise the total number of base troops provided by other buildings, which means more levies and garrisoning troops."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements"
+                        ],
+                        [
+                            "Militia Training Grounds I",
+                            "150",
+                            "547",
+                            "+5% levy size +5% garrison size",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Militia Training Grounds II",
+                            "200",
+                            "730",
+                            "+7.5% levy size +10% garrison size",
+                            "Town Walls I Militia Training Grounds I",
+                            ""
+                        ],
+                        [
+                            "Militia Training Grounds III",
+                            "300",
+                            "1095",
+                            "+10% levy size +15% garrison size",
+                            "Militia Training Grounds II",
+                            "Improved Keeps II"
+                        ],
+                        [
+                            "Militia Training Grounds IV",
+                            "400",
+                            "1460",
+                            "+12.5% levy size +20% garrison size",
+                            "Militia Training Grounds III",
+                            "Improved Keeps IV"
+                        ],
+                        [
+                            "Militia Training Grounds V",
+                            "500",
+                            "2190",
+                            "+15% levy size +25% garrison size",
+                            "Militia Training Grounds IV",
+                            "Improved Keeps VI"
+                        ],
+                        [
+                            "Militia Training Grounds VI",
+                            "500",
+                            "2190",
+                            "+15% levy size +25% garrison size",
+                            "Militia Training Grounds V",
+                            "Improved Keeps VIII"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Mustering Grounds",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Mustering Grounds increase the raw number of light infantry and archers available. These two troops are of low quality, but make up the majority of armies and are utilised mostly in the skirmish phase of battles."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements"
+                        ],
+                        [
+                            "Mustering Ground I",
+                            "100",
+                            "365",
+                            "+60 light infantry +30 archers",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Mustering Ground II",
+                            "120",
+                            "547",
+                            "+40 light infantry +70 archers",
+                            "Town Walls I Mustering Ground I",
+                            ""
+                        ],
+                        [
+                            "Mustering Ground III",
+                            "200",
+                            "730",
+                            "+80 light infantry +50 archers",
+                            "Mustering Ground II",
+                            "Town Infrastructure I"
+                        ],
+                        [
+                            "Mustering Ground IV",
+                            "300",
+                            "1095",
+                            "+60 light infantry +90 archers",
+                            "Mustering Ground III",
+                            "Town Infrastructure III"
+                        ],
+                        [
+                            "Mustering Ground V",
+                            "400",
+                            "2190",
+                            "+100 light infantry +70 archers",
+                            "Mustering Ground IV",
+                            "Town Infrastructure V"
+                        ],
+                        [
+                            "Mustering Ground VI",
+                            "500",
+                            "2190",
+                            "+80 light infantry +110 archers",
+                            "Mustering Ground V",
+                            "Town Infrastructure VII"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "City Guard",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The City Guard provide pikemen, which are heavy hitters and important in the melee phase of battles."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements"
+                        ],
+                        [
+                            "City Guard I",
+                            "100",
+                            "365",
+                            "+45 pikemen",
+                            "",
+                            ""
+                        ],
+                        [
+                            "City Guard II",
+                            "120",
+                            "547",
+                            "+55 pikemen",
+                            "Town Walls I City Guard I",
+                            "Town Infrastructure II"
+                        ],
+                        [
+                            "City Guard III",
+                            "200",
+                            "730",
+                            "+65 pikemen",
+                            "City Wall II City Guard II",
+                            "Town Infrastructure IV"
+                        ],
+                        [
+                            "City Guard IV",
+                            "300",
+                            "1095",
+                            "+75 pikemen",
+                            "City Guard III",
+                            "Town Infrastructure VI"
+                        ],
+                        [
+                            "City Guard V",
+                            "400",
+                            "2190",
+                            "+85 pikemen",
+                            "City Guard IV",
+                            "Town Infrastructure VIII"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Economic Buildings",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These economic buildings increase the income of the holding, a portion of which goes to the liege. These are good to build because whatever gold which doesn't go to the liege goes to the mayor of the city, who, in theory, will use that gold to build other buildings. If you are a patrician or a doge holding cities, constructing these buildings is a high priority."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements"
+                        ],
+                        [
+                            "Town Market",
+                            "100",
+                            "365",
+                            "+3.0 income",
+                            "",
+                            ""
+                        ],
+                        [
+                            "City Guild Hall",
+                            "120",
+                            "547",
+                            "+3.0 income",
+                            "Town Market Town Walls I",
+                            ""
+                        ],
+                        [
+                            "Toll Booth",
+                            "200",
+                            "730",
+                            "+3.0 income",
+                            "City Guild Hall City Walls II",
+                            "Town Infrastructure I"
+                        ],
+                        [
+                            "Court",
+                            "300",
+                            "1095",
+                            "+3.0 income",
+                            "Toll Booth",
+                            "Town Infrastructure III"
+                        ],
+                        [
+                            "Assay Office",
+                            "400",
+                            "2190",
+                            "+3.0 income",
+                            "Court",
+                            "Town Infrastructure V"
+                        ],
+                        [
+                            "Fair",
+                            "500",
+                            "2190",
+                            "+3.0 income",
+                            "Assay Office",
+                            "Town Infrastructure VII"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Ports",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Ports are buildings that can only be built in provinces with a coastline that provide extra income. If the player is holding coastal cities, constructing these buildings is recommended, more so if they also control the trade post in the same county."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "Port I",
+                            "100",
+                            "365",
+                            "+3.0 income",
+                            "",
+                            "",
+                            "Only available in coastal holdings"
+                        ],
+                        [
+                            "Port II",
+                            "120",
+                            "547",
+                            "+3.0 income",
+                            "Port I Town Walls I",
+                            "Trade Practices I",
+                            "Only available in coastal holdings"
+                        ],
+                        [
+                            "Port III",
+                            "200",
+                            "730",
+                            "+3.0 income",
+                            "Port II City Walls II",
+                            "Trade Practices III",
+                            "Only available in coastal holdings"
+                        ],
+                        [
+                            "Port IV",
+                            "300",
+                            "1095",
+                            "+3.0 income",
+                            "Port III",
+                            "Trade Practices IV",
+                            "Only available in coastal holdings"
+                        ],
+                        [
+                            "Port V",
+                            "400",
+                            "2190",
+                            "+3.0 income",
+                            "Port IV",
+                            "Trade Practices VI",
+                            "Only available in coastal holdings"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Shipyard",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "City shipyards are buildings that can only be built in coastal provinces; they provide ships that can be used to transport troops."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "Shipyard I",
+                            "100",
+                            "365",
+                            "+5 galleys",
+                            "",
+                            "Shipbuilding I",
+                            "Only available in coastal holdings"
+                        ],
+                        [
+                            "Shipyard II",
+                            "100",
+                            "730",
+                            "+6 galleys",
+                            "Shipyard I",
+                            "Shipbuilding II",
+                            "Only available in coastal holdings"
+                        ],
+                        [
+                            "Shipyard III",
+                            "100",
+                            "1095",
+                            "+7 galleys",
+                            "Shipyard II",
+                            "Shipbuilding III",
+                            "Only available in coastal holdings"
+                        ],
+                        [
+                            "Shipyard IV",
+                            "100",
+                            "1460",
+                            "+8 galleys",
+                            "Shipyard III",
+                            "Shipbuilding IV",
+                            "Only available in coastal holdings"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Universities",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Universities are expensive educational institutions that increase the rate of technological growth in the entire county. Name varies depending on religion."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "University I",
+                            "600",
+                            "1095",
+                            "+30% tech spread rate +0.05 economic tech points",
+                            "",
+                            "Town Infrastructure II",
+                            "Bonus affects the entire county"
+                        ],
+                        [
+                            "University II",
+                            "800",
+                            "2190",
+                            "+30% tech spread rate +0.05 economic tech points",
+                            "University I",
+                            "Town Infrastructure IV",
+                            "Bonus affects the entire county"
+                        ],
+                        [
+                            "University III",
+                            "800",
+                            "2190",
+                            "+30% tech spread rate +0.05 economic tech points",
+                            "University II",
+                            "Town Infrastructure VIII",
+                            "Bonus affects the entire county"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Infrastructure",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This building chain is accessible when the owner or any liege of the city has the Architect or Peaceful-Architect bloodlines. See Bloodline#Forged_Bloodlines"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Price (gold)",
+                            "Build time (days)",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "Garrisoned Roads",
+                            "125",
+                            "395",
+                            "+3 Tax Income +5% morale of armies +5% tech spread rate +5 trade value",
+                            "",
+                            "",
+                            "Requires an owner or any liege with the Architect or Peaceful-Architect bloodline"
+                        ],
+                        [
+                            "Stone Roads",
+                            "250",
+                            "560",
+                            "+3 Tax Income +2 Trade Post Limit +5% tech spread rate +5 trade value",
+                            "Garrisoned Roads",
+                            "Town Infrastructure III",
+                            "Requires an owner or any liege with the Architect or Peaceful-Architect bloodline. Note: Trade Post Limit bonus is limited to the capital holding, so it cannot be stacked."
+                        ],
+                        [
+                            "Cleared Pathways",
+                            "450",
+                            "760",
+                            "+10% tech spread rate +10% Levy Reinforcement Rate +5% Disease Resistance +5 Trade Value",
+                            "Stone Roads",
+                            "Town Infrastructure V",
+                            "Requires an owner or any liege with the Architect or Peaceful-Architect bloodline Note: Due to a game engine bug, this building does not actually provide any additional disease resistance to its province."
+                        ],
+                        [
+                            "Great Acqueduct",
+                            "750",
+                            "1250",
+                            "+5% tech spread rate +0.1 economic tech points +10% Disease Resistance +5 Trade Value",
+                            "Cleared Pathways",
+                            "Town Infrastructure VII",
+                            "Requires an owner or any liege with the Architect or Peaceful-Architect bloodline Note: Due to a game engine bug, this building does not actually provide any additional disease resistance to its province."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: Trade Post Limit bonus is limited to the capital holding, so it cannot be stacked."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: Due to a game engine bug, this building does not actually provide any additional disease resistance to its province."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: Due to a game engine bug, this building does not actually provide any additional disease resistance to its province."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,677 @@
+{
+    "pageid": 2266,
+    "title": "Ancient Religions",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Ancient Religions is a mod that aims at recreating dead religions in the time-frame of vanilla Crusader Kings II ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It can be played by either:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Starting with an historical character (with a reasonable culture, see revival sections), and wait for the event chain to attempt the restoration of the old faith.",
+                            "children": []
+                        },
+                        {
+                            "text": "Deciding to go pagan, if the moral authority of your non-heretic religion is very low",
+                            "children": []
+                        },
+                        {
+                            "text": "Using the decision to \"paganify\" the world using the Lets. Get. PAGAN! at game start, before unpausing the game",
+                            "children": []
+                        },
+                        {
+                            "text": "Creating an alternate character of the given religion with the ruler designer .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Key milestones",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Here are some important milestones in the history of the mod:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "June 2013: first releases from superskierpat and jonseverinsson, with 3 religions (Brythonic Druidism, Gaelic Paganism, Hellenic polytheism)",
+                            "children": []
+                        },
+                        {
+                            "text": "2013-2014 (alpha): alpha with new features from superskierpat, including merge of the two Celtic religions into one, and compatibility patches with vanilla releases",
+                            "children": []
+                        },
+                        {
+                            "text": "January 2015: second life of the mod, with modders: theStormWeaver, Romulien and jbelig. Retrofit of Egyptian paganism from CK2+.",
+                            "children": []
+                        },
+                        {
+                            "text": "February 2015: mod is released on Steam Workshop .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Required DLCs",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Old Gods DLC is required to play the ancient religions, as they are part of the pagan group."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some other DLCs are optional and enable extra flavour:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "LoR enables restoring the Roman empire as Hellenic pagan, while controlling Byzantine empire, and retinues and building for Roman, Gaulish and Coptic cultures.",
+                            "children": []
+                        },
+                        {
+                            "text": "SoA enables some minor holy order decisions and events, and the Circle of Druids.",
+                            "children": []
+                        },
+                        {
+                            "text": "RoI enables Celtic reincarnation event chain",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Mod compatibility",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This mod is generally not compatible with any mod that modifies vanilla files."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Mod",
+                            "Compatibility"
+                        ],
+                        [
+                            "CK2Plus",
+                            "Forked from earlier version of mod"
+                        ],
+                        [
+                            "WtWSMS",
+                            "Already included"
+                        ],
+                        [
+                            "The Winter King",
+                            "Already included"
+                        ],
+                        [
+                            "HIP",
+                            "Not compatible"
+                        ],
+                        [
+                            "Europa Universalis 4 Save Converter",
+                            "Not compatible"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Religions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Religion (code)",
+                            "Parent",
+                            "Head",
+                            "Holy Sites",
+                            "Mechanics",
+                            "Special CBs",
+                            "Modifiers"
+                        ],
+                        [
+                            "Celtic (celtic_pagan)",
+                            "Pagan",
+                            "None",
+                            "Locmine (Vannes) Waltham (Essex) Bangor Fawr (Gwynedd) Dijon Mellifont (Dublin)",
+                            "Looting , Concubinage , Reformation , female temple holders, feminist, defensive attrition, 200% short reign penalty, prestige loss while at peace, no penalty from raised vassal levies",
+                            "County Conquest , Subjugation",
+                            "Levy size +15% Garrison size +20% Retinue size +30% Home territory : Morale +60% All Units Defensive +60% Garrison size +20%"
+                        ],
+                        [
+                            "Locmine (Vannes) Waltham (Essex) Bangor Fawr (Gwynedd) Dijon Mellifont (Dublin)",
+                            "Druidic (celtic_pagan_reformed)",
+                            "Pagan",
+                            "The Circle of Druids",
+                            "Circle of Druids , Concubinage , female temple holders, feminist, 200% short reign penalty",
+                            "Holy war , County Conquest",
+                            "Levy size +15% Garrison size +20% Retinue size +30% Home territory : Morale +40% All Units Defensive +40% Garrison size +20%"
+                        ],
+                        [
+                            "Hellenic (hellenic_pagan)",
+                            "Pagan",
+                            "None (The Pontificate Maxima once restored)",
+                            "Abydos Thessalonica Athens Rome (Latium) Alexandria",
+                            "Pre-reformed, Looting , Concubinage , female temple holders.",
+                            "Holy war , Great holy wars , County Conquest , Subjugation , Hellenic county liberation.",
+                            "Levy size +30%"
+                        ],
+                        [
+                            "Promethean (promethean_pagan)",
+                            "Hellenic",
+                            "First Academy",
+                            "Kartli Consenza Athens Thessalonike Alexandria",
+                            "Pre-reformed, female temple holders, feminist, 50% short reign penalty, piety bonus while at peace, can designate heir",
+                            "Holy war , County Conquest , Subjugation , Promethean expansion",
+                            "Learning +4"
+                        ],
+                        [
+                            "Titan (titan_pagan)",
+                            "Hellenic",
+                            "None",
+                            "Antioch Thessalia Athens Rome (Latium) Rhodes",
+                            "Looting , Concubinage , female temple holders, 400% short reign penalty, prestige loss while at peace, no penalty from raised vassal levies",
+                            "Holy war , County Conquest , Subjugation .",
+                            "Combat rating +2"
+                        ],
+                        [
+                            "Kemetic (egyptian_pagan)",
+                            "Pagan",
+                            "None (The Paragon Cult of Amun once restored)",
+                            "Zweitina Ikonion Fuwa Memphis Luxor",
+                            "Pre-reformed, Concubinage , Divine blood , female temple holders",
+                            "Holy war , County Conquest , Subjugation .",
+                            ""
+                        ],
+                        [
+                            "Zweitina Ikonion Fuwa Memphis Luxor",
+                            "Atenic (aten_pagan)",
+                            "Kemetic",
+                            "None (The Paragon Cult of Aten once restored)",
+                            "Pre-reformed, Decadence , Concubinage , Divine blood , female temple holders",
+                            "",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Locmine (Vannes) Waltham (Essex) Bangor Fawr (Gwynedd) Dijon Mellifont (Dublin)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Garrison size +20% Retinue size +30% Home territory : Morale +60% All Units Defensive +60% Garrison size +20%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Garrison size +20% Retinue size +30% Home territory : Morale +40% All Units Defensive +40% Garrison size +20%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Abydos Thessalonica Athens Rome (Latium) Alexandria"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Kartli Consenza Athens Thessalonike Alexandria"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Antioch Thessalia Athens Rome (Latium) Rhodes"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Zweitina Ikonion Fuwa Memphis Luxor"
+                }
+            ]
+        },
+        {
+            "heading": "Cultures",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There are some old cultures that can be revived as well:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Culture (code)",
+                            "Culture Group",
+                            "Cultural retinue",
+                            "Cultural building"
+                        ],
+                        [
+                            "Roman (roman)",
+                            "Latin",
+                            "Legionary 225 25 Light cavalry offensive: +30% Heavy infantry offensive: +10% Heavy infantry defensive: +20%",
+                            "Legionary Camp +30/40/50/60 Heavy infantry +15% Heavy infantry defensive / level"
+                        ],
+                        [
+                            "Gaulish (gaulish)",
+                            "Celtic",
+                            "Gaulish Cavalry 250 Heavy cavalry offensive: +30%",
+                            "Cavalry Field +15/20/25/30 Heavy cavalry +15% Heavy cavalry offensive / level"
+                        ],
+                        [
+                            "Coptic (egyptian_coptic)",
+                            "Arabic",
+                            "Anhuri Warriors 175 75 Heavy infantry offensive: +20% Heavy infantry defensive: +10% Horse archers offensive: +20%",
+                            "Temple of Anhur +15/30/35/40 Heavy infantry +5/10/15/20 Horse archers +15% Heavy infantry offensive / level +10% Horse archers offensive / level"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Light cavalry offensive: +30% Heavy infantry offensive: +10% Heavy infantry defensive: +20%"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+30/40/50/60 Heavy infantry",
+                            "children": []
+                        },
+                        {
+                            "text": "+15% Heavy infantry defensive / level",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Heavy cavalry offensive: +30%"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+15/20/25/30 Heavy cavalry",
+                            "children": []
+                        },
+                        {
+                            "text": "+15% Heavy cavalry offensive / level",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Heavy infantry offensive: +20% Heavy infantry defensive: +10% Horse archers offensive: +20%"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+15/30/35/40 Heavy infantry",
+                            "children": []
+                        },
+                        {
+                            "text": "+5/10/15/20 Horse archers",
+                            "children": []
+                        },
+                        {
+                            "text": "+15% Heavy infantry offensive / level",
+                            "children": []
+                        },
+                        {
+                            "text": "+10% Horse archers offensive / level",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Celtic Druidism",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Sweep Prydain as a Celtic Pagan and cast out the last remnants of foreign rule! Reform the faith and establish the Circle of Druids, with the Arch Druid at its head!"
+                }
+            ]
+        },
+        {
+            "heading": "Revival",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Druidic revival events require character with Celtic culture:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Old Wizard : adopt Celtic rites and attempt to restore the old faith.",
+                            "children": []
+                        },
+                        {
+                            "text": "Journey to St Kilda : there are some rumors of Celts in Innse Gall province, and who may have knowledge on curing illnesses",
+                            "children": []
+                        },
+                        {
+                            "text": "King of the Elves! : as a lunatic or possessed character, anything can happen!",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Flavor",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heroic religion : the Celtic faith can raise more warriors, happy to prove their worth. Its warriors also fight with greater valor when defending their lands. But do not stay at peace for too long, or they will grow restless...",
+                            "children": []
+                        },
+                        {
+                            "text": "Headhunters : accomplished Celtic warriors may become headhunters, collecting the heads of their defeated enemies and preserving them in Juniper oil as trophies. The truly glorious may become a Living Legend!",
+                            "children": []
+                        },
+                        {
+                            "text": "Druidic caste : Celtic Pagan rulers send their children to be educated either as Warriors or Druids. Druids are respected in Celtic society, but they can never rule.",
+                            "children": []
+                        },
+                        {
+                            "text": "Reincarnation : some of your children may be seen as the re-incarnation of one of your ancestors.",
+                            "children": []
+                        },
+                        {
+                            "text": "Divination : the Celts can make sacrifices in order to divine the future, these celebrations can be made every five years.",
+                            "children": []
+                        },
+                        {
+                            "text": "Give Offerings to the Sidhe celebration : various bonuses can be obtained if you sacrifice is accepted, but if not...",
+                            "children": []
+                        },
+                        {
+                            "text": "Sacred Symbols : they are placed in every province, giving a minor bonus. These symbols can be lost if you anger the Sidhe (spirits) of the land! Giving offerings to the Sidhe can appease them and lift the curse.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Aonach Tailteann : revive this ancient tradition and throw a celebration for the dead that includes bonfires and athletic, fighting crafting competitions!",
+                            "children": []
+                        },
+                        {
+                            "text": "Reformation : if your faith grows powerful enough, you will need to reorganize it and give greater powers to the druids.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Wolf Tails : Celtic Pagan mercenary company that forms after the first county converts to Celtic Pagan. The Wolf Tails will reform with the Celtic faith.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Fianna : call the Fianna to the defense of the Isles and send your sons to gather glory in their bands, but beware, not all of them will come back!",
+                            "children": []
+                        },
+                        {
+                            "text": "The Red Dragon Knights : Druidic Holy Order which forms after the age of Great Holy Wars begins. Standard holy order, with all of the standard decisions and events that those entail.",
+                            "children": []
+                        },
+                        {
+                            "text": "Pendragon : the first Welsh, Pictish, or Breton Emperor of Prydain will be nicknamed 'Pendragon'",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Hellenic Polytheism",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Restore Rome for real! Become the Pontifex Maximus and make your non-marriageable daughter into a Vestal Virgin!"
+                }
+            ]
+        },
+        {
+            "heading": "Revival",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Revival events require character with Greek or Italian culture:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Studying the Classics : read ancient texts of knowledge and throw away the shackles of Christianity, like Julian the Philosopher before you!",
+                            "children": []
+                        },
+                        {
+                            "text": "The Philosophos : inspired by Michael Psellos and Plethon",
+                            "children": []
+                        },
+                        {
+                            "text": "Mani Peninsula : rumors are that Hellenics may survive on the peninsula, could it be true?",
+                            "children": []
+                        },
+                        {
+                            "text": "Roman rights and customs : an Italian Hellenic mayor may ask his liege to restore the rights and customs of ancient Rome.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Flavor",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Hellenic county liberation CB : to reclaim provinces with Greek, Italian or Roman culture.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Pontificate Maxima : by spreading your faith and becoming a powerful king or emperor, you may declare yourself the Pontifex Maximus and restore the Roman religious hierarchy of old!",
+                            "children": []
+                        },
+                        {
+                            "text": "The Vestals : as Pontifex Maximus, you can now appoint Vestal Virgins, either make your own choice or select a candidate sent by your vassals.",
+                            "children": []
+                        },
+                        {
+                            "text": "Roman Empire : Re-form the Imperium Romanum as an Hellenic pagan, and reclaim its rightful borders.",
+                            "children": []
+                        },
+                        {
+                            "text": "Hellenic Legion : create a holy order to defend your faith.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Promethean",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Prometheanism is a fictive heresy based on Prometheus , the only divinity in Greek mythology that was actually good to mortals, by suffering 30,000 years of torment to help mankind. It's a \"what if\" people turned away from the Olympians."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The First Academy : make the Philosophos of Piraeus become the Scholarch of the First Academy.",
+                            "children": []
+                        },
+                        {
+                            "text": "Academy of Crotone : rebuild the site of an ancient Pythagorean academy and increase the authority of your faith",
+                            "children": []
+                        },
+                        {
+                            "text": "Unbinding Festival : once a year, celebrate the Unbinding of Prometheus from his prison on Mt Kazbek!",
+                            "children": []
+                        },
+                        {
+                            "text": "Men of Steel : create a holy order to defend your faith.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Titan Cult",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Titan Cult is a fictive heresy based on the Titanomachy and the legend The Golden Age of Kronos. It's an apocalypse cult centered around destroying the Olympians and restoring the Titans."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The Sickles : create a holy order to defend your faith.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Egyptian Polytheism",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Become Pharaoh and re-establish the ancient priesthood of the Kemetic religion! Restore the Temple at Luxor and bring glory to Amun-Ra!"
+                }
+            ]
+        },
+        {
+            "heading": "Revival",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "First (of three planned) - There is a small chance that those who are On Hajj or On Pilgrimage in the East (Jerusalem, Antioch, or Axum) will be become lost in a sandstorm and meet an old man in an ancient temple."
+                }
+            ]
+        },
+        {
+            "heading": "Flavor",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Pyramids : Build yourself a mighty tomb!",
+                            "children": []
+                        },
+                        {
+                            "text": "Restore Luxor : rebuild the fifth Kemetic holy site from its ruin.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Paragon Cult of Amun : the cult can be restored by the Pharaoh once Luxor is rebuilt.",
+                            "children": []
+                        },
+                        {
+                            "text": "Holy orders : organize the Anubis Guard and the Horusian Guard",
+                            "children": []
+                        },
+                        {
+                            "text": "Sed Festival : celebrate 30 years of reign, and renew your powers, can be organized every 3 years after that, for increased gain.",
+                            "children": []
+                        },
+                        {
+                            "text": "Nile flooding : every year the Nile river will flood, sometimes good, sometimes bad.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Atenism",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Atenism is a heresy based on the sun-worshiping religion created by Pharaoh Akhenaten of the 18th Dynasty in competition with the official religion of the time."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Decadence : If the representative of the divine on Earth behaves in a manner unworthy of the divine, the people will rise up to overthrow the unworthy in the name of Aten.",
+                            "children": []
+                        },
+                        {
+                            "text": "Restore Akhetaten , the ancient city we call Amarna today",
+                            "children": []
+                        },
+                        {
+                            "text": "The Meryaten : reform your religion and become its religious head!",
+                            "children": []
+                        },
+                        {
+                            "text": "The Burning Blades : create a holy order to defend your faith.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

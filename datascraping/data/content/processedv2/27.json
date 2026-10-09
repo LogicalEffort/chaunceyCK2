@@ -1,0 +1,900 @@
+{
+    "pageid": 27,
+    "title": "Education",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Education is the process by which child character gains traits and attributes ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Each character in the game has a childhood up until the age of 16. During this period of time the character is educated in the ways of life, represented by the character gaining traits and attributes . Education in the base game happens in three stages:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Until the age of 6, the child's development is influenced by the primary parent. The primary character is decided by what type of marriage the child is a result of; if it is a patrilineal marriage the father is the primary parent, and if it is a matrilineal marriage the mother is the primary parent.",
+                            "children": []
+                        },
+                        {
+                            "text": "At the age of 6, the assigned guardian takes over for nearly all purposes until the child comes of age at 16.",
+                            "children": []
+                        },
+                        {
+                            "text": "At age 16, an education trait is assigned based on the final guardian's education trait.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Each adult can have up to two wards at a time.  Guardians have increased plot power against their wards for the purpose of assassination ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You will receive an alert when a child in your court age 6 or older is without a tutor."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you want to groom your grandson or a similar future heir is out of your control, you can ask to become their guardian on their sixth birthday.  If your offer is accepted you will thus have the opportunity to groom your future heir, or ensure that a potential rival ends up with horrible traits, thus eliminating that threat."
+                }
+            ]
+        },
+        {
+            "heading": "Culture and religion",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The child will often adopt the culture or religion of his tutor, hence the importance of guardian choice. This happens more often if the guardian is:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Diligent for both culture and religion,",
+                            "children": []
+                        },
+                        {
+                            "text": "Zealous for religion,",
+                            "children": []
+                        },
+                        {
+                            "text": "Gregarious for culture.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The opposite traits Slothful , Cynical and Shy have the opposite effect."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "However, these events will not happen if the tutor is not of the same culture or religion as their employer (landed nobles are their own employers)."
+                }
+            ]
+        },
+        {
+            "heading": "Base attributes",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "One of the things a parent/guardian will affect is base attributes.  It appears that each child has a chance once per year to increase each of their base attributes.  The chance that an increase will occur is tied to the attribute of the parent/guardian."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Thus, a child will gain base attributes more quickly in an area the parent/guardian is skilled at than one which he/she's bad at. Thus children will often end up with a distribution of base attributes quite similar to their parent or guardian.  This also means it can be more important to have a strong distribution of attributes in an heir's guardian/mentor, rather than one exceptionally strong attribute and very low other attributes."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "According to one player's testing, a statistic of 17 or above make the child very likely to gain a point in that same attribute."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Ultimately there is an element of random chance, however, so it is possible that a child will get a distribution of base attributes quite different from the parent/guardian."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that congenital traits (like quick or imbecile) seem to be reflected in the guardian's attributes and, therefore, increase / decrease the ward's chance to gain base attribute points."
+                }
+            ]
+        },
+        {
+            "heading": "Education traits",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Upon turning 16 and becoming an adult, the character will receive an Education trait ."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Name",
+                            "Internal name",
+                            "ID",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "Health",
+                            "Fertility",
+                            "Personal combat skill",
+                            "Other modifiers",
+                            "Cost [1]"
+                        ],
+                        [
+                            "",
+                            "Naive Appeaser",
+                            "naive_appeaser",
+                            "5",
+                            "1",
+                            "-1",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "0"
+                        ],
+                        [
+                            "",
+                            "Underhanded Rogue",
+                            "underhanded_rogue",
+                            "6",
+                            "3",
+                            "-1",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "+5%",
+                            "",
+                            "",
+                            "3"
+                        ],
+                        [
+                            "",
+                            "Charismatic Negotiator",
+                            "charismatic_negotiator",
+                            "7",
+                            "6",
+                            "-1",
+                            "",
+                            "1",
+                            "1",
+                            "",
+                            "+5%",
+                            "",
+                            "",
+                            "8"
+                        ],
+                        [
+                            "",
+                            "Grey Eminence",
+                            "grey_eminence",
+                            "8",
+                            "9",
+                            "-1",
+                            "",
+                            "2",
+                            "2",
+                            "",
+                            "+10%",
+                            "",
+                            "",
+                            "14"
+                        ],
+                        [
+                            "",
+                            "Misguided Warrior",
+                            "misguided_warrior",
+                            "13",
+                            "",
+                            "1",
+                            "",
+                            "",
+                            "-1",
+                            "+0.5",
+                            "",
+                            "+5",
+                            "",
+                            "5"
+                        ],
+                        [
+                            "",
+                            "Tough Soldier",
+                            "tough_soldier",
+                            "14",
+                            "",
+                            "3",
+                            "",
+                            "",
+                            "-1",
+                            "+0.5",
+                            "",
+                            "+10",
+                            "",
+                            "7"
+                        ],
+                        [
+                            "",
+                            "Skilled Tactician",
+                            "skilled_tactician",
+                            "15",
+                            "",
+                            "6",
+                            "1",
+                            "1",
+                            "-1",
+                            "+0.5",
+                            "",
+                            "+15",
+                            "",
+                            "12"
+                        ],
+                        [
+                            "",
+                            "Brilliant Strategist",
+                            "brilliant_strategist",
+                            "16",
+                            "",
+                            "9",
+                            "2",
+                            "2",
+                            "-1",
+                            "+0.5",
+                            "",
+                            "+20",
+                            "+1 Leadership traits",
+                            "17"
+                        ],
+                        [
+                            "",
+                            "Indulgent Wastrel",
+                            "indulgent_wastrel",
+                            "9",
+                            "-1",
+                            "",
+                            "1",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "0"
+                        ],
+                        [
+                            "",
+                            "Thrifty Clerk",
+                            "thrifty_clerk",
+                            "10",
+                            "-1",
+                            "",
+                            "3",
+                            "",
+                            "",
+                            "",
+                            "+5%",
+                            "",
+                            "",
+                            "3"
+                        ],
+                        [
+                            "",
+                            "Fortune Builder",
+                            "fortune_builder",
+                            "11",
+                            "-1",
+                            "1",
+                            "6",
+                            "",
+                            "1",
+                            "",
+                            "+10%",
+                            "",
+                            "",
+                            "9"
+                        ],
+                        [
+                            "",
+                            "Midas Touched",
+                            "midas_touched",
+                            "12",
+                            "-1",
+                            "2",
+                            "9",
+                            "",
+                            "2",
+                            "",
+                            "+15%",
+                            "",
+                            "",
+                            "15"
+                        ],
+                        [
+                            "",
+                            "Amateurish Plotter",
+                            "amateurish_plotter",
+                            "1",
+                            "",
+                            "",
+                            "-1",
+                            "1",
+                            "",
+                            "",
+                            "",
+                            "+4",
+                            "",
+                            "0"
+                        ],
+                        [
+                            "",
+                            "Flamboyant Schemer",
+                            "flamboyant_schemer",
+                            "2",
+                            "",
+                            "",
+                            "-1",
+                            "3",
+                            "",
+                            "",
+                            "",
+                            "+8",
+                            "",
+                            "2"
+                        ],
+                        [
+                            "",
+                            "Intricate Webweaver",
+                            "intricate_webweaver",
+                            "3",
+                            "1",
+                            "1",
+                            "-1",
+                            "6",
+                            "",
+                            "",
+                            "",
+                            "+12",
+                            "",
+                            "7"
+                        ],
+                        [
+                            "",
+                            "Elusive Shadow",
+                            "elusive_shadow",
+                            "4",
+                            "2",
+                            "2",
+                            "-1",
+                            "9",
+                            "",
+                            "",
+                            "",
+                            "+16",
+                            "",
+                            "12"
+                        ],
+                        [
+                            "",
+                            "Detached Priest",
+                            "detached_priest",
+                            "17",
+                            "",
+                            "",
+                            "",
+                            "-1",
+                            "1",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "0"
+                        ],
+                        [
+                            "",
+                            "Dutiful Cleric",
+                            "martial_cleric",
+                            "18",
+                            "",
+                            "",
+                            "",
+                            "-1",
+                            "3",
+                            "",
+                            "",
+                            "",
+                            "+10 Zeal",
+                            "2"
+                        ],
+                        [
+                            "",
+                            "Scholarly Theologian",
+                            "scholarly_theologian",
+                            "19",
+                            "1",
+                            "",
+                            "1",
+                            "-1",
+                            "6",
+                            "",
+                            "-5%",
+                            "",
+                            "+20 Zeal",
+                            "6"
+                        ],
+                        [
+                            "",
+                            "Mastermind Theologian",
+                            "mastermind_theologian",
+                            "20",
+                            "2",
+                            "",
+                            "2",
+                            "-1",
+                            "9",
+                            "",
+                            "-5%",
+                            "",
+                            "+30 Zeal",
+                            "11"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For each attribute there are four levels, ranging from mediocre to great. The highest level improves that attribute by a large amount, and is thus highly desirable. What education trait a character gets is semi-random, but usually in the same area as their guardian, and often at the same level as well."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The determination of the trait a child receives is hardcoded and not directly visible. Experimentation has shown that it only depends on the education trait of the guardian, which is therefore generally considered a very important factor when choosing a guardian:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "guardian skills, personality traits or opinion have no influence",
+                            "children": []
+                        },
+                        {
+                            "text": "the length of time the guardian has educated the child has no impact",
+                            "children": []
+                        },
+                        {
+                            "text": "education traits from all attributes behave in the same way.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The probability of getting:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "the same rank trait as the guardian is roughly 50%",
+                            "children": []
+                        },
+                        {
+                            "text": "a rank one step away from the guardians rank is roughly 15-30%",
+                            "children": []
+                        },
+                        {
+                            "text": "a rank two steps away from the guardians rank is roughly 5%-10%",
+                            "children": []
+                        },
+                        {
+                            "text": "a rank three steps away from the guardians rank is roughly 8%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some more detailed results from experiments:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Tutor",
+                            "Child"
+                        ],
+                        [
+                            "Tutor",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "Random other"
+                        ],
+                        [
+                            "",
+                            "53%",
+                            "26%",
+                            "8%",
+                            "1%",
+                            "8%"
+                        ],
+                        [
+                            "",
+                            "23%",
+                            "48%",
+                            "13%",
+                            "5%",
+                            "8%"
+                        ],
+                        [
+                            "",
+                            "8%",
+                            "13%",
+                            "44%",
+                            "10%",
+                            "9%"
+                        ],
+                        [
+                            "",
+                            "5%",
+                            "7%",
+                            "30%",
+                            "51%",
+                            "7%"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Reference: Arumba's Education Trait Outcomes: An experiment"
+                }
+            ]
+        },
+        {
+            "heading": "Personality traits",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Personality traits are also gained during tutoring and help define the character. AI guardians will generally encourage their wards to have traits similar to their own, while players acting as guardians are mostly free to guide wards in any chosen direction."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some traits that affect AI guardians are:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "very good: Diligent , Kind , and Temperate guardians make good choices in many events.",
+                            "children": []
+                        },
+                        {
+                            "text": "good: Just guardians make good choices, and Proud guardians stay out of the way when the child is doing well naturally.",
+                            "children": []
+                        },
+                        {
+                            "text": "mediocre: Zealous guardians are good at making children Zealous, but leave almost everything else up to chance.",
+                            "children": []
+                        },
+                        {
+                            "text": "bad: Gluttonous , Arbitrary , Cruel , Wroth , and Craven",
+                            "children": []
+                        },
+                        {
+                            "text": "terrible: Slothful",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For detailed calculations, see Evaluation of guardian traits ."
+                }
+            ]
+        },
+        {
+            "heading": "Effects on guardians",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Many events have options with effects on guardians:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Lose zealous or cynical , by approving of a child gaining the opposite trait",
+                            "children": []
+                        },
+                        {
+                            "text": "Gain 5 piety by choosing religious options such as praying (requires not being cynical )",
+                            "children": []
+                        },
+                        {
+                            "text": "Lose 5 prestige by encouraging a child to have certain traits opposite from your own",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Many events allow skilled guardians to improve ward stats, but a handful allow skilled guardians to improve their own stats :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "When a child naturally gains honest or kind , the guardian can gain 1 diplomacy if already 10+",
+                            "children": []
+                        },
+                        {
+                            "text": "When a child naturally gains patient , the guardian can gain 1 intrigue if already 10+",
+                            "children": []
+                        },
+                        {
+                            "text": "Each event can only fire if the child does not have the trait or its opposite",
+                            "children": []
+                        },
+                        {
+                            "text": "Each event can only fire if the child has fewer than 5 personality traits",
+                            "children": []
+                        },
+                        {
+                            "text": "Each event is 10x more likely to fire for genius children, and 2x more likely to fire for quick or weak children.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Choose guardians based on the stats and traits you want each character to have :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Your heir should be a likable ruler with strong stats.",
+                            "children": [
+                                {
+                                    "text": "The same applies to your heir's heir, or anyone you might choose as an heir .",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Vassals should be Content , share your culture, and share positive personality traits with your heir.",
+                            "children": [
+                                {
+                                    "text": "Bear in mind that this is not always desirable: If your authority is low enough and you want your vassals to expand on their own, content ones are less likely to do it.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Claimants on your titles should be managed carefully, lest they become adventurers or gain faction support.",
+                            "children": []
+                        },
+                        {
+                            "text": "Dynastic claimants on foreign realms should be encouraged to become adventurers , so you can join their war and gain an ally.",
+                            "children": []
+                        },
+                        {
+                            "text": "Future cardinals and antipopes should be virtuous, pious, and generally likable.",
+                            "children": []
+                        },
+                        {
+                            "text": "Future council members should be strong in their primary attribute.",
+                            "children": [
+                                {
+                                    "text": "Future spymasters should also have high ai_honor so they don't help murder your kids, but this tends to conflict with having high intrigue skill...",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Educate heir yourself : you have much better control over a child's personality this way than by choosing a guardian. Once the child has 5 personality traits, you can safely send them to another tutor for better stats or education trait. (this is no longer a guarantee, there have been reports of a 6th, or even 7th trait before the age of 16)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Always have two wards : choices in the events can help your character, especially if you don't care about the child's well-being."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Look for guardians with Tier 4 education traits : having such a tutor in the last year gives the child a good chance to pick up the same education, for +9 in one stat and +2 in two others."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you pick a guardian outside your own court, be careful with guardians of other religions/cultures , unless you actually want to switch religion/culture. If both the guardian and the owner of the court the guardian is in (the same person if the guardian themself is landed) is of a different culture/religion, your child may switch. Note that if you are a child, you can choose to avoid the culture- and religion-changing events, so you can have a different-culture guardian without danger of being unwillingly converted."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Choose an appropriate education for your heir , depending on circumstances:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Type",
+                            "Usefulness"
+                        ],
+                        [
+                            "",
+                            "Diplomacy",
+                            "Boosts vassal opinion (especially for councilors, who see your personal diplomacy) Boosts vassal limit Easier to invite characters such as councillors , commanders , claimants , and especially heirs"
+                        ],
+                        [
+                            "",
+                            "Martial",
+                            "Large boost to demesne levies Lead armies personally for prestige and control over commander traits, if willing to risk capture or injury Health boost increases likelihood of a long reign, especially if you stay out of combat"
+                        ],
+                        [
+                            "",
+                            "Stewardship",
+                            "Boost to demesne limit, potentially giving you more troops and taxes Improved fertility helps expanding a yet small dynasty."
+                        ],
+                        [
+                            "",
+                            "Intrigue",
+                            "Useful when not independent, to plot your way to the throne. Useful for Patricians to assassinate stronger candidates and stay in power. Goes well with two powerful focuses , Seduction and Intrigue focus , and can be leveled up by those focuses"
+                        ],
+                        [
+                            "",
+                            "Learning",
+                            "Increases technology point gain, especially useful in early start dates Increases piety gain Allows creation of powerful artifacts ( Hermetic society or Compose a Book )"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Boosts vassal opinion (especially for councilors, who see your personal diplomacy)",
+                            "children": []
+                        },
+                        {
+                            "text": "Boosts vassal limit",
+                            "children": []
+                        },
+                        {
+                            "text": "Easier to invite characters such as councillors , commanders , claimants , and especially heirs",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Large boost to demesne levies",
+                            "children": []
+                        },
+                        {
+                            "text": "Lead armies personally for prestige and control over commander traits, if willing to risk capture or injury",
+                            "children": []
+                        },
+                        {
+                            "text": "Health boost increases likelihood of a long reign, especially if you stay out of combat",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Boost to demesne limit, potentially giving you more troops and taxes",
+                            "children": []
+                        },
+                        {
+                            "text": "Improved fertility helps expanding a yet small dynasty.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Useful when not independent, to plot your way to the throne.",
+                            "children": []
+                        },
+                        {
+                            "text": "Useful for Patricians to assassinate stronger candidates and stay in power.",
+                            "children": []
+                        },
+                        {
+                            "text": "Goes well with two powerful focuses , Seduction and Intrigue focus , and can be leveled up by those focuses",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Increases technology point gain, especially useful in early start dates",
+                            "children": []
+                        },
+                        {
+                            "text": "Increases piety gain",
+                            "children": []
+                        },
+                        {
+                            "text": "Allows creation of powerful artifacts ( Hermetic society or Compose a Book )",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Diplomatic actions#Assign guardian",
+                            "children": []
+                        },
+                        {
+                            "text": "Education (Conclave)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Change in character's age in Ruler Designer .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

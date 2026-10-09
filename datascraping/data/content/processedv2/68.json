@@ -1,0 +1,785 @@
+{
+    "pageid": 68,
+    "title": "Combat",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Combat occurs when two hostile armies arrive on the same province. It is an important component of warfare ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Reference: Combat mechanics thread"
+                }
+            ]
+        },
+        {
+            "heading": "Flanks",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In a battle, each side has up to three flanks :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Left flank",
+                            "children": []
+                        },
+                        {
+                            "text": "Center flank",
+                            "children": []
+                        },
+                        {
+                            "text": "Right flank",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "These flanks will generally fight separately against the same flank on the opponent's side. Each flank has a commander , and its own units. To have more than one flank you need multiple armies, though they can be merged into one."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When a flank no longer has an equivalent flank to attack, it will help another flank instead. It will now also get a flanking bonus of 30% during the skirmish phase, meaning it does 30% more morale and troop damage. During the melee phase, the flanking bonus increases to 90%. The enemy flank will now be under attack from two flanks, thus taking much more damage."
+                }
+            ]
+        },
+        {
+            "heading": "Phases",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Combat is divided into three phases :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Skirmish: All battles will start in the Skirmish phase. This is when archers and horse archers excel, and they will be the only ones doing any major damage.",
+                            "children": []
+                        },
+                        {
+                            "text": "Melee: After a few days, it will switch to the Melee phase, where melee oriented units like heavy infantry and pikemen excel. Note that flanks do not necessarily have to be in the same phase as each other, and they'll usually enter Melee at slightly different times.",
+                            "children": []
+                        },
+                        {
+                            "text": "Pursue: When the morale of a flank reaches 20%, they will start retreating, and combat will switch to the Pursue phase. This is where light cavalry truly excels, but heavier cavalry does well also.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Retreat: After 8 days, the flank will be removed from combat:"
+                }
+            ]
+        },
+        {
+            "heading": "Unit Attack and Defense",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The formula for finding out the attack or defense of a unit is:"
+                }
+            ]
+        },
+        {
+            "heading": "Unit Statistics",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Base unit stat depends on the type of unit and the phase:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "",
+                            "",
+                            "",
+                            "Attack",
+                            "Defense"
+                        ],
+                        [
+                            "",
+                            "",
+                            "Morale",
+                            "Maintenance",
+                            "Skirmish",
+                            "Melee",
+                            "Pursue",
+                            "Skirmish",
+                            "Melee",
+                            "Pursue"
+                        ],
+                        [
+                            "",
+                            "Light Infantry (LI)",
+                            "2",
+                            "0.7",
+                            "1.25",
+                            "1",
+                            "2",
+                            "2",
+                            "1",
+                            "2.5"
+                        ],
+                        [
+                            "",
+                            "Heavy Infantry (HI)",
+                            "4",
+                            "3",
+                            "0.25",
+                            "6",
+                            "1",
+                            "3",
+                            "4",
+                            "4"
+                        ],
+                        [
+                            "",
+                            "Pikemen (P)",
+                            "6",
+                            "2.5",
+                            "0.1",
+                            "4.5",
+                            "0.2",
+                            "4",
+                            "4.5",
+                            "2"
+                        ],
+                        [
+                            "",
+                            "Light Cavalry (LC)",
+                            "4",
+                            "3",
+                            "2",
+                            "3",
+                            "6",
+                            "4.5",
+                            "3",
+                            "4.5"
+                        ],
+                        [
+                            "",
+                            "Heavy Cavalry (HC)",
+                            "10",
+                            "6",
+                            "0.5",
+                            "10",
+                            "4",
+                            "6",
+                            "6",
+                            "5"
+                        ],
+                        [
+                            "",
+                            "Archers (A)",
+                            "1",
+                            "2",
+                            "2",
+                            "1",
+                            "2",
+                            "1.5",
+                            "1.5",
+                            "2.25"
+                        ],
+                        [
+                            "",
+                            "Horse Archers (ST)",
+                            "3",
+                            "4",
+                            "4",
+                            "3",
+                            "7",
+                            "4",
+                            "4",
+                            "5"
+                        ],
+                        [
+                            "",
+                            "War Elephants (ST)",
+                            "15",
+                            "20",
+                            "0.25",
+                            "25",
+                            "0.25",
+                            "5",
+                            "15",
+                            "2"
+                        ],
+                        [
+                            "",
+                            "Camel Cavalry (ST)",
+                            "5",
+                            "3",
+                            "4",
+                            "6",
+                            "4",
+                            "4.5",
+                            "3",
+                            "2.5"
+                        ],
+                        [
+                            "",
+                            "Ships",
+                            "-",
+                            "300",
+                            "-",
+                            "-",
+                            "-",
+                            "-",
+                            "-",
+                            "-"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "ST = Special Troops (varies with region/culture)"
+                }
+            ]
+        },
+        {
+            "heading": "Military Technology",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Tech bonus depends on military technology level: +0%/+10%/+15%/+20%/+25%/+30%, depending on the relevant tech level."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "for a unit raised from a specific holding, it is the tech level in that county that matters.",
+                            "children": []
+                        },
+                        {
+                            "text": "for a unit raised from a vassal, it's the vassal's average tech level.",
+                            "children": []
+                        },
+                        {
+                            "text": "for a retinue unit, it's your capital's tech level.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Terrain",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Terrain defines the surroundings where battles are fought. The defenders usually have the advantage and terrain can play a vital role in a fight."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The following terrain give a terrain bonus to the defender:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Hills (all except heavy cavalry and camels)",
+                            "children": []
+                        },
+                        {
+                            "text": "Mountains (all infantry)",
+                            "children": []
+                        },
+                        {
+                            "text": "Jungle (all infantry have a bonus, horse archers suffer a penalty)",
+                            "children": []
+                        },
+                        {
+                            "text": "Forest",
+                            "children": []
+                        },
+                        {
+                            "text": "Desert (camels, light cavalry and horse archers)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The following elements between two provinces give a terrain penalty to the attacker."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Rivers: To see if there is a river (or strait) between two provinces, select one of them and look for the icon .",
+                            "children": []
+                        },
+                        {
+                            "text": "Major river: twice the penalties of crossing a normal river",
+                            "children": []
+                        },
+                        {
+                            "text": "Straits",
+                            "children": []
+                        },
+                        {
+                            "text": "Amphibious landing: almost identical to a strait crossing. Note: if you control at least one settlement in a county, you can have your ships enter the county's port. Your soldiers will be off-loaded and fight any enemies there without the amphibious landing modifier (but will still have maximum 50% morale at the start of combat).",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There are also several other terrain types which don't give a bonus or penalty to either side of a battle, though they can negatively affect the supply limit (especially true for deserts) - attrition has won many wars."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "",
+                            "Hill defense",
+                            "Mountain defense",
+                            "Jungle defense",
+                            "Forest defense",
+                            "Desert defense",
+                            "River crossing",
+                            "Major river crossing",
+                            "Strait crossing",
+                            "Amphibious landing"
+                        ],
+                        [
+                            "",
+                            "",
+                            "Attack",
+                            "Defense",
+                            "Attack",
+                            "Defense",
+                            "Attack",
+                            "Defense",
+                            "Attack",
+                            "Defense",
+                            "Attack",
+                            "Defense",
+                            "Attack",
+                            "Defense",
+                            "Attack",
+                            "Defense",
+                            "Attack",
+                            "Defense",
+                            "Attack",
+                            "Defense"
+                        ],
+                        [
+                            "",
+                            "Archers",
+                            "+20%",
+                            "+50%",
+                            "+50%",
+                            "+100%",
+                            "",
+                            "+30%",
+                            "",
+                            "+30%",
+                            "",
+                            "",
+                            "-5%",
+                            "-10%",
+                            "-10%",
+                            "-20%",
+                            "-10%",
+                            "-15%",
+                            "-10%",
+                            "-15%"
+                        ],
+                        [
+                            "",
+                            "Light Infantry",
+                            "",
+                            "+30%",
+                            "+100%",
+                            "+100%",
+                            "+50%",
+                            "+50%",
+                            "+30%",
+                            "+30%",
+                            "",
+                            "",
+                            "-10%",
+                            "-10%",
+                            "-20%",
+                            "-20%",
+                            "-15%",
+                            "-15%",
+                            "-15%",
+                            "-15%"
+                        ],
+                        [
+                            "",
+                            "Pikemen",
+                            "+10%",
+                            "+20%",
+                            "",
+                            "+50%",
+                            "+10%",
+                            "+20%",
+                            "+10%",
+                            "+10%",
+                            "",
+                            "",
+                            "-15%",
+                            "-15%",
+                            "-30%",
+                            "-30%",
+                            "-30%",
+                            "-30%",
+                            "-20%",
+                            "-20%"
+                        ],
+                        [
+                            "",
+                            "Heavy Infantry",
+                            "",
+                            "+20%",
+                            "",
+                            "+50%",
+                            "",
+                            "+10%",
+                            "",
+                            "+10%",
+                            "",
+                            "",
+                            "-15%",
+                            "-15%",
+                            "-30%",
+                            "-30%",
+                            "-30%",
+                            "-30%",
+                            "-20%",
+                            "-20%"
+                        ],
+                        [
+                            "",
+                            "Light Cavalry",
+                            "",
+                            "+15%",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "+15%",
+                            "+15%",
+                            "-12.5%",
+                            "-12.5%",
+                            "-25%",
+                            "-25%",
+                            "-20%",
+                            "-20%",
+                            "-17.5%",
+                            "-17.5%"
+                        ],
+                        [
+                            "",
+                            "Heavy Cavalry",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "-15%",
+                            "-15%",
+                            "-30%",
+                            "-30%",
+                            "-30%",
+                            "-30%",
+                            "-20%",
+                            "-20%"
+                        ],
+                        [
+                            "",
+                            "Horse Archers",
+                            "+10%",
+                            "+15%",
+                            "",
+                            "",
+                            "-15%",
+                            "-25%",
+                            "",
+                            "",
+                            "+15%",
+                            "+15%",
+                            "-7.5%",
+                            "-12.5%",
+                            "-15%",
+                            "-25%",
+                            "-20%",
+                            "-20%",
+                            "-12.5%",
+                            "-17.5%"
+                        ],
+                        [
+                            "",
+                            "Camel Cavalry",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "+50%",
+                            "+50%",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Narrow flank",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "During the melee phase in battle, defenders who are outnumbered may use a terrain bottleneck to even the odds. Each flank may have a narrow approach, preventing the attackers from attacking in numbers greater than the number of flank defenders (their number at the start). [1]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The chance of this depends on the main province terrain, with mountains and jungle having the highest chance. Commanders are also more likely to find a bottleneck if they have high skill, the Battlefield Terrain Master leadership trait, or the Game Master lifestyle trait ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "While of limited use in conventional battles where you try to outnumber your enemy, the cold efficiency of this skill is revealed when using Pikemen retinues to hold back the enemy. With both Heavy infantry leader and Battlefield Master leadership traits for their commander, such armies will be able to inflict horrendous losses to the enemy, perhaps even winning a desperate battle, if locked in melee with Narrow Flank modifier."
+                }
+            ]
+        },
+        {
+            "heading": "Cultural Building",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Cultural buildings can provide a cultural bonus to units trained in that holding . All cultural buildings have 4 levels, with each level providing an equivalent boost to some unit. The boost only applies to troops trained in the holding and to retinues (if the building is in the capital )."
+                }
+            ]
+        },
+        {
+            "heading": "Combat Tactics",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Tactic bonus ranges from -150% to +420%. Note that these are so huge, they often swamp technology-based and terrain-based modifiers. Tactical affinity bonus ranges from -120% to +300%."
+                }
+            ]
+        },
+        {
+            "heading": "Commanders",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You should assign a skilled commander to lead each flank (left, center, or right) that contains troops. You may assign yourself, your marshal, and direct subjects holding the minor title of \"Commander\". Hiring mercenaries or holy orders temporarily adds their leader and commanders to your pool."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Personally commanding a flank gives 15% more morale to its troops."
+                }
+            ]
+        },
+        {
+            "heading": "Regiment commanders",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You may also assign leaders to regiments, the sub-units within each flank:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "By clicking the regiment, if it belongs to you personally (e.g. demesne levies or retinues)",
+                            "children": []
+                        },
+                        {
+                            "text": "By merging two armies",
+                            "children": []
+                        },
+                        {
+                            "text": "By raising troops from a vassal whose marshal is idle (e.g. the Ecumenical Patriarch or a vassalized holy order with no counties)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Regiment leaders contribute to the battle alongside flank leaders, though the exact mechanics are unclear. Perhaps more importantly, if their flank's commander is killed during battle, a regiment leader can immediately take over and avoid leaving the flank in disarray."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Green commanders can be assigned to regiments in order to gain valuable combat experience without compromising the effectiveness of the army."
+                }
+            ]
+        },
+        {
+            "heading": "Battlefield Duels",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Battlefield duels are personal battles between two commanders in which both participants’ stats are weighed against each other to determine the outcome, usually injury or death."
+                }
+            ]
+        },
+        {
+            "heading": "Damage",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Every day, each soldier from a flank will make an attack on the enemy, causing damage based on its attack value. All damages for the flank are added together and sent to the flank that's being attacked. \nThe defense of the receiving units is computed, and casualties are inflicted as:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In addition, each soldier who dies does 3 morale damage to the survivors (MORALELOSS_FACTOR)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The survivors have morale points equal to the sum of their morale values, so if they take 60 morale damage but the survivors have 6000 morale points, morale will then be down by 1%. This means that deaths are a double penalty, both reducing the number of morale points a flank has, and reducing the number of soldiers."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that the calculations happen simultaneously every day for every flank involved in the battle, so all values will be calculated based on the number of troops present before anyone dies. Do note that in the Pursue phase, the fleeing flank will not make any attacks."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Combat ends once all flanks on one side are either dead or have fled. Flanks attempt to flee once their morale hits 20% or they're manually withdrawn from combat. Flight takes four days."
+                }
+            ]
+        },
+        {
+            "heading": "Prestige and piety",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Each battle results in 1 prestige for every 100 losses of the losing army.\nA portion of this prestige goes to the characters involved:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "50% goes to the owners of the units (divided among them)",
+                            "children": []
+                        },
+                        {
+                            "text": "25% goes to the main Commander of the centre",
+                            "children": []
+                        },
+                        {
+                            "text": "12.5% goes to each flank Commander",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In addition, for every 1 prestige gained, characters will gain 1.5 piety if fighting religious enemies."
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "See Combat mechanics thread and The Art of War , Playing in Europe for detailed insight on possible strategies."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Upgrade and specialize your holdings : combat tactics will, during combat, temporarily make some units incredibly powerful and others basically useless. For example, an army doing Swarm will temporarily have quadruple horse-archer damage and no damage from archers and light cavalry. So specialization is the name of the game."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Make it all your unique retinue unit : by using retinues alone in a flank, certain combat tactics that are particularly beneficial can be more easily selected as there are just one or two unit types in the whole flank; they also will benefit from the cultural unit bonus. Nomadic horde troops also benefit from this."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Flank composition: the Rule of Two : In order to maximize combat tactics efficiency, a flank should contain no more than two of the three major skirmish units (Horse Archers, Archers, Light Cavalry), and no more than two of the three major melee units (heavy infantry, pikes, and knights)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Bait enemies into attacking fortified positions : Ideally, your army is on a mountain, and across a major river from the attacker."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Avoid attacking across rivers and into hills : you'll get a moderate combat penalty, which could make a major difference. These penalties don't matter much if you outnumber the enemy by a lot, though."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Order early retreats when losing a battle . Simply order your army to move to another province, and it will begin retreating regardless of morale."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Scout and match . Send a tiny army to determine the strengths of your opponent's flanks. Then rearrange your main army to have two \"holding\" flanks, evenly matched against the opponent, and one \"breakthrough\" flank, with extra troops and your best offensive commander."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Single column concentrated attack : Light Infantry Army such as Tribal Army, and even Nomad Horde Troops may enjoy better morale preservation if they are concentrated in a single-flank. Once a flank is routed, it will not be able to deal damages. Thus, having all the army in a single flank ensure they stay in the fight until they break while the enemy army is broken piece by piece. This can help to fight against enemy in superior number (beware of Narrow flank , though enemy is more prone to attack you directly if they're superior in number). This can be concerted with scout battle to determine enemy weaker flank. Stack your corresponding flank and defeat that flank in priority, leaving them only two flanks left. Be careful however, as the two flanks left unattacked will gain a +25% flanking bonus that will boost their damage."
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ CK2: Sons of Abraham - Dev Diary 4 - Patch 2.0",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

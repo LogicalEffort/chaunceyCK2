@@ -1,0 +1,155 @@
+{
+    "pageid": 3391,
+    "title": "Death modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "As of patch 2.6 , death reasons and text displayed on succession screen have become moddable."
+                }
+            ]
+        },
+        {
+            "heading": "Death reasons",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Death reasons are defined in folder common/death/ ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The format is:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "All are optionals, except for long_desc :"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Configuration key",
+                            "Type",
+                            "Description"
+                        ],
+                        [
+                            "violent",
+                            "bool",
+                            ""
+                        ],
+                        [
+                            "long_desc",
+                            "key",
+                            "Localization key. Ex: DEATH_BY_MURDER_UNKNOWN (died under suspicious circumstances). In case a killer is specified(e.g. death = { death_reason = death_battle killer = FROM} ), the variable $KILLER$ will have its name. death_trait is a bit special, as it will inject variable $TRAIT_DEATH$ in localization, with the <trait_name>_death text, defined for traits that reduce heath."
+                        ],
+                        [
+                            "can_nokiller",
+                            "bool",
+                            ""
+                        ],
+                        [
+                            "murder_unknown",
+                            "bool",
+                            ""
+                        ],
+                        [
+                            "sound",
+                            "bool",
+                            "If set to no, killing someone with that reason will not cause a death sound."
+                        ],
+                        [
+                            "sound_list",
+                            "list<sfx>",
+                            "Female and male lists of death sounds. For custom death sounds, sound files are placed in the sound folder and referenced by sound.sfx, within the interface folder."
+                        ],
+                        [
+                            "execution",
+                            "bool",
+                            ""
+                        ],
+                        [
+                            "death_date_desc",
+                            "key",
+                            "Changes the text shown when hovering over someone's age. Useful for death reasons like \"Went to China\" that aren't really outright dying."
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "In case a killer is specified(e.g. death = { death_reason = death_battle killer = FROM} ), the variable $KILLER$ will have its name.",
+                            "children": []
+                        },
+                        {
+                            "text": "death_trait is a bit special, as it will inject variable $TRAIT_DEATH$ in localization, with the <trait_name>_death text, defined for traits that reduce heath.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "For custom death sounds, sound files are placed in the sound folder and referenced by sound.sfx, within the interface folder.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Execution methods",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "When executing someone, an execution method is randomly determined from the execution methods defined in the common/execution_methods folder.\nThey are written in execution_method blocks. Each execution method must contain a death reason defining the sound and description of the death. They also contain a weight multiplier to determine which of the available death reasons are used.\nFinally, they contain a trigger. If the trigger evaluates to false, the execution method is not available."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Within the weight_multiplier and trigger blocks, FROM is the executioner and ROOT is the executed."
+                }
+            ]
+        },
+        {
+            "heading": "Example",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Succession screen",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Some flavor text appears on succession screen with:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "an epitaph of deceased ruler",
+                            "children": []
+                        },
+                        {
+                            "text": "a presentation of the heir",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This is configured in common/death_text and common/heir_text respectively."
+                }
+            ]
+        }
+    ]
+}

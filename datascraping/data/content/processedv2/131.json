@@ -1,0 +1,337 @@
+{
+    "pageid": 131,
+    "title": "Alliances",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Alliances and non-aggression pacts are the two most common forms of pacts between rulers. A non-aggression pact is an agreement between two rulers to not declare war on each other. An alliance is an improved pact based on an existing non-aggression pact, and is more powerful by allowing rulers to be called to war."
+                }
+            ]
+        },
+        {
+            "heading": "Non-aggression pacts",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A non-aggression pact is an agreement between two rulers not to attack each other. Most non-aggression pacts are created by a marriage or betrothal:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Characters always have a non-aggression pact with their spouse.",
+                            "children": []
+                        },
+                        {
+                            "text": "When two rulers negotiate a betrothal or marriage involving close relatives (both must be in the rulers' courts), they automatically form a non-aggression pact.",
+                            "children": []
+                        },
+                        {
+                            "text": "Two rulers can negotiate a non-aggression pact based on an existing marriage involving their close relatives.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A non-aggression pact between a vassal and a liege prevents the liege from revoking the vassal's titles, and retracting the vassal's vassals, and prevents the vassal from joining or creating a faction . Also, a ruler cannot be called into an offensive war through an alliance if the ruler has a non-aggression pact with the defender."
+                }
+            ]
+        },
+        {
+            "heading": "Alliance",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Alliances are additional agreements to call each other into most wars."
+                }
+            ]
+        },
+        {
+            "heading": "Form alliance",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Must be a close relative OR have a non-aggression pact",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot form alliances with your vassals or your lieges",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The following AI reasoning applies to both the \"Negotiate non-aggression pact\" and \"Form alliance\" interactions."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factors",
+                            "Tooltip",
+                            "Description"
+                        ],
+                        [
+                            "Opinion",
+                            "+10 to -10 ?",
+                            ""
+                        ],
+                        [
+                            "Same Dynasty",
+                            "+2",
+                            ""
+                        ],
+                        [
+                            "Same Interests",
+                            "+2",
+                            "Usually because you both have CBs on the same realms"
+                        ],
+                        [
+                            "Common Enemies",
+                            "+2",
+                            ""
+                        ],
+                        [
+                            "Political Concerns",
+                            "~ +10 to ~ -10",
+                            "Seems to be related to \"RP Friendship\" or \"RP Hostility\", a hidden value (relation?) shown only in debug tooltips. May mean they CB against you (even when negotiating an alliance atop a non-aggression pact)?"
+                        ],
+                        [
+                            "Base Reluctance",
+                            "-3",
+                            "-25 (if this is the only factor other than opinion, need 26 opinion for Yes)"
+                        ],
+                        [
+                            "Alliance breaker",
+                            "-5",
+                            "AI is unlikely to accept alliances from alliance-breakers."
+                        ],
+                        [
+                            "Too busy conquering the world and you're next",
+                            "-10",
+                            "Expanding horde"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Call to arms",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Rulers are expected to accept calls to arms with any rulers they have an alliance with. Rulers may also receive call to arms from fellow rulers who have the same culture who are defending themselves from another culture. Nomadic and tribal vassals can also receive call to arms from their liege, as can tributaries and suzerains."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In offensive wars, your ally must have the implied ability to use the Declare War menu option against your enemy in order to join. For example, if your liege is not independent then rulers in other realms cannot join your offensive war against them because a ruler can never declare war against a vassal of a realm."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Bug note: If you declare war against your liege (ex. Independence) you CAN call in allies (as long as there's no NA pact or truce involved) but these allies don't show up as callable in the Declare War screen."
+                }
+            ]
+        },
+        {
+            "heading": "Restrictions",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Faction rebellion leaders cannot call in allies, except for claimant rebellions.",
+                            "children": []
+                        },
+                        {
+                            "text": "When fighting a fellow vassal, can only call in other rulers with the same liege. (Exception: if the \"fellow vassal\" is a faction rebellion against you, can call allies from other realms!)",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot call vassals of your enemy, except in \"revolt against tyranny\" wars.",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot call your enemy's liege. (99% certain - edit if incorrect).",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot call allies into an offensive war in which a ruler has a non-aggression pact with the defender.",
+                            "children": []
+                        },
+                        {
+                            "text": "Can call both a liege and their vassal, if you're allied with both, but it only works properly if you call the liege first.",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot call allies if you are at war due to plotting to revoke a vassal's title .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Accepting or declining",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Declining a call to arms in an alliance:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "costs a large amount of prestige.",
+                            "children": []
+                        },
+                        {
+                            "text": "adds the character modifier \"Alliance Breaker\", lowering diplomacy by 5 for 10 years.",
+                            "children": []
+                        },
+                        {
+                            "text": "adds the general opinion modifier \"Alliance-Breaker\", lowering opinion of you by -25 for 10 years. (Stacks.)",
+                            "children": []
+                        },
+                        {
+                            "text": "adds the opinion modifier \"Dishonored Alliance\" to your ally, lowering their opinion of you by 30 for 5 years. (Stacks)",
+                            "children": []
+                        },
+                        {
+                            "text": "breaks the alliance.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Additionally, the AI is less likely to accept alliances from alliance-breakers and will consider dissolving any alliances it has with them."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Declining other calls to arms has a minor prestige cost:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "-25 prestige for a offensive war.",
+                            "children": []
+                        },
+                        {
+                            "text": "-100 prestige for a defensive war.",
+                            "children": []
+                        },
+                        {
+                            "text": "0 if the belligerents are allies.",
+                            "children": []
+                        },
+                        {
+                            "text": "0 for a suzerain declining a tributary's call to arms.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Accepting a call to arms against an attacker you have an alliance with will break that alliance."
+                }
+            ]
+        },
+        {
+            "heading": "Ally orders",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Available only with the Monks and Mystics DLC enabled."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "As a primary participant in a war, you are able to give orders to your allies. AI allies will perform the orders they receive as long as they don't decide to prioritize other wars."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There are four orders:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Siege - order ally to siege the selected county (accessible from Province View)",
+                            "children": []
+                        },
+                        {
+                            "text": "Attach Army - order ally to attach to the selected army (accessible from Selected Army window)",
+                            "children": []
+                        },
+                        {
+                            "text": "Focus on Sieging - order ally to siege strongholds (accessible from \"Allies in Wars\" tab in the Military View)",
+                            "children": []
+                        },
+                        {
+                            "text": "Focus on Hunting Enemy Armies - order ally to hunt for enemy armies (accessible from \"Allies in Wars\" tab in the Military View)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The \"Allies in Wars\" tab in the Military View lists all allies which you have in ongoing wars, along with their current orders (if any)."
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Defensive pact - Special pacts created to combat threatening characters.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tributary - a relationship created through use of the use of the tributary casus belli.",
+                            "children": []
+                        },
+                        {
+                            "text": "Rules of Engagement - Dev diary discussing major changes alliances and the introduction of non-aggression pacts.",
+                            "children": []
+                        },
+                        {
+                            "text": "As you wish... - Dev diary discussing ally orders.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

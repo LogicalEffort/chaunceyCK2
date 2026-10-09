@@ -1,0 +1,2846 @@
+{
+    "pageid": 1793,
+    "title": "Honorary titles",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Honorary titles are minor titles that may be given to vassals or courtiers to help manage your realm ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Those titles are usually cosmetic as they bear no responsibilities. They usually give:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "a positive opinion modifier from the character you give the title to, making it a good way to please vassals (except for Court Jester).",
+                            "children": []
+                        },
+                        {
+                            "text": "a monthly salary and/or prestige bonus, scaled by liege tier. The prestige gain is useful for your heir and may even alter succession, if the succession type is dependent on prestige.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "However, some titles can be quite important and should be given out carefully. A designated regent will become very important if a ruler becomes disabled or is a child. The skill and opinion of a Court Physician can be vital if a character becomes sick. Even less important honorary titles, such as Cupbearer, can be dangerous if held by disloyal characters as some minor titles have special events tied to them."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some titles are flagged as unique, meaning a character can't hold another unique title at the same time."
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Important Honorary titles",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Most honorary titles are purely ceremonial, but the following titles have far more substantial effects. A wise ruler should carefully consider their options before choosing recipients for these titles."
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Honorary title",
+                            "Grant Limit",
+                            "Unique",
+                            "Dignity",
+                            "Opinion modifier",
+                            "Monthly salary",
+                            "Monthly prestige",
+                            "Other effects",
+                            "Requirements"
+                        ],
+                        [
+                            "Designated Regent",
+                            "1",
+                            "No",
+                            "0.9",
+                            "+10 towards liege",
+                            "0.05",
+                            "0.75",
+                            "Will become regent if his liege becomes incapable or is a child",
+                            "Character is an adult Is not a prisoner Is not incapable No character holds the regent title"
+                        ],
+                        [
+                            "Commander",
+                            "Affected by type of realm",
+                            "No",
+                            "0.05",
+                            "+5 towards liege",
+                            "0.05",
+                            "0.50",
+                            "Can be used as a commander in an army. Unlike most honorary titles, there is no opinion malus for revoking this title.",
+                            "Not Marshal If female, one of: Shieldmaiden Member of a Warrior Lodge Messalian, Cathar, Bogomolist, or Mazdaki Religion doctrine : Equality or Enatic Clans Law: full status of women Gender Equality set to \"All\" in Game Rules If Hindu, must be Kshatriya Commanders under imperial elective succession must be landed Must not be a prisoner Must not be incapable"
+                        ],
+                        [
+                            "Court Physician",
+                            "1",
+                            "No",
+                            "5.00",
+                            "+10",
+                            "0.2",
+                            "0.5",
+                            "Character's Learning attribute is used to diagnose symptoms or treat diseases Character is also used in the decision Seek Treatment for Illness and its event chain Treatment Event Chain Cannot revoke while being treated",
+                            "Player must have The Reaper's Due . Adult Gender allowed Either: Learning of 15 or more, Learning of 10 or more AND at least one of: Renowned Physician , Scholar , Mystic , Mutazilite , or have character flag \"educated_court_physician\". If Hindu, must be of Brahmin caste Not a prisoner Not in hiding Not incapable"
+                        ],
+                        [
+                            "Court Tutor",
+                            "1",
+                            "No",
+                            "0.00",
+                            "+5",
+                            "+0.06",
+                            "+0.00",
+                            "Will tutor any and all children in their liege's court, unless another tutor is specifically chosen for individual children.",
+                            "Player must have Conclave . Is adult Not a ruler, neither Imprisoned , Incapable , nor Infirm Not an Imbecile Has Learning greater or equal to 5."
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Will become regent if his liege becomes incapable or is a child",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Character is an adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not a prisoner",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not incapable",
+                            "children": []
+                        },
+                        {
+                            "text": "No character holds the regent title",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Can be used as a commander in an army.",
+                            "children": []
+                        },
+                        {
+                            "text": "Unlike most honorary titles, there is no opinion malus for revoking this title.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Not Marshal",
+                            "children": []
+                        },
+                        {
+                            "text": "If female, one of:",
+                            "children": [
+                                {
+                                    "text": "Shieldmaiden",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Member of a Warrior Lodge",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Messalian, Cathar, Bogomolist, or Mazdaki",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Religion doctrine : Equality or Enatic Clans",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Law: full status of women",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Gender Equality set to \"All\" in Game Rules",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "If Hindu, must be Kshatriya",
+                            "children": []
+                        },
+                        {
+                            "text": "Commanders under imperial elective succession must be landed",
+                            "children": []
+                        },
+                        {
+                            "text": "Must not be a prisoner",
+                            "children": []
+                        },
+                        {
+                            "text": "Must not be incapable",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Character's Learning attribute is used to diagnose symptoms or treat diseases",
+                            "children": []
+                        },
+                        {
+                            "text": "Character is also used in the decision Seek Treatment for Illness and its event chain Treatment Event Chain",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot revoke while being treated",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Player must have The Reaper's Due .",
+                            "children": []
+                        },
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Either:",
+                            "children": [
+                                {
+                                    "text": "Learning of 15 or more,",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Learning of 10 or more AND at least one of: Renowned Physician , Scholar , Mystic , Mutazilite , or have character flag \"educated_court_physician\".",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "If Hindu, must be of Brahmin caste",
+                            "children": []
+                        },
+                        {
+                            "text": "Not a prisoner",
+                            "children": []
+                        },
+                        {
+                            "text": "Not in hiding",
+                            "children": []
+                        },
+                        {
+                            "text": "Not incapable",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Will tutor any and all children in their liege's court, unless another tutor is specifically chosen for individual children.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Player must have Conclave .",
+                            "children": []
+                        },
+                        {
+                            "text": "Is adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Not a ruler, neither Imprisoned , Incapable , nor Infirm",
+                            "children": []
+                        },
+                        {
+                            "text": "Not an Imbecile",
+                            "children": []
+                        },
+                        {
+                            "text": "Has Learning greater or equal to 5.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Automatically granted",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Honorary title",
+                            "Grant Limit",
+                            "Unique",
+                            "Dignity",
+                            "Opinion modifier",
+                            "Monthly salary",
+                            "Monthly prestige",
+                            "Other effects",
+                            "Requirements"
+                        ],
+                        [
+                            "Regent",
+                            "1",
+                            "No",
+                            "0.9",
+                            "",
+                            "0.1",
+                            "1.50",
+                            "Character is regent of the realm, with their skills standing in for the ruler",
+                            ""
+                        ],
+                        [
+                            "Ruler Consort",
+                            "",
+                            "No",
+                            "0.88",
+                            "",
+                            "0.1",
+                            "1.00",
+                            "Shown as title The title will appear as the opposite gender version of the spouse's title.",
+                            ""
+                        ],
+                        [
+                            "Tanist",
+                            "",
+                            "No",
+                            "0.86",
+                            "",
+                            "0.07",
+                            "0.75",
+                            "Shown as title The title will appear as the \"Tanist of X\", with X being the realm.",
+                            "Granted automatically to the current winner of a Tanistry election"
+                        ],
+                        [
+                            "Queen Mother",
+                            "",
+                            "No",
+                            "0.85",
+                            "",
+                            "0.05",
+                            "1.00",
+                            "Shown as title Called Empress Dowager for empires",
+                            "Granted automatically to the mother of a feudal King-tier or Emperor-tier ruler, if she is also the widow of the ruler's father."
+                        ],
+                        [
+                            "Prince/Princess",
+                            "",
+                            "No",
+                            "0.8",
+                            "",
+                            "0.05",
+                            "0.25",
+                            "Shown as title Variants: Iranian culture group: Shahzada/Shahdokht Indo-Aryan culture group: Rajkumar/Rajkumari",
+                            "Granted automatically to children of a feudal King-tier or Emperor-tier ruler."
+                        ],
+                        [
+                            "Concubine",
+                            "",
+                            "No",
+                            "0.05",
+                            "",
+                            "0.02",
+                            "0.10",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Consort",
+                            "",
+                            "No",
+                            "0.05",
+                            "",
+                            "0.02",
+                            "0.10",
+                            "",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Character is regent of the realm, with their skills standing in for the ruler",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Shown as title",
+                            "children": []
+                        },
+                        {
+                            "text": "The title will appear as the opposite gender version of the spouse's title.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Shown as title",
+                            "children": []
+                        },
+                        {
+                            "text": "The title will appear as the \"Tanist of X\", with X being the realm.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Granted automatically to the current winner of a Tanistry election",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Shown as title",
+                            "children": []
+                        },
+                        {
+                            "text": "Called Empress Dowager for empires",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Granted automatically to the mother of a feudal King-tier or Emperor-tier ruler, if she is also the widow of the ruler's father.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Shown as title",
+                            "children": []
+                        },
+                        {
+                            "text": "Variants:",
+                            "children": [
+                                {
+                                    "text": "Iranian culture group: Shahzada/Shahdokht",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Indo-Aryan culture group: Rajkumar/Rajkumari",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Granted automatically to children of a feudal King-tier or Emperor-tier ruler.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "General titles",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Honorary title",
+                            "Grant Limit",
+                            "Unique",
+                            "Dignity",
+                            "Opinion modifier",
+                            "Monthly salary",
+                            "Monthly prestige",
+                            "Other effects",
+                            "Requirements"
+                        ],
+                        [
+                            "Court Eunuch",
+                            "1",
+                            "No",
+                            "0.01",
+                            "+10",
+                            "+0.02",
+                            "+0.25",
+                            "",
+                            "Is adult Eunuch trait Feudal/Tribal Kingdom or Empire Not Byzantine Empire nor Roman Empire."
+                        ],
+                        [
+                            "Court Dwarf",
+                            "1",
+                            "No",
+                            "0.01",
+                            "+10",
+                            "+0.02",
+                            "+0.25",
+                            "",
+                            "Is adult Dwarf trait Feudal/Tribal Kingdom or Empire"
+                        ],
+                        [
+                            "Court Jester",
+                            "1",
+                            "Yes",
+                            "0.01",
+                            "-5",
+                            "+0.02",
+                            "-0.25",
+                            "Feast event chain",
+                            "Is adult Feudal/Tribal Kingdom or Empire Is Christian, Jewish, Pagan, or Indian"
+                        ],
+                        [
+                            "Keeper of the Swans",
+                            "1",
+                            "Yes",
+                            "0.05",
+                            "+5",
+                            "+0.01",
+                            "+0.50",
+                            "",
+                            "Feudal/Tribal Kingdom or Empire Not Byzantine Empire nor Roman Empire. Is Christian or Jewish"
+                        ],
+                        [
+                            "Master of the Horse",
+                            "1",
+                            "Yes",
+                            "0.06",
+                            "+5",
+                            "+0.02",
+                            "+0.40",
+                            "",
+                            "Gender allowed as commander Is not incapable Feudal or Tribal realm Not Byzantine Empire nor Roman Empire. Is Christian or Jewish"
+                        ],
+                        [
+                            "Master of the Hunt",
+                            "1",
+                            "Yes",
+                            "0.05",
+                            "+5",
+                            "+0.02",
+                            "+0.40",
+                            "",
+                            "Gender allowed as commander Feudal or Tribal realm Not Byzantine Empire nor Roman Empire. Is Christian, Jewish or Indian Not Jain (and liege is not Jain)"
+                        ],
+                        [
+                            "High Almoner",
+                            "1",
+                            "Yes",
+                            "0.03",
+                            "+5",
+                            "+0.02",
+                            "+0.40",
+                            "",
+                            "Is adult Is not incapable Is Feudal or Tribal Not Byzantine Empire nor Roman Empire. Is Christian or Jewish"
+                        ],
+                        [
+                            "Cupbearer",
+                            "1",
+                            "Yes",
+                            "0.1",
+                            "+5",
+                            "+0.05",
+                            "+0.60",
+                            "Feast event chain",
+                            "Is not incapable Is not guru Gender allowed Feudal or Tribal Not Byzantine Empire nor Roman Empire."
+                        ],
+                        [
+                            "Seneschal",
+                            "1",
+                            "Yes",
+                            "0.15",
+                            "+10",
+                            "+0.05",
+                            "+0.60",
+                            "",
+                            "Is adult Is not incapable Is not court guru Gender allowed Feudal/Tribal Kingdom or Empire Not Byzantine Empire nor Roman Empire. Is Christian, Jewish, or Indian"
+                        ],
+                        [
+                            "Paramount Knight",
+                            "0",
+                            "No",
+                            "0.80",
+                            "",
+                            "",
+                            "+1.50",
+                            "",
+                            "Is not incapable Cannot be granted"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Eunuch trait",
+                            "children": []
+                        },
+                        {
+                            "text": "Feudal/Tribal Kingdom or Empire",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Byzantine Empire nor Roman Empire.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Dwarf trait",
+                            "children": []
+                        },
+                        {
+                            "text": "Feudal/Tribal Kingdom or Empire",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Feudal/Tribal Kingdom or Empire",
+                            "children": []
+                        },
+                        {
+                            "text": "Is Christian, Jewish, Pagan, or Indian",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Feudal/Tribal Kingdom or Empire",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Byzantine Empire nor Roman Empire.",
+                            "children": []
+                        },
+                        {
+                            "text": "Is Christian or Jewish",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Gender allowed as commander",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not incapable",
+                            "children": []
+                        },
+                        {
+                            "text": "Feudal or Tribal realm",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Byzantine Empire nor Roman Empire.",
+                            "children": []
+                        },
+                        {
+                            "text": "Is Christian or Jewish",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Gender allowed as commander",
+                            "children": []
+                        },
+                        {
+                            "text": "Feudal or Tribal realm",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Byzantine Empire nor Roman Empire.",
+                            "children": []
+                        },
+                        {
+                            "text": "Is Christian, Jewish or Indian",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Jain (and liege is not Jain)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not incapable",
+                            "children": []
+                        },
+                        {
+                            "text": "Is Feudal or Tribal",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Byzantine Empire nor Roman Empire.",
+                            "children": []
+                        },
+                        {
+                            "text": "Is Christian or Jewish",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is not incapable",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not guru",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Feudal or Tribal",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Byzantine Empire nor Roman Empire.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not incapable",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not court guru",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Feudal/Tribal Kingdom or Empire",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Byzantine Empire nor Roman Empire.",
+                            "children": []
+                        },
+                        {
+                            "text": "Is Christian, Jewish, or Indian",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is not incapable",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot be granted",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Chinese specialists",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These honorary titles are automatically granted to special characters who arrive due to spending grace or as refugees from China."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is also possible to grant these honorary titles to characters who have the corresponding character modifiers. However, if the character is a vassal ruler, they usually have to be \"serving in your court\" as a councilor before you can bestow the honorary title."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Honorary title",
+                            "Grant Limit",
+                            "Unique",
+                            "Dignity",
+                            "Opinion modifier",
+                            "Monthly salary",
+                            "Monthly prestige",
+                            "Other effects",
+                            "Requirements"
+                        ],
+                        [
+                            "Scholar-Bureaucrat",
+                            "1",
+                            "No",
+                            "0.9",
+                            "+10",
+                            "0.1",
+                            "0.1",
+                            "Liege gets \"Employing Scholar-Bureaucrat\", reducing build cost and build time by 15%. Effect is doubled if the Scholar-Bureaucrat was generated during a Chinese golden age.",
+                            "Character is a Scholar-Bureaucrat"
+                        ],
+                        [
+                            "Master Engineer",
+                            "1",
+                            "No",
+                            "0.9",
+                            "+10",
+                            "0.1",
+                            "0.1",
+                            "Events to improve liege's demesne provinces. These events are more frequent if master engineer was generated during a Chinese golden age.",
+                            "Character is a Master Engineer"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Byzantine titles",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The following titles are restricted to:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The Byzantine Empire or Roman Empire",
+                            "children": []
+                        },
+                        {
+                            "text": "Liege is Christian, Jewish, or Pagan (except for Parakoimomenos)",
+                            "children": []
+                        },
+                        {
+                            "text": "Liege is feudal",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The first five Byzantine titles influence Imperial elective succession:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Voters with these titles have increased voting power.",
+                            "children": []
+                        },
+                        {
+                            "text": "Candidates with these titles are \"politicians\", allowing them to earn increased scores from voters of certain cultures. Greek voters will see them as cunning politicians at 10+ intrigue, while Roman voters will see them as good orators at 10+ diplomacy. (Councilors other than spiritual are also seen as politicians.)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Honorary title",
+                            "Number",
+                            "Unique",
+                            "Dignity",
+                            "Opinion modifier",
+                            "Monthly salary",
+                            "Monthly prestige",
+                            "Other effects",
+                            "Requirements"
+                        ],
+                        [
+                            "Despot",
+                            "1",
+                            "Yes",
+                            "6.0",
+                            "+30",
+                            "+0.1",
+                            "+0.5",
+                            "Shown as title Same effect as Born in the purple regarding succession and Imperial elective voting. +15 voting power for Imperial elective",
+                            "Close relative Gender allowed or fully equal succession Is not monk, nun, or eunuch Is not a theocracy"
+                        ],
+                        [
+                            "Sebastokrator",
+                            "1",
+                            "Yes",
+                            "0.2",
+                            "+10",
+                            "+0.1",
+                            "+0.25",
+                            "Shown as title +5 voting power for Imperial elective",
+                            "Close relative"
+                        ],
+                        [
+                            "Caesar",
+                            "1",
+                            "Yes",
+                            "0.15",
+                            "+10",
+                            "+0.1",
+                            "+0.25",
+                            "Shown as title +15 voting power for Imperial elective",
+                            ""
+                        ],
+                        [
+                            "Kouropalates",
+                            "1",
+                            "Yes",
+                            "0.10",
+                            "+10",
+                            "+0.075",
+                            "+0.75",
+                            "+10 voting power for Imperial elective",
+                            "Adult Gender allowed"
+                        ],
+                        [
+                            "Anthypatos",
+                            "5",
+                            "No",
+                            "3.0",
+                            "+10",
+                            "+0.005",
+                            "+0.25",
+                            "Shown as title +5 voting power for Imperial elective",
+                            "Adult Gender allowed Not Hypatos"
+                        ],
+                        [
+                            "Parakoimomenos",
+                            "1",
+                            "No",
+                            "0.050",
+                            "+30",
+                            "+0.02",
+                            "+0.35",
+                            "Shown as title",
+                            "Adult male Eunuch trait"
+                        ],
+                        [
+                            "Augusta",
+                            "1",
+                            "Yes",
+                            "5.0",
+                            "+30",
+                            "0.05",
+                            "0.75",
+                            "Shown as title",
+                            "Adult Female Close relative (incl spouse) Byzantine empire only"
+                        ],
+                        [
+                            "Patrikios",
+                            "10",
+                            "No",
+                            "2.0",
+                            "+5",
+                            "0.03",
+                            "0.125",
+                            "Shown as title",
+                            "Adult Gender allowed Not same dynasty Not close relative"
+                        ],
+                        [
+                            "Hypatos",
+                            "20",
+                            "No",
+                            "1.0",
+                            "+5",
+                            "0.03",
+                            "0.0625",
+                            "",
+                            "Adult Gender allowed Not same dynasty Not close relative Not Anthypatos"
+                        ],
+                        [
+                            "Sebastos",
+                            "10",
+                            "No",
+                            "2.5",
+                            "+5",
+                            "0.02",
+                            "0.1875",
+                            "Shown as title",
+                            "Not Augusta Any of: Close relative Same dynasty Cousin Friend"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Shown as title",
+                            "children": []
+                        },
+                        {
+                            "text": "Same effect as Born in the purple regarding succession and Imperial elective voting.",
+                            "children": []
+                        },
+                        {
+                            "text": "+15 voting power for Imperial elective",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Close relative",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed or fully equal succession",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not monk, nun, or eunuch",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not a theocracy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Shown as title",
+                            "children": []
+                        },
+                        {
+                            "text": "+5 voting power for Imperial elective",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Close relative",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Shown as title",
+                            "children": []
+                        },
+                        {
+                            "text": "+15 voting power for Imperial elective",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+10 voting power for Imperial elective",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Shown as title",
+                            "children": []
+                        },
+                        {
+                            "text": "+5 voting power for Imperial elective",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Hypatos",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Shown as title",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult male",
+                            "children": []
+                        },
+                        {
+                            "text": "Eunuch trait",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Shown as title",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Female",
+                            "children": []
+                        },
+                        {
+                            "text": "Close relative (incl spouse)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Byzantine empire only"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Shown as title",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Not same dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "Not close relative",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Not same dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "Not close relative",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Anthypatos",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Shown as title",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Not Augusta",
+                            "children": []
+                        },
+                        {
+                            "text": "Any of:",
+                            "children": [
+                                {
+                                    "text": "Close relative",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Same dynasty",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Cousin",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Friend",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Muslim titles",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The following titles are restricted to Muslims :"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Honorary title",
+                            "Number",
+                            "Unique",
+                            "Dignity",
+                            "Opinion modifier",
+                            "Monthly salary",
+                            "Monthly prestige",
+                            "Other effects",
+                            "Requirements"
+                        ],
+                        [
+                            "Food Taster",
+                            "1",
+                            "Yes",
+                            "0.01",
+                            "+5",
+                            "+0.02",
+                            "-0.01",
+                            "Feast event chain",
+                            "Adult Gender allowed Feudal Kingdom or Empire"
+                        ],
+                        [
+                            "Court Calligrapher",
+                            "1",
+                            "Yes",
+                            "0.05",
+                            "+5",
+                            "+0.01",
+                            "+0.002",
+                            "",
+                            "Adult Gender allowed Feudal Kingdom or Empire"
+                        ],
+                        [
+                            "Court Musician",
+                            "1",
+                            "Yes",
+                            "0.06",
+                            "+5",
+                            "+0.02",
+                            "+0.004",
+                            "",
+                            "Adult"
+                        ],
+                        [
+                            "Court Poet",
+                            "1",
+                            "Yes",
+                            "0.05",
+                            "+5",
+                            "+0.02",
+                            "+0.004",
+                            "",
+                            "Adult Gender allowed"
+                        ],
+                        [
+                            "Chief Architect",
+                            "1",
+                            "Yes",
+                            "0.03",
+                            "+5",
+                            "+0.02",
+                            "+0.004",
+                            "",
+                            "Adult Gender allowed"
+                        ],
+                        [
+                            "Chief Qadi",
+                            "1",
+                            "Yes",
+                            "0.15",
+                            "+15",
+                            "+0.05",
+                            "+0.006",
+                            "Chief Qadi related events",
+                            "Adult Gender allowed Learning education trait: Detached priest muslim , Martial cleric muslim , Scholarly theologian muslim , Mastermind theologian Feudal Kingdom or Empire"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Feudal Kingdom or Empire",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Feudal Kingdom or Empire",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Learning education trait: Detached priest muslim , Martial cleric muslim , Scholarly theologian muslim , Mastermind theologian",
+                            "children": []
+                        },
+                        {
+                            "text": "Feudal Kingdom or Empire",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Merchant Republic titles",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The following titles are only available to merchant republics ."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Honorary title",
+                            "Number",
+                            "Unique",
+                            "Dignity",
+                            "Opinion modifier",
+                            "Monthly salary",
+                            "Monthly prestige",
+                            "Other effects",
+                            "Requirements"
+                        ],
+                        [
+                            "State Inquisitor",
+                            "3",
+                            "Yes",
+                            "0.06",
+                            "+12",
+                            "+0.02",
+                            "+0.004",
+                            "",
+                            "Adult Gender allowed"
+                        ],
+                        [
+                            "High Admiral",
+                            "1",
+                            "Yes",
+                            "0.1",
+                            "+15",
+                            "+0.05",
+                            "+0.006",
+                            "",
+                            "Adult Gender allowed as commander"
+                        ],
+                        [
+                            "High Judge",
+                            "1",
+                            "Yes",
+                            "0.1",
+                            "+15",
+                            "+0.05",
+                            "+0.006",
+                            "",
+                            "Adult Gender allowed"
+                        ],
+                        [
+                            "Designated Heir",
+                            "1",
+                            "No",
+                            "0.05",
+                            "+50",
+                            "+0.01",
+                            "+0.002",
+                            "Becomes dynastic heir, overriding seniority, if their gender is also allowed by succession law",
+                            "Same dynasty Gender allowed Not Bastard , Eunuch , Monk , or Nun Landless and not ruling a theocracy"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed as commander",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Becomes dynastic heir, overriding seniority, if their gender is also allowed by succession law",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Same dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Bastard , Eunuch , Monk , or Nun",
+                            "children": []
+                        },
+                        {
+                            "text": "Landless and not ruling a theocracy",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Germanic Pagan titles",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The following traits are only available to Germanic pagans."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Honorary title",
+                            "Number",
+                            "Unique",
+                            "Dignity",
+                            "Opinion modifier",
+                            "Monthly salary",
+                            "Monthly prestige",
+                            "Other effects",
+                            "Requirements"
+                        ],
+                        [
+                            "Völva",
+                            "1",
+                            "Yes",
+                            "0.050",
+                            "+5",
+                            "+0.02",
+                            "+0.01",
+                            "",
+                            "Adult female With Mystic trait"
+                        ],
+                        [
+                            "Lawspeaker",
+                            "1",
+                            "Yes",
+                            "0.20",
+                            "+20",
+                            "+0.10",
+                            "+0.075",
+                            "",
+                            "Adult Feudal or tribal realm"
+                        ],
+                        [
+                            "Drottseti",
+                            "1",
+                            "Yes",
+                            "0.15",
+                            "+15",
+                            "+0.10",
+                            "+0.05",
+                            "",
+                            "Adult Feudal or tribal Duchy, Kingdom or Empire"
+                        ],
+                        [
+                            "Court Skald",
+                            "1",
+                            "Yes",
+                            "0.15",
+                            "+15",
+                            "+0.075",
+                            "+0.075",
+                            "",
+                            "Adult Has Poet trait"
+                        ],
+                        [
+                            "Marksman",
+                            "1",
+                            "Yes",
+                            "0.10",
+                            "+15",
+                            "+0.075",
+                            "+0.075",
+                            "",
+                            "Adult Gender allowed as commander"
+                        ],
+                        [
+                            "Hirdman",
+                            "4",
+                            "Yes",
+                            "0.075",
+                            "+10",
+                            "+0.005",
+                            "+0.005",
+                            "",
+                            "Adult Gender allowed"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult female",
+                            "children": []
+                        },
+                        {
+                            "text": "With Mystic trait",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Feudal or tribal realm",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Feudal or tribal Duchy, Kingdom or Empire",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Has Poet trait",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed as commander",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Mongol titles",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The following titles are only available to nomads with Mongol culture or rulers of a Mongol empire title (Mongol Empire, Golden horde or Il-khanate):"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Honorary title",
+                            "Number",
+                            "Unique",
+                            "Dignity",
+                            "Opinion modifier",
+                            "Monthly salary",
+                            "Monthly prestige",
+                            "Other effects",
+                            "Requirements"
+                        ],
+                        [
+                            "Baghatur",
+                            "2",
+                            "Yes",
+                            "0.20",
+                            "+20",
+                            "+0.10",
+                            "+0.075",
+                            "",
+                            "Adult"
+                        ],
+                        [
+                            "Cherbi",
+                            "1",
+                            "Yes",
+                            "0.15",
+                            "+15",
+                            "+0.10",
+                            "+0.05",
+                            "",
+                            "Adult"
+                        ],
+                        [
+                            "Darkhan",
+                            "2",
+                            "Yes",
+                            "0.15",
+                            "+15",
+                            "+0.075",
+                            "+0.075",
+                            "",
+                            "Adult"
+                        ],
+                        [
+                            "Noyan",
+                            "4",
+                            "Yes",
+                            "0.075",
+                            "+10",
+                            "+0.005",
+                            "+0.005",
+                            "",
+                            "Adult"
+                        ],
+                        [
+                            "Behi",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Master of the Eagle",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "title_genghis",
+                            "",
+                            "No",
+                            "10",
+                            "",
+                            "0",
+                            "+1.50",
+                            "Shown as title",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Shown as title",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Zoroastrian titles",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The following titles are only available to Zoroastrians :"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Honorary title",
+                            "Number",
+                            "Unique",
+                            "Dignity",
+                            "Opinion modifier",
+                            "Monthly salary",
+                            "Monthly prestige",
+                            "Other effects",
+                            "Requirements"
+                        ],
+                        [
+                            "Shahrwaraz",
+                            "1",
+                            "Yes",
+                            "0.20",
+                            "+20",
+                            "+0.10",
+                            "+0.075",
+                            "",
+                            "Adult Gender allowed as commander Martial >= 15"
+                        ],
+                        [
+                            "Kardarigan",
+                            "1",
+                            "Yes",
+                            "0.15",
+                            "+15",
+                            "+0.075",
+                            "+0.075",
+                            "",
+                            "Adult Gender allowed as commander Martial >= 15"
+                        ],
+                        [
+                            "Shahin",
+                            "1",
+                            "Yes",
+                            "0.15",
+                            "+15",
+                            "+0.075",
+                            "+0.075",
+                            "",
+                            "Adult Gender allowed as commander Martial >= 15"
+                        ],
+                        [
+                            "Pushtigban Salar",
+                            "1",
+                            "Yes",
+                            "0.15",
+                            "+15",
+                            "+0.10",
+                            "+0.05",
+                            "",
+                            "Adult Gender allowed as commander"
+                        ],
+                        [
+                            "Spahbod",
+                            "4",
+                            "Yes",
+                            "0.15",
+                            "+15",
+                            "+0.075",
+                            "+0.075",
+                            "",
+                            "Adult Gender allowed as commander Feudal or tribal Duchy, Kingom or Empire"
+                        ],
+                        [
+                            "Eran Ambaragbed",
+                            "1",
+                            "Yes",
+                            "0.075",
+                            "+10",
+                            "+0.005",
+                            "+0.005",
+                            "",
+                            "Adult"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed as commander",
+                            "children": []
+                        },
+                        {
+                            "text": "Martial >= 15",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed as commander",
+                            "children": []
+                        },
+                        {
+                            "text": "Martial >= 15",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed as commander",
+                            "children": []
+                        },
+                        {
+                            "text": "Martial >= 15",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed as commander",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed as commander",
+                            "children": []
+                        },
+                        {
+                            "text": "Feudal or tribal Duchy, Kingom or Empire",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Generic Pagan titles",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The following titles are available to Aztec, Suomenusko, Romuva, Slavic, Tengri (except Champion), African, Zun, and Bön pagans :"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Honorary title",
+                            "Number",
+                            "Unique",
+                            "Dignity",
+                            "Opinion modifier",
+                            "Monthly salary",
+                            "Monthly prestige",
+                            "Other effects",
+                            "Requirements"
+                        ],
+                        [
+                            "Champion",
+                            "1",
+                            "No",
+                            "0.20",
+                            "+20",
+                            "+0.10",
+                            "+0.075",
+                            "",
+                            "Adult Gender allowed as commander Not Tengri"
+                        ],
+                        [
+                            "Master of the Blade",
+                            "1",
+                            "No",
+                            "0.15",
+                            "+15",
+                            "+0.075",
+                            "+0.075",
+                            "",
+                            "Adult Gender allowed as commander Not a Mongol Empire Does not have title: Master of the Bow"
+                        ],
+                        [
+                            "Master of the Bow",
+                            "1",
+                            "No",
+                            "0.15",
+                            "+15",
+                            "+0.075",
+                            "+0.075",
+                            "",
+                            "Adult Gender allowed as commander Not a Mongol Empire Does not have title: Master of the Blade"
+                        ],
+                        [
+                            "Venerable Elder",
+                            "4",
+                            "No",
+                            "0.15",
+                            "+15",
+                            "+0.075",
+                            "+0.075",
+                            "",
+                            "Adult Gender allowed Age >= 50 Not a Mongol Empire"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed as commander",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Tengri",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed as commander",
+                            "children": []
+                        },
+                        {
+                            "text": "Not a Mongol Empire",
+                            "children": []
+                        },
+                        {
+                            "text": "Does not have title: Master of the Bow",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed as commander",
+                            "children": []
+                        },
+                        {
+                            "text": "Not a Mongol Empire",
+                            "children": []
+                        },
+                        {
+                            "text": "Does not have title: Master of the Blade",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Age >= 50",
+                            "children": []
+                        },
+                        {
+                            "text": "Not a Mongol Empire",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Nomadic titles",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The following titles are only available for nomadic rulers with non-Mongol culture:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Honorary title",
+                            "Number",
+                            "Unique",
+                            "Dignity",
+                            "Opinion modifier",
+                            "Monthly salary",
+                            "Monthly prestige",
+                            "Other effects",
+                            "Requirements"
+                        ],
+                        [
+                            "Yabgu",
+                            "1",
+                            "Yes",
+                            "0.25",
+                            "+25",
+                            "+0.10",
+                            "+0.01",
+                            "",
+                            "Adult Gender allowed Close relative"
+                        ],
+                        [
+                            "Ishad",
+                            "4",
+                            "Yes",
+                            "0.15",
+                            "+15",
+                            "+0.075",
+                            "+0.075",
+                            "",
+                            "Adult Gender allowed as commander"
+                        ],
+                        [
+                            "Kundur",
+                            "1",
+                            "Yes",
+                            "0.15",
+                            "+15",
+                            "+0.10",
+                            "+0.05",
+                            "",
+                            "Adult"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Close relative",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed as commander",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Indian titles",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The following titles are available for Indian religions . Court Guru is also available for Bön ."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Honorary title",
+                            "Number",
+                            "Unique",
+                            "Dignity",
+                            "Opinion modifier",
+                            "Monthly salary",
+                            "Monthly prestige",
+                            "Other effects",
+                            "Requirements"
+                        ],
+                        [
+                            "Master of the Royal Elephants",
+                            "1",
+                            "Yes",
+                            "0.06",
+                            "+10",
+                            "+0.02",
+                            "+0.004",
+                            "",
+                            "Adult Gender allowed Feudal kingdom or empire (excluding Byzantine empire and Roman empire)"
+                        ],
+                        [
+                            "Royal Builder",
+                            "1",
+                            "Yes",
+                            "0.03",
+                            "+10",
+                            "+0.02",
+                            "+0.004",
+                            "",
+                            "Adult Gender allowed Feudal kingdom or empire"
+                        ],
+                        [
+                            "Court Poet",
+                            "1",
+                            "Yes",
+                            "0.05",
+                            "+10",
+                            "+0.02",
+                            "+0.004",
+                            "",
+                            "Adult Gender allowed"
+                        ],
+                        [
+                            "Court Guru",
+                            "1",
+                            "No",
+                            "0.05",
+                            "+15",
+                            "+0.02",
+                            "+0.10",
+                            "Cannot be revoked If your guru is in your court, they may offer advice to allow removal of negative traits or help with Buddhist ambitions to remove negative traits",
+                            "Via Search for a Guru decision Can also be granted to characters with the \"guru\" flag, such as an invited courtier who had been another ruler's court guru"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Feudal kingdom or empire (excluding Byzantine empire and Roman empire)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Feudal kingdom or empire",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Cannot be revoked",
+                            "children": []
+                        },
+                        {
+                            "text": "If your guru is in your court, they may offer advice to allow removal of negative traits or help with Buddhist ambitions to remove negative traits",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Via Search for a Guru decision",
+                            "children": []
+                        },
+                        {
+                            "text": "Can also be granted to characters with the \"guru\" flag, such as an invited courtier who had been another ruler's court guru",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Taoist titles",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The following titles are available for Taoists :"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Honorary title",
+                            "Number",
+                            "Unique",
+                            "Dignity",
+                            "Opinion modifier",
+                            "Monthly salary",
+                            "Monthly prestige",
+                            "Other effects",
+                            "Requirements"
+                        ],
+                        [
+                            "Court Architect",
+                            "1",
+                            "Yes",
+                            "0.03",
+                            "+5",
+                            "+0.02",
+                            "+0.40",
+                            "",
+                            "Adult Gender allowed Is not incapable Feudal kingdom or empire"
+                        ],
+                        [
+                            "Zhangshi",
+                            "1",
+                            "Yes",
+                            "0.05",
+                            "+5",
+                            "+0.02",
+                            "+0.40",
+                            "",
+                            "Adult Gender allowed Is not incapable"
+                        ],
+                        [
+                            "Canjun",
+                            "1",
+                            "Yes",
+                            "0.15",
+                            "+10",
+                            "+0.075",
+                            "+0.75",
+                            "",
+                            "Adult Gender allowed Is not incapable"
+                        ],
+                        [
+                            "Yuhou",
+                            "1",
+                            "Yes",
+                            "0.15",
+                            "+10",
+                            "+0.075",
+                            "+0.75",
+                            "",
+                            "Adult Gender allowed Is not incapable"
+                        ],
+                        [
+                            "Historiographer",
+                            "1",
+                            "Yes",
+                            "0.15",
+                            "+10",
+                            "+0.075",
+                            "+0.75",
+                            "",
+                            "Adult Gender allowed Is not incapable Has Learning equal to 7"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not incapable",
+                            "children": []
+                        },
+                        {
+                            "text": "Feudal kingdom or empire",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not incapable",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not incapable",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not incapable",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Gender allowed",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not incapable",
+                            "children": []
+                        },
+                        {
+                            "text": "Has Learning equal to 7",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Minor title modding",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,2683 @@
+{
+    "pageid": 2507,
+    "title": "When The World Stopped Making Sense",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "When the World Stopped Making Sense (WtWSMS) is a massive overhaul mod for CK2, allowing to play during the Migration Period at any date between 476 (fall of the Western Roman Empire) and 700, and continuing on with that game until the vanilla end date, 1453 (fall of the Eastern Roman Empire)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Compared to other \"Dark Ages\", Early Middle Ages or Late Antiquity mods, most notably The Winter King and Lux Invicta , its goal is to model the history of the period in a dynamic and plausible way."
+                }
+            ]
+        },
+        {
+            "heading": "Key milestones",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Here are some important milestones in the history of the mod:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "April 2014: The original AAR with the mod is started by Enlil, playing as Soissons. This AAR will later be split between one mod thread and one AAR thread",
+                            "children": []
+                        },
+                        {
+                            "text": "June 2014: The beta group is started, and in July a first release starts the closed beta phase of the mod with some testers and developers",
+                            "children": []
+                        },
+                        {
+                            "text": "June - December 2014: Continuous development and testing, multiple beta test version are shared with the testing group",
+                            "children": []
+                        },
+                        {
+                            "text": "January 2015: First open beta release, labelled later 0.9.0. The mod's sub-forum is opened on the paradox forums and a new team of developers is formed",
+                            "children": []
+                        },
+                        {
+                            "text": "January 2015 forward : Open beta phase, with continuous updates and addition of content",
+                            "children": []
+                        },
+                        {
+                            "text": "March 2016: Private group WtWSMS Development created on the new forum.",
+                            "children": []
+                        },
+                        {
+                            "text": "December 2017: Mod is available on Steam Workshop .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Recommended DLCs",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "No DLC is required to play the mod , though like in vanilla non-Christian characters are unlocked based on expansions:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The Old Gods is needed to play many characters, as at that time a huge part of the world is still either Pagan or Zoroastrian.",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Lords is needed to have nomadic hordes on the map and play the hordes, that at the time have more of an impact.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Republic is needed to play as the Roman Senate that uses a republican government type.",
+                            "children": []
+                        },
+                        {
+                            "text": "Sons of Abraham enables some flavour events for Hephthalites.",
+                            "children": []
+                        },
+                        {
+                            "text": "Legacy of Rome enables restoration of Rome options with related CBs and events for Romance characters.",
+                            "children": []
+                        },
+                        {
+                            "text": "Sword of Islam is not relevant before the Rise of Islam.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Given the date, most relevant graphical DLCs are the Early Clothing Packs . In addition some are used for custom ethnicities, see FAQ - Which modules should I activate? :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Mediterranean Portraits (Romans)",
+                            "children": []
+                        },
+                        {
+                            "text": "Celtic Portraits (Britons)",
+                            "children": []
+                        },
+                        {
+                            "text": "Norse Portraits (Goths)",
+                            "children": []
+                        },
+                        {
+                            "text": "African Portraits and East African Portrait Pack (Tuaregs)",
+                            "children": []
+                        },
+                        {
+                            "text": "Turkish Portraits and Celtic Portraits (East Welsh)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Vanilla compatibility",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For players playing on an older vanilla version, here is the association between mod and vanilla versions:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Mod",
+                            "Vanilla"
+                        ],
+                        [
+                            "0.9.13",
+                            "Patch 3.3.X"
+                        ],
+                        [
+                            "0.9.12.1",
+                            "Patch 2.8.3.2"
+                        ],
+                        [
+                            "0.9.12",
+                            "Patch 2.8.2.1"
+                        ],
+                        [
+                            "0.9.11",
+                            "Patch 2.8.1"
+                        ],
+                        [
+                            "0.9.10.X",
+                            "Patch 2.7.X"
+                        ],
+                        [
+                            "0.9.9.X",
+                            "Patch 2.6.X"
+                        ],
+                        [
+                            "0.9.8",
+                            "Patch 2.5.2"
+                        ],
+                        [
+                            "0.9.7",
+                            "Patch 2.5.1"
+                        ],
+                        [
+                            "0.9.6",
+                            "Patch 2.4.5"
+                        ],
+                        [
+                            "0.9.5",
+                            "Patch 2.3.6"
+                        ],
+                        [
+                            "0.9.4",
+                            "Patch 2.3"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Mod compatibility",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The mod is generally not compatible with any mod that modifies vanilla files."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Mod",
+                            "Compatibility"
+                        ],
+                        [
+                            "CK2Plus",
+                            "Not compatible"
+                        ],
+                        [
+                            "HIP",
+                            "Not compatible"
+                        ],
+                        [
+                            "Ancient Religions",
+                            "Integrated in the mod"
+                        ],
+                        [
+                            "Better Looking Garbs",
+                            "Specific sub-mod for WtWSMS"
+                        ],
+                        [
+                            "ARKOPack Interface",
+                            "Compatch for WtWSMS"
+                        ],
+                        [
+                            "Europa Universalis 4 Save Converter",
+                            "Compatible"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Installation",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The mod is available on the Steam Workshop , but it can also be downloaded and installed manually."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The download links are accessible via the mod sub-forum , in the latest release sticky thread, labelled something like [WtWSMS] Release x.x.x ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There are 2 downloads available, that have roughly the same size:"
+                }
+            ]
+        },
+        {
+            "heading": "Windows installer",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "An installer is available for Windows users, to simplify the steps and reduce the support due to bad mod installations:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Launch the installer.exe",
+                            "children": []
+                        },
+                        {
+                            "text": "Select your CK2 mod folder, in case it is not the default one (Documents\\Paradox Interactive\\Crusader Kings II\\mod)",
+                            "children": []
+                        },
+                        {
+                            "text": "Wait for the installation to complete.",
+                            "children": []
+                        },
+                        {
+                            "text": "Launch CK2",
+                            "children": []
+                        },
+                        {
+                            "text": "Select the mod \"When the World Stopped Making Sense\" in the Mod tab",
+                            "children": []
+                        },
+                        {
+                            "text": "Select the WtWSMS graphical sub-mods for which you own the required graphical DLCs.",
+                            "children": []
+                        },
+                        {
+                            "text": "Play!",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Zip archive",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For Linux and Mac users, or manual installation for Windows users. The installation steps are the following:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Remove any WtWSMS mod folders and .mod files inside Documents\\Paradox Interactive\\Crusader Kings II\\mod",
+                            "children": []
+                        },
+                        {
+                            "text": "Clear your gfx cache, by deleting the folder Documents\\Paradox Interactive\\Crusader Kings II\\WTWSMS\\gfx",
+                            "children": []
+                        },
+                        {
+                            "text": "Extract the downloaded archive",
+                            "children": []
+                        },
+                        {
+                            "text": "Enter in the first folder of the extracted file and transfer it's content (.mod files and matching folders) to Documents\\Paradox Interactive\\Crusader Kings II\\mod",
+                            "children": []
+                        },
+                        {
+                            "text": "Launch CK2",
+                            "children": []
+                        },
+                        {
+                            "text": "Select the mod \"When the World Stopped Making Sense\" in the Mod tab",
+                            "children": []
+                        },
+                        {
+                            "text": "Select the WtWSMS graphical sub-mods for which you own the required graphical DLCs.",
+                            "children": []
+                        },
+                        {
+                            "text": "Play!",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "These steps are also described in this installation video ."
+                }
+            ]
+        },
+        {
+            "heading": "Workshop",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Go to the WtWSMS workshop page",
+                            "children": []
+                        },
+                        {
+                            "text": "Click \"Subscribe\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Launch CK2",
+                            "children": []
+                        },
+                        {
+                            "text": "Wait for mod download to complete in Steam client",
+                            "children": []
+                        },
+                        {
+                            "text": "Select the mod \"When the World Stopped Making Sense\" in the Mod tab",
+                            "children": []
+                        },
+                        {
+                            "text": "Select the WtWSMS graphical sub-mods for which you own the required graphical DLCs.",
+                            "children": []
+                        },
+                        {
+                            "text": "Play!",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Features",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Check the mod video trailer ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Here are the major features of the mod:"
+                }
+            ]
+        },
+        {
+            "heading": "New bookmarks",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Historical characters and dynasties for the timeframe have been added."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Little Augustus - 2nd of February 476 - Invasion of Odoacer",
+                            "children": []
+                        },
+                        {
+                            "text": "Julius Nepos - 1st of May 480 - Before death of Nepos",
+                            "children": []
+                        },
+                        {
+                            "text": "A Shattered Empire - 10th of December 480 - Invasion of Theodoric",
+                            "children": []
+                        },
+                        {
+                            "text": "Frankish Steel - 1st of January 486 - Unification of the Franks",
+                            "children": []
+                        },
+                        {
+                            "text": "Fallen Giant - 28th of November 511 - Death of Clovis",
+                            "children": []
+                        },
+                        {
+                            "text": "The Gothic Wars - 1st of January 535 - Justinian",
+                            "children": []
+                        },
+                        {
+                            "text": "Rule of Dukes - 1st of January 575 - Interregnum in Lombardy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Planned:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Rise of Islam",
+                            "children": []
+                        },
+                        {
+                            "text": "The Ridda",
+                            "children": []
+                        },
+                        {
+                            "text": "The Scourge of God",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Also see #Interesting characters ."
+                }
+            ]
+        },
+        {
+            "heading": "De jure setup",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The de jure setup models the political situation of 480."
+                }
+            ]
+        },
+        {
+            "heading": "Religions",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "New religions and numerous heresies corresponding to the era have been added. \nHere is a partial list:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Religion",
+                            "Group",
+                            "Parent",
+                            "Head",
+                            "Holy Sites",
+                            "Mechanics",
+                            "Special CBs",
+                            "Modifiers"
+                        ],
+                        [
+                            "Nicene",
+                            "Christian",
+                            "Nicene",
+                            "The Chalcedonian Church",
+                            "Constantinople (Thrace) Jerusalem Antioch Alexandria Rome",
+                            "Autocephaly , Excommunication , Pilgrimage",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Nicene",
+                            "Constantinople (Thrace) Jerusalem Antioch Alexandria Rome",
+                            "Arian",
+                            "The Arian Papacy (once instated)",
+                            "Autocephaly , Excommunication , Looting",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Nicene",
+                            "Constantinople (Thrace) Jerusalem Antioch Alexandria Rome",
+                            "Valentinian",
+                            "The Church of Aeons (once instated)",
+                            "Divine blood , Excommunication , female temple holders, feminist",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Nicene",
+                            "Constantinople (Thrace) Jerusalem Antioch Alexandria Rome",
+                            "Binitarian",
+                            "Binitarian Patriarchy (once instated)",
+                            "Autocephaly , Excommunication",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Nicene",
+                            "Constantinople (Thrace) Jerusalem Antioch Alexandria Rome",
+                            "Montanist",
+                            "None",
+                            "Female temple holders",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Nicene",
+                            "Constantinople (Thrace) Jerusalem Antioch Alexandria Rome",
+                            "Apollinarian",
+                            "The Apollinarian Congregation (once instated)",
+                            "Excommunication",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Nicene",
+                            "Constantinople (Thrace) Jerusalem Antioch Alexandria Rome",
+                            "Docetic",
+                            "None",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Nicene",
+                            "Constantinople (Thrace) Jerusalem Antioch Alexandria Rome",
+                            "Pneumatomachian",
+                            "None",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Nicene",
+                            "Constantinople (Thrace) Jerusalem Antioch Alexandria Rome",
+                            "Melchisedechian",
+                            "Kingdom of Salem (once instated)",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Nicene",
+                            "Constantinople (Thrace) Jerusalem Antioch Alexandria Rome",
+                            "Patripassian",
+                            "Patripassian Patriarchy (once instated)",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Nicene",
+                            "Constantinople (Thrace) Jerusalem Antioch Alexandria Rome",
+                            "Donatism",
+                            "Bishopric of Carthage (once restored)",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Nicene",
+                            "Constantinople (Thrace) Jerusalem Antioch Alexandria Rome",
+                            "Priscillianist",
+                            "Bishop of Avila (once instated)",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Nicene",
+                            "Constantinople (Thrace) Jerusalem Antioch Alexandria Rome",
+                            "Sethian",
+                            "The Cult of the Serpent (once instated)",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Nicene",
+                            "Constantinople (Thrace) Jerusalem Antioch Alexandria Rome",
+                            "Total Depravity",
+                            "None",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Nicene",
+                            "Constantinople (Thrace) Jerusalem Antioch Alexandria Rome",
+                            "Eutychian",
+                            "None",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Nicene",
+                            "Constantinople (Thrace) Jerusalem Antioch Alexandria Rome",
+                            "Antinomian",
+                            "None",
+                            "Concubinage , Female temple holders",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Nicene",
+                            "Constantinople (Thrace) Jerusalem Antioch Alexandria Rome",
+                            "Marcionist",
+                            "None",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Nicene",
+                            "Ebionites",
+                            "The Ebionite Church (once instated)",
+                            "Jerusalem Damascus Sinai Salahah (Dhofar, Oman) Antioch",
+                            "Autocephaly",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Insular",
+                            "Insular",
+                            "Bishop of Iona (after Synod of Whitby)",
+                            "Northumberland Canterbury Dyfed Innse Gall Ormond",
+                            "Concubinage , Pilgrimage",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Insular",
+                            "Northumberland Canterbury Dyfed Innse Gall Ormond",
+                            "Pelagian",
+                            "The Pelagian Bishopric (once instated)",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Miaphysite",
+                            "Miaphysite",
+                            "The Coptic Papacy",
+                            "Alexandria Aksum (Axum) Antioch Jerusalem Ghazali (Makuria, Nubia)",
+                            "Autocephaly , Excommunication , Pilgrimage",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Miaphysite",
+                            "Alexandria Aksum (Axum) Antioch Jerusalem Ghazali (Makuria, Nubia)",
+                            "Monophysite",
+                            "The Monophysite Papacy",
+                            "Autocephaly , Excommunication",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Miaphysite",
+                            "Alexandria Aksum (Axum) Antioch Jerusalem Ghazali (Makuria, Nubia)",
+                            "Audianistic",
+                            "None",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Miaphysite",
+                            "Alexandria Aksum (Axum) Antioch Jerusalem Ghazali (Makuria, Nubia)",
+                            "Monarchian",
+                            "None",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Nestorian",
+                            "Nestorian",
+                            "The Patriarchate in the East",
+                            "Alexandria Antioch Baghdad Jerusalem Roudehen (Rayy)",
+                            "Autocephaly , Excommunication , Pilgrimage",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Kartvelian",
+                            "Kartvelian",
+                            "The Georgian Church",
+                            "Svetitskhoveli (Karthli) Sourp Khach (Vaspourakan) Constantinople (Thrace) Jerusalem Antioch",
+                            "Excommunication",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Aquileian",
+                            "Aquileian",
+                            "Aquileian Patriarchate",
+                            "Jerusalem Alexandria Genoa Chur Rome",
+                            "Excommunication",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Judaism",
+                            "Jewish",
+                            "Judaism",
+                            "None (Kohen Gadol once the Kingdom of Israel is restored)",
+                            "Jerusalem Damascus Sinai Salahah (Dhofar, Oman) Hamadan",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Hypsistarian",
+                            "Bosporan",
+                            "Hypsistarian",
+                            "None",
+                            "Korchev Cherson Thrake Sinope Trapezous",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Zoroastrian",
+                            "Zoroastrian (Mazdan)",
+                            "Zoroastrian",
+                            "The Zoroastrian Church",
+                            "Jajarm (Nishapur, Khorasan) Nok (Sistan, Hormuz) Kakhesas (Fars) Takht-e Soleyman (Oromieh, Tabriz) Tahkt-i-Sangin (Balkh, Samarkand)",
+                            "Divine blood , Concubinage",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Zoroastrian (Mazdan)",
+                            "Zoroastrian",
+                            "Jajarm (Nishapur, Khorasan) Nok (Sistan, Hormuz) Kakhesas (Fars) Takht-e Soleyman (Oromieh, Tabriz) Tahkt-i-Sangin (Balkh, Samarkand)",
+                            "Manichaean",
+                            "None",
+                            "Concubinage",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Hinduism",
+                            "Indian (Dharmic)",
+                            "Hinduism",
+                            "None",
+                            "Mahakaleshwar (Ujjayini) Dwarakadheesh (Dvaraka) Krishnajanmabhoomi (Mathura) Ram Janmabhoomi (Ayodhya) Varanasi (Varanasi)",
+                            "Raiding , Caste System, Patron Gods, Concubinage , Sects",
+                            "Indian Subjugation",
+                            "Morale +30%"
+                        ],
+                        [
+                            "Indian (Dharmic)",
+                            "Buddhism",
+                            "Buddhism",
+                            "None",
+                            "Ellora (Devagiri) Sanchi (Vidisa) Sarnath (Varadasi) Gaya (Gaya) Oddiyana (Udabhanda)",
+                            "Sects, Concubinage , can designate heir, no penalty for female rulers/heirs, no short reign penalty",
+                            "Indian Subjugation",
+                            "Learning +4"
+                        ],
+                        [
+                            "Indian (Dharmic)",
+                            "Jainism",
+                            "Jainism",
+                            "None",
+                            "Girnar (Bhumilka) Vadnagar (Sarasvata Mandala) Bhillamala (Godwad) Shravanabelagola (Srirangapatna) Rajrappa (Rajrappa)",
+                            "Sects, vassal opinion bonus, can designate heir, Concubinage , no short reign penalty",
+                            "Indian Subjugation",
+                            "Demesne limit +3 Peace purity gain 1/month"
+                        ],
+                        [
+                            "Germanic",
+                            "Pagan",
+                            "Germanic",
+                            "None",
+                            "Tholen (Zeeland, Holland) Paderborn (Braunschweig, Brunswick) Uppsala (Uppland) Hleidra (Sjaelland) Maere (Naumadal, Trondelag)",
+                            "Looting , river movement, Concubinage , Reformation , female temple holders, defensive attrition , 250% short reign penalty, prestige loss while at peace, no penalty from raised vassal levies",
+                            "County Conquest",
+                            "Levy size +30% Retinue size +50%"
+                        ],
+                        [
+                            "Pagan",
+                            "Tengri",
+                            "Tengri",
+                            "None",
+                            "Sasqsin (Itil) Isilkul (Tobol, Sibir) Aqmescit (Crimea) Kyzylorda (Turkestan) Vac (Pest)",
+                            "Looting , Concubinage , Reformation , 150% short reign penalty, prestige loss while at peace, no penalty from raised vassal levies , ignores defensive attrition",
+                            "County Conquest , Tribal Invasion",
+                            "Levy size +30% Light Cav Offensive +30% Light Cav Defensive +30%"
+                        ],
+                        [
+                            "Pagan",
+                            "Finnic",
+                            "Finnic",
+                            "None",
+                            "Perm Solotcha (Ryazan) Tikhvin (Novgorod) Hiiumaa (Osel, Livonia) Raiviola (Kexholm, Karelia)",
+                            "Looting , Concubinage , Reformation , female temple holders, defensive attrition , 200% short reign penalty",
+                            "County Conquest",
+                            "Garrison size +40% Home territory : All Units Defensive +80% Garrison size +40%"
+                        ],
+                        [
+                            "Pagan",
+                            "Slavic",
+                            "Slavic",
+                            "None",
+                            "Tikhvin (Novgorod) Yuriev (Kiev) Pruszkow (Plock, Mazovia) Husi (Birlad, Moldau) Arkona (Rugen, Mecklemburg)",
+                            "Looting , Concubinage , Reformation , female temple holders, defensive attrition , 200% short reign penalty",
+                            "County Conquest",
+                            "Levy size +10% Garrison size +30% Home territory : All Units Defensive +80% Garrison size +40%"
+                        ],
+                        [
+                            "Pagan",
+                            "Celtic",
+                            "Celtic",
+                            "None",
+                            "Locmine (Vannes) Waltham (Essex) Bangor Fawr (Gwynedd) Whithorn (Galloway) Mellifont (Dublin)",
+                            "Looting , Concubinage , Reformation , female temple holders, feminist, defensive attrition, 200% short reign penalty, prestige loss while at peace, no penalty from raised vassal levies",
+                            "County Conquest",
+                            "Levy size +15% Garrison size +20% Retinue size +30% Home territory : Morale +60% All Units Defensive +60% Garrison size +20%"
+                        ],
+                        [
+                            "Pagan",
+                            "Hellenic",
+                            "Hellenic",
+                            "None (The Pontificate Maxima once restored)",
+                            "Abydos Thessalonica Athens Rome (Latium) Alexandria",
+                            "Pre-reformed, Looting , Concubinage , female temple holders.",
+                            "Holy war , Great holy wars , County Conquest , Hellenic county liberation.",
+                            "Levy size +30%"
+                        ],
+                        [
+                            "Pagan",
+                            "Kemetic",
+                            "Kemetic",
+                            "None (The Paragon Cult of Amun once restored)",
+                            "Zweitina Ikonion Fuwa Memphis Luxor",
+                            "Pre-reformed, Concubinage , Divine blood , female temple holders",
+                            "Holy war , County Conquest .",
+                            ""
+                        ],
+                        [
+                            "Pagan",
+                            "Semitic",
+                            "Semitic",
+                            "None",
+                            "Mecca Muscat Baghdad Tigris Sinjar (Assur)",
+                            "Looting , Concubinage , Reformation , defensive attrition, 150% short reign penalty, prestige loss while at peace, no penalty from raised vassal levies",
+                            "",
+                            "Levy size +10% Garrison size +30% Home territory : Morale +80% All Units Defensive +80% Garrison size +40%"
+                        ],
+                        [
+                            "Pagan",
+                            "Ashurian",
+                            "Ashurian",
+                            "The Neo-Assyrian Empire (once restored)",
+                            "Jerusalem Alexandria Sinjar Baghdad Hendjan",
+                            "Concubinage , pre-reformed, aggressive, female temple holders",
+                            "County Conquest",
+                            ""
+                        ],
+                        [
+                            "Pagan",
+                            "Central African",
+                            "Central African",
+                            "None",
+                            "Swarty Roma Trapani Tunis Aneb",
+                            "Looting , Concubinage , Reformation",
+                            "County Conquest",
+                            "Garrison size +40% Home territory : Morale +80% All Units Defensive +80% Garrison size +40%"
+                        ],
+                        [
+                            "Pagan",
+                            "Tabitian",
+                            "Tabitian",
+                            "None",
+                            "Esztergom Itil Syr Darya Dihistan Bost Sistan",
+                            "Looting , Concubinage , Reformation , 150% short reign penalty, prestige loss while at peace, no penalty from raised vassal levies",
+                            "County Conquest",
+                            "Garrison size +30% Light Cavalry Offensive +30% Light Cavalry Defensive +30%"
+                        ],
+                        [
+                            "Pagan",
+                            "African Solar",
+                            "African Solar",
+                            "None",
+                            "Swarty Roma Trapani Tunis Aneb",
+                            "Looting , Concubinage , Reformation",
+                            "County Conquest",
+                            "Morale +30%"
+                        ],
+                        [
+                            "Pagan",
+                            "Zunist",
+                            "Zunist",
+                            "None",
+                            "Baghdad Zamindawar (Bost, Zabulistan) Heliopolis (Cairo) Kabul (Kabulistan) Multan",
+                            "Concubinage , Reformation , defensive attrition",
+                            "County Conquest",
+                            "Levy size +30% Heavy infantry offensive: +20% Heavy infantry defensive: +20%"
+                        ],
+                        [
+                            "Pagan",
+                            "West African",
+                            "West African",
+                            "None",
+                            "Salam (Timbuktu) Bamako (Mali) Sidi Rahhal (Marrakech) Bordj (Atlas Mnt, Alger) Siliana (Medjerda, Tunis)",
+                            "Looting , Concubinage , Reformation , female temple holders, defensive attrition",
+                            "County Conquest",
+                            "Garrison size +40% Home territory : All Units Defensive +80% Garrison size +40%"
+                        ],
+                        [
+                            "Pagan",
+                            "Root West",
+                            "Root West",
+                            "None",
+                            "Otuken Kashgar Dukhan (Dunhuang) Anxi Syr Darya",
+                            "Looting , Concubinage , Reformation , defensive attrition",
+                            "County Conquest",
+                            ""
+                        ],
+                        [
+                            "Pagan",
+                            "Sanamahi",
+                            "Sanamahi",
+                            "None",
+                            "Delhi Tripuri Samatata Kundina Kataka",
+                            "Concubinage , Reformation , female temple holders, defensive attrition",
+                            "County Conquest",
+                            "Garrison size +40% Home territory : All Units Defensive +80% Garrison size +40%"
+                        ],
+                        [
+                            "Pagan",
+                            "Armazi",
+                            "Armazi",
+                            "None",
+                            "Trapezous Abkhazia Kartli Ani Shirvan",
+                            "Concubinage , female temple holders, defensive attrition",
+                            "County Conquest",
+                            "Garrison size +40% Home territory : All Units Defensive +80% Garrison size +40%"
+                        ],
+                        [
+                            "Pagan",
+                            "Dravidian",
+                            "Dravidian",
+                            "None",
+                            "Khetaka Viraja Alampur Balkonda Venadu",
+                            "Looting , Concubinage , Reformation , female temple holders, defensive attrition",
+                            "County Conquest",
+                            "Garrison size +40% Home territory : All Units Defensive +80% Garrison size +40%"
+                        ],
+                        [
+                            "Pagan",
+                            "Gurzil",
+                            "Gurzil",
+                            "None",
+                            "Swarty Roma Trapani Tunis Aneb",
+                            "Pre-reformed, Looting , Concubinage , female temple holders",
+                            "County Conquest",
+                            "Land morale +30% Martial +4"
+                        ],
+                        [
+                            "Pagan",
+                            "Vasconic",
+                            "Vasconic",
+                            "None (The Zai Gorena once restored)",
+                            "Roma Navarra Asturias de Santillana Cadiz Toulouse",
+                            "Female temple holders, Looting",
+                            "County Conquest",
+                            "Garrison size +40% Home territory : Morale +80% All Units Defensive +80% Garrison size +40%"
+                        ],
+                        [
+                            "Pagan",
+                            "Eiateuta",
+                            "Eiateuta",
+                            "None",
+                            "Epirus Dyrrachion Venice Senj Apulia",
+                            "Concubinage , pre-reformed, female temple holders, Looting",
+                            "County Conquest",
+                            "Garrison size +40% Home territory : Morale +80% All Units Defensive +80% Garrison size +40%"
+                        ],
+                        [
+                            "Pagan",
+                            "Änti",
+                            "Änti",
+                            "None",
+                            "Swarty Rome Trapani Tunis Aneb",
+                            "Concubinage , female temple holders, Looting",
+                            "County Conquest",
+                            "Land morale +30%"
+                        ],
+                        [
+                            "Pagan",
+                            "Latin Solar",
+                            "Latin Solar",
+                            "None",
+                            "Swarty Rome Trapani Tunis Aneb",
+                            "Concubinage , female temple holders, Looting",
+                            "County Conquest",
+                            "Land morale +30%"
+                        ],
+                        [
+                            "Pagan",
+                            "Mandulis",
+                            "Mandulis",
+                            "None",
+                            "Swarty Rome Trapani Tunis Aneb",
+                            "Concubinage , pre-reformed, female temple holders, Looting",
+                            "County Conquest",
+                            "Garrison size +40% Home territory : Morale +80% All Units Defensive +80% Garrison size +40%"
+                        ],
+                        [
+                            "Pagan",
+                            "Droemnät",
+                            "Droemnät",
+                            "None (The Church of Mahrem once restored)",
+                            "Berbera Aksum (Axum) Gojjam Makuria Kosti",
+                            "Concubinage , female temple holders, Looting",
+                            "County Conquest",
+                            "Garrison size +40% Home territory : Morale +80% All Units Defensive +80% Garrison size +40%"
+                        ],
+                        [
+                            "Pagan",
+                            "Zalmoxism",
+                            "Zalmoxism",
+                            "None (The Great Góita once restored)",
+                            "Mesembria Pest Bereg Turnu Belgorod",
+                            "Concubinage , river movement, female temple holders, Looting",
+                            "County Conquest",
+                            "Levy size +30% Retinue size +50%"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Christian"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Nicene"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Constantinople (Thrace) Jerusalem Antioch Alexandria Rome"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Jerusalem Damascus Sinai Salahah (Dhofar, Oman) Antioch"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Insular"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Northumberland Canterbury Dyfed Innse Gall Ormond"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Miaphysite"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Alexandria Aksum (Axum) Antioch Jerusalem Ghazali (Makuria, Nubia)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Alexandria Antioch Baghdad Jerusalem Roudehen (Rayy)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Svetitskhoveli (Karthli) Sourp Khach (Vaspourakan) Constantinople (Thrace) Jerusalem Antioch"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Aquileian"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Jerusalem Alexandria Genoa Chur Rome"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Jerusalem Damascus Sinai Salahah (Dhofar, Oman) Hamadan"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Korchev Cherson Thrake Sinope Trapezous"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Zoroastrian (Mazdan)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Zoroastrian"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Jajarm (Nishapur, Khorasan) Nok (Sistan, Hormuz) Kakhesas (Fars) Takht-e Soleyman (Oromieh, Tabriz) Tahkt-i-Sangin (Balkh, Samarkand)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Indian (Dharmic)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Dwarakadheesh (Dvaraka) Krishnajanmabhoomi (Mathura) Ram Janmabhoomi (Ayodhya) Varanasi (Varanasi)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Sanchi (Vidisa) Sarnath (Varadasi) Gaya (Gaya) Oddiyana (Udabhanda)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Vadnagar (Sarasvata Mandala) Bhillamala (Godwad) Shravanabelagola (Srirangapatna) Rajrappa (Rajrappa)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Peace purity gain 1/month"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Pagan"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Tholen (Zeeland, Holland) Paderborn (Braunschweig, Brunswick) Uppsala (Uppland) Hleidra (Sjaelland) Maere (Naumadal, Trondelag)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Retinue size +50%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Sasqsin (Itil) Isilkul (Tobol, Sibir) Aqmescit (Crimea) Kyzylorda (Turkestan) Vac (Pest)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Light Cav Offensive +30% Light Cav Defensive +30%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Perm Solotcha (Ryazan) Tikhvin (Novgorod) Hiiumaa (Osel, Livonia) Raiviola (Kexholm, Karelia)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Home territory : All Units Defensive +80% Garrison size +40%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Tikhvin (Novgorod) Yuriev (Kiev) Pruszkow (Plock, Mazovia) Husi (Birlad, Moldau) Arkona (Rugen, Mecklemburg)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Garrison size +30% Home territory : All Units Defensive +80% Garrison size +40%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Locmine (Vannes) Waltham (Essex) Bangor Fawr (Gwynedd) Whithorn (Galloway) Mellifont (Dublin)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Garrison size +20% Retinue size +30% Home territory : Morale +60% All Units Defensive +60% Garrison size +20%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Abydos Thessalonica Athens Rome (Latium) Alexandria"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Zweitina Ikonion Fuwa Memphis Luxor"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Mecca Muscat Baghdad Tigris Sinjar (Assur)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Garrison size +30% Home territory : Morale +80% All Units Defensive +80% Garrison size +40%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Jerusalem Alexandria Sinjar Baghdad Hendjan"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Swarty Roma Trapani Tunis Aneb"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Home territory : Morale +80% All Units Defensive +80% Garrison size +40%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Esztergom Itil Syr Darya Dihistan Bost Sistan"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Light Cavalry Offensive +30% Light Cavalry Defensive +30%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Swarty Roma Trapani Tunis Aneb"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Baghdad Zamindawar (Bost, Zabulistan) Heliopolis (Cairo) Kabul (Kabulistan) Multan"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Heavy infantry offensive: +20% Heavy infantry defensive: +20%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Salam (Timbuktu) Bamako (Mali) Sidi Rahhal (Marrakech) Bordj (Atlas Mnt, Alger) Siliana (Medjerda, Tunis)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Home territory : All Units Defensive +80% Garrison size +40%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Otuken Kashgar Dukhan (Dunhuang) Anxi Syr Darya"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Delhi Tripuri Samatata Kundina Kataka"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Home territory : All Units Defensive +80% Garrison size +40%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Trapezous Abkhazia Kartli Ani Shirvan"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Home territory : All Units Defensive +80% Garrison size +40%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Khetaka Viraja Alampur Balkonda Venadu"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Home territory : All Units Defensive +80% Garrison size +40%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Swarty Roma Trapani Tunis Aneb"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Land morale +30% Martial +4"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Roma Navarra Asturias de Santillana Cadiz Toulouse"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Home territory : Morale +80% All Units Defensive +80% Garrison size +40%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Epirus Dyrrachion Venice Senj Apulia"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Home territory : Morale +80% All Units Defensive +80% Garrison size +40%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Swarty Rome Trapani Tunis Aneb"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Swarty Rome Trapani Tunis Aneb"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Swarty Rome Trapani Tunis Aneb"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Home territory : Morale +80% All Units Defensive +80% Garrison size +40%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Berbera Aksum (Axum) Gojjam Makuria Kosti"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Home territory : Morale +80% All Units Defensive +80% Garrison size +40%"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Mesembria Pest Bereg Turnu Belgorod"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Retinue size +50%"
+                }
+            ]
+        },
+        {
+            "heading": "Governments",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Seven new government types are added by the mod. They are all a part of the feudal group."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Government",
+                            "Group",
+                            "Description",
+                            "Features"
+                        ],
+                        [
+                            "Government",
+                            "Group",
+                            "Description",
+                            "Features",
+                            "Bureaucratic",
+                            "Feudal",
+                            "A bureaucratic administration relies on civil administrators, that can be appointed and dismissed at will, and less on landed vassals. Rulers can personally rule more territory and gain more taxes, and maintain more experienced professional soldiers at the cost of being able to raise fewer levies.",
+                            "Allows title revocation"
+                        ],
+                        [
+                            "Government",
+                            "Group",
+                            "Description",
+                            "Features",
+                            "Feudal",
+                            "Eranshahr",
+                            "The Sassanid form of government is the absolute fusion of church and state, entertaining a precarious balance of power between local lord and Shahanshah. Further bolstered by a power bureaucracy and priesthood, this government is the product of centuries of Sassanid rule.",
+                            "Prevents title revocation Allows looting Allows imprisoning without reason"
+                        ],
+                        [
+                            "Government",
+                            "Group",
+                            "Description",
+                            "Features",
+                            "Feudal",
+                            "Sub-Roman",
+                            "Sub-Roman government is based upon the decaying Roman institutions across the former empire. Rulers are able to hold cities and uphold tax-collecting, but in return have fewer levies. As the institutions decay with land being distributed and the culturally civilian aristocracy adopts new military or ecclesiastical values, it decays.",
+                            ""
+                        ],
+                        [
+                            "Government",
+                            "Group",
+                            "Description",
+                            "Features",
+                            "Feudal",
+                            "Legion",
+                            "The Roman legions were emblematic of the organisation and discipline of the Roman Empire in its heyday, and as elite heavy infantry of the Roman army form the backbone of the Imperial army. Under Bureaucratic governments, the legions represent the military as fully distinct from the civil administration. Legions that have lost their regional base and are no longer ruled by a Romance ruler will be disbanded, but a Romance ruler that manages to reconquer a legion's base and area can restore them by decision.",
+                            "May not hold titles May not be granted titles"
+                        ],
+                        [
+                            "Government",
+                            "Group",
+                            "Description",
+                            "Features",
+                            "Feudal",
+                            "Gupta",
+                            "Gupta government is centered around the Gupta dynasty which played a major role in the history of India and influenced both inside their empire as well as in neighbouring areas. While the empire had no standard unified administrative divisions or structure, there was an increase in the level of centralisation and record-keeping was highly developed with a complex system for amongst others the registration of land, donations, income and expenditure.",
+                            ""
+                        ],
+                        [
+                            "Government",
+                            "Group",
+                            "Description",
+                            "Features",
+                            "Feudal",
+                            "Pre-Feudal",
+                            "Pre-feudal government represents all of the non-tribal states across the map prior to the feudal mutation, Muslim conquest, Indian religion spread, Persian influence or Roman expansion. This rich array of different government practices are distinct from tribal and nomadic realms given the existence of a sedentary aristocracy with relative centralisation.",
+                            ""
+                        ],
+                        [
+                            "Feudal",
+                            "High Tribal",
+                            "High Tribal government represents the small-scale government of a post-tribal realm in which neither strong land-based nor tax-based governments have been established, where tribal loyalties of old still dominate government. This transition form of government is unable to control large swaths of land or many vassals.",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Allows title revocation",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Prevents title revocation",
+                            "children": []
+                        },
+                        {
+                            "text": "Allows looting",
+                            "children": []
+                        },
+                        {
+                            "text": "Allows imprisoning without reason",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "May not hold titles",
+                            "children": []
+                        },
+                        {
+                            "text": "May not be granted titles",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Cultures",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "New cultures and culture groups have been added. Here is a partial list:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Culture",
+                            "Culture Group",
+                            "Base group ethnicity",
+                            "Base ethnicity",
+                            "Notes",
+                            "Code"
+                        ],
+                        [
+                            "Auiones",
+                            "North Germanic",
+                            "westerngfx",
+                            "norsegfx",
+                            "",
+                            "auiones"
+                        ],
+                        [
+                            "North Germanic",
+                            "westerngfx",
+                            "norsegfx",
+                            "",
+                            "Svíar",
+                            "swede"
+                        ],
+                        [
+                            "North Germanic",
+                            "westerngfx",
+                            "norsegfx",
+                            "",
+                            "Dane",
+                            "dane"
+                        ],
+                        [
+                            "North Germanic",
+                            "westerngfx",
+                            "norsegfx",
+                            "",
+                            "Geatish",
+                            "geatish"
+                        ],
+                        [
+                            "North Germanic",
+                            "westerngfx",
+                            "norsegfx",
+                            "",
+                            "Gutnish",
+                            "gutnish"
+                        ],
+                        [
+                            "North Germanic",
+                            "westerngfx",
+                            "norsegfx",
+                            "",
+                            "Jute",
+                            "jute"
+                        ],
+                        [
+                            "Thuringian",
+                            "Central Germanic",
+                            "westerngfx",
+                            "germangfx",
+                            "",
+                            "thuringian"
+                        ],
+                        [
+                            "Central Germanic",
+                            "westerngfx",
+                            "germangfx",
+                            "Bavarian",
+                            "Culture conversion event.",
+                            "bavarian"
+                        ],
+                        [
+                            "Central Germanic",
+                            "westerngfx",
+                            "germangfx",
+                            "Warnic",
+                            "",
+                            "warnic"
+                        ],
+                        [
+                            "Central Germanic",
+                            "westerngfx",
+                            "germangfx",
+                            "Angle",
+                            "",
+                            "anglo"
+                        ],
+                        [
+                            "Central Germanic",
+                            "westerngfx",
+                            "germangfx",
+                            "Reudignian",
+                            "",
+                            "reudignian"
+                        ],
+                        [
+                            "Central Germanic",
+                            "westerngfx",
+                            "germangfx",
+                            "Alamannian",
+                            "",
+                            "alamannian"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Cultural melting-pots",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The following melting-pots exist in the mod:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Roman to Italian",
+                            "children": []
+                        },
+                        {
+                            "text": "Romano-Gallic to French, Galleis or Occitan",
+                            "children": []
+                        },
+                        {
+                            "text": "Romano-Hispanic to Catalan, Portuguese, Castilian, Leonese or Andalusian",
+                            "children": []
+                        },
+                        {
+                            "text": "Romano-British to Brídaney",
+                            "children": []
+                        },
+                        {
+                            "text": "African Romance to Réyanu",
+                            "children": []
+                        },
+                        {
+                            "text": "Romano-Illyrian to Dalmatian",
+                            "children": []
+                        },
+                        {
+                            "text": "Romano-Noric to Romansh",
+                            "children": []
+                        },
+                        {
+                            "text": "Raetian to Romansh",
+                            "children": []
+                        },
+                        {
+                            "text": "Rumanescu to Vlach",
+                            "children": []
+                        },
+                        {
+                            "text": "Thraco-Roman to Vlach",
+                            "children": []
+                        },
+                        {
+                            "text": "Pannonian to Pièlsuzhany​",
+                            "children": []
+                        },
+                        {
+                            "text": "Pictish to Scottish",
+                            "children": []
+                        },
+                        {
+                            "text": "Armorican to Breton",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "All Romance melting-pots have particular requirements explained on the sub-forum ."
+                }
+            ]
+        },
+        {
+            "heading": "Tribal migrations",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Migrations are simulated with a special casus belli. This allows a tribe to move to a new land, abandoning old provinces. After migrating, new rulers are generated based on the cultures and religions of each province. Vassals of different culture are at the same time granted independence."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Conditions in order to migrate:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "You must be Slavic, Tengri, Germanic Pagan or Alan culture",
+                            "children": []
+                        },
+                        {
+                            "text": "You cannot declare a migration war after 800",
+                            "children": []
+                        },
+                        {
+                            "text": "You have not migrated in the last 10 years",
+                            "children": []
+                        },
+                        {
+                            "text": "You are a duke or above",
+                            "children": []
+                        },
+                        {
+                            "text": "You are not an emperor",
+                            "children": []
+                        },
+                        {
+                            "text": "You are independent",
+                            "children": []
+                        },
+                        {
+                            "text": "You are not at war",
+                            "children": []
+                        },
+                        {
+                            "text": "Target must be independent",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Dynamic Rise of Islam",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Not yet implemented."
+                }
+            ]
+        },
+        {
+            "heading": "Church council and dynamic schisms",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Not yet implemented."
+                }
+            ]
+        },
+        {
+            "heading": "Foederatis and foedus treaties",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The foederati is a tributary type added by the mod. Only Roman rulers can acquire foederatis, with the requirements of being an independent king-tier or above ruler, have at least two counties in the realm, either ruler of the WRE, ERE, reunified Roman Empire or being of the Romance culture group. For the potential foederatus to be eligible, it needs to not already be a tributary, be independent, tribal or nomad, not above king tier and not of the Romance culture group."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If both realms meet the conditions, either side can then initiate negotiations through a diplomatic action. A series of event will then determine the nature of the foedus treaty between the two parties, with the possibility of the Roman granting or promising land, or keeping them in their existing border. Once the nature of the treaty has been determined, the Roman will be able to get the assistance of the foederatus in armed conflict, as well as drawing a slightly larger reinforcement rate from the federate. The foederatus gets bonuses to levy size, levy reinforcement rate,  technology spread rate and enjoys the protection of the Roman."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "On succession, the heir of the foederatus gets the choice of remaining foederatus to the Roman or to not renew the contract. In order to prevent this from happening, it is possible for the Roman to attempt integrating the foederatus through a diplomatic action."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "See the sub-forum for more details."
+                }
+            ]
+        },
+        {
+            "heading": "Roman legions",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "At the start of the game, some legions are available to hire for rulers of the Romance culture group. In order to check if your culture is one of these, you can look at the features screen."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Here are their characteristics:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "All legions are of the same size, 1800 men.",
+                            "children": []
+                        },
+                        {
+                            "text": "Legions can declare war on their lieges to depose them and they are not always direct vassals of the ruler who is the top liege of a realm, as they are tied to the liege of their respective title.",
+                            "children": []
+                        },
+                        {
+                            "text": "Legions also lose a 100 men per century. Currently it is impossible to stop their deterioration, but it will eventually be possible to stop it.",
+                            "children": []
+                        },
+                        {
+                            "text": "Legions will disband if the landed title attached to them no longer exists or if the holder isn't of a Romance culture. After a legion has disbanded, a narrative event for romance cultured rulers will fire and that legion will no longer be available to hire.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In addition to the above, not all legions are available at start, and those that are not present as well as those that have disbanded can be restored.\nTo restore a legion, you need to enact the \"Organize Legion X\" decisions, which allows rulers to recreate legions in case they fully control the required duchy or kingdom and are of the Romance culture group."
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Religious conversion",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In the mod, there are three different types of \"mentalities\" for the religions:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Proselyte - can use the proselyte action and convert characters, but is vulnerable to conversion from within same religious group",
+                            "children": []
+                        },
+                        {
+                            "text": "Ancestral - can not use proselyte action and convert characters and is vulnerable to conversion from other religions",
+                            "children": []
+                        },
+                        {
+                            "text": "Bastion of the Faith - can not use proselyte action and convert characters but is resistant to conversion from other religions",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There are however exceptions to this rule, which allow the offensive Ancestral religions to convert characters towards other religions with a moral authority below 20 , or allow Bastion of the Faith religions to use the proselyte action and convert characters that are of an Ancestral religion."
+                }
+            ]
+        },
+        {
+            "heading": "FAQ",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In case you have questions that are not answered here, please ask them on the FAQ/Quick Questions- Quick Answers thread ."
+                }
+            ]
+        },
+        {
+            "heading": "Which modules should I activate?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Currently there is one required module (the main one named \"WTWSMS\") and five optional sub-modules which should be activated based on the portraits pack you own.\nThe sub-modules have names that correspond to the required DLC's, so for example if you own the Norse portraits DLC, use the module entitled WTWSMS_NorsePortraits. All of the modules are inter-compatible, so you can run them all at once if you have all of the relevant portrait packs. In addition to that there is a sixth, purely graphical module, named \"WtWSMS_Font\" which activates or deactivates the text font."
+                }
+            ]
+        },
+        {
+            "heading": "Where can I find the latest official version?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In the mod sub-forum , look for the sticky latest release thread, labelled something like [WtWSMS] Release x.x.x ."
+                }
+            ]
+        },
+        {
+            "heading": "Does the mod require any DLC?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "No. The optional modules require the face-packs (see #Which modules should I activate? ). That being said, playing some countries requires certain DLC's, just like in vanilla. See #Recommended DLCs for a list."
+                }
+            ]
+        },
+        {
+            "heading": "Is the mod compatible with all DLCs?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Yes, it is compatible with every DLC (as with any mod that is updated for the latest patch). \nHowever, even if it is recommended to run all the DLC's you own with it, the content of said DLC may not be adequate to the new setting of the mod, a consequence of the fact that we are still in beta."
+                }
+            ]
+        },
+        {
+            "heading": "Can save-games be exported to Europa Universalis IV?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "As mentioned in #Mod compatibility it is compatible. On the mod sub-forum, there is a thread where you can help out to expand it."
+                }
+            ]
+        },
+        {
+            "heading": "Is the mod compatible with any other mod?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "See #Mod compatibility"
+                }
+            ]
+        },
+        {
+            "heading": "What languages is the mod available in?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Currently the mod is fully localised in English and French ( français ). Furthermore, there are plans for also providing Spanish ( español ) localisation in 1.0.0. If you think you can contribute to any of the existing translations or provide a translation in German ( Deutsch ), post a message in the Paradox forums and we will discuss it. Other languages could also be done, but that would require the base game to also get an integral translation from scratch."
+                }
+            ]
+        },
+        {
+            "heading": "The flags are weird, black and mixed up, what should I do?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You need to clear your flag cache. Do it by deleting any files stored at Documents/Paradox Interactive/Crusader Kings II/WTWSMS/gfx ."
+                }
+            ]
+        },
+        {
+            "heading": "Why do I get the old Mediterranean Portraits?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Since the old Mediterranean Portraits are available freely, they are used by default for users who do not have the Mediterranean Portraits DLC and the dedicated sub-mod. If you own the DLC and activate the sub-mod, the new Mediterranean Portraits are used. See #Recommended DLCs and #Which modules should I activate?"
+                }
+            ]
+        },
+        {
+            "heading": "Why are a lot of \"Smiths\" being generated/appearing for certain cultures?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This is an issue that we are aware of, and is caused by lacking dynasty names for certain cultures. It happens due to vanilla defaulting to the name \"Smith\" when too few dynasty names are available."
+                }
+            ]
+        },
+        {
+            "heading": "What is \"East Welsh\" and why is it in this mod?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "East Welsh is a culture that was created by Enlil after an odd event in his first AAR. It is a melting-pot that is used to represent the mix between Welsh and a steppe culture that occurred in it. It is an unique case that will not be removed from the main mod, but similar cases won't be made as it would result in a too wide scope and implausible results. The nature of East Welsh makes it unlikely for it to appear in game."
+                }
+            ]
+        },
+        {
+            "heading": "What areas does the \"Imperium Romanum\" region required to restore the Roman Empire correspond to?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Imperium Romanum is a custom region, covering the respective two halves of the empires from 395. All regions on which the Imperial Reconquest CB is available are thus needed to restore the Roman Empire."
+                }
+            ]
+        },
+        {
+            "heading": "How do I reconquer areas outside the region of my half of the Roman Empire?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In order to have access to Reconquest CBs covering the entire \"Imperium Romanum\" region the other half of the Roman Empire needs to have fallen and you need to use the \"Last Roman Empire\" decision once that has happened."
+                }
+            ]
+        },
+        {
+            "heading": "Where are the Roman legions located?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The legions are spread across the Mediterranean and the Roman world. A map of the locations is available on our forum ."
+                }
+            ]
+        },
+        {
+            "heading": "Why do Isaurian rulers like Emperor Zeno not have access to the Roman legions?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The only characters who can hire and use the legions are those of the Romance group. The reasons for why the Isaurian culture doesn't have access to the legions were explained previously by Erik W."
+                }
+            ]
+        },
+        {
+            "heading": "Why are Hellenic rulers not able to rebuild the Circus Maximus?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Circus Maximus decision in its current form was designed with a Christian rebuilding in mind, as the original conditions were written without the possibility for them to do it. In the future this could change if there are grounds to modify it."
+                }
+            ]
+        },
+        {
+            "heading": "Why is there a Republic of Pisa?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Pisa never declined like many other Roman towns, so it retained its Decurion Senate, 2 Duumvirs, and republican nature while the rest of the municipium declined into hereditary institutions. Even under the Lombards, it was the only city to not be ravaged, and became the dominant trade center."
+                }
+            ]
+        },
+        {
+            "heading": "Why do the kings of Vandalica also hold the kingdom of Alania?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This is for historical reasons, as the Alans migrated westwards with the Hunnic pressure and ended up integrating the Vandalic coalition that migrated to North Africa. The Alan crown was granted to the Vandal kings and they called themselves kings of both the Vandal and Alan kingdoms."
+                }
+            ]
+        },
+        {
+            "heading": "Why is the Hellenic religion present in Italy and Greece at start?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Eastern Roman Emperor Leo I still had to post laws in 472 to deal with the large number of pagans in the empire. In Italy, the laws regarding the closing of temples were ignored, as there were too many pagans to enforce and laws against them in many regions of Italy."
+                }
+            ]
+        },
+        {
+            "heading": "How come \"Ashurism\" is still present at start?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Assyrian Pagan religion is still present in a few provinces, representing the polytheistic groups that partially survived in the area."
+                }
+            ]
+        },
+        {
+            "heading": "What does the Punic culture represent?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Punic culture is present in a few provinces at start, such as Malta and a Balearic island, representing the Punic Diaspora. This is a Romanised population, and does not represent Carthaginians of the Punic Wars. When it comes to religion, the Punic religion itself was extinct by 476, although as the Central African incorporated some Punic Gods it can be said to be the closest."
+                }
+            ]
+        },
+        {
+            "heading": "Why is Iceland inhabited by Irish characters at start when it hadn't been colonised at that point?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The characters in Iceland are based upon the Papars , who were Irish monks. As there is no colonisation mechanic in the mod for the Norse establishment on an inhabited Iceland and it was decided to not make it a wasteland or removing it, they were added to have some characters at start."
+                }
+            ]
+        },
+        {
+            "heading": "Why is there a de jure empire of Armenia?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Empire of Armenia was added following requests for a Caucasian empire. It is based off the greater Armenian Kingdom during Antiquity."
+                }
+            ]
+        },
+        {
+            "heading": "Why do I not have access to the Holy War CB?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Holy wars are entirely disabled before the Rise of Islam. This does not mean that conquests necessarily ends up being restricted, as other casus bellis replace it."
+                }
+            ]
+        },
+        {
+            "heading": "Why is the Rise of Islam currently disabled?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The version of Islam that is present in the mod files is only for testing numbers, and is not intended for usage in a public release. Thus, it has been disabled until a more complete and satisfactory version has been implemented. You may however enable it for your own use with the specific gamerule."
+                }
+            ]
+        },
+        {
+            "heading": "Is the Great Schism in the mod?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Church councils in general is a feature that will be expanded upon as the mod is developed, and while the Three-Chapter Controversy and Henotikon are represented more will come. The Great Schism itself can be triggered through a different set of circumstances as of the latest version. The plans for representing the Early Christian Church can be found in the dedicated thread ."
+                }
+            ]
+        },
+        {
+            "heading": "Why have you added so many provinces to the North African desert?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The main goal of the provinces additions was to expand the map into Africa to include the Gaetulians and Garamantes and to give better borders to the Languantan and Austorani. Smaller counties were added to give the Garamantes the power base they historically had, and to represent the hundreds of fortified, self-sufficient, and wealthy city states that made up the now unified Garamantian kingdom. This land was the home of advanced kingdoms, regional powers of fortified, advanced cities. Their irrigation skill and inventiveness made people describe the men to have little muscle or brawn, because they lived in the Sahara with ease. The Garamantian capital city, Germa, was not the first capital city, and was alone comparable to cities like Pompeii. Garam had a decent population, and so did all of their other city-states. The standard army of the Garamantes numbered at 50,000 at the lowest, and the Garamantes had excessive use large armies of nomads to bolster their already powerful forces. The city of Garam was simply one of 8 powerful cities, all of which were of similar size an population, meaning just in the major cities of their 180,000 square mile kingdom had 80,000 people. This doesn't include the large number of other settlements they also had, making their nation incredible powerful."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In the future, the map will be redone in its integrality, with the aim of lowering the province density in the area."
+                }
+            ]
+        },
+        {
+            "heading": "Is Tibet being a wasteland intended?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Tibet is currently a wasteland as in pre-2.8 vanilla versions. This is because the lead developer Enlil responsible for the history of the area is busy and absent elsewhere, which means he hasn't been able to contribute directly. As soon as he feels done and has time to share his content, Tibet will be added to the mod. For now however, we consider it more important to have a Tibet with full history and flavour than just adding a shallow copy without the dedication it deserves."
+                }
+            ]
+        },
+        {
+            "heading": "How do I proceed in order to join the team, contribute or test the mod?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Even without modding experience, it is possible to help with the development, become a tester, or make historical contributions for this mod.\nSimply send a PM to a member of the team over at the paradox forums and we will discuss it. You need to remember that we all started as simple players, even Enlil."
+                }
+            ]
+        },
+        {
+            "heading": "Interesting characters",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Feel free to add here some characters of special interest, in a similar way to vanilla interesting characters guide ."
+                }
+            ]
+        },
+        {
+            "heading": "Christian characters",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Nicene",
+            "level": 4,
+            "content": []
+        },
+        {
+            "heading": "Soissons, kingdom of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Syagrius , Rex of the Domain of Soissons, December 480 : You are truly one of the hardest starts in WtWSMS. The last of the governors, Syagrius sought to take control of the collapse of Rome as an opportunity to restore the Empire, under his rule. Initially attempting to garner favour in the East, Zeno's decision to give the Western Crown to barbarians in Italy led Syagrius to shun the East forever, a short forever considering his conquest by the Franks. Can you prove Zeno wrong, repel the Franks, and take what is rightfully yours?",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Montes Aregenses, duchy of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Caecilius Agricolus, Dux of Montes Aregenses, December 480 : You are an example of the corruption which destroyed Rome. When Rome collapsed, most lands were overrun by the barbarians, or at least assimilated into their administration. You on the other hand, had garnered estates so massive in the Iberian mountains, became too big to fail, and persisted where others did not. Unfortunately, where you could escape the gaze of the Roman Empire, you historically didn't escape the territorial ambitions of the rising Visigothic Kingdom.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Mauretania, kingdom of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Garamus Flavius, Regz of Mauretania, December 480 : Following the collapse of the Empire, many of the Romanized Berbers established their own Sub-Roman Kingdoms. Historically, you will succeed against the pagans and the Arians, but ultimately succumb to the ambitions of the Great Justinian. Will you survive in this land of countless cultures and religions, and keep Africa in the Latin World?",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Mazandaran, kingdom of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Gushnasp Gashnaspian, Shah of Mazandaran, February 476 : You are the furthest East the Nicene Church will ever spread, nestled in the mountains of Mazandaran. You attempt to reach out to the Byzantines would fail, and historically you would be overrun by the Sassanids in 528 A.D. Will you survive, and create a thriving, Nicene empire in the East, or will the fledgling Patriarchate of Mazandaran be submerged in the Fires of Zoroastrianism?",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Western Roman Empire, empire of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Romulus Augustus , Emperor of the Western Roman Empire, February 476 : You are historically the last ruler of the Western Roman Empire, an empire that is currently being invaded by the mighty Skirian Odoacer. Can you change history and survive what inevitably seems to be going to lead to the fall of the WRE?",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Julius Nepos , Emperor of the Western Roman Empire, May 480 : In 476, the Western Roman Empire and its last emperor fell and Odoacer is currently reigning supreme in Italy. You, the deposed former Emperor, still rule from Dalmatia, and are at the moment planning an invasion to take back Italy. Will it succeed?",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Anicius Acilius Aginantius Faustus , Praefectus Urbi, February 476 : Along with your mother you're the only surviving descendant of the first Roman emperor, Augustus, as well as the last heir to the Hellenistic Seleucids. Will you be able to regain the imperial throne and restore Rome's former glory, liberating its people from barbarian yoke? Or maybe you will rather decide to remember your Seleucid ancestors's deeds and follow in their path?",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Italy, kingdom of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Manlius Boethius , Praetorian Prefect of Italia, December 480 : While Roman Italy is ruled by the barbarian Odoacer, he has yet to wrest control from the entire peninsula. Nestled into Southern Italy, the Praetorian Prefect Manlius Boethius still holds substantial power within the Kingdom of Italy. While you would later sire a son of your namesake, one of the greatest philosophers of the Middle Ages, you currently stand amongst the prestigious house of Anicia, a powerful plebian house in the Old Republic which in past has placed Emperors like Olybrius and Petronius Maximus on the throne. Would you one day restore the Western Roman Empire to Italy?",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Caecina Decius , Princeps Senatus of the Roman Senate, December 480 : As leader of the Roman Senate and chief minister to King Odoacer, Caecina is one of the most powerful men in the city of Rome. In a different light, and while the Roman Senate still persists, there is another path for Rome amidst the last century of turmoil. There is yet hope for a clever, opportunistic Senate to attain freedom, liberate Rome, and reform the S.P.Q.R. from the ashes of Rome so many years ago.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Eastern Roman Empire, empire of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Zenon Tarasis , Duke of Isauria, February 476 : You start off in a war to take the Eastern Roman Empire, against the Miaphysite Emperor Basiluskos, with a large advantage in troops. Once you win the initial war, will you be able to defend the Eastern Roman Empire against the barbarian hordes? Or will the religious turmoil and Germanic invaders at your borders doom you to the same fate as the Western Roman Empire?",
+                            "children": []
+                        },
+                        {
+                            "text": "Justinian the Great , Eastern Roman Emperor, January 535 : You are the reason for and the belligerent in the titular wars in The Gothic Wars bookmark. Born a humble peasant, you were the last Eastern Roman Emperor to speak Latin as their mother tongue. You managed to best the Sassanids in war twice and went on the greatest territorial expansion of the Empire, taking North Africa, half of Spain, and even Rome. You commissioned and oversaw the construction of the Hagia Sophia and were also responsible for legal and religious reforms that would be the foundation of the Eastern Roman Empire -- feats for which you and your wife, Theodora, were canonized. Yet a century after your death, all your conquests would be swept away save for some holdings in Sicily, the intricate bureaucracy of the empire would leave the law as confused and contradictory as when you found it, and your religious reforms not only failed, but they planted the seeds for the Great Schism. Can you reverse the fortunes of Rome? Can you reforge the Roman Empire? Or will your ambitions shatter the Empire?",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Taurica, kingdom of",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Tiberios Ioulios Douptounos , King of Taurica, February 476 : You are a last descendant of Tiberian-Julian dynasty that ruled the Bosporan kingdom for five centuries. Unfortunately, now your kingdom represents only a shadow of its former glory and your domains are limited to territories around Pantikapaion and Hermonassa, which formed the core of the ancient Bosporus. Local barbarians, such as the Goths or the Turkic nomads, want to take possession of your lands. Meanwhile, the economic state of the Bosporan kingdom is very poor, being in deep decline for a long time. But will you be able to deal with these problems on your own and restore the former greatness of Bosporus? In that case you could go further and try to surpass your great ancestor, the Mithridates VI of Pontus. Or maybe might to better to submit to the strengthened Eastern Roman empire and develop under its protection? Then you could remember about your origin from the triumvir Mark Antony and assert your claim on the Roman throne.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Arian",
+            "level": 4,
+            "content": []
+        },
+        {
+            "heading": "Vandalica, kingdom of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Huneric Genseri , King of Vandalica, December 480 : You are quite far from home. Centred in the ancient city of Carthage, you kingdom is unique for its ardent efforts to make Africa an Arian stronghold. Persecuting the Nicenes and Manicheans, you would historically lose land to Berber rebels, and lead to the decline of the Kingdom. Will you choose to preserve this Germanic stronghold in Africa? Perhaps take on the mantle of the local Donatist Carthagian heresy to continue opposing the rulers of Rome, and claim the heritage of old Carthage for the vandals?",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Italy, kingdom of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Odoacer , King of Italy, February 476 : You are the mighty Odoacer, infamous savior of Rome, and the first Germanic King of the Romans. Originating from the East Germanic Scirii tribe, your career in the Roman military was a bright one. However, with the seizure and usurpation of the Western Roman Empire by ex-Magister Militum Orestes, an integrated Roman general not unlike yourself, the Germanic foederati of Italy, as well as a large segment of the Italic Roman army, united under your banner and crowned you rex Italiae - the King of Italy. You have proven sympathetic to Roman law and customs. Italy still prospers, but its existence is threatened by weakness. While sanctioned by the Emperor-in-the-East, Zeno, to govern Roman Italy in his stead, he might grow to disfavor you and seek to reunite the Roman Empire. In addition, the Ostrogoths to the east continually encroach upon your lands, seeking to see the Italian Peninsula in flames. You have protected the Roman Italy for now, but how long will it last?",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Burgundy, kingdom of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Gundobad Niflung , King of Burgundy, December 480 : The Burgundians have long sought a homeland, and now they have it. Your nation will find itself historically desired by the Franks and Goths, but a strong leader can lead Burgundy to glory, and create a Kingdom worthy of the Valois-Bourgogne.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Rugiland, kingdom of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Feletheus Theuvaning , King of Rugiland, December 480 : The Rygir people, originating from their namesake island, Rügen, are a prize conversion to Arianism, but the pagans around and inside your kingdom do not take kindly to this apostasy. Even your brothers in faith, the Italians and Goths seek to subject the Rygir to their rule. Rugiland against the world.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Miaphysite",
+            "level": 4,
+            "content": []
+        },
+        {
+            "heading": "Axum, empire of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Eon Zoskales , Baccinbaxaba of Axum, February 476 : You are the Baccinbaxaba (Title reserved only for the Axumite Emperors) of Axum, successor of Dʿmt, and unlike the other world's Empires, you are not in decline. In fact, you are heading to your greatest glory, as under Eon and his descendants, all of Yemen would fall under Axumite conquest. Will you parallel this great achievement, and defy history by maintaining the Axumite Empire from the Cushites, the Himyarites, and one day, even the Caliphs?",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Albania, kingdom of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Vache Arsacid , Shah of Albania, February 476 : You are truly all that's left of the mighty, ancient, and powerful Parthian Empire. Betrayed by the traitorous Sassan, your dynasty was dethroned and expelled from Persia. Now you are forced to pay them tribute. But there is hope yet, however slim. Can you profit from Sassanid instability, and reclaim the Empire of your forefathers?",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Sarir, kingdom of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Vistahm Sarir, King of Sarir, February 476 : The Golden Throne. A Great Fortress in the Mountain. A General, who in greed, betrayed home and faith for a chance of glory. That is the Sarir Shahdom, or in English, The Kingdom of the Golden Throne. Formed by a rebellious Sassanid General, and a bastion of Christianity in the region, Sarir would survive into the 1100's by successfully hiding while playing off Byzantine and Persian, Iberian and Arsacid, Khazar and Arab. Will you instead forge a more glorious future, and force all of Caucasia to recognize the power an authority of the Golden Throne.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Blemmyes, kingdom of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Yaqut, King of the Blemmyes, February 476 : The Blemmyes are a powerful Cushitic tribe which migrated to Nubia time immemorial. Still though, they posses their old language, along with the remains of their ancient religion, the worship of Mandulis, a corruption of Egyptian polytheism and Beja traditions. Historically, the growth and spread of Nobatia and Makuria would displace and assimilate the Blemmyes and the culture, but it is not too late to blaze forth and create a powerful Beja Kingdom for all the world to see. Whether for Mandulis or Christ is your decision.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Pagan characters",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Germanic",
+            "level": 4,
+            "content": []
+        },
+        {
+            "heading": "Kentland, duchy of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Horsa Henglhorsing , King of Kentland, May 480 : The world speaks and knows of the Anglo-Saxons, but the Jutes are forgotten to history. It was the Jutes though, who would herald the re-Christianization of England, it was the Jutes who would adopt Roman customs and become the most \"civilized\" of the Germanic invaders. Can you lead the Jutes to dominance in England, and preserve your culture and nation from the barbaric Saxons and Angles?",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bernicia, duchy of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Esa Ingving , High Chief of Bernicia, May 480 : Though the true Kingdom known as \"Bernicia\" would not be historically formed until the 6th Century, the Angles of this land are the oldest of all, being brought not by the Britons, but by the old Romans themselves, seeking mercenary fighters to man Hadrian's wall. You are the oldest of the Anglo-Saxons, granted your Kingdom by Rome itself. Will you allow these new interlopers to destroy your fragile state?",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Salia, kingdom of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Childeric Meroving , King of Salia, May 480 : An obvious option, lord of the Salian Franks, whose son would conquer Soissons and form the Frankish Kingdom. Can you repeat history?",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Alamannia, kingdom of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Gibuld Chrocus , King of Alamannia, May 480 : Your ancient kingdom was forged from a fusion of countless Germanic tribes into one great, unite Kingdom of the \"All-men\". Enemy of Rome, your kings would earn the title turbarum rex artifex, \"King and Crafter of Unrest\" for the trouble your ancestors caused the Empire. Now, the powerful nation of the All-men is in peril, as a changing Europe threatens to unseat them from power.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Thurinigia, kingdom of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Bisinus Almading , King of Thuringia, May 480 : The Kingdom of the Thuringians formed a unique culture following their conquest by the Huns. Mastering Altaic horsemanship and even taking countless Hunnic wives, the Thuringians became a potentially dangerous fusion of Germanic and Steppe cultures. Potentially, because of their soon conquest by the Frankish armies.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Lombardy, kingdom of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Godehoc Lething , King of the Lombards, May 480 : Another obvious one, lead your people to Italy.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Gepidia, kingdom of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Gunderit Comnurund , King of the Gepids, May 480 : When the Germanic peoples united to overthrow Hunnic rule once and for all, it was the Gepids who rose up and conquered all of Dacia. Their powerful state would dominate Pannonian politics, and the fantastically wealthy Gepid kings would make many attempts to destroy the Ostrogoths and add their lands to their growing Kingdom. Can you defeat both the Ostrogoths and Lombards and maintain a lasting Germanic presence in the Carpathian Basin?",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Goths, duchy of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Alaric Crimling, High Chief of the Goths, May 480 : At long last, you are able to play the Crimean Goths. And not some Hellenized Theodoro, but pure-blooded, Wotan worshiping, East Germanic Crimean Goths. As the Easternmost of the Goths, ruling over one of the oddest religions in the game, will you make Crimea a Gothic dominion, or will you head further east in search of the final Gothic home?",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Awioniz, duchy of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Becilla Neufiling, High Chief of Awioniz, May 480 : Your people are an oddity among the North Germans, living on the isolated isle of Öland. You are also unique as the last of the Germanic peoples to maintain the Ancient worship of Nerthus.(Religion and minor flavour to come in later update) Will you persevere against all odds and make Awioniz a power in the world?",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Central African",
+            "level": 4,
+            "content": []
+        },
+        {
+            "heading": "Masmuda, kingdom of",
+            "level": 5,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Ziri Doukkalid, King of Masmuda, May 480 : This great confederation of Berbers is the most challenging in all Africa. A difficult Feudal Elective of various religions, maintaining any kind of stability is a challenge. This can change though, as a later, Islamic influences Masmuda can choose to abolish the confederacy, and form either the dreaded Almohad, or form their own religion and destiny as the Barghawata.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": []
+        }
+    ]
+}

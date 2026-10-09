@@ -1,0 +1,84 @@
+{
+    "pageid": 2518,
+    "title": "Technology modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": []
+        },
+        {
+            "heading": "Definitions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Technologies are defined inside /common/technology.txt . \nLeaving out the modifier or any of the tiers is logged as an error, so those should always be included even if blank."
+                }
+            ]
+        },
+        {
+            "heading": "Start date technology",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The game will process technology starting at year NDefines.NTechnology.DONT_EXECUTE_TECH_BEFORE .\nIt should be set to the earliest starting year of the mod (769 in vanilla), otherwise technology history will not be processed, and some default starting technology will be used."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The technology level can be set per start date and per title inside /history/technology/ folder. The structure is:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Important : make sure there is always a date entry defined for the year configured in NDefines.NTechnology.DONT_EXECUTE_TECH_BEFORE , otherwise the game will crash.\nFor instance, if NDefines.NTechnology.DONT_EXECUTE_TECH_BEFORE = 400 , then you need a 400 = { } block in ALL technology history files."
+                }
+            ]
+        },
+        {
+            "heading": "Ahead penalty",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The game uses the concept of \"ideal year\" to balance technological advancement, defined in defines.lua:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "IDEAL_YEAR_LEVEL_0 : Chance to get a progress to this level will increase after this date and decrease before it",
+                            "children": []
+                        },
+                        {
+                            "text": "IDEAL_YEAR_LEVEL_8",
+                            "children": []
+                        },
+                        {
+                            "text": "IDEAL_YEAR_AHEAD_PENALTY_INVEST : Percent increase in cost pre level ahead of ideal date",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "This article is a Stub ,  which means that it does not sufficiently cover its subject matter. Please help expand this article if you can."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        }
+    ]
+}

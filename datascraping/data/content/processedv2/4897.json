@@ -1,0 +1,895 @@
+{
+    "pageid": 4897,
+    "title": "Patch 3.0.X",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 3.0.X are all patches beginning with 3.0, and linked to Holy Fury expansion."
+                }
+            ]
+        },
+        {
+            "heading": "Patch 3.0",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Patch 3.0.1",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 3.0.1 was released on 2018-12-05 [1] with the checksum CDYZ ."
+                }
+            ]
+        },
+        {
+            "heading": "Balance",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The \"Made a Battlefield Sacrifice\" character modifier now only stacks up to three times.",
+                            "children": []
+                        },
+                        {
+                            "text": "Made the Chinese Imperial government ignore religious differences when marrying or taking a consort.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Arberian cultural retinue and culture building",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced the chance for the 'What is Love' event to fire",
+                            "children": []
+                        },
+                        {
+                            "text": "Children's Crusade event troops now are disbanded once the Crusade ends.",
+                            "children": []
+                        },
+                        {
+                            "text": "Further increased the morale malus applied on the Children's Crusade.",
+                            "children": []
+                        },
+                        {
+                            "text": "Somewhat toned down the chance of Alexander and Ashoka's Bloodline event chain from firing and increased the required Prestige requirements to 15000 from 10000.",
+                            "children": []
+                        },
+                        {
+                            "text": "Made the Pope somewhat less likely to accept Excommunication requests on behalf of AI rulers and significantly less likely to accept Excommunication requests from landless mercenaries/holy orders.",
+                            "children": []
+                        },
+                        {
+                            "text": "Byzantine Elector AI behavior now takes more into consideration the candidate's martial/intrigue/diplomacy when determining whether to pick him or not.",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced Born in the Purple and Despot weight in Imperial Elective.",
+                            "children": []
+                        },
+                        {
+                            "text": "Toned down the Revolt Risk effect tied to one of the Forge Bloodline event chains.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Typhon to the Hellenic Evil Gods list.",
+                            "children": []
+                        },
+                        {
+                            "text": "Cosmopolitan Nature and Religious Tax Doctrine are no longer incompatible.",
+                            "children": []
+                        },
+                        {
+                            "text": "Increased Just opinion given by Benevolent Bloodline, and added Kind opinion to it as well.",
+                            "children": []
+                        },
+                        {
+                            "text": "After Early period, Hungarian portraits no longer use nomadic hairstyles.",
+                            "children": []
+                        },
+                        {
+                            "text": "Reworked Crusader States into targeted title decisions, rather than random events.",
+                            "children": []
+                        },
+                        {
+                            "text": "Slightly toned down the chance of Players being asked for Mass Conversions.",
+                            "children": []
+                        },
+                        {
+                            "text": "Elder Stances are now more forgiving (0 to 60 is the base Opinion range for Pleased, rather than 25 to 75).",
+                            "children": []
+                        },
+                        {
+                            "text": "Elder Electors are sorted more harshly when it comes to culture and religion (infidels and foreigners are less likely to be picked). The religious weights are only active if the current ruler does NOT belong to a Cosmopolitan religion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Forge Bloodline Prestige requirements have been significantly increased if your dynasty has already created a Forged Bloodline type (even if the player ruler does not own it personally).",
+                            "children": []
+                        },
+                        {
+                            "text": "Adjusted AI weights when deciding a potential target for an Antipapal/Excommunicated for Coronation war.",
+                            "children": []
+                        },
+                        {
+                            "text": "Forge Bloodline is no longer aborted automatically if the ruler becomes Content, it only happens when becoming Incapable.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added \"Papal Friend\" Bloodline, unlocked as a small Catholic ruler winning an Antipapal/Excommunication war vs the HRE.",
+                            "children": []
+                        },
+                        {
+                            "text": "Adjusted some faulty quality numbers on some martial category books.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaked the AI chance of enbracing Outremer Culture should their liege already be Outremer.",
+                            "children": []
+                        },
+                        {
+                            "text": "AI characters ruling the Latin Empire, Jerusalem and the Outremer will no longer convert to the local culture.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaked chance of the AI requesting a Mass Conversion depending on various circumstances and made it smarter when it comes to select a likely sponsor.",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated the old Holmgang events to have their outcomes calculated more logically.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Pope shouldn't try to start a new Crusade the moment his previous Crusade is cancelled",
+                            "children": []
+                        },
+                        {
+                            "text": "Decreased the frequency of battle events a bit in general (mostly for the AI) and for some of the most lethal events.",
+                            "children": []
+                        },
+                        {
+                            "text": "Significantly decreased the occurrence of those mass produced Dragon Amulets.",
+                            "children": []
+                        },
+                        {
+                            "text": "If a real Crusade starts being prepared while the Children's Crusade is ongoing, the Children's Crusade will dissipate.",
+                            "children": []
+                        },
+                        {
+                            "text": "Holding the minor title of commander now gives 10 Personal Combat Rating.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Added the following new settings to Alternate Start:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Cultures Only random naming option",
+                            "children": []
+                        },
+                        {
+                            "text": "Religions Only random naming option",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Interface",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed a tooltip regarding concubines to include \"or Consort\" so it works for both genders.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a minor text overlap in an option of a Crusade flavor event.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a description of a Warrior Lodge-founded bloodline having too long a text.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a missing name in the description of an upgraded weapon received in one of the Warrior Lodge Legendary Journey events.",
+                            "children": []
+                        },
+                        {
+                            "text": "Shortened an option text in a battle event to avoid portrait overlap.",
+                            "children": []
+                        },
+                        {
+                            "text": "Shortened event texts in some updated pilgrimage events to combat text overflow.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue where broken or unsupported saves would not be shown as disabled in the load game menu.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added new artifact icons for the mythological heart and blood artifacts.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed typoed version of the deity Dievas.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed text overlap which would sometimes occur in an option of an old Court Chaplain job event.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue with holding interaction window being partially or fully outside the game window when using UI-scaling.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the name of the Recruitment decision for the Plaguebringers displaying the entire description of the society instead.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a missing rank-name for female members at rank 1 of the secret Taoist society.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed missing pronoun-loc in Assassins blackmail event.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a checkbox to toggle a title having a short name for the renaming title interface. \"Tier of <Name>\" vs just \"<Name>\". Is not applicable to Holy Orders or Mercenaries.",
+                            "children": []
+                        },
+                        {
+                            "text": "If in a single player alternate start game, you can rename any title via the Customizer DLC regardless of if you own the title or are its top liege.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a misleading tooltip for the Prepare Invasion decision, which would erroneously refer to you as Norse, regardless of your religion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some text overlap in the options of battle events.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "User modding",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added [GetRootFromInsultNoun], which only prints the noun of the insult.",
+                            "children": []
+                        },
+                        {
+                            "text": "Extended potential elective candidates and electors to include direct liege court and vassals and all de facto above lieges.",
+                            "children": []
+                        },
+                        {
+                            "text": "Extended potential elective candidates and electors to include any character with a cached trait, this will unfortunately require some careful triggers to avoid some global characters ending up electors for a bunch of elective successions.",
+                            "children": []
+                        },
+                        {
+                            "text": "Moved the nomads ignoring religion in marriage and taking consort to be a bool toggle on the government form, allowing this to be disabled or extended to other governments in mods.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added portrait_is_patrician trigger, usable only in portrait evaluation, it checks if the character is in a merchant republic and their employer patrician or has a republic government form.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added portrait_in_command trigger, usable only in portrait evaluation, it checks if the character is in command and leading any troops.",
+                            "children": []
+                        },
+                        {
+                            "text": "Un-hardcoded the republic clothing, it now works as any other portrait does via the script.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added add_age = int effect, adds the given value to the age of the scoped character. Warning: messing with a character's age may have unintended side effects so use with caution.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added set_gender = male/female/opposite effect, sets the scoped character's gender to be male or female or the opposite of what they currently are. Warning: messing with a character's gender may have unintended side effects so use with caution.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added set_holy_site effect, sets the scoped title to be a holy site of the right hand side religion. Warning: this lets you have more than 5 holy sites which might cause weirdness, also adding holy sites to a religion but not its heresies will cause their icons to show up individually on other shared holy sites instead of being hidden like normal.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added remove_holy_site effect, removes the scoped title from being a holy site of the right hand side religion. Warning: this lets you have less than 5 holy sites which might cause weirdness, also removing holy sites from a religion but not its heresies will cause their icons to show up individually on other shared holy sites instead of being hidden like normal.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added set_holy_site_with_heresies effect, sets the scoped title to be a holy site of the right hand side religion and its heresies. Warning: this lets you have more than 5 holy sites which might cause weirdness.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added remove_holy_site_with_heresies effect, removes the scoped title from being a holy site of the right hand side religion and its heresies. Warning: this lets you have less than 5 holy sites which might cause weirdness.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added supply_limit trigger. Used in a province scope, it compares the supply in the province for a given character and their leader against a value. The leader defaults to the given character unless specified. eg: supply_limit = { for = scope <leader> = scope value > 10 }",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated the confusing is_bloodline_active trigger from needing to be in a character scope: it is now called \"bloodline_is_active_for\" instead and should now be used inside a bloodline scope, taking a character scope as its right hand side parameter.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added GetGirlWomanBoyMan custom loc key, which takes both age and gender into account.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash in the realm view related to custom triggered modifiers.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Database",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Removed a de-facto Epirus from the 769 bookmark, and rearranged the lands under some Slavic High Chiefs (Dukes) instead.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Duke of Adrianopolis in 769 felt more at home in the Byzantine Empire after all",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Sayfawa dynasty being wrong.",
+                            "children": []
+                        },
+                        {
+                            "text": "Bohemond feels more Crusadery after taking Antioch",
+                            "children": []
+                        },
+                        {
+                            "text": "Readjusted some Spanish provinces slightly",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bug Fixes",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Certain particularly immersion-breaking events no longer pop while you are leading forces on a crusade.",
+                            "children": []
+                        },
+                        {
+                            "text": "The positive character modifier Martially Ambidextrous now has its icon in green instead of red.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some misnamed character flags in old Monks & Mystics events, which would sometimes cause traits to be added when they should not be.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed strange-sounding \"acquaintance\" being used threateningly in an Claim Duel result event.",
+                            "children": []
+                        },
+                        {
+                            "text": "Going into Seclusion, or having your Sway-target do so, will now cause you to stop Swaying your target.",
+                            "children": []
+                        },
+                        {
+                            "text": "You can no longer spam duel challenges at a target if they refuse your first one * instead, there is a cooldown.",
+                            "children": []
+                        },
+                        {
+                            "text": "Being in Seclusion no longer blocks you from attempting to commit suicide.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Destruction of Great Pillar-event can no longer fire when the it's your own great pillar and you retaking an occupied province.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with Northern Crusades always being available by right clicking at a pagan target, even though the Northern Crusades hasn't started yet.",
+                            "children": []
+                        },
+                        {
+                            "text": "If you are imprisoned during the Eternal Life chain, most of the events will now be queued, awaiting your release, instead of continuing or simply stopping.",
+                            "children": []
+                        },
+                        {
+                            "text": "The terrific artifact \"Axe of Perkunas\" is no longer described as \"not terribly useful\"...",
+                            "children": []
+                        },
+                        {
+                            "text": "The Dedicate Temple decision now allows you to cycle back through the various options you have.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some misnamed flags in old wolf-events, which were causing opinion modifiers to not be added properly.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a misnamed flags in old Shieldmaiden-events, which was causing the wrong text to display for the Shieldmaiden, in a follow-up event about a cat.",
+                            "children": []
+                        },
+                        {
+                            "text": "Eldership electors will no longer make outrageous demands from their prison cell.",
+                            "children": []
+                        },
+                        {
+                            "text": "Clarified trait removal/adding in the Warrior Lodge decision/power \"Go Berserk\".",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed rare edge case where a sub-unit commander you killed would miraculously return to take your eye out in your next battle event.",
+                            "children": []
+                        },
+                        {
+                            "text": "Made sure that characters with Enatic Clans can get female commanders from the Marshal event \"Great Commander Found\".",
+                            "children": []
+                        },
+                        {
+                            "text": "Added some checks for romantic preferences to a warrior lodge teaching event.",
+                            "children": []
+                        },
+                        {
+                            "text": "Made sure Spymasters do not consider vassals who have been discouraged from factionalism as appropriate candidates for their liege's faction.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the \"Convert Counties to your Religion faster\"-modifier not working for certain bloodlines.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bloodline effects sometimes persisting through unmet requirements.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed certain bloodlines needlessly updating their active requirements long after it has been founded, causing, for instance, the Seaking bloodline to demand that you are Catholic.",
+                            "children": []
+                        },
+                        {
+                            "text": "The HRE can now be formed in the Charlemagne start once more",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash when the recipient of a Crusade was a nomad",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed compatibility issues with Andalusian portraits when owning Holy Fury but not Iberian Portraits Pack.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a unit position in France.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaked several coastlines and rivers to make the terrain match province borders",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the position of a Councilor in York.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an old blot event trying to set up gay relationships wrong.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed spelling of Brauweiler.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Pope will no longer demand that people being the target of a Great Holy War go Crusade somewhere else. Stay at home and protect your lands instead.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with the Serbian Kingdom in the 1081 bookmark.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed female characters never being able to join the Varangian Guard.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash that could occur when calling in succession voting favors.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed special elector edge case for secondary elective gavelkind titles.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the event where a Berserker is killed in battle, and accidentally sends a strange follow-up to themselves saying they had dropped their weapon.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed value for Tribal festival MA modifier.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed grammar error in old Immortal Rival event.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing Outremer culture retinue.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Bön are now properly assigned their Crusader trait.",
+                            "children": []
+                        },
+                        {
+                            "text": "Outremer culture now uses Frankish retinue/tactic.",
+                            "children": []
+                        },
+                        {
+                            "text": "Current holder of a title with elective succession should now be the deciding tie breaker.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Enatic clans doctrine now properly sets female temple holders.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue where declining a duel during the Legendary Journey (Warrior Lodges) would sometimes cause the chain to get stuck.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue where the Legend progress bar could get stuck, disallowing players to use the Legendary Gathering decision ever again.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a rare multiplayer issue in the Legendary Journey event chain, which would occur if your target died before duel calculations had run, which would in turn cause you to be stuck on your journey.",
+                            "children": []
+                        },
+                        {
+                            "text": "HRE Succession now shows Electors title in its description. Electors titles are also now dynamically applied when the HRE is formed by Charlemagne decision, depending on whether the capital of the ruler forming the Empire is in Germany, Francia, Britannia, Hispania or Italia.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue with Byzantine government/succession not always applying correctly on Random World, disappearing when the Empire is conquered by foreigners, or when the Emperor converts/reforms to a P/Matriarchal religion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue with Full Council Power Faction demand/war causing the Byzantine Empire to switch to Elective Feudal succession.",
+                            "children": []
+                        },
+                        {
+                            "text": "Hopefully fixed the Children's Crusade still getting stuck at Genoa, stacking ludicrous amounts of event troops and then obliterating Islam.",
+                            "children": []
+                        },
+                        {
+                            "text": "Roman culture now has access to the Crucifixion execution method.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Born in the Purple and Despot voter acceptance stacking in Imperial Elective.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Charlemagne event chain's Crowned by Trait not using a proper event target.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed God-King Name transfer being triggered by any title transfer rather than just when the current God-King gives his religious head title to somebody else.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Roman Emperor losing voting power for discharging a Commander when he appoints said Commander to a Council position.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Fylkir title not properly passing to the Reformer when Holy Fury is not active.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue with occasional lingering Great Pillar appearing in the building list. Great Pillars now switch from active to inactive rather than switching to a paired building when not held by an unreformed pagan tribal.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed P/Matriarchal Deposition War cb being available against Theocracies.",
+                            "children": []
+                        },
+                        {
+                            "text": "Roman castle baronies now called Fortresses rather than Outposts.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed wrong scope on loc key in HF.25295.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed King-tier Catholic Viceroys gaining Uncrowned modifier malus despite not needing Coronations.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Ruthless Bloodline effect not working correctly, causing the Revocation Plot to fail unless fulfilling one of the regular requirements.",
+                            "children": []
+                        },
+                        {
+                            "text": "Excluded Elders from list of potential Blood Festival contenders.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed faulty loc trigger on homage of vassalage event.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed mismatched event texts, which could occur in the chain if you turned down a legendary duel.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed your children giving away their secret society membership status, by listing them as already in a society when you try to recruit them to your warrior lodge...",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed scepter artifacts sometimes appearing wrongly on the portrait when the holder is in command.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Hellenic religions lacking Crusade weights.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Stoic society giving impossible-to-complete charity mission.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Pope should no longer join the defender in a Papal War, instead, if anything, he should be the attacker's ally.",
+                            "children": []
+                        },
+                        {
+                            "text": "Byzantine Emperors should no longer incur in discharged_hero modifiers when their commanders get sick or are in seclusion.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Teutons are more certain about what Duchies they want as compensation for attacking someone.",
+                            "children": []
+                        },
+                        {
+                            "text": "Made sure it's not *anyone* that writes a romantic tale of their mother and their inappropriate sparring matches.",
+                            "children": []
+                        },
+                        {
+                            "text": "If either the Converter or the Converted King of a Mass Conversion becomes landless, the events related to the post-baptism activities will now stop firing.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed child baptized by Satanists being inducted a little too early in the Society itself.",
+                            "children": []
+                        },
+                        {
+                            "text": "Gui-scale is now correctly applied to right-click interaction menus.",
+                            "children": []
+                        },
+                        {
+                            "text": "Various memory optimizations to decrease memory use.",
+                            "children": []
+                        },
+                        {
+                            "text": "Game rules window is now closed whenever you click outside of it in order to prevent issues where the game would start in a buggy state.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue where resetting your message settings to default would make message titles not show up properly.",
+                            "children": []
+                        },
+                        {
+                            "text": "Turning down the Legendary Journey chain will no longer allow you to remain the leader of your Warrior Lodge.",
+                            "children": []
+                        },
+                        {
+                            "text": "If you're in a multiplayer session with three other players, who also happen to be rank 4 members of the same Warrior Lodge as you, and you all turn down the Legendary Journey chain, it will no longer break the Legend progress bar.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added more safety checks when inheriting the flags for a war_for_coronation to avoid rare instances of a ruler's dynasty becoming unable to ever be crowned again.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added age check on wandering knight falling in love with a Queen during her coronation.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed scoping issue making rulers hyper-suspicious about their concubines' fidelity.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed concubines not getting a chance to have hard pregnancies.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed tooltip issue and scripted better logic when selecting the appropriate duchy to give to a Holy Order in exchange for a Coronation.",
+                            "children": []
+                        },
+                        {
+                            "text": "Made sure all on_combat_pulse events (including old pre-Holy Fury events) fire only one at a time.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added some tooltips to inform you of whenever your enemy used their Intrigue skill to best you in a duel.",
+                            "children": []
+                        },
+                        {
+                            "text": "Made sure that if an enemy commander exists, the event where a random soldier hurls insults at you on the battlefield will reference *their* culture, rather than their liege's.",
+                            "children": []
+                        },
+                        {
+                            "text": "Made sure your character is aware of the fact that your *spouse* is the satanist inductor in the devil worshiping joining chain (you can no longer shock them with your marital status as a way to chicken out).",
+                            "children": []
+                        },
+                        {
+                            "text": "Frisian coast is long achievement requirements should now correspond with the coastline again.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some issues with missing capitals in Duchies.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Bloodline variable check in Dark Sacrifice decision.",
+                            "children": []
+                        },
+                        {
+                            "text": "Made sure your son does not ask to join a holy order against the infidels, when your ruler is in fact said infidel.",
+                            "children": []
+                        },
+                        {
+                            "text": "Lesbian rulers will no longer believe that their lover has become pregnant with their child.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a character flag never being cleared properly at the end of the Jashn-e Sadeh festival.",
+                            "children": []
+                        },
+                        {
+                            "text": "Character should no longer be able to join non-existing Holy Orders when they are drunk and think they are being guided by God.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed mud splatter modifier giving prestige instead of taking it away.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue with Adventurer and Crusader King/Queen traits not applying their levy size multiplier.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed 'Limited Naval' exclave independence having no effect",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Christian Pilgrimages sometimes not ending properly.",
+                            "children": []
+                        },
+                        {
+                            "text": "If the target of a crusade changes religion the attackers will no longer get two confusing events saying they both failed and won the crusade.",
+                            "children": []
+                        },
+                        {
+                            "text": "Event options should now show the correct traits and characters for related effects.",
+                            "children": []
+                        },
+                        {
+                            "text": "Your spouse will no longer bond with you over educational matters, if they are in prison.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed coronation flavor event mistaking the Emperor of Francia for the HREmperor.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 3.0.1.1",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 3.0.1.1 was released on 2019-01-17 [2] with the checksum ONDO ."
+                }
+            ]
+        },
+        {
+            "heading": "User modding",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added unit_graphical_culture, unit_graphical_cultures override for unit models in culture database.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bug fixes",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "English portrait pack should now display properly in early start dates.",
+                            "children": []
+                        },
+                        {
+                            "text": "Custom message settings should no longer be overwritten by default values at the start of the game.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Legendary Journey not getting any progress the second time you start it.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Forum, Crusader Kings 3.0.1 update is now live! [checksum CDYZ] , 2018-12-05",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum, Crusader Kings 3.0.1.1 hotfix patch released! [checksum ONDO] , 2019-01-17",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
