@@ -1,0 +1,379 @@
+{
+    "pageid": 2940,
+    "title": "EU4 Converter modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Europa Universalis 4 Save Converter is a DLC that was released together with patch 1.11."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In order to modify it, you need to add a \\ eu4_converter\\ folder to your mod, in which all files related to the EUIV converter should be stored. The vanilla files are inside DLC\\dlc030.zip ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Modifying the converter does not change the checksum of the game."
+                }
+            ]
+        },
+        {
+            "heading": "Structure",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The eu4_converter folder includes the following folders and files:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Folder name",
+                            "Contents/use"
+                        ],
+                        [
+                            "army_names",
+                            "Contains definitions for army names on a per-title basis. As of version 2.6.3 only contains definitions for the Roman Empire ( e_roman_empire )."
+                        ],
+                        [
+                            "centers_of_trade",
+                            ""
+                        ],
+                        [
+                            "common",
+                            "Contains various base files which the converter uses to generate modified ones."
+                        ],
+                        [
+                            "copy",
+                            "Any files placed in this folder will be copied directly into the generated mod, so can be used to statically define pretty much anything in the converted game. For example, custom graphics, idea groups, map modifications, additional/modified localisation files, cultural province names, events and decisions could all be defined in here. For more information on what can be done and how see EU4 modding ."
+                        ],
+                        [
+                            "fleet_names",
+                            "Contains definitions for fleet names on a per-title basis. As of version 2.6.3 only contains definitions for the Roman Empire ( e_roman_empire )."
+                        ],
+                        [
+                            "gfx",
+                            "By default contains two sub-folders: flags and interface"
+                        ],
+                        [
+                            "gfx \\flags",
+                            "Contains custom flags. By default it contains a selection of alternative \"flags\"/coats of arms as used by pagans (in the sub-folder norse_pagan ), since the converter cannot convert arms files to flag files. For example, the file d_york is used to provide the alternative \"flag\" file used by the Norse petty kingdom of Jorvik (rather than the standard \"flag\" used by the Duchy of York). For more information on how this type of \"flag\" is used in CK2, see Title modding § Pagan coats of arms ."
+                        ],
+                        [
+                            "gfx \\interface",
+                            ""
+                        ],
+                        [
+                            "historical_idea_groups",
+                            "Contains definitions for historical idea groups on a per-title basis."
+                        ],
+                        [
+                            "historical_units",
+                            "Contains definitions for historical units on a per-title basis."
+                        ],
+                        [
+                            "hordes",
+                            "Contains lists of provinces outside of the CK2 map held by particular horde titles. By default contains files for the Mongol Empire, Golden Horde, Ilkhanate and Timurids; as of version 2.6.3 only the Mongol Empire has any provinces defined."
+                        ],
+                        [
+                            "interface",
+                            "Contains interface files defining converter-specific sprites, such as converted religion icons."
+                        ],
+                        [
+                            "ship_names",
+                            "Contains definitions for ship names on a per-title basis."
+                        ],
+                        [
+                            "sons_of_abraham",
+                            "Contains files specifically for use when the Sons of Abraham DLC is active"
+                        ],
+                        [
+                            "sunset_invasion",
+                            "Contains files specifically for use when the Sunset Invasion DLC is active"
+                        ]
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "File name",
+                            "Use"
+                        ],
+                        [
+                            "border_provinces.csv",
+                            ""
+                        ],
+                        [
+                            "color_table.csv",
+                            "Defines the color (in decimal RGB values) what a tag will use."
+                        ],
+                        [
+                            "culture_gfx_table.csv",
+                            "Defines which CK2 graphical cultures (see culture modding , portrait modding and cultures § list of cultures ) convert to which EU4 graphical cultures (used mainly for advisor portraits and unit models)."
+                        ],
+                        [
+                            "culture_table.csv",
+                            "Maps CK2 cultures to EU4 cultures"
+                        ],
+                        [
+                            "defines.lua",
+                            "Defines some general settings the converter will use, such as which title to use for the HRE, what start date to use etc."
+                        ],
+                        [
+                            "government_table.csv",
+                            "Defines which government types should be used by converted titles. May be defined on a per-title basis (e.g. papal_government for k_papal_state ) or on a broader per-government type basis. This file is only used if conclave is active; otherwise conversion is automatic."
+                        ],
+                        [
+                            "heresy_table_soa.csv",
+                            "Overrides entries in religion_table.csv when the Son's of Abraham DLC is enabled"
+                        ],
+                        [
+                            "key_provinces.csv",
+                            ""
+                        ],
+                        [
+                            "nation_table.csv",
+                            "Defines which CK2 titles will map to predefined EU4 tags (rather than auto-generated tags; custom tags may be added in copy\\common\\countries and copy\\common\\country_tags )."
+                        ],
+                        [
+                            "province_table.csv",
+                            "Defines which CK2 titles (counties and duchies) map to which EU4 provinces. Mappings may be weighted using multiple entries and titles can map to multiple provinces."
+                        ],
+                        [
+                            "religion_table.csv",
+                            "Defines which CK2 religions map to which EU4 religions."
+                        ],
+                        [
+                            "sunset_invasion_table.csv",
+                            "Defines which EU4 provinces belong to which tag when the Sunset Invasion DLC is enabled."
+                        ],
+                        [
+                            "trait_conversion.txt",
+                            "Defines which personality a leader will be assigned based on their CK2 traits."
+                        ],
+                        [
+                            "unit_type_table.csv",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Files",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "culture_table.csv",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "culture_table.csv defines which Europa Universalis IV culture a Crusader Kings II culture converts to."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The format of the file is as follows:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "CK2 culture;EU4 culture;Whether or not the culture is custom defined by the converter;Comment (optional)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Here are two examples:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "norse;norse;1;Norse"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In this case, norse is the name of the culture in Crusader Kings II (cultures are defined in the \\common\\cultures folder), norse is the culture the converter will map it to in Europa Universalis IV (as it is custom it is defined in the \\eu4_converter\\common\\cultures folder), 1 implies that it is a custom culture from the converter, and Norse is the name of the culture in Europa Universalis IV."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "swedish;swedish;0;Swedish"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In this case, the swedish culture is already present in Europa Universalis IV, so the value is set to 0 , and the converter will map it to the existant culture in Europa Universalis IV (cultures are defined in the common\\cultures folder)."
+                }
+            ]
+        },
+        {
+            "heading": "nation_table.csv",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "nation_table.csv defines which nation (or \"tag\") a title in Crusader Kings II will convert to in Europa Universalis IV."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The format of the file is as follows:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "CK2 title;EU4 tag (nation);EU4 country file;Comment (optional)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "e_scandinavia;SCA;Scandinavia;Scandinavia Empire"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This tells the converter to convert the Crusader Kings II title e_scandinavia (the Empire of Scandinavia) into the Europa Universalis IV tag SCA (the formable nation of Scandinavia ). The third parameter Scandinavia tells the converter which country file to use in Europa Universalis IV. The fourth parameter Scandinavia Empire is a comment designed to help coders and is optional. Note however that the ; divider is required."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Titles are defined in the Crusader Kings II folder common\\landed_titles . Tags are defined in the Europa Universalis IV folder common\\country_tags and a list of tags can be found at eu4:Countries in the \"Country descriptions list\" section at the bottom of the page. Country files are found in the Europa Universalis IV folder common\\countries ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any title not defined in this file will generate a new custom tag. This is not usually an issue but does preclude them from tag-specific events, decisions, ideas etc. It should also be noted that titles which are using a modified name when converted (either from their title history or because of their holder's culture) will not use the nation table so will also have automatically generated tags in Europa Universalis IV."
+                }
+            ]
+        },
+        {
+            "heading": "province_table.csv",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "province_table.csv defines which province in Europa Universalis IV a Crusader Kings II title converts to."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The file works based upon a point system, with the more \"hits\" in the province list the more likely the realm is to get the province in EU4. So if a county is listed twice it corresponds to two points, while a county that is listed once will have one point. That is the reason for why duchies are in the list, as it gives more weight to the one who owns the duchy for the conversion. [1]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The format of the file is as follows:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "CK2 title ID;EU4 province ID;EU4 province ID - EU4 province name (filename);Comment (optional; typically CK2 title name - EU4 province name)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Here is an example:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "c_vestisland;370;370 - Reykjavik;Vestisland - Reykjavik"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In the example, c_vestisland is the title ID in Crusader Kings II (title IDs are defined in the \\common\\landed_titles folder), 370 is the province ID in Europa Universalis IV, while 370 - Reykjavik is the province ID and name in Europa Universalis IV (which is the filename in the \\history\\provinces folder) and Vestisland - Reykjavik are the title name in Crusader Kings II and province name in Europa Universalis IV."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Both duchy and province titles from Crusader Kings II can be defined, but in case there is both a duchy and a county for the same Europa Universalis IV province, the duchy needs to be specified, by adding Duchy before the Crusader Kings II title name."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Here is an example of that:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This is also the case if there is a duchy and a county with identical names, then both the duchy and the county need to be specified."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Here is an example of this case:"
+                }
+            ]
+        },
+        {
+            "heading": "religion_table.csv",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "religion_table.csv defines which Europa Universalis IV religion a Crusader Kings II religion converts to."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The format of the file is as follows:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "CK2 religion;EU4 religion;Whether or not the religion is custom defined by the converter;Comment (optional)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Here are two examples:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "finnish_pagan_reformed;finnish_pagan_reformed;1;Reformed Suomenusko"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In this case, finnish_pagan_reformed is the name of the religion in Crusader Kings II (religions are defined in the \\common\\religions folder), finnish_pagan_reformed is the religion the converter will map it to in Europa Universalis IV (as it is custom it is defined in the \\eu4_converter\\copy\\common\\religions folder), 1 implies that it is a custom religion from the converter, and Reformed Suomenusko is the name of the religion in Europa Universalis IV."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "catholic;catholic;0;Catholic"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In this case, the catholic religion is already present in Europa Universalis IV, so the value is set to 0 , and the converter will map it to the existant religion in Europa Universalis IV (religions are defined in the common\\religions folder)."
+                }
+            ]
+        },
+        {
+            "heading": "trait_conversion.txt",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "trait_conversion.txt defines which personality a leader will be assigned based on their CK2 traits ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The format of the file is as follows:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "<modifiers> is a list of modifiers which modify the weight of the personality type (i.e. how likely it is to be picked). They may be additive ( additive_modifier ) or multiplicative ( modifier )."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This tells the converter that a ruler with the patient trait will have a weight of 3 added to the calm_personality type, while a ruler with the wroth trait will have their weight for that type multiplied by 0 (i.e. the weight will be 0, since any number × 0 = 0)."
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Reply by Darkrenown in CK2 Dev Diary#26: Considerable Converter Capabilities",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

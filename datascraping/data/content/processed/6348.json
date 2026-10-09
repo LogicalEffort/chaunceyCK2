@@ -1,0 +1,215 @@
+{
+    "pageid": 6348,
+    "title": "Hfp duel events",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/hfp_duel_events.txt"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Event",
+                            "Notes"
+                        ],
+                        [
+                            "HF.10095",
+                            "Get challenged (sent from duel_decision)",
+                            "CLAIM DUELS"
+                        ],
+                        [
+                            "HF.10096",
+                            "Start the duel - For the attacker (combatant_1)",
+                            ""
+                        ],
+                        [
+                            "HFP.10095",
+                            "Get challenged (sent from duel_decision)",
+                            "\"REGULAR\" duels start here..."
+                        ],
+                        [
+                            "HFP.10096",
+                            "Start the duel - For the attacker (combatant_1)",
+                            ""
+                        ],
+                        [
+                            "HFP.10097",
+                            "Duel rejected",
+                            ""
+                        ],
+                        [
+                            "HFP.10098",
+                            "You were cornered!",
+                            ""
+                        ],
+                        [
+                            "HFP.10099",
+                            "I failed to corner them...",
+                            ""
+                        ],
+                        [
+                            "HFP.10100",
+                            "The meat's in here! Send this event when you want to start any duel, that is supposed to have an outcome displaying the fight.",
+                            "Duel set-up event (sends outcome events to combatant_1 and combatant_2)"
+                        ],
+                        [
+                            "HFP.10101",
+                            "Double death - Attacker",
+                            ""
+                        ],
+                        [
+                            "HFP.10102",
+                            "Double death - Defender",
+                            ""
+                        ],
+                        [
+                            "HFP.10103",
+                            "DEATH: I killed my opponent - I won!",
+                            ""
+                        ],
+                        [
+                            "HFP.10104",
+                            "DEATH: I died in the duel - I lost (fired from HFP.10103 above)",
+                            ""
+                        ],
+                        [
+                            "HF.10104",
+                            "DEATH: I should've died in the duel - I lost (fired from HFP.10103)",
+                            "SPECIAL CLAIM DUEL FOLLOW-UP (if chose to spare life)"
+                        ],
+                        [
+                            "HF.10105",
+                            "For the merciful fighter: (FROM chose to live)...",
+                            ""
+                        ],
+                        [
+                            "HF.10106",
+                            "For the merciful fighter: (FROM chose to die)...",
+                            ""
+                        ],
+                        [
+                            "HF.10107",
+                            "Final event for the defeated fighter, whose life has been spared...",
+                            ""
+                        ],
+                        [
+                            "HFP.10105",
+                            "Wounded (specifics?) - I won!",
+                            ""
+                        ],
+                        [
+                            "HFP.10106",
+                            "Wounded (specifics?) - I lost (sent from HFP.10105 above)",
+                            ""
+                        ],
+                        [
+                            "HFP.10107",
+                            "Cowardly display/Humiliation for the other combatant - I won!",
+                            ""
+                        ],
+                        [
+                            "HFP.10108",
+                            "Cowardly display - I lost",
+                            ""
+                        ],
+                        [
+                            "HFP.10109",
+                            "Both wounded - I won!",
+                            ""
+                        ],
+                        [
+                            "HFP.10110",
+                            "Both wounded - I lost",
+                            ""
+                        ],
+                        [
+                            "HFP.10111",
+                            "Winner decided to kill me, mercilessly (send from HFP.10105)",
+                            ""
+                        ],
+                        [
+                            "HFP.10112",
+                            "Duel led to rivarly (sent from HFP.10106 (I lost a duel – Wounded))",
+                            ""
+                        ],
+                        [
+                            "HFP.10113",
+                            "Gain rival notification",
+                            ""
+                        ],
+                        [
+                            "HFP.10115",
+                            "Duel led to friendship (sent from HFP.10106 (I lost a duel – Wounded))",
+                            ""
+                        ],
+                        [
+                            "HFP.10116",
+                            "Gain friend notification (send from HFP.10115, above - to the winner)",
+                            ""
+                        ],
+                        [
+                            "HFP.10118",
+                            "Duel led to romance (sent from HFP.10106 (I lost a duel – Wounded))",
+                            ""
+                        ],
+                        [
+                            "HFP.10119",
+                            "Gain crush notification (reciprocate or not?)",
+                            ""
+                        ],
+                        [
+                            "HFP.10120",
+                            "Response: Embraced! (for the one originally struck with feelings)",
+                            ""
+                        ],
+                        [
+                            "HFP.10121",
+                            "Response: Rejected! (for the one originally struck with feelings)",
+                            ""
+                        ],
+                        [
+                            "HFP.10195",
+                            "Delayed hidden event for figuring out who is your main crush, sort of",
+                            ""
+                        ],
+                        [
+                            "HFP.10196",
+                            "Delayed hidden event for cleaning up after duels...",
+                            ""
+                        ],
+                        [
+                            "HFP.10197",
+                            "Notification \"My duel target died before we could start the duel...\"",
+                            ""
+                        ],
+                        [
+                            "HF.16000",
+                            "Consequence of turning down duels: Random subjects: Become Craven, like your liege!",
+                            ""
+                        ],
+                        [
+                            "HF.16001",
+                            "Liege finds out their subject wants to be Craven, just like them",
+                            ""
+                        ],
+                        [
+                            "HF.16002",
+                            "Liege finds out their subject is ashamed of them, just like them",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "[Category:Events]"
+                }
+            ]
+        }
+    ]
+}

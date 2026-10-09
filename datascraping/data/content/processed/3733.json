@@ -1,0 +1,1218 @@
+{
+    "pageid": 3733,
+    "title": "Les Trois Tours / The three Towers​",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Les Trois Tours / The three Towers​ is a mod for Crusader Kings II made to flesh out the economical side of the game with some new mechanics and to bring some more medieval flavour and immersion for the player.\nThis goal is achieved through various new gameplay mechanics combined with flavour stuff, more details below."
+                }
+            ]
+        },
+        {
+            "heading": "Key milestones",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "November 2012 : Arko released an alpha version of La Couronne des Alpes (Alps Crown in English)",
+                            "children": []
+                        },
+                        {
+                            "text": "November 2012 : Arko released Xylo kit , a flavour mini-mod forest-themed",
+                            "children": []
+                        },
+                        {
+                            "text": "December 2012 : Arko released ReC , a mini-mod that introduced Relics and gigantic Cathedrals to build",
+                            "children": []
+                        },
+                        {
+                            "text": "February 2013 : Arko and Ivan37 released ECO+ , an mini-mod about economy",
+                            "children": []
+                        },
+                        {
+                            "text": "May 2013 : Arko released Les Trois Tours , a fusion of the 3 previous mods. It was originally developed to be compatible with Vanilla and La Couronne des Alpes (a small scale map mod)",
+                            "children": []
+                        },
+                        {
+                            "text": "July 2014 : Arko opened a thread in the Paradox forum to present the mod. The name is internationalized as Les Trois Tours / The three Towers​ to keep the original name in French and reflecting the move toward a mod 100% translated in English as a goal. Goal achieved today.",
+                            "children": []
+                        },
+                        {
+                            "text": "August 2014 : Last release of La Couronne des Alpes . Since Les Trois Tours / The three Towers​ was the core mechanics of that mod, L3T/T3T development was made a priority and LCDA is put on hold",
+                            "children": []
+                        },
+                        {
+                            "text": "August 2014 : Beta 7 of Les Trois Tours is released",
+                            "children": []
+                        },
+                        {
+                            "text": "August 2015 : After a period without updates for the mod, Arko and Mouchi restarted it with the help of new tools.",
+                            "children": []
+                        },
+                        {
+                            "text": "December 2015 : Cacao27 translated the mod in English",
+                            "children": []
+                        },
+                        {
+                            "text": "Since then, L3T/T3T received more regular updates.",
+                            "children": []
+                        },
+                        {
+                            "text": "June 2020 : Arko released the version 1.00",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "DLC requirement",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The mod has been developed to be run without any DLCs."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some DLCs are required for minor features."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Charlemagne is required to see the Chronicles entries related to some mod features."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The Reaper's Due is required to see the trade routes and trade centres with a 3D model on the map ( forumpost:23529828 )."
+                }
+            ]
+        },
+        {
+            "heading": "Mod compatibility",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Mod",
+                            "Compatibility"
+                        ],
+                        [
+                            "SWMH",
+                            "Compatible"
+                        ],
+                        [
+                            "ARKOpack",
+                            "Recommended"
+                        ],
+                        [
+                            "Any mods which doesn't modify buildings, modifiers icons or events",
+                            "Compatible"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Features",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Gameplay",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Resources and economic system",
+            "level": 4,
+            "content": []
+        },
+        {
+            "heading": "Resource principle",
+            "level": 5,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Some time after the beginning of the game, the resources are given to the provinces according to their types."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The following table shows the possible resources according the province type."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The green cells represent high probability resources. For example agriculture are highly probable in plains."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The orange cells represent medium probability resources. For example fish have a medium probable in hills."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The blue cells represent exclusive resources. For example, in a plain province, we can have pastures or forest, not the both. Remark, we can have nothing of them (the sum is not 100%)."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Resource/Terrain",
+                            "Plains (1)",
+                            "Hills",
+                            "Forest",
+                            "Mountain",
+                            "Farmlands",
+                            "Desert",
+                            "Steppe",
+                            "Jungle",
+                            "Arctic"
+                        ],
+                        [
+                            "Agriculture",
+                            "80%",
+                            "50%",
+                            "10%",
+                            "",
+                            "100%",
+                            "",
+                            "30%",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Pastures",
+                            "30%",
+                            "20%",
+                            "5%",
+                            "40%",
+                            "10%",
+                            "",
+                            "90%",
+                            "",
+                            "25%"
+                        ],
+                        [
+                            "Forest",
+                            "35%",
+                            "",
+                            "100%",
+                            "",
+                            "5%",
+                            "",
+                            "",
+                            "65%",
+                            "60%"
+                        ],
+                        [
+                            "Stone",
+                            "",
+                            "",
+                            "5%",
+                            "70%",
+                            "10%",
+                            "25%",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Mineral",
+                            "",
+                            "70%",
+                            "10%",
+                            "25%",
+                            "5%",
+                            "70%",
+                            "",
+                            "30%",
+                            "15%"
+                        ],
+                        [
+                            "Fish (2)",
+                            "",
+                            "35%",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(1) In SWMH, it is the same distribution for Marshlands"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(2) All coastal provinces can have fish (with 30% probability)"
+                }
+            ]
+        },
+        {
+            "heading": "Real distribution for terrestrial provinces",
+            "level": 5,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A province has at least one resource.\nSo if no resources are distributed on a province, the distribution is fire again on this province.\nBy taking count of this, the real distribution for terrestrial provinces according geometric law is"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Resource/Terrain",
+                            "Plains",
+                            "Hills",
+                            "Forest",
+                            "Mountain",
+                            "Farmlands",
+                            "Desert",
+                            "Steppe",
+                            "Jungle",
+                            "Artic"
+                        ],
+                        [
+                            "Agriculture",
+                            "86%",
+                            "55%",
+                            "10%",
+                            "",
+                            "100%",
+                            "",
+                            "32%",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Pastures",
+                            "32%",
+                            "22%",
+                            "5%",
+                            "45%",
+                            "10%",
+                            "",
+                            "97%",
+                            "",
+                            "33%"
+                        ],
+                        [
+                            "Forest",
+                            "38%",
+                            "",
+                            "100%",
+                            "",
+                            "5%",
+                            "",
+                            "",
+                            "86%",
+                            "79%"
+                        ],
+                        [
+                            "Stone",
+                            "",
+                            "",
+                            "5%",
+                            "78%",
+                            "10%",
+                            "32%",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Mineral",
+                            "",
+                            "77%",
+                            "10%",
+                            "28%",
+                            "5%",
+                            "90%",
+                            "",
+                            "40%",
+                            "20%"
+                        ],
+                        [
+                            "Fish",
+                            "",
+                            "38%",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Resource number expectancy",
+                            "1.56",
+                            "1.92",
+                            "1.30",
+                            "1.51",
+                            "1.30",
+                            "1.23",
+                            "1.29",
+                            "1.26",
+                            "1.32"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The percentages need to be read by column."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example, a plain and terrestrial province has 86% of probability to get the agriculture resource, 32% for the pastures and 38% for the forest resources."
+                }
+            ]
+        },
+        {
+            "heading": "Real distribution for coastal provinces",
+            "level": 5,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For a coastal provinces, the geometric law gives"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Resource/Terrain",
+                            "Plains",
+                            "Hills",
+                            "Forest",
+                            "Mountain",
+                            "Farmlands",
+                            "Desert",
+                            "Steppe",
+                            "Jungle",
+                            "Artic"
+                        ],
+                        [
+                            "Agriculture",
+                            "84%",
+                            "53%",
+                            "10%",
+                            "",
+                            "100%",
+                            "",
+                            "32%",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Pastures",
+                            "32%",
+                            "21%",
+                            "5%",
+                            "43%",
+                            "10%",
+                            "",
+                            "95%",
+                            "",
+                            "30%"
+                        ],
+                        [
+                            "Forest",
+                            "37%",
+                            "",
+                            "100%",
+                            "",
+                            "5%",
+                            "",
+                            "",
+                            "78%",
+                            "72%"
+                        ],
+                        [
+                            "Stone",
+                            "",
+                            "",
+                            "5%",
+                            "76%",
+                            "10%",
+                            "30%",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Mineral",
+                            "",
+                            "75%",
+                            "10%",
+                            "27%",
+                            "5%",
+                            "83%",
+                            "",
+                            "36%",
+                            "18%"
+                        ],
+                        [
+                            "Fish",
+                            "32%",
+                            "69%",
+                            "30%",
+                            "32%",
+                            "30%",
+                            "36%",
+                            "32%",
+                            "36%",
+                            "36%"
+                        ],
+                        [
+                            "Resource number expectancy",
+                            "1.84",
+                            "2.19",
+                            "1.60",
+                            "1.78",
+                            "1.60",
+                            "1.48",
+                            "1.58",
+                            "1.51",
+                            "1.56"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Economy",
+            "level": 5,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The attributed resources are in fact the first rank of the resources."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "By building resources buildings (in productive settlements mainly), the province get the next resource level."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This new level allow to build new building resources to get the next levels and so on."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The following artwork done by Arko sum up the resource evolution."
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Mining system",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Les Trois Tours features a unique system for iron ore mines that give them a limited stockpile. [1]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This stockpile decreases overtime, at various speeds, depending on various events and efficiency of your installations."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The mine can end collapsing, but you can of course extend its life expectancy, or find another place around to continue your exploitation (prospect decision)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can also choose to dismantle the mining industry in the province."
+                }
+            ]
+        },
+        {
+            "heading": "Population system",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Les Trois Tours features a unique system to simulate population growth. \nInstead of the ruler commanding building a \"village\" or whatever upgrades of it, the population grow by itself, and builds and upgrade the population related buildings automatically (by events)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Various factors influence the population growth :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "there's a yearly natural growth, which is doubled for cities, and can be neutered by sieges and occupation",
+                            "children": []
+                        },
+                        {
+                            "text": "diseases and looting can make population shrink down",
+                            "children": []
+                        },
+                        {
+                            "text": "depending on where and when you begin to play, a random starting bonus is given, contributing to granularity and varying the experience from game to game",
+                            "children": []
+                        },
+                        {
+                            "text": "your steward \"Develop economy\" job (enriching and renaming the \"Research economy\" job) can bring additional growth",
+                            "children": []
+                        },
+                        {
+                            "text": "capital holding, prosperity and \"Crown focus\" can bring additional growth",
+                            "children": []
+                        },
+                        {
+                            "text": "some buildings and improvements give a one-shot bonus once built like : holding specializations, trade posts, hospitals, trade routes, some advanced economic buildings...",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Dynamic trade routes",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A new trade route system linked to city trade specialization has been designed."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Provinces with multiple cities as well as those held by merchants have specialization priority."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If such a city adopts Trade specialization, the province can become a Major Center of Trade unless there is one within two provinces."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Trade centres forbid cities within 2 provinces from becoming trade specialized.\nExceptions to specialization placement include multiple cities in the bordering provinces that start the game as trading cities and manufacturing cities.\nFor example Bruges and Gent border each other and will both have a trading city but only one of them will be a Major Center of Trade."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A Major Center of Trade is the start of a trade route.\nWhen a trade route appears, all rulers in a neighbouring province receive an event alerting them they should build a trade route in their province if they want to have the trade route pass through their territory.\nAfter some time, the merchants increase the size of the new route by selecting a province bordering the first province on the route to continue the trade route.\nWhen a province is chosen as a potential route extension, its bordering provinces which also border the previous province on the route can't be chosen any more."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When the trade route grows, the Trade Zone of the Major Center of Trade increases."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If 2 trade routes cross in a province, it becomes a Minor Center of Trade."
+                }
+            ]
+        },
+        {
+            "heading": "Settlement specializations",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Each settlement has a specialization according its type (castle, city or temple).\nSome time after the beginning of the game (to have enough time to distribute resources), the rulers will have events to specialize each settlement."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The specialization impacts the buildings that can be built in the settlement.\nFor example the Feudal City can have the administrative buildings when a Feudal Manor is aimed to have production buildings."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The specialization also impacts the characteristics of the settlement. The artwork at the right has been done by Arko to sum up this for the castle specialization."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can change the specialization with a right click on the settlement to open the settlement decisions."
+                }
+            ]
+        },
+        {
+            "heading": "Administrative specialization",
+            "level": 5,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Every feudal ruler's capital is an Administrative Center."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The Administrative Center can be only built in the capital.\nIf an Administrative Center is not in your capital (because you moved your capital or you conquered an Administrative Center), its effects are disabled : the buildings of this specialization appears in red with the mod ARKOpack Interface ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Like said before, you can convert holdings. So you can convert an obsolete Administrative Center or build one in your new capital."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The buildings available with this specialization give unique modifiers.\nLike some of them are linked to the owner, the modifiers are given by character modifiers.\nThe following table sum up them."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Building",
+                            "Upgrade from",
+                            "Require",
+                            "Building modifier",
+                            "Character modifier"
+                        ],
+                        [
+                            "Seneschal office",
+                            "",
+                            "",
+                            "+ 2 Demesne income",
+                            ""
+                        ],
+                        [
+                            "Chamber of Accounts",
+                            "Seneschal office",
+                            "Treasure Room; Big Hall of Records",
+                            "+ 4 Demesne income",
+                            "+ 1"
+                        ],
+                        [
+                            "Treasure Room",
+                            "",
+                            "Seneschal office",
+                            "+0.5 Demesne income ; +0.2 Fort level; +1% Garrison",
+                            ""
+                        ],
+                        [
+                            "Hall of Records",
+                            "",
+                            "Seneschal office",
+                            "+0.25 tax modifier",
+                            "+ 1"
+                        ],
+                        [
+                            "Big Hall of Records",
+                            "Hall of Records",
+                            "Seneschal office; Treasure Room",
+                            "+0.50 Demesne income",
+                            ""
+                        ],
+                        [
+                            "Court",
+                            "",
+                            "",
+                            "",
+                            "+0.20 Prestige by month; + 1"
+                        ],
+                        [
+                            "Chancellery",
+                            "",
+                            "",
+                            "",
+                            "+ 1 ; + 1"
+                        ],
+                        [
+                            "Lordly chapel",
+                            "",
+                            "",
+                            "",
+                            "+0.25 Piety by month; + 5 Church opinion"
+                        ],
+                        [
+                            "Lordly chapel and dynastic reliquary",
+                            "Lordly chapel",
+                            "",
+                            "+0.05 Demesne income",
+                            "+0.10 Piety by mont; +0.10 Prestige by month"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Revised claim fabrication system",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "L3T v1.00 (SEAL1) introduces a less permissive system for claim fabrication job by the Chancellor. It aims to help balancing the game focus more toward a peaceful power expansion than geographical expansion. \nHowever, since it is quite game changing it is locked behind a game rule which consists of a three options : \"Restricted\" which feature the new changes (default option), \"Vanilla\" which keep the system unchanged, and a third, more experimental that disallow completely claim fabrication by the chancellor. Other means to get claims like inheritance, plot fabricated claims, claim title action etc. remain available whatever the game rule you choose."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The new system introduced by the mod :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "tribal government types can't fabricate claims with their chancellor's job (they however still do get plenty of CBs to wage war)",
+                            "children": []
+                        },
+                        {
+                            "text": "claims can't be fabricated against vassals of any level, but possible against liege (direct or not)",
+                            "children": []
+                        },
+                        {
+                            "text": "you can fabricate claims against land-holders neighbouring your personal demesne, until two province far (your direct neighbour and the neighbour of your neighbour). For the record, vanilla game allows the whole diplomatic range for this as well as vassals.",
+                            "children": []
+                        },
+                        {
+                            "text": "you can't send back again your chancellor fabricating a claim against a Lord who successfully banned your chancellor (banishing a culprit chancellor is a new option brought by the mod, more about it below)",
+                            "children": []
+                        },
+                        {
+                            "text": "you can't fabricate claims for a whole kingdom",
+                            "children": []
+                        },
+                        {
+                            "text": "you can fabricate a claim on a duchy title only if you have the \"Become king\" ambition, and your chancellor is competent enough",
+                            "children": []
+                        },
+                        {
+                            "text": "you can fabricate claims on counties if your chancellor is competent enough",
+                            "children": []
+                        },
+                        {
+                            "text": "you can fabricate claims on feudal baronies (something you can't do in base game)",
+                            "children": []
+                        },
+                        {
+                            "text": "as the targetted noble, assigning your own chancellor the \"Perform statecraft\" job will reduce drastically the chances for the instigator to succeed in fabricating claims against you",
+                            "children": []
+                        },
+                        {
+                            "text": "as the targetted noble, assigning your spymaster the \"Scheme\" job may help discovering the chancellor fabricating claims against you",
+                            "children": []
+                        },
+                        {
+                            "text": "claim fabrication prestige cost is higher than it used to be, it now also cost piety",
+                            "children": []
+                        },
+                        {
+                            "text": "there's no more gold cost on claim fabrication at the moment it is made, but instead a periodical event does fund the mission. That event has various options and outcomes.",
+                            "children": []
+                        },
+                        {
+                            "text": "various possible target are highlighted on the map when selecting the chancellor's job. Four different colours indicate the various possible combinations if the province is a direct neighbour or not, inside or outside our realm.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some new flavour options when the target noble discovers a foreign chancellor trying to fabricate a claim on his titles :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "bribing gets two options : minor bribe and a more generous one, varying in costs and potential efficiency",
+                            "children": []
+                        },
+                        {
+                            "text": "you can now try to arrest and banish the chancellor, with various outcomes",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Muslim world",
+            "level": 4,
+            "content": []
+        },
+        {
+            "heading": "Iqta",
+            "level": 5,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Even though Iqta government is also militaristic as its feudal counterpart, it works a bit differently. The aim is put on more professional armies, so in game terms it consists in a better access to retinues and less levies. So iqta ruler gets various bonus to get more retinues: their government type itself gives a +40% bonus to their retinue cap, the Jizya system (see below) as well as their castle holdings specializations, the latter giving them also their malus to levy size. \nAs(unmoddable game-AI) tends to not naturally invest in retinues, the mod gives some free retinues at start to iqta rulers. These units come from their rank, the province of Arabic culture they hold and jizya taxed holdings. As for sustaining the cost of those, retinues ought to be more costly that levies and are not free to reinforce, iqta rulers gets some income bonuses, notability by holding directly cities."
+                }
+            ]
+        },
+        {
+            "heading": "Urban culture",
+            "level": 5,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Muslims rulers with Iqta government can no longer rule on Temple which are back to theocracies. They can now hold Cities directly.\nIf the ruler owns a city outside his capital county, he has a -50% tax modifier on this city.\nThey have a decision to Confiscate a city . It comes with various limitations:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "based on rank (count: 1, duke: 2, king or emperor: 3)",
+                            "children": []
+                        },
+                        {
+                            "text": "only one city can be confiscated in the capital county",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There is no limit on how many cities can be held directly, but they have to be acquired by other ways (title revocation, war, funding a city)."
+                }
+            ]
+        },
+        {
+            "heading": "Zawiyas",
+            "level": 5,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With v1.10 Muslim have adapted specializations: the Zawiya/Khanqah/Dahira/Dargah.\nAll this are the same thing in fact Sufi holdings with different names based on the region they are in respectively for Maghreb, Arabic area, Mali, India.\nGameplay-wise they are the equivalent of Christian monasteries as it is the closest concept to get something quite in line within a gameplay perspective."
+                }
+            ]
+        },
+        {
+            "heading": "Jizya",
+            "level": 5,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With v1.10 the Jizya system has been reworked."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "An holding modifier is applied when the holding holder is Muslim (but not tribal nor nomadic) on a Christian or Jewish province.\nThe effects of this modifiers are the following :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "-20% levy size",
+                            "children": []
+                        },
+                        {
+                            "text": "+25% local tax modifier",
+                            "children": []
+                        },
+                        {
+                            "text": "+100 retinue size.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Flavour",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This mod includes various items to bring some immersion to the player and bringing a medieval flavour to the game's world."
+                }
+            ]
+        },
+        {
+            "heading": "Forest theme",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The mod includes various elements forest based :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "one can hire a Forester",
+                            "children": []
+                        },
+                        {
+                            "text": "you can specialize the use of your forest lands (economy, hunt etc.)",
+                            "children": []
+                        },
+                        {
+                            "text": "you can expand (and then decrease) your forest demesne (buy, sell, give some forest lands, cut trees etc. )",
+                            "children": []
+                        },
+                        {
+                            "text": "different forest charters levels",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Economy and trade theme",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The various resources and buildings bring some flavour events as well."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Meteorological events (drought, flood)",
+                            "children": []
+                        },
+                        {
+                            "text": "Good/bad crops, fishing seasons",
+                            "children": []
+                        },
+                        {
+                            "text": "Prosperity events (good or bad of course)",
+                            "children": []
+                        },
+                        {
+                            "text": "All these can be occasionally related in your dynastic Chronicles for memory",
+                            "children": []
+                        },
+                        {
+                            "text": "republic trade post buildings have been heavily expanded",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Artefacts",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The mod brings some few more artefacts, mostly related to some other mod's features."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example a bunch of books -either generic and unique- are added. \nThey are linked to the library buildings and are used with the acquire and study books decisions and events chains."
+                }
+            ]
+        },
+        {
+            "heading": "Ambition events",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Les Trois Tours provides a few alternate event chains for the game ambitions to increase competencies"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "an economy based chain to increase stewardship, based on some trading experiences",
+                            "children": []
+                        },
+                        {
+                            "text": "a military based chain to increase martial, based on a researching and forge a sword, that is materialized as several artefacts if successful",
+                            "children": []
+                        },
+                        {
+                            "text": "an economy/learning based, based on cadastre related stuff",
+                            "children": []
+                        },
+                        {
+                            "text": "all these can bring side effects as nicknames, opinions, chronicle entries, traits etc.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Religion themed",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A build a cathedral system, which permits to build such monument thanks to a holy relic. The construction covers more than a century with a lot of flavour events. (distinct from vanilla \"Great works\" system as the mod introduces that long before that DLC)",
+                            "children": []
+                        },
+                        {
+                            "text": "Cathedrals era is game-rule locked to either fire dynamically or not. That era is called \"Opus Francigenum\" which is the contemporary name for \"gothic art\".",
+                            "children": []
+                        },
+                        {
+                            "text": "During pre-Opus Francigenum era, Catholic episcopal see specialized holdings and landed bishops get a \"Romanesque cathedral\" building in their demesne. The occasional destruction (by fire), and reconstructions of this old cathedrals contribute to trigger the \"Opus Francigenum\". Such Romanesque cathedral display a 3D model on the game map.",
+                            "children": []
+                        },
+                        {
+                            "text": "Character following a Muslim school or another can build a theological university based on their obedience",
+                            "children": []
+                        },
+                        {
+                            "text": "Muslim rulers from Duke tier get an additional advisor in their counsel : The Mufti, which represent the additional weight of religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Assigning the \"Proselytize\" job to your priest as usual highlights the map's province in different colours to show where you can send him in mission and what is the religious status in there (already your religion, convertible inside realm and convertible outside realm). The mod add an additional colour (orange) to spot heretical provinces.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Others",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "the mod brings a lot of its own graphics (icons, event pictures)",
+                            "children": []
+                        },
+                        {
+                            "text": "an Easter egg hunt which can bring you some substantial bonus. This involves events chains, artefacts, rumours...",
+                            "children": []
+                        },
+                        {
+                            "text": "lots of new graphical stuff associated with the mod content (event pictures, icons etc.)",
+                            "children": []
+                        },
+                        {
+                            "text": "you can rename any title, even titles you don't hold",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "FAQ",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Which are the supported languages ?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The mod was created in French but it now fully supports English.\nFeel free to point any mistakes in the texts to the team."
+                }
+            ]
+        },
+        {
+            "heading": "Where can I find the latest official version ?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In the Paradox forum thread .\nYou can also find the changelogs of the mod and discuss with the authors."
+                }
+            ]
+        },
+        {
+            "heading": "Can save-games be exported to Europa Universalis IV ?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Yes and no.\nThe mod team has not worked on the EUIV conversion.\nConsequently, no feature of the mod can be converted to EUIV but the Vanilla game can be converted."
+                }
+            ]
+        },
+        {
+            "heading": "Is the mod compatible with any other mod ?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "See #Mod compatibility"
+                }
+            ]
+        },
+        {
+            "heading": "How do I proceed in order to join the team, contribute or test the mod ?",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Even without modding experience, it is possible to help with ideas or becoming a tester.\nSimply send a PM to a member of the team over at the paradox forums and we will discuss it. You need to remember that we all started as simple players."
+                }
+            ]
+        },
+        {
+            "heading": "Dev Diaries",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Dev Diaries of the mod are listed here in the Paradox forum ."
+                }
+            ]
+        },
+        {
+            "heading": "Team contributions and credits",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Arko : design, code and graphics",
+                            "children": []
+                        },
+                        {
+                            "text": "Mouchi : design and code",
+                            "children": []
+                        },
+                        {
+                            "text": "Ivan37 : texts, help and support",
+                            "children": []
+                        },
+                        {
+                            "text": "Caocao : English translations",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Thanking to Strategium and Paradox forums for feedback, testing and contributions."
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ http://forum.paradoxplaza.com/forum/index.php?threads/mod-les-trois-tours-the-three-towers-an-economical-and-medieval-flavour-mod.788554/page-12#post-22112426",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

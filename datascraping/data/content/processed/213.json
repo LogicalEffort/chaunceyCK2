@@ -1,0 +1,409 @@
+{
+    "pageid": 213,
+    "title": "Culture modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Cultures and culture groups are defined (as of 1.06) in the files contained in the /common/cultures/ folder."
+                }
+            ]
+        },
+        {
+            "heading": "Definition",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The culture files have within them one or more culture group definitions, within which a graphical culture is set, and one or more cultures are defined."
+                }
+            ]
+        },
+        {
+            "heading": "Culture group",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The culture group is defined as a group tag with an alphanumerical ID. A culture group must have a graphical_cultures defined, and one or more cultures. An example of a culture group definition (with cultures) would be:"
+                }
+            ]
+        },
+        {
+            "heading": "Culture",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The culture definition is a group tag with the following tags:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Attribute",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "graphical_cultures",
+                            "List<culturegfx>",
+                            "Ordered list of graphical cultures used when drawing things such as portraits and map items. The first culturegfx is the preferred one, others are fallback types in case of no matching gfx entry.",
+                            "graphical_cultures = { italiangfx southerngfx }"
+                        ],
+                        [
+                            "unit_graphical_cultures",
+                            "List<culturegfx>",
+                            "Used to set which set of graphics are used to draw units on the map",
+                            "unit_graphical_cultures = { saxongfx englishgfx }"
+                        ],
+                        [
+                            "secondary_event_pictures",
+                            "culture",
+                            "",
+                            ""
+                        ],
+                        [
+                            "color",
+                            "color",
+                            "The color used when drawing the culture map mode RGB format with a range of 0-1",
+                            "color = { 0.25 0.5 0.75 }"
+                        ],
+                        [
+                            "horde",
+                            "bool",
+                            "Whether characters of this culture are treated as a Horde . Optional.",
+                            "horde = yes"
+                        ],
+                        [
+                            "used_for_random",
+                            "bool",
+                            "Prevents the culture to be randomly selected when using the command create_character = { culture = random} .",
+                            "used_for_random = no"
+                        ],
+                        [
+                            "allow_in_ruler_designer",
+                            "bool",
+                            "Prevent selecting the culture in the Ruler designer . Often used with used_for_random = no .",
+                            "allow_in_ruler_designer = no"
+                        ],
+                        [
+                            "dukes_called_kings",
+                            "bool",
+                            "Independent dukes are called petty kings",
+                            "dukes_called_kings = yes"
+                        ],
+                        [
+                            "baron_titles_hidden",
+                            "bool",
+                            "",
+                            "baron_titles_hidden = yes"
+                        ],
+                        [
+                            "count_titles_hidden",
+                            "bool",
+                            "",
+                            "count_titles_hidden = yes"
+                        ],
+                        [
+                            "parent",
+                            "culture",
+                            "Makes parent and child cultures not suffer foreigner opinion. The parent must appear before the child in the culture file. If you include more than one parent tag in the same culture, only the last one will apply. The relationship is not transitive - a member of the 'grandparent' culture, if any, is still a foreigner.",
+                            "swedish = { parent = norse }"
+                        ],
+                        [
+                            "modifier",
+                            "static modifiers",
+                            "Modifiers for [ provinces ? ] of that culture",
+                            "modifier = default_culture_modifier"
+                        ],
+                        [
+                            "character_modifier",
+                            "modifiers",
+                            "Character modifiers, similar to religions.",
+                            "character_modifier = {\n\tlearning = 4\n}"
+                        ],
+                        [
+                            "founder_named_dynasties",
+                            "bool",
+                            "Makes dynasties with this culture be named after the founder. Optional.",
+                            "founder_named_dynasties = yes"
+                        ],
+                        [
+                            "dynasty_title_names",
+                            "bool",
+                            "Makes the primary title of rulers with this culture display a name based on the dynasty. Optional",
+                            "dynasty_title_names = yes"
+                        ],
+                        [
+                            "disinherit_from_blinding",
+                            "bool",
+                            "Blinded characters cannot inherit",
+                            "disinherit_from_blinding = yes"
+                        ],
+                        [
+                            "allow_looting",
+                            "bool",
+                            "Enables looting .",
+                            "allow_looting = yes"
+                        ],
+                        [
+                            "seafarer",
+                            "bool",
+                            "Will prefer looting coastal provinces, cheaper fleet levies",
+                            "seafarer = yes"
+                        ],
+                        [
+                            "dynasty_name_first",
+                            "bool",
+                            "Puts dynasty name before personal name. Optional.",
+                            "dynasty_name_first = yes"
+                        ],
+                        [
+                            "feminist",
+                            "bool",
+                            "Nullifies the negative opinion modifier that vassals normally get if the ruler is female or has female heir. Optional.",
+                            "feminist = yes"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "All optional tags default to no."
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Names",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In addition to the above tags, there are a lot of options for the game to use when naming the characters. All apart from male_names / female_names are optional."
+                }
+            ]
+        },
+        {
+            "heading": "male_names/female_names",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These tags are a list of forenames the game can use when creating a new character. They are given as a list of space separated names, inside a male_name or female_name group."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Variations of the same name can be defined by joining them with an underscore: Johan_John . This allows regnal numbering to be consistent if culture changes, so Juan III won't be succeeded by Ivan I. Double names can also be defined by enclosing them in double quotes. E.g. \"Sarah Ann\" . These will be treated as a single name."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Names can also be weighted using the syntax Name:Weight , default weight being 100 if omitted [1] Zero means the name will never get picked when new characters are generated."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that this feature has been broken since 2.5 and remains broken in 2.6, as the game completely ignores weight values."
+                }
+            ]
+        },
+        {
+            "heading": "Patronyms",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A patronym prefix or suffix can combined with the father's name, and added to the character's name. E.g. If the male patronym is \"son\", David's son Mike will have the full name of Mike Davidson."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Attribute",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "male_patronym",
+                            "string",
+                            "The male prefix/suffix added to the father's name.",
+                            "male_patronym = \"sson\""
+                        ],
+                        [
+                            "female_patronym",
+                            "string",
+                            "The female prefix/suffix added to the father's name.",
+                            "female_patronym = \"sdotter\""
+                        ],
+                        [
+                            "prefix",
+                            "bool",
+                            "Whether the patronym is a suffix or prefix. Optional, defaults to no.",
+                            "prefix = no"
+                        ],
+                        [
+                            "grammar_transform",
+                            "string",
+                            "Apply certain transformation to the father's name to generate a patronymic (for example, Spanish \"Rodrigo\" + \"ez\" => \"Rodriguez\"). Possible values are: french or spanish.",
+                            "grammar_transform = spanish"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Dynasty prefix",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These tags are used for setting the prefix used when adding the dynasty to a character's name. E.g. If the prefix is set to \"of \" , then David, who is part of the Crawford dynasty, will have the name \"David of Crawford\"."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Attribute",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "from_dynasty_prefix",
+                            "string",
+                            "Sets the prefix used when adding the dynasty to the name",
+                            "from_dynasty_prefix = \"of \""
+                        ],
+                        [
+                            "from_dynasty_suffix",
+                            "string",
+                            "",
+                            ""
+                        ],
+                        [
+                            "bastard_dynasty_prefix",
+                            "string",
+                            "Used instead of from_dynasty_prefix if the character is a bastard",
+                            "bastard_dynasty_prefix = \"Fitz\""
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Naming chances",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This sets the chance of a character being named after a parent or grandparent. The sum of the values cannot exceed 100 for each gender."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Attribute",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "pat_grf_name_chance",
+                            "int",
+                            "The chance of a boy being named after his paternal grandfather",
+                            "pat_grf_name_chance = 55"
+                        ],
+                        [
+                            "mat_grf_name_chance",
+                            "int",
+                            "The chance of a boy being named after his maternal grandfather",
+                            "mat_grf_name_chance = 5"
+                        ],
+                        [
+                            "father_name_chance",
+                            "int",
+                            "The chance of a boy being named after his father",
+                            "father_name_chance = 30"
+                        ],
+                        [
+                            "pat_grm_name_chance",
+                            "int",
+                            "The chance of a girl being named after her paternal grandmother",
+                            "pat_grm_name_chance = 60"
+                        ],
+                        [
+                            "mat_grm_name_chance",
+                            "int",
+                            "The chance of a girl being named after her maternal grandmother",
+                            "mat_grm_name_chance = 15"
+                        ],
+                        [
+                            "mother_name_chance",
+                            "int",
+                            "The chance of a girl being named after her mother",
+                            "mother_name_chance = 15"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Example",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Modding tools",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For people who wish to work on cross-linking name lists, there exists a modding tool called CK2-Cultures-Parser . This tool can convert the male and female name lists from cultures.txt file into spreadsheet tables (which can be edited via OpenOffice or Excel) and write modified name lists from the spreadsheet tables back into a cultures.txt file."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A link to this modding tool's detailed description and download page can be found via the \"List of Mods/Guides/Utilities\" in the \"Crusader Kings II - User Modifications\" subforum on the Paradox Interactive forums."
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Culture",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Forum:774248",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

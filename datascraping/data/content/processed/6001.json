@@ -1,0 +1,615 @@
+{
+    "pageid": 6001,
+    "title": "CK2 To EU4 Converter",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This converter will allow you to take a game from the end of CK2 and convert it into a playable EU4 save, continuing your game. It is compatible with the EU4 to Vic3 , EU4 to Vic2 and Vic2 to HoI4 converters, allowing the player to play a continuous megacampaign from CK2 through HoI4. This project, while still active and supported, has been succeeded by CK3 to EU4 converter project ."
+                }
+            ]
+        },
+        {
+            "heading": "Features",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Requirements",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Crusader Kings II with optional expansions, latest version is required.",
+                            "children": []
+                        },
+                        {
+                            "text": "Europa Universalis IV, with optional expansions, latest version is required.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Incoming Savegames",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Converter supports compressed save games.",
+                            "children": []
+                        },
+                        {
+                            "text": "Ironman saves are supported.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Outgoing Mod",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Converter will produce an EU 4 mod.",
+                            "children": []
+                        },
+                        {
+                            "text": "Using the front-end, the mod will be copied to EU4 mod/ directory located in users' documents, usually C:\\Users\\User\\Documents\\Paradox Interactive\\Europa Universalis IV\\mod .",
+                            "children": []
+                        },
+                        {
+                            "text": "Without front-end (running the converter manually), mod will be exported to converter's output/ folder, and will have to be moved manually by user.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bookmarks",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Converter supports two starting bookmarks - 1444.11.11 and the date of conversion. Players starting earlier will have to wait for 1453 to begin with regular tech progression as technology during CK2 era does not change much.",
+                            "children": []
+                        },
+                        {
+                            "text": "Starting before 1066 will require the player to embrace Feudalism institution as it canonically starts at 1066.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Map conversion",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Converter tries to alter the map as little as possible against vanilla. If a country's not in scope of CK2, it is untouched. This applies to county histories as well - most countries will have a history (monarchs, leaders, advisors) identical to EU4 if they start at 1444.11.11 bookmark",
+                            "children": []
+                        },
+                        {
+                            "text": "For those countries in scope of CK2, conversion treads lightly, only updating necessary elements, eg. which provinces are owned and which not. Converter attempts to be very careful there as well, resolving collisions by looking at which ruler developed their land the most, or has maybe built a great wonder in the province.",
+                            "children": []
+                        },
+                        {
+                            "text": "All of the provinces in CK2 have been painstakingly remapped against current EU4 map, and if there are mismapped spots please contact us.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Religions and Cultures",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The religions have been expanded, and EU4 conversion will support most of CK2 religions. These religions are also compatible with EU4toVic2 and Vic2ToHoI4 converters.",
+                            "children": []
+                        },
+                        {
+                            "text": "All CK2 religions have both reformed and unreformed variants, and it is possible for a surviving unreformed country to reform their religion within EU4 timeframe.",
+                            "children": []
+                        },
+                        {
+                            "text": "Cultures have been expanded greatly, and CK2 cultures are not imported on 1:1 basis - instead they are split up. Italian can break into Tuscan, Lombardian, Umbrian, Venerian and so on, as the converter tries to emulate EU4 style of cultural groups.",
+                            "children": []
+                        },
+                        {
+                            "text": "Countries can be named after their Dynasties (though they can retain canonical Tags and have canonical missions and ideas), and some of these dynasties have custom flags. This applies to countries with cultures that support such a renaming.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Advisors, Rulers, Queens and Heirs",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Ruler's councilmen from CK2 are available for hire in EU4 (unless they are too old for EU4 to offer them).",
+                            "children": []
+                        },
+                        {
+                            "text": "Rulers are converted ad-verbatim. If a ruler is too young to rule, a regency council will be set up for them.",
+                            "children": []
+                        },
+                        {
+                            "text": "Queens (or Prince-consorts) are also imported where possible, to help stabilize the realm at start.",
+                            "children": []
+                        },
+                        {
+                            "text": "Heirs are imported where possible. Since the converter does not have access to memory-state of a running CK2 game, it makes educated guesses for some of the more obscure succession choices, so please allow for a wrong heir or a lack of one that can occur sometimes.",
+                            "children": []
+                        },
+                        {
+                            "text": "Excommunicated rulers are imported as such.",
+                            "children": []
+                        },
+                        {
+                            "text": "Ruler prestige, cash, and possible loan to Jewish moneylenders are all imported but at a logarithmic scale - starting as a relative unknown nets negative starting prestige, while those rulers staring at 500-1000 prestige or more will get a significant boost.",
+                            "children": []
+                        },
+                        {
+                            "text": "While starting prestige and cash are determined by EU4 itself, converter will give a boost of up to 100-150 ducats to wealthy nations, and starting prestige modifier from -50 for complete unknowns up to +100 for extremely prestigious rulers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Negative cash is not imported.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Diplomacy, Vassals, Tributaries and Personal Unions",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "For a christian ruler that holds multiple crowns (of same level), he will find his realm split into multiple states, under a personal union lead by his primary title. The split occurs on de-jure basis, where territory outside any de-jure titles will fall under primary crown.",
+                            "children": []
+                        },
+                        {
+                            "text": "Non-christian rulers in the same situation will simply absorb the other crowns.",
+                            "children": []
+                        },
+                        {
+                            "text": "Large CK2 vassals, holding inappropriate amounts of provinces (compared to the total country size) will be split off into EU4 vassals at conversion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Royal marriages are not imported, and neither are alliances. Unlike CK2, in EU4 diplomatic slots are few and with some of them already taken by vassals and PUs, the converter does not desire to choke the player's diplomatic slots.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tributaries are imported on 1:1 basis. All countries regardless of religion can start with those tributaries they had in CK2.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Buildings, Development and Wonders",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The converter does not import any buildings. Only building that is supported at game start is the humble Fort.",
+                            "children": []
+                        },
+                        {
+                            "text": "Small countries (but not OPMs or microstates) will only receive a capital fort, while larger ones will receive a fort in every state or territory they mostly control. Player should delete the excess forts if these hamper the economy.",
+                            "children": []
+                        },
+                        {
+                            "text": "Unlike buildings, development does map directly against CK2 development. The more castle baronies that exist in a province, and more buildings inside each, more manpower development is received. Similar applies to cities and production, and finally to temples and tax development.",
+                            "children": []
+                        },
+                        {
+                            "text": "A single building, or building upgrade is worth 0.1 development points in appropriate category. Barony itself is worth 0.3 development points, and a county can have up to 7 of those.",
+                            "children": []
+                        },
+                        {
+                            "text": "Wonders are imported in the same fashion as the official converter does - as permanent province modifiers granting powerful bonuses.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "HRE and Empire Shattering",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Entirely player's choice, the HRE can be kept unified or shattered into EU4-style microstates. If shattering is enabled (which is recommended), the converter will carefully choose which tags are to be turned into free cities and electors.",
+                            "children": []
+                        },
+                        {
+                            "text": "Elector ratio attempts to match vanilla EU4 - three theocracies (or substitute republics in not enough (arch)bishops are available) and four secular rulers.",
+                            "children": []
+                        },
+                        {
+                            "text": "HRE Electors from CK2 are preserved if possible - they need to hold elector duchies and survive the conversion process.",
+                            "children": []
+                        },
+                        {
+                            "text": "Which empire is to be the new HRE is also up to the player - player can HRE-ify Byzantium, Rome, or any empire they desire.",
+                            "children": []
+                        },
+                        {
+                            "text": "All empires on the map can be shattered into smaller independent kingdoms or duchies, in case the CK2 game was too blobby. Which empires shatter can also be manually set.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "China",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "China is imported as the ruling dynasty's tag, so a ruling Han dynasty would turn China into HND.",
+                            "children": []
+                        },
+                        {
+                            "text": "Western Protectorate is annexed.",
+                            "children": []
+                        },
+                        {
+                            "text": "Western Protectorate's tributaries and vassals are transferred to China.",
+                            "children": []
+                        },
+                        {
+                            "text": "Celestial Emperor's dynasty, culture and religion are preserved.",
+                            "children": []
+                        },
+                        {
+                            "text": "All starting vanilla tributaries from 1444 are preserved at both bookmarks.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Siberia & Africa",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Optionally, the player can clear out all insignificant tribes and nomads from east and west Siberia Regions. For those playing Russian countries, this will marginally ease any eastward colonial expansion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Unless a large country has already expanded into Subsaharan region, the saharan passes will be cleared to prevent premature expansion into the basin.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Frequently Asked Questions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Q: Is this the official converter? A: This converter has been done by the same team that specializes in other Paradox converters: \nImperator->CK3, CK3->EU4, EU4->Vic2, Vic2->HoI4, CK2->EU3, EU3->Vic2, Vic2->HoI3"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is not official, it does not use official converter's code (though it does recycle some data files)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This is a standalone effort (and so far, the third ck2->eu4 converter to exist)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Q: What are the main advantages between this and the official converter? A: Speed, precision and versatility."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This converter does all that official one does, with many additions and corrections:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Shattering any empire and using it as a base for HRE mechanics",
+                            "children": []
+                        },
+                        {
+                            "text": "Shattering empire blobs in general",
+                            "children": []
+                        },
+                        {
+                            "text": "Better and more natural dev shaping of provinces",
+                            "children": []
+                        },
+                        {
+                            "text": "Support for granulated cultures and religions, so \"German\" or \"Italian\" break apart into EU4-subcultures",
+                            "children": []
+                        },
+                        {
+                            "text": "True Chinese TAG swapping into ruling dynasty's TAG along with preserving the Celestial Emperor's culture and religion (instead of a simple Ming rename)",
+                            "children": []
+                        },
+                        {
+                            "text": "Integration of the Western Protectorate into China's mainland",
+                            "children": []
+                        },
+                        {
+                            "text": "Better provincial mappings (entirely redone to map CK 3.3 into EU4 1.30)",
+                            "children": []
+                        },
+                        {
+                            "text": "Import of councilmen as advisors",
+                            "children": []
+                        },
+                        {
+                            "text": "Special flags for muslim dynasties (kingdoms and empires are named after their dynasties)",
+                            "children": []
+                        },
+                        {
+                            "text": "Dual bookmarks (for both conversion date and 1444)",
+                            "children": []
+                        },
+                        {
+                            "text": "Full tributary support, both preserving offmap tributaries and importing CK2 ones",
+                            "children": []
+                        },
+                        {
+                            "text": "Expanded EU4 religions with CK2 ones, support for these religions in Vic2 and HoI4.",
+                            "children": []
+                        },
+                        {
+                            "text": "Clearing of siberian tribe and horde OPMs",
+                            "children": []
+                        },
+                        {
+                            "text": "Importing of excommunicated rulers",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed official converter's handling of starting cash and prestige (it could be negative)",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed official converter's bug with wonder replication",
+                            "children": []
+                        },
+                        {
+                            "text": "Importing of starting loans",
+                            "children": []
+                        },
+                        {
+                            "text": "Guaranteed support for future EU4 releases",
+                            "children": []
+                        },
+                        {
+                            "text": "And, as time passes, many more features.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Drawbacks are, and will remain for foreseeable future:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Not integrated into the game (and will never be)",
+                            "children": []
+                        },
+                        {
+                            "text": "No support for Linux or Mac (need help for that)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Q: I have an ironman save. Can it be converted? A: Yes."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Q: Shattered world? A: Not an issue."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Q: Random world? A: We got your back."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Q: I had Sunset Invasion fire, is this relevant for conversion? A: You'll find everything is in *perfect* order, according to specifications."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Q: What about mods? A: Unless they change how cultures, religions or flags work, sure, use mods. Total map overhauls are not supported (of course), and whatever new cultures and religions are brought by the mod - you'll have to add manually in the files in configurables folder."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Q: Can you support Random New World? A: No. We want the export to be compatible with future conversion to Vic2."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Q: How can I customize my game after converting? A: Use the guide in after_converting.txt in the converter subdirectory. Scan through configurables/ folder and look into the myriad of configuration files - a great majority of these files is intended to be modified by users to achieve\nspecific conversion results."
+                }
+            ]
+        },
+        {
+            "heading": "Quick Troubleshooting",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Q: When starting conversion, conversion immediately ends, not producing anything. A: Inside the converter folder there is a file called VC_redist.x64.exe. This is Microsoft's C++ redistributable package the converter relies on. Install it and re-run the conversion."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Q: The generated mod was in a different language than my savegame. A: At the moment, CK2ToEU4 only guarantees English localisation, but German, French and Spanish are nominally supported."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Q: Some/all country names appear as X25, FRA etc. A: This is an issue with the localisation. Only English is guaranteed, and you may be running EU4 in some other localization. Also, CK2 often lacks named and adjectives for various titles in non-English languages. We try to use English localisation when this happens."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Q: I loaded my mod, but nothing changed. What's wrong? A: Is the mod enabled in the launcher? If so, then EU4 refused to load it due to possible errors. Respond to the forum thread and upload your save, log.txt and errors.txt so we may debug."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Q: The country crashes upon selecting a country and pressing play (at map selection) A: Upload your save, log.txt and errors.txt to the forum thread for further study."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Q: The game forbids me to select nations. A: Upload your save, log.txt and errors.txt to the forum thread for further study."
+                }
+            ]
+        },
+        {
+            "heading": "Versions and Change Logs",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.0 de Navarra - Respectfully, are we done yet? Release - 2024.05.10",
+                            "children": []
+                        },
+                        {
+                            "text": "1.0 of Mercia - Merciful Release - 2023.11.06",
+                            "children": []
+                        },
+                        {
+                            "text": "1.0 de Leon - Life support Release - 2023.04.19",
+                            "children": []
+                        },
+                        {
+                            "text": "1.0 Karling - Yup, Still Kicking Release - 2022.09.14",
+                            "children": []
+                        },
+                        {
+                            "text": "1.0 Isauros - Still Kicking Release - 2022.03.02",
+                            "children": []
+                        },
+                        {
+                            "text": "1.0 Habsburg - Extra Monumental Release - 2021.11.11",
+                            "children": []
+                        },
+                        {
+                            "text": "1.0 Gildehusen - Monumental Release - 2021.07.09",
+                            "children": []
+                        },
+                        {
+                            "text": "1.0 de Foix - Maintenance Release - 2021.05.04",
+                            "children": []
+                        },
+                        {
+                            "text": "1.0 d'Este - Less Bugs Release - 2020.12.30",
+                            "children": []
+                        },
+                        {
+                            "text": "1.0 Dunbar - Snowflake Release - 2020.08.19",
+                            "children": []
+                        },
+                        {
+                            "text": "1.0 Capet - Imperial Release - 2020.06.10",
+                            "children": []
+                        },
+                        {
+                            "text": "1.0 de Barcelona - Stable Release - 2020.04.27",
+                            "children": []
+                        },
+                        {
+                            "text": "0.1 d'Asturias - Initial Release - 2020.04.15",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Detailed change logs can be seen at linked forum threads above."
+                }
+            ]
+        },
+        {
+            "heading": "Credits",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Elfangor567 - Coding and Data Files Idhrendur - Sanity Checks and Review Mysterious_Italy - Data Files, Graphics theosZA - Coding Zemurin - The Weave"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "AND ALL THE OTHERS WHO GAVE THEIR INPUT ON THE FORUM AND DISCORD."
+                }
+            ]
+        }
+    ]
+}

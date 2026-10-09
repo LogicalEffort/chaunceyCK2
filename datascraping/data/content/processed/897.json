@@ -1,0 +1,731 @@
+{
+    "pageid": 897,
+    "title": "Factions",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Factions are organized groups of vassals , united against their liege for a common purpose."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When a leader thinks the faction is powerful enough, they can issue an ultimatum to their liege. Unless the liege folds to the demands, this results in a civil war , where all faction members revolt together under a temporary title."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Each vassal can lead or join up to two Factions. If a faction leader dies, the most powerful remaining faction member automatically takes over as the new leader."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "For liege strategies, see Distribution of power guide .",
+                            "children": []
+                        },
+                        {
+                            "text": "For vassal strategies, see Joining factions .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Who can join factions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Vassals cannot join factions if they are:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A child",
+                            "children": []
+                        },
+                        {
+                            "text": "Incapable",
+                            "children": []
+                        },
+                        {
+                            "text": "Imprisoned",
+                            "children": []
+                        },
+                        {
+                            "text": "With liege:",
+                            "children": [
+                                {
+                                    "text": "\"Discouraged from Factionalism: -5 \" opinion modifier (10 years from Spymaster \"Scheme\" mission , 100 years from Intrigue focus )",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Non-aggression pact (depending on a game rule )",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Truce",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Blood oath (only affects nomads; claim-for-other factions are exempted)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Subject to a higher liege's crown law that outlaws vassal infighting (only without Conclave?)",
+                            "children": []
+                        },
+                        {
+                            "text": "A voter (councilor or regent), when the council is empowered to vote on war declaration, the council is content (no recent tyranny or succession ), and the voter is not tribal or nomadic .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Faction strength",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Players receive a \"Dangerous Factions\" alert if a faction reaches 70% strength. AI leaders may issue ultimatums with a minimum of 75%, with large boosts to likelihood at 100% and 150%. As an exception, the Antiking faction can fire as low as 50%, since the Pope may offer to join as a war ally."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Most AI-led factions will not deliver ultimatums while the liege is the primary defender in any war or attacking in a holy war, invasion, or claim war. Independence and claimant factions have more complex criteria for which liege wars suppress ultimatums."
+                }
+            ]
+        },
+        {
+            "heading": "List of Factions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Faction",
+                            "Notes"
+                        ],
+                        [
+                            "",
+                            "Install [Character] in [Title]",
+                            "Character must have a claim Under Feudal elective or Princely elective , the character can instead be a candidate (elector-rank title) Under other succession laws that use succession voting , the character must be a claimant and a candidate (e.g. same dynasty under Elective gavelkind ) Attacker may call external allies (but not vassals of their former liege) If the revolt leader is also the claimant, uses a modified CB that allows the war to continue under an heir Imprisons the former ruler, if this was their primary title and either: the revolt leader was the claimant or the former ruler was demoted in rank"
+                        ],
+                        [
+                            "",
+                            "Succession by Primogeniture in [Title]",
+                            "Rare: only started by AI if they would be heir under Primogeniture"
+                        ],
+                        [
+                            "",
+                            "Succession by Seniority in [Title]",
+                            "Rare: only started by AI if they would be heir under Seniority"
+                        ],
+                        [
+                            "",
+                            "Succession by Gavelkind in [Title]",
+                            "High priority"
+                        ],
+                        [
+                            "",
+                            "Elective Monarchy in [Title]",
+                            "Changes succession to Feudal elective (for the HRE, Princely elective ) Without Conclave , requires lowest crown authority (Autonomous Vassals) With Conclave, requires the council to have all voting powers (except in HRE) In HRE: always available, councilors cannot be suppressed by council laws, and somewhat higher priority"
+                        ],
+                        [
+                            "",
+                            "Antiking",
+                            "Usable when liege is a king+ with a vassal antipope Seeks to install the faction leader as the new ruler, depose the antipope, and enact papal investiture The real Pope can be called into the war"
+                        ],
+                        [
+                            "",
+                            "Oust Ruler",
+                            "Requires Conclave Liege government must be feudal group and not Chinese imperial Liege must be at least king tier and not a religious head . If the title gets a new holder for any reason, faction members get \"+10 Love the New Ruler\" and cannot create/join this faction again for 2 years Deposes the ruler in favor of the most popular vassal who is eligible (count+, feudal, adult, not imprisoned, not incapable , not in hiding or in seclusion , not eunuch , and must be male unless succession is fully equal) Enacts two council voting powers Enacts \"full council authority\" New liege owes favors to all attackers (if the faction fights a war) Changes succession to Gavelkind or Feudal elective Only uses elective if council has all voting powers, or already elective, or the faction fights a war For the HRE, Princely elective is used in place of Feudal elective Succession is never changed if it was Imperial elective Sets \"vassal wars\" law to \"allowed\""
+                        ],
+                        [
+                            "",
+                            "Lower Crown Authority in [Title]",
+                            "Not available if Conclave DLC is activated Higher priority at higher levels of crown authority"
+                        ],
+                        [
+                            "",
+                            "Increase Council power",
+                            "Requires Conclave Enacts two council voting powers Sets \"vassal wars\" laws one step toward \"allowed\" All faction members are prohibited from creating/joining this faction again for 10 years Higher priority at low levels of council power and highly restricted vassal laws"
+                        ],
+                        [
+                            "",
+                            "Independence",
+                            "Different rules from directly declared wars of independence . Priority increased by distance (100, 200, 300, 400), different religion/culture, not de jure, king tier In the Western Protectorate, councilors cannot be suppressed by council laws, and high priority when China is unstable On success, every faction member gains independence."
+                        ],
+                        [
+                            "",
+                            "True Believers",
+                            "Event-driven faction for remaining unreformed pagans after a mass conversion Councilors cannot be suppressed by council laws Seeks independence using a special variant of the faction Independence CB"
+                        ],
+                        [
+                            "",
+                            "Abrahamic Dissidents",
+                            "Event-driven faction for remaining Abrahamics after a conversion to Hellenism Councilors cannot be suppressed by council laws Seeks to have the Hellenic ruler deposed and executed. The ruler will abdicate to their heir (if the heir is not pagan) or the revolt leader (if the heir is pagan)"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Character must have a claim",
+                            "children": [
+                                {
+                                    "text": "Under Feudal elective or Princely elective , the character can instead be a candidate (elector-rank title)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Under other succession laws that use succession voting , the character must be a claimant and a candidate (e.g. same dynasty under Elective gavelkind )",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Attacker may call external allies (but not vassals of their former liege)",
+                            "children": []
+                        },
+                        {
+                            "text": "If the revolt leader is also the claimant, uses a modified CB that allows the war to continue under an heir",
+                            "children": []
+                        },
+                        {
+                            "text": "Imprisons the former ruler, if this was their primary title and either: the revolt leader was the claimant or the former ruler was demoted in rank",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Rare: only started by AI if they would be heir under Primogeniture",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Rare: only started by AI if they would be heir under Seniority",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "High priority",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Changes succession to Feudal elective (for the HRE, Princely elective )",
+                            "children": []
+                        },
+                        {
+                            "text": "Without Conclave , requires lowest crown authority (Autonomous Vassals)",
+                            "children": []
+                        },
+                        {
+                            "text": "With Conclave, requires the council to have all voting powers (except in HRE)",
+                            "children": []
+                        },
+                        {
+                            "text": "In HRE: always available, councilors cannot be suppressed by council laws, and somewhat higher priority",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Usable when liege is a king+ with a vassal antipope",
+                            "children": []
+                        },
+                        {
+                            "text": "Seeks to install the faction leader as the new ruler, depose the antipope, and enact papal investiture",
+                            "children": []
+                        },
+                        {
+                            "text": "The real Pope can be called into the war",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Requires Conclave",
+                            "children": []
+                        },
+                        {
+                            "text": "Liege government must be feudal group and not Chinese imperial",
+                            "children": []
+                        },
+                        {
+                            "text": "Liege must be at least king tier and not a religious head .",
+                            "children": []
+                        },
+                        {
+                            "text": "If the title gets a new holder for any reason, faction members get \"+10 Love the New Ruler\" and cannot create/join this faction again for 2 years",
+                            "children": []
+                        },
+                        {
+                            "text": "Deposes the ruler in favor of the most popular vassal who is eligible (count+, feudal, adult, not imprisoned, not incapable , not in hiding or in seclusion , not eunuch , and must be male unless succession is fully equal)",
+                            "children": []
+                        },
+                        {
+                            "text": "Enacts two council voting powers",
+                            "children": []
+                        },
+                        {
+                            "text": "Enacts \"full council authority\"",
+                            "children": []
+                        },
+                        {
+                            "text": "New liege owes favors to all attackers (if the faction fights a war)",
+                            "children": []
+                        },
+                        {
+                            "text": "Changes succession to Gavelkind or Feudal elective",
+                            "children": [
+                                {
+                                    "text": "Only uses elective if council has all voting powers, or already elective, or the faction fights a war",
+                                    "children": []
+                                },
+                                {
+                                    "text": "For the HRE, Princely elective is used in place of Feudal elective",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Succession is never changed if it was Imperial elective",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Sets \"vassal wars\" law to \"allowed\"",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Not available if Conclave DLC is activated",
+                            "children": []
+                        },
+                        {
+                            "text": "Higher priority at higher levels of crown authority",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Requires Conclave",
+                            "children": []
+                        },
+                        {
+                            "text": "Enacts two council voting powers",
+                            "children": []
+                        },
+                        {
+                            "text": "Sets \"vassal wars\" laws one step toward \"allowed\"",
+                            "children": []
+                        },
+                        {
+                            "text": "All faction members are prohibited from creating/joining this faction again for 10 years",
+                            "children": []
+                        },
+                        {
+                            "text": "Higher priority at low levels of council power and highly restricted vassal laws",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Different rules from directly declared wars of independence .",
+                            "children": []
+                        },
+                        {
+                            "text": "Priority increased by distance (100, 200, 300, 400), different religion/culture, not de jure, king tier",
+                            "children": []
+                        },
+                        {
+                            "text": "In the Western Protectorate, councilors cannot be suppressed by council laws, and high priority when China is unstable",
+                            "children": []
+                        },
+                        {
+                            "text": "On success, every faction member gains independence.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Event-driven faction for remaining unreformed pagans after a mass conversion",
+                            "children": []
+                        },
+                        {
+                            "text": "Councilors cannot be suppressed by council laws",
+                            "children": []
+                        },
+                        {
+                            "text": "Seeks independence using a special variant of the faction Independence CB",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Event-driven faction for remaining Abrahamics after a conversion to Hellenism",
+                            "children": []
+                        },
+                        {
+                            "text": "Councilors cannot be suppressed by council laws",
+                            "children": []
+                        },
+                        {
+                            "text": "Seeks to have the Hellenic ruler deposed and executed. The ruler will abdicate to their heir (if the heir is not pagan) or the revolt leader (if the heir is pagan)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Factions and Membership Multipliers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The following includes most of the multipliers used by the AI when deciding whether to join a faction. It does not feature the multipliers that the AI considers when initially creating the faction."
+                }
+            ]
+        },
+        {
+            "heading": "Traits",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "More likely: Proud (1.5x), Brave (1.5x), Arbitrary (1.5x), Envious (2x), Greedy (2x), Impaler (2x), Deceitful (2x), Ambitious (4x)",
+                            "children": []
+                        },
+                        {
+                            "text": "Less likely: Content (0.01x), Imbecile (0.01x), Inbred (0.1x), Craven (0.1x), Slow (0.2x), Kind (0.5x), Charitable (0.5x), Honest (0.5x), Humble (0.75x), Just (0.75x)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Opinion of Liege",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Succession Factions: >75 (0x, if in faction - to leave)",
+                            "children": [
+                                {
+                                    "text": "Succession: >50 (0x, if not already in faction)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Succession: >25 (0.2x)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Crown Authority Faction: >50 (0x, if in faction - to leave)",
+                            "children": [
+                                {
+                                    "text": "Crown Authority: >25 (0x, if not already in faction)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Crown Authority: >5 (0.2x)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Crown Authority: <-10 (1.5x)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Crown Authority: <-50 (2x)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Crown Authority: <-75 (4x)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Independence Faction: >80 (0x, if in faction - to leave)",
+                            "children": [
+                                {
+                                    "text": "Independence: >60 (0x, if not already in faction)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Independence: >40 (0.5x)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Independence: <0 (1.5x)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Independence: <-50 (2x)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Independence: <-75 (4x)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Claimant Faction: >25 (0.2x)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Level of Crown Authority:",
+                            "children": [
+                                {
+                                    "text": "Crown Authority: 1 (0.1x)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Crown Authority: 3 (1.5x), 4 (2.25x)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Increase Council power: >50 (0x, if not already in faction)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Distance",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Independence: Vassals lower tier than Kings who have the same religion (or religious group, if the vassal shares culture with the liege) and culture (or culture group, if vassal shares religion with the liege) as their liege, and who are less than 200 distance away from the capital (0x)",
+                            "children": [
+                                {
+                                    "text": "Independence: <200 distance (0.1x)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Independence: >300 distance (1.5x)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Independence: >400 distance (2x)",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Religion or Culture",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Independence: Same Religion and Culture (0.25x)",
+                            "children": []
+                        },
+                        {
+                            "text": "Independence: Different Religious Group (2x)",
+                            "children": []
+                        },
+                        {
+                            "text": "Independence: Different Cultural Group (1.5x)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Claimant faction membership",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The key factors are opinion of liege, and opinion difference between the liege and claimant."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Will not join claimant faction:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "To install women over 40",
+                            "children": []
+                        },
+                        {
+                            "text": "To install a parent of the current ruler",
+                            "children": []
+                        },
+                        {
+                            "text": "To install someone else who has a claim on their titles (and could thus revoke without penalty)",
+                            "children": []
+                        },
+                        {
+                            "text": "To install someone of a different religion",
+                            "children": []
+                        },
+                        {
+                            "text": "To install someone who is blinded , eunuch , incapable , imbecile , or inbred",
+                            "children": []
+                        },
+                        {
+                            "text": "To install themselves, if they are the current heir and the title does not use feudal elective succession",
+                            "children": []
+                        },
+                        {
+                            "text": "If same religion and culture as liege, will not replace a dynast with a non-dynast",
+                            "children": []
+                        },
+                        {
+                            "text": "Against their spouse or child",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Claimant factors:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Women: 0.7x (except when a woman is considering a faction to install herself)",
+                            "children": []
+                        },
+                        {
+                            "text": "Children: 0.5x below each of 13, 10, or 5",
+                            "children": []
+                        },
+                        {
+                            "text": "Self: 3x",
+                            "children": []
+                        },
+                        {
+                            "text": "Same society : 5x (does this include themself?)",
+                            "children": []
+                        },
+                        {
+                            "text": "Dynasts: 1.5x",
+                            "children": []
+                        },
+                        {
+                            "text": "Born in the purple : 2x for claimant, 0.5x for liege (when the title is Byzantine Empire and the character has byzantine culture)",
+                            "children": []
+                        },
+                        {
+                            "text": "If both the current liege and the claimant are Muslim:",
+                            "children": [
+                                {
+                                    "text": "Sayyid : 2x if claimant is Sayyid and liege is not",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Mirza : 1.5 if claimant is Mirza, and liege is neither Sayyid nor Mirza",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "dynasty_realm_power and the title's \"conquest culture\" (if any) also play a role."
+                }
+            ]
+        }
+    ]
+}

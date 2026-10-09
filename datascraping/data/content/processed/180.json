@@ -1,0 +1,412 @@
+{
+    "pageid": 180,
+    "title": "Ruler Designer",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Ruler Designer is a minor DLC for Crusader Kings II , released on the 17th of April 2012 alongside patch 1.05 ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It allows the player to create a ruler with customized:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "coat of arms ,",
+                            "children": []
+                        },
+                        {
+                            "text": "dynasty name,",
+                            "children": []
+                        },
+                        {
+                            "text": "attributes and traits",
+                            "children": []
+                        },
+                        {
+                            "text": "marital status,",
+                            "children": []
+                        },
+                        {
+                            "text": "appearance,",
+                            "children": []
+                        },
+                        {
+                            "text": "religion ,",
+                            "children": []
+                        },
+                        {
+                            "text": "culture",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any playable character can be modified, but the new character will be the only member of their custom dynasty instead of the replaced character's dynasty.  This results in any dynastic alliances being severed and losing out on any prospective inheritances."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A character's selection of education, attributes and traits impose various costs in terms of age, for instance:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "becoming a genius makes your character start 30 years older",
+                            "children": []
+                        },
+                        {
+                            "text": "being a drunkard removes some of those years.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Each child also adds to this; 3 years per son and 2 years per daughter. The default maximum creatable age is 49, balancing it so that your Genius, Diligent, Midas Touched character won't be ruling for that long."
+                }
+            ]
+        },
+        {
+            "heading": "Trait costs",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The age cost per point of each attribute is defined in Defines.lua , and these are totaled for a given trait."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Attributes from traits have the same cost as base attributes:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skills (1 point each)",
+                            "children": []
+                        },
+                        {
+                            "text": "Health (1 point per +0.1 health)",
+                            "children": []
+                        },
+                        {
+                            "text": "Fertility (1 point for +5% fertility)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Monthly gains have significant cost:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "10 points for +1 monthly prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "20 points for +1 monthly piety",
+                            "children": []
+                        },
+                        {
+                            "text": "5 points for 10% increased demesne income (greedy trait)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Trait with opinion modifiers have oddly unbalanced point values:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.0x for vassal opinion",
+                            "children": []
+                        },
+                        {
+                            "text": "0.5x for church opinion",
+                            "children": []
+                        },
+                        {
+                            "text": "0.5x for sex appeal opinion (very useful for young women...)",
+                            "children": []
+                        },
+                        {
+                            "text": "0.5x for same trait opinion",
+                            "children": []
+                        },
+                        {
+                            "text": "0.5x for opposite trait opinion ( your opinion of other characters, which is silly)",
+                            "children": []
+                        },
+                        {
+                            "text": "0.5x for dynasty opinion (note that you don't have much of a dynasty)",
+                            "children": []
+                        },
+                        {
+                            "text": "0.5x for same religion",
+                            "children": []
+                        },
+                        {
+                            "text": "0.25x for a specific religion group (definitely take Sayyid if Muslim!)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Combat modifiers, for when you personally lead an army :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "5 points per 10% morale offense",
+                            "children": []
+                        },
+                        {
+                            "text": "5 points per 10% morale defense",
+                            "children": []
+                        },
+                        {
+                            "text": "5 points per 10% defense",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Other trait effects are not considered. Congenital traits , most of which have a 15% chance to be passed to children, do not have a multiplier. Event effects, including events to lose the trait or gain its opposite, do not affect the cost."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some traits have special costs. Most lifestyle traits are pegged at 10, while Indian religious branches and homosexuality are free."
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Taking negative traits",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Take many negative personality traits . When you have more than 5-6 personality traits , each one has a separate MTTH to disappear. The main downside to this strategy is that you might lose positive traits you gain through events (e.g. using the War focus or Scholarship focus)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Take negative traits that are easy to lose ."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "You can lose Stressed (-14) and Depressed (-15) in several ways .",
+                            "children": []
+                        },
+                        {
+                            "text": "Wounded (-11) tends to go away on its own. And it leaves you with Scarred , giving you +0.1 monthly prestige. However, with the Reaper's Due DLC, Wounded may lead to Infection instead, and infections cannot be treated by your Court Physician; consider taking Scurvy (-35) instead and stay on land until it wears off.",
+                            "children": []
+                        },
+                        {
+                            "text": "Slothful can be lost with the Scholarship focus",
+                            "children": []
+                        },
+                        {
+                            "text": "Celibate can be lost by joining a monastic order and reaching lv2",
+                            "children": []
+                        },
+                        {
+                            "text": "Diseases can be lost by becoming a Demon worshipper and reaching lv3",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Take kinslayer . As the only landed member of your dynasty, you probably don't care what your kin think of you. And if you do care, they're in your court, where each point in your diplomacy skill gives +3 to \"personal diplomacy\" opinion."
+                }
+            ]
+        },
+        {
+            "heading": "Choosing skill levels",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "One good build is high stewardship and martial ."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Good for medium ranks, letting you hold a large demesne and having it provide large amounts of demesne income and levies .",
+                            "children": []
+                        },
+                        {
+                            "text": "Consider taking Administrator , especially if you do not have Way of Life . It costs 10 points, gives you +3 stewardship, and eventually gives you (+10 vassal opinion) and Legendary Wisdom (+1 monthly prestige) if you have over 8 and 12 stewardship skill respectively.",
+                            "children": []
+                        },
+                        {
+                            "text": "Do not take a high-end education. If you have , take Indulgent wastrel and level it up through events in the Rulership or Business focus.",
+                            "children": []
+                        },
+                        {
+                            "text": "Greedy might be good.",
+                            "children": []
+                        },
+                        {
+                            "text": "Extra health is good.",
+                            "children": []
+                        },
+                        {
+                            "text": "Consider dumping your diplomacy into negative. You won't be needing many vassals or caring what they think of you. You'll also be able to ignore one of the penalties for breaking a truce, since more negative diplomacy does not have increasingly bad effects.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Another good build is high diplomacy and intrigue ."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Good for counts and countesses, especially those who do not have CBs to expand personally. Arrange for children to inherit higher titles through a mix of undiscovered Seduction focus tumbles, inviting heirs, and arranging marriages followed by the deaths of in-laws.",
+                            "children": []
+                        },
+                        {
+                            "text": "Good for ruling large realms. Your high diplomacy will keep your realm stable and ensure large vassal levies. Both skills will help you get foreign heirs in your court and get their territory to inherit into your realm .",
+                            "children": []
+                        },
+                        {
+                            "text": "Do not take a high-end education. If you have WoL, take Amateurish plotter and level it up through events in the Seduction focus (or Intrigue focus , slower but less hassle).",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For your remaining skills, consider setting them low enough that you can improve them through ambition events (7 or below without WoL; 4 or below with WoL and a +3 focus). Without WoL, a skill of exactly 7 makes it easy to gain +100 prestige from fulfilling a skill improvement ambition. If you really don't care about a skill, let it go negative."
+                }
+            ]
+        },
+        {
+            "heading": "Designing your legacy",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Put your breeding in the past :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Take Celibate (-25)",
+                            "children": []
+                        },
+                        {
+                            "text": "Add children (+3 per son, +2 per daughter)",
+                            "children": [
+                                {
+                                    "text": "If you can arrange matrilineal marriages and are not locked to agnatic succession, daughters may be better than sons. First, they're one point cheaper. Second, it's easier to arrange for them to have spouses with great titles: because you can invite more men, because some realms are agnatic , and because you have to keep murdering junior sons-in-law if you've married your son to a princess.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "If you have agnatic-cognatic gavelkind , you can guarantee a single heir by having exactly one son and one daughter.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Take dysgenic traits, if you don't care about some of their effects and can offset the others. In particular, men can generally afford reduced sex appeal.",
+                            "children": []
+                        },
+                        {
+                            "text": "Do not take a high-end stewardship or diplomacy education, because their fertility effect would be wasted. Instead, pump up the attributes you want directly.",
+                            "children": []
+                        },
+                        {
+                            "text": "This strategy gives you extra Ruler Designer points to spend on your ruler.",
+                            "children": []
+                        },
+                        {
+                            "text": "This strategy works well with high stewardship, by letting you keep gavelkind succession for +30% demesne size without worrying about it splitting many ways.",
+                            "children": []
+                        },
+                        {
+                            "text": "This strategy prevents you from arranging for your children to inherit titles from another parent, but lets you choose your spouse based on other criteria.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Other",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Choose an awesome culture",
+                            "children": [
+                                {
+                                    "text": "Some Culture and religion combinations which are difficult to achieve without Ruler Designer are rather strong.",
+                                    "children": [
+                                        {
+                                            "text": "Scottish allow you use tanistry even when you are un-reformed pagan.It make early game much easier.",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "Andalusian + Tengri give you one of the strongest retinues.",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "East Slavic + Zunist give you best levy.While retinues are also good.",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Try to make your total health be 0.1 more than a whole number. Some events check for having at least 3.1 or 4.1 health, rather than 3.0 or 4.0.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

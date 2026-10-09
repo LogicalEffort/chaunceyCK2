@@ -1,0 +1,183 @@
+{
+    "pageid": 4797,
+    "title": "Offmap power modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Offmap powers are special entities that mimic unlanded titular titles, like those of adventurers or peasant revolts, but have considerably more functionality attached, including a dedicated user interface.  The Jade Dragon expansion is not required to define offmap powers of your own, although having the expansion and therefore being able to see how an already-functional offmap power actually exists in the game engine will be highly beneficial compared to trying to write one from scratch."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "An offmap power consists of:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The \"offmap power\" itself, which provides a user interface to select decisions, an amount of \"currency\" stored per playable ruler in the game, and a random \"like\" and \"dislike\" that displays in this interface (and which can be checked by script in the decisions chosen).",
+                            "children": []
+                        },
+                        {
+                            "text": "The \"holder\", who is a non-interactive character.  The holder is not affected by vanilla events, but can receive unique events that are explicitly marked as valid for them (for instance, a character_event with the \"offmap = allow\" or \"offmap = only\" flag/pre-trigger set).  They also cannot be targetted by interactions, and will not be selected with most scopes .",
+                            "children": []
+                        },
+                        {
+                            "text": "The \"governor\", who is an interactive character that holds a titular or landed title on the game map, and acts as the destination for hostile interactions with the holder.  Although the governor can gain land, the title should start the game unlanded to ensure it is not destroyed when all of its remaining counties are lost.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Player characters can never control offmap powers, as the \"holder\" (the documentation does not specify what happens when the player character becomes either, but it likely results in that character being taken over by the AI, resulting in a succession to the next playable character in your dynasty or a Game Over).  Offmap powers cannot be dynamically created and destroyed during the game, but can be hidden and unhidden from the player. Player can never be offmap holder as well as any charater that is \"on-map\", while the governor can be any title, landed or titular. Governor can be playable and it works without any wierd bugs, no giving up Governor title to ai, nothing just normal succesion. \nNote that offmap powers are almost entirely \"soft-coded\" and are deeply integrated into numerous other modding features -- at a minimum, before even considering tackling the effort of creating a new offmap power from scratch, someone will require a working understanding of localisation , minor titles , event modding , titles , scripted triggers , decision modding , and modifiers, both in the \"random_list\" sense of factors and additive_modifiers, and in the \"character modifier\" sense of event modifiers .  If that is confusing, offmap powers may be something to put off until you have more experience."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Much of offmap power modding is already documented (in technical form) in the \"/Crusader Kings II/common/offmap_powers\" folder (and its subfolders, \"policies\" and \"statuses\").  If information is not included here, it may be available there, though with significantly greater learning curve due to its more technical format."
+                }
+            ]
+        },
+        {
+            "heading": "Structure",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Parameters",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Flag",
+                            "Type",
+                            "Description"
+                        ],
+                        [
+                            "currency_below_zero",
+                            "bool",
+                            "If yes, each ruler's currency with the specified offmap power can fall into the negative."
+                        ],
+                        [
+                            "currency_reset_on_dynasty_change",
+                            "bool",
+                            "If yes, each time the holder of the offmap power changes dynasty (not just the current ruler ), all players will have their total earned currency reset to zero."
+                        ],
+                        [
+                            "non_aggression_modifier",
+                            "event modifier",
+                            "Name of the temporary modifier used to denote \"peace deals\" with the offmap power. Only used for display purposes, other than what you do with it in script."
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Holder title",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The holder title is a minor title (i.e., not a landed title or titular title ) which is assigned automatically to the holder/ruler of the offmap power when they assume control.  This is always a special minor title (defined in the \"/common/minor_titles\" folder) with the basic format:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "As noted, offmap powers are non-playable, and characters cannot be granted the minor title directly, nor transfer the minor title to others."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The dignity of the offmap power's minor title must always be above zero.  It should also generally be a high number or else the holder may not successfully be granted the offmap power (if an on-map power is granted the title, for instance, they may prefer a different title with higher dignity instead, preventing them from becoming the holder of the offmap power)."
+                }
+            ]
+        },
+        {
+            "heading": "Governor title",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The governor title is a landed title or titular title (not a \"minor title\", i.e., an honorific). It can be any title from County to Empire tier, Governor can be make playable."
+                }
+            ]
+        },
+        {
+            "heading": "Adding Interface Button",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To add an interface button, change the button_name field to some other name (e.g. offmap_name_icon_offmaps_entry ), and add a new .gui file in your_mod/interface/ with the following:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You may also want to change the quadTextureSprite and clicksound to other values. If you don't change both, your mod will require Jade Dragon for the assets."
+                }
+            ]
+        },
+        {
+            "heading": "Likes and dislikes",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Each \"like\" or \"dislike\" of an offmap power is a scripted_trigger which defines one or more triggers, as well as an optional context that determines whether that like or dislike matches the optional parameter of the offmap_has_like trigger.  The (dis)like will also be the localisation key.  This is usually localised as a simple descriptive noun (such as \"Germanic Cultures\" for the vanilla likes_germanics scripted trigger), rather than the localisation of a scripted trigger (such as \"Is a member of a Germanic culture\"), as it is normally shown after the word \"Like:\" or \"Dislike:\" in the default user interface."
+                }
+            ]
+        },
+        {
+            "heading": "Context",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The context of the offmap power determines their broad affiliation for the offmap_has_like and offmap_has_dislike triggers, when called with a specific context.  The context will be true if the scripted trigger returns true, and the holder's like has the specified context that matches the context contained in that scripted trigger.  Likewise, it will be true if the scripted trigger returns true and the holder's like has no context.  If, however, the holder's current like has a context, but the offmap_has_like is not called with the correct context , it will always return false."
+                }
+            ]
+        },
+        {
+            "heading": "Example",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "00_scripted_triggers.txt:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Here, the like is the scripted trigger named \"likes_eunuchs\" (localised simply as \"Eunuchs\").  The scripted_trigger will check if the courtier matches the \"eunuch\" trait .  Perhaps confusingly, it also defines a context parameter with the identical name \"eunuch\" (which is used for the offmap_has_like and offmap_has_dislike triggers).  In any case, when a decision checks the liked_by_offmap and disliked_by_offmap triggers of the calling character, referenced against the offmap power, it will run the matching scripted trigger to determine whether the offmap power likes or dislikes the character."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example, if the Chinese Emperor and the emperor has the \"likes_arabs\" like currently set, and an Arabic player character chooses a decision with the offmap power, the \"likes_arabs\" scripted_trigger will be run when an event calls the liked_by_offmap trigger.  Because the likes_arabs trigger checks to see if the player character is Arabic (and they are in this example), the trigger will yield true, and the offmap decision's effects can therefore give preferential treatment."
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Scripted triggers",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": []
+        }
+    ]
+}

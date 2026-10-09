@@ -1,0 +1,521 @@
+{
+    "pageid": 1240,
+    "title": "Feudal elective",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Feudal elective is a succession law where the candidate with the most votes from realm de jure vassals gets elected."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Upon death, the candidate with most votes inherits all the titles."
+                }
+            ]
+        },
+        {
+            "heading": "Features",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "One of the few succession laws with no tech requirements. Particularly for Indians, feudal elective is the only non-gavelkind succession law available to them with no technology requirements. The same goes for eligible unreformed pagans, except religions which can use Eldership succession. [This bullet point appears to be in error or needs clarification]",
+                            "children": []
+                        },
+                        {
+                            "text": "Only available to Muslims, Eastern Religions, and most unreformed pagans if \"full council authority\" council law is passed. (Requires Conclave DLC)",
+                            "children": [
+                                {
+                                    "text": "Note that \"council authority\" is available only for feudal kingdoms and empires. Also, if passed, the succession type will be locked to feudal elective as long as \"full council authority\" stands.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "When the election goes your way, succession is much smoother.",
+                            "children": [
+                                {
+                                    "text": "You can nominate the heir with best attributes and traits .",
+                                    "children": []
+                                },
+                                {
+                                    "text": "You are not limited to your own children. You can pick any claimant, or any dynasty member you make an elector.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Vassal opinion is crucial in gathering votes for your dynasty and/or your nominee.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "In case of a tie, your vote is decisive.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Vassals have a huge opinion boost of +20 (+10 with the Conclave DLC), making the realm more stable.",
+                            "children": []
+                        },
+                        {
+                            "text": "Claimant factions can form for any eligible candidate, even if they do not have a claim .",
+                            "children": []
+                        },
+                        {
+                            "text": "If someone outside your dynasty is elected, extra titles (duchies and below) are given to your children.",
+                            "children": [
+                                {
+                                    "text": "If they have no other titles, it is game over !",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Number of electors may increase or decrease due to de jure shift.",
+                            "children": []
+                        },
+                        {
+                            "text": "As the title may move among branches of the dynasty, consolidating and propagating bloodlines may become an issue.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Opinion",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A ruler under feudal elective will face the following opinion modifiers:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Character",
+                            "Opinion modifier",
+                            "Reason"
+                        ],
+                        [
+                            "Chosen successor",
+                            "+25",
+                            "Obviously they like your choice"
+                        ],
+                        [
+                            "Oldest child",
+                            "-15",
+                            "They would much prefer primogeniture ."
+                        ],
+                        [
+                            "Other children set to inherit",
+                            "-5",
+                            "They would prefer gavelkind ."
+                        ],
+                        [
+                            "All other dynasty members",
+                            "-5",
+                            "Someone outside the dynasty might inherit."
+                        ],
+                        [
+                            "Other vassals",
+                            "+10",
+                            "Everyone gets a chance"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Importantly, vassals who are of your dynasty only get the \"All other dynasty members\" penalty. They don't get the \"Other vassals\" bonus."
+                }
+            ]
+        },
+        {
+            "heading": "Too many held elector titles",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The ruler incurs a -15 opinion malus for each title held that:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is a duchy or kingdom (but lower tier than the liege's primary title)",
+                            "children": []
+                        },
+                        {
+                            "text": "Is a de jure part of the kingdom/empire",
+                            "children": []
+                        },
+                        {
+                            "text": "Does not contain the de facto capital",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If an elector is also Ambitious , this will activate ambition opinion , causing an additional \"-25 ambitious\"."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can avoid the penalty by destroying duchy titles. Take care, as this may reduce the size of your family's realm should your family lose an election. Destroying duchy titles for a demesne duchy is relatively safe."
+                }
+            ]
+        },
+        {
+            "heading": "Mechanic",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Electors",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Valid electors are all holders of de jure vassal titles one tier lower than the elected title (and of the current title holder's religion?). This includes non de facto vassals of your realm, in the event you don't control all de jure territories.",
+                            "children": []
+                        },
+                        {
+                            "text": "In titular realms, all vassal rulers of the appropriate rank may vote.",
+                            "children": []
+                        },
+                        {
+                            "text": "Empires are an exception: both dukes and kings may vote.",
+                            "children": []
+                        },
+                        {
+                            "text": "Each elector gets a single vote, regardless of how many electoral titles they hold.",
+                            "children": []
+                        },
+                        {
+                            "text": "The current ruler always gets a vote, and also breaks ties.",
+                            "children": []
+                        },
+                        {
+                            "text": "Merchant republic do not get a vote.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Candidates",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Potential candidates are:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Claimants",
+                            "children": []
+                        },
+                        {
+                            "text": "The ruler's children, grandchildren, siblings, nephews, nieces, and spouse. They must be either the same dynasty as the ruler, or landed within the realm (a county is sufficient).",
+                            "children": []
+                        },
+                        {
+                            "text": "Rulers with sufficient rank to be electors, who are either:",
+                            "children": [
+                                {
+                                    "text": "Direct vassals (even when they are not electors themselves)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Electors  who are not under your control",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "However, the following characters are always ineligible:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Rulers or heirs of republics, merchant republics , or theocracies",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters who cannot inherit , such as Bastards",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters with eligible fathers (e.g. can't skip a living son to nominate a grandson, or skip a living brother to nominate a nephew or niece)",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters with a different religion , if the ruler is a Caliph or Fylkir",
+                            "children": []
+                        },
+                        {
+                            "text": "Women, if gender law is strictly Agnatic",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Vote",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The voting screen shows who each voter supports. For details on how AI voters evaluate candidates, see Succession voting ."
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Help your candidate",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Avoid nominating young children . A brother might be easier to elect than a 2-year-old child.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Help young children look good . Opinion of non-ruler children is based on their educator's personal diplomacy skill. Hence, a high-diplomacy guardian is often a good choice when trying to elect a minor.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Give an elector-rank title to the best dynastic candidate : If you have a genius kinsman who is very distantly related to you, giving him a ducal title will make him a valid nominee.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Give a voting title to your candidate : They will likely accept your nomination by voting for themselves. (Warning: as an AI ruler, they will have many chances to get into trouble.)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Honorary titles can significantly boost their prestige.",
+                            "children": [
+                                {
+                                    "text": "Cupbearer has no age restrictions; ensure that the cupbearer is loyal or you might be poisoned.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Designed Regent for adult heirs",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Commander for men, if you can keep them out of danger",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Damage other candidates",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Check who is getting votes in the Inheritance tab of the Laws screen ( F4 ).",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Assassination may be possible , even against likeable candidates, due to the number of potential conspirators in a large realm.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Spying with the Intrigue focus gives you many methods of imprisoning them without tyranny. You can then throw them in the oubliette for -20 diplomacy and -2 health. If this isn't enough, for minor tyranny penalties, you can banish them (forcing them to abdicate to their heir) or even execute them.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Revoke titles to invalidate candidates. Imperial administration with duchy viceroys is excellent for this; an elector who votes the wrong way, or is himself a candidate, can be stripped of his viceroy title and electoral rights with no tyranny. Catholics can use a vassal pope or antipope to claim vassal titles.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Excommunication , where applicable, is useful to quickly tank a candidate's chances, as most electors will not vote for an excommunicated character. Excommunication is also a valid reason to imprison a character. While excommunication does not prevent tyranny for revocation or banishment, it does allow you to execute the character without incurring tyranny.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Grant cities or temples to claimants . Burghers and clergy are ineligible.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Control elections",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Have zero or one vassal electors . By leaving duchies unfounded or destroying them, you can control an election completely, even in a medium-size kingdom. You might also give all duchies to a single \"super-duke\", but gavelkind makes this situation precarious.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Give voting titles to dynasty members : By giving voting titles exclusively to characters from your dynasty, you can ensure that everyone will be inclined to vote for a fellow dynasty member. However, your own children will be future claimants, so it is often safer to land distant relatives. Also, members of your own dynasty do not like feudal elective succession, as a non-dynasty member could (theoretically) inherit. You will suffer a -5 opinion penalty with them, effectively cancelling out the +5 bonus for being of the same dynasty, in contrast to the +20 opinion bonus from vassals of other dynasties.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Make electors like you : Electors' opinion of you will influence their votes.",
+                            "children": [
+                                {
+                                    "text": "Collect traits which improve vassal opinion, and avoid those which reduce vassal opinion. Christian rulers can combine this strategy with the goal of attaining sainthood .",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Use favors . If you are wealthy , consider buying favors from electors. You can then right-click the elector and \"Call in Succession Support\", forcing them to vote like you do for 10 years.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Avoid realm splits",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Avoid holding multiple top tier titles (kingdoms or empires) : Electors may not choose the same candidate for both (especially since each kingdom/empire would have its own set of differing electors), causing grief similar to gavelkind .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Use kingdom viceroyalties : if you have kingdoms outside your de jure empire, consider making them viceroyalties. This overrides the succession law in the kingdom and prevents separate elections there.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Spread your culture : You have a better chance of the same candidate winning multiple elections if each set of electors shares your culture.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,190 @@
+{
+    "pageid": 3939,
+    "title": "Patch 2.8 mod compatibility guide",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This guide describes the steps to make a mod compatible with patch 2.8.X from patch 2.7.2 ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that this does not replace the usual step of merging files , in case the mod modifies some vanilla files."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In case of issues, run the latest version of The Validator , and try activating debug launch options, which will now report failed asserts in log files ."
+                }
+            ]
+        },
+        {
+            "heading": "New folders",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Move \\interface\\coats_of_arms.txt to \\interface\\coat_of_arms\\coats_of_arms.txt .\nBlocks for new religions can be moved to their own files, to improve mod compatibility."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For total conversion mods, add replace_path = \"dlc_metadata/dlc_characters\" to .mod file."
+                }
+            ]
+        },
+        {
+            "heading": "Portraits",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "New properties p14/p15/p16 are added, so any custom properties needs to be moved to p18 or later.",
+                            "children": []
+                        },
+                        {
+                            "text": "New culture indexes c6 and c7 are added in portraitTypes:",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Decisions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "ai_check_interval is added to decisions and targeted decisions. It determines how seldom the AI checks the decision, in months, and by default is 1 (every month). Value is often 3 either or 12 in vanilla. For instance ai_check_interval = 5 would make it checked every 5th month. Note that ai_will_do is the % chance of taking the decision (1 = 100%, 0.5 = 50%) if available when checked, so if you set the interval 5 times higher, you should also set the ai_will_do 5 times higher.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Most targeted decision filters (court, home_court, sub_realm, realm, dynasty, society) no longer include the decision taker, unless the _including_me variant of the filter is used.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Localization",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Usage of custom localization commands has been rationalized and expanded to other tooltips."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some workarounds may no longer be needed (for instance [ROOT.xxx] prefix in province modifiers):"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "my_province_modifier_desc;§YYou will need to know this§!\\nInfo: [ROOT.MyCustomLocalizationCommand]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "now simply works with:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "my_province_modifier_desc;§YYou will need to know this§!\\nInfo: [MyCustomLocalizationCommand]"
+                }
+            ]
+        },
+        {
+            "heading": "Immortality",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Giving an immortal trait to a child now prevents switching to adult portrait on adulthood, and child portrait is kept.\nWorkaround is to remove the immortal trait via an event on the on_adulthood action, and add it back few days after via maintenance event."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There's now an immortal_age history effect, to set the age at which the character became immortal."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Immortal characters being excluded from court pruning now seems hardcoded (even if immortal = yes is removed from is_unimportant_trigger ). You'll need some regular manual pruning if using immortal traits for long lived races, to avoid court bloating."
+                }
+            ]
+        },
+        {
+            "heading": "Misc",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "allowed_to_target_suzerains = yes/no is removed from CBs",
+                            "children": []
+                        },
+                        {
+                            "text": "trait = kinslayer is replaced by is_any_kinslayer_trigger = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "religion_group = indian_group is replaced by has_dharmic_religion_trigger = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "Traits with cached = yes must have a name that does not conflict with a culture/religion. Otherwise accessing the trait with trait_name = { } will behave as a culture/religion scope instead of character scope.",
+                            "children": []
+                        },
+                        {
+                            "text": "can_demand_religious_conversion = no has to be added to unreformed religions (it is no longer an hardcoded behavior of unreformed pagan group)",
+                            "children": []
+                        },
+                        {
+                            "text": "uses_bride_price = yes may be added to custom merchant republic governments (it is no longer hardcoded).",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Issues",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In some mods, baronies under auto-generated counts (i.e. with no holder in history) are independent at game start. [1] . This is fixed in patch 3.0 ."
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ forum:1056827",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

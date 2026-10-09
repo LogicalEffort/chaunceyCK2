@@ -1,0 +1,1216 @@
+{
+    "pageid": 5322,
+    "title": "Patch 3.1.X",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 3.1.X are all patches beginning with 3.1."
+                }
+            ]
+        },
+        {
+            "heading": "Patch 3.1",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 3.1 was released on 2019-04-02 [1] ."
+                }
+            ]
+        },
+        {
+            "heading": "Free Features",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added Great Works Feature allowing independent rulers to take on massive construction projects.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Balance",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added some secret stuff.",
+                            "children": []
+                        },
+                        {
+                            "text": "Disabled event 6080.",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced the strength of the vassalized mercenary companies.",
+                            "children": []
+                        },
+                        {
+                            "text": "Architect trait now has a Great Work cost modifier.",
+                            "children": []
+                        },
+                        {
+                            "text": "Construction technology now has a Great Work cost modifier.",
+                            "children": []
+                        },
+                        {
+                            "text": "Order Government can now hold temples.",
+                            "children": []
+                        },
+                        {
+                            "text": "Prosperity events now take Great Works into its calculation.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Interface",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The societies view will now show the player's current society when opened, if they have one.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a description of what the colors indicate in the map mode for China.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "User modding",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Unlocked all DLC event pictures!",
+                            "children": []
+                        },
+                        {
+                            "text": "Added unit_graphical_culture, unit_graphical_cultures override for unit models in culture database.",
+                            "children": []
+                        },
+                        {
+                            "text": "The following values can now be exported to variables: num_of_subrealm_temples, num_of_subrealm_tribes, num_of_subrealm_empty_provinces, num_of_demesne_castles, num_of_demesne_cities, num_of_demesne_temples, num_of_demesne_tribes, num_of_demesne_empty_provinces, and total_years_played.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added set_dynasty_name effect, sets the name of the scoped character's dynasty to the right hand side string/localisation key.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added propagate_bloodline_from effect.",
+                            "children": []
+                        },
+                        {
+                            "text": "All scope types should now be saved as global event targets.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added support for custom_modifier_text in modifier fields.",
+                            "children": []
+                        },
+                        {
+                            "text": "Improved debug tooltip (charinfo console command) for a number of objects that utilize scripted flags and variables. (Characters, Societies, Artifacts, Provinces, Dynasties, Great Works)",
+                            "children": []
+                        },
+                        {
+                            "text": "Modders should now get an error if they add history commands that marry characters that have not been born yet.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Database",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Renamed a title to Empire of Rus to strengthen the intended connection to the historical Kievan Rus.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added decision to form the Russian Tsardom early.",
+                            "children": []
+                        },
+                        {
+                            "text": "Differentiated the Coat of Arms for Kingdom of Kiev and Empire of Rus.",
+                            "children": []
+                        },
+                        {
+                            "text": "Cleaned up Anatolian province culture/religion in some of the later start dates.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a broken dynasty in Bolzano.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a broken dynasty in Saarbrücken.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bug Fixes",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed children generated for historical rulers without scripted families having 0 in all attributes and getting no childhood traits. Also applies to all children generated through \"create_character\".",
+                            "children": []
+                        },
+                        {
+                            "text": "Blocked Holy orders from spontaneously building Tribal holdings.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed missing effects and tooltips for receiving news of the Aztec Invasion * if you have certain Vision modifiers (from the Hermetic's Scrying Power) it will now properly update your Seer modifier, while also explaining what happens.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the crucible steel event chain sometimes breaking just before its final outcome.",
+                            "children": []
+                        },
+                        {
+                            "text": "Having a Non-aggression Pact with the target of a Crusade will now lead to it automatically breaking once the Crusade is launched, allowing you to join the war.",
+                            "children": []
+                        },
+                        {
+                            "text": "Made Songs of Byzantium work for Roman culture as well as the Byzantine group.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue were the continue playthrough buttons would load the wrong save if your latest save is a cloud save and you have a local save with the same name.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Saintly Pilgrimage chain sometimes breaking after the weird village encounter.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Ritual Hunt chain for Warrior Lodge members sometimes leaving you stuck as \"busy\", if you chose to simply return home at the end of the chain.",
+                            "children": []
+                        },
+                        {
+                            "text": "In the events surrounding a loved one's death, you will no longer be expected to grief and bond together with characters who are in prison.",
+                            "children": []
+                        },
+                        {
+                            "text": "Made conditions to gain the Peaceful Child Forged Bloodline somewhat more lenient so that it can actually be achieved.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed several Bloodline-related events and actions not properly checking that a Bloodline is active on the character in question.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed holes in the reconquered Roman Imperial Provinces events.",
+                            "children": []
+                        },
+                        {
+                            "text": "Slaying an enemy ruler in a battle will no longer display them as your \"acquaintance\" in messages.",
+                            "children": []
+                        },
+                        {
+                            "text": "Ships will no longer cut straight through Kanin/c_kanin when coming into port from the North Atlantic.",
+                            "children": []
+                        },
+                        {
+                            "text": "Adjusted positions of some units and on map shields in Russia.",
+                            "children": []
+                        },
+                        {
+                            "text": "Blocking players from doing decisions to which switches over to a religion which requires an unowned or disabled DLC, leading to an instant game over.",
+                            "children": []
+                        },
+                        {
+                            "text": "England no longer end up as the tributary of Gwynedd in the 12th century.",
+                            "children": []
+                        },
+                        {
+                            "text": "Kievan Rus no longer loses it's name if it is held by someone with a North Germanic culture.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash that could occur when the Siberian Wastelands was brought into the camera's view for the first time.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed game start feature window displaying incorrect religion and/or culture information if any of these were changed from the ruler designer.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed crusade wars starting immediately instead of after the preparation phase, in multiplayer games.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed not being able to rename tribal settlements.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed it being possible to back out of baptism name change window, after first accepting the name change from an event.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the credits screen not closing when the credits were over.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug affecting duel results calculation for Pagan characters.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue where a child born with a dead father would wrongfully get the mothers dynasty.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where in elective succession law it was not possible to nominate the own sons.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where the designated regent would not always work if you were not independent.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a rare bug that caused a crash when setting the liege upon character death.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash when setting the religion on a dead character from script.",
+                            "children": []
+                        },
+                        {
+                            "text": "Historical characters will no longer attempt to marry characters that have not yet been born.",
+                            "children": []
+                        },
+                        {
+                            "text": "The AI is now allowed to pass out vice royalties even when they're a vassal.",
+                            "children": []
+                        },
+                        {
+                            "text": "Saving rules on a shattered or random world should no longer result in game rules breaking and achievements being disabled.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed incorrect achievement indicator when loading a save where achievements are possible.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug affecting religious conversion speed.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an inheritance problem of matrilineal bloodlines combined with male consorts.",
+                            "children": []
+                        },
+                        {
+                            "text": "Blocked some battle events describing gruesome death, but not running the actual death-effect, from firing.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 3.1.1",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 3.1.1 was released on 2019-05-16 [2] ."
+                }
+            ]
+        },
+        {
+            "heading": "Free Features",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Court Improvements",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a limit and expenses tied to court size.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added court size modifiers and court maintenance cost reduction to the Majesty Tech.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added court size modifiers and court maintenance cost reduction to the Great Fortress and the Royal Palace Great Works.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added court size modifier to some Great Work features: Tavern; Royal Apartments; Hidden Passageways; Travel Tunnels; and Royal Bedchamber.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added court maintenance cost reduction to the Great Work feature Trap Door.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added court size modifiers to Castle Town and Market Town buildings.",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated how courtiers are selected for involvement in a multitude of old events.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a chance for courtiers to live it up with character modifiers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a chance for courtiers to have a livelier social life.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a chance for courtiers to get more interesting skills.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a new decision, \"Ask Courtiers to Leave Court\", to help quickly reduce court*size.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added an event where you are able to give a courtier a nickname.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added an event for large courts, where courtiers praise your hospitality.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added historical Great Work Hagia Sophia in Constantinople, including conversion events.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added historical Great Work Notre Dame in Paris.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a new random event on sacking of a besieged barony, with corresponding character modifiers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated Game Rules:",
+                            "children": []
+                        },
+                        {
+                            "text": "Added separate Historical Great Work game rule.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added game rule for the Court Size Limit (On/Off).",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Balance",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Narrow flank command modifier now has a stronger and more intuitive impact on the chance of generating or avoiding a narrow flank in battle.",
+                            "children": []
+                        },
+                        {
+                            "text": "Narrow flanks now also apply their engagement limit of the flank during the skirmish phase of battles.",
+                            "children": []
+                        },
+                        {
+                            "text": "When a combat tactic changes the phase for a flank then the opposing side now automatically gets forced to choose a new tactic even if their ongoing tactic still isn't due to expire yet.",
+                            "children": []
+                        },
+                        {
+                            "text": "Inactive Great Works are no longer counted towards the Great Work stacking cost penalty.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tech levels at start were rebalanced to take into account historically more advanced regions.",
+                            "children": []
+                        },
+                        {
+                            "text": "Trigger chances for Councilor job events were rebalanced to take into account attribute scores up to 22, instead of the previous 13.",
+                            "children": []
+                        },
+                        {
+                            "text": "City and Temple Infrastructure Technologies were merged into one with a slightly lower tax bonus modifier (max 40%).",
+                            "children": []
+                        },
+                        {
+                            "text": "Shipbuilding technology has been moved from the Military Advances to the Economy Advances.",
+                            "children": []
+                        },
+                        {
+                            "text": "New Infantry and Cavalry Technologies increase morale (up to 40%) and defense (up to 60%) of Infantry and Cavalry units, respectively.",
+                            "children": []
+                        },
+                        {
+                            "text": "New Skirmish and Melee Techniques affect the Attack value of troops (up to 60%) and decrease the probability of having generic bad tactics.",
+                            "children": []
+                        },
+                        {
+                            "text": "Military Organization gives now only a low overall bonus to morale (up to 20%), but keeps its importance for Retinue Size and now also Reorganization speed (morale recovery) of armies.",
+                            "children": []
+                        },
+                        {
+                            "text": "Defender bonus for infantry in Mountain was increased to the range of 50%*100% for defense, and 50%*100% for the attack of archers and light infantry.",
+                            "children": []
+                        },
+                        {
+                            "text": "Defender bonuses were also slightly increased in Hills and created for Forest and Desert.",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry defensive values were slightly increased in the Skirmish and Melee phases, and lowered in the pursuit phase.",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Calvary melee attack value was slightly decreased and pursuit value increased.",
+                            "children": []
+                        },
+                        {
+                            "text": "Mongol sacking events now destroy two random building levels instead of one.",
+                            "children": []
+                        },
+                        {
+                            "text": "The outcomes of trying to seduce someone using the Private Conversation decision, are now more carefully calculated.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Interface",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added a tooltip for explaining that the cost displayed in the Great Work outliner items are yearly costs.",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed the Great Work history entry for when a feature construction is started, as it was bloating the history view without providing much value.",
+                            "children": []
+                        },
+                        {
+                            "text": "Made sure \"string_coast\" actually reads \"coast\" in the descriptions of coastal Great Works.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a localization issue in the Infidel tax tooltip.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue that prevented the low resolution version of the province view Great Work image from showing when switching from a province that did not have a Great Work to one that did have one.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the low resolution version of the Great Works display in the province view getting misplaced if \"The Reaper's Due\" DLC wasn't active.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Great Works view text disappearing when GUI scaling was used.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the hospital button in province view not working.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Great Work ticking cost text in the outliner sometimes overlapping the stage numeral icon.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed active conditions not being displayed when hovering the image of a completed but inactive feature.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the realm tree and dynasty tree sometimes going outside of their dedicated UI space when UI scaling was active.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed certain defensive upgrades printing an unlocalized string in the description of the Great Work it's attached to.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Great Work feature names sometimes getting cut off before the UI ran out of space.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the chat log sometimes overlapping the description text for shattered or random world in multiplayer setup.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the outliner Great Work items only showing the cost of either stage or feature construction. The sum of these are now displayed instead.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a tooltip for explaining that the cost displayed in the Great Work outliner items are yearly costs.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue that made it look like the player would lose prestige from enforcing demands when in fact, the losing side lost the piety. * Fixed an issue that made it look like the player would lose prestige from enforcing demands when in fact, the losing side lost the piety.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "User modding",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added scrolling support for InstantTextBoxes.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added support for custom text in Great Works province history via add_custom_history.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added has_full_court trigger.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added num_of_courtiers trigger.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added free_court_slots trigger.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added set_wonder_damaged effect.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added court_size_modifier and court_size_maintenance_cost_modifier modifiers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added the following new defines; BASE_COURT_LIMIT_COUNT, BASE_COURT_LIMIT_DUKE, BASE_COURT_LIMIT_KING, BASE_COURT_LIMIT_EMPEROR, OVERSIZED_COURT_UPKEEP_COST.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added add_wonder effect.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added is_important_character_to trigger to check if a character is marked for special interest of another character.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added on_post_birth_stillbirth on action.",
+                            "children": []
+                        },
+                        {
+                            "text": "Exposed hard coded UI variables for the wonder, score, chronicle, realm tree and dynasty tree views.",
+                            "children": []
+                        },
+                        {
+                            "text": "The wonder view modifier summary now functions without the right hand text box.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed wonder and wonder upgrade localization only having access to the Root(character) scope instead of the usual four scopes.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed dynamic localization not getting parsed for minor title custom localization.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the game falsely claiming that you cannot play as a theocracy in a tooltip on the character selection screen when the selected character was controlling a religion with investiture.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Database",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added Santarem as a city to Lisboa.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added some details to historical characters to better represent The Anarchy (English Succession War 1135*1153).",
+                            "children": []
+                        },
+                        {
+                            "text": "Changed Kurs, Tukumns, Marienburg, Sambia, Scalovia, Poznanskie, Lower Silesia, Czersk terrain to Forest.",
+                            "children": []
+                        },
+                        {
+                            "text": "Changed Cebta, Amorion, Devon, Adana, Tripoli, Acre, Tiberias, Jerusalem, Hebron, Kerak, Monreal, Beersheb, El*Arish, Porto, Lisboa, Braganza terrain to Hills.",
+                            "children": []
+                        },
+                        {
+                            "text": "Changed Marrakech terrain to Plains.",
+                            "children": []
+                        },
+                        {
+                            "text": "Changed Friesach terrain to Marsh.",
+                            "children": []
+                        },
+                        {
+                            "text": "Changed Beirut terrain to Mountain.",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrected capital of the Duchy of Mudar to Rahbah.",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrected spouse or marriage dates for several historical characters.",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrected Duchy of Chur starting tech levels to be similar to those of the rest of Austria.",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrected the date range of the Capricorn zodiac sign so that it no longer overlaps with Aquarius.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bug Fixes",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The events about declaring war in the tutorial should now trigger in the right order.",
+                            "children": []
+                        },
+                        {
+                            "text": "Zoroastrians can now hunt.",
+                            "children": []
+                        },
+                        {
+                            "text": "You no longer congratulate yourself on a job well done with Great Works.",
+                            "children": []
+                        },
+                        {
+                            "text": "You can no longer accuse yourself of committing zina.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Player no longer gets the offer to imprison a lover or spouse who has contracted syphilis but is already in prison.",
+                            "children": []
+                        },
+                        {
+                            "text": "Your spouse will no longer complain about a lack of conversation, due to your hermetic pursuits, if they are in prison.",
+                            "children": []
+                        },
+                        {
+                            "text": "You should no longer perform a sacrificial ritual on yourself as a satanist.",
+                            "children": []
+                        },
+                        {
+                            "text": "The barber no longer tries to change women's headgear instead of giving them a haircut.",
+                            "children": []
+                        },
+                        {
+                            "text": "Your Patriarch will no longer be referred to as your Matriarch.",
+                            "children": []
+                        },
+                        {
+                            "text": "A Hindu taking a vow of celibacy will now speak of an appropriate god.",
+                            "children": []
+                        },
+                        {
+                            "text": "HRE can now change held kingdoms to gavelkind or elective gavelkind.",
+                            "children": []
+                        },
+                        {
+                            "text": "Assassin*events now takes random world into consideration.",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters will now stop antagonizing their target after entering Seclusion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Pope no longer gives bonus to claims against a holy order title because they are uncrowned.",
+                            "children": []
+                        },
+                        {
+                            "text": "The trap upgrade will no longer kill off your whole court.",
+                            "children": []
+                        },
+                        {
+                            "text": "Zoroastrians can no longer take decisions that are not valid in random world.",
+                            "children": []
+                        },
+                        {
+                            "text": "The pope should now be more low*key with the torture and drinking features to Great Works.",
+                            "children": []
+                        },
+                        {
+                            "text": "The dynamic_crusader_state title decision should now check for coast in the right scope.",
+                            "children": []
+                        },
+                        {
+                            "text": "Retinue modifiers of the Royal Palace are now being applied properly.",
+                            "children": []
+                        },
+                        {
+                            "text": "Hermetic members can no longer spam the Perform Scrying decision, causing them to end up with a multitude of visions (modifiers).",
+                            "children": []
+                        },
+                        {
+                            "text": "When finishing a mission to build a temple you will now only get one notification no matter how many buildings you finish.",
+                            "children": []
+                        },
+                        {
+                            "text": "Changed the effect of the Quabba Great Work feature.",
+                            "children": []
+                        },
+                        {
+                            "text": "Event about an irritating courtier now takes the courtier's gender into account.",
+                            "children": []
+                        },
+                        {
+                            "text": "You can no longer do penance while doing penance.",
+                            "children": []
+                        },
+                        {
+                            "text": "You can now secretly convert to faith as Christian religion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added script for Zoroastrian check in ROOTs_secret_religion_is_playable_trigger, a trigger that's used to check if the player's secret religion is enabled by a DLC.",
+                            "children": []
+                        },
+                        {
+                            "text": "You can now secretly convert faith as a Christian.",
+                            "children": []
+                        },
+                        {
+                            "text": "Forcefully taking an imprisoned character as concubine will now break their existing betrothal.",
+                            "children": []
+                        },
+                        {
+                            "text": "A Town is Born (event where you get a new holding slot) can no longer trigger if you already have 7 slots in the province.",
+                            "children": []
+                        },
+                        {
+                            "text": "Pyramids can now be built or held by characters with Coptic culture.",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed Heating Pipes and Hypocausts features from the Garden Great Work.",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed Torture Chamber from the Library and Garden Great Works.",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed Spikes upgrade from some Great Works, including the Library, the University, the Konark Sun Temple, and the Buddhist Temple.",
+                            "children": []
+                        },
+                        {
+                            "text": "The pope will no longer refer to your pregnant wife's womb as \"barren\".",
+                            "children": []
+                        },
+                        {
+                            "text": "The Great Work upgrade Hidden Burial will no longer be described as drawing a lot of attention.",
+                            "children": []
+                        },
+                        {
+                            "text": "Imprisoned vassals will no longer ask for council positions.",
+                            "children": []
+                        },
+                        {
+                            "text": "You will no longer get multiple \"Blessed has Passed\" events.",
+                            "children": []
+                        },
+                        {
+                            "text": "Robin hood event that removes the modifier \"highway_robber_band\" should now remove the correct modifier.",
+                            "children": []
+                        },
+                        {
+                            "text": "A friend is no longer referred to as your lover when you try to antagonize them.",
+                            "children": []
+                        },
+                        {
+                            "text": "Clarified what conditions need to be met in order to build the Grand University Great Work.",
+                            "children": []
+                        },
+                        {
+                            "text": "The State of a God upgrade will no longer change which god it is depicting each month.",
+                            "children": []
+                        },
+                        {
+                            "text": "Viking bloodlines will now make sure that viking traits are retained after loading a savegame.",
+                            "children": []
+                        },
+                        {
+                            "text": "Debutantes will no longer be referred to as being \"ready for employment\".",
+                            "children": []
+                        },
+                        {
+                            "text": "Aztec Pyramids now have a description.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added information text to Great Work features that allow private conversations or artifact storing.",
+                            "children": []
+                        },
+                        {
+                            "text": "Cured a French disease which caused the women to lose their ears.",
+                            "children": []
+                        },
+                        {
+                            "text": "You can no longer ask yourself nicely to stop your own plot.",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters possessed using demonic power will no longer be so reluctant to then join your demon worshiping cult.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added localization for the the Bön Faithful cult title.",
+                            "children": []
+                        },
+                        {
+                            "text": "Made sure the Eternal Flame Great Work feature actually increases Zunist/Reformed Zunist opinion.",
+                            "children": []
+                        },
+                        {
+                            "text": "The pope will no longer consider you a selfish crusader no matter your stance if you are the top*contributer to a crusade.",
+                            "children": []
+                        },
+                        {
+                            "text": "Orthodox baptism now has fitting text and tooltip.",
+                            "children": []
+                        },
+                        {
+                            "text": "When a stillbirth happens, the mother is now the one that has a chance to get sick instead of it being the grandmother.",
+                            "children": []
+                        },
+                        {
+                            "text": "If a character kills your spymaster you now have a reason to imprison them.",
+                            "children": []
+                        },
+                        {
+                            "text": "The achievement \"I shed blood of Saxon men\" now looks at the correct counties.",
+                            "children": []
+                        },
+                        {
+                            "text": "Muslim characters can now create claimant factions.",
+                            "children": []
+                        },
+                        {
+                            "text": "Your influence over cardinals will no longer influence the pope's decisions regarding excommunication if you're Orthodox.",
+                            "children": []
+                        },
+                        {
+                            "text": "Catholics will now be appropriately interested in a crusade targeting Egypt.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed it being possible to build Features on Great Works not owned by the player character.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Great Work construction being paused on succession.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed crash that occured if a province's history contained an invalid Great Work or feature.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a duel so that it looks at personal combat skill instead of martial.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue with the Assassins Society sometimes giving you a mission to murder yourself.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where percentage checks against nomad population would always fail if the population was too high.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash that could occur when crusades were completed on save games created before version 3.0.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue with the Great Harbor work having an inverted build cost modifier at its last stage.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with the meritocracy religious doctrine for reformed pagan religions.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an OOS that could occur when the AI unpaused a Great Work construction.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug that was stopping tribal settlements from getting replaced when the player should be able to replace them.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug that would sometimes make it impossible to pause construction of a Great Work feature.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the private conversation event not triggering.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the history of the Chalkidike province so that it once again has a proper owner.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the \"Construct a Great Work\" ambition getting fulfilled as soon as a Great Work construction started.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Great Work feature construction not pausing when the feature conditions for it being active was no longer met.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Konark Sun Temple and the Mausoleum at Halicarnassus not processing their history setups correctly.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed not being allowed to build Great Work plating features if there already is a plating feature on any Great Work.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed building the Hypocausts feature on a Great Work enabling the Heating Pipes feature to be built on any Great Work.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Great Works not removing feature slots when looted.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue with double pregnancy reports being sent if your lover is also your concubine.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with Ashoka Bloodline not being able to use the invasion casus belli.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed multiple issues with Bells looted from the Grand Cathedral.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed several issues with \"Store a Relic\" decision and Relic Tomb.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the firing of two city sacking events for Mongol Players.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed marriage issues with Suomenusko religion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a formating issue in one \"Lost Book\" event.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a faulty trigger in the artifact setup, ensuring that the Gjallarhorn is more likely to start out in the Treasury of a character with Germanic religion (rather than any landed one).",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue that was causing the old \"Friend of a friend\" event to never fire.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue where an unlanded feudal character would sometimes change their government to theocracy when granted a county.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some missing localization entries in the Private Conversation events.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed decision importance setting not always persisting when the game was restarted.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some Great Work features with dynamic names using the wrong Great Work type in localization.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed university Great Work description using \"great work\" instead of \"university\" as type.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some Great Work features not having their effects applied/removed when their active state changed.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the game unpausing when pressing \"continue\" on the \"player lost connection\" dialog while the pause menu was also open.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Cathedral Great Works description localization failing to find the name of the owner's religion.",
+                            "children": []
+                        },
+                        {
+                            "text": "You will no longer be stuck on a never ending hajj.",
+                            "children": []
+                        },
+                        {
+                            "text": "A child will no longer end up with a lover.",
+                            "children": []
+                        },
+                        {
+                            "text": "The immortality events will not trigger if the mystic dies.",
+                            "children": []
+                        },
+                        {
+                            "text": "Allied crusader states no longer secedes from player's empire.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some court events firing when the character is in the field commanding armies.",
+                            "children": []
+                        },
+                        {
+                            "text": "Aleppo now becomes de jure part of the Principality of Antioch when it's formed.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed scopes used used in modifiers to decide probability of joining secret cult.",
+                            "children": []
+                        },
+                        {
+                            "text": "You can no longer exploit the smith chain to earn lots of money through the refund.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an interface crash related to imprisonment if the player character died at the same time.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Hashashins will no longer randomly kill their member's courtiers.",
+                            "children": []
+                        },
+                        {
+                            "text": "You can no longer assign councillor as your Advisor without having unlocked that position.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed text overlap on option in event about your smith talking away their work time.",
+                            "children": []
+                        },
+                        {
+                            "text": "Your new vassal will no longer try to pay homage to you when you're in seclusion.",
+                            "children": []
+                        },
+                        {
+                            "text": "You will no longer humiliate and release yourself from prison.",
+                            "children": []
+                        },
+                        {
+                            "text": "The pope will no longer admonish you for not joining a crusade even he hasn't made it to yet.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Crusader Kings II: 3.1 Great Works Update is now live! [checksum KKAB] - Not for problem reports",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Crusader Kings II * 3.1 Update is now live! (checksum KLLL)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

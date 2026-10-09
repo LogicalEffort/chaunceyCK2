@@ -1,0 +1,201 @@
+{
+    "pageid": 3595,
+    "title": "Minor title modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Minor titles can be given out for prestige or opinion modifiers. They are defined in the files contained in the /common/minor_titles/ folder."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that minor titles are always scoped to the liege's main title, so it's not possible to give a title to a character that resides in a different court."
+                }
+            ]
+        },
+        {
+            "heading": "Basic minor title",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can make a basic minor title in a really easy way. Add a .txt file to your mod's /common/minor_titles/ folder. As long as it does not have the same name as the files in the base game's /common/minor_titles/ folder it will add to the list of minor titles."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The example above will add a minor title that can be granted to any adult who is not incapable. It can only be granted in the kingdoms of lalaland and timbuktu, and they must be feudal."
+                }
+            ]
+        },
+        {
+            "heading": "Properties",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Value",
+                            "Effect",
+                            "Example"
+                        ],
+                        [
+                            "is_high_prio",
+                            "bool",
+                            "Displays an alert when the title is vacant.",
+                            "is_high_prio = yes"
+                        ],
+                        [
+                            "show_as_title",
+                            "bool",
+                            "The minor title will be displayed as the holder's main title, overriding other titles such as Count, Duke, etc.",
+                            "show_as_title = yes"
+                        ],
+                        [
+                            "realm_in_name",
+                            "bool",
+                            "Appends the name of the country after the title (Queen [of Sweden])",
+                            "realm_in_name = yes"
+                        ],
+                        [
+                            "is_voter",
+                            "bool",
+                            "Whether the holder has a seat on the council. See Councillor modding .",
+                            "is_voter = yes"
+                        ],
+                        [
+                            "dignity",
+                            "number",
+                            "Adds the specified amount of dignity to the title holder. See Title modding for a more complete description of dignity. In the context of minor titles, this presumably affects which minor title an unlanded character will use as their primary minor title. (Eg: A Designated Regent who is also the current Regent will appear as \"Regent of X\" in the character finder etc, because the Regent title has higher dignity than Designated Regent.) Note: This interpretation is not thoroughly tested & verified.",
+                            "dignity = 0.10"
+                        ],
+                        [
+                            "attribute",
+                            "attribute",
+                            "The optional main attribute that will improve the efficiency of the holder. When opening the UI the candidates will be sorted using this attribute by default.",
+                            "attribute = martial"
+                        ],
+                        [
+                            "grant_limit",
+                            "integer",
+                            "Maximum number of holders for this title.",
+                            "grant_limit = 1"
+                        ],
+                        [
+                            "opinion_effect",
+                            "integer",
+                            "Opinion from the holder of title to his liege. 5 would be a +5 opinion.",
+                            "opinion_effect = 5"
+                        ],
+                        [
+                            "monthly_salary",
+                            "number",
+                            "The amount the holder will earn by holding this minor title in one month.",
+                            "monthly_salary = 0.1"
+                        ],
+                        [
+                            "monthly_prestige",
+                            "number",
+                            "The amount of prestige accrued each month by the holder of this minor title.",
+                            "monthly_prestige = 0.15"
+                        ],
+                        [
+                            "is_unique",
+                            "bool",
+                            "Whether this title can be cumulated with another honorary title or not.",
+                            "is_unique = yes"
+                        ],
+                        [
+                            "allowed_to_hold",
+                            "conditions (character scope)",
+                            "Determines which characters are eligible to hold this minor title. ROOT is the character being checked. FROM is the liege granting the title.",
+                            "allowed_to_hold = {\n    is_adult = yes\n    NOT = { trait = incapable }\n}"
+                        ],
+                        [
+                            "allowed_to_grant",
+                            "conditions (character scope)",
+                            "Determines who is allowed to grant this title. This might be restricted by religion, culture, traits, or simply limited to one kingdom or duchy.",
+                            "allowed_to_grant = {\n    has_landed_title = k_lalaland\n}"
+                        ],
+                        [
+                            "gain_effect",
+                            "commands (character scope)",
+                            "Fires when the title is granted",
+                            ""
+                        ],
+                        [
+                            "revoke_trigger",
+                            "conditions (character scope)",
+                            "",
+                            "revoke_trigger = {\n  FROM = {\n    primary_title = {\n      NOT = { \n        AND = {\n          has_law = succession_voting_power_1\n          ROOT = { is_powerful_vassal = yes }\n        }\n      }\n    }\n  }\n}"
+                        ],
+                        [
+                            "lose_effect",
+                            "commands (character scope)",
+                            "Fires when a title is lost if allowed_to_hold evaluates to false",
+                            "lose_effect = {\n  opinion = { \n    who = FROM\n    modifier = opinion_fired_from_council\n  }\n}"
+                        ],
+                        [
+                            "retire_effect",
+                            "commands (character scope)",
+                            "",
+                            ""
+                        ],
+                        [
+                            "death_effect",
+                            "commands (character scope)",
+                            "Fires when a character dies while holding this title",
+                            ""
+                        ],
+                        [
+                            "message",
+                            "bool",
+                            "Fires a message to the its owner when set",
+                            ""
+                        ],
+                        [
+                            "patrician_heir",
+                            "bool",
+                            "Special title that determines the heir of a Patrician",
+                            "patrician_heir = yes"
+                        ],
+                        [
+                            "counts_as_purple_born",
+                            "bool",
+                            "Holder of the title counts as born-in-the-purple for Byzantine Empire succession.",
+                            "counts_as_purple_born = yes"
+                        ],
+                        [
+                            "<other fields>",
+                            "character modifiers",
+                            "Modifiers applied to the holder of the title.",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In the context of minor titles, this presumably affects which minor title an unlanded character will use as their primary minor title. (Eg: A Designated Regent who is also the current Regent will appear as \"Regent of X\" in the character finder etc, because the Regent title has higher dignity than Designated Regent.) Note: This interpretation is not thoroughly tested & verified."
+                }
+            ]
+        },
+        {
+            "heading": "Localisation",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You want the minor title to be named and described properly in the game, so we need to add some localisation. So create a new file in the /localisation/ folder of your mod. It must be a CSV file, so the name could be something like 00_Minor_titles.csv ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that the code for the description is simply the code for the minor title with _desc at the end."
+                }
+            ]
+        }
+    ]
+}

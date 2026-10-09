@@ -1,0 +1,295 @@
+{
+    "pageid": 3699,
+    "title": "Artifact modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Artifacts are part of free patch 2.7 and don't actually require Monks and Mystics expansion (though most vanilla artifacts are part of the expansion)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "They allow classical-RPG concepts of treasury (stash) and equipable slots (inventory)."
+                }
+            ]
+        },
+        {
+            "heading": "Artifacts",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Variable",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "quality",
+                            "int",
+                            "",
+                            "quality = 2"
+                        ],
+                        [
+                            "flags",
+                            "List<string>",
+                            "Flags that can be checked with has_artifact_flag condition.",
+                            "flags = { chest hermetics very_rare }"
+                        ],
+                        [
+                            "active",
+                            "Character conditions",
+                            "Conditions for the artifact to be usable by a character. See is_artifact_active condition. An artifact with an active trigger but without owner will never be considered active An artifact without an active trigger will always be considered active, even if not owned. ROOT is the owner and FROM is the artifact",
+                            "active = {\n  is_adult = yes\n}"
+                        ],
+                        [
+                            "allowed_gift",
+                            "Character conditions",
+                            "Conditions for the trigger artifact_can_be_gifted_to ."
+                        ],
+                        [
+                            "stacking",
+                            "bool",
+                            "If no, can only have a single copy of this artifact in one's possession. Defaults to \"yes\".",
+                            "stacking = no"
+                        ],
+                        [
+                            "indestructible",
+                            "bool",
+                            "Whether destroy_artifact has any affect. Defaults to \"no\".",
+                            "indestructible = yes"
+                        ],
+                        [
+                            "picture",
+                            "gfx",
+                            "Defines the gfx name, typically GFX_<artifact_name> 2 images are needed: 118x118px for GFX_<artifact_name> 59x59px for GFX_<artifact_name>_small",
+                            "picture = \"GFX_strange_chest\""
+                        ],
+                        [
+                            "<modifier>",
+                            "Character modifiers",
+                            "Modifiers given by the artifact when it is equipped.",
+                            "martial = 2\nmonthly_character_piety = -2\ntech_growth_modifier = 0.05\ncombat_rating = 2"
+                        ],
+                        [
+                            "slot",
+                            "string",
+                            "Associated slot to equip the artifact. New slots can be added dynamically.",
+                            "slot = crown"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "An artifact with an active trigger but without owner will never be considered active",
+                            "children": []
+                        },
+                        {
+                            "text": "An artifact without an active trigger will always be considered active, even if not owned.",
+                            "children": []
+                        },
+                        {
+                            "text": "ROOT is the owner and FROM is the artifact",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "2 images are needed:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "118x118px for GFX_<artifact_name>",
+                            "children": []
+                        },
+                        {
+                            "text": "59x59px for GFX_<artifact_name>_small",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Localization:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "<artifact_name> : name of the artifact",
+                            "children": []
+                        },
+                        {
+                            "text": "<artifact_name>_desc : description of the arftifact",
+                            "children": []
+                        },
+                        {
+                            "text": "<slot> : name of the equipment slot",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Pictures:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The pictures are set in C:\\Users\\Your user name\\Documents\\Paradox Interactive\\Crusader Kings II\\gfx\\interface\\inventory\\artifacts",
+                            "children": []
+                        },
+                        {
+                            "text": "Don't forget to add an entry in \"C:\\Users\\Your user name\\Documents\\Paradox Interactive\\Crusader Kings II\\interface\\portrait_properties\\00_portrait_properties.txt\" if your artifact is something that changes the portrait like a helmet",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Example for mods:\nC:\\Users\\Your user name\\Documents\\Paradox Interactive\\Crusader Kings II\\mod\\A Game of Thrones\\gfx\\interface\\inventory\\artifacts"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The link between the GFX code and the picture is in Vanilla file interface/domestic_treasury.gfx",
+                            "children": []
+                        },
+                        {
+                            "text": "You can use artifact backgrounds (arti_bg.dds, arti_bg_glow.dds, arti_bg_small.dds, and arti_bg_glow_small.dds) in gfx/interface/inventory/artifacts to make artifacts that follow the style of the vanilla artifacts",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Slots",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Artifacts can be equipped or unequipped. Number of equipped artifacts are limited by dynamic \"slots\":"
+                }
+            ]
+        },
+        {
+            "heading": "Artifact spawns",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Determines the generation of artifacts at the begining of a game."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Variable",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "max_amount",
+                            "int",
+                            "How many artifacts do we hand out? Default is 4,294,967,295",
+                            "max_amount = 1"
+                        ],
+                        [
+                            "spawn_date",
+                            "date",
+                            "What date should it claim to have been created? Note that this could be in the future; the spawn chance should be handled in spawn_chance. If a date at or before 1.1.1 is used, it'll state \"Unknown Date\".",
+                            "spawn_date = -1.1.1"
+                        ],
+                        [
+                            "spawn_chance",
+                            "MTTH",
+                            "Decides whether an artifact spawn should execute or not. Range is 0-100. Default behaviour is to always spawn.",
+                            "# 50% chance to execute an artifact spawn\nspawn_chance = {\n\tvalue = 50\n}"
+                        ],
+                        [
+                            "weight",
+                            "MTTH",
+                            "Character scope, evaluates a potential artifact holder score, which is then used for randomizing who gets an artifact. Default behavior is for everyone to have the same chance.",
+                            "# Only christians have a chance of getting an artifact\nweight = {\n\tvalue = 0\n\tadditive_modifier = {\n\t\tvalue = 100\n\t\treligion_group = christian\n\t}\n}"
+                        ],
+                        [
+                            "artifacts",
+                            "clause",
+                            "List of keys and MTTH for which artifact is spawned.",
+                            "# 50% chance that the person will get a golden_platypus\nartifacts ={\n\tgolden_platypus = {\n\t\tvalue = 1\n\t}\n\tcrystal_platypus = {\n\t\tvalue = 1\n\t}\n}"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Migrate from traits",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Here is the equivalence to replace traits into artifacts:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Behavior",
+                            "Trait",
+                            "Artifact"
+                        ],
+                        [
+                            "Possession",
+                            "has_trait = xxx",
+                            "has_artifact = xxx"
+                        ],
+                        [
+                            "Creation",
+                            "add_trait = xxx",
+                            "add_artifact = xxx"
+                        ],
+                        [
+                            "Destruction",
+                            "remove_trait = xxx",
+                            "destroy_artifact  = xxx"
+                        ],
+                        [
+                            "Transfer",
+                            "FROM = {\n\tremove_trait = xxx\n}\nROOT = {\n\tadd_trait = xxx\n}",
+                            "random_artifact = {\t\n\tartifact_type = xxx\n\ttransfer_artifact = {\n\t\tfrom = FROM\n\t\tto = ROOT\n\t}\n}"
+                        ],
+                        [
+                            "Uniqueness",
+                            "xxx = { cached = yes } trait, and xxx = { always = yes }",
+                            "?"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": []
+        }
+    ]
+}

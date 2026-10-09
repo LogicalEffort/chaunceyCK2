@@ -1,0 +1,901 @@
+{
+    "pageid": 6341,
+    "title": "HF religious events",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/HF_religious_events.txt"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Event",
+                            "Notes"
+                        ],
+                        [
+                            "HF.23001",
+                            "Ritual Sacrifice Prisoner",
+                            ""
+                        ],
+                        [
+                            "HF.23002",
+                            "Ritual Sacrifice Prisoner (Jailer's perspective)",
+                            ""
+                        ],
+                        [
+                            "HF.23003",
+                            "Syncretic rulers can pick a random sympathy.",
+                            ""
+                        ],
+                        [
+                            "HF.23004",
+                            "Second sympathy list",
+                            ""
+                        ],
+                        [
+                            "HF.23005",
+                            "Divination: on war started, chance to divine outcome. Hidden ping to select haruspex.",
+                            ""
+                        ],
+                        [
+                            "HF.23006",
+                            "Hidden ping on diviner.",
+                            ""
+                        ],
+                        [
+                            "HF.23007",
+                            "(follow_up from HF.23006)",
+                            ""
+                        ],
+                        [
+                            "HF.23008",
+                            "Divination: Critical success",
+                            ""
+                        ],
+                        [
+                            "HF.23009",
+                            "Divination: Success",
+                            ""
+                        ],
+                        [
+                            "HF.23010",
+                            "Divination: Failure",
+                            ""
+                        ],
+                        [
+                            "HF.23011",
+                            "Divination: Critical Failure",
+                            ""
+                        ],
+                        [
+                            "HF.23012",
+                            "Divination: Cleanup event on war over.",
+                            ""
+                        ],
+                        [
+                            "HF.23013",
+                            "Divination: Cleanup event on war over.",
+                            ""
+                        ],
+                        [
+                            "HF.23016",
+                            "Pick a Pagan religious branch when having a headless reformed pagan religion.",
+                            ""
+                        ],
+                        [
+                            "HF.23017",
+                            "Switch pagan religious branch.",
+                            ""
+                        ],
+                        [
+                            "HF.23018",
+                            "Dralha's Children Notification event",
+                            ""
+                        ],
+                        [
+                            "HF.23019",
+                            "Zodiac Signs - Hellenic Flavor On_birth event assigns traits on hellenic child.",
+                            ""
+                        ],
+                        [
+                            "HF.23020",
+                            "On_adolescence: chance for child to be either inclined to abandon the sign or embrace it. Follows an event for the Guardian to give his opinion on the matter. Child: hidden event for delay.",
+                            ""
+                        ],
+                        [
+                            "HF.23021",
+                            "Astrology: The child thinks about his sign.",
+                            ""
+                        ],
+                        [
+                            "HF.23022",
+                            "Guardian: is the child doing well?",
+                            ""
+                        ],
+                        [
+                            "HF.23023",
+                            "Astrology: The child has been persuaded to forsake the sign.",
+                            ""
+                        ],
+                        [
+                            "HF.23024",
+                            "Astrology: The child has been persuaded to embrace the sign.",
+                            ""
+                        ],
+                        [
+                            "HFP.23925",
+                            "Astrology: Adult character without his sign gains it by decision.",
+                            ""
+                        ],
+                        [
+                            "HF.23026",
+                            "Delving into the Classics - Possibly starting an Hellenic cult.",
+                            ""
+                        ],
+                        [
+                            "HF.23027",
+                            "Study ended in failure.",
+                            ""
+                        ],
+                        [
+                            "HF.23028",
+                            "Chance to secretly become hellenic.",
+                            ""
+                        ],
+                        [
+                            "HF.23029",
+                            "Studied military.",
+                            ""
+                        ],
+                        [
+                            "HF.23030",
+                            "Studied statecraft.",
+                            ""
+                        ],
+                        [
+                            "HF.23031",
+                            "Studied orations.",
+                            ""
+                        ],
+                        [
+                            "HF.23032",
+                            "Astrology: Notification event without tooltip.",
+                            ""
+                        ],
+                        [
+                            "HF.23033",
+                            "on_conversion: Converted to a Pagan Religion with branches from a religion without.",
+                            ""
+                        ],
+                        [
+                            "HF.23034",
+                            "On Conversion event to clear up gender laws when needed.",
+                            ""
+                        ],
+                        [
+                            "HF.23035",
+                            "On Random Start cleanup for Status of Women.",
+                            ""
+                        ],
+                        [
+                            "HF.23100",
+                            "Burn Rome of all its pesky temple holdings to make it a viable capital again.",
+                            "Reformation via Roman Empire"
+                        ],
+                        [
+                            "HF.23101",
+                            "Does the Emperor wish to burn Rome?",
+                            ""
+                        ],
+                        [
+                            "HF.23102",
+                            "Rome's temples are burnt. - Emperor's perspective.",
+                            ""
+                        ],
+                        [
+                            "HF.23103",
+                            "Other players informed of what happened.",
+                            ""
+                        ],
+                        [
+                            "HF.23104",
+                            "Christian peasants rise up after the great fire settles.",
+                            ""
+                        ],
+                        [
+                            "HF.23105",
+                            "In case Rome is held by a vassal, inform liege.",
+                            ""
+                        ],
+                        [
+                            "HF.23106",
+                            "New Emperor of restored Rome thinks about restoring the old religion.",
+                            ""
+                        ],
+                        [
+                            "HF.23107",
+                            "How does the Emperor restore Hellenism?",
+                            ""
+                        ],
+                        [
+                            "HF.23108",
+                            "Vassals receive ultimatum.",
+                            ""
+                        ],
+                        [
+                            "HF.23109",
+                            "Vassal will not convert.",
+                            ""
+                        ],
+                        [
+                            "HF.23110",
+                            "Vassal will convert.",
+                            ""
+                        ],
+                        [
+                            "HF.23111",
+                            "Vassals of Vassals automatically convert alongside their immediate liege (unless player or theocracies).",
+                            ""
+                        ],
+                        [
+                            "HF.23112",
+                            "The Roman Empire turns hellenic.",
+                            ""
+                        ],
+                        [
+                            "HF.23113",
+                            "Random Abrahamic ruler starts a rebellion against the Hellenic Emperor.",
+                            ""
+                        ],
+                        [
+                            "HF.23114",
+                            "Other Vassals join the cause",
+                            ""
+                        ],
+                        [
+                            "HF.23115",
+                            "The True Believers have gathered, now time to actually start the war.",
+                            ""
+                        ],
+                        [
+                            "HF.23116",
+                            "Notify players of the revolt",
+                            ""
+                        ],
+                        [
+                            "HF.23117",
+                            "The Hellenic Emperor won, ensuring the rebirth of the faith.",
+                            ""
+                        ],
+                        [
+                            "HF.23118",
+                            "Vassals get a second chance to convert after the war.",
+                            ""
+                        ],
+                        [
+                            "HF.23119",
+                            "Roman Renaissance: Christian moralizers.",
+                            ""
+                        ],
+                        [
+                            "HF.23120",
+                            "Myrmidons - Hellenic Holy Order Notification event",
+                            ""
+                        ],
+                        [
+                            "HF.23121",
+                            "The Rise of the Bacchants. Rome: Province event to spread the secret cult. (fired either after a victorious Hellenic Civil War or after delving in the classics).",
+                            ""
+                        ],
+                        [
+                            "HF.23122",
+                            "Players notified.",
+                            ""
+                        ],
+                        [
+                            "HF.23123",
+                            "Players notified.",
+                            ""
+                        ],
+                        [
+                            "HF.23124",
+                            "POWER: Culture Convert County. Notification for ruler who performs the power",
+                            ""
+                        ],
+                        [
+                            "HF.23125",
+                            "Notification event for county owner if different from user",
+                            ""
+                        ],
+                        [
+                            "HF.23200",
+                            "Ruler decides whom to dedicate the temple to. First determine which kind of god you are interested in.",
+                            "Hellenic Dedicated Temples."
+                        ],
+                        [
+                            "HF.23201",
+                            "The Three Brothers (Zeus, Poseidon or Hades)",
+                            ""
+                        ],
+                        [
+                            "HF.23202",
+                            "The Gods of War (Athena, Hares or Hephaestus)",
+                            ""
+                        ],
+                        [
+                            "HF.23203",
+                            "The Goddesses of Prosperity (Hestia, Demeter or Aphrodite)",
+                            ""
+                        ],
+                        [
+                            "HF.23204",
+                            "The Heavenly Twins (Apollo, Artemis or Hermes)",
+                            ""
+                        ],
+                        [
+                            "HF.23205",
+                            "On_startup: Hidden event on AltStart applying the Cosmopolitan/Dogmatic effects on customized religions.",
+                            ""
+                        ],
+                        [
+                            "HF.23207",
+                            "On_looting_settlement: Gaining Thralls.",
+                            "Synergic Doctrines flavor. Special raider events (traits gained by having Daring + Seafaring)."
+                        ],
+                        [
+                            "HF.23208",
+                            "Owner of province is notified of great sacrifice.",
+                            ""
+                        ],
+                        [
+                            "HF.23209",
+                            "On_looting_settlement: Rounded up cattle.",
+                            ""
+                        ],
+                        [
+                            "HF.23210",
+                            "On_looted_settlement: Destroying large city as a Ravager/Seaking.",
+                            ""
+                        ],
+                        [
+                            "HF.23211",
+                            "Owner of province is notified of destruction of settlement.",
+                            ""
+                        ],
+                        [
+                            "HF.23212",
+                            "On_looted_settlement: Bloodline gained at 200 viking_raids variable.",
+                            ""
+                        ],
+                        [
+                            "HF.23213",
+                            "Other players are notified.",
+                            ""
+                        ],
+                        [
+                            "HF.23214",
+                            "On_looted_settlement: Stumbling on small mercenary band.",
+                            ""
+                        ],
+                        [
+                            "HF.23215",
+                            "Pirate was able to seduce mercenary.",
+                            ""
+                        ],
+                        [
+                            "HF.23216",
+                            "Failed to Seduce. The captain offers band at increased cost.",
+                            ""
+                        ],
+                        [
+                            "HF.23217",
+                            "Mercenaries disband after a year.",
+                            ""
+                        ],
+                        [
+                            "HF.23218",
+                            "Pirate was able to kill mercenary leader in duel.",
+                            ""
+                        ],
+                        [
+                            "HF.23219",
+                            "on_looting_pulse: chance to sneak inside city.",
+                            ""
+                        ],
+                        [
+                            "HF.23220",
+                            "Success: Full assault.",
+                            ""
+                        ],
+                        [
+                            "HF.23221",
+                            "Failure: Full assault.",
+                            ""
+                        ],
+                        [
+                            "HF.23222",
+                            "Success: Infiltrated Temple.",
+                            ""
+                        ],
+                        [
+                            "HF.23223",
+                            "Failure: Infiltrated Temple.",
+                            ""
+                        ],
+                        [
+                            "HF.23224",
+                            "Success: Infiltrated Castle.",
+                            ""
+                        ],
+                        [
+                            "HF.23225",
+                            "Failure: Infiltrated Castle.",
+                            ""
+                        ],
+                        [
+                            "HF.23226",
+                            "Success: Spread through Countryside.",
+                            ""
+                        ],
+                        [
+                            "HF.23227",
+                            "Failure: Spread through Countryside.",
+                            ""
+                        ],
+                        [
+                            "HF.23400",
+                            "Main event for religious head (it is localized, because the religious head might be Temporal).",
+                            "Flavor Doctrine events: Astrology + Haruspicy causes Religious Head to interpret the stars 10-yearly. (Or your Court Chaplain if No Rel Head exists)"
+                        ],
+                        [
+                            "HF.23401",
+                            "Main event for the rulers.",
+                            ""
+                        ],
+                        [
+                            "HF.23402",
+                            "Tempted fate once too often. Religious head dies.",
+                            ""
+                        ],
+                        [
+                            "HF.23403",
+                            "Players of same religion are notified.",
+                            ""
+                        ],
+                        [
+                            "HF.23404",
+                            "Main event for Court Chaplain of Kings and above (Only if no religious head exists).",
+                            ""
+                        ],
+                        [
+                            "HF.23405",
+                            "Main event for the rulers. (from Chaplain)",
+                            ""
+                        ],
+                        [
+                            "HF.23406",
+                            "Tempted fate once too often. Ruler dies.",
+                            ""
+                        ],
+                        [
+                            "HF.23410",
+                            "On_death: Hidden ping from the prisoner.",
+                            "Haruspicy + Bloodthirsty Gods allows to read your fortune when killing a notable prisoner."
+                        ],
+                        [
+                            "HF.23411",
+                            "Executioner offered chance of reading his future.",
+                            ""
+                        ],
+                        [
+                            "HF.23412",
+                            "Cannibal reinvigored from enemy's flesh.",
+                            ""
+                        ],
+                        [
+                            "HF.23413",
+                            "Cannibal feels healthier.",
+                            ""
+                        ],
+                        [
+                            "HF.23414",
+                            "Cannibal's illness has been cured.",
+                            ""
+                        ],
+                        [
+                            "HF.23415",
+                            "Cannibal has gone insane.",
+                            ""
+                        ],
+                        [
+                            "HF.23416",
+                            "Martial bonus from bloodied haruspicy.",
+                            ""
+                        ],
+                        [
+                            "HF.23417",
+                            "Plot def bonus from bloodied haruspicy.",
+                            ""
+                        ],
+                        [
+                            "HF.23418",
+                            "Plot att bonus from bloodied haruspicy.",
+                            ""
+                        ],
+                        [
+                            "HF.23419",
+                            "Stewardship bonus from bloodied haruspicy.",
+                            ""
+                        ],
+                        [
+                            "HF.23420",
+                            "Inconclusive results from bloodied haruspicy.",
+                            ""
+                        ],
+                        [
+                            "HF.23421",
+                            "Negative results from bloodied haruspicy.",
+                            ""
+                        ],
+                        [
+                            "HF.23422",
+                            "Mystic managed to increase MA of his religion.",
+                            ""
+                        ],
+                        [
+                            "HF.23430",
+                            "Sacrifying prisoners increases burned_hearts_points variable, unlocking tiered traits. It's like Viking traits, but for psychos. Hidden on death event for the sacrifical victims.",
+                            "Bloodthirsty Gods/Aztecs"
+                        ],
+                        [
+                            "HF.23431",
+                            "Gained the Haemophiliac trait.",
+                            ""
+                        ],
+                        [
+                            "HF.23432",
+                            "Gained the Haemophant trait.",
+                            ""
+                        ],
+                        [
+                            "HF.23433",
+                            "Gained the Haemoarch trait.",
+                            ""
+                        ],
+                        [
+                            "HF.23434",
+                            "Gained the Bloodthirsty Bloodline.",
+                            ""
+                        ],
+                        [
+                            "HF.23435",
+                            "Inform players.",
+                            ""
+                        ],
+                        [
+                            "HF.23440",
+                            "First event, send invitations to all vassals.",
+                            "Bloodthirsty Gods: The Blood Festival - Available from trait tier 1 and above"
+                        ],
+                        [
+                            "HF.23441",
+                            "Vassal receives invitation.",
+                            ""
+                        ],
+                        [
+                            "HF.23442",
+                            "Notify liege of positive response.",
+                            ""
+                        ],
+                        [
+                            "HF.23443",
+                            "Pick a champion. Rulers cannot fight themselves.",
+                            ""
+                        ],
+                        [
+                            "HF.23444",
+                            "Imprisoned ruler notified that he has been picked.",
+                            ""
+                        ],
+                        [
+                            "HF.23445",
+                            "Pick equipment",
+                            ""
+                        ],
+                        [
+                            "HF.23446",
+                            "Getting cleaunp events out of the way first... on_released_from_prison: If your champion is a prisoner and he is released before the tournament starts, you cannot use him. hidden ping from prisoner",
+                            ""
+                        ],
+                        [
+                            "HF.23447",
+                            "Ruler informed that he has no champion.",
+                            ""
+                        ],
+                        [
+                            "HF.23448",
+                            "on_death: If your champion dies before the tournament starts, you cannot use him. hidden ping from dying man",
+                            ""
+                        ],
+                        [
+                            "HF.23449",
+                            "Ruler informed that he has no champion.",
+                            ""
+                        ],
+                        [
+                            "HF.23466",
+                            "Ruler informed that he has no champion.",
+                            ""
+                        ],
+                        [
+                            "HF.23450",
+                            "On_death: The Tournament's host dies before the tournament starts.",
+                            ""
+                        ],
+                        [
+                            "HF.23451",
+                            "Other guests are notified that the tournament has been canceled.",
+                            ""
+                        ],
+                        [
+                            "HF.23452",
+                            "The Tournament is about to start. (liege)",
+                            ""
+                        ],
+                        [
+                            "HF.23453",
+                            "Tournament is about to start. (guests)",
+                            ""
+                        ],
+                        [
+                            "HF.23454",
+                            "Tournament starts (liege)",
+                            ""
+                        ],
+                        [
+                            "HF.23455",
+                            "Winner of the tournament.",
+                            ""
+                        ],
+                        [
+                            "HF.23456",
+                            "Tournament loser is sacrified to the gods.",
+                            ""
+                        ],
+                        [
+                            "HF.23460",
+                            "Tournament is over, FROM is the winner. (liege)",
+                            ""
+                        ],
+                        [
+                            "HF.23457",
+                            "Tournament is over, FROMFROM is the winner. (guests)",
+                            ""
+                        ],
+                        [
+                            "HF.23458",
+                            "On_conversion cleanup. If the host converts to a religion without the bloodthirsty gods doctrine, the whole thing is off.",
+                            ""
+                        ],
+                        [
+                            "HF.23459",
+                            "Notify vassals.",
+                            ""
+                        ],
+                        [
+                            "HF.23461",
+                            "Pick equipment - Version for spare warrior, same events, but doesn't fire the tournament again.",
+                            ""
+                        ],
+                        [
+                            "HF.23462",
+                            "Decide how many people are you going to sacrifice.",
+                            "Bloodthirsty Gods: The Mass Sacrifice - Available from trait tier 2 and above"
+                        ],
+                        [
+                            "HF.23463",
+                            "Bloodthirsty vassals notified.",
+                            ""
+                        ],
+                        [
+                            "HF.23464",
+                            "Non-bloodthirsty vassals notified.",
+                            ""
+                        ],
+                        [
+                            "HF.23465",
+                            "War enemy notified.",
+                            ""
+                        ],
+                        [
+                            "HF.23470",
+                            "Building an Irminsul",
+                            ""
+                        ],
+                        [
+                            "HF.23471",
+                            "Vassals notified",
+                            ""
+                        ],
+                        [
+                            "HF.23472",
+                            "On_startup event giving Irminsul to the Saxon Kingdom on Charlemagne start.",
+                            ""
+                        ],
+                        [
+                            "HF.23473",
+                            "on_siege_over_winner: Destroying a Great Pillar. (ROOT is besieger, FROM is besieged holding)",
+                            ""
+                        ],
+                        [
+                            "HF.23474",
+                            "Realm Pagans notified of Pillar's destruction.",
+                            ""
+                        ],
+                        [
+                            "HF.23475",
+                            "Clean post-destruction flag.",
+                            ""
+                        ],
+                        [
+                            "HF.23476",
+                            "Ruler has destroyed Great Pillar within his own realm.",
+                            ""
+                        ],
+                        [
+                            "HF.23477",
+                            "Pagan vassals of ruler react.",
+                            ""
+                        ],
+                        [
+                            "HF.23700",
+                            "On_title_new_holder: check succession/women's status when creating new vassals.",
+                            ""
+                        ],
+                        [
+                            "HF.23701",
+                            "(follow_up from HF.23701)",
+                            ""
+                        ],
+                        [
+                            "HF.23750",
+                            "on_birth: Primary Heir is born, decide what to do with him. Check if ruler's son and new heir, send delayed event.",
+                            "Doctrine Flavor: Stability"
+                        ],
+                        [
+                            "HF.23751",
+                            "Parent-liege receives event and decides what to do.",
+                            ""
+                        ],
+                        [
+                            "HF.23752",
+                            "Very Positive.",
+                            "Astronomy + Stability outcomes."
+                        ],
+                        [
+                            "HF.23753",
+                            "Positive.",
+                            ""
+                        ],
+                        [
+                            "HF.23754",
+                            "Negative.",
+                            ""
+                        ],
+                        [
+                            "HF.23755",
+                            "Very Negative.",
+                            ""
+                        ],
+                        [
+                            "HF.23760",
+                            "First event, pick attribute.",
+                            "Stability. Attribute Improvement decision. (Meliorism)"
+                        ],
+                        [
+                            "HF.23761",
+                            "Thanks to synergy and good work, target has improved his education.",
+                            ""
+                        ],
+                        [
+                            "HF.23762",
+                            "Too much pressure resulted in burnout.",
+                            ""
+                        ],
+                        [
+                            "HF.23763",
+                            "Ruler: Target become as uncouth as you.",
+                            ""
+                        ],
+                        [
+                            "HF.23764",
+                            "Target: Random courtier approves of uncouthness.",
+                            ""
+                        ],
+                        [
+                            "HF.23765",
+                            "Ruler: Target become as fat as you.",
+                            ""
+                        ],
+                        [
+                            "HF.23766",
+                            "Target: Random courtier approves of weight.",
+                            ""
+                        ],
+                        [
+                            "HF.23767",
+                            "Ruler: Target become as thin as you.",
+                            ""
+                        ],
+                        [
+                            "HF.23768",
+                            "Target: Random courtier approves of weight.",
+                            ""
+                        ],
+                        [
+                            "HF.23769",
+                            "Ruler: Target experienced burnout.",
+                            ""
+                        ],
+                        [
+                            "HF.23770",
+                            "Family Bloodline gained from improving close relatives.",
+                            ""
+                        ],
+                        [
+                            "HF.23771",
+                            "Benevolent Bloodline gained.",
+                            ""
+                        ],
+                        [
+                            "HF.23772",
+                            "Safety flag cleanup event.",
+                            ""
+                        ],
+                        [
+                            "HF.23773",
+                            "First select investment for ceremony.",
+                            "on_adulthood (delayed): African rite of passage."
+                        ],
+                        [
+                            "HF.23774",
+                            "Then select the kind of bonus.",
+                            ""
+                        ],
+                        [
+                            "HF.23775",
+                            "on_adulthood: actual event, firing delay to avoid clutter.",
+                            ""
+                        ],
+                        [
+                            "HF.23776",
+                            "On_startup event to assign african face paint.",
+                            ""
+                        ],
+                        [
+                            "HF.23777",
+                            "On-action event: Divine Marriage due to Doctrine.",
+                            ""
+                        ],
+                        [
+                            "HF.23778",
+                            "On-start: Dogmatic+Holy Family+Temporal Head = Ruling religious head is the high god.",
+                            ""
+                        ],
+                        [
+                            "HF.23779",
+                            "New_holder event: Dogmatic+Holy Family+Temporal Head = Ruling religious head is the high god.",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,122 @@
+{
+    "pageid": 2734,
+    "title": "Creating a mod exe installer guide",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This guide explains how to create a Windows .exe installer for a CK2 mod , with NSIS ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "An installer will prevent the most frequent causes of a mod not working, reducing the support needed:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "forgetting to remove previous mod version",
+                            "children": []
+                        },
+                        {
+                            "text": "unzipping in wrong folder",
+                            "children": []
+                        },
+                        {
+                            "text": "black flags due to an outdated gfx cache",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "But it may have some drawbacks:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": ".exe files may cause false positive with some antivirus",
+                            "children": []
+                        },
+                        {
+                            "text": ".exe files may be restricted to upload (ex: forum)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Steps",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Install NSIS-2.46.5-Unicode",
+                            "children": []
+                        },
+                        {
+                            "text": "Create a setup.nsi file in same folder as .mod file (see #Sample script )",
+                            "children": []
+                        },
+                        {
+                            "text": "Right-click and select Compile NSIS Unicode script",
+                            "children": []
+                        },
+                        {
+                            "text": "Rename the .exe with version number, if needed.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Sample script",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This script is based on When The World Stopped Making Sense setup.nsi script, replacing the mod name by MyMod ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Comments start with ; character."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that ;!insertmacro MUI_PAGE_COMPONENTS may be uncommented to display an intermediate page to let user select modules to install. Same behavior can be achieved by installing everything, and letting player select the sub-mods to activate in the launcher."
+                }
+            ]
+        },
+        {
+            "heading": "External links",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "MUI description",
+                            "children": []
+                        },
+                        {
+                            "text": "NSIS Scripting reference",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

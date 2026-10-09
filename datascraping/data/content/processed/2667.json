@@ -1,0 +1,541 @@
+{
+    "pageid": 2667,
+    "title": "Government modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Governments were introduced in patch 2.4 and are associated to characters."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "They allow to dissociate the type of the capital holding from the actual government, which was problematic before patch 2.4."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For performance reasons governments are only validated when a title is gained/removed, liege relationship changes and religion changes. [1]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Government group",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Government groups are hardcoded. There are 5 groups:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "feudal_governments, for which is_feudal = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "republic_governments, for which is_republic = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "theocracy_governments, for which is_theocracy = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "tribal_governments, for which is_tribal = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "nomadic_governments, for which is_nomadic = yes",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Government",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Here is the list of flags available for governments: [2]"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "color",
+                            "rgb",
+                            "Color for the government type on the government map mode",
+                            ""
+                        ],
+                        [
+                            "title_prefix",
+                            "string",
+                            "Prefix for title localisation (for instance temple_count).",
+                            "title_prefix = \"temple_\""
+                        ],
+                        [
+                            "frame_suffix",
+                            "string",
+                            "Suffix for the sprite gfx name of the character frame borders to use.",
+                            "frame_suffix = \"_tribal\""
+                        ],
+                        [
+                            "potential",
+                            "character triggers",
+                            "Conditions for a character to select this government type. At game start, in case multiple governments are eligible, the first eligible one will be taken (Note: feudal seem to be evaluated first)",
+                            "potential = {\n\tNOT = {\treligion_group = muslim\t}\n\tis_patrician = no\n}"
+                        ],
+                        [
+                            "merchant_republic",
+                            "bool",
+                            "Enables merchant republic mechanics: generating family palaces and patricians. It will also unlock the possibility to build coastal trade posts.",
+                            "merchant_republic = yes"
+                        ],
+                        [
+                            "uses_bride_price",
+                            "bool",
+                            "Enables the bride price merchant republic functionality.",
+                            "uses_bride_price = yes"
+                        ],
+                        [
+                            "uses_decadence",
+                            "bool",
+                            "If scripted in the government AND the religion of a character, that character will use decadence mechanics.",
+                            "uses_decadence = yes"
+                        ],
+                        [
+                            "uses_jizya_tax",
+                            "bool",
+                            "",
+                            "uses_jizya_tax = yes"
+                        ],
+                        [
+                            "uses_piety_for_law_change",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "uses_prestige_for_law_change",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "allows_matrilineal_marriage",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "allow_title_revokation",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "allow_looting",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "can_imprison_without_reason",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "can_revoke_without_reason",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "ignores_de_jure_laws",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "dukes_called_kings",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "barons_need_dynasty",
+                            "bool",
+                            "If yes, barons will get a random dynasty whenever they get landed",
+                            "barons_need_dynasty = yes"
+                        ],
+                        [
+                            "can_create_empires",
+                            "bool",
+                            "Whether people with this government can create empires. Defaults to yes.",
+                            "can_create_empires = no"
+                        ],
+                        [
+                            "can_create_kingdoms",
+                            "bool",
+                            "Whether people with this government can create kingdoms. Defaults to yes.",
+                            "can_create_kingdoms = no"
+                        ],
+                        [
+                            "can_usurp_kingdoms_and_empires",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "have_gender_laws",
+                            "bool",
+                            "Set for governments that only have one allowed gender laws in the gender laws script. Affects the interface and also government tooltips.",
+                            "have_gender_laws = no"
+                        ],
+                        [
+                            "can_build_holdings",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "can_build_forts",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "can_build_castle",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "can_build_city",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "can_build_temple",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "can_build_tribal",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "can_grant_kingdoms_and_empires_to_other_government",
+                            "bool",
+                            "Whether people with this government can give kingdoms and empires to people with a different government. Defaults to yes.",
+                            ""
+                        ],
+                        [
+                            "can_grant_kingdoms_and_empires_to_other_government_group",
+                            "bool",
+                            "Whether people with this government can give kingdoms and empires to people with a different government group. Defaults to no.",
+                            ""
+                        ],
+                        [
+                            "can_be_granted_kingdoms_and_empires_by_other_government",
+                            "bool",
+                            "Whether people with this government can receive kingdoms and empires from people with a different government. Defaults to yes.",
+                            ""
+                        ],
+                        [
+                            "can_be_granted_kingdoms_and_empires_by_other_government_group",
+                            "bool",
+                            "Whether people with this government can receive kingdoms and empires from people with a different government group. Defaults to yes.",
+                            ""
+                        ],
+                        [
+                            "free_retract_vassalage",
+                            "bool",
+                            "",
+                            ""
+                        ],
+                        [
+                            "free_levies_in_offensive_war",
+                            "bool",
+                            "Raise levies without angering vassals if in an offensive war",
+                            "free_levies_in_offensive_war = yes"
+                        ],
+                        [
+                            "max_consorts",
+                            "int",
+                            "",
+                            ""
+                        ],
+                        [
+                            "max_liege_levy",
+                            "",
+                            "Used instead of crown laws",
+                            ""
+                        ],
+                        [
+                            "max_liege_tax",
+                            "",
+                            "Used instead of crown laws",
+                            ""
+                        ],
+                        [
+                            "aggression",
+                            "double",
+                            "Changes the opinion threshold for being willing to declare war by 20 per point, and how quickly the AI is likely to declare war. 1 is default, and results in no change. Anything below 1 makes the AI less likely to declare war. A value of 0 will make the AI never declare war except via script. A negative value is considered invalid and should not be used",
+                            ""
+                        ],
+                        [
+                            "unit_modifier",
+                            "modifiers",
+                            "Works like in religion modding",
+                            ""
+                        ],
+                        [
+                            "unit_home_modifier",
+                            "modifiers",
+                            "Works like in religion modding",
+                            ""
+                        ],
+                        [
+                            "character_modifier",
+                            "modifiers",
+                            "Works like in religion modding",
+                            ""
+                        ],
+                        [
+                            "preferred_holdings",
+                            "List<holding>",
+                            "",
+                            ""
+                        ],
+                        [
+                            "allowed_holdings allowed_holdings_culture allowed_holdings_religion allowed_holdings_culture_and_religion",
+                            "List<holding>",
+                            "Will not get the wrong government type penalty",
+                            "# Will not get the wrong government type penalty for tribes of the same culture\nallowed_holdings_culture = {\n  TRIBAL​\n}"
+                        ],
+                        [
+                            "builds_with_prestige",
+                            "List<holding>",
+                            "Whether new settlements are built with prestige or gold costs.",
+                            "builds_with_prestige = yes"
+                        ],
+                        [
+                            "builds_with_piety",
+                            "List<holding>",
+                            "Whether new settlements are built with piety or gold costs.",
+                            "builds_with_piety = yes"
+                        ],
+                        [
+                            "accepts_liege_governments accepts_liege_governments_culture accepts_liege_governments_religion accepts_liege_governments_culture_and_religion",
+                            "List<government>",
+                            "The listed governments are valid lieges that don't get wrong government opinion penalty.",
+                            "# Gets the wrong religion modifier instead\naccepts_liege_governments = { \n  muslim_government​\n}"
+                        ],
+                        [
+                            "free_revoke_on_governments free_revoke_on_governments_culture free_revoke_on_governments_religion free_revoke_on_governments_culture_and_religion",
+                            "List<government>",
+                            "Liege gets free revocation on vassals with specified governments",
+                            "# Tribal vassals of other religions can have their titles revoked for free\nfree_revoke_on_governments_religion = { \n  tribal_government​\n}"
+                        ],
+                        [
+                            "free_revoke_on_tiers free_revoke_on_tiers_culture free_revoke_on_tiers_religion free_revoke_on_tiers_culture_and_religion",
+                            "List<tier>",
+                            "Vassal tier for which revoking title won't trigger any negative opinion modifiers",
+                            "free_revoke_on_tiers = { count duke }"
+                        ],
+                        [
+                            "ignore_in_vassal_limit_calculation",
+                            "List<government>",
+                            "Vassals with specified governments will not count toward the vassal limit.",
+                            "ignore_in_vassal_limit_calculation = {\n  tribal_government​\n}​"
+                        ],
+                        [
+                            "vassal_call_to_arms",
+                            "List<government>",
+                            "",
+                            ""
+                        ],
+                        [
+                            "no_vassal_tax",
+                            "List<government>",
+                            "",
+                            ""
+                        ],
+                        [
+                            "forced_contract",
+                            "List<government>",
+                            "Vassals with specified governments will give max taxes and max liege levies regardless of opinion. Tyranny actions against these vassals can be made without objections from vassals of other governments",
+                            ""
+                        ],
+                        [
+                            "commander_limit",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "capital_move_delay",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "can_change_to_nomad_on_start",
+                            "bool",
+                            "Tribal rulers under a nomadic liege (of the same culture) will become nomadic rulers, unless something else is specified for that character or the titles of that character. It is only for evaluating governments before the game has started.",
+                            ""
+                        ],
+                        [
+                            "gets_religion_opinion_penalties",
+                            "bool",
+                            "The holder cares if people are of a different religion. Defaults to yes.",
+                            ""
+                        ],
+                        [
+                            "gives_religion_opinion_penalties",
+                            "bool",
+                            "Other people care if the holder is a different religion. Defaults to yes",
+                            ""
+                        ],
+                        [
+                            "vassal_government_opinion_penalties",
+                            "bool",
+                            "Gets opinion penalties due to \"accepts_liege_governments\" and similar. Defaults to yes.",
+                            ""
+                        ],
+                        [
+                            "offmap_power",
+                            "offmap",
+                            "What offmap power to use for culture and religion when using succ_offmap_succession.",
+                            ""
+                        ],
+                        [
+                            "can_demand_religious_conversion",
+                            "bool",
+                            "Whether people with this government can use the Demand Religious Conversion interaction. Must also be allowed in the religion. Defaults to yes.",
+                            ""
+                        ],
+                        [
+                            "can_inherit",
+                            "bool",
+                            "Whether people with this government can inherit titles. Defaults to yes.",
+                            ""
+                        ],
+                        [
+                            "men_can_take_consorts",
+                            "bool",
+                            "If set, men can take female consorts. Defaults to yes. No effect if max_consorts is 0.",
+                            ""
+                        ],
+                        [
+                            "women_can_take_consorts",
+                            "bool",
+                            "If set, women can take male consorts. Defaults to no. No effect if max_consorts is 0.",
+                            ""
+                        ],
+                        [
+                            "marriage_ignore_religion",
+                            "bool",
+                            "If set, the AI will ignore religion when considering marriage offers or taking consorts, defaults to no.",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "allowed_holdings_culture allowed_holdings_religion allowed_holdings_culture_and_religion"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "accepts_liege_governments_culture accepts_liege_governments_religion accepts_liege_governments_culture_and_religion"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "free_revoke_on_governments_culture free_revoke_on_governments_religion free_revoke_on_governments_culture_and_religion"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "free_revoke_on_tiers_culture free_revoke_on_tiers_religion free_revoke_on_tiers_culture_and_religion"
+                }
+            ]
+        },
+        {
+            "heading": "Graphics",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In order to add custom graphics for a government, some interface modding is required. Create a .gfx file in the interface folder. Inside, you can add a spriteType block for the government icon, as well as five sprites for the five character frame images. All six spriteTypes need to be inside a spriteTypes block, and the names of all these spriteTypes need to end with whatever you put in the government txt file for frame_suffix. You can find the vanilla codes at \\interface\\generalstuff.gfx."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The actual graphical files are placed inside the gfx\\interface folder. All six files will be saved as .dds extension."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example, if you want to add custom graphics for a secular government, with frame_suffix = _secular :"
+                }
+            ]
+        },
+        {
+            "heading": "Localisation",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Do not forget to localise your new government. It works similarly to other localisation:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that the list of features for a government (such as \"Can hold Castle, Temple & Fort Holdings without penalties\") are automatically generated (based on what you put in the txt file) and placed underneath whatever is in your _government_desc . This means you could leave the _government_desc blank if you do not want to explain what the government form entails."
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ https://forum.paradoxplaza.com/forum/index.php?threads/how-to-mod-governments-and-tributaries.869138/page-5#post-19629190",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:869138",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

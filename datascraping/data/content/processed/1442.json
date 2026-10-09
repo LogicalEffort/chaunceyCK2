@@ -1,0 +1,1025 @@
+{
+    "pageid": 1442,
+    "title": "Map modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Many things can break the game while modding the map files, see troubleshooting ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The most important is the format used while saving, as wrong formats will cause CTDs while loading:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "File",
+                            "Role",
+                            "Format"
+                        ],
+                        [
+                            "provinces.bmp",
+                            "Province boundaries",
+                            "RGB Color (24 bits) , no color space information"
+                        ],
+                        [
+                            "RGB Color (24 bits) , no color space information",
+                            "world_normal_height.bmp",
+                            "Lighting"
+                        ],
+                        [
+                            "rivers.bmp",
+                            "Flow of minor rivers",
+                            "Indexed color (8 bits)"
+                        ],
+                        [
+                            "Indexed color (8 bits)",
+                            "terrain.bmp",
+                            "Terrain textures"
+                        ],
+                        [
+                            "Indexed color (8 bits)",
+                            "trees.bmp",
+                            "Tree types and density"
+                        ],
+                        [
+                            "topology.bmp",
+                            "Height of the terrain",
+                            "Greyscale (8 bits)"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The height and width of these images should be multiples of 64 to avoid CTD at startup."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "But in practice it needs to be a multiple of 256, otherwise some black bars will appear on the edge of the map. [1]"
+                }
+            ]
+        },
+        {
+            "heading": "default.map",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Default.map contains general information about the map. Most items in it should be left alone. Here are the ones you need to worry about:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "max_provinces : This is the number of the last province + 1. If you forget to add one, the last province will get ignored.",
+                            "children": []
+                        },
+                        {
+                            "text": "sea_zones : This contains two sea province IDs that are at opposite ends of a range of contiguous sea province IDs. You must have exactly two province IDs listed for each sea zone. You may have multiple sea_zones defined, one for each range of contiguous sea provinces. Note: Each sea province in a sea zone is considered to be reachable by ship from every other one in the same sea zone. (Exception: A sea province that has no neighboring sea provinces is assumed by the game to be a lake, and does not generate ports adjacent to it.)",
+                            "children": []
+                        },
+                        {
+                            "text": "ocean_region : This contains a list of sea zones (automatically numbered based on their position in the file), all of which can be navigated to from the others. You may have multiple ocean_regions.",
+                            "children": []
+                        },
+                        {
+                            "text": "major_rivers : All sea zones listed here are major rivers, and can be navigated by any religion with allow_rivermovement = yes.",
+                            "children": []
+                        },
+                        {
+                            "text": "externals : A list of points that are considered outside all provinces. Used (for instance) as the start points of trade routes that extend off the map. A single point of the color defined for this province is placed on the map in the direction the trade route is intended to come from.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: sea_starts was made obsolete as of patch 2.1 (Rajas of India). The above information is current as of patch 2.6."
+                }
+            ]
+        },
+        {
+            "heading": "Provinces",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Provinces.bmp is probably the most important file in your map, because it shows the boundaries of all counties and sea zones. Each color corresponds to an entry in definition.csv . When editing provinces.bmp, make sure to only use solid colors, and no antialiasing, transparency, or anything else."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The .bmp file's default size is 3072 x 2048 pixels."
+                }
+            ]
+        },
+        {
+            "heading": "Adding a province",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Adding a province requires to follow many steps. Here is a list of what needs to be done. [2]"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Choose a colour that's not already taken. In case of uncertainty of how to find a new one, pick one of the already existing RGB values at the end of map/definition.csv . You can use the RGB values of other Clausewitz games which have a higher province count (like HoI4 with >13k)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Colour in the province on map/provinces.bmp . Make sure to only use solid colours, and no antialiasing, transparency, or anything else. If GIMP is used, follow the instructions on GIMP editing .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Open map/definition.csv . After the last province entry, add the new province.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "In map/default.map , increase the amount max_provinces by 1.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If everything was done right, when the game is opened it should be possible to see the new province in grey on the map."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Create a file with the number and name of the province in history/provinces/",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Add a title for the province in the appropriate common/landed_titles/ file",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Create a history file for the title in history/titles/ .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Add an entry for the province in the appropriate common/province_setup/ file. (Unless you are modding older versions, this is no longer needed)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Add a climate for the province in map/climate.txt if necessary",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Add the name of the province in the appropriate localisation/ file for province names.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Add the name of the title in the appropriate localisation/ file for titles.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Add a coat of arms for the title in gfx/flags/ . It needs to be 128x128 and saved as .tga",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fix the positions of the new province using the Nudge tool",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "GIMP editing",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "When using the Pencil tool, set mode to Dissolve, brush \"Hardness 100\", size 1.00, and dynamics to \"Dynamics Off\". When using Bucket Fill, set mode to Dissolve."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When saving, make sure \"Do not write color space information\" under Compatibility Options is checked, and under Advanced Options pick 24 bits, R8 G8 B8. Using different settings will cause CTDs while loading."
+                }
+            ]
+        },
+        {
+            "heading": "Definition",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The file definition.csv lists all provinces and their colors in provinces.bmp . Each line is formatted like this:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "1 is the province's id number. 42,3,128 is its RGB color in provinces.bmp. Vestisland is the name of the province, but the name that actually shows up on the map is determined by the localisation. The \"x\" is just there to mark the end of the line."
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Adjacencies",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Adjacencies.csv is used to make special connections between provinces. This file can be associated with Microsoft Excel although it is advised to use text editors like Notepad++ when editing this file."
+                }
+            ]
+        },
+        {
+            "heading": "Seas",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Connections through seas are often used to connect pieces of land that are close together, for example the Aegean islands."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Making a connection for two provinces through a sea is coded like this:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example is this the connection between Corsica and Sardinia:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In most cases, the game automatically chooses a point in each province based on proximity to draw the crossing path. If custom points are required (for example to prevent overlap with other crossings, to simulate a historical crossing point, or simply for stylistic reasons) the parameters X₁ , Y₁ , X₂ and Y₂ may be used to define these points. In most cases this isn't necessary, so these values are set to -1, allowing the game to determine the points automatically."
+                }
+            ]
+        },
+        {
+            "heading": "Major rivers",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Connections through Major rivers are used to connect the land that would be connected if there were a normal river or no river at all."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Making a connection for two provinces through a major river is coded like this:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example, this is the connection between Holland and Breda across the Rhine:"
+                }
+            ]
+        },
+        {
+            "heading": "Portages",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A Portage is a connection for seas through land. Portages are coded like this:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example this is the connection for the Don and the Volga:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Like sea crossings, the X₁ , Y₁ , X₂ and Y₂ parameters may be used to define where the crossing is drawn."
+                }
+            ]
+        },
+        {
+            "heading": "Positions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The file positions.txt determines where cities, ports, councillors and armies are placed on a province."
+                }
+            ]
+        },
+        {
+            "heading": "Rivers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Rivers.bmp shows all minor rivers on the map. It does not include major navigable rivers, which are treated as sea zones, and colored pink in rivers.bmp."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Any river that merges with or splits from another river is part of a river system. Each river system can only have one source (green dot). Each individual river can only be one pixel. Two river pixels must be orthogonally (not diagonally) adjacent to be part of the same river. When a river joins another river, a red dot needs to be used. In addition, the color of the river corresponds with the size of the river and the defense bonus received. [3]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "rivers.bmp uses an indexed color palette. CTDs will occur if you save it without the right palette, so I recommend opening the vanilla rivers.bmp and copying and pasting your map over it."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Category",
+                            "Color",
+                            "RGB",
+                            "Hex Code"
+                        ],
+                        [
+                            "River Source",
+                            "",
+                            "0 255 0",
+                            "#00FF00"
+                        ],
+                        [
+                            "Minor River source from Major River",
+                            "",
+                            "0 158 0",
+                            "#009E00"
+                        ],
+                        [
+                            "Merging River",
+                            "",
+                            "255 0 0",
+                            "#FF0000"
+                        ],
+                        [
+                            "Splitting River",
+                            "",
+                            "255 252 0",
+                            "#FFFC00"
+                        ],
+                        [
+                            "Water & Major Rivers",
+                            "",
+                            "255 0 128",
+                            "#FF0080"
+                        ],
+                        [
+                            "Land",
+                            "",
+                            "255 255 255",
+                            "#FFFFFF"
+                        ],
+                        [
+                            "Rivers",
+                            "",
+                            "0 255 255",
+                            "#00FFFF"
+                        ],
+                        [
+                            "Rivers",
+                            "",
+                            "0 200 255",
+                            "#00C8FF"
+                        ],
+                        [
+                            "Rivers",
+                            "",
+                            "0 150 255",
+                            "#0096FF"
+                        ],
+                        [
+                            "Rivers",
+                            "",
+                            "0 100 255",
+                            "#0064FF"
+                        ],
+                        [
+                            "Rivers",
+                            "",
+                            "0 0 225",
+                            "#0000E1"
+                        ],
+                        [
+                            "Rivers",
+                            "",
+                            "0 0 200",
+                            "#0000C8"
+                        ],
+                        [
+                            "Rivers",
+                            "",
+                            "0 0 150",
+                            "#000096"
+                        ],
+                        [
+                            "Rivers",
+                            "",
+                            "0 0 100",
+                            "#000064"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some other colors are in the index of rivers.bmp, but their usage is not clear.  They do seem to work as rivers as long as there is river source."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Note",
+                            "Color",
+                            "RGB",
+                            "Hex Code"
+                        ],
+                        [
+                            "",
+                            "",
+                            "0 85 0",
+                            "#005500"
+                        ],
+                        [
+                            "Not in the vanilla rivers.bmp",
+                            "",
+                            "0 125 0",
+                            "#007D00"
+                        ],
+                        [
+                            "",
+                            "",
+                            "24 206 0",
+                            "#18CE00"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Terrain",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Terrain.bmp is the file that determines the texture of your map and terrain combat modifiers in a province (although the modifiers can be overridden manually in the files found in history/provinces ). The file is a 4-bit indexed bitmap and so contains a total of 16 possible colors (indices); however, only 14 of these are used on the default map. Each index is mapped to a particular terrain type in map/terrain.txt ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Each of the indices corresponds to the tile index in the sprite map/terrain/atlas0.dds to use for rendering. Several of the indices map to the same terrain type and are merely used to change the texture used - from a gameplay perspective they are identical."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The two indices (13 and 14) which are not used by the base game may still be used by modders. By default they are mapped to the same terrain type as index 15 (i.e. water/ocean; referred to in terrain.txt as coastal_desert) but can be re-mapped in terrain.txt. By default both use a dark brown soil texture (found in the two bottom middle boxes of map/terrain/atlas0.dds)."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Index",
+                            "Color",
+                            "Type",
+                            "Default terrain type mapped to in terrain.txt",
+                            "RGB",
+                            "Notes"
+                        ],
+                        [
+                            "0",
+                            "",
+                            "Plains",
+                            "plains",
+                            "86 124 27",
+                            ""
+                        ],
+                        [
+                            "1",
+                            "",
+                            "Farmland",
+                            "farmlands",
+                            "138 11 26",
+                            ""
+                        ],
+                        [
+                            "2",
+                            "",
+                            "Coastal desert",
+                            "plains",
+                            "130 158 75",
+                            "Mix between desert and patches of grass."
+                        ],
+                        [
+                            "3",
+                            "",
+                            "Desert",
+                            "desert",
+                            "206 169 99",
+                            ""
+                        ],
+                        [
+                            "4",
+                            "",
+                            "Sandy mountain",
+                            "mountain",
+                            "112 74 31",
+                            "Should be in the valleys or where the desert meets the mountains"
+                        ],
+                        [
+                            "5",
+                            "",
+                            "Steppe",
+                            "steppe",
+                            "255 186 0",
+                            ""
+                        ],
+                        [
+                            "6",
+                            "",
+                            "Arctic",
+                            "arctic",
+                            "13 96 62",
+                            "Similar color to pine needles"
+                        ],
+                        [
+                            "7",
+                            "",
+                            "Desert mountain",
+                            "mountain",
+                            "86 46 0",
+                            "Mix of desert and mountain rock"
+                        ],
+                        [
+                            "8",
+                            "",
+                            "Forest",
+                            "hills",
+                            "0 86 6",
+                            ""
+                        ],
+                        [
+                            "9",
+                            "",
+                            "Snowless mountain",
+                            "mountain",
+                            "65 42 17",
+                            ""
+                        ],
+                        [
+                            "mountain",
+                            "10",
+                            "",
+                            "Snow covered mountain",
+                            "155 155 155",
+                            ""
+                        ],
+                        [
+                            "mountain",
+                            "11",
+                            "",
+                            "More snow covered mountain",
+                            "255 255 255",
+                            ""
+                        ],
+                        [
+                            "12",
+                            "",
+                            "Jungle",
+                            "jungle",
+                            "40 180 149",
+                            ""
+                        ],
+                        [
+                            "13",
+                            "",
+                            "N/A",
+                            "coastal_desert",
+                            "213 144 199",
+                            "Not used in the base game"
+                        ],
+                        [
+                            "coastal_desert",
+                            "Not used in the base game",
+                            "14",
+                            "",
+                            "N/A",
+                            "127 24 60"
+                        ],
+                        [
+                            "coastal_desert",
+                            "15",
+                            "",
+                            "Water",
+                            "69 91 186",
+                            "On the default map this covers all sea/ocean areas and navigable rivers. Additionally it extends approximately 1 pixel in around coastlines, giving the appearance of a beach"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Example of the mapping of Plains (index 0) and Coastal desert (index 2) to the same plains terrain in map/terrain.txt , allowing to use a different texture for each one:"
+                }
+            ]
+        },
+        {
+            "heading": "Trees",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The trees.bmp file determines where the trees are, how many there are, and what type of tree they are."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Each colored pixel corresponds to one in-game clump of trees. Note that tree.bmp in the base game is 8.04188481675 times smaller than the other .bmp files so divide the map dimensions by 8.04188481675 and use the result as a reference for this. Custom tree.bmp files may be different sizes/scales than this, but higher-resolution files may cause performance issues as more trees will be spawned on the map, and will lead to a higher density of tree groups, which may be visually unappealing."
+                }
+            ]
+        },
+        {
+            "heading": "Type",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There are 4 types of trees:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Category",
+                            "Density 1",
+                            "Density 2",
+                            "Density 3",
+                            "RGB",
+                            "Hex Code"
+                        ],
+                        [
+                            "Palm trees",
+                            "",
+                            "",
+                            "[ {{{1}}} ]",
+                            "255 255 0",
+                            "#FFFF00"
+                        ],
+                        [
+                            "Coniferous trees",
+                            "",
+                            "",
+                            "",
+                            "30 139 109",
+                            "#1E8B6D"
+                        ],
+                        [
+                            "Mediterranean trees",
+                            "",
+                            "",
+                            "",
+                            "154 156 51",
+                            "#9A9C33"
+                        ],
+                        [
+                            "Deciduous trees",
+                            "",
+                            "",
+                            "",
+                            "76 156 51",
+                            "#4C9C33"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Density and size",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Each pixel in trees.bmp represents a hexagon of trees in game."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The darker the color the more dense & larger the trees."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For instance if we use the lightest color of deciduous trees we will get a hexagon of 6 or more small trees. If we use the darkest color we get a hexagon of full of bigger trees."
+                }
+            ]
+        },
+        {
+            "heading": "Topology",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Topology.bmp is the file that determines the height of the terrain."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The topology of the map is determined by how white a pixel is, the whiter the higher.\nWhen editing this it is important that you make the coast above the water so that it doesn't break the game."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that the highest value for water is 94/94/94 , while the lowest value for land is 96/96/96. Avoid using 95/95/95 which can cause buggy behaviour. Note: the file must be saved in grayscale format, which can't always be done in common graphics editors such as paint.net."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Make the transitions between heights smooth, otherwise you will create noticeable jagged edges."
+                }
+            ]
+        },
+        {
+            "heading": "Lighting",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "World_normal_height.bmp is a normal map which provides the game with information on how to light the map. As of version 3.2, the maximum size of a square world_normal_height.bmp is 3344×3344 (i.e. 209 2 ×256 pixels or just over 11.18 megapixels). Normal maps of a different aspect ratio may exceed one of these dimensions as long as the total area does not. Exceeding this area will cause your terrain to have no lighting and therefore be very dark. Fortunately, world_normal_height.bmp does not have to be the same dimensions as your other map files, or even the same aspect ratio; smaller (or larger) normal maps will be scaled automatically to the map's dimensions."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Normal maps can be generated from the height map (topology.bmp) using Nvidia's texture tools , or by using Filter > 3D > Generate Normal Map in Photoshop CC."
+                }
+            ]
+        },
+        {
+            "heading": "Colormaps",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Ck2 uses two colormaps, both of which can be found in the terrain sub-directory of the map directory, colormap.dds and colormap_water.dds . They add additional detail to the map, acting as an overlay for the land and water, respectively. Like world_normal_height.bmp they scale to the total dimensions of your map. Unlike other map files, they use the dds format, which may require a special plugin to load or edit."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When using the Nvidia dds plugin to save the colormaps, save them as \"DXT5 ARGB 8 bpp | interpolated alpha\" with 2D textures and no MIP maps"
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Climate",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Modding the climates of provinces works somewhat similarly to geographic_region and island_region, except here only provinces work. This means that all provinces that have some sort of climate need to have their province ids added to the appropriate block."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Although it is tedious, it is very simple. For example, in a world with 16 provinces, here is an example of how to add climates:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Provinces 13, 14, 15 and 16 will have temperate climate. This does not have to be added. Any provinces that have not been placed inside one of the blocks will automatically get temperate climate. If provinces are placed in multiple blocks, the lowest block it is placed in will be used (but it is still recommended to avoid placing provinces in multiple blocks)."
+                }
+            ]
+        },
+        {
+            "heading": "Frame",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The map frame is defined in the folder static . Predefined values are:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "frame (2048x2048)",
+                            "children": []
+                        },
+                        {
+                            "text": "frame3072 (3072x2048)",
+                            "children": []
+                        },
+                        {
+                            "text": "frame3200 (3200x [ {{{1}}} ] )",
+                            "children": []
+                        },
+                        {
+                            "text": "frame4096 (4096x [ {{{1}}} ] )",
+                            "children": []
+                        },
+                        {
+                            "text": "Landmark_Domeoftherock ( [ {{{1}}} ] )",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "With an empty file, the map will have no frame.\nIf your custom map is not in the same ratio it's possible to add a custom frame. You will need to do make a new one and export it in a pxdmesh format and change the 00_static.txt and mapitems.gfx"
+                }
+            ]
+        },
+        {
+            "heading": "Fonts",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "See Custom Map Fonts ."
+                }
+            ]
+        },
+        {
+            "heading": "Minimap",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In addition to graphics files, creating a custom minimap also requires some interface modding. See here for more."
+                }
+            ]
+        },
+        {
+            "heading": "Troubleshooting",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This section is dedicated to troubleshooting map issues. For other modding, see also generic troubleshooting ."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Symptom",
+                            "Troubleshooting"
+                        ],
+                        [
+                            "Provinces do not show up on realm view",
+                            "Check error.log for \"Province xxx has no pixels in provinces.bmp\" for all the provinces defined in definition.csv Verify provinces.bmp is saved without color space information ."
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Check error.log for \"Province xxx has no pixels in provinces.bmp\" for all the provinces defined in definition.csv",
+                            "children": []
+                        },
+                        {
+                            "text": "Verify provinces.bmp is saved without color space information .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Tools",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "GIMP : A free image editing program, similar to Photoshop. Available for Windows, Mac, and Linux.",
+                            "children": []
+                        },
+                        {
+                            "text": "Map Filler : Fills in definitions.csv, landed titles, localisation, and province and title histories.",
+                            "children": []
+                        },
+                        {
+                            "text": "Clausewitz Map Checker : Validates provinces.bmp and definition.csv.",
+                            "children": []
+                        },
+                        {
+                            "text": "Nudge - A tool built into the game allowing map positions to be edited from within the game engine.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Links",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Map Mod Testing : General thread for map modding.",
+                            "children": []
+                        },
+                        {
+                            "text": "Guide to Total Conversion Map Modding",
+                            "children": []
+                        },
+                        {
+                            "text": "How to fill a custom map",
+                            "children": []
+                        },
+                        {
+                            "text": "Custom Map Fonts",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ forum:1115808/#post-24825843",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Guide on adding new provinces on the citadel forum",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ [1]",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

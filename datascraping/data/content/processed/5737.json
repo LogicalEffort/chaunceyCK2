@@ -1,0 +1,284 @@
+{
+    "pageid": 5737,
+    "title": "Patch 3.2",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 3.2 was released on 2019-05-28 [1] ."
+                }
+            ]
+        },
+        {
+            "heading": "Free Features",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "New Bookmark 'The Iron Century', set in 936",
+                            "children": []
+                        },
+                        {
+                            "text": "New Cultures:Sardinian and  Slovieni",
+                            "children": []
+                        },
+                        {
+                            "text": "New Shiite Heresy: Qarmatian",
+                            "children": []
+                        },
+                        {
+                            "text": "Map Reworks for Portugal and south-western Spain:",
+                            "children": [
+                                {
+                                    "text": "2 New Navigable rivers",
+                                    "children": []
+                                },
+                                {
+                                    "text": "1 New Duchy",
+                                    "children": []
+                                },
+                                {
+                                    "text": "3 New Provinces",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Map reworks for Egypt:",
+                            "children": [
+                                {
+                                    "text": "The Nile has been made navigable",
+                                    "children": []
+                                },
+                                {
+                                    "text": "3 New Duchies",
+                                    "children": []
+                                },
+                                {
+                                    "text": "7 New Provinces",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Added 3D models for Hagia Sophia.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Interface",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Changed the previous Great Work shortcut in the great Works view to B from P in order to be more consistent with other views.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Great Works ledger page being present even if the Game Rules were set to not include Great Works.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "User modding",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added NUDGE_WONDER_MODEL_LAND and NUDGE_WONDER_MODEL_COAST Lua defines.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added destroy_wonder effect.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added set_wonder_model effect.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the wonder view modifier text lacking a newline when used in single column mode.",
+                            "children": []
+                        },
+                        {
+                            "text": "Resuming wonder no longer checks is_active triggers.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Database",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Corrected the position of the docks in Ceredigion so that it is now connected to a body of water.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bug Fixes",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Non bastard children now correctly uses their biological father's base attributes, instead of the default value, when calculating their yearly chance to increase their base attributes when growing up.",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrected the positioning of the Notre Dame Great Work model.",
+                            "children": []
+                        },
+                        {
+                            "text": "Adjusted the brightness of the Cathedral Great Work texture.",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced the size of the Cathedral Great Work model by 20%.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed clicking on the minimap to move the camera not working properly with GUI scaling.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed assassination plot event description incorrectly using the word poisonous instead of venomous.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the highway robber band event not targeting Great Works in the character's demesne before Great Works in neighboring provinces.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a faulty trigger in the decision for converting tribal holdings to castles.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with the event to convert Hagia Sophia, which would cause the Great Work to not be active for Muslim rulers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue that stopped the Golden Crown Feature from showing up in the list of available Features for a stage 4 Statue Great Work.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed building the Moat Pit Feature on a Great Fortress enabling the other moat Features to be built on any Great Fortress.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed building the Bells Feature on a Great Cathedral enabling the Golden Bells Feature to be built on any Great Cathedral.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Great Works Features that require a stored relic to be active, being active just from any relic being stored in any Feature owned by the same owner.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed moat Features for the Great Fortress not being visible in the available Features tab until the Pit Moat Feature was built.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash caused by corrupted Great Works in save games.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed court size modifiers on buildings in the capital province not being applied.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed tooltips on buildings outside of the capital province claiming they would provide a court size modifier.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Hagia Sophia conversion event triggering even though its culture already matches your religion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Rename messages should no longer be listed in the message settings.",
+                            "children": []
+                        },
+                        {
+                            "text": "Retinue size is now also calculated from character modifiers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Moved retinue size modifier in Palace Great Work to owner scope.",
+                            "children": []
+                        },
+                        {
+                            "text": "Slightly reworked order of operations for calculating max retinue cap.",
+                            "children": []
+                        },
+                        {
+                            "text": "Homosexual female lovers are no longer referred to as male.",
+                            "children": []
+                        },
+                        {
+                            "text": "Made sure event about mystic dying has the right border decoration.",
+                            "children": []
+                        },
+                        {
+                            "text": "Newly built Great Work features no longer always get statue descriptions.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 3.1.1"
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Crusader Kings II - 3.2 Update is now live! (checksum KLLL)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

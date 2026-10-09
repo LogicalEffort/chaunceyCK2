@@ -1,0 +1,577 @@
+{
+    "pageid": 205,
+    "title": "Character modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Characters are defined in the files contained within /history/characters/ folder."
+                }
+            ]
+        },
+        {
+            "heading": "Structure",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These files contain blocks of unique character IDs with the following basic structure:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For instance:"
+                }
+            ]
+        },
+        {
+            "heading": "Character attributes",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The following attributes can be used to define characters:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Attribute",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "name",
+                            "string",
+                            "Name of the character, as it will appear in the game. Not a localization key",
+                            "name = \"Harold\""
+                        ],
+                        [
+                            "female",
+                            "bool",
+                            "Character's sex",
+                            "female = yes"
+                        ],
+                        [
+                            "dynasty",
+                            "dynastyID",
+                            "Dynasty of the character, using a numerical ID corresponding to one from the Dynasty modding file.If you want to create a random dynasty just write dynasty=random,and if you want to change to a new dynasty in an event,you can write dynasty=father_bastard Warning : dynasty=none doesn't work anymore. [1] [2] Use the effect={ dynasty=none } in the birth date clause.",
+                            "dynasty = 756 1000.1.1= { birth=yes effect= { dynasty=none } }"
+                        ],
+                        [
+                            "father",
+                            "charID",
+                            "Father of the character, using a unique numerical ID",
+                            "father = 120"
+                        ],
+                        [
+                            "real_father",
+                            "charID",
+                            "Not used in vanilla",
+                            "real_father = 121"
+                        ],
+                        [
+                            "mother",
+                            "charID",
+                            "Mother of the character, using a unique numerical ID",
+                            "mother = 101534"
+                        ],
+                        [
+                            "dna",
+                            "string",
+                            "An 11-digit alphanumerical code, that contributes to the game engine's genetics and inheritance system, defining the appearance of a character. See Portrait modding",
+                            "dna = \"medjejoencc\""
+                        ],
+                        [
+                            "properties",
+                            "string",
+                            "A 6-digit or 11-digit alphanumerical code defining the character's clothing, headgear etc . See Portrait modding",
+                            "properties = \"ae00e0\" properties = \"aj00bb00000\""
+                        ],
+                        [
+                            "martial",
+                            "integer",
+                            "Base martial skill of the character",
+                            "martial = 8"
+                        ],
+                        [
+                            "diplomacy",
+                            "integer",
+                            "Base diplomacy skill of the character",
+                            "diplomacy = 6"
+                        ],
+                        [
+                            "intrigue",
+                            "integer",
+                            "Base intrigue skill of the character",
+                            "intrigue = 5"
+                        ],
+                        [
+                            "stewardship",
+                            "integer",
+                            "Defines the base stewardship skill of the character",
+                            "stewardship = 6"
+                        ],
+                        [
+                            "learning",
+                            "integer",
+                            "Base learning skill of the character",
+                            "learning = 4"
+                        ],
+                        [
+                            "health",
+                            "integer",
+                            "Base health of the character",
+                            "health = 7"
+                        ],
+                        [
+                            "fertility",
+                            "float",
+                            "Base fertility of the character",
+                            "fertility = 0.8"
+                        ],
+                        [
+                            "religion",
+                            "religion",
+                            "Character's religion, using an ID from the religion files",
+                            "religion = \"catholic\""
+                        ],
+                        [
+                            "secret_religion",
+                            "religion",
+                            "Character's secret religion, using an ID from the religion files",
+                            "secret_religion = \"bon\""
+                        ],
+                        [
+                            "culture",
+                            "culture",
+                            "Character's culture, using an ID from the culture files",
+                            "culture = \"saxon\""
+                        ],
+                        [
+                            "race",
+                            "culture",
+                            "Character's \"race\", using an ID from the culture files. The character's graphical culture and appearance will use the culturegfx assigned to that culture. Used for characters of a different ethnicity than the culture they were raised in (e.g. adoption), not used in the Vanilla rendition.",
+                            "race = \"mongol\""
+                        ],
+                        [
+                            "trait / add_trait",
+                            "trait",
+                            "Adds a trait to the character, using an ID from the traits files. Characters without traits will be randomly assigned several on game start.",
+                            "trait = \"skilled_tactician\""
+                        ],
+                        [
+                            "disallow_random_traits",
+                            "bool",
+                            "Prevents additional traits from being randomly assigned to a character by the game, except through subsequent events",
+                            "disallow_random_traits = yes"
+                        ],
+                        [
+                            "occluded",
+                            "bool",
+                            "See Portrait modding",
+                            "occluded = yes"
+                        ],
+                        [
+                            "historical",
+                            "bool",
+                            "Flags the character as important, so that they will never be pruned from the database [3]",
+                            "historical = yes"
+                        ],
+                        [
+                            "easter_egg",
+                            "bool",
+                            "Prevents the character from being assigned to a society at game start",
+                            "easter_egg = yes"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "can write dynasty=father_bastard Warning : dynasty=none doesn't work anymore. [1] [2] Use the effect={ dynasty=none } in the birth date clause."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "properties = \"aj00bb00000\""
+                }
+            ]
+        },
+        {
+            "heading": "Character history",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Important events in the character's life - such as birth, marriage and marrying a spouse - are defined as group tags by year and date. CKII uses as year.month.day format, so a character born on the 3rd January 874 would be defined as such:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The group tag defines the date of the event, while flags within the group tag define both what the event is and, for birth and death only, what date will be displayed. Mismatching dates are not fatal, but may be confusing in-game."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Each group tag date with a character definition can contain some history commands."
+                }
+            ]
+        },
+        {
+            "heading": "List of history commands",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Note: in case there is no dedicated history command, it is possible to execute a character scope command via the general purpose effect clause."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Attribute",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "birth",
+                            "yes/date",
+                            "Defines when the character was born",
+                            "birth = yes"
+                        ],
+                        [
+                            "death",
+                            "yes/date/clause",
+                            "Defines when the character dies. Inside the clause, can specify: death_reason : the cause of death. Possible values: death_natural (default), death_trait (health trait complication, see trait modding ), death_murder, death_murder_unknown, death_hashshashin, death_battle, death_duel, death_execution, death_dungeon, death_sacrificed, death_accident, death_suicide, death_rabble, death_childbirth. killer : the killer/executor (charID), ex: killer = 122",
+                            "death = yes death = {death_reason = death_murder  killer = 191004}"
+                        ],
+                        [
+                            "add_claim",
+                            "title",
+                            "Adds a strong claim to the character, corresponding to an alphanumerical ID from the landed titles files. Note: to add a weak claim the following can be used: effect = {\n  add_weak_claim = k_england\n}",
+                            "add_claim = k_england"
+                        ],
+                        [
+                            "remove_claim",
+                            "title",
+                            "Removes a claim",
+                            "remove_claim = k_england"
+                        ],
+                        [
+                            "add_spouse",
+                            "charID",
+                            "Defines a marriage between the character and another. Uses a character ID",
+                            "add_spouse = 121"
+                        ],
+                        [
+                            "add_matrilineal_spouse",
+                            "charID",
+                            "",
+                            "add_matrilineal_spouse = 121"
+                        ],
+                        [
+                            "add_consort",
+                            "charID",
+                            "Makes another character this character's consort/concubine. Uses a character ID",
+                            "add_consort = 121"
+                        ],
+                        [
+                            "remove_spouse",
+                            "charID",
+                            "Defines the end of a marriage between the character and another. Uses a character ID",
+                            "remove_spouse = 121"
+                        ],
+                        [
+                            "add_lover",
+                            "charID",
+                            "",
+                            "add_lover = 122"
+                        ],
+                        [
+                            "employer",
+                            "charID",
+                            "Will move the character to the court of another character. Uses a character ID",
+                            "employer = 122"
+                        ],
+                        [
+                            "give_job_title",
+                            "job",
+                            "Usually used under the same date tag as employer , to give the character a job in another character's court",
+                            "give_job_title = job_marshal"
+                        ],
+                        [
+                            "give_nickname",
+                            "nickname",
+                            "Gives the character a nickname, corresponding to an alphanumerical ID from the nicknames files",
+                            "give_nickname = nick_the_great"
+                        ],
+                        [
+                            "prestige",
+                            "int",
+                            "",
+                            "prestige = -50"
+                        ],
+                        [
+                            "piety",
+                            "int",
+                            "",
+                            "piety = -50"
+                        ],
+                        [
+                            "decadence",
+                            "int",
+                            "",
+                            "decadence = 50"
+                        ],
+                        [
+                            "wealth",
+                            "int",
+                            "",
+                            "wealth = -500"
+                        ],
+                        [
+                            "remove_trait",
+                            "trait",
+                            "",
+                            "remove_trait = \"crusader\""
+                        ],
+                        [
+                            "capital",
+                            "title",
+                            "Moves the capital",
+                            "capital = c_toledo"
+                        ],
+                        [
+                            "dynasty",
+                            "dynasty",
+                            "Changes the dynasty",
+                            "dynasty = 101183"
+                        ],
+                        [
+                            "effect",
+                            "commands",
+                            "Commands to apply at that date, in character scope. Note that these commands are only executed once the game starts, which could cause discrepencies on the lobby [4] . Will only execute if the character is not dead.",
+                            "effect = { give_minor_title = title_despot } effect = { set_character_flag = is_ragnar_lodbrok }"
+                        ],
+                        [
+                            "effect_even_if_dead",
+                            "commands",
+                            "As above, but will be executed even after the character's death.",
+                            ""
+                        ],
+                        [
+                            "raise_levies",
+                            "clause",
+                            "See details below",
+                            "raise_levies = {\n  location=340 # Palermo\n  force_mult=1.5\n}"
+                        ],
+                        [
+                            "immortal_age",
+                            "int",
+                            "Sets the physical age at which a character became immortal. Must add a trait with immortal also! Note that without immortal_age , a character that is between 256 and 271 (255+16) years old at any given start date will appear as a child (forever) due to an integer overflow. [5]",
+                            "immortal_age = 20"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "death_reason : the cause of death. Possible values: death_natural (default), death_trait (health trait complication, see trait modding ), death_murder, death_murder_unknown, death_hashshashin, death_battle, death_duel, death_execution, death_dungeon, death_sacrificed, death_accident, death_suicide, death_rabble, death_childbirth.",
+                            "children": []
+                        },
+                        {
+                            "text": "killer : the killer/executor (charID), ex: killer = 122",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "death = {death_reason = death_murder  killer = 191004}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: to add a weak claim the following can be used:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "effect = { set_character_flag = is_ragnar_lodbrok }"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that without immortal_age , a character that is between 256 and 271 (255+16) years old at any given start date will appear as a child (forever) due to an integer overflow. [5]"
+                }
+            ]
+        },
+        {
+            "heading": "Raise levies",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The following code is used to make Harold Godwineson raise an army in Leicester, 2.5 times the ordinary levy size, on 14 September 1065:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The next month, Harold Godwineson can be made to dismiss his army, having lost the Battle of Hastings:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Of course, Harold also died during the battle, so one can add a death group tag, within which one can specify that he died in battle and was killed by William the Conqueror (ID 140):"
+                }
+            ]
+        },
+        {
+            "heading": "Wikipedia link",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To enable the Wikipedia icon link (opening in out-of-game browser), create a localization key with format W_L_<character_ID> :"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "W_L_200600; http://en.wikipedia.org/wiki/Sverker_I_of_Sweden;http://fr.wikipedia.org/wiki/Sverker_Ier_de_Su%C3%A8de ;;;;;;;;;;;;x"
+                }
+            ]
+        },
+        {
+            "heading": "ID numbers",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Maximum value",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "All character IDs must be less than the maximum integer value: 2,147,483,647."
+                }
+            ]
+        },
+        {
+            "heading": "Avoiding clashes",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If you wish to avoid clashes with base game character IDs:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The 600,000-999,999 ID range is completely unused in the base game",
+                            "children": []
+                        },
+                        {
+                            "text": "There are a few characters with ID numbers above 1 million: several in the 1,050,000-1,059,999 range, and one at 2,601,031.",
+                            "children": []
+                        },
+                        {
+                            "text": "The maximum character ID number in the base game history files is 2,601,031",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you wish to avoid clashes with some other mod, you can use the search strategy described below to check which ID numbers they have used."
+                }
+            ]
+        },
+        {
+            "heading": "Searching for ID numbers that have already been used",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The results above were obtained by using Notepad++'s \"Find in Files\" feature on the ...\\history\\characters\\ folder, with a regular expression. You can use a similar process to check any other mod's character history."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Eg1: To find any 6-digit character ID number beginning with 3 (ie. any ID in the 300,000-399,999 range):"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Eg2: To find any 6-digit character ID number beginning with 6/7/8/9 (ie. any ID in the 600,000-999,999 range):"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Eg3: To find any 7-digit character ID number (ie. any ID above 1,000,000):"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Explanation of these regular expressions:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "\\n means newline",
+                            "children": []
+                        },
+                        {
+                            "text": "[\\s]* means \"any number of whitespace characters, including none\"",
+                            "children": []
+                        },
+                        {
+                            "text": "[6789] means \"one of 6/7/8/9\"",
+                            "children": []
+                        },
+                        {
+                            "text": "[ [ :d: ] ] (without spaces) means \"one digit\"",
+                            "children": []
+                        },
+                        {
+                            "text": "{5} means \"5 of the previous thing\"",
+                            "children": []
+                        },
+                        {
+                            "text": "{7,} means \"7 or more of the previous thing\"",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ forum:1016862",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ [1]",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ https://forum.paradoxplaza.com/forum/index.php?threads/modding-quick-questions.589686/page-1323#post-20928691",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:874495/page-6#post-19819486",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ forum:1157045",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

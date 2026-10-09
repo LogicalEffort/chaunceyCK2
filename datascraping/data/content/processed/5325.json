@@ -1,0 +1,103 @@
+{
+    "pageid": 5325,
+    "title": "Patch 3.1 mod compatibility guide",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This guide describes the steps to make a mod compatible with patch 3.1.X from patch 3.0.1.1 ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that this does not replace the usual step of merging files , in case the mod modifies some vanilla files."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In case of issues, run the latest version of The Validator , and try activating debug launch options, which will now report failed asserts in log files ."
+                }
+            ]
+        },
+        {
+            "heading": "Folders",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "common/traits/battle_scars_and_tattos_traits.txt has been renamed to common/traits/04_battle_scars_and_tattos_traits.txt",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Portraits",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "New property p37 (special relation overlay) has been added to all portraits, so any custom properties needs to be moved to p38 or later.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Great works",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Buildings unique to a province can be replaced by an historical great work instead, to benefit from custom picture, levels and upgrade mechanisms."
+                }
+            ]
+        },
+        {
+            "heading": "Misc",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "set_allows_matrilineal_marriage = yes is changed to law_set_allow_matrilineal_marriage = yes",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Patch 3.1 mod compatibility discussion thread",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": []
+        }
+    ]
+}

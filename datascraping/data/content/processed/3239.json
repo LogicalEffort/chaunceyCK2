@@ -1,0 +1,522 @@
+{
+    "pageid": 3239,
+    "title": "Patch 2.6 mod compatibility guide",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This guide describes the steps to make a mod compatible with patch 2.6.X from patch 2.5.2 ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that this does not replace the usual step of merging files , in case the mod modifies some vanilla files."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In case of issues, run the latest version of The Validator , and try activating debug launch options, which will now report failed asserts in log files ."
+                }
+            ]
+        },
+        {
+            "heading": "Localisation",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The load order of csv files has been reverted to pre-2.5 order. Typically \"zz_\" prefix needs to be transformed to \"00_\" prefix.",
+                            "children": []
+                        },
+                        {
+                            "text": "Bookmarks hardcoded localization convention _ERA and _ERA_INFO are now explicitly referenced in name/desc",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Traits",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Some negative modifiers are changed from diplomacy = -1 to diplomacy_penalty = -1 . This applies to diplomacy_penalty, stewardship_penalty, martial_penalty, intrigue_penalty, learning_penalty, health_penalty and fertility_penalty.",
+                            "children": []
+                        },
+                        {
+                            "text": "vice = yes is added to sinful traits.",
+                            "children": []
+                        },
+                        {
+                            "text": "hidden = yes is added for traits that should remain hidden. A variant is to use same_trait_visibility = yes for traits that should be hidden except for players with the same trait.",
+                            "children": []
+                        },
+                        {
+                            "text": "New maimed traits need to be handled in custom nicknames.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Portraits",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Two new properties were added: p12 (mask) and p13 (eyepatch). The following lines should be added to any custom portraitType derived from vanilla, in order to support them:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A new define NDefines.NGraphics.NUMBER_OF_PROPERTIES = 14 may allow a custom number of properties, see Portrait_modding#Properties .",
+                            "children": []
+                        },
+                        {
+                            "text": "NDefines.NCharacter.LATE_PORTRAIT_AND_UNIT_AFTER_YEAR define was reduced from 1250 to 1200.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Modifiers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "major = yes is added to some event modifiers (e.g. prosperity)",
+                            "children": []
+                        },
+                        {
+                            "text": "stacking = no can be added to opinion modifiers that should not stack",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Scripting",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Some new scripted triggers :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "trait = in_hiding is replaced by is_inaccessible_trigger = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "trait = maimed is replaced by is_maimed_trigger = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "NOT = { trait = maimed } is replaced by can_be_maimed_trigger = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "death_reason = death_execution is replaced by death_execution_trigger = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "death_reason = death_murder is replaced by death_murder_known_trigger = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "death_reason = death_sacrificed is replaced by death_sacrificed_trigger = yes",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some new scripted effects :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "remove_trait = in_hiding is replaced by end_inaccessibility_effect = yes",
+                            "children": []
+                        },
+                        {
+                            "text": "add_trait = maimed is replaced by add_maimed_trait_effect = yes",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Seclusion must be handled similar to hiding:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Faction creation ai chances:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Disabled councillor actions:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Disabled decisions that involve bringing in new courtiers:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Misc:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "NOT = { trait = craven } is replaced by NOR = { trait = craven trait = berserker } before adding craven trait.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Optimizations",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "on_focus_pulse on_action is re-enabled and can be used instead of MTTH events.",
+                            "children": []
+                        },
+                        {
+                            "text": "Some new on_action can be used to reduce MTTH events: on_holding_building_start , on_province_major_modifier , on_outbreak",
+                            "children": []
+                        },
+                        {
+                            "text": "NDefines.NDisease.CROWDED_THRESHOLD_MODIFIER has been changed from 75 to 25",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Unlanded characters that are important to mods need to be flagged {{sup|?}} to avoid being culled. In particular defaults are:",
+                            "children": [
+                                {
+                                    "text": "NDefines.NEngine.COURT_PRUNE_SIZE = 10",
+                                    "children": []
+                                },
+                                {
+                                    "text": "NDefines.NEngine.PRUNE_MINIMAL_AGE = 40",
+                                    "children": []
+                                },
+                                {
+                                    "text": "NDefines.NEngine.HEALTH_IMMUNITY_TO_PRUNING = 40",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "any_playable_ruler = { limit = { ai = no} } should be replaced by any_player",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "New event pre-triggers can be used:",
+                            "children": [
+                                {
+                                    "text": "Trigger NOT = { has_dlc = \"Zeus\" } should be replaced by pre-trigger lacks_dlc = \"Conclave\"",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Trigger is_married = no can be moved to its equivalent pre-trigger",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Decisions now support pre-trigger too:",
+                            "children": [
+                                {
+                                    "text": "Most decisions linked to realm should have only_playable = yes to exclude courtiers and barons. Note that is_playable = yes is kept in potential of vanilla scripts, in addition to the pre-trigger.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "only_independent = yes can be used for top liege decisions",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Game rules",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Check if some custom events/decisions would match a vanilla game rule ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Most impacting are:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "gender (events, minor titles, laws, ...)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Depending on location:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Potential:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "AI:",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Map",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A new de_jure title k_sapmi is added.",
+                            "children": []
+                        },
+                        {
+                            "text": "Some fictional baronies are added to some provinces, for prosperity mechanic.",
+                            "children": []
+                        },
+                        {
+                            "text": "Adapt new NDefines.NFrontend.MAX_ZOOM_LEVEL = 2500 to custom maps",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Diseases",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "There are two sets of diseases using rip = yes or rip = no to switch between mechanics.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Diseases now have colors for the new mapmode.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "add_trait = ill needs to be replaced by:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "trait = ill needs to be replaced by is_ill = yes",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Deaths",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Deaths are now more precise (e.g. death_accident may become death_murder_unknown_fall )",
+                            "children": []
+                        },
+                        {
+                            "text": "Custom deaths can now be modded in, and workarounds with fake health traits can be removed.",
+                            "children": []
+                        },
+                        {
+                            "text": "Scripted trigger may need to be modified to add new death reasons (e.g. death_execution_trigger , ...)",
+                            "children": []
+                        },
+                        {
+                            "text": "death_text and heir_text are used to customize the flavor text displayed on succession screen. Entries need to be added to handle custom traits, custom deaths, etc.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Misc",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Monthly prestige of councillor titles is greatly increased (e.g. 0.015 to 0.75)",
+                            "children": []
+                        },
+                        {
+                            "text": "Religious titles have revoke_allowed = no added.",
+                            "children": []
+                        },
+                        {
+                            "text": "primary_title = { holy_order = no } is added to factions potential block",
+                            "children": []
+                        },
+                        {
+                            "text": "NOT = { trait = incapable } is added to many minor titles allowed_to_hold blocks",
+                            "children": []
+                        },
+                        {
+                            "text": "holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } } is added to suiccession laws allow blocks",
+                            "children": []
+                        },
+                        {
+                            "text": "HOSPITAL must be added to governments allowed_holdings list, and can_build_hospitals = no when applicable.",
+                            "children": []
+                        },
+                        {
+                            "text": "africangfx ethnicity now has a portrait pack (East African), so can be used as a fallback to custom cultures, if applicable.",
+                            "children": []
+                        },
+                        {
+                            "text": "In bookmark select era screen, selectable_character whose religion require a DLC to be playable can be highlighted (e.g. dlc = \"The Sword of Islam\" ).",
+                            "children": []
+                        },
+                        {
+                            "text": "is_mercenary = yes needs to be added to decisions that allow to raise event troops, for the A.I. to consider them before hiring mercenaries.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": []
+        }
+    ]
+}

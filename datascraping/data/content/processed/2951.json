@@ -1,0 +1,1283 @@
+{
+    "pageid": 2951,
+    "title": "Council vote",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A council vote is triggered for law changes or important interactions, depending on council laws (requires the Conclave DLC)."
+                }
+            ]
+        },
+        {
+            "heading": "Stances",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Each council member must select a stance , a general attitude on how the realm should be governed. This stance usually determines how the AI votes on laws, and completely determines how all council members vote on interactions."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Highly supportive voters may be Loyalist",
+                            "children": []
+                        },
+                        {
+                            "text": "Most voters will select one of three “neutral” stances: Pragmatist , Glory Hound , or Zealot",
+                            "children": []
+                        },
+                        {
+                            "text": "Highly unsupportive voters may be Malcontent",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "AI characters select their stance based on their traits, size/power, and relations with their liege."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Stance",
+                            "In-game description",
+                            "+Modifiers",
+                            "-Modifiers"
+                        ],
+                        [
+                            "",
+                            "Loyalist",
+                            "A Loyalist councilor will generally be a faithful servant to the ruler. They will support their liege in all actions except those that will directly decrease their own power.",
+                            "+10 Content +5 Trusting +10 Close relative +5 Other dynasty member +10 Friend +5 Lover +15 \"Leader\" bloodline +10 when opinion ≥ 95 +0.4 × opinion",
+                            "Negative opinion makes this impossible, even for players"
+                        ],
+                        [
+                            "",
+                            "Pragmatist",
+                            "A Pragmatist councilor will always aim for the path of least resistance when it comes to strengthening the realm and gaining power for themselves. They are inclined to support wars for reclaiming of de-jure land or provinces with the ruler's culture. They might also support wars against weak opponents. This councilor will oppose the creation of other strong vassals in the realm and will support the revoking of titles from already powerful vassals.",
+                            "30 base +10 Cynical +10 Craven +10 Just +10 Paranoid (20 a + 100 s )",
+                            "-10 Content -10 Arbitrary -10 Slothful -10 Greedy -50 Zealous"
+                        ],
+                        [
+                            "",
+                            "Glory Hound",
+                            "A Glory Hound councilor will always push for the realm to make prestigious advances for glory. They will oppose attacking weak neighbours, but against more powerful opponents they will not care much for the reason of the war as long as it will strengthen the realm. This councilor also prefers a strong and centralized realm.",
+                            "30 base +10 Brave +10 Honest +10 Proud (15 a + 100 p )",
+                            "-50 Craven -10 Shy -10 Humble -10 Content"
+                        ],
+                        [
+                            "",
+                            "Zealot",
+                            "A Zealot councilor will strive towards bringing religion to the forefront of the realm's political agenda. If religious war targets are available this councilor might oppose wars against other targets. The councilor will also be more inclined to accept hostile action against heathen and heretic characters.",
+                            "20 base +25 Zealous +10 Humble +20 Theocracy +20 Liege could be crusading but isn't +5 Has at least 5 piety +5 Crusader , Mujahid , or (15 a + 45 s + 45 p )",
+                            "-10 Liege has 200 piety -10 Content -50 Cynical"
+                        ],
+                        [
+                            "",
+                            "Malcontent",
+                            "A Malcontent councilor is unhappy with the current state of affairs in the realm. They are a troublesome force on the council and will always oppose the will of the ruler unless they directly stand to gain power.",
+                            "15 base +5 Ambitious +10 Envious +5 additional from envious if neither ambitious nor content +20 Rival -1.6 × negative opinion (25 a + 50 s + 50 p )",
+                            "-15 Content -5 Trusting -0.7 × positive opinion"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+10 Content",
+                            "children": []
+                        },
+                        {
+                            "text": "+5 Trusting",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 Close relative",
+                            "children": []
+                        },
+                        {
+                            "text": "+5 Other dynasty member",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 Friend",
+                            "children": []
+                        },
+                        {
+                            "text": "+5 Lover",
+                            "children": []
+                        },
+                        {
+                            "text": "+15 \"Leader\" bloodline",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 when opinion ≥ 95",
+                            "children": []
+                        },
+                        {
+                            "text": "+0.4 × opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "30 base",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+10 Cynical",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 Craven",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 Just",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 Paranoid",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "(20 a + 100 s )",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "-10 Content",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 Arbitrary",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 Slothful",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 Greedy",
+                            "children": []
+                        },
+                        {
+                            "text": "-50 Zealous",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "30 base",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+10 Brave",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 Honest",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 Proud",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "(15 a + 100 p )",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "-50 Craven",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 Shy",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 Humble",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 Content",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "20 base",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+25 Zealous",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 Humble",
+                            "children": []
+                        },
+                        {
+                            "text": "+20 Theocracy",
+                            "children": []
+                        },
+                        {
+                            "text": "+20 Liege could be crusading but isn't",
+                            "children": []
+                        },
+                        {
+                            "text": "+5 Has at least 5 piety",
+                            "children": []
+                        },
+                        {
+                            "text": "+5 Crusader , Mujahid , or",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "(15 a + 45 s + 45 p )",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "-10 Liege has 200 piety",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 Content",
+                            "children": []
+                        },
+                        {
+                            "text": "-50 Cynical",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "15 base",
+                            "children": []
+                        },
+                        {
+                            "text": "+5 Ambitious",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 Envious",
+                            "children": []
+                        },
+                        {
+                            "text": "+5 additional from envious if neither ambitious nor content",
+                            "children": []
+                        },
+                        {
+                            "text": "+20 Rival",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "-1.6 × negative opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "(25 a + 50 s + 50 p )",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "-15 Content",
+                            "children": []
+                        },
+                        {
+                            "text": "-5 Trusting",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "-0.7 × positive opinion",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Influence of size and power",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The cryptic parts above are based on realm size and power:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "a is the vassal's a bsolute size, divided by 50, then squared",
+                            "children": []
+                        },
+                        {
+                            "text": "s is the vassal's s ize, compared to the liege",
+                            "children": []
+                        },
+                        {
+                            "text": "p is the vassal's p ower, compared to the liege",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It looks like the overall effect of these terms is:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Vassals of any significance tend not to be loyalists",
+                            "children": []
+                        },
+                        {
+                            "text": "Vassals with more size than power tend to be pragmatists",
+                            "children": []
+                        },
+                        {
+                            "text": "Vassals with more power than size tend to be glory hounds",
+                            "children": []
+                        },
+                        {
+                            "text": "Huge vassals (i.e. ruling multiple kingdoms) tend to be malcontent, due to the squaring in a",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Stance selection",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "AI characters select the stance with the highest score. Note that appointing someone may change their scores, because the very act of appointing them can shift opinion and the size of vassal levies!"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Not listed above are that horses are always loyalists, and that vassal khans under the greatest_of_khans are usually loyalists. Generally, the characters most likely to be loyalists are those with high opinion, the Content trait and small (or no) sub-realms."
+                }
+            ]
+        },
+        {
+            "heading": "Law votes",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Law votes take place over several months. This allows players to choose a vote that does not match their general stance, and gives everyone time to grab favors."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that laws cannot be changed during a regency ."
+                }
+            ]
+        },
+        {
+            "heading": "Council laws",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Loyalists will vote with the liege. Everyone else will vote to empower the council."
+                }
+            ]
+        },
+        {
+            "heading": "Realm laws",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For voters with the three neutral stances:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Increasing Centralization : most voters will support at 20 opinion, and otherwise be undecided",
+                            "children": []
+                        },
+                        {
+                            "text": "Decreasing Centralization : most voters will support",
+                            "children": []
+                        },
+                        {
+                            "text": "Increasing Status of women : women support and men oppose",
+                            "children": []
+                        },
+                        {
+                            "text": "Increasing Revocation : in general, they will vote \"no\" if opinion is below 60 and remain undecided even above that. However:",
+                            "children": [
+                                {
+                                    "text": "A Pragmatist will vote yes for the first level at opinion 20, since they appreciate the need for distribution of power within the realm .",
+                                    "children": []
+                                },
+                                {
+                                    "text": "A Zealot will vote yes for the second level at opinion 20, since they want infidels to have their titles revoked.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Increasing Tribal Organization : will support if not tribal or not unreformed pagan",
+                            "children": []
+                        },
+                        {
+                            "text": "Increasing Viceroyalties : most voters are opposed",
+                            "children": []
+                        },
+                        {
+                            "text": "Increasing Regulation of inheritance : most voters are opposed",
+                            "children": []
+                        },
+                        {
+                            "text": "Increasing Administration type : most voters are opposed",
+                            "children": []
+                        },
+                        {
+                            "text": "Changing Investiture : all voters are undecided (even loyalists)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Vassal obligations",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Feudal/iqta and tribal rulers prefer to pay taxes",
+                            "children": []
+                        },
+                        {
+                            "text": "Republic rulers prefer to provide levies",
+                            "children": []
+                        },
+                        {
+                            "text": "Theocratic rulers prefer balanced obligations",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Courtiers vote as if they had the same government type as their liege, since they hope to someday be granted a county. Voters are undecided on obligations that do not affect their government group."
+                }
+            ]
+        },
+        {
+            "heading": "Interaction votes",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Votes on interactions, such as declarations of war, are immediate and determined by fixed rules called patterns. This allows the liege to proceed without waiting, reduces uncertainty, and prevents a proliferation of popups for vassals."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Voting patterns are evaluated in order until one of them matches a yes or no: special pattern , selfish pattern , family pattern , stance pattern , and opinion pattern. Within each pattern, \"for\" reasons are usually more important than \"against\" reasons. If none of these patterns suggests a \"for\" or \"against\" vote, they will be swayed by the diplomacy skill of voters who care."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The liege can override \"no\" votes on interactions. However, acting against the will of the council is considered an act of tyranny , and also makes the council discontent."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "During a regency , it is impossible to overrule the council, the ruler does not even get a vote (the vote is given to the regent instead), and ties are treated as failures. However, the liege still has some ability to sway voters: the council will approve actions by default if nobody has a reason to vote for or against."
+                }
+            ]
+        },
+        {
+            "heading": "Declare war",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Pragmatist and Glory Hound councilors have nearly opposite goals. Pragmatists generally support attacking weak enemies and having only 1 offensive war, while glory hounds generally support attacking strong enemies (unless if the target is their preferred target) and having multiple offensive wars. Allies are included in their strength calculations. When each side in the war would have similar strength, they consider other factors."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A Zealot will almost always support attacking targets of other religions. They will also support wars within the religion if there is a strong religious motivation for the war and no ongoing crusade."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Pattern",
+                            "Vote",
+                            "Tooltip",
+                            "Notes"
+                        ],
+                        [
+                            "",
+                            "Special",
+                            "for",
+                            "I will always approve this type of war!",
+                            "Prepared Invasion or Christian Crusade"
+                        ],
+                        [
+                            "",
+                            "Selfish",
+                            "for",
+                            "I would gain a title!",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Selfish",
+                            "against",
+                            "I would lose a title!",
+                            "Is heir to the title being contested(?)"
+                        ],
+                        [
+                            "",
+                            "Family",
+                            "for",
+                            "My family member would gain a title!",
+                            "\"Gainer\" (e.g. claimant?) is close relative"
+                        ],
+                        [
+                            "",
+                            "Family",
+                            "against",
+                            "This war is against one of my family members",
+                            "Defender is close relative"
+                        ],
+                        [
+                            "",
+                            "Family",
+                            "against",
+                            "My family member would lose a title!",
+                            "Contested title is held by a close relative"
+                        ],
+                        [
+                            "",
+                            "Loyalist",
+                            "for",
+                            "This voter is a Loyalist and will vote like the liege",
+                            "Liege initiated the vote"
+                        ],
+                        [
+                            "",
+                            "Loyalist",
+                            "against",
+                            "-",
+                            "Liege did not initiate the vote (someone is trying to use a favor to force the liege to press their claim)"
+                        ],
+                        [
+                            "",
+                            "Pragmatist",
+                            "against",
+                            "We're already busy fighting another war",
+                            "Primary participant"
+                        ],
+                        [
+                            "",
+                            "Pragmatist",
+                            "for",
+                            "The opponent is much weaker than us",
+                            "Attacker power ≥ 1.3 The CB is NOT claim for other (worried that such a war would make another vassal too powerful?)"
+                        ],
+                        [
+                            "",
+                            "Pragmatist",
+                            "for",
+                            "The targeted land is part of our De Jure territory or it is of our Culture Group",
+                            "Attacker power ≥ 0.8 Any county (controlled by the defender within the contested title) is of our culture group or a de jure part of any of the attacker's titles"
+                        ],
+                        [
+                            "",
+                            "Pragmatist",
+                            "against",
+                            "The opponent is too strong for us to take on",
+                            "Attacker power < 1.0"
+                        ],
+                        [
+                            "",
+                            "Glory Hound",
+                            "for",
+                            "The opponent is stronger than us, this war will be glorious!",
+                            "Defender power ≥ 0.9"
+                        ],
+                        [
+                            "",
+                            "Glory Hound",
+                            "for",
+                            "This is my preferred war target!",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Glory Hound",
+                            "for",
+                            "Winning this war will grow the realm!",
+                            "Attacker power < 3.0 When pressing the claim of a courtier who would need land to remain your vassal, a Glory Hound expects you to give the courtier land before declaring war. As if you'd forget ."
+                        ],
+                        [
+                            "",
+                            "Glory Hound",
+                            "against",
+                            "There is no glory in this war, the enemy is too weak",
+                            "Defender power < 0.3"
+                        ],
+                        [
+                            "",
+                            "Zealot",
+                            "against",
+                            "The target is not an antipope of another religion",
+                            "Depose Antipope CB, councilor has a different religion(?)"
+                        ],
+                        [
+                            "",
+                            "Zealot",
+                            "against",
+                            "There is an ongoing Crusade that I want us to focus on",
+                            "When declaring war on an enemy of our own religion, this overrides all \"for\" reasons"
+                        ],
+                        [
+                            "",
+                            "Zealot",
+                            "for",
+                            "The war would depose a wicked pope",
+                            "Defender is pope with the Wicked Priest trait. Gainer is our antipope and does not have the trait."
+                        ],
+                        [
+                            "",
+                            "Zealot",
+                            "for",
+                            "The war is against a religious enemy!",
+                            "The defender (or the holder of the contested title) does not share the voter's religion Note: Catholic and Orthodox are considered \"religious enemies\" in this clause, even though they are not normally hostile."
+                        ],
+                        [
+                            "",
+                            "Zealot",
+                            "for",
+                            "The war is against an Excommunicated character [of our religion]",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Zealot",
+                            "for",
+                            "The war [would depose] an Antipope",
+                            "Depose Antipope CB, councilor has the same religion(?)"
+                        ],
+                        [
+                            "",
+                            "Zealot",
+                            "against",
+                            "There is an ongoing Crusade that I want us to focus on",
+                            "When declaring war on an enemy of a different religion, this is just a fallback (?)"
+                        ],
+                        [
+                            "",
+                            "Malcontent",
+                            "against",
+                            "This voter is Malcontent and will oppose the liege",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Preferred war target",
+                            "against",
+                            "There are other wars that are more important for me right now.",
+                            "Each voter with a “neutral” stance will try to select a preferred war target: Pragmatist: not a close relative, ___ power ___ Glory Hound: not a close relative, ___ power between ___ and ___ Zealot: not a close relative, not the same religion, ___ power ___ When hovering a councilor's portrait, their tooltip will indicate whether they have a preferred war target and who it is."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Each voter with a “neutral” stance will try to select a preferred war target:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Pragmatist: not a close relative, ___ power ___",
+                            "children": []
+                        },
+                        {
+                            "text": "Glory Hound: not a close relative, ___ power between ___ and ___",
+                            "children": []
+                        },
+                        {
+                            "text": "Zealot: not a close relative, not the same religion, ___ power ___",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When hovering a councilor's portrait, their tooltip will indicate whether they have a preferred war target and who it is."
+                }
+            ]
+        },
+        {
+            "heading": "Grant Landed Title",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Pattern",
+                            "Vote",
+                            "Tooltip",
+                            "Notes"
+                        ],
+                        [
+                            "",
+                            "Selfish",
+                            "for",
+                            "I would gain a title!",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Selfish",
+                            "for",
+                            "You are vastly over your Demesne Limit and are handing out a Barony or a County",
+                            "Liege exceeds demesne limit by 4 Liege is not nomadic Title rank is barony or county"
+                        ],
+                        [
+                            "",
+                            "Selfish",
+                            "against",
+                            "I am unlanded, I should get the title!",
+                            "Voter is landless, recipient is already landed Voter is male or liege can generally grant titles to women Liege does not exceed demesne limit by 2 Liege is not nomadic Note: applies even to duchy grants!"
+                        ],
+                        [
+                            "",
+                            "Selfish",
+                            "against",
+                            "The title is part of my De Jure territory, it should be mine!",
+                            "Direct de jure vassal title (?)"
+                        ],
+                        [
+                            "",
+                            "Selfish",
+                            "against",
+                            "I desire this title",
+                            "De jure liege title or above (?)"
+                        ],
+                        [
+                            "",
+                            "Family",
+                            "for",
+                            "My family member would gain a title!",
+                            "Close relative and NOT a rival"
+                        ],
+                        [
+                            "",
+                            "Loyalist",
+                            "for",
+                            "This voter is a Loyalist and will vote like the liege",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Pragmatist",
+                            "against",
+                            "The targeted character's demesne is 4 or larger",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Pragmatist",
+                            "against",
+                            "I do not want you to grant land to your Dynasty!",
+                            "Unless voter is also of your dynasty"
+                        ],
+                        [
+                            "",
+                            "Zealot",
+                            "for",
+                            "",
+                            "Same religion, 20 opinion"
+                        ],
+                        [
+                            "",
+                            "Zealot",
+                            "against",
+                            "",
+                            "Different religion, below 25 opinion"
+                        ],
+                        [
+                            "",
+                            "Zealot",
+                            "against",
+                            "",
+                            "Same religion, decadent"
+                        ],
+                        [
+                            "",
+                            "Zealot",
+                            "against",
+                            "",
+                            "Same religion, excommunicated"
+                        ],
+                        [
+                            "",
+                            "Malcontent",
+                            "against",
+                            "This voter is Malcontent and will oppose the liege",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Opinion",
+                            "for",
+                            "I like this character",
+                            "25 opinion"
+                        ],
+                        [
+                            "",
+                            "Opinion",
+                            "for",
+                            "I do not dislike this character and the character is unlanded",
+                            "opinion is BELOW -9 ( backwards! )"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Revoke title",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Pattern",
+                            "Vote",
+                            "Tooltip",
+                            "Notes"
+                        ],
+                        [
+                            "",
+                            "Selfish",
+                            "against",
+                            "I would lose a title!",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Family",
+                            "against",
+                            "My family member would lose a title!",
+                            "Close relative and NOT a rival"
+                        ],
+                        [
+                            "",
+                            "Loyalist",
+                            "for",
+                            "This voter is a Loyalist and will vote like the liege",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Pragmatist",
+                            "for",
+                            "The targeted characters demesne is 4 or larger",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Glory Hound",
+                            "against",
+                            "I do not want you to weaken Powerful vassals!",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Zealot",
+                            "for",
+                            "",
+                            "Different religion and opinion below 20"
+                        ],
+                        [
+                            "",
+                            "Zealot",
+                            "against",
+                            "The target is pious and of my religion",
+                            "Same religion and piety at least 200"
+                        ],
+                        [
+                            "",
+                            "Malcontent",
+                            "against",
+                            "This voter is Malcontent and will oppose the liege",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Opinion",
+                            "for",
+                            "I dislike this character",
+                            "Opinion is -15 or below"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Imprison, banish, or execute",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Pattern",
+                            "Vote",
+                            "Tooltip",
+                            "Notes"
+                        ],
+                        [
+                            "",
+                            "Selfish",
+                            "against",
+                            "This affects me negatively",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Selfish",
+                            "against",
+                            "This affects the stability of the Council!",
+                            "Fellow voter and NOT a rival"
+                        ],
+                        [
+                            "",
+                            "Family",
+                            "against",
+                            "My family member would be affected negatively",
+                            "Close relative and NOT a rival"
+                        ],
+                        [
+                            "",
+                            "Loyalist",
+                            "for",
+                            "This voter is a Loyalist and will vote like the liege",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Glory Hound",
+                            "against",
+                            "I do not want you to weaken your Dynasty!",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Glory Hound",
+                            "against",
+                            "There is no glory in this, the character is a defenseless child!",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Glory Hound",
+                            "against",
+                            "I do not want you to weaken Powerful vassals!",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Zealot",
+                            "for",
+                            "",
+                            "Different religion and opinion below 20"
+                        ],
+                        [
+                            "",
+                            "Malcontent",
+                            "against",
+                            "This voter is Malcontent and will oppose the liege",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Opinion",
+                            "for",
+                            "I dislike this character",
+                            "Opinion is -5 or below for imprisonment Opinion is -10 or below for banishment or execution"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Enforce Realm Peace",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Enforcing realm peace requires the approval of the council."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Pattern",
+                            "Vote",
+                            "Tooltip",
+                            "Notes"
+                        ],
+                        [
+                            "",
+                            "Selfish",
+                            "for",
+                            "I am losing a war, this would save my hide!",
+                            "Defender is voter or voter's ally. Attacker is more powerful or war score is not clearly in my favor 🐞 Defenders are confused and think they're losing when they're actually winning"
+                        ],
+                        [
+                            "",
+                            "Selfish",
+                            "for",
+                            "My ally is losing a war, this would help them",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Selfish",
+                            "against",
+                            "I am winning a war",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Selfish",
+                            "against",
+                            "My ally is winning a war",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Loyalist",
+                            "for",
+                            "This voter is a Loyalist and will vote like the liege",
+                            "Liege initiated the vote"
+                        ],
+                        [
+                            "",
+                            "Malcontent",
+                            "against",
+                            "This voter is Malcontent and will oppose the liege",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Remember the number of votes needed from the council to approve your actions: 2 for counts and dukes, 3 for kings and emperors. If under a regency , the vote count changes to 4 for counts to kings, and 5 for emperors (as there are no tie-breaker votes and the regent will not automatically vote to approve actions, unlike the ruler).",
+                            "children": [
+                                {
+                                    "text": "Avoid having a council member as regent, as this leaves a voting seat empty just when actions require the most votes.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Powerful vassals who are Malcontent have to be dealt with.",
+                            "children": [
+                                {
+                                    "text": "If negative opinion, improving opinion until it is positive can push Malcontent members to either of the three neutral stances. If the negative opinion is too big to overcome, consider measures like induced rebellion ( antagonizing the councilor for one) or murder, and work on relations with their heirs.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Avoid allowing a council member to gather enough titles such that they are Malcontent due to sub-realm size.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "While 1 Malcontent council member is still manageable, multiple Malcontent members are a danger to the ruler, especially if they use favors to force fellow councilors to vote their way.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "It is often possible to avoid having to buy favors by finding new council members with the correct stance for the action you want to take. Beware of opinion malus from powerful vassals who are not on the council; they can also create and join factions due to not being in the council (if they were previously disallowed).",
+                            "children": []
+                        },
+                        {
+                            "text": "For players with small realms, try to have at least half of your council be Loyalist or cheap to buy favors from. Baron-level characters are the cheapest at 40g+. Courtiers require 80g, but you can often get their money back ( inheritance if they have no family; banishment if they abuse their office).",
+                            "children": []
+                        },
+                        {
+                            "text": "Avoid letting your council members hold favors on you, unless you have (or will soon) have absolutism. They will often use their favors to start votes to increase council power.",
+                            "children": [
+                                {
+                                    "text": "If a council member gains a favor on you, you may wish to fire them from the council. You can also use the Buy Favor interaction to \"buy back\" the favor, but opinion must be high: \" - I have better use for the favor\"",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Be opportunistic and seize the opportunity whenever a powerful vassal undergoes a regency and has to vacate his council seat. Powerful vassals undergoing major rebellions within their sub-realms may also deprive them of their \"powerful vassal\" status.",
+                            "children": []
+                        },
+                        {
+                            "text": "If playing in a region where different religions clash, it may be easier to sway the council to vote your way if they are mostly Zealots. The flipside is that once the era of great holy wars begins, you'll have to keep an eye on whether any GHWs have been called by or against your religion; Zealots expect you to drop (almost) everything and participate in a GHW, either as an supporting attacker or as a defender.",
+                            "children": []
+                        },
+                        {
+                            "text": "If your council is dominated by Glory Hounds, hover over their portraits to see if they have a preferred war target. If they do, consider declaring war on the preferred target, especially if the realm is relatively weak. Other Glory Hounds are likely to support such a war declaration, justifying the support under \"winning war will enlarge realm\".",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Modding",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Stance selection is defined in common/council_positions/",
+                            "children": []
+                        },
+                        {
+                            "text": "Voting patterns, for both laws and interactions, are defined in common/council_voting/",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

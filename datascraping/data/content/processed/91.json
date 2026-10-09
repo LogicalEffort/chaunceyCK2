@@ -1,0 +1,561 @@
+{
+    "pageid": 91,
+    "title": "Attributes",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Attributes measure the abilities of a character . Unlike traits , they are numerical rather than binary."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Each character has base attributes which are impacted by their traits . The total is displayed on the character screen, while the base is visible on mouseover. Base attributes are mostly acquired during childhood through education , but can also be altered by events ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some events and event chains will only have certain choices open to the player if the qualifying level of an attribute is active. For example, if a vassal demands a title , but their liege rejects it, there will normally result in a lengthy opinion malus; although, if the liege's diplomacy is high enough, they can reject the request politely and avoid upsetting the vassal."
+                }
+            ]
+        },
+        {
+            "heading": "State attributes",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For many applications of attributes, the relevant factor is the state attribute , instead of the character 's attribute."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Notes:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Only the primary spouse's attributes affect the state attributes. Concubines and secondary wives do not affect them",
+                            "children": []
+                        },
+                        {
+                            "text": "If there is a regency , the regent's attributes plus the councilors ' are used instead (Wife of a regent has no effect)",
+                            "children": []
+                        },
+                        {
+                            "text": "If a regent or spouse is also a councilor , they will only count once; hence, regents and spouses should not become councilors (except secondary wives for Muslims )",
+                            "children": [
+                                {
+                                    "text": "If Conclave DLC is active, the player can increase state attributes by swapping a regent-councilor to the Advisor council slot.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "A courtier's state skill (e.g., for monthly prestige gain) is just their personal skill",
+                            "children": []
+                        },
+                        {
+                            "text": "The state attributes are displayed between parenthesis on the character screen .",
+                            "children": []
+                        },
+                        {
+                            "text": "The theoretical max amount of a base(Base refers to the attribute without traits) attribute a character can have is 100.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Passive effects",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Diplomacy",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Diplomacy skill reflects ability to negotiate and please people. It is the determining attribute for a chancellor 's success while doing council jobs."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Personal diplomacy:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Increases realm courtiers' opinion towards the character ( councilors and spouses included)",
+                            "children": []
+                        },
+                        {
+                            "text": "Used to determine direct vassal limits , along with spouse's diplomacy (vassal bonus= 30% of (ruler's diplomacy + 1/2 of spouse's diplomacy) with the final value rounded down).",
+                            "children": []
+                        },
+                        {
+                            "text": "Combined with the learning attribute determines cultural technology points accumulated each month, if the character is not nomadic and of at least duke-rank",
+                            "children": []
+                        },
+                        {
+                            "text": "If the character is a chancellor on their liege's council , this attribute is used to determine their ability.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "State diplomacy:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Increases everyone's opinion toward the character (except direct vassals and courtiers)",
+                            "children": []
+                        },
+                        {
+                            "text": "Increases the opinion effectiveness of gifts",
+                            "children": []
+                        },
+                        {
+                            "text": "Gives character prestige ( +0.01/month per point)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Martial",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Martial skill is an indicator of skill at warfare and combat , and is the determining attribute for a marshal 's success while doing council jobs."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Personal martial:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Affects the character's skill as a commander , while leading battles personally",
+                            "children": []
+                        },
+                        {
+                            "text": "Used to determine the character's demesne levy size and speed of demesne levy reinforcement",
+                            "children": []
+                        },
+                        {
+                            "text": "Combined with the learning attribute determines military technology points accumulated each month, if the character is not nomadic and of at least duke-rank",
+                            "children": []
+                        },
+                        {
+                            "text": "If the character is a marshal on their liege's council , it is used to determine their ability.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "State martial:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "increases the rate at which armies recover morale .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Stewardship",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Stewardship improves management of demesne and is the determining attribute for a steward 's success while doing council jobs."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Personal stewardship:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Combined with the stewardship of a character's spouse is used to determine the ruler's maximum demesne (demesne limit bonus = 15% of (ruler's stewardship + 1/2 of spouse's stewardship) with the final value rounded down). Gavelkind succession may complicate this calculation. Also note that nomads do not have a demesne limit",
+                            "children": []
+                        },
+                        {
+                            "text": "Combined with the learning attribute determines economic technology points accumulated each month, if the character is not nomadic and of at least duke-rank",
+                            "children": []
+                        },
+                        {
+                            "text": "Increases the rate of provinces converting to the character's culture . Note that the speed increase is capped at 15 stewardship.",
+                            "children": []
+                        },
+                        {
+                            "text": "If the character is a steward on their liege's council , it is used to determine their ability.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "State stewardship:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Increases demesne income ( +2% per point).",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Intrigue",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Intrigue is a measure of skill at manipulation and scheming. It is the determining attribute for a spymaster 's success while doing council jobs."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Personal intrigue:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If the character is a spymaster on their liege's council , it is used to determine their ability",
+                            "children": []
+                        },
+                        {
+                            "text": "It does not give any technology boost.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "State intrigue:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Increases plot power (and decreases the power of plots against the player)",
+                            "children": []
+                        },
+                        {
+                            "text": "Makes the character's plots less likely to be discovered",
+                            "children": []
+                        },
+                        {
+                            "text": "Increases imprisonment chance (and makes the character harder to get imprisoned).",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Learning",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Learning is a measure of a character's knowledge. It is the determining attribute for a Court Chaplain 's council jobs. If the The Reaper's Due Expansion is active, the court physician 's successes are also affected by this attribute."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Personal learning:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Combined with diplomacy, martial, and stewardship attributes to determine monthly technology points",
+                            "children": []
+                        },
+                        {
+                            "text": "If the character is a Court Chaplain on their liege's council , it is used to determine their ability.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "State learning:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Gives the character piety (or equivalent) ( +0.02/month per point).",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Improving attributes",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Characters can strive to improve their base attributes in several ways:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Children:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Education : A skilled guardian will pass on his skills (without the Conclave Expansion)",
+                            "children": []
+                        },
+                        {
+                            "text": "Breeding : A child grown up by high skilled progenitors (or guardian) has a better chance of ending up with higher base attributes (with Conclave Expansion).",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Adults:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If Way of Life DLC is inactive, the player may attempt to fulfil an ambition goal in order to increase base attributes up to level 8 in a specified skill. The character can choose one ambition at each time",
+                            "children": []
+                        },
+                        {
+                            "text": "If Way of Life Expansion is active, focuses incorporate events to improving base attributes as well as adding many other modifiers",
+                            "children": []
+                        },
+                        {
+                            "text": "Child education may result in effects on guardians (without the Conclave Expansion)",
+                            "children": []
+                        },
+                        {
+                            "text": "Friendship can sometimes result in an attribute boost",
+                            "children": []
+                        },
+                        {
+                            "text": "If Monks and Mystics DLC is active, societies can trigger events which grant the character attribute points",
+                            "children": []
+                        },
+                        {
+                            "text": "Some religions have passive attribute bonuses and exclusive traits connected to them, e.g., Crusader (+2 martial) , Mutazilite (+5 learning) , Berserker (+4 martial) , Theravada buddhist (+1 learning)",
+                            "children": []
+                        },
+                        {
+                            "text": "Many artifacts provide attribute bonuses.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Other attributes",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Personal Combat Skill",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "\"Personal combat skill\" is a measure of how well a character performs in duels against other characters, where it is compared to the skill of the character's opponent in order to decide the outcome. A high skill can also help a character to survive when leading an army into battle.\nAdditionally there are some event chains that involve 'personal combat' where a high \"personal combat skill\" makes better outcomes possible or more likely."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Unlike other attributes a character has no base points in their \"personal combat skill\", so the total value is simply the sum of the bonuses (and maluses) by a character's traits , artifacts , focus , bloodlines , societies , great works , minor titles (the commander minor title gives +10 \"personal combat skill\") and other character modifiers (e.g. Duel Experience, Old Age (-15 \"personal combat skill\" from 50 to 69 years and -35 \"personal combat skill\" when 70 and older), etc.)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In the game files \"personal combat skill\" is referenced as combat_rating ."
+                }
+            ]
+        },
+        {
+            "heading": "Hidden attributes",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Two hidden attributes measure the character's physical well-being: health and fertility. A character's base health and fertility are not normally visible, but trait effects are listed in tooltips."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The \"charinfo\" console command uncovers these attributes in the tooltip for all characters. The player may also adjust those attributes at game start by using the Ruler Designer ."
+                }
+            ]
+        },
+        {
+            "heading": "Health",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Healthy characters are less likely to fall prey to, and more likely to fully recover from, disease . They are also less likely to die from old age per month than ill characters. High health is key to a long life."
+                }
+            ]
+        },
+        {
+            "heading": "Fertility",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Fertility determines how likely an individual character is to conceive children . it should be noted that both parents' fertility is taken into account. In addition, it appears that having spouses who are also lovers will make it 3 times more likely for pregnancy to occur."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Various traits affect fertility, such as:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Very Easy difficulty (+50%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Easy difficulty (+25%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Hedonist (+20%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Lustful (+20%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Shaktist hindu (+20%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Midas touched (+15%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Fortune builder (+10%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Grey eminence (+10%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Strong (+10%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Thrifty clerk (+5%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Charismatic negotiator (+5%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Underhanded rogue (+5%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Scholarly theologian (-5%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Mastermind theologian (-5%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Weak (-5%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Chaste (-15%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Homosexual (-15%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Severely Injured (-25%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Inbred (-30%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Incapable (-30%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Mangled (-50%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Celibate (-1000%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Eunuch (-5000%)",
+                            "children": []
+                        },
+                        {
+                            "text": "Most diseases decrease fertility (and symptoms , if The Reaper's Due DLC is active). For example, Measles (-10%) , Leper (-95%) , Vomiting (-30%) .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A character who is either a Horse or a Cat (only from Lunatic events, not from alternate-start animal cultures) has effectively nonexistent fertility: (-5000%) ."
+                }
+            ]
+        }
+    ]
+}

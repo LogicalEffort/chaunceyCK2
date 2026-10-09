@@ -1,0 +1,525 @@
+{
+    "pageid": 57,
+    "title": "Demesne",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A demesne is a character's collection of personal holdings . Such holdings may either be counties or baronies. A ruler's capital is an important part of their demesne."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A character's demesne (pronounced /dɪ'meɪn/, almost but not quite like \"domain\") will usually provide the majority of their income , as well as a decent amount of levies (both from land personally held and from vassal barons). It is within one's demesne that most construction occurs, including construction of new settlements in county empty slots."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Each ruler (except nomads) has a demesne limit , and exceeding it causes a penalty to taxes and levies. This limit is what forces rulers to distribute power to vassals rather than directly controlling their entire realm. A ruler's demesne limit is based on tier , personal and spouse stewardship , succession type , and centralization law."
+                }
+            ]
+        },
+        {
+            "heading": "Demesne limit",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Nomadic rulers do not have a demesne limit. Instead, Khagans will be increasingly pressured to give out excess nomadic counties (defined as counties with 0 or 1 settlement) to vassal clans (or to start a new clan), as excess counties lower clan sentiment, which lowers vassal khans' opinion towards the Khagan. If the Khagan continues to hold onto too many counties, a minor clan can rise up in rebellion to force the Khagan to recognise it as a major clan. (Unless the realm already has 9 clans) The Clans screen will indicate whether a Khagan needs to give out nomadic counties. However, while nomads are in control of holdings to carry out pillages, their liege tax is reduced until the pillages have destroyed the holdings."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When a ruler is over their demesne limit, they suffer penalties due to inefficiency:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Reduced opinion from vassals (-10 per settlement over limit)",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced demesne levies , except in the capital (-20% per, up to -90% with the 5th)",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced demesne income (-20% per, up to -90% with the 5th)",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced tax from vassals (-20% per, up to -100% at 5 over)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There is a 2-month grace period when a ruler goes over their limit due to acquiring new titles. However, if a ruler goes over their limit due to a reduction in stewardship skill, the penalties kick in immediately."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The demesne limit is (the ⌊ x ⌋ {\\displaystyle \\lfloor x\\rfloor } notation refers to rounding x {\\displaystyle x} down to the nearest integer):"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "D e m e s n e L i m i t = ⌊ ( R a n k B a s e D e m e s n e + S t e w a r d s h i p B o n u s ) ⋅ G a v e l k i n d B o n u s ⌋ + L a w B o n u s e s {\\displaystyle DemesneLimit=\\left\\lfloor \\left(RankBaseDemesne+StewardshipBonus\\right)\\cdot GavelkindBonus\\right\\rfloor +LawBonuses}"
+                }
+            ]
+        },
+        {
+            "heading": "Gavelkind",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Gavelkind Bonus = 1.3 (+30%) if you are under Gavelkind or Elective gavelkind succession law, 1 otherwise."
+                }
+            ]
+        },
+        {
+            "heading": "Rank",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Each rank has a base demesne value:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Rank",
+                            "Base demesne",
+                            "Notes"
+                        ],
+                        [
+                            "Baron/Count/Duke",
+                            "1",
+                            ""
+                        ],
+                        [
+                            "Great Duke",
+                            "2",
+                            "A \"Great Duke\" is a Duke with 2 or more duchy titles."
+                        ],
+                        [
+                            "King",
+                            "3",
+                            ""
+                        ],
+                        [
+                            "Emperor",
+                            "4",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Unlike feudal lords, Patricians have different base demesne sizes. The base is 2 for a patrician and 3 for a doge, no matter what rank title they hold."
+                }
+            ]
+        },
+        {
+            "heading": "Stewardship",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The stewardship bonus is (in case of polygamy , only the primary spouse's stewardship is used):"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "S t e w a r d s h i p B o n u s = 0.15 ⋅ ( P e r s o n a l S t e w a r d s h i p + ⌊ S p o u s e S t e w a r d s h i p 2 ⌋ ) {\\displaystyle StewardshipBonus=0.15\\cdot \\left(PersonalStewardship+\\left\\lfloor {\\frac {SpouseStewardship}{2}}\\right\\rfloor \\right)}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Here is a table of the P e r s o n a l S t e w a r d s h i p + ⌊ S p o u s e S t e w a r d s h i p 2 ⌋ {\\displaystyle PersonalStewardship+\\left\\lfloor {\\frac {SpouseStewardship}{2}}\\right\\rfloor } values required to achieve a certain increase in demesne limit relative to the limit you would have without Gavelkind and with 0 stewardship (note that this is different from the stewardship bonus, since the actual stewardship bonus is multiplied by 1.3 in the case of Gavelkind):"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Succession",
+                            "Rank",
+                            "+1",
+                            "+2",
+                            "+3",
+                            "+4",
+                            "+5",
+                            "+6",
+                            "+7",
+                            "+8",
+                            "+9",
+                            "+10",
+                            "+11",
+                            "+12",
+                            "+13",
+                            "+14",
+                            "+15",
+                            "+16"
+                        ],
+                        [
+                            "Not Gavelkind",
+                            "any",
+                            "7",
+                            "14",
+                            "20",
+                            "27",
+                            "34",
+                            "40",
+                            "47",
+                            "54",
+                            "60",
+                            "67",
+                            "74",
+                            "80",
+                            "87",
+                            "94",
+                            "100",
+                            "107"
+                        ],
+                        [
+                            "Gavelkind",
+                            "Baron/Count/Duke",
+                            "4",
+                            "9",
+                            "14",
+                            "19",
+                            "25",
+                            "30",
+                            "35",
+                            "40",
+                            "45",
+                            "50",
+                            "55",
+                            "60",
+                            "66",
+                            "71",
+                            "76",
+                            "81"
+                        ],
+                        [
+                            "Gavelkind",
+                            "Great Duke",
+                            "3",
+                            "8",
+                            "13",
+                            "18",
+                            "23",
+                            "28",
+                            "33",
+                            "38",
+                            "44",
+                            "49",
+                            "54",
+                            "59",
+                            "64",
+                            "69",
+                            "74",
+                            "79"
+                        ],
+                        [
+                            "Gavelkind",
+                            "King",
+                            "1",
+                            "6",
+                            "11",
+                            "16",
+                            "22",
+                            "27",
+                            "32",
+                            "37",
+                            "42",
+                            "47",
+                            "52",
+                            "57",
+                            "63",
+                            "68",
+                            "73",
+                            "78"
+                        ],
+                        [
+                            "Gavelkind",
+                            "Emperor",
+                            "0",
+                            "5",
+                            "10",
+                            "15",
+                            "20",
+                            "25",
+                            "30",
+                            "35",
+                            "40",
+                            "46",
+                            "51",
+                            "56",
+                            "61",
+                            "66",
+                            "71",
+                            "76"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This table can be computed using x = ⌈ R a n k B a s e D e m e s n e + S t e w a r d s h i p B o n u s G a v e l k i n d B o n u s − R a n k B a s e D e m e s n e 0.15 ⌉ {\\displaystyle x=\\left\\lceil {\\frac {{\\frac {RankBaseDemesne+StewardshipBonus}{GavelkindBonus}}-RankBaseDemesne}{0.15}}\\right\\rceil }"
+                }
+            ]
+        },
+        {
+            "heading": "Tribal",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Tribal rulers get a +2 bonus to their demesne, at a cost of -10 to their vassal limit."
+                }
+            ]
+        },
+        {
+            "heading": "Law bonuses",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Centralization Bonus depends on the Centralization law, available to dukes and above:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Level",
+                            "Decentralized",
+                            "Low Centralization",
+                            "Medium Centralization",
+                            "High Centralization",
+                            "Centralized"
+                        ],
+                        [
+                            "Bonus",
+                            "+0",
+                            "+1",
+                            "+2",
+                            "+3",
+                            "+4"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "With the Conclave DLC, absolutism (all council laws in ruler's favor) gives +2 to demesne limit. Tribal rulers may attempt to get this bonus only after reaching Absolute Tribal Organization, as it is only then can they propose to reclaim powers."
+                }
+            ]
+        },
+        {
+            "heading": "Breakdown",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The in-game tooltip breakdown may be confusing, as values are rounded as integers for display, but formula uses float values behind the scenes."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Here's an example illustrating the tooltip discrepancy for a king with 12 stewardship married to a wife with 9 stewardship under gavelkind succession:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Rank Base Demesne : 3*1 = 3, displayed as +3",
+                            "children": []
+                        },
+                        {
+                            "text": "Stewardship Bonus : 0.15 * (12 + 0.5*9) = 2.4, displayed as +2",
+                            "children": []
+                        },
+                        {
+                            "text": "Gavelkind : 30% * 5.4 = 1.6, displayed as +1",
+                            "children": []
+                        },
+                        {
+                            "text": "Total : 3 + 2.4 + 1.6 = 7, displayed as +7 and not +6",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Demesne distribution strategy",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Here are 3 possible strategies for demesne distribution:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Tall : Consist in concentrating the demesne in the capital county and capital duchy by owning the counties and the baronies underneath.",
+                            "children": []
+                        },
+                        {
+                            "text": "Wide : Consist in holding only counties and no baronies, resulting in vast demesne.",
+                            "children": []
+                        },
+                        {
+                            "text": "Hybrid : Consist in concentrating the demesne only in the capital county by owning the baronies underneath, and only holding counties everywhere else.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "DLC",
+                            "Tall",
+                            "Hybrid",
+                            "Wide"
+                        ],
+                        [
+                            "Levies",
+                            "",
+                            "Largest levies : Capital county and Capital duchy bonus are fully exploited. Marshal Train Troops job is fully exploited on all holdings with a county.",
+                            "Capital county bonus is fully exploited. Marshal Train Troops job is fully exploited on all holdings within the capital county.",
+                            "Smallest Levies : Capital Duchy bonus can be exploited for each county within the Capital Duchy. Some levies from vassal baronies."
+                        ],
+                        [
+                            "Taxes",
+                            "",
+                            "Steward Collect Taxes job applies to all own holdings within a county.",
+                            "Steward Collect Taxes job applies to all own holdings within the capital county. A bit of taxes from vassal baronies.",
+                            "Some taxes from vassal baronies."
+                        ],
+                        [
+                            "Prestige and Vassals",
+                            "",
+                            "Least Prestige : Owning baronies is less prestigious than counties. More counties for other vassals, so it compensates a little.",
+                            "Mix of both.",
+                            "Most Prestige : Owning counties is more prestigious than baronies. Extra prestige from vassal baronies. Less counties for other vassals."
+                        ],
+                        [
+                            "Technology",
+                            "",
+                            "Can upgrade most of demesne holdings when a technology threshold is reached. Costly, but the benefits are obtained more quickly.",
+                            "Capital holdings can be upgraded when a new economy technology level is reached. Some benefits of wide.",
+                            "Upgrading demesne holdings is slower due to technology spread. More temple and city vassal baronies can generate more technology points. Cheaper, but the benefits are obtained more slowly."
+                        ],
+                        [
+                            "Hospitals",
+                            "",
+                            "Less counties, less Hospitals, but less Wealth needed to build and upgrade.",
+                            "Mix of both.",
+                            "More counties, more Hospitals, but more Wealth needed to build and upgrade."
+                        ],
+                        [
+                            "Trade posts and routes (Silk and Trans-Saharan)",
+                            "or",
+                            "Trade posts tend to have many holdings, thus make good capitals. Steward Collect Taxes job also applies to Trade post.",
+                            "Mix of both.",
+                            "Counties on the routes have bonuses. Can attempt to control multiple Trade posts."
+                        ],
+                        [
+                            "Great works (must be independent)",
+                            "",
+                            "Levy and tax bonus applies to all holdings within a county.",
+                            "Same as tall.",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Wrong settlement type",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Characters get a 75% penalty to income and levies in demesne settlements that do not match their government type. These settlements should generally be given to a vassal of the correct type or to a courtier (who will automatically take on the correct type)."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Tribal rulers can only hold tribes without penalty",
+                            "children": []
+                        },
+                        {
+                            "text": "Feudal rulers can hold all castles + tribes of their culture without penalty",
+                            "children": []
+                        },
+                        {
+                            "text": "Patricians can hold all cities and castles + tribes of their culture without penalty",
+                            "children": []
+                        },
+                        {
+                            "text": "Iqta rulers can hold all castles and mosques + tribes of their culture without penalty, and gain extra piety if they hold mosques .",
+                            "children": []
+                        },
+                        {
+                            "text": "Nomads cannot hold any settlement without penalty except their nomadic capital.",
+                            "children": []
+                        },
+                        {
+                            "text": "Monastic Feudal rulers may also hold temples and castles + tribes of their culture without penalty.",
+                            "children": []
+                        },
+                        {
+                            "text": "Imperial rulers can hold castles and cities + tribes of their culture without penalty",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Conversion of tribes in demesne",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Rulers who already have advanced government (i.e. not nomadic/tribal) can convert tribes in demesne counties which share their religion . This also requires the tribe to have a Stone Hillfort built. Once the Stone Hillfort is built, right-click on the tribe to convert it. Depending on the number of empty holding slots in the county (minimum two slots), additional free holdings may be added to the ruler's demesne."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This method of converting tribes is more critical when playing as a feudal unreformed pagan."
+                }
+            ]
+        },
+        {
+            "heading": "Other considerations",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If playing as a Muslim Caliph or a reformer of a pagan faith with the Temporal leadership type, consider holding a temple in one of the denomination's holy sites to increase moral authority. However, note that unless you are a Muslim or a reformed Bön ruler using the Monastic Feudal government, being a religious head does not prevent you from suffering wrong government penalties for directly holding the holy site temple.",
+                            "children": []
+                        },
+                        {
+                            "text": "If aiming to change religion, consider holding a county of the relevant faith's holy sites for the option of secret conversion. In particular for Abrahamic faiths, consider personally holding the county of Jerusalem. Another way of secret conversion is via a demesne county's religion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Holding counties which are considered important on the Silk Road can boost your income as you build and upgrade trade posts.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

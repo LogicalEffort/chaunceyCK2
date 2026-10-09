@@ -1,0 +1,907 @@
+{
+    "pageid": 3609,
+    "title": "Patch 1.10.X",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 1.10.X are all patches beginning with 1.10. There were 3 patches."
+                }
+            ]
+        },
+        {
+            "heading": "Patch 1.10",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Patch 1.101",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 1.101 was released on 2013-06-12."
+                }
+            ]
+        },
+        {
+            "heading": "Major",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added a \"Retract Vassal\" interaction",
+                            "children": []
+                        },
+                        {
+                            "text": "Disallowed destruction of non-titular titles under Gavelkind",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Interface",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added lots of portrait fixes from the \"CK2 Portrait Fixes\" mod by zebez",
+                            "children": []
+                        },
+                        {
+                            "text": "Adjusted the random CoA colors and color choices",
+                            "children": []
+                        },
+                        {
+                            "text": "Scripted a lot of CoAs for various dynasties",
+                            "children": []
+                        },
+                        {
+                            "text": "The CoAs of titles named after a dynasty now match the dynasty CoA",
+                            "children": []
+                        },
+                        {
+                            "text": "Bishops no longer wear pope hats, but the pope does",
+                            "children": []
+                        },
+                        {
+                            "text": "Livonia now has the correct pagan flag",
+                            "children": []
+                        },
+                        {
+                            "text": "Buildings requiring a coastal province now show up in the tech tooltip even if the capital is not coastal",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some tooltips in the settlement view not showing building levels with the name",
+                            "children": []
+                        },
+                        {
+                            "text": "Nicknames are now shown for heads of religion",
+                            "children": []
+                        },
+                        {
+                            "text": "The 'Grant Independence' action is no longer even shown if the recipient is not your vassal",
+                            "children": []
+                        },
+                        {
+                            "text": "The 'Prepare Invasion' action is now shown but grayed out if you are at war with the recipient",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing Bektashi religion description",
+                            "children": []
+                        },
+                        {
+                            "text": "Endgame screen now shows correct score for characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing name of the Reformed Aztec Church title",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaked the religion colors to make them more distinct",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrected some event text typos",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Gameplay",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Norse Pagans can no longer employ the coastal conquest CB against other pagans (neighboring counties can still be taken though)",
+                            "children": []
+                        },
+                        {
+                            "text": "The Subjugation CB can now only be used once per lifetime instead of every 10 years. (Unless you have the 'Become King' ambition.)",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters with the \"Become King\" ambition and access to the subjugation CB can no longer move their capital out of the de jure kingdom",
+                            "children": []
+                        },
+                        {
+                            "text": "Subjugated rulers of another religion now get a smaller opinion bonus vs the winner, lasting for a shorter time",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with many vassalizing casus bellis where the target's own counties would be seized when they should not be",
+                            "children": []
+                        },
+                        {
+                            "text": "Tengri Pagans are now limited to Agnatic succession",
+                            "children": []
+                        },
+                        {
+                            "text": "The Jomsvikings now reform if the Norse reformation takes place",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue where the primary heir under Gavelkind would not inherit the capital county",
+                            "children": []
+                        },
+                        {
+                            "text": "West African pagans can now also raid",
+                            "children": []
+                        },
+                        {
+                            "text": "Lowered the spawn rate of TOG rebels by 20%",
+                            "children": []
+                        },
+                        {
+                            "text": "Added the \"Ghanan Band\" mercenary company",
+                            "children": []
+                        },
+                        {
+                            "text": "Slavic, Baltic and Finnish Pagans now get a bonus to their levy sizes, at the cost of their garrison bonus",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a problem with the decadence invasion event",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with decadence revolts ending strangely on the attacking ruler's death",
+                            "children": []
+                        },
+                        {
+                            "text": "Court Chaplain job events no longer restricted to men for pagans",
+                            "children": []
+                        },
+                        {
+                            "text": "Made the Chancellor job to improve relations more effective",
+                            "children": []
+                        },
+                        {
+                            "text": "Mercenary ships will no longer spawn in major rivers",
+                            "children": []
+                        },
+                        {
+                            "text": "The Viking trait can now only be gained by adults",
+                            "children": []
+                        },
+                        {
+                            "text": "Heirs returning from the Varangian Guard to take the throne of their dead father can no longer get the same event twice",
+                            "children": []
+                        },
+                        {
+                            "text": "Piast the Wheelwright and his son are now of the Piast dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "Pagan festivals can now only be held in summer as intended",
+                            "children": []
+                        },
+                        {
+                            "text": "City Shipyards now produce slightly more galleys than their Castle and Temple counterparts",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where banishing landed vassals would not take all their titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Under Gavelkind, your oldest son will no longer ask for titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Added additional names and dynasties for Roman characters created in the Ruler Designer",
+                            "children": []
+                        },
+                        {
+                            "text": "Added an earlier king of Ireland to make Irish liberation revolts possible",
+                            "children": []
+                        },
+                        {
+                            "text": "867: Strengthened the coastal Baltic, Slavic and Finnish tribes with better Holdings",
+                            "children": []
+                        },
+                        {
+                            "text": "867: Slightly strengthened the initial forces of Ivar and Halfdan",
+                            "children": []
+                        },
+                        {
+                            "text": "867: The Karling kingdoms are now on Agnatic succession",
+                            "children": []
+                        },
+                        {
+                            "text": "867: Moved Uglich from the Meryas to the Vyatichi",
+                            "children": []
+                        },
+                        {
+                            "text": "867: Byzantium is now properly on Primogeniture, not Gavelkind",
+                            "children": []
+                        },
+                        {
+                            "text": "867: The Duchy of Meath now exists, called \"Tara\" by the Irish",
+                            "children": []
+                        },
+                        {
+                            "text": "867: Made some important vassals to the King of Italy Italian culture to prolong the survival of the culture and ensure more internal troubles",
+                            "children": []
+                        },
+                        {
+                            "text": "867: Adjusted the initial political and dynastic setup among the Baltic tribes to make them more resilient",
+                            "children": []
+                        },
+                        {
+                            "text": "The vassal opinion for free investiture law now correctly only applies for Catholics",
+                            "children": []
+                        },
+                        {
+                            "text": "Build cost and time is now affected by your capital tech, not the average tech in your realm",
+                            "children": []
+                        },
+                        {
+                            "text": "Ignoring pagan defensive attrition is now controlled by your capital tech, not by the average tech in your realm",
+                            "children": []
+                        },
+                        {
+                            "text": "Own fort level no longer affects ability to navigate major rivers",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaked the AI bonuses on Hard and Very Hard difficulty settings",
+                            "children": []
+                        },
+                        {
+                            "text": "Successful non-claimant adventurers are now known as \"the Conqueror\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with weird dynasty names for the commanders of Liberation rebels",
+                            "children": []
+                        },
+                        {
+                            "text": "Castrating or blinding a prisoner now removes the righteous imprisonment cause when they are released",
+                            "children": []
+                        },
+                        {
+                            "text": "The ambition to gain a council position now only increases a skill the first time it is successful",
+                            "children": []
+                        },
+                        {
+                            "text": "The generic Pagan religion now has a description and holy sites",
+                            "children": []
+                        },
+                        {
+                            "text": "Added the Hellenic religion",
+                            "children": []
+                        },
+                        {
+                            "text": "The events when certain cities are sacked now properly trigger for the Mongol Empire",
+                            "children": []
+                        },
+                        {
+                            "text": "The event when you raise a runestone as a zealous Reformed Norse character no longer treats you as a Christian",
+                            "children": []
+                        },
+                        {
+                            "text": "Captured Rebel leaders now have a \"Broken Spirit\" modifier, making them pretty useless",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where Gavelkind could produce republics",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a general bug with multiple kingdom inheritance that could produce republics",
+                            "children": []
+                        },
+                        {
+                            "text": "The decision to create the Kingdom of León now makes it a de jure part of the Empire of Hispania",
+                            "children": []
+                        },
+                        {
+                            "text": "Trade posts are no longer counted towards the Prepared Invasion realm size limits",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with being able to semi-grant invalid duchies and kingdoms to your heir under Gavelkind",
+                            "children": []
+                        },
+                        {
+                            "text": "Heathen priests can now inherit titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Mayors and heathen priests will now marry if they are heirs to other titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Lack of Piety rumor event now only triggers for Christian lieges as intended",
+                            "children": []
+                        },
+                        {
+                            "text": "Trade post garrisons now give less retinue cap increase",
+                            "children": []
+                        },
+                        {
+                            "text": "Moved the counties of Loon and Julich from de jure Cologne to Luxemburg",
+                            "children": []
+                        },
+                        {
+                            "text": "Technology points are now gained by own demesne when containing buildings that give technology points",
+                            "children": []
+                        },
+                        {
+                            "text": "Baltic cultures can now also form the Wendish Empire",
+                            "children": []
+                        },
+                        {
+                            "text": "Finnic cultures can now also form the Russian Empire",
+                            "children": []
+                        },
+                        {
+                            "text": "Finnic cultures can now also form the Scandinavian Empire",
+                            "children": []
+                        },
+                        {
+                            "text": "North Germanic cultures can now also form the Empire of Britannia",
+                            "children": []
+                        },
+                        {
+                            "text": "867: Greater Poland is no longer a republic after a resign",
+                            "children": []
+                        },
+                        {
+                            "text": "Norse Patricians are now correctly on Seniority succession",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "AI",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Will not convert to Norman culture if in a huge Norse empire",
+                            "children": []
+                        },
+                        {
+                            "text": "Higher prio on building temple towns",
+                            "children": []
+                        },
+                        {
+                            "text": "Adjusted propensity to backstab brothers of the faith who are primary parties in holy wars",
+                            "children": []
+                        },
+                        {
+                            "text": "Behaviour is now affected subtly by the difficulty settings",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaked max field army sizes a bit",
+                            "children": []
+                        },
+                        {
+                            "text": "Will not agree to concubinage for title claimants",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Modding",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Exported BASE_REVOLT_CHANCE_MOD and TOG_REVOLT_CHANCE_MOD to defines",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a 'can_appear' field to dynasties to prevent for example the Seljuks from appearing before their event",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 1.102",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 1.102 was released on 2013-06-25."
+                }
+            ]
+        },
+        {
+            "heading": "Interface",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Removed the erroneous warning text about disinheriting a dynasty member when granting him a temple holding, for non-Christians",
+                            "children": []
+                        },
+                        {
+                            "text": "West Africans now use the Mongol on-map shields",
+                            "children": []
+                        },
+                        {
+                            "text": "Diplo View: Crusades/Jihads/Great Holy Wars are now listed before they can be used (with a tooltip why you can't use them)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added some more random Coat of Arms elements (more work to come)",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue where the wrong temple icon could be shown in the province view",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with the displaying of strong claims for pagans and Zoroastrians",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Gameplay",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed bug where Arsenal building could be deleted on succession",
+                            "children": []
+                        },
+                        {
+                            "text": "The decision for creating Hungary now takes away the Ukrainian part of their realm",
+                            "children": []
+                        },
+                        {
+                            "text": "Zoroastrians can now properly use their Crusade CB",
+                            "children": []
+                        },
+                        {
+                            "text": "1066: Rebalanced William's, Harold's and Harald's starting forces",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where Crown Laws would not carry over into created kingdoms and empires",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some bugs with True Cognatic succession",
+                            "children": []
+                        },
+                        {
+                            "text": "You no longer get messages about adventurers who are not actually declaring war",
+                            "children": []
+                        },
+                        {
+                            "text": "You must now be in the West African culture group to recruit the Ghanan Band",
+                            "children": []
+                        },
+                        {
+                            "text": "Slashed some unnecessary memory usage for living characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where you sometimes raised two runestones in honor of your father",
+                            "children": []
+                        },
+                        {
+                            "text": "The event where a female courtier initiates romance with her liege now properly checks their opinion of each other",
+                            "children": []
+                        },
+                        {
+                            "text": "Expanded the Justanid dynasty of Gilan",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixes and additions to several Norwegian dynasties",
+                            "children": []
+                        },
+                        {
+                            "text": "The Imperial Reconquest CB now also applies to the Kingdom of Asturias",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where the order of holdings in provinces did not remain consistent when stepping back and forth in history",
+                            "children": []
+                        },
+                        {
+                            "text": "Varangians will now only come back Orthodox if it's the Byzantine ruler's religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Diseases now actually trigger before 1066",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a rare crash issue with invalid coat of arms for Muslim held titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Some slight memory and speed optimizations",
+                            "children": []
+                        },
+                        {
+                            "text": "Lund is now a temple holding",
+                            "children": []
+                        },
+                        {
+                            "text": "Marshals can no longer interfere with their own efforts to train troops in a province",
+                            "children": []
+                        },
+                        {
+                            "text": "Court Chaplains no longer claim characters are heretics if they are already branded as such",
+                            "children": []
+                        },
+                        {
+                            "text": "The opinion modifiers given by events 3243 and 4148 no longer instantly disappear",
+                            "children": []
+                        },
+                        {
+                            "text": "Added the Dál gCais dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "Expanded the Morgannwg dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixes to Gwerthrynion dynasty members",
+                            "children": []
+                        },
+                        {
+                            "text": "867: Corrected the character Hrolf, the first duke of Normandy",
+                            "children": []
+                        },
+                        {
+                            "text": "1066: Corrected an issue with Gurgan and Dailam not being part of the Seljuk empire",
+                            "children": []
+                        },
+                        {
+                            "text": "Loosened up the culture requirements for the formation of the kingdoms of Rus and Finland",
+                            "children": []
+                        },
+                        {
+                            "text": "Follow-up events should now trigger properly when your wife is impregnated by a lover",
+                            "children": []
+                        },
+                        {
+                            "text": "Added the three winning submissions from the Event Contest",
+                            "children": []
+                        },
+                        {
+                            "text": "Piety from buildings is now given to both the owner and his/her liege",
+                            "children": []
+                        },
+                        {
+                            "text": "Moved the duchy of Hayya from Abyssinia to Nubia",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where the liege would always inherit a courtier's gold",
+                            "children": []
+                        },
+                        {
+                            "text": "Improved the gold inheritance check to look for siblings and grandchildren if necessary",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer possible to invite a concubine to your court",
+                            "children": []
+                        },
+                        {
+                            "text": "The Blot and Nerge decisions are now high priority, giving players a heads up when they are available",
+                            "children": []
+                        },
+                        {
+                            "text": "Landless Popes can now call crusades",
+                            "children": []
+                        },
+                        {
+                            "text": "Titles with free duchy revocation (the ERE) can now also revoke the de jure capital county freely",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "AI",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Will no longer declare war on its current \"player heir\", or vice versa",
+                            "children": []
+                        },
+                        {
+                            "text": "Will not flip culture to Swedish, Danish or Norwegian culture if in a huge Norse empire",
+                            "children": []
+                        },
+                        {
+                            "text": "Will now execute claimants whose claim is currently pressed in a war against it",
+                            "children": []
+                        },
+                        {
+                            "text": "Doges and patricians are now more likely to build in their cities",
+                            "children": []
+                        },
+                        {
+                            "text": "Pagans now willing to accept cross-religion marriages with other pagans if it likes you enough",
+                            "children": []
+                        },
+                        {
+                            "text": "Will now accept marriage offers for courtiers of the right religion, even if the ruler is of a hostile religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Female rulers or heirs less likely to marry non-matrilineally, unless they really like you",
+                            "children": []
+                        },
+                        {
+                            "text": "More likely to revoke its de jure capital title",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Modding",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added Enatic and Enatic-Cognatic Succession code support (laws not available without slight modding)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'can_hold_temples' to religions (like Muslims can hold temple holdings)",
+                            "children": []
+                        },
+                        {
+                            "text": "The history command 'raise_troops' now raises them with full morale",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'merge' field to the 'spawn_unit' effect",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'can_use_gui' to CB types",
+                            "children": []
+                        },
+                        {
+                            "text": "Added liege_prestige, allowing buildings to give prestige to its owner and his/her liege",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 1.103",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 1.103 was released on 2013-07-04."
+                }
+            ]
+        },
+        {
+            "heading": "Interface",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed incorrect AI reasoning text string \"X is my lover \"",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a tooltip bug in the effect 'gender_succ'",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrected some text bugs",
+                            "children": []
+                        },
+                        {
+                            "text": "It is no longer possible to start building Theodosian walls outside of Constantinople",
+                            "children": []
+                        },
+                        {
+                            "text": "Wikipedia links should now work on Linux",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Gameplay",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Changed the way levies reinforce (to fix a rounding bug.) This will overall reduce levy reinforcement rates a bit.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tech spread no longer gets stuck at 5",
+                            "children": []
+                        },
+                        {
+                            "text": "Patricians with no landed holdings now correctly get some random courtiers (which they can, for example, marry)",
+                            "children": []
+                        },
+                        {
+                            "text": "Euboia is no longer \"Ocean\" terrain",
+                            "children": []
+                        },
+                        {
+                            "text": "Westfriesland is no longer \"Ocean\" terrain",
+                            "children": []
+                        },
+                        {
+                            "text": "You can no longer become a truce breaker from failed imprisonments or title revokations, or wars from events, plots or factions",
+                            "children": []
+                        },
+                        {
+                            "text": "867: Gave Almos, the ruler of the Magyars, and his son Arpad scripted traits",
+                            "children": []
+                        },
+                        {
+                            "text": "867: Slightly strengthened the initial Magyar army",
+                            "children": []
+                        },
+                        {
+                            "text": "Kingdoms with a king can now also de jure drift into empires",
+                            "children": []
+                        },
+                        {
+                            "text": "Independent kingdoms can no longer drift out of their de jure empires",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Zoroastrian Crusade target weights to appropriate titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Human played vassals of the Magyars now get to keep their Ukrainian lands when Hungary forms",
+                            "children": []
+                        },
+                        {
+                            "text": "Added level three Castle Fortifications to Constantinople",
+                            "children": []
+                        },
+                        {
+                            "text": "Boosted the heavy infantry morale bonus given by the Aztec Jaguar Warrior Lodge",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash with deleted characters in a title's previous holder list",
+                            "children": []
+                        },
+                        {
+                            "text": "The Seljuks now appear a bit further south, in Dashhowuz rather than Kyzylorda",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where creating a kingdom or empire would not always initialize Crown Laws correctly",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed raised armies being counted twice for max troops calculations used by some interfaces and some AI calculations",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with save game corruption after loading a game and saving before unpausing",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "AI",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed a bug where patrician AI would go braindead for a long time after resign/reload",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue where, in many cases, under Gavelkind the AI would not create a second duchy even to form a kingdom",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug in the diplo AI where it would consider other lowborn characters to be its own dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaked cross-religion Pagan marriage acceptance",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

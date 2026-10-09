@@ -1,0 +1,200 @@
+{
+    "pageid": 2886,
+    "title": "Law modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": []
+        },
+        {
+            "heading": "Demesne laws",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Demesne laws are declared inside a block laws = { } and shown in the Laws view."
+                }
+            ]
+        },
+        {
+            "heading": "Structure",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Localization",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "law_name : name of the law",
+                            "children": []
+                        },
+                        {
+                            "text": "law_name _option: short name of the law displayed on laws screen buttons",
+                            "children": []
+                        },
+                        {
+                            "text": "law_name _desc: tooltip for law selection button",
+                            "children": []
+                        },
+                        {
+                            "text": "group_name : label for the laws group",
+                            "children": []
+                        },
+                        {
+                            "text": "group_name _desc: tooltip for the laws group",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "De jure laws",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "De jure laws (or crown laws) are declared inside a block de_jure_laws = { } and shown in the Laws view."
+                }
+            ]
+        },
+        {
+            "heading": "Structure",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Localization",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "law_name : name of the law",
+                            "children": []
+                        },
+                        {
+                            "text": "law_name _option: short name of the law displayed on laws screen buttons",
+                            "children": []
+                        },
+                        {
+                            "text": "law_name _desc: tooltip for law selection button",
+                            "children": []
+                        },
+                        {
+                            "text": "group_name : label for the laws group",
+                            "children": []
+                        },
+                        {
+                            "text": "group_name _desc: tooltip for the laws group",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Limitations",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There may be an undocumented engine limitation which means that Crown Laws are non-functional for tribal/nomadic kings/emperors ."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Crown Laws are disabled for all tribal and nomadic rulers in the base game and, if they are re-enabled via mods, they do not seem to work properly. Specifically, Crown Laws passed by a tribal liege are not enforced on their tribal vassals. [1]",
+                            "children": []
+                        },
+                        {
+                            "text": "Nomads were not tested, but they are expected to be broken for the same reason.",
+                            "children": []
+                        },
+                        {
+                            "text": "Speculation: The devs disabled Crown Laws for all tribal and nomadic rulers partly because they don't work .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Succession laws",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Succession laws are declared inside a block succession_laws = { } or gender_laws = { } , and are shown in the Laws view."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The actual succession mechanics are hardcoded inside the succession and gender_succ commands, and are not moddable beyond weights exported to Defines ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "On game start, each title will get a default succession and gender law, if not specified in history files:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "For succession laws, they are evaluated in the following order: Turkish/Open Succession, Gavelkind, Seniority, Primogeniture, Feudal Elective, Tanistry, Open Elective, Catholic Bishopric Investiture, Patrician Elective, Ultimogeniture, Papal Succession, Appointment (titles revert to liege on death), Elective Gavelkind, Nomad Succession, and Confucian Bureaucracy (replaced by a random character with China's culture and high stewardship). The first one to match the potential block will apply.  If none of them are available, the default will be Gavelkind.  Default succession law can also be implemented by events (for example, the events to make Eldership default for the pagans that use it).",
+                            "children": []
+                        },
+                        {
+                            "text": "For gender laws, it is determined by the \"default_selection\" block within the law definition.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Structure",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Localization",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "succession_name : name of the succession law",
+                            "children": []
+                        },
+                        {
+                            "text": "succession_name _desc: tooltip",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ forumpost:29615950",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

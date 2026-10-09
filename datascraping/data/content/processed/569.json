@@ -1,0 +1,305 @@
+{
+    "pageid": 569,
+    "title": "CK2 To EU3 Converter",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This converter will allow you to take a game from the end of CK2 and convert it into a playable EU3 save, continuing your game. It should be compatible with the EU3 to Vic2 converter."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "While there are released versions of the converter, they do not yet produce a playable EU3 game."
+                }
+            ]
+        },
+        {
+            "heading": "Features",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Basic conversion of independent CK2 titles to EU3 countries.",
+                            "children": []
+                        },
+                        {
+                            "text": "Basic conversion of owned territory.",
+                            "children": []
+                        },
+                        {
+                            "text": "Conversion of rulers, heirs, and advisers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Conversion of province economy: trade goods, base tax, manpower, population.",
+                            "children": []
+                        },
+                        {
+                            "text": "Conversion of province culture and religion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Conversion of country cultures and religion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Conversion of governments.",
+                            "children": []
+                        },
+                        {
+                            "text": "Conversion of technology.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Frequently Asked Questions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Q: Will this work with CK2 mod X or EU3 mod Y? A: Maybe. We aren't developing the converter with mods in mind, so few will likely work out of the box. However, much of the raw data is pulled from the game installations or our rule files, so it could be adapted for many mods. Any of this work will be left to the creators or the fans of those mods, though we will gladly provide guidance."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Q: Why do most of the country names turn out funny?! A: There simply aren't enough nations in EU3 to cover all the potential nations that might exist by the end of a CK2 game. Short of making an EU3 that includes over 1000 new nations, there's nothing much to do but assign a CK2 nation an unused EU3 nation. Nations that have direct EU3 versions will convert correctly (So England should become England, France should become France and so on). While we will be improving the converter so that you will at least gain a nation of the correct culture or region, this issue will probably never be completely solved. Fear not, as all gameplay-relevant values will be converted correctly (names are largely cosmetic)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Q: The converter didn't work. What's wrong? A: The converter is a work in progress, so there's a good chance you found a bug. Please post about it on the forums. Include a description of what did or didn't happen, the versions of CK2 and EU3 you are running, the information in log.txt (copy and paste it, but wrap it in [ code ] [ /code ] tags), and if possible, a link to the save you're trying to convert. These will help us determine what happened."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Q: I'm getting an error that says \"Too many CK2 nations\". What's wrong? A: There are fewer EU3 tags available than there are CK2 titles. In this case, your save has more independent titles than there are available tags. That means there's no way for us to map countries properly, and we can't convert. While long-term we may be able to ease this a little, this will be a possibility even when the converter is complete. If it's not 1453 yet in your save, try playing for longer in the hope nations consolidate a bit more."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Q: The converter can't open 'adjacencies.bin'. What do I do? A: Regenerate your map cache."
+                }
+            ]
+        },
+        {
+            "heading": "Credits",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Idhrendur\t- Programming DasGuntLord01\t- Analysis, Data Files dtremenak\t- Analysis, Tools Puking Panda\t- Analysis GreyHuge\t- Tools tamius23\t- Data Files rho\t\t- Data Files"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "AND ALL THE OTHERS WHO GAVE THEIR INPUT ON THE FORUM."
+                }
+            ]
+        },
+        {
+            "heading": "Change Log",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Version 0.5",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Country religion converted.",
+                            "children": []
+                        },
+                        {
+                            "text": "Country primary culture converted.",
+                            "children": []
+                        },
+                        {
+                            "text": "Country accepted cultures converted.",
+                            "children": []
+                        },
+                        {
+                            "text": "Capitals converted.",
+                            "children": []
+                        },
+                        {
+                            "text": "Governments converted.",
+                            "children": []
+                        },
+                        {
+                            "text": "Remove redundant titles (should allow better country mapping, and fewer 'too many titles' errors).",
+                            "children": []
+                        },
+                        {
+                            "text": "Tech group converted.",
+                            "children": []
+                        },
+                        {
+                            "text": "Stability converted.",
+                            "children": []
+                        },
+                        {
+                            "text": "Daimyos imported.",
+                            "children": []
+                        },
+                        {
+                            "text": "Estimate income.",
+                            "children": []
+                        },
+                        {
+                            "text": "Convert tech.",
+                            "children": []
+                        },
+                        {
+                            "text": "Economy conversion options default to historical.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 0.4",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Now supports up to versions 1.06b, while retaining support for older versions.",
+                            "children": []
+                        },
+                        {
+                            "text": "More countries get correctly mapped.",
+                            "children": []
+                        },
+                        {
+                            "text": "Province cultures set.",
+                            "children": []
+                        },
+                        {
+                            "text": "Province religions set.",
+                            "children": []
+                        },
+                        {
+                            "text": "Province capital city names set.",
+                            "children": []
+                        },
+                        {
+                            "text": "Population converted.",
+                            "children": []
+                        },
+                        {
+                            "text": "Manpower converted.",
+                            "children": []
+                        },
+                        {
+                            "text": "Trade goods imported.",
+                            "children": []
+                        },
+                        {
+                            "text": "Base tax converted.",
+                            "children": []
+                        },
+                        {
+                            "text": "Can set EU3 options in configuration.txt.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tons of options for conversion of population, manpower, and base tax.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 0.3",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Rulers converted.",
+                            "children": []
+                        },
+                        {
+                            "text": "Heirs converted.",
+                            "children": []
+                        },
+                        {
+                            "text": "Advisers converted.",
+                            "children": []
+                        },
+                        {
+                            "text": "Regents converted.",
+                            "children": []
+                        },
+                        {
+                            "text": "All provinces mapped.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 0.2",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Countries mapped to independent titles.",
+                            "children": []
+                        },
+                        {
+                            "text": "European province ownership converts.",
+                            "children": []
+                        },
+                        {
+                            "text": "Basic (configurable) HRE conversion.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 0.1",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Outputs a minimal functional save.",
+                            "children": []
+                        },
+                        {
+                            "text": "Rest of the world (ROTW) province ownership.",
+                            "children": []
+                        },
+                        {
+                            "text": "Start date synced to CK2 end date.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

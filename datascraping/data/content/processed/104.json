@@ -1,0 +1,1224 @@
+{
+    "pageid": 104,
+    "title": "Vassals",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Under the Feudalism system depicted in Crusader Kings II, rulers grant parts of their personal property (their demesne ) to vassals in exchange for a cut of their taxes and levies . A vassal's direct ruler is called their liege. In Crusader Kings II, every vassal can only have 1 liege."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The feudal system is a type of decentralization which makes ruling easier at the expense of personal power. Vassals can in turn distribute lands to vassals of their own, which is called subinfeudation . In return for their vassals' loyalty, the liege provides protection from external hostile forces."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In CKII , a vassal meeting their duties depends largely on their opinion towards their liege. The lower it is, the fewer taxes and levies a vassal will provide. If relations deteriorate enough, the vassal might plot against their liege or join a faction to work with others in order to undermine or depose their liege."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that when a vassal inherits a title from outside his liege's realm which is higher ranked than his current one(s), the higher ranked title becomes his new primary title ; this means that he'll cease to be a vassal of his (now former) liege. This is not the case if the liege grants the vassal the higher ranked title or if the vassal obtains the title via conquest, unless the title is of the same rank as or higher than the liege's primary title."
+                }
+            ]
+        },
+        {
+            "heading": "Tiers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There are five ranks or tiers of titles . Rulers can only be vassals to a single higher-tier liege. The tiers are as follows from lowest to highest, with their respective portrait and coat of arms frames:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Character Title",
+                            "",
+                            "Land Tier",
+                            "Description"
+                        ],
+                        [
+                            "",
+                            "Baron",
+                            "",
+                            "Holding",
+                            "A baron/baroness owns a holding (also called a Barony ), the smallest land unit in the game. Holdings can be castles , cities , temples , tribes or nomadic capitals . Barons (other than Patricians ) are not playable , and their simulation is simplified to improve game performance. They cannot appoint councillors and cannot create factions . The Baron portrait is identified by a bronze ring, curled by a coloured ribbon. (Colour depends on government type )"
+                        ],
+                        [
+                            "",
+                            "Count",
+                            "",
+                            "Province",
+                            "A count/countess governs a province (also called a County ), which is the smallest land area visible on the map. A count always owns the capital holding of a province (usually a castle ). They are also the de jure (\"rightful\"), and usually the de facto (\"in fact\"), liege of other barons within the same province. A character must at least be a count before they can be granted higher-tier titles. The count portrait is identified by a silver ring, curled by a coloured ribbon."
+                        ],
+                        [
+                            "",
+                            "Duke",
+                            "",
+                            "Duchy",
+                            "A duke/duchess manages a Duchy . Dukes (and above) start generating passive technology points. Vassals have to be at least dukes in order to benefit from the bonus to levies at their capital county (+15%). A duke who owns more than one duchy is called a grand duke, which grants a +1 bonus to their demesne limit . The duke portrait is identified by a jeweled silver ring, curled by a coloured ribbon."
+                        ],
+                        [
+                            "",
+                            "King",
+                            "",
+                            "Kingdom",
+                            "A king/queen controls a Kingdom . Kings and emperors may define realm laws in their demesne . It is required to control a minimum of 2 duchies to create a de jure kingdom. The king portrait is identified by a golden ring, curled by a coloured ribbon."
+                        ],
+                        [
+                            "",
+                            "Emperor",
+                            "",
+                            "Empire",
+                            "An emperor/empress rules over an Empire and may vassalize kings (usually through force). Proper administration of a large empire tends to become a complex task due to the micromanagement required. The emperor portrait is identified by a jeweled golden ring, curled by a coloured ribbon."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Barons (other than Patricians ) are not playable , and their simulation is simplified to improve game performance. They cannot appoint councillors and cannot create factions . The Baron portrait is identified by a bronze ring, curled by a coloured ribbon. (Colour depends on government type )"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A count always owns the capital holding of a province (usually a castle ). They are also the de jure (\"rightful\"), and usually the de facto (\"in fact\"), liege of other barons within the same province. A character must at least be a count before they can be granted higher-tier titles. The count portrait is identified by a silver ring, curled by a coloured ribbon."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Vassals have to be at least dukes in order to benefit from the bonus to levies at their capital county (+15%). A duke who owns more than one duchy is called a grand duke, which grants a +1 bonus to their demesne limit . The duke portrait is identified by a jeweled silver ring, curled by a coloured ribbon."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is required to control a minimum of 2 duchies to create a de jure kingdom. The king portrait is identified by a golden ring, curled by a coloured ribbon."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Proper administration of a large empire tends to become a complex task due to the micromanagement required. The emperor portrait is identified by a jeweled golden ring, curled by a coloured ribbon."
+                }
+            ]
+        },
+        {
+            "heading": "Direct vassal limits",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Every ruler of the rank of duke and above should recognise that they cannot have too many direct vassals (of at least the rank of count ; barons are not counted towards that limit). Having too many direct vassals will incur various penalties (mainly to liege taxes and levies), and some vassals may become independent upon succession ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The limit encourages rulers to consolidate their vassals if their realms are large. Empires that expand beyond their de jure territory are likely to require vassal kings . The following do not count towards the vassal limit:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Tribal vassals don't count towards their non-tribal liege's vassal limit, however it should be noted that AI vassals will adopt feudalism quickly if they share their liege's religion and culture .",
+                            "children": []
+                        },
+                        {
+                            "text": "Nomadic vassals do not count towards their liege's vassal limit.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The direct vassal limit is affected by:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Base number (1) x ruler rank bonus (if the Conclave Expansion is active):",
+                            "children": [
+                                {
+                                    "text": "Duke = base x 8.0; (10 without Conclave)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "King = base x 15.0; (20 without Conclave)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Emperor = base x 20.0. (30 without Conclave)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "+3 bonus for being a great duke (dukes owning two or more duchy titles and not owning a kingdom-tier title)",
+                            "children": []
+                        },
+                        {
+                            "text": "+ Ruler diplomacy bonus = 30% of (ruler's diplomacy + 1/2 of spouse's diplomacy)",
+                            "children": []
+                        },
+                        {
+                            "text": "Laws:",
+                            "children": [
+                                {
+                                    "text": "+2 for each council law in favor of the council beyond the first one - called \"Council Power\" (requires the Conclave DLC); (max +14 for feudal realms, +12 for other government types).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "From +10 to -10 for each level of Centralization law, in exchange for +0 to +4 demesne limit ; nomads do not have this law;",
+                                    "children": []
+                                },
+                                {
+                                    "text": "+25 for \"Imperial Administration\" law. However, as \"Imperial Administration\" automatically enacts duchy viceroyalties, the net vassal limit increase is +15 ;",
+                                    "children": []
+                                },
+                                {
+                                    "text": "-5 for each level of Viceroyalty law (requires the Charlemagne DLC).",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "+10 for having Chinese Imperial government",
+                            "children": []
+                        },
+                        {
+                            "text": "-10 for having tribal or nomadic government",
+                            "children": []
+                        },
+                        {
+                            "text": "+20 for having Princely elective succession (exclusive to the HRE)",
+                            "children": []
+                        },
+                        {
+                            "text": "-1% for each 4% of decadence",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Taxes",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If non-nomadic vassals have a positive relation with their liege, they will pay taxes, but the amount of income they provide is mainly dependent on two factors:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "The income from holdings they own (which can be boosted by constructing buildings )",
+                            "children": []
+                        },
+                        {
+                            "text": "Their liege's tax laws which determine the percentage of income vassals have to pay. This law can be set differently for the nobility, clergy and burghers.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If Conclave DLC is enabled, the ruler may shift the focus of vassal obligations (under realm laws tab), trading off levies for taxes, instead of opinion for more income. The resulting opinion penalties (or bonuses) for changing tax law is temporary."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Otherwise, if Conclave is disabled, the liege is allowed to set tax laws (under demesne law tab) in exchange for permanent bad opinion - i.e., the higher you tax, the lower your vassals' opinion of you.  Therefore, a balance must be struck between the two."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Nomads do not pay taxes to their liege. Similarly, tribal vassals do not pay taxes to their tribal liege, unless their tribal liege is a vassal of a ruler following a non-tribal government."
+                }
+            ]
+        },
+        {
+            "heading": "Levies",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Non-nomadic and some tribal vassals (without Conclave) have a legal obligation to provide a minimum number of troops to their liege based on the laws of the land and their own manpower."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If Conclave is enabled, both minimum and maximum numbers of levies provided by vassals are set by realm laws . So, the ruler may shift the focus of vassal obligations, trading off taxes for increased levies - set separately for nobles, clerics and burghers."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Nobles prefer paying more taxes to sending troops, meanwhile burghers would prefer to provide more soldiers. Unfortunately, the liege tends to desire the opposite. The resulting opinion penalties (or bonuses) for changing tax law is temporary."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If is disabled, vassals may provide troops depending on:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Minimum numbers are set by crown laws",
+                            "children": []
+                        },
+                        {
+                            "text": "The liege's levy laws which establish maximum numbers of troops (under demesne laws tab)",
+                            "children": []
+                        },
+                        {
+                            "text": "Their opinion towards their liege.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Whichever of crown laws minimum or levy laws maximum is higher, it will determine the number of levies provided. Because relations determine both levy size and a vassal's chance of rebellion, an unpopular liege is in a lot of danger. They risk a situation whereby part of their realm rebels, while the rest of it provides very few troops to counter the rebellion."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Nomadic vassals do not provide levies to their liege. Instead, they are called into wars as allies. Tribal vassals do not provide levies to tribal lieges under certain conditions; tribal rulers call their tribal vassals into wars as allies, if they do not have Medium Tribal Organization (or above) and is not activated. With , independent tribal rulers always call their tribal vassals into wars as allies."
+                }
+            ]
+        },
+        {
+            "heading": "Rebellion",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Vassals will not always like their liege. As described above, this hurts the liege both economically and militarily, but there's one final aspect to the vassal-liege relationship: the vassal attempting to overthrow their liege."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If a vassal is pushed too far, or they're simply too ambitious , they will rise in rebellion against the liege, and forcefully attempt to gain what they want.  To do this, vassals join factions which pursue goals ranging from independence to lowering crown authority to pushing a pretender's claim or instituting a new succession law.  As disaffected vassals join a faction, the power of the faction (measured in their army size vs liege's army size) increases.  When it gets powerful enough, the faction leader has a decision to send their liege an ultimatum, a letter with the faction's demands.  If the liege does not comply, war breaks out, and all faction members join the revolt against their liege."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Because vassals can only rebel against their direct liege, rulers need not be worried about the opinions of vassals under their direct vassals."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The faction a vassal will seek to join depends on a number of factors. Characters of the same culture and religion holding de jure territory make the most loyal vassals."
+                }
+            ]
+        },
+        {
+            "heading": "Estates of the realm",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The estates of the realm depict the most important social classes of the Middle Ages - spanning from Christian Europe to the lands of India. During this timeframe, it was difficult for a person to move from a social class to another; this is also the case in Crusader Kings II."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In the game, they are depicted as the three estates:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The clergy (First Estate), made up of religious heads, clerics, monks, nuns, priest(esses) and initiates.",
+                            "children": []
+                        },
+                        {
+                            "text": "The nobility (Second Estate), composed of landowners, their families, heirs and relatives - known as a dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "The commoners (Third Estate), made up of bandits, farmers, servants, craftsmen and merchants.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In India, characters are divided into three castes (or varnas ) which correspond to the estates, as follows: Brahmins (the clergy), Kshatriyas (nobles) and Vaishyas (commoners). Castes are marked in-game by traits, and the Rajas of India DLC is required in order to play as a Dharmic character."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "As for playable characters in CKII , up to the Jade Dragon DLC, all noble rulers above baron rank (or equivalent) are playable. However, AI characters may hold all clergy and burgher titles above baronies. If a player eventually controls a baron ruler, or a cleric/burgher, it will result in instant game over ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The only exception (requiring The Republic DLC) is a specific type of ruler: burghers of duke rank or above with a coastal capital, who are grand mayors of merchant republics with four other patrician families as their vassals. These five families are always contesting the title of grand mayor (or equivalent) of their merchant republic."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A character's gameplay is dependant on the religion they follow, their culture , and their government type. Therefore, actual titles of landed characters may adopt different names, according to a combination of those factors. Nevertheless, two titles which match the same rank grant similar privileges no matter the name. E.g., a duke and an emir are both acknowledged as duchy titles."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The definition of alternative names is set in the following priority order:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Religion group",
+                            "children": []
+                        },
+                        {
+                            "text": "Religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Government",
+                            "children": []
+                        },
+                        {
+                            "text": "Culture group",
+                            "children": []
+                        },
+                        {
+                            "text": "Culture .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If no specific factor type is found, then the default name (traced from the Christian Western Europe tradition) is used. Note that cultural and religious-based titles are based on the top liege's culture and religion, not the vassal's."
+                }
+            ]
+        },
+        {
+            "heading": "Nobles",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Nobles normally rule over castles . They are characters associated with land acquisition via conquest or shrewd court manipulation."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "In the feudal system, rulers of count-tier or higher are members of the nobility; they share a dynasty of successive descendants",
+                            "children": []
+                        },
+                        {
+                            "text": "In the Islamic world (requires the Sword of Islam DLC), Iqta nobles are allowed to rule over castles , as well as temples with no penalties",
+                            "children": []
+                        },
+                        {
+                            "text": "Tribal nobles can only rule over tribes and benefit from empty holding slots, apart from the capital. They are known for their raiders and may adopt feudalism or found a merchant republic . The Old Gods or Holy Fury DLC is required to play as a Pagan tribal ruler",
+                            "children": []
+                        },
+                        {
+                            "text": "Nomads are nobles who settle a single nomadic capital holding, and keep all other holdings empty to strengthen their hordes. As they manage their clans and ride freely over the Eurasian steppes, nomads are feared for their constant pillages, and they're allowed to move their capital more frequently (and carry along all buildings within it). The Horse Lords DLC is required in order to play as a nomad ruler.",
+                            "children": []
+                        },
+                        {
+                            "text": "In India, Dharmic nobles are composed of Kshatriyas . The Rajas of India DLC is required in order to play as a Hindu character.",
+                            "children": []
+                        },
+                        {
+                            "text": "In the Tibetan plateau, Monastic Feudal nobles are allowed to rule over castles , as well as temples with no penalties. Playing as a Bön non-nomad requires either the Old Gods or Jade Dragon DLC.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factor",
+                            "Key",
+                            "Barony",
+                            "County",
+                            "Duchy",
+                            "Kingdom",
+                            "Empire"
+                        ],
+                        [
+                            "Default",
+                            "",
+                            "Baron / Baroness",
+                            "Count / Countess",
+                            "Duke / Duchess",
+                            "King / Queen",
+                            "Emperor / Empress"
+                        ],
+                        [
+                            "Religion group",
+                            "Pagan",
+                            "Hetman",
+                            "Chief / Chieftess",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "(Reformed) Baltic",
+                            "",
+                            "",
+                            "High Chief / High Chieftess",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "(Reformed) Germanic",
+                            "Þegn",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "(Reformed) Slavic",
+                            "",
+                            "",
+                            "High Chief / High Chieftess",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "(Reformed) Suomenusko",
+                            "",
+                            "",
+                            "High Chief / High Chieftess",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "(Reformed) Tengri",
+                            "",
+                            "",
+                            "High Chief / High Chieftess",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Government type",
+                            "Monastic Feudal",
+                            "(missing)",
+                            "Ngapo / Ngamo",
+                            "Thupo / Thumo",
+                            "Gyalpo / Gyelmo",
+                            "Tsenpo / Tsepang"
+                        ],
+                        [
+                            "Government type",
+                            "Tribal",
+                            "",
+                            "Chief",
+                            "High Chief / High Chieftess",
+                            ""
+                        ],
+                        [
+                            "Government type, Culture",
+                            "Tribal, Saxon",
+                            "",
+                            "",
+                            "",
+                            "Grand Chief / Grand Chieftess",
+                            ""
+                        ],
+                        [
+                            "Culture group",
+                            "Altaic",
+                            "",
+                            "",
+                            "",
+                            "Khan / Khanum",
+                            "Khagan / Khatun"
+                        ],
+                        [
+                            "Culture group",
+                            "Arabic",
+                            "Wâli / Wâlia",
+                            "Sheikh / Shaykhah",
+                            "Emir / Emira",
+                            "Sultan / Sultana",
+                            ""
+                        ],
+                        [
+                            "Culture group",
+                            "Celtic",
+                            "",
+                            "",
+                            "Petty King / Queen (if independent)",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Culture group",
+                            "Dravidian / Indo-Aryan",
+                            "Damapati / Damapatni",
+                            "Thakur / Thakurani",
+                            "Raja / Rani",
+                            "Maharaja / Maharani",
+                            "Samrat / Samrajni"
+                        ],
+                        [
+                            "Culture group",
+                            "East African",
+                            "",
+                            "",
+                            "Petty King / Queen (if independent)",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Culture group",
+                            "Iranian",
+                            "Argbadh / Wâlia",
+                            "Marzoban / Shaykhah",
+                            "Satrap / Emira",
+                            "Shah / Banebshen",
+                            "Shahanshah"
+                        ],
+                        [
+                            "Culture group",
+                            "North Germanic",
+                            "",
+                            "",
+                            "Petty King / Queen (if independent)",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Culture group",
+                            "West African",
+                            "Wâli",
+                            "Farin / Farina",
+                            "Farbas / Farba",
+                            "Mansa / Sultana",
+                            ""
+                        ],
+                        [
+                            "Culture group",
+                            "West Germanic",
+                            "",
+                            "",
+                            "Petty King / Queen (if independent)",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Culture",
+                            "English / Saxon / Irish / Pictish / Scottish",
+                            "",
+                            "Earl",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Culture",
+                            "German",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "Kaiser / Kaiserin"
+                        ],
+                        [
+                            "Culture",
+                            "Greek",
+                            "",
+                            "",
+                            "Doux",
+                            "Despot",
+                            "Basileus / Basilissa"
+                        ],
+                        [
+                            "Culture",
+                            "Mongol",
+                            "Taishi",
+                            "Chief",
+                            "High Chief / High Chieftess",
+                            "Khan / Khanum",
+                            ""
+                        ],
+                        [
+                            "Culture",
+                            "Nahuatl",
+                            "Teuctli / Teuctli",
+                            "Calpixqui / Calpixqui",
+                            "Huecalpixqui / Huecalpixqui",
+                            "Tlatoani / Tlatoani",
+                            "Huetlatoani / Huetlatoani"
+                        ],
+                        [
+                            "Culture",
+                            "Norse",
+                            "Þegn",
+                            "",
+                            "Jarl",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Culture",
+                            "Roman",
+                            "Legatus / Legata",
+                            "Comes",
+                            "Doux",
+                            "Rex / Regina",
+                            "Augustus / Augusta"
+                        ],
+                        [
+                            "Culture",
+                            "Russian",
+                            "",
+                            "",
+                            "Grand Prince / Grand Princess",
+                            "",
+                            "Tsar / Tsaritsa"
+                        ],
+                        [
+                            "Culture",
+                            "Turkish",
+                            "Timariot / Timariota",
+                            "Bey / Bayan",
+                            "Beylerbey / Beylerbayan",
+                            "Sultan / Sultana",
+                            "Padishah"
+                        ],
+                        [
+                            "Status",
+                            "Viceroyalty",
+                            "Baron Viceroy / Baron Vicereine (Cannot Exist)",
+                            "Count Viceroy / Count Vicereine (Cannot Exist)",
+                            "Minor Viceroy / Minor Vicereine",
+                            "Viceroy / Vicereine",
+                            "Grand Viceroy / Grand Vicereine (Cannot Exist)"
+                        ],
+                        [
+                            "Status, Culture",
+                            "Viceroyalty, Byzantine Culture Group",
+                            "",
+                            "",
+                            "Strategos / Strategitissa",
+                            "Exarch / Exarchessa",
+                            "Grand Exarch (Cannot Exist)"
+                        ],
+                        [
+                            "Status, Culture",
+                            "Viceroyalty, Roman",
+                            "",
+                            "",
+                            "Governor / Governess",
+                            "Proconsul / Proconsula",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: The primary spouse of a ruler gets a minor title of \"ruler consort\", allowing them to use the gender-appropriate form of their spouse's ruler title. E.g., the wife of a sultan is called a \"sultana.\" Similarly, \"queen mother\" and variants are available to the wives of deceased kings and emperors."
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Clerics",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Clerics are members of the clergy and usually rule over temple holdings. Those characters are often associated with conversion , dealing with the Pope (if Catholic) or Patriarchs (if Orthodox), reforming religions (if Pagan), becoming one of the Caliphs , restoring priesthoods, fighting heresies , or managing the Hindu caste system."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Note that due to the melded status of church and state within the Muslim world, any Islamic character owning a mosque title while being of count rank or higher will simply be referred to as their noble counterpart. As such, while the titles mullah, ayatollah, grand ayatollah and grand mufti are defined in the files, they will not appear in the game. (accurate as of Monks and Mystics DLC). Also, note that since Sword of Islam DLC, the caliph is no longer an emperor- or king-tier title, but a duke-tier title",
+                            "children": []
+                        },
+                        {
+                            "text": "Pagan female clerics are allowed to rule over temple holdings, except for Aztecs, Tengri and Zunists. It is possible to reform a Pagan faith, as long as enough holy sites are controlled. The Old Gods or Holy Fury DLC must be active to play as a Pagan non-nomadic ruler.",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters who follow Judaism (requires Sons of Abraham DLC) or Zoroastrianism (requires The Old Gods DLC) are needed to control completely the Kingdom of Israel and the Persian Empire , respectively, to restore their priesthoods and reinstate their religious heads",
+                            "children": []
+                        },
+                        {
+                            "text": "In nomadic lands , it is common for a liege's vassals to follow different religions. Therefore, they cannot demand religious conversion or freely-revoke land from infidels. Nomads can also reform their religion, if they are Pagans . The Horse Lords DLC is required in order to play as nomads.",
+                            "children": []
+                        },
+                        {
+                            "text": "In India, Dharmic clerics are composed of Brahmins. The Rajas of India DLC is required in order to play as a Hindu character.",
+                            "children": []
+                        },
+                        {
+                            "text": "In the Tibetan plateau, characters tend to follow Buddhism , Bön or Taoism . Playing as a Buddhist non-nomad character requires the Rajas of India DLC; Bön characters require either the The Old Gods or Jade Dragon DLC; Taoists require either Rajas of India or Jade Dragon DLC.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factor",
+                            "Key",
+                            "Barony",
+                            "County",
+                            "Duchy",
+                            "Kingdom",
+                            "Empire"
+                        ],
+                        [
+                            "Religion group",
+                            "Christian",
+                            "Bishop",
+                            "Prince-Bishop",
+                            "Prince-Archbishop",
+                            "King-Bishop",
+                            "Emperor-Bishop"
+                        ],
+                        [
+                            "Religion group",
+                            "Jewish",
+                            "Rabbi",
+                            "Kohen",
+                            "Rabban",
+                            "Nasi",
+                            ""
+                        ],
+                        [
+                            "Religion group",
+                            "Muslim",
+                            "",
+                            "",
+                            "Caliph (post- Sword of Islam )",
+                            "Caliph (pre- Sword of Islam )",
+                            ""
+                        ],
+                        [
+                            "Religion group",
+                            "Pagan",
+                            "Priest / Priestess",
+                            "High Priest",
+                            "Archpriest / Archpriestess",
+                            "King-Priest / Queen-Priestess",
+                            "Emperor (both sexes)"
+                        ],
+                        [
+                            "Religion",
+                            "(Reformed) Aztec",
+                            "Shaman",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "(Reformed) Romuva",
+                            "Shaman",
+                            "",
+                            "",
+                            "Witch-King / Witch-Queen",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "Bön",
+                            "Lama / Priestess",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "Buddhist",
+                            "Bhikkhu / Bhikshuni",
+                            "Bhikkhu / Bhikshuni",
+                            "Bhikkhu / Bhikshuni",
+                            "Bhikkhu / Bhikshuni",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "(Reformed) Germanic",
+                            "Godi / Gydja",
+                            "Seidsman / Vala",
+                            "Fylkir (Reformed only, unique)",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "Hellenic",
+                            "Flamen / Vestal",
+                            "High Auger / High vestal",
+                            "Pontifex",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "Hindu",
+                            "Pujari",
+                            "Pujari",
+                            "Pujari",
+                            "Pujari",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "Jain",
+                            "Nirgrantha",
+                            "Nirgrantha",
+                            "Nirgrantha",
+                            "Nirgrantha",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "Manichean / Mazdaki",
+                            "Vahram",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "Orthodox",
+                            "",
+                            "Metropolitan",
+                            "Prince-Archbishop",
+                            "King-Bishop",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "Shia",
+                            "Mullah",
+                            "Ayatollah",
+                            "Grand Ayatollah",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "Slavic (unreformed only)",
+                            "",
+                            "",
+                            "",
+                            "Witch-King",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "(Reformed) Slavic",
+                            "Shaman",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "Sunni",
+                            "Mufti",
+                            "Sheikh",
+                            "Grand Mufti",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "(Reformed) Suomenusko",
+                            "Shaman",
+                            "",
+                            "",
+                            "Witch-King",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "(Reformed) Tengri",
+                            "Shaman",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "(Reformed) West African",
+                            "Priest / Priestess",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "Zoroastrian",
+                            "Herbad",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Religion",
+                            "(Reformed) Zunist",
+                            "Sun Guardian",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Burghers",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Burghers represent the common people and normally rule over city holdings. Burghers are responsible for a large part of the world's economy, as they control the largest source of money in the game - cities. They push no claims, unlike nobles , and are relatively isolationist."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "They usually don't have much of an effect upon politics at large, except for duke-tier (or higher) burghers owning a coastal capital, because they become patricians - the rulers of merchant republics . There are usualy five patrician families campaigning for election victory in order to become the republican liege. The Republic DLC is required in order to play as a patrician .",
+                            "children": []
+                        },
+                        {
+                            "text": "Patricians are allowed to rule over cities and castles",
+                            "children": []
+                        },
+                        {
+                            "text": "Muslim patricians (requires Sword of Islam Expansion) cannot control temple holdings freely, but are unaffected by decadence , and are allowed to marry several wives",
+                            "children": []
+                        },
+                        {
+                            "text": "Nomad (requires the Horse Lords DLC) or tribal rulers may choose to found a merchant republic , as long as they follow an organized (or reformed) religion , and then settle down",
+                            "children": []
+                        },
+                        {
+                            "text": "In Dharmic societies, Hindu burghers are composed of Vaishyas. The Rajas of India DLC is required in order to play as a Hindu character.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factor",
+                            "Key",
+                            "Barony",
+                            "County",
+                            "Duchy",
+                            "Kingdom",
+                            "Empire"
+                        ],
+                        [
+                            "Default",
+                            "",
+                            "Mayor or Patrician",
+                            "Lord Mayor",
+                            "Grand Mayor",
+                            "Prince Mayor",
+                            "Grand Prince"
+                        ],
+                        [
+                            "Religion group",
+                            "Muslim",
+                            "",
+                            "Wali",
+                            "Wali-Emir",
+                            "Wali-Malik",
+                            ""
+                        ],
+                        [
+                            "Culture group",
+                            "Byzantine or Latin",
+                            "",
+                            "",
+                            "Doge",
+                            "Serene Doge",
+                            ""
+                        ],
+                        [
+                            "Culture",
+                            "Roman",
+                            "Magister",
+                            "Praefect",
+                            "Tribune",
+                            "Consul",
+                            "Princeps"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The alternative names for patrician lands in merchant republics are:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factor",
+                            "Key",
+                            "Barony",
+                            "County",
+                            "Duchy",
+                            "Kingdom",
+                            "Empire"
+                        ],
+                        [
+                            "Default",
+                            "",
+                            "Palace",
+                            "City",
+                            "Republic",
+                            "Most Serene Republic",
+                            "Principality"
+                        ],
+                        [
+                            "Culture",
+                            "German",
+                            "",
+                            "",
+                            "",
+                            "Merchant League",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Non-baron tier vassals with other government types",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "It is possible to turn counties into tribes, republics or theocracies, government types that usually only rule barony-tier titles. The local ruler will have a -20 \"Wrong government type\" opinion penalty towards the feudal player character in many cases, but there can be benefits."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There are several ways to get non-feudal count+ vassals:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If the player character holds a county and have a vassal mayor or cleric there, they can grant the county to the burgher / cleric, causing the mayor's city (or cleric's temple ) to become the new county seat and elevating them to lord mayor or prince-bishop",
+                            "children": []
+                        },
+                        {
+                            "text": "If the player character holds a county , as well as a city there, the player can right-click the city to set it as the new county seat. If the province title is granted to a courtier, they will create a republic government. The demoted castle can be given to the lord mayor (so they pay more taxes) or to another character (so the lord mayor has fewer troops to use against their liege)",
+                            "children": []
+                        },
+                        {
+                            "text": "By pressing a mayor's or bishop's claim .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Vassal tribes",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The most common objective of having tribal vassals is to have them convert tribes to castles quickly and cheaply. When using this strategy, it is important to select courtiers who share your culture and religion , as others will have elevated opinion penalties and thus not inclined to adopt feudalism ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Tribal vassals have little income of their own, so the process will be fastest if you fund the construction of Hillforts in their capital. Giving multiple tribal counties to one tribal vassal makes the process cheaper, as only their capital will need Hillforts (and the technology to build them). When giving a character a duchy or enough counties to create a duchy, grant the duchy's de jure capital first so they won't surprise you with a change of capital ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Alternatively, vassal tribes can be used to skirt the vassal limit and keep a pool of competent commanders. When using this strategy, it may be advantageous to select courtiers of a different religion, as they are less likely to adopt feudalism and are subject to free revocation."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For tribal lieges, direct tribal vassals are their main source of military power, as long as these vassals can be called to arms as allies."
+                }
+            ]
+        },
+        {
+            "heading": "Vassal republics",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Republics tend to have more income and pay taxes at a higher rate, but provide fewer troops as levies."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Normal republics use Open Elective succession , with all titles going to the man in court with the highest age + prestige . The player can remove candidates by granting land to them or add candidates through matrilineal marriage . Burghers do not seek out marriages, but will accept marriage proposals as long as they are at least 25 years old."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Coastal republics which are at least duke-tier become merchant republics and can build trade posts that improve the economy along the liege's entire coast. See Creating vassal republics for strategies."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Merchant republics should aim to have as many republican vassals as possible; they can boost their military power though retinues ."
+                }
+            ]
+        },
+        {
+            "heading": "Vassal theocracies",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Like republics, a theocracy provides more taxes than troops, and generally uses Open Elective succession ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A ruler of a powerful vassal theocracy can serve as the Lord Spiritual, potentially relieving some of the pressure to put incompetent feudal vassals in important council positions."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Catholics can use Free Investiture to ensure both loyalty and competence. Catholics can also use their major vassal theocracies to control the election of Popes , \"secular power\" being a major factor in selection of cardinals . However, Catholics should keep in mind that bishops pay taxes to the Pope and stop providing troops if they like the Pope more than their liege. Catholic kings and emperors might want to \"invest\" in a vassal theocracy for their (and their descendants') coronation , as the Pope's demands in return for coronation can be exorbitant."
+                }
+            ]
+        },
+        {
+            "heading": "Vassal mercenaries and holy orders",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The player may have an opportunity to vassalize a mercenary company or holy order . With vassalization, their company becomes available at 1/5 the normal cost, gold upkeep for the company after raising them is waived, and everyone else becomes prevented from hiring them. They are considered feudal for the purpose of comparing government types , and will not resent having a normal feudal liege due to 'wrong government' penalties."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "With Sons of Abraham DLC and \"Imperial Administration\" law (or Iqta government), having a vassal holy order has an additional benefit: Free castles . A holy order grandmaster owning less than 10 realm size may spend 300 wealth to build a castle in any county belonging to a ruler of their religion . It is possible to use \"Imperial Administration\" law to retract these castles , allowing them to build new ones. However, to keep holy orders as vassals, the liege should ensure that grandmasters have at least -20 opinion of them, otherwise the grandmaster may declare independence and leave the realm(with no way to stop them)."
+                }
+            ]
+        }
+    ]
+}

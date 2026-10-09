@@ -1,0 +1,356 @@
+{
+    "pageid": 2838,
+    "title": "Patch 2.5 mod compatibility guide",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This guide describes the steps to make a mod compatible with patch 2.5.X from patch 2.4.5 . [1]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that this does not replace the usual step of merging files , in case the mod modifies some vanilla files."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In case of issues, run the latest version of The Validator , and try activating debug launch options, which will now report failed asserts in log files ."
+                }
+            ]
+        },
+        {
+            "heading": "Map",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "New folder common/province_setup does the association of provinceID with county title, maximum number of settlements and terrain. These information are also present in province history, but was probably duplicated as loading of saves no longer executes the history. Make sure that any wasteland provinces do not have a title line, otherwise the game will crash on startup.",
+                            "children": []
+                        },
+                        {
+                            "text": "New folder map/statics contains definition for the map frames. default.map file needs to be updated to reference static = \"statics\" instead of static = \"static.txt\"",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bookmarks",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "As history is no longer processed in the era selection screen, selectable characters need to be explicitly defined, by duplicating part of the character history. See bookmark modding . In particular:",
+                            "children": [
+                                {
+                                    "text": "replace bookmark = {} by a bookmark unique ID: bm_my_bookmark = {}",
+                                    "children": []
+                                },
+                                {
+                                    "text": "replace character = 1234 by selectable_character = { id = 1234 }",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Bookmarks are now ordered chronologically, so you can make use of folder loading to improve mod compatibility.",
+                            "children": []
+                        },
+                        {
+                            "text": "In order to have a map load when clicking the Custom Game button on the era selection screen, custom_start = yes needs to be added to one bookmark.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Laws",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "law_groups has been added (and group to reference it inside the laws). Any modded demesne law should be added as a group with law_type = realm",
+                            "children": []
+                        },
+                        {
+                            "text": "ze_council_power_laws.txt must be tweaked to do the historical setup of council laws (this is not via title history like for other laws) in default_selection block, via:",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Councillor and honorary titles",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "is_voter = yes need to be added to councillors or minor titles that can vote in the council.",
+                            "children": []
+                        },
+                        {
+                            "text": "The councillor eligibility conditions have been extracted to scripted triggers: can_be_marshal_trigger, can_be_chancellor_trigger, ... Custom conditions should be moved to file 00_scripted_triggers.txt as well.",
+                            "children": []
+                        },
+                        {
+                            "text": "If applicable, honorary titles should be made eligible to women, if status of women law is high enough. Typically:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Monthly prestige of minor titles has been increased roughly 10 times.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Add in honorary titles allowed_to_hold block:",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Opinion",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Most opinions have been reduced (often halved), both for positive and negative:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Opinion modifiers",
+                            "children": []
+                        },
+                        {
+                            "text": "Minor titles opinion_effect (usually 5 if small title, 10 if normal, 15 if very prestigious)",
+                            "children": []
+                        },
+                        {
+                            "text": "Traits opinions (vassal_opinion, same_opinion, etc. - but excluding sex_opinion), with a minimum of +/-5",
+                            "children": []
+                        },
+                        {
+                            "text": "Succession laws",
+                            "children": []
+                        },
+                        {
+                            "text": "Religion short_reign_opinion_year_mult",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Modded opinions should be adapted as well for balance."
+                }
+            ]
+        },
+        {
+            "heading": "Localization",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Load order of localization files has been changed again: the last definition wins on vanilla + mod files combined and order alphabetically. [2]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "So you need to put all the overridden vanilla keys in a separate file, with a name starting zz_ prefix, to ensure it is loaded last."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Before patch 2.4.X , the first loaded definition used to be winning, while before that mod keys were always overriding vanilla."
+                }
+            ]
+        },
+        {
+            "heading": "Other",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A new southindiangfx ethnicity has been added, and should be added to any modded south Indian cultures: graphical_cultures = { southindiangfx indiangfx muslimgfx }",
+                            "children": []
+                        },
+                        {
+                            "text": "is_job_ambition=yes needs to be added for ambitions to get a position on the council (probably to help the A.I.)",
+                            "children": []
+                        },
+                        {
+                            "text": "For education traits, attribute = <attribute> has been added to specify the main attribute of each education",
+                            "children": []
+                        },
+                        {
+                            "text": "num_culture_realm_provs, num_title_realm_provs and num_religion_realm_provs have been changed to use value parameter instead of num. For instance num_culture_realm_provs = { num = 2 culture = swedish } has been changed to num_culture_realm_provs = { value = 2 culture = swedish }",
+                            "children": []
+                        },
+                        {
+                            "text": "Government flavors have been added in common/government_flavor folder, to customize government name and illustration. See government modding .",
+                            "children": []
+                        },
+                        {
+                            "text": "free_levies_in_offensive_war = yes should be added to custom Muslim governments.",
+                            "children": []
+                        },
+                        {
+                            "text": "allowed_to_target_tributaries = no and allowed_to_target_suzerains = no can be added to CBs to simplify previous condition:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Custom holy orders that can be expelled should be added to can_use_title block of dejure_barony_claim, dejure_county_claim and other_dejure_county_claim CBs",
+                            "children": []
+                        },
+                        {
+                            "text": "Custom faction membership modifiers must be tweaked so that coerced characters bypass the factor 0 modifiers:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Non-agression pacts should be checked when an action (decision, plot, ...) would break it (i.e. action should not be available). For CBs, the check is already hardcoded.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Faction and plot decisions should check that the realm peace is not enforced.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For vassal character scope:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For the liege character scope:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "For events between two characters, an option should be added in case one owes a favor to the other, so that the AI would prefer that option.",
+                            "children": []
+                        },
+                        {
+                            "text": "When applicable, some rare event options could generate a favor:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "To cope with new non-genetic traits robust , feeble , shrewd and dull :",
+                            "children": [
+                                {
+                                    "text": "Replace trait = strong by is_strong_trigger = yes",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Replace trait = weak by is_weak_trigger = yes",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Replace OR = { trait = genius  trait = quick } by is_smart_trigger = yes",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Replace OR = { trait = slow trait = imbecile} by is_dumb_trigger = yes",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Check for events with remove_trait = xxx and add an extra remove_trait for the equivalent non-genetic trait.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Add a color = {} to religion groups",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ for-modders-list-of-changed-files-between-2-4-5-and-2-5-1",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ 2-5-1-mod-localization-ignored",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

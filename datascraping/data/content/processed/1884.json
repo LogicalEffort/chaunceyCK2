@@ -1,0 +1,510 @@
+{
+    "pageid": 1884,
+    "title": "Papal succession",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Papal succession or College of Cardinals is the succession law for the Papacy and is exclusive to the Sons of Abraham DLC."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Upon death of the Catholic (or Fraticelli) Pope, the Preferatus is elected as new Pope."
+                }
+            ]
+        },
+        {
+            "heading": "Features",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A college of 9 Cardinals votes for a candidate among them.",
+                            "children": []
+                        },
+                        {
+                            "text": "Each time a Cardinal dies, he is replaced by the most suitable bishop as selected by the Pope.",
+                            "children": []
+                        },
+                        {
+                            "text": "Once a Cardinal gets elected as Pope, he loses his church holding title(s), and a Cardinal seat becomes available in the college.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Mechanic",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Cardinal is a religious title:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Title",
+                            "Number",
+                            "Dignity",
+                            "Opinion modifier",
+                            "Monthly salary",
+                            "Monthly prestige",
+                            "Requirements"
+                        ],
+                        [
+                            "Cardinal",
+                            "9",
+                            "0.90",
+                            "+20",
+                            "+0.10",
+                            "+0.50",
+                            "Catholic religion Religious tier character Bishop's liege does not control a Catholic antipope"
+                        ],
+                        [
+                            "Fraticelli Cardinal",
+                            "9",
+                            "0.90",
+                            "+20",
+                            "+0.10",
+                            "+0.50",
+                            "Fraticelli heresy Religious tier character Bishop's liege does not control a Fraticelli antipope"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Catholic religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Religious tier character",
+                            "children": []
+                        },
+                        {
+                            "text": "Bishop's liege does not control a Catholic antipope",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fraticelli heresy",
+                            "children": []
+                        },
+                        {
+                            "text": "Religious tier character",
+                            "children": []
+                        },
+                        {
+                            "text": "Bishop's liege does not control a Fraticelli antipope",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There are two levels of elections:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Vacant cardinal positions are awarded to bishops by the Pope based on their Cardinal appointment score , which relies on factors about the candidate and factors about his liege. Rulers may invest in a campaign fund, which will increase the chances that the candidate may be chosen.",
+                            "children": []
+                        },
+                        {
+                            "text": "The cardinals choose the next Pope based on a Papal suitability score , which relies solely on the factors about the candidate and thus rulers cannot directly influence.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Factors used both for Cardinal appointment and Papal suitability :"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factor",
+                            "Score",
+                            "Comment"
+                        ],
+                        [
+                            "Opinion",
+                            "+3.5 x Pope's or Cardinal's opinion of candidate",
+                            ""
+                        ],
+                        [
+                            "Secular power",
+                            "Sum of power of titles",
+                            "Rank and number of titles held by the candidate: Bishop: +10 Prince-Bishop: +60 Prince-Archbishop: +110 King-Bishop +70"
+                        ],
+                        [
+                            "Culture = Italian",
+                            "+200",
+                            "Based on the province culture of Rome. Will change if Rome changes culture; will not change if the Pope moves capitals."
+                        ],
+                        [
+                            "Culture group = Latin",
+                            "+50",
+                            "Does not stack with Italian culture bonus. Based on the province culture of Rome. Will change if Rome changes culture; will not change if the Pope moves capitals."
+                        ],
+                        [
+                            "Virtuous personality traits",
+                            "+Church opinion of trait",
+                            "Traits with positive church opinion: Temperate +5, Charitable +5, Zealous +5, Crusader +15 (Traits that only affect Christian church opinion, such as Chaste, do not count)"
+                        ],
+                        [
+                            "Sinful personality traits",
+                            "-Church opinion of trait",
+                            "Traits with negative church opinion: Gluttonous -5, Cynical -5, Hedonist -5, Wicked priest -10, Excommunicated -15"
+                        ],
+                        [
+                            "Learning",
+                            "+2/Learning point"
+                        ],
+                        [
+                            "Piety",
+                            "+0.1/Piety",
+                            ""
+                        ],
+                        [
+                            "Age",
+                            "+2 x Age"
+                        ],
+                        [
+                            "Prestigious dynasty",
+                            "+1 / 40 dynasty prestige",
+                            ""
+                        ],
+                        [
+                            "Candidate is in Rome",
+                            "+100",
+                            "Court Chaplain jobs, Leading armies, At liege's court"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Bishop: +10",
+                            "children": []
+                        },
+                        {
+                            "text": "Prince-Bishop: +60",
+                            "children": []
+                        },
+                        {
+                            "text": "Prince-Archbishop: +110",
+                            "children": []
+                        },
+                        {
+                            "text": "King-Bishop +70",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Factors used only for Cardinal appointment:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factor",
+                            "Score",
+                            "Comment"
+                        ],
+                        [
+                            "Opinion of Lieges",
+                            "( Pope's opinion of the bishop's liege + Pope's opinion of the bishop ) / 2 x 3.5",
+                            "unconditional rounding"
+                        ],
+                        [
+                            "Campaign fund",
+                            "+1/Gold invested",
+                            "Sum of campaign funds from liege and above"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In some ways, controlling the college of cardinals is better than controlling an antipope :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "You don't take a hit to moral authority .",
+                            "children": []
+                        },
+                        {
+                            "text": "Your pope holds sway over all Catholics, not just your realm, so you can get external excommunications and sanctioned invasions .",
+                            "children": []
+                        },
+                        {
+                            "text": "You can lose your title and still have a line of popes who support you.",
+                            "children": []
+                        },
+                        {
+                            "text": "A pope of your dynasty protects all your kin, wherever they are.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Selecting future cardinals",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Use the character finder to identify suitable candidates, perhaps starting with those who have Italian culture. In addition to traits, check their piety and monthly piety gain."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is good to select kinsmen. A Pope of your dynasty will:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Be a powerful ally",
+                            "children": []
+                        },
+                        {
+                            "text": "Contribute to your dynasty prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "Give +1 monthly piety and +2 monthly prestige to all Catholic rulers of your dynasty (of count rank or higher).",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Education (without Conclave)",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If you have the patience, select future cardinals at a young age (6-10) based on their early base stats and traits. Genius and Quick are great because they provide rare boosts to the Learning attribute ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The ideal guardian has high diplomacy, high learning skill, and 4+ good traits. Heavenly virtues are easy to scan for and all are helpful:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Trait",
+                            "Diplomacy",
+                            "Learning",
+                            "Church opinion",
+                            "Cardinal score",
+                            "Monthly Piety",
+                            "Guardian*"
+                        ],
+                        [
+                            "Chaste",
+                            "✗",
+                            "+1",
+                            "+10",
+                            "✓",
+                            "+0.5",
+                            "✗"
+                        ],
+                        [
+                            "Temperate",
+                            "✗",
+                            "✗",
+                            "+10",
+                            "✓",
+                            "✗",
+                            "✓"
+                        ],
+                        [
+                            "Charitable",
+                            "+3",
+                            "✗",
+                            "+10",
+                            "✓",
+                            "✗",
+                            "✗"
+                        ],
+                        [
+                            "Diligent",
+                            "+1",
+                            "+1",
+                            "✗",
+                            "✗",
+                            "✗",
+                            "✓"
+                        ],
+                        [
+                            "Patient",
+                            "+1",
+                            "+1",
+                            "✗",
+                            "✗",
+                            "✗",
+                            "✗"
+                        ],
+                        [
+                            "Kind",
+                            "+2",
+                            "✗",
+                            "✗",
+                            "✗",
+                            "✗",
+                            "✓"
+                        ],
+                        [
+                            "Humble",
+                            "✗",
+                            "✗",
+                            "✗",
+                            "✗",
+                            "+1",
+                            "✗"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "* Generally improves decisions made by guardians."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In time, the ideal educator for a potential future cardinal will be one of your other cardinals or future cardinals—or yourself, for maximum control over the child's traits (unless you are arbitrary/cruel)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is very helpful for your future cardinal to have Italian culture. If the child is not Italian, see culture conversion by education . Consider converting to Italian yourself. You can always search for Italian characters by right-clicking any Italian character, selecting \"go to character relations\", and limiting the search to \"my culture\" [sic]. Alternatively, try to convert Rome to your culture , so it is your culture (rather than Italian) that gets the cardinal appointment score boost."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Just before the age of 16, switch the child to a Mastermind Theologian if their guardian is not one."
+                }
+            ]
+        },
+        {
+            "heading": "Adulthood",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "When he reaches the age of majority at 16, order him to take his vows . Becoming a monk will remove him from any succession lists and give him a monthly piety boost (until he loses the trait upon becoming a bishop)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If he is the son of a ruler and has high martial skill, try to get him a bishopric quickly, or he may try to join a holy order (costing you piety if you refuse)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If a Crusade is called, have him lead an army in the target kingdom to get the Crusader trait."
+                }
+            ]
+        },
+        {
+            "heading": "Creating large vassal theocracies",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The secular power of the bishop is a major factor in cardinal selection. Most candidates are mere baron-level bishops; yours can have an edge. Furthermore, higher-rank clergy have more chances to gain monthly piety from church buildings. Their increased demesne limit lets them hold more churches, and they can have more vassals with churches, both baron-level and count-level."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can create county-level bishoprics out of Holy Warred lands, or by revoking a county and granting it to a local bishop. You can then grant a duchy to the prince-bishop, making him a prince-archbishop. The technique is largely the same as for creating vassal republics . Theocracies cannot be granted kingdoms or create kingdoms, but it is possible to set up a theocratic kingdom by pressing a bishop's claim on a kingdom."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Keep in mind that you cannot create more theocratic counties if more than 10% of your realm is controlled by theocracies. You must choose between having a large number of count-level direct vassals (preferably in safe, uncreated duchies) or a small number of higher-rank vassals."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you have lots of money, construct piety-generating buildings in the temples belonging to your cardinals and their direct vassals. You can also build new temple holdings for them, even in counties controlled by feudal rulers—you are not obligated to transfer the temple holding to the local count."
+                }
+            ]
+        },
+        {
+            "heading": "Investiture",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If you have Papal Investiture , nominate the member for the priesthood by asking the Pope himself. If he consents to the nomination then your designated family member will succeed to the next available bishopric within your realm."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Assassinate bishops in your realm to speed up investiture."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Holy warred counties can be converted to theocracies and given to your chosen person at the same time, bypassing the need for investiture (once)."
+                }
+            ]
+        },
+        {
+            "heading": "Assisting in cardinal appointment",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To acquire the \"In Rome\" modifier, appoint your potential Cardinal as your Court Chaplain and send him to Rome on a mission to improve religious relations."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If all else fails, contribute money to his campaign fund until he is the best candidate. You should contribute at least some money for the \"Supported Cardinal Election\" opinion boost, which gives +30 for 83 years."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you're feeling particularly devious, you could assassinate a Cardinal (or Pope) to make room for a new cardinal."
+                }
+            ]
+        },
+        {
+            "heading": "Breeding Popes in Rome",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "As an alternative to creating cardinals in your own realm, it is possible to breed dynasty members in the Pope's court . The Pope is likely to make some of them bishops, and they will have an edge in cardinal/pope elections thanks to being in Rome and the correct culture."
+                }
+            ]
+        }
+    ]
+}

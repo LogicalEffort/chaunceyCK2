@@ -1,0 +1,1672 @@
+{
+    "pageid": 3705,
+    "title": "Patch 2.7.X",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.7.X are all patches beginning with 2.7, and linked to Monks and Mystics expansion."
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.7",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Patch 2.7.0.1",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.7.0.1 was released on 2017-03-16 [1] with the checksum OAWR ."
+                }
+            ]
+        },
+        {
+            "heading": "Free features",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Made add_artifact and destroy_artifact console commands available in release",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "User modding",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed variable names no longer working as the second key for the variable effects and triggers. E.G., subtract_variable = { which = \"A\" which = \"B\" }",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue causing the any_friend scope not to work",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bugfixes",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed the council UI having an empty job action slot without Monks and Mystics",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the \"direct vassals\" map-mode being colored incorrectly",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash involving holdings in the outliner",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a rare freeze involving character interactions requiring you to be at peace",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a long-standing OOS caused by nomadic title ID mismatch",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue when the ai was evaluating the decision to found a secret religious cult",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with Patricians not being able to join the Hermetic Society if they had no other titles beside that of their house",
+                            "children": []
+                        },
+                        {
+                            "text": "The \"gender equality - all\" game rule no longer causes a penalty at game start for changing succession law",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an OOS resulting from different computers finding a different \"shortest\" path between two provinces",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the distance used for trade province cost in some cases using a sub-optimal path. This means that from now on some trade posts will be slightly cheaper",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed monastic orders Miaphysite, Hindu, Jain & Buddhist not generating society currency from character stats",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the French version of the game crashing if you gained a specific character modifier",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a division by 0 crash",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with the German Portraits now showing the lower part of the headgear correctly",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue where the Request To Rank Up within a society could get stuck in waiting if you left the society before your request was approved, or if the leader of your society died before approving it",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed it being impossible to recreate destroyed titles",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.7.0.2",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.7.0.2 was released on 2017-03-22 [2] with the checksum WHCB ."
+                }
+            ]
+        },
+        {
+            "heading": "Bugfixes",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed custom localization crashing the game",
+                            "children": []
+                        },
+                        {
+                            "text": "\"Next/previous holding\" in the holding build view will now also take you to your hospitals, not just regular holdings, trade posts, and forts",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Anglo-Saxons and female Germans using the wrong age portraits",
+                            "children": []
+                        },
+                        {
+                            "text": "Messed up localisation is now less likely to crash the game",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the French version of the game crashing if you gained a specific character modifier (again)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.7.1",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.7.1 was released on 2017-04-24 [3] with the checksum BPAH ."
+                }
+            ]
+        },
+        {
+            "heading": "Expansion features",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added a Rank 2 power for Monastic Orders: Spiritual Guidance",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a Rank 3 power for Monastic Orders: Teach Virtue",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a Rank 4 power for Monastic Orders: Convert County",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Demon Hunter events that fire for Known Demon Worshipers",
+                            "children": []
+                        },
+                        {
+                            "text": "Hermetic Ingredients are now used in a multitude of event options to enhance the outcome or reduce the penalty",
+                            "children": []
+                        },
+                        {
+                            "text": "Added an event that allows Monastic Order members to rid themselves of heretical books",
+                            "children": []
+                        },
+                        {
+                            "text": "Hunt Apostates now involves a lot more branding irons, stakes and fire",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Free features",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Optimized access to diplomatic status and opinions",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a message to make it more clear that artifacts get lost / destroyed during inheritance",
+                            "children": []
+                        },
+                        {
+                            "text": "Secret religious societies are now available to virtually all religions",
+                            "children": []
+                        },
+                        {
+                            "text": "You can now ask to join your liege's wars if you want to help ensure they win",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a game rule to toggle Secret Cults",
+                            "children": []
+                        },
+                        {
+                            "text": "When your Lord Spiritual finds a heretical scripture and converts to a heresy, you now have to option to secretly adopt the religion",
+                            "children": []
+                        },
+                        {
+                            "text": "You can now gift artifacts",
+                            "children": []
+                        },
+                        {
+                            "text": "The old tutorial has now been entirely removed. The Tutorial button now takes you to the Learning Scenario instead",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Balance",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "When incapable and asking for help to commit suicide, an ambitious heir is more likely to say 'Yes'",
+                            "children": []
+                        },
+                        {
+                            "text": "A secondary holding in a province will now count for the purpose of looting; if you have a holding in a neighboring province you'll get the loot",
+                            "children": []
+                        },
+                        {
+                            "text": "The \"plot to revoke title\" plot can no longer be used while in a major revolt",
+                            "children": []
+                        },
+                        {
+                            "text": "The cost of abduction now scales based on the tier character you are abducting * unlanded characters cost 50, Barons cost 150 and Counts cost 300",
+                            "children": []
+                        },
+                        {
+                            "text": "Abducting someone now makes them unhappy with you, and a failed or successful abduction attempt will make it harder to abduct that person in the future.",
+                            "children": []
+                        },
+                        {
+                            "text": "Known devil worshippers can now be the target of Holy Wars of characters of their religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Performing dark magic as a devil worshipper can now lead to the corruption of body and mind, which has side effects such as stutters and poor health",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced the chance of event 'Song of Anguish' (MNM.20060) to trigger",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a few non-learning traits that can affect your performance in the Grand Debate",
+                            "children": []
+                        },
+                        {
+                            "text": "Several Hermetic artifacts can now also be used by characters with very high learning",
+                            "children": []
+                        },
+                        {
+                            "text": "Assassins can no longer intimidate a ruler for a favor if they have intimidated said ruler recently",
+                            "children": []
+                        },
+                        {
+                            "text": "Assassins will have a harder time intimidating rulers more powerful than themselves",
+                            "children": []
+                        },
+                        {
+                            "text": "Buffed the Monastic Order power \"Invite Holy Ascetic\" slightly",
+                            "children": []
+                        },
+                        {
+                            "text": "The 'Drill Commander' event can no longer improve your commanders past 20 martial if they already have at least one tactic trait",
+                            "children": []
+                        },
+                        {
+                            "text": "Unrestricted vassal wars no longer gives an opinion bonus.",
+                            "children": []
+                        },
+                        {
+                            "text": "The opinion bonus from the Commander title sliced in half (from 10 to 5).",
+                            "children": []
+                        },
+                        {
+                            "text": "Massive update to Faction balance!",
+                            "children": [
+                                {
+                                    "text": "The AI will now no longer join the Increase Council Power faction if they like their Liege 50 or more (down from 80 or more).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Voter AI's will now be more likely to join Increase Council Power factions the more faction laws are set to 'Ruler', the steps are 2, 4 and 6.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Non-Voter AI's will be less likely to join Increase Council Power factions the more faction laws are set to 'Council', the steps are 2, 4 and 6.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The Increase Council Power faction has had its effect doubled (it now enacts two laws).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The Increase Council Power faction now also revokes one level of 'Vassal Wars' laws.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The AI is more inclined to join the Increase Council Power faction if their liege has enacted a 'Vassal War' law.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The AI no longer wants to institute Elective Monarchy unless all council powers are enacted (except for Council Authority).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The AI is less likely to join the Elective faction if their liege has Gavelkind succession.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The AI is less likely to join the Elective faction unless their liege is a tyrant.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The independence faction is more attractive to the AI if their liege is a Tyrant.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The AI in now more inclined to start and join the Gavelkind faction.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Discontent Councilors are very inclined to join the Gavelkind faction if the liege does not have all council powers enacted, if all powers are enacted they will prefer the Elective faction.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The AI is now much more likely to stay by their backed Claimants.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The AI is slightly more inclined to start factions backing women.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Having bad opinion of your liege now makes the AI more likely to back a claimant.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The AI is way more likely to back claimants that are part of their Society.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The AI is way more likely to back a claimant if their liege is a tyrant.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The AI is way more likely to back a claimant if they hate their liege.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Culture is now less of a factor for the AI when backing claimants.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The AI might join claimant factions even if they themselves have a claim on the same title, but it is still rare.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The AI will now not back claimants if they like their liege by 40 or more (used to be 50 or more).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Being a Sayyid/Mirza now only matters if the claimant is also Muslim.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Having better opinion of the proposed Claimant now matters much more for the AI.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "More traits now affect the AI chances of joining the Claimant faction.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The AI is now less likely to start another Claimant faction war if their liege is already fighting in another Claimant faction war.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The Overthrow Liege faction is now unattractive to the AI if it is backing a claimant already.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The AI will no longer form the Overthrow Liege faction if their liege is not a tyrant.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The AI will now only use the Overthrow Liege faction if they hate their liege (-40 or lower for most AI's).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The Overthrow Liege faction will now also enact two Council Power laws upon success.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The Overthrow Liege faction will now only institute Elective monarchy if all Council Power laws are set to 'Council'.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The Overthrow Liege faction now revokes any active vassal war laws.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Religious Heads/Holy Orders/Mercenaries will now leave their titles behind if they agree to flip religion through a secret cult",
+                            "children": []
+                        },
+                        {
+                            "text": "The standard soul corruption pulse event for devil worshipers is now less likely to give you Major soul corruption, but the chance now increases the higher visibility you have",
+                            "children": []
+                        },
+                        {
+                            "text": "Rebalanced a few Devil Worshiper quests, you now get less visibility if they are quest targets",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "AI improvements",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed the AI in some cases being able to cancel the movement of retreating armies",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the AI breaking betrothals in a lot of cases where it had no reason to",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the AI sometimes using favors on betrothals and marriages even when there's no need to",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the AI considering wars where it isn't the main defender when figuring out whether it should peace out of offensive wars",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the AI considering the same war multiple times when figuring out whether it should peace out of offensive wars",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Interface",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The interface for transferring subunits between two units no longer uses drag-and-drop, but instead uses buttons once more",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a number of relation types (E.G., \"lover\") not being localised based on gender in the languages that need that (E.G., French)",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed terrain modifiers showing up as blank modifiers (for example, in the supply tooltip)",
+                            "children": []
+                        },
+                        {
+                            "text": "Executing an unrelated interaction will no longer cause council consideration to reset",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the modifier for the 3rd Satanist rank not being capitalized correctly",
+                            "children": []
+                        },
+                        {
+                            "text": "Artifacts will now be equipped by default upon obtaining them, assuming the holder is able to equip it",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the cultural buildings showing up as \"nobuilding\" in the tech view",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the portraits for wars in the lower-right corner not always updating when something changes them (E.G., imprisonment or coming of age). They should now always update within one day",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the pause option for message settings always being disabled in the pop-up, even when actually set to enabled",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the pause option for combat results using the \"other characters\" setting rather than the \"close family members\" setting when set to pop up",
+                            "children": []
+                        },
+                        {
+                            "text": "Societies can now be looked at when observing the game",
+                            "children": []
+                        },
+                        {
+                            "text": "3D objects for castles, cities and churches now have levels, as they were meant to.",
+                            "children": []
+                        },
+                        {
+                            "text": "The level is computed by using the number of buildings in the main settlement of the province",
+                            "children": []
+                        },
+                        {
+                            "text": "They are controlled by values in defines.lua: CITY_MAIN_BUILDING_LEVEL_2 and CITY_MAIN_BUILDING_LEVEL_3",
+                            "children": []
+                        },
+                        {
+                            "text": "Longer names should now be visible in the council job view",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed so that long army names do not go out of bounds in ally orders",
+                            "children": []
+                        },
+                        {
+                            "text": "It is now possible to search for characters' secret religion in the Character Finder. Will only return characters the player know is of the specified secret religion. Also added a \"Has Secret Religion\" filter that'll only show characters you know to have a secret religion",
+                            "children": []
+                        },
+                        {
+                            "text": "When you can rank up in your society you now get a separate alert that takes you to the Society screen, rather than being part of the \"important decision\" alert and taking you to the Intrigue screen",
+                            "children": []
+                        },
+                        {
+                            "text": "The ally order tooltip will now tell you when the AI is too busy with another war to help you",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed hidden character modifiers being visible on the title screen",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer possible to give ally orders to other players, since nothing makes them obey them anyway",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed nation adjectives not getting properly localised in some cases",
+                            "children": []
+                        },
+                        {
+                            "text": "Council job selection now resets if your councilor dies or is replaced while you're assigning them a job",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the notification when a settlement is finished saying \"A Tribal has finished [...]\" rather than \"A Tribal holding has finished [...]\"",
+                            "children": []
+                        },
+                        {
+                            "text": "The \"claim\" console command now gives feedback on whether or not it worked",
+                            "children": []
+                        },
+                        {
+                            "text": "The button that toggles all DLC in the launcher now toggles all mods if that's the currently selected tab",
+                            "children": []
+                        },
+                        {
+                            "text": "You no longer get the alerts for commander titles if you have \"auto assign commanders\" enabled",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "User modding",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed the game failing to find government unique title names at times. Now it'll never return the default name if a non-default one is defined. It now also tries without the tier string before it tries without the government string, so if you were to define \"city_title\" and \"king_title\", the former will be used",
+                            "children": []
+                        },
+                        {
+                            "text": "\"add_law\" can now take parameters: \"cooldown\" and \"opinion_effect\". \"cooldown\" simply works as a way to specify that there's no cooldown, like add_law_w_cooldown does. \"opinion_effect\" can be used to specify that the opinion effect of passing the law shouldn't be applied. E.G., the anger/happiness at succession law changes, or at tribal organization changes. Existing script still works as before. Example of new syntax:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Messed up localisation is now less likely to crash the game",
+                            "children": []
+                        },
+                        {
+                            "text": "FROM in on_character_convert_religion and on_character_convert_culture is no longer a temp character, but instead the culture/religion itself. This only provides access to comparing to the culture/religion (or group). It should also still work to set cultures/religions and such. Please report any issues encountered with it. This change also means that it should now be possible to reference the previous characters outside \"immediate\" and similar without the game crashing",
+                            "children": []
+                        },
+                        {
+                            "text": "same_society_as trigger will no longer be true when both characters are not part of a society.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added the command line argument -scriptlog to enable log triggers and effects without enabling script asserts.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added artifact backgrounds (arti_bg.dds, arti_bg_glow.dds, arti_bg_small.dds, and arti_bg_glow_small.dds) to gfx/inventory/artifacts to make it easier for modders to make their own artifacts that follow the style of the vanilla artifacts",
+                            "children": []
+                        },
+                        {
+                            "text": "Added society icon backgrounds (society_symbol_bg_stone.dds and society_symbol_bg_wood.dds) to gfx/inventory/societies to make it easier for modders to make their own societies that follow the style of the vanilla societies",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a better secret religion system, now based around a code attribute rather than traits. Characters can have up to one secret religion. If the character ends up as their secret religion, their secret religion is cleared. This can be set and accessed via script:",
+                            "children": []
+                        },
+                        {
+                            "text": "Added triggers \"secret_religion\", \"true_religion\", \"secret_religion_group\", and \"true_religion_group\". True religion being defined as your secret religion if you have one, otherwise your public religion",
+                            "children": []
+                        },
+                        {
+                            "text": "The religion triggers (religion, secret_religion, true_religion, and the group versions) can now optionally take a \"target_type\" determining which religion of the target they check against. E.G., religion = { target = ROOT target_type = secret } will check if the scoped character's public religion is the same as ROOT's private religion. The valid types are \"public\", \"secret\", and \"true\". The default is to use the same as the type being checked; religion default to public, secret_religion to secret, true_religion to true. A religion (group) name as the right-hand-side works for all the triggers",
+                            "children": []
+                        },
+                        {
+                            "text": "Effect set_secret_religion takes a religion or a scope. It optionally takes a target type (true/secret/public), but defaults to secret",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger has_secret_religion which takes \"yes\" or \"no\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Added set_secret_religion and clear_secret_religion effects",
+                            "children": []
+                        },
+                        {
+                            "text": "The \"religion\" and \"set_secret_religion\" effects optionally take a religion type (true/secret/public) to determine which to use when a scope is referenced. \"religion\" defaults to public, while \"set_secret_religion\" defaults to \"secret\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Added \"secret_religion\" console command that sets a character's secret religion. Defaults to the player's character",
+                            "children": []
+                        },
+                        {
+                            "text": "Who can see a character's secret religion is defined in 00_religions.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a can_see_secret_religion trigger. Takes a scope, and checks if the character scope you're currently in can see the target character's secret religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Societies can now have an associated religion, which is accessible from script in the same way as character or province religion, including on the right-hand-side of triggers and effects. This is scripted with for example \"associated_religion = catholic\". It has no effect beyond being accessible via script",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a convert_to_secret_religion effect. Takes \"yes\" or a character scope. Sets your public religion to your secret religion, or the target character's secret religion if a scope is used",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a on_character_convert_secret_religion on_action",
+                            "children": []
+                        },
+                        {
+                            "text": "Added SecretReligion and TrueReligion localisation promotions so that [This.SecretReligion.GetName] and similar work",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a dynamic secret religious society system that significantly reduces the work involved in making a religious cult society",
+                            "children": []
+                        },
+                        {
+                            "text": "All religions except those specifically excluded get a secret religious society generated. The attributes of this society is defined by a template in 00_societies.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "Most the sections in society definitions now provide the society itself as a scope (FROM)",
+                            "children": []
+                        },
+                        {
+                            "text": "Societies can now have an associated religion (defined with associated_religion = religiontag). This means that scopes can now be used where religions could be used, such as the right-hand-side of the \"religion\" trigger or effect. It also means that the \"religion\" trigger and similar can be used within a society scope",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a secret_religious_cult scope, which will scope to the cult associated with the character's secret religion. Also works in religion and province scopes. This can also be used on the right-hand-side of effects and triggers",
+                            "children": []
+                        },
+                        {
+                            "text": "is_rank_full can now take a society scope rather than just a society name",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a \"secret_religion\" history effect",
+                            "children": []
+                        },
+                        {
+                            "text": "Added an on_artifact_inheritance on_action",
+                            "children": []
+                        },
+                        {
+                            "text": "Scope: ROOT is the character, FROM is the artifact, FROMFROM is the old holder",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bugs in artifact_owner and original_artifact_owner scope changes",
+                            "children": []
+                        },
+                        {
+                            "text": "Added tooltips for artifact_owner and original_artifact_owner scope changes",
+                            "children": []
+                        },
+                        {
+                            "text": "Added \"owner\" and \"original_owner\" as valid scope changes for artifacts",
+                            "children": []
+                        },
+                        {
+                            "text": "Added on_society_created and on_society_destroyed on_actions",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed scoping to saved society and artifact event targets not working",
+                            "children": []
+                        },
+                        {
+                            "text": "Added religion_scope, secret_religion_scope, true_religion_scope, and culture_scope as scopes. These scope to the religion/culture of the character/province/society (only religion for societies) currently scoped to. Can be saved as event targets",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a save_conversion folder in \"common\" which handles converting obsolete objects in saves. Currently handles religions and societies",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a clear_flags_with_prefix effect. Works in character, province, title, and artifact scopes",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the society rank tooltip not having FROM defined. FROM is now the society grand master, as with other society tooltips",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed troops spawned to unlanded characters not getting any tech bonus. They now get the tech from the province they spawned in. If a \"home\" province is defined, they'll use that province's tech instead",
+                            "children": []
+                        },
+                        {
+                            "text": "Added \"fallback_text\" for custom loc. If none of the triggered texts return true, this will be used instead if defined. The fallback text cannot have a trigger, and only one can exist",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the error log complaining if you use \"set_mother = 0\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Added is_interested_in_any_society = <yes/no> trigger. It evaluates if you're currently showing interest in a society or not.",
+                            "children": []
+                        },
+                        {
+                            "text": "Society.GetName, Society.GetNameCap, and Society.GetCurrency now fall back to null_society and null_society_currency rather than just ending up blank",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the \"has_artifact\" condition showing up blank",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the game crashing in some cases after resigning and reloading, and hovering over a port that had a fleet in it when you resigned",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed reverse_religion not working in some cases. Only affected the 2.7.1 beta",
+                            "children": []
+                        },
+                        {
+                            "text": "Restored the behavior where \"culture_group = something_that_doesnt_exist\" always returns false. Only affected the 2.7.1 beta",
+                            "children": []
+                        },
+                        {
+                            "text": "Ensured \"portrait_society = something_that_doesnt_exist\" always returns false",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Database",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Barbarossa now has a magnificent red beard",
+                            "children": []
+                        },
+                        {
+                            "text": "Fortun Garcia is now One Eyed rather than Maimed",
+                            "children": []
+                        },
+                        {
+                            "text": "953 new Wikipedia links",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed counts of Zollern",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed date of birth/death and mother for Otto III of Anhalt-Bernburg",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed date of death of Maria of Brabant",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed date of death of Otto IV",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed date of birth/death and parentage of Guy I of Ponthieu",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed parentage of Even \"le Grand\" de Léon",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed date of birth/death of Saint Judicael",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed date of marriage of Arnold II of Looz",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed various database issues in the Italian character file",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with dynasty ID of Dante",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed improper dynasty ID for Abu Man'a Khamis",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed dates of birth for a couple sons of Drogo of Champagne",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed date of birth of granddaughter of Charles Martel",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bad spouse ID for Adalbert Adalberts",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed mother ID and removed bastard trait for Pepin the Short",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed date of birth of Theudebert I",
+                            "children": []
+                        },
+                        {
+                            "text": "Adjusted date of death of Godfrey of Hainault so he isn't 110",
+                            "children": []
+                        },
+                        {
+                            "text": "Adjusted date of birth of Hamon of Leon to avoid false twin issue with brother",
+                            "children": []
+                        },
+                        {
+                            "text": "Adjusted date of death of Riotham so son's date of birth makes sense",
+                            "children": []
+                        },
+                        {
+                            "text": "Adjusted date of birth of Avice Cerneu to be consistent with father's date of death",
+                            "children": []
+                        },
+                        {
+                            "text": "Adjusted date of birth of Azenor la Marck to avoid false twin issue with sister",
+                            "children": []
+                        },
+                        {
+                            "text": "Adjusted date of birth of Budic of Nantes so his son isn't born when he's 8",
+                            "children": []
+                        },
+                        {
+                            "text": "Adjusted date of birth of Evenus of Brittany to avoid false twin issue with brother",
+                            "children": []
+                        },
+                        {
+                            "text": "Adjusted date of birth of Louis IV of Looz so his father isn't 11 when he's born",
+                            "children": []
+                        },
+                        {
+                            "text": "Adjusted date of marriage of Charles Martel and Rotrude of Hesbaye",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Vitiges of Ostrogoths",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Ostrogoths to title history of k_italy",
+                            "children": []
+                        },
+                        {
+                            "text": "Added parentage to Alberada of Buonalbergo",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing marriage between Alan IV and Ermengarde of Anjou",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Vandal kings to k_africa title history",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Visigoths to Duchy of Toulouse title history",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing marriage between Maria of Brabant and Otto IV",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing marriage between Alaric II and Theodigotha",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing marriages of Gruoch of Scotland",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing marriage between Theophylact I and Theodora",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing rulers for Corsica and Sardinia titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Added the House of Cinarca, who ruled southern Corsica, and missing Italian relatives",
+                            "children": []
+                        },
+                        {
+                            "text": "Added complete Dynastic Family Trees for the Giudicati of Sardinia, and missing Italian relatives",
+                            "children": []
+                        },
+                        {
+                            "text": "Added some unlanded Grant and MacCleod characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Added early Baduspanid characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Added early Ziyarid characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Added more title history to Dailam, Mazandaran, and Gurgan",
+                            "children": []
+                        },
+                        {
+                            "text": "Added homosexual trait to Hadrian",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a missing twin trait to some fictional Pecheneg characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Added spouses and more children for al-Mahdi",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Dabuyid dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a weak claim to Scotland for Robert the Bruce",
+                            "children": []
+                        },
+                        {
+                            "text": "Deleted unnecessary remove_spouse declaration for Conan IV",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed redundant marriage declaration for Avice Cerneu",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed invalid father definition for Wigbert Immedinger",
+                            "children": []
+                        },
+                        {
+                            "text": "Replaced 867 holder of Faroes with a semi-historical character",
+                            "children": []
+                        },
+                        {
+                            "text": "Modified Hadrian and Julian to have beards",
+                            "children": []
+                        },
+                        {
+                            "text": "Modified Baduspanid and Ziyarid characters in 1066 to have sympathy for Zoroastrianism",
+                            "children": []
+                        },
+                        {
+                            "text": "Modified the Merovingian, Wuffing, and Caimbeul coats of arms",
+                            "children": []
+                        },
+                        {
+                            "text": "Modified Sassanid, Baduspanid, and Ziyarid coats of arms",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bugfixes",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added some flavor text for sacrificing the Aztec religious head during a blot",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the game sometimes pausing without allowing you to ever unpause in the tutorial due to an event triggering",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed it in some cases being possible for priests of religions where priests are not allowed to marry to marry or betroth someone",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the AI in some cases switching capital for no apparent reason",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed changing primary title allowing you to pass another demesne law",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed artifacts sometimes starting off inactive even when the trigger is met",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed log message about \"Malformed token: achievement\" for ironman saves",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed it being possible to pass laws by ensuring you have no councillors whatsoever. The empty seats will now always be considered actively voting against you",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed brew_happiness_potion taking society currency from the target rather than the person brewing the potion",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed previously identified \"witches\" being grateful for being released even if they're not actually imprisoned",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the \"steward is ambitious and wants land\" event triggering even when there's no valid title to give out",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the game in some cases failing to clear out the patricians of a merchant republic that's died out",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed voters in some cases getting removed upon losing a voter title even if they've got another voter title",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the leader of a war dying and not getting replaced by anyone in some cases not causing the war to invalidate immediately",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed dead characters sometimes still being in wars",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the game in some cases adding someone to the council of someone other than their new liege when their old liege dies",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed trade posts not counting for war score in embargo wars if the target character is the liege of one or more merchant republics rather than being a merchant republic",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the game claiming you've got non-aggression pacts with dead characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed OOS caused by nomadic title ID mismatch",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with any_friend scope in triggers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing text in the options of two events for the \"Perform Statecraft\" job",
+                            "children": []
+                        },
+                        {
+                            "text": "Idolizer was incorrectly shown as being a bad trait for the Stewardship education in the focus view, replaced the trait with the correct trait Indolent",
+                            "children": []
+                        },
+                        {
+                            "text": "Added the missing localisation for String_Muslim",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the trait 'Immoral Priest' being slightly cut off on the right side for Zoroastrians",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue in event MNM.1460 were you would receive money for hosting a gathering rather than paying for it",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a rare crash involving invalid plots",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed it taking up to 8 days for courtiers to abort invalid plots and ambitions",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue in event MNM.3949, in which you can choose to keep your old religion as a secret religion, were it could give you the wrong secretly religious trait (e.g. getting 'Secretly Sunni' instead of 'Secretly Orthodox')",
+                            "children": []
+                        },
+                        {
+                            "text": "The Weaponsmith and the Goldsmith will no longer be killed if they become landed",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash caused by characters getting deleted while still referenced by events",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a div / 0 crash",
+                            "children": []
+                        },
+                        {
+                            "text": "The trigger and actual cost for writing a Magnum Opus is now both set to 500",
+                            "children": []
+                        },
+                        {
+                            "text": "You can no longer abduct revolt leaders or people who are at war with you",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a few 'Devil Worshiper' events that would give you the lifestyle trait Impaler, even when you already had another lifestyle trait",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue where the kingdom of Lombardy/Italy wouldn't get the Iron Crown when starting before 1066",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue in the 'Antiking' faction which required your liege to be a Nomad in order to be able to create it",
+                            "children": []
+                        },
+                        {
+                            "text": "Incapable characters can no longer host a Grand Debate",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an OOS when changing start dates",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated Summer Fair events so that they check for Prisoner, Incapable, Inaccessible and Adult status for randomly chosen courtiers/vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "Courtiers and vassal commanders can now acquire the various crusade traits again",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue where you could induct characters you shouldn't be able to into your Devil Worshiping cult",
+                            "children": []
+                        },
+                        {
+                            "text": "Zunists can now be recruited to the Satanists",
+                            "children": []
+                        },
+                        {
+                            "text": "You can now find the Holy Grail with unrestricted supernatural events on",
+                            "children": []
+                        },
+                        {
+                            "text": "The Monophysite Monastic Society now has the same currency gain rate as the other societies",
+                            "children": []
+                        },
+                        {
+                            "text": "Pagan vassals who subjugate characters above their own tier should no longer go independent from their liege if they are still valid vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "Can no longer buy indulgences while in seclusion, prison or when incapable",
+                            "children": []
+                        },
+                        {
+                            "text": "Non-hindus can now properly be visited by Hindu ascetics again",
+                            "children": []
+                        },
+                        {
+                            "text": "Unified the decision and event conditions for Introduce Heir to Realm, they should now be the same",
+                            "children": []
+                        },
+                        {
+                            "text": "You can no longer revoke the Hermetic 'Apprentice' title",
+                            "children": []
+                        },
+                        {
+                            "text": "The Demon Child can no longer trigger the Aztec Invasion ahead of time",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue where the Blending In-mission for secret religious societies could get stuck upon evaluating the mission fail-state",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a rare crash on joining multiplayer via Steam",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed characters sometimes changing government form on succession for no apparent reason, most prominently tribal->feudal",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an infinite loop while counting trade posts",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the game crashing if a fort was destroyed while sieged, due to for example starting a holding construction",
+                            "children": []
+                        },
+                        {
+                            "text": "Members of a Secret Cult can now induct wards to have them adopt the same secret religion correctly",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the 4th council job not being set as active by default in multiplayer",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed adventurer troops not getting any tech bonuses",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed patricians that somehow end up without a liege keeping their patrician title and becoming immortal",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash that could happen after resigning and starting anew, as a result of provinces storing references to characters that no longer exist",
+                            "children": []
+                        },
+                        {
+                            "text": "Immortal characters should no longer die when making love too fiercely with their spouse",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a rare crash resulting from dying during faction validation as a result of faction validation",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed loot being reset on loading a save",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed OOS caused by objectives referencing characters or titles that don't yet exist on the user's machine",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed OOS caused by saved event targets referencing titles that don't yet exist on the user's machine",
+                            "children": []
+                        },
+                        {
+                            "text": "The game should no longer slow down so massively when a dynasty has thousands of living members. Having such a large dynasty still isn't recommended, but should no longer grind the game to a near halt",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed granting someone independence by giving them a title of your tier not reducing your threat",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the game crashing if you deleted a trade post, fort, or hospital while the building view was open and a building was under construction",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the ally order background not changing based on religion, thus not matching the rest of the UI if you played a Pagan or Muslim",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed using \"include lower titles\" when giving out a viceroyalty resulting in the title not being a viceroyalty",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash in the tutorial",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed asking for a Crusade not working",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an OOS resulting from liege levies being calculated as slightly different on different clients",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed Aztec horse archers being invisible",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash when a nomad needs a capital but there's no available open slot, or tribal holding to replace",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed \"add_trait\" in the console not removing traits that are mutually exclusive with the added trait",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a random OOS at startup due to societyies membership generation",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the game crashing if your last artifact got destroyed while you had the artifact view open",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the destroy_artifact console command messing up other artifacts in your inventory",
+                            "children": []
+                        },
+                        {
+                            "text": "Possibly fixed a crash that could happen while idling on the society screen",
+                            "children": []
+                        },
+                        {
+                            "text": "Due to a lack of contribution, blind characters can no longer host or participate in Stargazing",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an OOS that could happen at the start of MP as a result of characters ending up with slightly different traits on different clients due to timing issues",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash when a coat of arms has fewer layers than its template is expecting",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed renaming custom titles in some cases leaving their adjective blank",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed elective succesion ordering not working. Only affected the 2.7.1 beta",
+                            "children": []
+                        },
+                        {
+                            "text": "You no longer require Monks and Mystics to rank up within Secret Religious Societies",
+                            "children": []
+                        },
+                        {
+                            "text": "Must now be an adult to found a Secret Religious Cult",
+                            "children": []
+                        },
+                        {
+                            "text": "You will no longer notify yourself when publicly adopting a secret religion",
+                            "children": []
+                        },
+                        {
+                            "text": "It should no longer be possible to convert secretly to the same religion you are following publicly",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed two flipped descriptions in WoL.2080",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed converting to local religion not working. Only affected the 2.7.1 beta",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a rare infinite loop in the EU4 converter. This also fixes one way messed up country names could occur in converted saves",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash that could occur when loading old saves",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed one way the game could crash if extremely high character IDs (1 billion and above) are present",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Multiplayer button not being disabled after resigning from the Learning Scenario",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an infinite loop",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Patch 2.7.2",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.7.2 was released on 2017-08-15 [4] with the checksum GMTV ."
+                }
+            ]
+        },
+        {
+            "heading": "Balance",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "When a Secret Religious Cult reveals itself, all members will join in the conversion instead of just the ones in the same realm",
+                            "children": []
+                        },
+                        {
+                            "text": "The AI is now more often unsuccessful in recruiting new members to Secret Religious Cults",
+                            "children": []
+                        },
+                        {
+                            "text": "Priests, Zealous characters and Paranoid characters are now much less likely to join a secret cult",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters accused of Apostasy (with the modifier) can no longer Induce Sympathy, Induct or Invite characters to Secret Cults",
+                            "children": []
+                        },
+                        {
+                            "text": "The cooldown between inviting/inducting characters into Secret Cults increased to 10 years from 5",
+                            "children": []
+                        },
+                        {
+                            "text": "The AI is now less likely to recruit/induct characters into cults if they are in a realm without a player",
+                            "children": []
+                        },
+                        {
+                            "text": "Lowered the maximum amount of members the AI can recruit into Secret Religious Cults to a more modest number (from 370 to 91)",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters in Secret Religious Cults can now only use Prepare Grounds in counties they or their vassals own",
+                            "children": []
+                        },
+                        {
+                            "text": "The AI is now much less inclined to create a secret religious cult just because their liege is a player",
+                            "children": []
+                        },
+                        {
+                            "text": "Diplomatic immunity now also prevents release from prison, banishment, and execution",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "AI improvements",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "When one AI tells another \"get your ass over here\" the other AI is now willing to cancel a siege it only just started to actually get \"over here\"",
+                            "children": []
+                        },
+                        {
+                            "text": "The AI will no longer think that just because going back to Rome with its army briefly seemed like a good idea, it should continue going there even if it becomes apparent going to Rome is a terrible idea",
+                            "children": []
+                        },
+                        {
+                            "text": "The AI will no longer decide that gathering up to join its allies is a terrible idea just because there's nothing to siege in that friendly province",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bugfixes",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed an issue where targets of Tainted Touch would get the effects of Soul Corruption rather than the caster",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed giving someone multiple gifts on the same day causing the opinion bonus to stack, then disappear entirely on the next day",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed one way government type could switch away from Tribal on succession for no apparent reason",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed epidemics in some cases never ending due to being stuck on islands",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Black Death in some cases never ending due to the end date not working",
+                            "children": []
+                        },
+                        {
+                            "text": "If a Secret Religious Cult ends up without a Grandmaster, they will now disband",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters not in a society can low lose suspicion level",
+                            "children": []
+                        },
+                        {
+                            "text": "When revealing your Secret Cults your suspicion level is reset",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer possible to sacrifice the same person to Satan multiple times",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed councillor modifiers not being applied on the very first day of a campaign",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Forum, Patch 2.7.0.1 [checksum OAWR] released! , 2017-03-16",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum, Patch 2.7.0.2 [checksum WHCB] released! , 2017-03-22",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum, Patch 2.7.1 [checksum BPAH] Live Now! , 2017-04-24",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ Forum, 2.7.2 Tiny Patch is now Live! Checksum GMTV , 2017-08-15",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

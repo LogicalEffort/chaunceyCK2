@@ -1,0 +1,479 @@
+{
+    "pageid": 3793,
+    "title": "Title actions",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Title actions are accessed through the title screen or by right-clicking the title's shield."
+                }
+            ]
+        },
+        {
+            "heading": "Higher title actions",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Create",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To create a duchy , kingdom , or empire :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "You must control 51% of the title's de jure counties (for duchies or kingdoms) or 80% (for empires).",
+                            "children": []
+                        },
+                        {
+                            "text": "If a vassal, you cannot create a title higher than or equal to your liege's.",
+                            "children": []
+                        },
+                        {
+                            "text": "You must not hold a temporary title .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some governments have restrictions:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Theocracies cannot create Kingdoms.",
+                            "children": []
+                        },
+                        {
+                            "text": "Chinese Imperial and (Roman) Imperial rulers cannot create empires.",
+                            "children": []
+                        },
+                        {
+                            "text": "Special title holders (such as holy orders) cannot create equal or higher titles",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Tier",
+                            "Cost to create",
+                            "De jure requirement",
+                            "Additional requirements"
+                        ],
+                        [
+                            "Duchy",
+                            "200 wealth",
+                            "51% of de jure counties",
+                            ""
+                        ],
+                        [
+                            "Kingdom",
+                            "400 wealth and 200 piety",
+                            "51% of de jure counties",
+                            "Hold any two duchies (or already king+ tier)"
+                        ],
+                        [
+                            "Empire",
+                            "600 wealth and 400 piety",
+                            "80% of de jure counties",
+                            "Hold any two kingdoms (or already emperor tier)"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The wealth cost decreases with piety (down to half price at 1000 piety). The \"Become King\" ambition halves both the gold and piety cost when creating the kingdom. Titular titles cost twice as much to create, but only require that you hold the capital."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you are able to create a title, a \"Can create titles\" alert should appear. If you're unable to create a title and want to know why, you'll need to visit its title screen by either:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Clicking the duchy or kingdom shield in the province view",
+                            "children": [
+                                {
+                                    "text": "For empires, go to a kingdom's title screen and click the \"de jure\" box to make the empire shield appear",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Using the \"Find title or region\" button ( hotkey : ? )",
+                            "children": []
+                        },
+                        {
+                            "text": "Using the hello console command",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Usurp",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To peacefully usurp a duchy , kingdom , or empire from another ruler:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Like with title creation,"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "You must control 51% of the title's de jure counties (for duchies or kingdoms) or 80% (for empires)",
+                            "children": []
+                        },
+                        {
+                            "text": "If a vassal, you cannot usurp a title higher than or equal to your liege's",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "However, dukes may usurp kingdom titles without needing to hold two duchies first."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The following additional requirements apply to usurpation:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Cannot usurp the primary title of a merchant republic",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot usurp the sole top tier title from a ruler of a different religion, if they hold any land (baronies or counties) within the title de jure",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot usurp from someone who is at war (or if any of their lieges are at war)",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot usurp religious head titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot usurp a title from anyone in the same realm , unless you have a strong claim",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot usurp this title before date (e.g. for five years after \"installed by faction demand\")",
+                            "children": []
+                        },
+                        {
+                            "text": "Merchant Republic, Chinese Imperial, and (Roman) Imperial rulers cannot usurp kingdoms or empires",
+                            "children": []
+                        },
+                        {
+                            "text": "Special title holders (such as holy orders) cannot usurp equal or higher titles",
+                            "children": []
+                        },
+                        {
+                            "text": "A usurped kingdom keeps its Succession Law. This might create a Title Loss on Succession issue if kingdoms have different succession law causing them to have different heirs. (ie: elected heir in Elective Monarchy is not your eldest when the usurped kingdom has Primogeniture Succession Law).",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Usurping a title costs gold , with the cost depending on rank and decreasing with piety . Unlike title creation, it never costs piety. Usurping gives a quarter of the prestige as creating a title."
+                }
+            ]
+        },
+        {
+            "heading": "Destroy",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Costs prestige (equal to the prestige gained when creating the title)",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot destroy a title that is a target of or justification for an ongoing war",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot destroy a title that is subject to gavelkind or elective gavelkind succession",
+                            "children": [
+                                {
+                                    "text": "Titular titles can be destroyed even with gavelkind",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Angers rulers who own counties+ that are de jure or below of the destroyed title (-40 \"Destroyed Liege Title\" for 10 years)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Other",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Make primary",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Set one of your top tier titles as your primary title ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Nomads and viceroys cannot use this action. Patricians cannot set their family palace as primary."
+                }
+            ]
+        },
+        {
+            "heading": "Abandon province",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Nomads may abandon a province that has no settlements, granting it to the owner of a random neighbor province. The land is exploited as part of this action, bringing a population boom to your capital while making the province less useful for the recipient. AI rulers do not take this action."
+                }
+            ]
+        },
+        {
+            "heading": "Set crown focus",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Ask Pope for claim",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Plot for claim",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Begin a \"fabricate claim on liege\" or \"fabricate claim on fellow vassal\" plot . These plots are sometimes also listed in the list of suggested plots."
+                }
+            ]
+        },
+        {
+            "heading": "Settlement actions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Settlement actions are accessed from the province holdings screen."
+                }
+            ]
+        },
+        {
+            "heading": "Upgrade tribe",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Three flavors depending on government type:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Feudal rulers may upgrade a tribe (with Hillfort IV ) to a castle",
+                            "children": []
+                        },
+                        {
+                            "text": "Republic rulers may upgrade a tribe (with Market IV ) to a city",
+                            "children": []
+                        },
+                        {
+                            "text": "Theocracy rulers may upgrade a tribe (with Hillfort IV) to a temple",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The province must share the ruler's religion. If there is \"enough space\" (it needs at least 2 empty holding slots for one extra free holding, so 3 empty slots for the normal two free holdings), additional minor settlements will be constructed until the county has a full set (generally in this direction: castle, then city, then temple)."
+                }
+            ]
+        },
+        {
+            "heading": "Make county capital",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If you hold both a county and a minor settlement within it, you may raise the minor settlement to the status of county capital. You can do this, for example, to select the most-upgraded castle as the one you keep (or leave the least-upgraded one for a direct vassal to keep)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Another use is to select the government type used by a courtier to whom you grant the county. For example, if you are a feudal ruler who wants to create a vassal merchant republic , you might start by making a city the capital of a coastal province."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Nomads and some patricians (patricians can if they are not the doge and their capital isn't the capital of the merchant republic) are not allowed to use this action."
+                }
+            ]
+        },
+        {
+            "heading": "Make capital",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Changes your realm capital . Accessed by right-clicking a county's capital settlement, or by clicking the Make Capital button at the top-left of the province view."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In the rare case that your realm capital is a minor settlement, you can right-click the capital settlement to move your realm capital within the same province. Note that this DOES count as changing your capital for cooldown purposes!"
+                }
+            ]
+        },
+        {
+            "heading": "Revoke County Capital status",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Must be nomadic . Demote the county capital to baron tier and make an empty slot the capital. Can be used before giving away an unwanted settlement, allowing you to keep the rest of the county as grazing land. The baron-tier vassal can remain under you or be transferred to another vassal."
+                }
+            ]
+        },
+        {
+            "heading": "Reclaim Nomadic County",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Nomads can usurp counties with the nomad agitation modifier from non-nomadic vassals. Doing so removes the modifier."
+                }
+            ]
+        },
+        {
+            "heading": "Pillage",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Nomadic and tribal rulers can pillage settlements they own. This destroys two random buildings and gives wealth/manpower/techpoints. Once all buildings are destroyed, the settlement is destroyed as well, creating more space for grazing or tribalism. AI rulers will only pillage tribal holdings (they will leave castle/city/temple alone). Completely destroying all holdings in a province while being diligent or gardener will increase population growth rate by 8% and manpower growth by 10% for 10 years. (This modifier is useless for a tribal ruler)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Tribal rulers cannot pillage any tribe holding, or the last holding of a province, even if it is not a tribe. If pillaging all holdings is desired, pillage a holding with three buildings first."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "On the destruction of all holdings of the province, the culture and religion will flip to the current ruler. Rebellion risk modfier caused by pillaging will disappear, but not other modifiers such as \"incompetent ruler\" or \"religious tension\"."
+                }
+            ]
+        },
+        {
+            "heading": "Stop pillaging",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Stop pillaging a holding you are currently pillaging, makes it so you will be unable to pillage the holding again."
+                }
+            ]
+        },
+        {
+            "heading": "Settle",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Allows nomads to change their government type. Three flavors depending on the settlement type:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Settle as Tribal",
+                            "children": []
+                        },
+                        {
+                            "text": "Settle as Feudal",
+                            "children": []
+                        },
+                        {
+                            "text": "Found Merchant Republic",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "See Government#Nomadic decisions"
+                }
+            ]
+        },
+        {
+            "heading": "Create new vassal",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You create a new character (of your religion and culture) and grant them the settlement. A quick alternative to using the character finder to select a suitable owner. You must be the owner, and the settlement must not be the county capital."
+                }
+            ]
+        },
+        {
+            "heading": "Modding",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Decision modding#Title decisions",
+                            "children": []
+                        },
+                        {
+                            "text": "Decision modding#Settlement decisions",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

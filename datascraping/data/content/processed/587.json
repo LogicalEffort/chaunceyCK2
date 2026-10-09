@@ -1,0 +1,622 @@
+{
+    "pageid": 587,
+    "title": "Trait modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Traits are a major part of CKII and thus also for any overhaul mod. This article will explain everything you need to know about trait modding. Notepad++ is strongly recommended for modding traits, but Notepad or other plain text editors can also be used."
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Definition",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Traits must be defined in the folder common/traits/.\nTo make the trait, you will first need to tell the game what effects it has. That will be done here. For this tutorial, a 'selfish' trait will be used as an example. To start off, give the trait a name:"
+                }
+            ]
+        },
+        {
+            "heading": "Type",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "After defining the trait itself, you'll want to define its flags. The flags you can use are listed below."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The trait icons are grouped by type in-game, from left to right: education , caste_tier , undefined, lifestyle , personality , is_health .\nInside a group, the order is based on the order the traits have been added to the character."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Flag",
+                            "Value",
+                            "Description",
+                            "Vanilla examples",
+                            "Code"
+                        ],
+                        [
+                            "agnatic",
+                            "bool",
+                            "Children of a father with this trait will always inherit the trait",
+                            "Sayyid",
+                            "agnatic = yes"
+                        ],
+                        [
+                            "attribute",
+                            "attribute",
+                            "Main attribute, in case of education traits.",
+                            "Amateurish plotter",
+                            "attribute = intrigue"
+                        ],
+                        [
+                            "birth",
+                            "int",
+                            "Given number out of every 10000 characters born will receive this trait,  (e.g., 100 = 1%)",
+                            "Quick",
+                            "birth = 100"
+                        ],
+                        [
+                            "blinding",
+                            "bool",
+                            "The trait reflects permanent blinding of the character while imprisoned. In some cultures, this disinherits them.",
+                            "Blinded",
+                            "blinding = yes"
+                        ],
+                        [
+                            "cached",
+                            "bool",
+                            "All characters that have this trait will be cached for more efficient event trigger evaluation (should be a limited number). Then the character scope <trait_name> = {} can be use to scope to all characters with that trait.",
+                            "On hajj",
+                            "cached = yes"
+                        ],
+                        [
+                            "can_hold_titles",
+                            "bool",
+                            "The trait prevents the character from holding any titles",
+                            "Horse",
+                            "can_hold_titles = no"
+                        ],
+                        [
+                            "cannot_inherit",
+                            "bool",
+                            "The trait prevents the character from inheriting any titles",
+                            "Monk",
+                            "cannot_inherit = yes"
+                        ],
+                        [
+                            "cannot_marry",
+                            "bool",
+                            "The trait prevents the character from marrying. See can_marry condition. Does not prevent concubinage .",
+                            "Monk",
+                            "cannot_marry = yes"
+                        ],
+                        [
+                            "caste_tier",
+                            "int",
+                            "The trait is a caste trait, and caste_tier defines the order of the castes",
+                            "Brahmin",
+                            "caste_tier = 3"
+                        ],
+                        [
+                            "childhood",
+                            "bool",
+                            "The trait is a childhood trait.",
+                            "Willful",
+                            "childhood = yes"
+                        ],
+                        [
+                            "customizer",
+                            "bool",
+                            "If no, Blocks the trait from being available for selection in the Ruler Designer",
+                            "Bastard",
+                            "customizer = no"
+                        ],
+                        [
+                            "education",
+                            "bool",
+                            "The trait is an educational trait.",
+                            "Amateurish plotter",
+                            "education = yes"
+                        ],
+                        [
+                            "enatic",
+                            "bool",
+                            "Children of a mother with this trait will always inherit the trait",
+                            "Not used in vanilla",
+                            "enatic = yes"
+                        ],
+                        [
+                            "hidden",
+                            "bool",
+                            "Hidden traits are not shown in character view.",
+                            "Freckles",
+                            "hidden = yes"
+                        ],
+                        [
+                            "hidden_from_others",
+                            "bool",
+                            "The trait will only be visible to the player who has the trait, even other players with the same trait won't see it. This is a shortcut for is_visible = { character = FROM } .",
+                            "Secretly Cathar",
+                            "hidden_from_others = yes"
+                        ],
+                        [
+                            "immortal",
+                            "bool",
+                            "Once this trait is applied, the character will no longer age nor die naturally (but can die from execution or the effect death ). See immortal .",
+                            "Immortal",
+                            "immortal = yes"
+                        ],
+                        [
+                            "in_hiding",
+                            "bool",
+                            "The trait activates in_hiding status",
+                            "In hiding",
+                            "in_hiding = yes"
+                        ],
+                        [
+                            "inbred",
+                            "bool",
+                            "The trait indicates that the character is inbred, affecting offspring and fertility and natural death causes",
+                            "Inbred",
+                            "inbred = yes"
+                        ],
+                        [
+                            "incapacitating",
+                            "bool",
+                            "The character is weak and needs a regent",
+                            "Incapable",
+                            "incapacitating = yes"
+                        ],
+                        [
+                            "inherit_chance",
+                            "int",
+                            "A newborn can inherit the trait from a parent (optional); if both parents have the trait, uses two trials of same chance",
+                            "Quick",
+                            "inherit_chance = 15"
+                        ],
+                        [
+                            "both_parent_has_trait_inherit_chance",
+                            "int",
+                            "",
+                            "Dwarf",
+                            "both_parent_has_trait_inherit_chance = 50"
+                        ],
+                        [
+                            "is_epidemic",
+                            "bool",
+                            "The trait is given by an epidemic outbreak. See has_epidemic condition.",
+                            "Tuberculosis",
+                            "is_epidemic = yes"
+                        ],
+                        [
+                            "is_health",
+                            "bool",
+                            "The trait affects the health of a character, usually restricting certain events that require full health. See health_traits condition.",
+                            "Stressed",
+                            "is_health = yes"
+                        ],
+                        [
+                            "is_illness",
+                            "bool",
+                            "The trait is a regular disease. See is_ill condition and cure_illness effect.",
+                            "Ill",
+                            "is_illness = yes"
+                        ],
+                        [
+                            "is_symptom",
+                            "bool",
+                            "",
+                            "Cough",
+                            "is_symptom = yes"
+                        ],
+                        [
+                            "is_visible",
+                            "conditions",
+                            "Conditions for the trait to be visible: ROOT the character looking at the trait FROM is the character with the trait Typically a character should see their own traits, so at least character = FROM is used.",
+                            "Secretly Catholic",
+                            "is_visible = {\n  OR = {\n    character = FROM\n    society_member_of = secret_religious_society_catholic\n    AND = {\n      is_close_relative = FROM\n      trait = secretly_catholic\n    }\n  }\n}"
+                        ],
+                        [
+                            "leader",
+                            "bool",
+                            "The trait is a command/leadership trait. See can_have_more_leadership_traits condition.",
+                            "Light foot leader",
+                            "leader = yes"
+                        ],
+                        [
+                            "leadership_traits",
+                            "int",
+                            "The character automatically receives X number of leadership traits (army command traits).",
+                            "Brilliant strategist",
+                            "leadership_traits = 1"
+                        ],
+                        [
+                            "lifestyle",
+                            "bool",
+                            "The trait is a lifestyle choice. See lifestyle_traits condition.",
+                            "Scholar",
+                            "lifestyle = yes"
+                        ],
+                        [
+                            "opposites",
+                            "List<trait>",
+                            "List of traits that cannot be held simultaneously with this trait",
+                            "",
+                            "opposites =  { imbecile quick genius }"
+                        ],
+                        [
+                            "personality",
+                            "bool",
+                            "The trait is a personality trait (see trigger personality_traits = <min. count> )",
+                            "Lustful",
+                            "personality = yes"
+                        ],
+                        [
+                            "prevent_decadence",
+                            "bool",
+                            "The trait prevents the Muslim character from accumulating decadence",
+                            "Not used in vanilla",
+                            "prevent_decadence = yes"
+                        ],
+                        [
+                            "priest",
+                            "bool",
+                            "The trait implies a theological education. See is_priest condition)",
+                            "Detached priest",
+                            "priest = yes"
+                        ],
+                        [
+                            "pilgrimage",
+                            "bool",
+                            "The character is temporarily away and will need a regent but does not lose any wards",
+                            "On pilgrimage",
+                            "pilgrimage = yes"
+                        ],
+                        [
+                            "random",
+                            "bool",
+                            "With random = no , the trait will not be given to randomly-generated characters (when the game starts or when characters are spawned other than by being born). random = yes is the default. Specific semantics vary with the general trait type.",
+                            "Kinslayer",
+                            "random = no"
+                        ],
+                        [
+                            "rebel_inherited",
+                            "bool",
+                            "Used for peasant leader and heresiarch in vanilla. When characters with such traits win the revolt war and die without an heir the successor also gains the peasant leader/heresiarch trait.",
+                            "Peasant Leader",
+                            "rebel_inherited = yes"
+                        ],
+                        [
+                            "religious",
+                            "bool",
+                            "The trait is religious in nature and should be automatically discarded upon religion change. Note: it will also be discarded upon pagan reformation.",
+                            "Mutazilite",
+                            "religious = yes"
+                        ],
+                        [
+                            "religious_branch",
+                            "religion",
+                            "The trait identifies a sect of that religion. This will also make the children inherit the trait on birth.",
+                            "Shaivist hindu",
+                            "religious_branch = jain"
+                        ],
+                        [
+                            "ruler_designer_cost",
+                            "int",
+                            "Sets a custom cost (in years of ruler's age, positive or negative) for this trait in the Ruler Designer .",
+                            "",
+                            "ruler_designer_cost = -20"
+                        ],
+                        [
+                            "same_trait_visibility",
+                            "bool",
+                            "The trait will only be visible on other characters if the player also has it. Handy for things like secret societies, cults, and secret bears. This is a shortcut for: is_visible = { \n\tOR = {\n\t\tcharacter = FROM\n\t\thas_trait = <trait>\n\t}\n}",
+                            "Not used in vanilla",
+                            "same_trait_visibility = yes"
+                        ],
+                        [
+                            "succession_gfx",
+                            "bool",
+                            "",
+                            "Wounded",
+                            "succession_gfx = yes"
+                        ],
+                        [
+                            "tolerates_ <religion_group>",
+                            "bool",
+                            "The character tolerates characters of that religion group and is tolerated by them. <religion_group> is dynamic and may be a group not present in vanilla.",
+                            "Sympathy Christendom",
+                            "tolerates_christian = yes tolerates_jewish_group = yes tolerates_muslim = yes tolerates_pagan_group = yes tolerates_zoroastrian_group = yes tolerates_indian_group = yes"
+                        ],
+                        [
+                            "vice",
+                            "bool",
+                            "",
+                            "Lustful",
+                            "vice = yes"
+                        ],
+                        [
+                            "virtue",
+                            "bool",
+                            "",
+                            "Charitable",
+                            "virtue = yes"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Then the character scope <trait_name> = {} can be use to scope to all characters with that trait."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This is a shortcut for is_visible = { character = FROM } ."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "ROOT the character looking at the trait",
+                            "children": []
+                        },
+                        {
+                            "text": "FROM is the character with the trait",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Typically a character should see their own traits, so at least character = FROM is used."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This is a shortcut for:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "tolerates_jewish_group = yes tolerates_muslim = yes tolerates_pagan_group = yes tolerates_zoroastrian_group = yes tolerates_indian_group = yes"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In the case of the 'selfish' trait, a personality flag would be used. Do note that it is possible to use multiple flags for a trait."
+                }
+            ]
+        },
+        {
+            "heading": "Modifiers",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "After setting the trait's flags, you'll likely want to give it some character modifiers and/or a command modifier ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For 'selfish', a stewardship benefit and a diplomacy penalty would be appropriate."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Regarding relations , no one likes someone who is selfish, so in our case, we would have to add an opposite for charitable and a general_opinion:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Regarding AI Weights, which affect how non-player characters will act (most of which primarily affect strategic considerations), for the 'selfish' trait, an ai_rationality would be good."
+                }
+            ]
+        },
+        {
+            "heading": "Potential",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The potential section defines who can randomly start with the trait on campaign start, be randomly generated with the trait (for example via the employment decisions ), or gain it randomly when coming of age. It does however not affect the outcomes of events giving the trait; even if the character does not meet the potential conditions he can still get the trait via events."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Further, in some circumstances, the potential clause seems to be ignored even for its intended use case [1] . So, if it's vital that certain traits are not added to random characters, it is worthwhile to add on_action events (eg. on_host_change , on_startup ) which forcibly remove/replace any invalid traits."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The potential section is simply one or more conditions. It is put immediately after the opening bracket of the trait. We might for example want to prevent the game from generating selfish children."
+                }
+            ]
+        },
+        {
+            "heading": "Compliments",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Since Way of Life it is possible to define localisation keys for compliments and insults which will appear in letters from other characters, or in any other localised text via the [GetRootFromCompliment] and [GetRootFromInsult] (etc.) localisation commands. These keys will need to be localised ."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Flag",
+                            "Description",
+                            "Code"
+                        ],
+                        [
+                            "male_compliment female_compliment",
+                            "Compliments in a letter to a man/woman",
+                            "male_compliment = COMPL_SCHOLAR"
+                        ],
+                        [
+                            "male_compliment_adj female_compliment_adj",
+                            "Positive Adjectives in a letter to a man/woman",
+                            "male_compliment_adj = COMPL_LEARNED"
+                        ],
+                        [
+                            "male_insult female_insult",
+                            "Insults in a letter to a man/woman",
+                            "male_insult = INSULT_TORTURER"
+                        ],
+                        [
+                            "male_insult_adj female_insult_adj",
+                            "Negative Adjectives in a letter to a man/woman",
+                            "male_insult_adj = INSULT_EVIL"
+                        ],
+                        [
+                            "child_compliment",
+                            "Compliments in a letter written by a child, used instead of the adult ones",
+                            "child_compliment = COMPL_SMARTY"
+                        ],
+                        [
+                            "child_compliment_adj",
+                            "Positive adjectives in a letter written by a child, used instead of the adult ones",
+                            "child_compliment_adj = COMPL_CLEVER"
+                        ],
+                        [
+                            "child_insult",
+                            "Insults in a letter written by a child, used instead of the adult ones",
+                            "child_insult = INSULT_PEABRAIN"
+                        ],
+                        [
+                            "child_insult_adj",
+                            "Negative Adjectives in a letter written by a child, used instead of the adult ones",
+                            "child_insult_adj = INSULT_STUPID"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "female_compliment"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "female_compliment_adj"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "female_insult"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "female_insult_adj"
+                }
+            ]
+        },
+        {
+            "heading": "Icon",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Icons make traits easily recognizable to the player. An icon can be made in Photoshop or another image editor. It needs to be 24x24 pixels, and saved as a .dds or .tga file."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When you have your icon, save it in <yourmodfolder>\\gfx\\traits. Now create a file at <yourmodofolder>\\interface\\<yourmod>.gfx. You will use this file to tell the game where the icon is stored."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Start by adding this to the file:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Make sure that you never repeat the spriteTypes block! You should instead be adding spriteType (no \"s\" on the end) items inside its opening and closing { curly brackets/braces }."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Now, add a line for the name:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Now you should add a line to tell the game where the icon is stored:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Add some standard lines at the end:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For our 'selfish' trait, this would look like this:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Save the file, and your trait should now have an icon."
+                }
+            ]
+        },
+        {
+            "heading": "Localisation",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Traits require the following localization keys:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "<trait_name> : name of the trait",
+                            "children": []
+                        },
+                        {
+                            "text": "<trait_name>_desc : description of the trait",
+                            "children": []
+                        },
+                        {
+                            "text": "<trait_name>_death : in case the trait reduces heath ( health = -1 ), used to describe the cause for premature \"death by trait\" (death_reason = death_trait). For instance:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If we do this with the selfish trait, we will get this:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Save the localisation as a .csv file. Once you have done that, you are done and you now have yourself a new trait!"
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Event modding , as traits are mostly given out by events.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ forumpost:30794069",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

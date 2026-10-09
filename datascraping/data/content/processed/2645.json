@@ -1,0 +1,964 @@
+{
+    "pageid": 2645,
+    "title": "After the End",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "After the End (AtE) is a total conversion mod set in a 2666 A.D. post-apocalyptic America."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It allows to play as a character in North America and rampage/conquer/bring the True Faith to over 900 provinces, 25 Kingdoms, 4 Republics, 1 Theocracy, 5 Tribes or Nomads and 14 Religions to choose from."
+                }
+            ]
+        },
+        {
+            "heading": "Key milestones",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The project started in August 2014."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The last version (0.9) was released in March 2017."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Beginning of 2018 the mod creator announced that the mod was effectively on hiatus, and that the team would let other modders fork the project."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A project named After the End Fan Fork is focusing on making the mod fully compatible with the current CK2 patch, incorporate new vanilla gameplay features from recent patches, and add entirely new features."
+                }
+            ]
+        },
+        {
+            "heading": "Background",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Official History from the Wikia"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "AtE is set in North America. In the far-distant future, centuries after the general collapse of society, the people of the North American continent have begun to rebuild their disconnected societies into something approaching civilization. However, quite a lot has changed in six centuries: The nations of the old world are nothing more than legends, and the surviving societies have had more than enough time to form their own identities and cultural and religious traditions."
+                }
+            ]
+        },
+        {
+            "heading": "Gameplay",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "After the End's game play is similar to the vanilla Crusader Kings experience.\nThe main difference is the setting, as apocalyptic North America is filled with many new religions and cultures. The interaction of these cultures is where the game differs from the vanilla game-play. The setting also allows for the the introduction of salvaged modern technology in the mostly neo-medieval setting and several invasions and events that change the game-world as time goes by."
+                }
+            ]
+        },
+        {
+            "heading": "Religions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Religion",
+                            "Group",
+                            "Parent",
+                            "Head",
+                            "Holy Sites",
+                            "Mechanics",
+                            "Special CBs",
+                            "Modifiers"
+                        ],
+                        [
+                            "Rastafarian",
+                            "Afro-Syncretic",
+                            "-",
+                            "",
+                            "",
+                            "Raiding , river movement, female temple holders",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Afro-Syncretic",
+                            "Voodoo",
+                            "-",
+                            "",
+                            "",
+                            "Raiding , river movement, female temple holders, Zombify",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Afro-Syncretic",
+                            "Santería",
+                            "-",
+                            "",
+                            "",
+                            "Raiding , river movement, female temple holders",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Afro-Syncretic",
+                            "Candomblé",
+                            "-",
+                            "",
+                            "",
+                            "Raiding , river movement, female temple holders",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Afro-Syncretic",
+                            "Espiritista",
+                            "-",
+                            "",
+                            "",
+                            "river movement, female temple holders, Reformation",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Nanissáanah",
+                            "American Native",
+                            "-",
+                            "",
+                            "",
+                            "Concubinage",
+                            "Prepared Invasion",
+                            ""
+                        ],
+                        [
+                            "American Native",
+                            "Xhúuyee K'iigaang",
+                            "-",
+                            "",
+                            "",
+                            "Raiding , river movement, Concubinage , prestige loss while at peace",
+                            "Prepared Invasion",
+                            ""
+                        ],
+                        [
+                            "Catholic",
+                            "Christian",
+                            "-",
+                            "The Pope",
+                            "",
+                            "Excommunication , Investiture , Antipope , College of Cardinals",
+                            "Crusades",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Neo-Gnostic",
+                            "Catholic",
+                            "",
+                            "",
+                            "No penalty for female rulers/heirs, female temple holders, ambitions to remove vices",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Sedevacantist",
+                            "Catholic",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Ursuline",
+                            "-",
+                            "The Abbess-General",
+                            "",
+                            "Excommunication , Investiture , Antipope , College of Cardinals , no penalty for female rulers/heirs, female temple holders",
+                            "Crusades",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Angeline",
+                            "Ursuline",
+                            "",
+                            "",
+                            "no penalty for female rulers/heirs, female temple holders",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Confederated",
+                            "-",
+                            "Confederated Church",
+                            "",
+                            "Excommunication , Investiture , Antipope , no penalty for female rulers/heirs, female temple holders",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Anabaptist",
+                            "-",
+                            "",
+                            "",
+                            "Excommunication",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Evangelical",
+                            "-",
+                            "The Council President",
+                            "",
+                            "Autocephaly , Holy orders (National Cathedral Association,The Army Of Salvation)",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Anglican",
+                            "-",
+                            "The Archbishop of Canterbury",
+                            "",
+                            "Excommunication , Investiture , Antipope , no penalty for female rulers/heirs, female temple holders",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Antinomian",
+                            "Evangelical",
+                            "",
+                            "",
+                            "No penalty for female rulers/heirs, female temple holders",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Charismatic",
+                            "Evangelical",
+                            "",
+                            "",
+                            "Female temple holders",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Christian",
+                            "Falling Star",
+                            "-",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Sagrado Corazón",
+                            "Cult of Saints",
+                            "-",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Cult of Saints",
+                            "Gracia Divina",
+                            "-",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Cetic",
+                            "Pacific",
+                            "-",
+                            "The Celestial Emperor",
+                            "Sacramento: The capital of the Empire and the seat of Imperial Authority. San Francisco: The capital of the Kingdom of Gran Francisco. San Diego: The capital of the Kingdom of Socal. Las Vegas: Socal has de jure claims on the city. Portland: Not in Cetic hands as of 2666, instead being held by the Gaians.",
+                            "Pilgrimage , Reassert Imperial Power, Cetic Teachings, Bureaucratic government",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Pacific",
+                            "Gaian",
+                            "-",
+                            "",
+                            "",
+                            "Castration",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Pacific",
+                            "Shinto",
+                            "-",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Americanist",
+                            "Old World Cultist",
+                            "-",
+                            "The President",
+                            "Washington: Site of the Ancient American capital and numerous monuments to the Founding Fathers. The residence of President Franklin as of the year 2666. Mount Rushmore: Site of the Mount Rushmore, an Ancient American monument to four of the Ancient American presidents. Held by Americanists as of the year 2666. Manhattan:  Capitol of the Americanist Trade Republic of New York. Philadelphia: Held by Americanists as of the year 2666. Boston: . Not in Americanist hands as of the year 2666, instead being held by tribal Occultist.",
+                            "Excommunication , no penalty for female rulers/heirs, Pilgrimage , Presidential Election, Holy orders (Men in Black).",
+                            "Prepared Invasion"
+                        ],
+                        [
+                            "Old World Cultist",
+                            "Hamiltonian",
+                            "Americanist",
+                            "",
+                            "",
+                            "",
+                            "Prepared Invasion",
+                            ""
+                        ],
+                        [
+                            "Old World Cultist",
+                            "Jeffersonian",
+                            "Americanist",
+                            "",
+                            "",
+                            "",
+                            "Prepared Invasion",
+                            ""
+                        ],
+                        [
+                            "Old World Cultist",
+                            "Libertarian",
+                            "Americanist",
+                            "The First Lady",
+                            "",
+                            "Excommunication , no penalty for female rulers/heirs",
+                            "Prepared Invasion",
+                            ""
+                        ],
+                        [
+                            "Old World Cultist",
+                            "Consumerist",
+                            "-",
+                            "The High Chairman",
+                            "",
+                            "Appears via Consumerist Rising, Invest in Broker.",
+                            "Prepared Invasion , Crusade ,",
+                            ""
+                        ],
+                        [
+                            "Old World Cultist",
+                            "Atomicist",
+                            "",
+                            "",
+                            "",
+                            "Female temple holders, Atom Judgement",
+                            "Prepared Invasion",
+                            ""
+                        ],
+                        [
+                            "Mormon",
+                            "Latter-Day Saints",
+                            "-",
+                            "The (Mormon) President",
+                            "",
+                            "Excommunication , Investiture , Pilgrimage",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Latter-Day Saints",
+                            "Bickertonite",
+                            "Mormon",
+                            "The Bickertonite President",
+                            "",
+                            "Investiture , no penalty for female rulers/heirs, Pilgrimage",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Latter-Day Saints",
+                            "Woolleyite",
+                            "Mormon",
+                            "The Woolleyite President",
+                            "",
+                            "Polygamy",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Latter-Day Saints",
+                            "Strangite",
+                            "Mormon",
+                            "The Prophet-President",
+                            "",
+                            "Investiture , Polygamy , no penalty for female rulers/heirs, female temple holders, Pilgrimage",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Sol Invicta",
+                            "Mesoamerican",
+                            "-",
+                            "",
+                            "",
+                            "Raiding , female temple holders",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Mesoamerican",
+                            "Mictlantec",
+                            "-",
+                            "",
+                            "",
+                            "Raiding , female temple holders, Sacrificial Ceremony",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Mesoamerican",
+                            "Uahomche",
+                            "-",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Mesoamerican",
+                            "Neomayan",
+                            "-",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Pagan",
+                            "Pagan",
+                            "-",
+                            "",
+                            "",
+                            "Concubinage , defensive attrition",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Pagan",
+                            "Revelationist",
+                            "-",
+                            "Righteous Assembly",
+                            "",
+                            "Defensive attrition , Reformation , female temple holders",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Pagan",
+                            "Rust Cultist",
+                            "-",
+                            "The High Fabricator",
+                            "",
+                            "Defensive attrition , Reformation , Pilgrimage",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Pagan",
+                            "Occultist",
+                            "-",
+                            "The Supreme Orient",
+                            "",
+                            "Raiding , river movement, Concubinage , defensive attrition , Reformation , female temple holders",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Pagan",
+                            "Thelemic",
+                            "-",
+                            "Astron Argiron",
+                            "",
+                            "Raiding , river movement, Concubinage , defensive attrition , Reformation , female temple holders",
+                            "Prepared Invasion",
+                            ""
+                        ],
+                        [
+                            "Pagan",
+                            "Norse",
+                            "-",
+                            "The Fylkir",
+                            "",
+                            "Raiding , river movement, Concubinage , defensive attrition , Reformation , female temple holders",
+                            "Prepared Invasion",
+                            ""
+                        ],
+                        [
+                            "Brethren",
+                            "Pirate",
+                            "-",
+                            "",
+                            "Mona, located in the province of Surrey. New Providence, located in the province of New Providence. Tortuga, located in the province of Le Cap. Roatán, located in the provinces of Islas de la Bahia. Chalmet, located in the province of Nouvelle-Orléans.",
+                            "Raiding , river movement, Concubinage ,female temple holders",
+                            "",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Sacramento: The capital of the Empire and the seat of Imperial Authority.",
+                            "children": []
+                        },
+                        {
+                            "text": "San Francisco: The capital of the Kingdom of Gran Francisco.",
+                            "children": []
+                        },
+                        {
+                            "text": "San Diego: The capital of the Kingdom of Socal.",
+                            "children": []
+                        },
+                        {
+                            "text": "Las Vegas: Socal has de jure claims on the city.",
+                            "children": []
+                        },
+                        {
+                            "text": "Portland: Not in Cetic hands as of 2666, instead being held by the Gaians.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Washington: Site of the Ancient American capital and numerous monuments to the Founding Fathers. The residence of President Franklin as of the year 2666.",
+                            "children": []
+                        },
+                        {
+                            "text": "Mount Rushmore: Site of the Mount Rushmore, an Ancient American monument to four of the Ancient American presidents. Held by Americanists as of the year 2666.",
+                            "children": []
+                        },
+                        {
+                            "text": "Manhattan:  Capitol of the Americanist Trade Republic of New York.",
+                            "children": []
+                        },
+                        {
+                            "text": "Philadelphia: Held by Americanists as of the year 2666.",
+                            "children": []
+                        },
+                        {
+                            "text": "Boston: . Not in Americanist hands as of the year 2666, instead being held by tribal Occultist.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Mona, located in the province of Surrey.",
+                            "children": []
+                        },
+                        {
+                            "text": "New Providence, located in the province of New Providence.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tortuga, located in the province of Le Cap.",
+                            "children": []
+                        },
+                        {
+                            "text": "Roatán, located in the provinces of Islas de la Bahia.",
+                            "children": []
+                        },
+                        {
+                            "text": "Chalmet, located in the province of Nouvelle-Orléans.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "This section uses material from the Religions article on After the end Wikia , which is released under CC-BY-SA License ( view authors )."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This is a directory to the various religions in After The End. Heresies are in parenthesis."
+                }
+            ]
+        },
+        {
+            "heading": "Afro-Syncretic",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Rastafarianism: The primary religion of the Carribbean empire, based on the teachings of Marcus Garvey."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Voodoo: Vodouists worship a creator god, Bondye, and pray to his servants, the Loa, who act as intermediaries."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Santería: Translates roughly to \"devotion of the saints\", they worship three aspects of one god, with the saints acting as intermediaries."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Candomblé: The religion of the Brazilian invaders, a belief that focuses on worship through dance rituals."
+                }
+            ]
+        },
+        {
+            "heading": "Old World Cultists",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Americanism: This religion believes that a group known as the founding fathers were gods."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "(Hamiltonian): Americanist heresy that believes that the founding fathers had implied powers not stated in their holy texts.",
+                            "children": []
+                        },
+                        {
+                            "text": "(Jeffersonian): Americanist heresy that believes the common people and soldier of Ancient America should be revered in addition to the Founding Fathers.",
+                            "children": []
+                        },
+                        {
+                            "text": "(Libertarian): Americanist heresy that believes in superiority of Lady Liberty in the Americanist pantheon.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Atomicists: This religion believes in a godlike power known as the Atom."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Consumerism: The followers of this religion believe that the Almighty Dollar caused The Event because Americans did not conduct the ritual known as the shopping enough."
+                }
+            ]
+        },
+        {
+            "heading": "Cult of Saints",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Sagrado Corazon: A religion in Mexico that is derived from Catholicism mixed with a pantheon of several quasi-deities from ancient Mexican folklore ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Gracia Divina: A religion in Colombia that is derived from Catholicism mixed with a pantheon of local mythological figures, popular venerations of the Saints, and Bolivar deified as El Libertador."
+                }
+            ]
+        },
+        {
+            "heading": "Christians",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Evangelical: An alliance of Protestant churches from multiple denominations which form a single religion. It is centered in Holy Columbian Confederacy, and its power is heavily dependent on the authority of the Holy Columbian Emperor. Should the Emperor fail to deal with the coming Evangelical reformation properly, his authority, and that of the Evangelical Church Council, may be seriously damaged, reducing moral authority and beginning an event chain spreading heresy throughout the Evangelical world."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "(Charismatic): Christian faith that believes God and the Holy Spirit speaks through miracles. It can be found throughout the Appalachians.",
+                            "children": []
+                        },
+                        {
+                            "text": "(Antinomian): Christian faith that believes one can reach salvation based on faith alone and that one does not need to follow Mosaic law.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Anglican: The remnants of the Anglican Church of Canada, led by the Archbishop of Canterbury, New Brunswick. They can be found throughout Ontario and the Canadian Maritimes."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "(United Church): The remnants of the United Church of Canada, the Anglican Church's chief rival. After suppression by the Anglicans, it can now only be found in Toronto and the Duchy of Thunder.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Catholic : A Catholic resurgence centered in the American Midwest, with a new Papacy in St. Louis. Unlike Ursuline Catholicism, it has undergone significant syncretization with the original Protestant denominations of the region."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "(Sedevacantist): A Catholic heresy that refuses recognize the Pope in St.Louis and awaits the news of the existence or non-existence of the Roman Pope-Beyond-the-Sea.",
+                            "children": []
+                        },
+                        {
+                            "text": "(Neo-Gnostic): A syncretic faith consisting of a mixture of Christian and Cetic teachings. It is considered a Catholic heresy due to its focus on the Christian part of its teachings. Its followers can be found throughout the Rocky Mountains, especially around the holy city of Denver.",
+                            "children": []
+                        },
+                        {
+                            "text": "(Nestorian): Representing the remnants of the Chaldean Catholic Church, this group fell out of communion with the Pope in St. Louis and instead recognize the primacy of the Patriarch of the East in Chicago.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Ursuline: A group consisting of Christians who submit to the Abbess-General in Quebec and a female priesthood. They were Catholics in the distant past but now refuse to recognize the Pope in St.Louis."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "(Angeline): An Ursuline heresy that believes in clerical cohabitation with the secular world and rejects cloistered monastic life.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Falling Star: A Christian religion championed by the Miskito people of Central America in the aftermath of the Event. Its theology is heavily influenced by the Moravian Church."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Anabaptist: A branch of Christianity which includes the Amish, Hutterites, and Mennonites. These groups banded together to survive in the post-Event world and now dominate upstate New York and central Pennsylvania."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Apostolic: A formerly Catholic Church that split from Rome before the Event. It is now the form of Christianity followed by the Brazilian emperors, and has several different branches."
+                }
+            ]
+        },
+        {
+            "heading": "Latter-day Saints",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Mormon:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Bickertonite:",
+                            "children": []
+                        },
+                        {
+                            "text": "Godbeite:",
+                            "children": []
+                        },
+                        {
+                            "text": "Strangite:",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Pagans",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Rust Cultists: Centered around the veneration of Old World machinery and factories",
+                            "children": []
+                        },
+                        {
+                            "text": "Occultists: A system of beliefs based around the writings of H.P. Lovecraft",
+                            "children": []
+                        },
+                        {
+                            "text": "Revelationists: This religion is vaguely Christian, but highly distorted and having extreme emphasis on the miraculous.",
+                            "children": []
+                        },
+                        {
+                            "text": "Norse : A revival of the old Norse ways centered around Minnesota and Wisconsin that believes that the Christian god failed Old America and the their old gods can protect them where their Christian god could not.",
+                            "children": []
+                        },
+                        {
+                            "text": "Thelemic: A British cult inspired by the writings of Aleister Crowley and centered around the veneration of the Queen of England.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Native American",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Nanissáanah: Translating to \"Ghost Dance\", this is the traditional faith of the Plains Indians of the American Heartland.",
+                            "children": []
+                        },
+                        {
+                            "text": "Xhúuyee K'iigaang: Translating to \"Raven Tales\", the traditional faith of the Haida and Natives of the Pacific Northwest.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Mesoamerican",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Mictlantec: An Aztec-derived belief system that is the most similar faith to the classical Aztec religion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Neomayan: A syncretic Mayan religion formed from a mix of Mayan beliefs and an assortment of outside influences.",
+                            "children": []
+                        },
+                        {
+                            "text": "Sol Invicta: An Aztec-derived belief system that revolves around the worship of a powerful sun goddess.",
+                            "children": []
+                        },
+                        {
+                            "text": "Uahomche: A Mayan-derived religion that carries on traditional Mayan beliefs with few outside influences.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Pacific",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Cetic: A faith centered around the reverence of the Emperor of California that is closer to a spiritual lifestyle than a true religion and derives from several different philosophies and historical teachings.",
+                            "children": []
+                        },
+                        {
+                            "text": "Gaian: The worship of the spirits of all things in nature with a pervasive belief in female superiority.",
+                            "children": []
+                        },
+                        {
+                            "text": "Shinto: The faith of the Japanese \"colonists\" is a blend of traditional Japanese and Buddhist religions and Emperor worship.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Pirate",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Brethren: The followers of this religion worship various gods of the sea, believing it to be the source of all things, from sustenance to wealth."
+                }
+            ]
+        },
+        {
+            "heading": "Cultures",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Links",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Official Dev website",
+                            "children": []
+                        },
+                        {
+                            "text": "AtE wikia (Note: this is for the original only)",
+                            "children": []
+                        },
+                        {
+                            "text": "List of some easter eggs",
+                            "children": []
+                        },
+                        {
+                            "text": "Forum at Paradox",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

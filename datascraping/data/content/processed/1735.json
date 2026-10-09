@@ -1,0 +1,3823 @@
+{
+    "pageid": 1735,
+    "title": "Diplomatic actions",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Diplomatic actions are accessed by right-clicking a character 's portrait."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Many interactions show approximate AI reasoning in tooltips:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Each reason is shown with a number of - of +",
+                            "children": []
+                        },
+                        {
+                            "text": "++ indicates a range from +1.5 to +2.4",
+                            "children": []
+                        },
+                        {
+                            "text": "---------- sometimes indicates a \"blocking\" reason that cannot be overcome with enough + ' s",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Most interactions require the target to be within diplomatic range . Your nearest controlled provinces must be within a distance of 700 though characters of the same religion or culture receive a large range with each other. Notable exceptions to the range requirement are ransoming/abducting prisoners, the \"straighten up\" interaction for decadent relatives, and special requests made of religious heads ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The following actions may be available:"
+                }
+            ]
+        },
+        {
+            "heading": "Feudalism",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Revoke title",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Grant landed title",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You must be able to give away the title:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Cannot give away your sole primary title",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot give away your capital if you are not allowed to change capital",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot give away a county or barony that is occupied",
+                            "children": []
+                        },
+                        {
+                            "text": "Title is not contested in a war (as the wargoal)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The recipient must be able to take the title:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "For feudal titles, recipient \"must be able to marry and produce heirs\" (not Eunuch , Monk , or Nun ).",
+                            "children": [
+                                {
+                                    "text": "However, eunuchs who are already landed can be granted higher titles such as duchies.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Characters who are merely unlikely to reproduce can still be granted titles. This includes celibate characters, lepers, and old women.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "For duchies and higher, recipient must already hold a county or higher (or granting \"with lower titles\")",
+                            "children": []
+                        },
+                        {
+                            "text": "Women may only be granted titles if:",
+                            "children": [
+                                {
+                                    "text": "they are already landed, or",
+                                    "children": []
+                                },
+                                {
+                                    "text": "the realm has Absolute Cognatic succession , or",
+                                    "children": []
+                                },
+                                {
+                                    "text": "the title is theocratic, and both your religion and her religion allow female temple holders",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "For religious head titles, recipient must have correct religion",
+                            "children": []
+                        },
+                        {
+                            "text": "In addition for the caliphates the recipient must have the Mirza or Sayyid trait",
+                            "children": []
+                        },
+                        {
+                            "text": "Hindu recipients must have the correct caste",
+                            "children": []
+                        },
+                        {
+                            "text": "Children cannot be given theocratic titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Not imprisoned",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Furthermore, the following requirements apply to grants:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Recipient must be in your realm (OR: at peace and granting to a holy order captain or religious head, e.g. the Pope )",
+                            "children": []
+                        },
+                        {
+                            "text": "Nomads cannot grant counties to non-nomads and courtiers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot grant kingdoms to theocracies or holy orders (as a ruler of different government)",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot grant counties to ruler of different government groups, if it would put you over one of the following limits:",
+                            "children": [
+                                {
+                                    "text": "Feudal realms are limited to 10% of counties under republic control and 10% of counties under theocratic control",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Merchant republics are limited to 10% of counties under theocratic control",
+                                    "children": []
+                                },
+                                {
+                                    "text": "This rule is not enforced when granting a county to a courtier",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Cannot give theocracies more than one duchy or kingdom",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot grant titles to patricians (even doges!) unless you are their direct liege",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot give your primary heir more than a single county title, if using gavelkind succession. Furthermore, the county must be one they already expected to inherit.",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot give your primary heir a theocratic title (as this will disinherit him). Note that Muslim holders of mosques are considered feudal, so these restrictions don't apply to them.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Notes:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The recipient does not need to be a direct vassal. This means that if the recipient ends up with the same rank as his current liege, he will no longer be a vassal to that liege.",
+                            "children": []
+                        },
+                        {
+                            "text": "Granting a title of the same rank as your primary title will make the recipient independent (of you; they will share your liege if you're a vassal).",
+                            "children": []
+                        },
+                        {
+                            "text": "Granting a title automatically transfers lower de jure vassals.",
+                            "children": [
+                                {
+                                    "text": "This gives an opinion bonus (+10 vassal transfer) for each transferred vassal of count+ tier.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Vassals de jure of your lower-tier titles will not be transferred (e.g. when granting a kingdom but holding a duchy in it, counts of that duchy will not be transferred)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "The recipient will get a positive opinion modifier toward you for 10 years. The size of the bonus depends on the title granted:",
+                            "children": [
+                                {
+                                    "text": "Barony: +20",
+                                    "children": []
+                                },
+                                {
+                                    "text": "County: +40",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Duchy: +60",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Kingdom: +80",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Empire: +100",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "These bonuses stack.",
+                            "children": []
+                        },
+                        {
+                            "text": "Granting a county to a local mayor (or priest) will raise their existing city (or temple) to the status of county capital.",
+                            "children": []
+                        },
+                        {
+                            "text": "Granting a county or barony to a courtier will give them the best government type for the given holding type.",
+                            "children": []
+                        },
+                        {
+                            "text": "Creating a theocracy of your religion (or granting land to a theocracy of your religion) gives piety. Not applicable to Muslims.",
+                            "children": []
+                        },
+                        {
+                            "text": "A title that has been granted cannot be revoked within the next 12 months.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Grant viceroyalty",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Requirements:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Charlemagne DLC",
+                            "children": []
+                        },
+                        {
+                            "text": "Granter:",
+                            "children": [
+                                {
+                                    "text": "Emperor or king",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Feudal or Iqta",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Viceroyalty law",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Recipient:",
+                            "children": [
+                                {
+                                    "text": "Count or above",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Same government type",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Effects:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The recipient will be ruler of the viceroyal tile",
+                            "children": []
+                        },
+                        {
+                            "text": "Granting a viceroyal duchy to a count may change their succession law to primogeniture",
+                            "children": []
+                        },
+                        {
+                            "text": "Granting a viceroyal kingdom to a count or duke will change their succession law to match the kingdom's law",
+                            "children": []
+                        },
+                        {
+                            "text": "The opinion bonus is half that of granting a title",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Notes about viceroys:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Viceroyal titles revert to liege upon the viceroy's death",
+                            "children": []
+                        },
+                        {
+                            "text": "Vassals of viceroys cannot use \"claim on liege\" factions to replace the viceroy",
+                            "children": [
+                                {
+                                    "text": "However, vassals of viceroys can use oust ruler factions (AI: only for hated tyrants ) or directly declare claim wars (AI: never).",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "If a viceroyal title reverts to top liege, it ceases to be a viceroyalty",
+                            "children": []
+                        },
+                        {
+                            "text": "If a viceroy becomes independent, the title becomes hereditary",
+                            "children": []
+                        },
+                        {
+                            "text": "If you grant independence to a viceroy, you gain a strong but non-inheritable claim on the title (but also a 10-year truce)",
+                            "children": []
+                        },
+                        {
+                            "text": "If you have feudal vassals with non-de-jure territory, granting them the relevant viceroyalty causes that non-de-jure territory to revert, as if they controlled it only because you granted them the viceroyalty. Thus, you can steal vassals from overextended feudal vassals.",
+                            "children": []
+                        },
+                        {
+                            "text": "If you have Imperial Administration, you may revoke duchy-tier viceroy titles without upsetting other vassals",
+                            "children": []
+                        },
+                        {
+                            "text": "Note that the Conclave council law for granting titles does not include viceroyalties.",
+                            "children": []
+                        },
+                        {
+                            "text": "Having direct vassal viceroys upsets feudal duke+ vassals (except those with viceroyalties as primaries). This makes it disadvantageous to have a large empire that's half feudal and half viceregal. The penalties are:",
+                            "children": [
+                                {
+                                    "text": "-2 opinion per viceroy kingdom held by a (direct) vassal",
+                                    "children": []
+                                },
+                                {
+                                    "text": "-1 opinion per viceroy duchy held by a direct vassal",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Award honorary title",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Conditions are:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Character is your courtier or direct vassal",
+                            "children": []
+                        },
+                        {
+                            "text": "Character is not imprisoned",
+                            "children": []
+                        },
+                        {
+                            "text": "Character matches the requirements of the honorary title",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Revoke honorary title",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Revoking an honorary title with a positive opinion modifier adds the opinion malus \"Revoked my Honorary Title\" (-20)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The titles of Court Guru and Hermetic's Apprentice cannot be revoked. The title of Court Physician cannot be revoked while being treated."
+                }
+            ]
+        },
+        {
+            "heading": "Offer vassalization",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Independent rulers will sometimes accept diplomatic vassalization , swearing fealty to a liege peacefully. This is a useful way to expand one's realm without going to war or needing to forge a claim ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "AI rulers will never accept diplomatic vassalization if any of the following are true:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Ruler is a king or equivalent.",
+                            "children": []
+                        },
+                        {
+                            "text": "Ruler is a different religion than the liege.",
+                            "children": []
+                        },
+                        {
+                            "text": "Ruler is neither a rightful de jure vassal nor a neighbour.",
+                            "children": []
+                        },
+                        {
+                            "text": "Ruler has more troops than the liege.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If none of the above are true, AI rulers will swear fealty when asked if they like the liege, the liege has a significantly larger number of troops, and at least two of the following are true:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Ruler is at least two ranks below the liege (Baron-Duke, Count-King, Duke-Emperor).",
+                            "children": []
+                        },
+                        {
+                            "text": "Ruler is the same culture as liege.",
+                            "children": []
+                        },
+                        {
+                            "text": "Liege is the rightful de jure overlord (using primary title as basis).",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factors",
+                            "Value",
+                            "Description"
+                        ],
+                        [
+                            "I am a king!",
+                            "-5 (blocking)",
+                            "Kings cannot be vassalized diplomatically."
+                        ],
+                        [
+                            "False religion",
+                            "-5 (blocking)",
+                            "Even if the same religious group as liege."
+                        ],
+                        [
+                            "Distant realm",
+                            "-5 (blocking)",
+                            "You need a land border with the character, if you're not their de jure liege."
+                        ],
+                        [
+                            "Weaker than I am",
+                            "-6 (blocking)",
+                            "Military must be superior to the vassal"
+                        ],
+                        [
+                            "Base reluctance",
+                            "-2",
+                            ""
+                        ],
+                        [
+                            "Not my de jure Liege",
+                            "-3",
+                            ""
+                        ],
+                        [
+                            "Foreign culture",
+                            "-4 or -3",
+                            "-3 if same culture group"
+                        ],
+                        [
+                            "Small difference in rank",
+                            "-3",
+                            "At least two ranks difference (Baron-Duke, Count-King, Duke-Emperor) to negate"
+                        ],
+                        [
+                            "Power",
+                            "-5 to +5",
+                            "Amount varies based on relative military power. If you're weaker than the target, \"Weaker than I am\" will trigger instead of a negative Power modifier"
+                        ],
+                        [
+                            "Opinion",
+                            "-2 to +1",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Swear fealty",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Independent",
+                            "children": []
+                        },
+                        {
+                            "text": "At peace",
+                            "children": []
+                        },
+                        {
+                            "text": "Not imprisoned",
+                            "children": []
+                        },
+                        {
+                            "text": "New liege must be an independent ruler of higher rank than you",
+                            "children": []
+                        },
+                        {
+                            "text": "New liege must be your neighbor or de jure liege",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Transfer vassalage",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Effects:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Give control of a direct vassal of yours to another vassal, of higher rank than the transferred vassal.",
+                            "children": []
+                        },
+                        {
+                            "text": "Gives +10 opinion bonus for 10 years",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Requirements:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Vassal to be transferred is not at war",
+                            "children": []
+                        },
+                        {
+                            "text": "Vassal to be transferred is not an antipope",
+                            "children": []
+                        },
+                        {
+                            "text": "Vassal to be transferred is not a minor patrician",
+                            "children": []
+                        },
+                        {
+                            "text": "Dukes may be transferred only to their de jure liege when that title exists (does not apply to titular dukes)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example, suppose you're the King of Ireland and the Duke of Munster is your vassal. When you vassalise the Earl of Desmond, he's your direct vassal, but his county is de jure part of Munster. This situation gives the Duke of Munster a -25 \"Wants Control of the County of Desmond\" opinion penalty towards you. Transferring Desmond's vassalage to Munster (making him Munster's vassal instead of yours) removes these penalties but also gives an opinion bonus, for an opinion swing of 35 per vassal transferred. This is the main reason why it's a good idea to keep de jure territories together."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If a count is leading a faction , transferring his vassalage to a duke will completely remove the faction, requiring someone else to found it again and all the previous members to rejoin. This is a good way to take care of a faction."
+                }
+            ]
+        },
+        {
+            "heading": "Retract vassalage",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Grant independence",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You may grant independence to a direct vassal who is at peace, and is either not a de jure vassal or of a different religion."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The target becomes independent.",
+                            "children": []
+                        },
+                        {
+                            "text": "Adds the opinion modifier \"Granted Independence: +30\" for 10 years. You will not be able to offer them vassalization  again, though you can still press claims against them.",
+                            "children": []
+                        },
+                        {
+                            "text": "Creates a bilateral 10-year truce. Thus, you cannot declare war immediately after making them independent without breaking a truce and losing a ton of prestige.",
+                            "children": []
+                        },
+                        {
+                            "text": "Granting independence to a viceroy gives you a strong, non-inheritable claim on the viceregal title",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduces threat",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you are a vassal, you cannot grant full independence to your vassals, but you can use the Transfer Vassalage action to transfer them to your liege instead."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Independent rulers cannot join factions against you, so selectively granting independence is one way to avoid a civil war."
+                }
+            ]
+        },
+        {
+            "heading": "Demand peace",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With The Reaper's Due , players may demand that a vassal end a war, either forcing the attacker to white peace or the defender to surrender."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you hold a favor on the vassal, they cannot refuse. If the vassal holds a favor on you, you cannot make the demand."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Otherwise, there is a five-year cooldown and the vassal has several choices. They may offer to comply for a favor (if Conclave is enabled), offer to comply for money, or refuse. With Late Feudal or Imperial Administration, refusal is considered treachery, providing just cause for imprisonment or revocation."
+                }
+            ]
+        },
+        {
+            "heading": "Demand gavelkind",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With The Reaper's Due , players may demand that a feudal vassal switch to gavelkind succession. The favor mechanics and vassal options are similar to \"Demand peace\", above."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Targeted vassal:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Direct Vassal",
+                            "children": []
+                        },
+                        {
+                            "text": "The Reaper's Due expansion",
+                            "children": []
+                        },
+                        {
+                            "text": "Feudal",
+                            "children": []
+                        },
+                        {
+                            "text": "Not a Viceroy",
+                            "children": []
+                        },
+                        {
+                            "text": "Not imprisoned",
+                            "children": []
+                        },
+                        {
+                            "text": "Not incapable",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Gavelkind already",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Suggest Fatwa",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A Muslim ruler may request a Fatwa against a vassal whose dynasty is seen as decadent . If the ruler's Court Imam agrees to issue a Fatwa, it allows the ruler to imprison the vassal or revoke one title."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Ruler:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Less than 40% decadence",
+                            "children": []
+                        },
+                        {
+                            "text": "At least 100 piety",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Targeted vassal:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "At least 40% decadence",
+                            "children": []
+                        },
+                        {
+                            "text": "Less than 100 piety",
+                            "children": []
+                        },
+                        {
+                            "text": "Not the same dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "At least 16 years old",
+                            "children": []
+                        },
+                        {
+                            "text": "Landed",
+                            "children": []
+                        },
+                        {
+                            "text": "Has not had a Fatwa suggested against them within the last 1140 days (3.1 years)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the Court Imam is AI-controlled, he decides based on the opinion of the liege and target (cutoffs at -50, 0, +50)."
+                }
+            ]
+        },
+        {
+            "heading": "Courtiers",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Invite to court",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The target character must be:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Not a ruler",
+                            "children": []
+                        },
+                        {
+                            "text": "Not having a claim pressed",
+                            "children": []
+                        },
+                        {
+                            "text": "Not imprisoned",
+                            "children": []
+                        },
+                        {
+                            "text": "Not a concubine or consort",
+                            "children": []
+                        },
+                        {
+                            "text": "Women in patrilineal marriages (and men in matrilineal marriages) cannot be invited if they are in the same court as their spouse",
+                            "children": []
+                        },
+                        {
+                            "text": "Not a loyal servant",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When invited without a favor , courtiers accept or decline based on the following factors:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factors",
+                            "Value",
+                            "Display",
+                            "Description"
+                        ],
+                        [
+                            "False Religion",
+                            "Blocking",
+                            "-----",
+                            "If different religious group (i.e. Infidel). Not applied for heretic or religious differences inside the same religious group."
+                        ],
+                        [
+                            "Preparing adventure against me",
+                            "Blocking",
+                            "-----",
+                            ""
+                        ],
+                        [
+                            "Opinion of <Requester>",
+                            "1 ⋅ dislike 1 ⋅ like",
+                            "",
+                            "A courtier who likes you is more likely to accept your invitation. Linear."
+                        ],
+                        [
+                            "Opinion of <Current Liege>",
+                            "½ ⋅  dislike 2 ⋅  like",
+                            "",
+                            "A factor of ½ is applied to negative opinions, while a factor of 2 is applied to positive opinions. The latter means that a courtier with even a moderately positive opinion of their liege can be very difficult to invite."
+                        ],
+                        [
+                            "Requester's rival",
+                            "",
+                            "-----",
+                            "Rival"
+                        ],
+                        [
+                            "Hates their liege",
+                            "",
+                            "+++",
+                            "Rival?"
+                        ],
+                        [
+                            "<Current liege> is unable to press my claims",
+                            "+50",
+                            "+++",
+                            "Men. Current liege controls some(?) of the character's claimed titles. Increased for multiple claims(?). The courtier hopes you will press the claim in his name against his previous liege."
+                        ],
+                        [
+                            "<Requester> is unable to press my claims",
+                            "",
+                            "-----",
+                            "Men. You control all(?) of the character's claimed titles, and thus cannot press his claims (unless you first grant independence to a vassal)."
+                        ],
+                        [
+                            "<Requester> has the power to press my claims",
+                            "",
+                            "+++",
+                            ""
+                        ],
+                        [
+                            "<Requester> is my lover",
+                            "",
+                            "+++",
+                            ""
+                        ],
+                        [
+                            "Wants to stay with lover",
+                            "",
+                            "---",
+                            "Even if lover is spouse who would move with them"
+                        ],
+                        [
+                            "<Requester> is my friend",
+                            "",
+                            "+",
+                            ""
+                        ],
+                        [
+                            "Close relative",
+                            "",
+                            "++",
+                            "You are a close relative and the current liege is not"
+                        ],
+                        [
+                            "No reason to move",
+                            "-20",
+                            "-",
+                            "If none of above reasons are applicable. May be waived for some characters who do not hold council or commander positions."
+                        ],
+                        [
+                            "Base Reluctance",
+                            "-10",
+                            "-",
+                            "Always applied."
+                        ],
+                        [
+                            "Found my calling",
+                            "",
+                            "-----",
+                            "Most members of holy orders and theocracies (including vassals of theocracies)"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Opinion difference for accepting invitations",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "As an example, a player might want to invite a lowborn councilor. To overcome \"no reason to move\" (-20) and \"base reluctance\" (-10), the adjusted opinion difference must be at least 31. Specifically, the courtier's opinion of the inviter must be 31 points higher than (half negative opinion of liege, or double positive opinion of liege)."
+                }
+            ]
+        },
+        {
+            "heading": "Ask to leave court",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Courtier is adult, not incapable, not imprisoned, not in seclusion",
+                            "children": []
+                        },
+                        {
+                            "text": "Courtier is not your close relative or spouse",
+                            "children": []
+                        },
+                        {
+                            "text": "Courtier is not your regent",
+                            "children": []
+                        },
+                        {
+                            "text": "If they are your concubine, councilor, commander, designated regent, or court physician, you might have to fire them first.",
+                            "children": []
+                        },
+                        {
+                            "text": "If they have a spouse in your court, at least one of their spouses must also be able to leave",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Lose 5 prestige. The courtier and their spouses move, along with any children."
+                }
+            ]
+        },
+        {
+            "heading": "Order to take the vows",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With the Sons of Abraham DLC, followers of monastic religions may order unlanded courtiers to take the vows. This most commonly done in order to disinherit a family member or select a successor for an Open elective vassal theocracy."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The requester must:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Follow a monastic religion: Christian religion group, Indian religion group, Manichean, or any religion  with the \"Monasticism\" or \"Totem-Guardians\" doctrine .",
+                            "children": []
+                        },
+                        {
+                            "text": "Be an adult",
+                            "children": []
+                        },
+                        {
+                            "text": "Not have a regent .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The target character must be an adult courtier of your religion, and either:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Unmarried and not heir to any title or",
+                            "children": []
+                        },
+                        {
+                            "text": "In your prison or",
+                            "children": []
+                        },
+                        {
+                            "text": "Same dynasty and you both have a bloodline with the feature \"Characters of this bloodline more readily take vows\"",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Ordering a courtier to take the vows costs 50 piety and has the following effects:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "They will gain an appropriate ascetic trait (e.g. monk or nun ), disqualifying them from inheritance .",
+                            "children": []
+                        },
+                        {
+                            "text": "They will join a monastic order (if possible).",
+                            "children": []
+                        },
+                        {
+                            "text": "They will leave your court for a theocracy in the same realm (if possible).",
+                            "children": []
+                        },
+                        {
+                            "text": "If imprisoned, they will be freed",
+                            "children": []
+                        },
+                        {
+                            "text": "If married, their marriages will be annulled",
+                            "children": []
+                        },
+                        {
+                            "text": "If not Zealous , they will be upset",
+                            "children": []
+                        },
+                        {
+                            "text": "When sending away your own child, has a 10% chance to add Stressed if you are benevolent (have at least one of Affectionate , Charitable , Just , Kind , or Patient , and no evil trait), or remove it if you are evil (have at least one of Arbitrary , Cruel , or Impaler , and no benevolent trait)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Send to Holy Order",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Christian rulers may order their courtiers to join a holy order . This is most commonly done in order to disinherit a family member or to vie for dynastic control of the holy order."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The target character must be an adult male courtier of your religion, and either:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Unmarried and not heir to any title, or",
+                            "children": []
+                        },
+                        {
+                            "text": "In your prison",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Costs 50 piety."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The courtier will either move to the selected holy order and become Celibate , or flee to another court and become your rival . Success depends on relative intrigue and on the target's traits:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Always succeeds if the target is Content , Monk , Zealous , Humble , Brave , Crusader , or Celibate",
+                            "children": []
+                        },
+                        {
+                            "text": "More likely to succeed if target is Diligent , Temperate , Chaste , Holy warrior , married",
+                            "children": []
+                        },
+                        {
+                            "text": "Less likely to succeed if target is Ambitious , Greedy , Cynical , Envious , Proud",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Council",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Appoint councilor",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can appoint councilors using the Council Positions interface, or by right-clicking a character you wish to appoint when a position is empty."
+                }
+            ]
+        },
+        {
+            "heading": "Fire councilor",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Cannot fire a councilor who recently forced their way onto the council using a favor (but can still reassign them)",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot fire councilors during a law vote",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot fire your regent (if they also hold a named position)",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot fire your court imam if you both follow the same Muslim religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot fire powerful vassals from the council if the full council authority law is enacted",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Firing a councilor upsets them:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "-5 opinion (recently fired) for 2 years. Cannot be reappointed during this time.",
+                            "children": []
+                        },
+                        {
+                            "text": "-15 opinion (fired from council) for 10 years.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Change council position",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With Conclave DLC, it is possible to move a councilor to another open position, or swap the jobs of two councilors."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Each councilor must be eligible for the new position. If a councilor is in seclusion , it is not possible to select them as the first in a swap, but it may be possible to select them as the second. It is not possible to swap a Court Imam who shares your Muslim religion (as this would create a sneaky way to fire them)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Councilors can be assigned new job actions immediately after changing position, avoiding the usual 6 month timer."
+                }
+            ]
+        },
+        {
+            "heading": "Request council position",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Use a favor to force your liege to give you a council position of your choice."
+                }
+            ]
+        },
+        {
+            "heading": "Resign from council",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Liege will have -10 opinion (\"Resigned from Council\") for 10 years unless you are over 65, have less than 3 health, or are sick or injured. This opinion modifier prevents your liege from re-appointing you and prevents you from requesting a new position."
+                }
+            ]
+        },
+        {
+            "heading": "Call in council support",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Councilor can currently vote freely",
+                            "children": []
+                        },
+                        {
+                            "text": "You hold a favor on them",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "They will vote as you do on the council for 3 years. (Exception: if you're their liege, they'll reject law proposals from other councilors, rather than waiting to see how you feel.)"
+                }
+            ]
+        },
+        {
+            "heading": "Request council support",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Councilor can currently vote freely",
+                            "children": []
+                        },
+                        {
+                            "text": "You do not already owe them a favor",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "They will vote as you do, but you will owe them a favor."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factors",
+                            "Value",
+                            "Description"
+                        ],
+                        [
+                            "Base reluctance",
+                            "-2",
+                            ""
+                        ],
+                        [
+                            "Opinion of requester",
+                            "",
+                            ""
+                        ],
+                        [
+                            "I don't want to be imprisoned",
+                            "+6",
+                            "You have a reason to imprison them; they can use the favor to ask for a pardon"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Misc",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Send gift",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Send gift (also referred to as a \"bribe\") allow to pay a certain amount of money to a character, in exchange for a 5 years opinion boost."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The opinion increase is determined by:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "the state diplomacy of the sender",
+                            "children": []
+                        },
+                        {
+                            "text": "bonus if sender is not liege-or-above of recipient",
+                            "children": []
+                        },
+                        {
+                            "text": "bonus for positive ai_greed , which is based on their personality traits . A charitable (-25 greed) character will respond as well as a character with no traits, but a greedy (+25 greed) character will respond far better.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Trait",
+                            "Charitable",
+                            "Temperate",
+                            "Diligent",
+                            "Slothful Cruel",
+                            "Gluttonous Lustful",
+                            "Greedy"
+                        ],
+                        [
+                            "ai_greed",
+                            "-25",
+                            "-5",
+                            "-2.5",
+                            "+2.5",
+                            "+5",
+                            "+25"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The cost of the gift is 15x the monthly income of the recipient (but never less than 15 gold total)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Gifts are commonly used as a way to get reluctant people to join plots, accept alliances, or move to your court. Do note that multiple gifts do not stack, so sending more money will only help to extend the opinion bonus period."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Gifts can also be used for purposes other than the opinion boost:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Interfere in a war (especially a vassal war) by helping one side hire mercenaries",
+                            "children": []
+                        },
+                        {
+                            "text": "Increase the chance of arresting a courtier you intend to banish (seizing back the gift, of course)",
+                            "children": []
+                        },
+                        {
+                            "text": "Increase a prisoner's wealth so they can pay you ransom before they die",
+                            "children": []
+                        },
+                        {
+                            "text": "Save the finances of an important vassal or an ally after a lost offensive war, to prevent the appearance of bad modifiers in their demesne that would undermine their contributions to you and make them vulnerable to attacks",
+                            "children": []
+                        },
+                        {
+                            "text": "Help an ally to create or usurp titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Lure a rival into an offensive war with his newfound wealth, before attacking him and both ruining his war and getting an easy victory.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Give artifact",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Transfers an artifact from your treasury to another character. If accepted, increases opinion by 15 times the artifact quality (modified by greed) for 5 years."
+                }
+            ]
+        },
+        {
+            "heading": "Demand religious conversion",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Inspire Meliorism",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Ruler can spend 500 Prestige and 150 Piety to increase courtier or own attributes, with a reformed pagan faith including the Stability doctrine."
+                }
+            ]
+        },
+        {
+            "heading": "Assign guardian",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can propose guardianship if either the child or the guardian is in your court. If both characters are in your court, it happens immediately as it does not require another ruler's permission."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that landed council members reside in the court of their liege . To have a child educated by a landed council member, you must ask their liege. To remove a child from being educated by a landed council member, you might have to first move them to be educated in your court before you can send them elsewhere."
+                }
+            ]
+        },
+        {
+            "heading": "Child in another court",
+            "level": 4,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factors",
+                            "Value",
+                            "Description"
+                        ],
+                        [
+                            "Requester is my parent",
+                            "Yes",
+                            ""
+                        ],
+                        [
+                            "Guardian is parent of child",
+                            "Yes",
+                            ""
+                        ],
+                        [
+                            "Requester is my regent",
+                            "Yes",
+                            ""
+                        ],
+                        [
+                            "Requester is my liege",
+                            "Yes",
+                            "Hidden requirement: guardian's culture and religion matches requestee's"
+                        ],
+                        [
+                            "Opinion of requester",
+                            "+1 to +3 ?",
+                            "Vassal is hesitant to have their child educated with another culture or religion"
+                        ],
+                        [
+                            "Child would be a hostage",
+                            "No",
+                            "You are not their liege or parent"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Guardian in another court",
+            "level": 4,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factors",
+                            "Value",
+                            "Description"
+                        ],
+                        [
+                            "Same realm",
+                            "Yes",
+                            ""
+                        ],
+                        [
+                            "Glad to take a hostage",
+                            "Yes",
+                            "Child is close relative of requester (but is not the requester)"
+                        ],
+                        [
+                            "Same dynasty",
+                            "+1",
+                            "Child and requestee are same dynasty"
+                        ],
+                        [
+                            "Base reluctance",
+                            "-1",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Opinion effects",
+            "level": 4,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Allowing someone to tutor your child or grandchild will make both the guardian and their employer like you more ( +10 Entrusted Ward , 11 years)",
+                            "children": [
+                                {
+                                    "text": "But if this privilege is revoked, they will like you less ( -15 Lost a Ward , 5 years)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "If your child goes without a guardian for too long, a vassal may request to become the guardian.",
+                            "children": [
+                                {
+                                    "text": "They will be unhappy if denied ( -10 Denied Guardianship of Child , 2 years)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Your liege may propose a guardian for your child, if you select a guardian who is not of your liege's religion and culture.",
+                            "children": [
+                                {
+                                    "text": "They will be upset if denied ( -15 Refused Offer of Guardianship , 10 years)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "As long as they feel this way, they will not ask again (even for a different child), so you won't get a stacking penalty.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When a child becomes an adult, they gain a positive opinion of their guardian ( +15 Mentor , 20 years)"
+                }
+            ]
+        },
+        {
+            "heading": "Request permission for heritage focus",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Conclave DLC",
+                            "children": []
+                        },
+                        {
+                            "text": "Child is not a prisoner",
+                            "children": []
+                        },
+                        {
+                            "text": "Child is educated in your court",
+                            "children": []
+                        },
+                        {
+                            "text": "Child is landless or your direct vassal",
+                            "children": []
+                        },
+                        {
+                            "text": "Child is younger than 10",
+                            "children": []
+                        },
+                        {
+                            "text": "Educator has a different religion or culture than child",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The child's liege will decide whether to allow the heritage focus. The AI always accepts."
+                }
+            ]
+        },
+        {
+            "heading": "Suicide",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Buy a favor",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can buy favors from adults who are not in hiding, not imprisoned, not incapable, not holding a temporary title. Most characters will accept at +26 opinion."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You cannot buy a favor from someone who is currently \"influenced by your favor\". This includes the direct influence of \"call in council support\" and \"request council support\", but also some other uses of favors where you might not notice the extended duration unless they happen to be on your council."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factors",
+                            "Value",
+                            "Description"
+                        ],
+                        [
+                            "Conflicting interests",
+                            "-5 (blocking)",
+                            "When the character is a councilor, and has called in voting  support from another When the character is an independent ruler within your zone of influence"
+                        ],
+                        [
+                            "Opinion of requester",
+                            "+5 to -5",
+                            ""
+                        ],
+                        [
+                            "You are a threat",
+                            "-1",
+                            "This applies if they are a ruler in a defensive pact against you."
+                        ],
+                        [
+                            "Money is welcome",
+                            "+1 to +3",
+                            "Greedy trait, or low wealth to income ratio?"
+                        ],
+                        [
+                            "My war is costing a lot",
+                            "+1",
+                            "Applies if they are at war."
+                        ],
+                        [
+                            "I have better use for the favor",
+                            "-1",
+                            "When attempting to \"buy back\" a favor that you owe"
+                        ],
+                        [
+                            "I'm your liege",
+                            "-2",
+                            ""
+                        ],
+                        [
+                            "Base reluctance",
+                            "-1",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "When the character is a councilor, and has called in voting  support from another",
+                            "children": []
+                        },
+                        {
+                            "text": "When the character is an independent ruler within your zone of influence",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The cost of a favor is 40x their monthly income, with a minimum depending on their rank:\nFor unlanded children, the cost seems to be their main parent's rank. So, if they are the children of a king, buying a favor would cost 400 gold."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Rank of character, parent, or heir title",
+                            "Minimum favor cost"
+                        ],
+                        [
+                            "Courtier",
+                            "40 or 80, depending on ???"
+                        ],
+                        [
+                            "Baron",
+                            "40"
+                        ],
+                        [
+                            "Count",
+                            "80"
+                        ],
+                        [
+                            "Duke",
+                            "200"
+                        ],
+                        [
+                            "King",
+                            "400"
+                        ],
+                        [
+                            "Emperor",
+                            "680"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Plots",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Invite to plot",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factors",
+                            "Value",
+                            "Description"
+                        ],
+                        [
+                            "Base reluctance",
+                            "-3",
+                            ""
+                        ],
+                        [
+                            "Political concerns against <Plot target>",
+                            "-3 to +2 ?",
+                            ""
+                        ],
+                        [
+                            "Opinion of <Plot target>",
+                            "-10 to +5 ?",
+                            ""
+                        ],
+                        [
+                            "Opinion of <Requester>",
+                            "-5 to +5 ?",
+                            ""
+                        ],
+                        [
+                            "Amoral",
+                            "+1 to +2",
+                            "For assassination plots, negative ai_honor (from traits such as deceitful and envious )"
+                        ],
+                        [
+                            "Moral Qualms",
+                            "-1 to -3",
+                            "For assassination plots, positive ai_honor (from traits such as honest and just )"
+                        ],
+                        [
+                            "Already backing a similar plot",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Already leading a similar plot",
+                            "",
+                            "Negative for \"trying to fabricate a claim on the same title\""
+                        ],
+                        [
+                            "Has got the same plot",
+                            "",
+                            "Positive for \"trying to murder the same character\""
+                        ],
+                        [
+                            "Conflicting interests",
+                            "-10",
+                            "For example, you're plotting to claim a liege title they also have a claim on"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Stop backing plot",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If they accept:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+25 opinion toward their liege(?) for 1 year ( Discovered Backing a Plot )",
+                            "children": []
+                        },
+                        {
+                            "text": "+5 opinion toward requester(?) for 1 year ( Abandoned Plot )",
+                            "children": []
+                        },
+                        {
+                            "text": "-15 opinion toward the plotter for 6 years ( Failed Plot )",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If a direct vassal refuses:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Grounds to imprison or revoke a title ( Traitor )",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "End plot",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Send into hiding",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Self, or unlanded spouse/child in your court",
+                            "children": []
+                        },
+                        {
+                            "text": "Target of known or suspected murder plot",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Take out of hiding",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Plot to kill",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A targeted decision which begins a plot to kill the character. The plotter will seek other willing characters to help carry out the assassination .",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "War",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Declare war",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You must be able to declare war:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Not bankrupt",
+                            "children": []
+                        },
+                        {
+                            "text": "Not a prisoner (regardless of captor identity)",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot have raised army levies (other types of troops are okay, as are all ships)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The target must be valid:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Target ruler must be landed",
+                            "children": []
+                        },
+                        {
+                            "text": "No non-aggression pact",
+                            "children": []
+                        },
+                        {
+                            "text": "No betrothals to close relatives",
+                            "children": []
+                        },
+                        {
+                            "text": "They do not hold any of your close relatives hostage, as wards or prisoners. (It's okay if a close relative lives there, as long as you are not their employer/liege.)",
+                            "children": []
+                        },
+                        {
+                            "text": "You do not hold the target ruler as a prisoner (as this would give you 100% warscore immediately)",
+                            "children": []
+                        },
+                        {
+                            "text": "Not a current war ally or current war enemy",
+                            "children": []
+                        },
+                        {
+                            "text": "Target ruler is not preparing to invade your realm",
+                            "children": []
+                        },
+                        {
+                            "text": "No troops in enemy counties where you lack holdings",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot attack a holy order while employing their troops",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Declaring war requires a casus belli :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Most CBs cannot be used against your tributaries",
+                            "children": []
+                        },
+                        {
+                            "text": "Most CBs cannot be used against other Crusaders if you're pledged or participating (with HF)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You must be able to pay any special costs:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Breaking a truce costs prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "Declaring war on coreligionists costs piety if they are crusading or defending against heathens",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Additional requirements for vassals:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Cannot declare other wars if currently rebelling against your liege",
+                            "children": []
+                        },
+                        {
+                            "text": "You can only declare war on other vassals if they share your direct liege",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot declare wars prohibited by crown laws (crown authority at medium/absolute, or with Conclave , vassal wars laws at external/illegal)",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot declare wars on other vassals(?) while realm peace is enforced ( Conclave )",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot declare wars on other vassals(?) within 5 years of liege interference in your war ( The Reaper's Due )",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Offer peace",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There are three kinds of peace you may offer. Unless your warscore is 100%, your opponent can choose whether to accept or reject the offer."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Surrender : Your enemy wins the war. The AI will always accept this, except for invasion-type casus belli , where the aggressor may want to take more land before accepting your surrender.",
+                            "children": []
+                        },
+                        {
+                            "text": "White Peace : This usually acts as though the war had never happened, with a few penalties for the aggressor depending on the CB. The AI will usually accept this if your war-score against them is positive, but will never (?) accept this when their war-score is positive.",
+                            "children": []
+                        },
+                        {
+                            "text": "Enforce Demands : You win the war. AI rulers may accept slightly before 100% warscore, especially if their army has been defeated or they are busy fighting additional wars.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The AI can also propose peace, but it is usually rare. In most cases, it will be surrendering when you have more than 60% warscore, outnumber them and when they are engaged in other wars, especially if the war target is a single county. AIs suggesting white peace is less common, but seems to be possible when either side has little warscore (<25%) or when you are winning (>40%)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "AIs will rarely propose to enforce their demands before warscore reaches 100%. Even then, some time, and even months sometimes may pass before they do so. Turning the tide of a war is therefore always possible, even with very negative warscore."
+                }
+            ]
+        },
+        {
+            "heading": "Call to arms",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Only available for wars with certain casus belli .",
+                            "children": []
+                        },
+                        {
+                            "text": "Requires a pre-existing relationship:",
+                            "children": [
+                                {
+                                    "text": "An alliance , typically negotiated based on marriage ties or direct relations",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Tribal rulers can call their tribal vassals to war.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Nomadic rulers (khagans) can call nomadic vassals (khans) to war.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "A suzerain- tributary relationship (who can call whom depends on the type of tributary; even works for no-call wars such as provincial revolts )",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Both independent or same top liege (??) (NB: subtly different from the requirements for declaring war)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factors",
+                            "Government type",
+                            "Value",
+                            "Description"
+                        ],
+                        [
+                            "Allied",
+                            "All",
+                            "Yes",
+                            "Except when fighting a fellow vassal and the ally is outside the realm (?)"
+                        ],
+                        [
+                            "Heir",
+                            "All",
+                            "Yes",
+                            "Requestee is your heir, or vice versa"
+                        ],
+                        [
+                            "Tributary",
+                            "All",
+                            "Yes",
+                            ""
+                        ],
+                        [
+                            "Spouse",
+                            "All",
+                            "Yes",
+                            ""
+                        ],
+                        [
+                            "Will not join wars against spouse",
+                            "All",
+                            "No ?",
+                            ""
+                        ],
+                        [
+                            "Will not join religious enemies against brothers of the Faith",
+                            "Feudal, Iqtâ, Tribal",
+                            "No",
+                            "Religious wars only. At any rate, alliances with infidels are extremely unlikely to form."
+                        ],
+                        [
+                            "Relative opinion",
+                            "Tribal, Nomadic",
+                            "+5 to -5",
+                            "Shown as \"We like you more than your enemies\" or \"We like your enemies too much\". When calling into multiple wars at once, checks vs the most hated enemy."
+                        ],
+                        [
+                            "Too far away",
+                            "Tribal, Nomadic",
+                            "-1 to -5 ?",
+                            "Distance between you and requestee. (Distance to enemy is irrelevant.)"
+                        ],
+                        [
+                            "Tribal vassal",
+                            "Tribal vassal",
+                            "+2 ?",
+                            "Opinion penalty and often a prestige penalty for refusing to join liege's war"
+                        ],
+                        [
+                            "Would cost me too much prestige",
+                            "Tribal vassal",
+                            "+5 ?",
+                            "Vassal has low prestige"
+                        ],
+                        [
+                            "In other war",
+                            "Tribal, Nomadic",
+                            "-3 ?",
+                            "Troops are busy"
+                        ],
+                        [
+                            "Raiding",
+                            "Tribal, Nomadic",
+                            "-2",
+                            "Troops are busy"
+                        ],
+                        [
+                            "Tributary war against my Tributary",
+                            "All",
+                            "?",
+                            "As the goal of your war is to steal his tributary, he won't help you doing so."
+                        ],
+                        [
+                            "War against my Tributary",
+                            "All",
+                            "?",
+                            "Lieges can't declare most wars on their tributaries, and join them too."
+                        ],
+                        [
+                            "Interests in my Tributary",
+                            "All",
+                            "?",
+                            "Tributary is aimed by this war, or will benefit from it"
+                        ],
+                        [
+                            "Enemy is my Tributary",
+                            "All",
+                            "?",
+                            "Most times, nobody can join a war on a side other than the one of its Tributaries."
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Offer to join war",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "You can offer to join the wars of allies .",
+                            "children": []
+                        },
+                        {
+                            "text": "You can offer to join coreligionists in most religious wars and some rebellions.",
+                            "children": []
+                        },
+                        {
+                            "text": "You can offer to join your (theocratic) religious head in defensive wars if the attacker has a different religion.",
+                            "children": []
+                        },
+                        {
+                            "text": "You can offer to join same-culture rulers who rule a conquered title (see conquest culture ) and are defending against another culture.",
+                            "children": []
+                        },
+                        {
+                            "text": "You can offer to join the war of a liege or above.",
+                            "children": []
+                        },
+                        {
+                            "text": "You can offer to join certain vassal wars:",
+                            "children": [
+                                {
+                                    "text": "War must be external",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Vassal must share your religion",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Can only join vassals using certain CBs:",
+                                    "children": [
+                                        {
+                                            "text": "Great Holy Wars",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "Claim wars",
+                                            "children": []
+                                        },
+                                        {
+                                            "text": "De jure wars",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Joining a vassal's war actually takes over the war (except GHWs), causing your vassal to no longer be a participant but not changing the beneficiary of the war",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Joining a vassal's war does not require council approval .",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Joining a vassal's war does not activate defensive pacts against you.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Cannot offer to join a fellow vassal's war, even if it is external (bug?), if liege's laws prohibit wars between vassals.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Ask to embargo",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Merchant republic",
+                            "children": []
+                        },
+                        {
+                            "text": "Target realm contains trade posts from a rival republic",
+                            "children": []
+                        },
+                        {
+                            "text": "Target realm does not control the rival republic",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You pay some amount of gold to the target realm to encourage them start a war using the Embargo CB. You join the war as an ally, and you pay reparations if it fails."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factors",
+                            "Value",
+                            "Description"
+                        ],
+                        [
+                            "Primary participant in a war",
+                            "-5 (blocking)",
+                            "Character is the primary character on one side of a war, and his troops are too busy to declare war."
+                        ],
+                        [
+                            "Minor participant in a war",
+                            "-1",
+                            "Character is currently involved in a war as an ally."
+                        ],
+                        [
+                            "Opinion of you",
+                            "-1 to +1",
+                            ""
+                        ],
+                        [
+                            "Opinion of target",
+                            "-1 to +1",
+                            ""
+                        ],
+                        [
+                            "Power",
+                            "-5 to -1",
+                            "Characters apparently don't care if it will be easy to win the war, so there won't be a positive power modifier."
+                        ],
+                        [
+                            "Greed",
+                            "-3 (?) to +3 (?)",
+                            ""
+                        ],
+                        [
+                            "Base reluctance",
+                            "-1",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Prepare invasion",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Release tributary",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Both at peace",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Lose 200 prestige. The realm is no longer your tributary, potentially allowing you to attack them again."
+                }
+            ]
+        },
+        {
+            "heading": "Break non-aggression pact",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Both at peace",
+                            "children": []
+                        },
+                        {
+                            "text": "Must be able to spend 200 prestige",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Effect:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Lose 200 prestige.",
+                            "children": []
+                        },
+                        {
+                            "text": "Adds the character modifier Non-Aggression Pact Breaker (-10 general opinion) for 10 years.",
+                            "children": []
+                        },
+                        {
+                            "text": "Starts a 2-year truce.",
+                            "children": []
+                        },
+                        {
+                            "text": "Target's opinion of you decreases: -10 (Broken pact).",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Unlike breaking a truce or declining an ally's call, the cost is a flat 200 prestige."
+                }
+            ]
+        },
+        {
+            "heading": "Imprisonment",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Imprison",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You may attempt to arrest a character if:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "They are under your control",
+                            "children": []
+                        },
+                        {
+                            "text": "You do not hold a temporary title",
+                            "children": []
+                        },
+                        {
+                            "text": "They do not hold a temporary title",
+                            "children": []
+                        },
+                        {
+                            "text": "They are not In hiding",
+                            "children": []
+                        },
+                        {
+                            "text": "They are not immune to hostile actions (e.g. while awaiting response to a faction ultimatum?)",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot take hostile actions against your regent",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Attempting an arrest:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Incurs -40 tyranny if unjustified.",
+                            "children": [
+                                {
+                                    "text": "Valid grounds include a known plot , opinion modifiers such as \"traitor\" and \"refused to straighten up \", and excommunication .",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Unjustified arrest is unavailable to characters of republic, merchant republic , or imperial government type.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Smaller penalty for imprisoning \"unimportant\" characters",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Incurs -10 tyranny if the council votes against the arrest. (Only if council laws allow votes on imprisonment.)",
+                            "children": []
+                        },
+                        {
+                            "text": "Opinion modifier \"-30: Imprisoned (attempted arrest)\" for 10 years, whether successful or not",
+                            "children": [
+                                {
+                                    "text": "Target's parents will be even more upset: \"-50: Imprisoned my child\"",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If successful:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Character is imprisoned",
+                            "children": []
+                        },
+                        {
+                            "text": "Opinion modifier \"-30: In Prison\" until released",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If unsuccessful:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Courtier : flees the realm",
+                            "children": []
+                        },
+                        {
+                            "text": "Indirect or landless vassal : flees the realm; abdicating titles to their heirs (but retaining their wealth and artifacts )",
+                            "children": []
+                        },
+                        {
+                            "text": "Direct landed vassal : starts a rebellion to overthrow the ruler",
+                            "children": [
+                                {
+                                    "text": "Gives the liege two revoke reasons (-50 traitor, -25 declared war)",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Imprisonment Chance Calculation",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The success rate increases with relative state intrigue , high opinion, and bonuses such as the marshal job \"Suppress Revolts\". It decreases with the vassal's realm size."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This is how the displayed chance that an imprisonment attempt will be successful can be calculated:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "<<state_intrigue_jailer>> is the state intrigue of the (potential future) jailer"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "<<state_intrigue_prisoner>> is the state intrigue of the (potential future) prisoner (n.b. the state intrigue of a courtier is their personal intrigue)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "<<realm_size_prisoner>> is the realm size of the (potential future) prisoner (n.b. the realm size of a courtier is 0)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "<<opinion_prisoner_of_jailer>> is the opinion of the (potential future) prisoner towards the (potential future) jailer"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "<<arrest_chance>> is the probability that an imprisonment attempt will be successful in percent"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "<<sum_arrest_chance_bonuses>> is the sum of all the \" arrest_chance_modifier \" bonuses from bloodlines , great works , the marshal job \"suppress revolt\" (if the potential future prisoner is in the same province as the marshal), certain character modifiers from events (e.g. \"Clarity of Recourse\" from the \"Holy Fury Religious\" event \"HF.23418\"), etc. (n.b. if the arrest chance bonus is listed as e.g. \"10%\", the bonus is \"10/100\" or \"0.1\", not \"10\")"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Max () stands for the maximum function , i.e. M a x ( x , y ) = { x , if x ≥ y y , if x < y {\\displaystyle Max(x,y)={\\begin{cases}x,&{\\text{if }}x\\geq y\\\\y,&{\\text{if }}x<y\\end{cases}}}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Min () stands for the minimum function , i.e. M i n ( x , y ) = { x , if x ≤ y y , if x > y {\\displaystyle Min(x,y)={\\begin{cases}x,&{\\text{if }}x\\leq y\\\\y,&{\\text{if }}x>y\\end{cases}}}"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Trunc () stands for the truncate function , i.e. Trunc(x) is x with the fractional part removed"
+                }
+            ]
+        },
+        {
+            "heading": "Release from prison",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Gives +5 piety if prisoner of same religion."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Increases opinion:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "From prisoner: Merciful (+10 opinion) for 5 years",
+                            "children": []
+                        },
+                        {
+                            "text": "From other realm characters: Released prisoner (+3 opinion per rank of prisoner) for 2.5 years",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Execute imprisoned",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Sacrifice prisoner",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Aztec or Reformed Pagan religion with \"Bloodthirsty Gods\" doctrine.",
+                            "children": []
+                        },
+                        {
+                            "text": "Prisoners that have been sacrificed do not generate tyranny or opinion malus from close family in the same way as executions. This may be a bug.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Banish imprisoned",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If you are the prisoner's direct liege, you may force them to leave the realm."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Rulers: forces them to abdicate titles and flee the realm",
+                            "children": []
+                        },
+                        {
+                            "text": "Non-rulers: seizes their wealth and forces them to flee the realm",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Ransom prisoner",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The ransom amount depends on the rank of the prisoner and their parent."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Tier",
+                            "Ransom for ruler",
+                            "Ransom for their landless child"
+                        ],
+                        [
+                            "Courtier",
+                            "10",
+                            "10"
+                        ],
+                        [
+                            "Baron",
+                            "25",
+                            "14"
+                        ],
+                        [
+                            "Count",
+                            "70",
+                            "26"
+                        ],
+                        [
+                            "Duke",
+                            "145",
+                            "46"
+                        ],
+                        [
+                            "King",
+                            "250",
+                            "74"
+                        ],
+                        [
+                            "Emperor",
+                            "385",
+                            "110"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The full formula is 15 × ( T i e r ) 2 + 4 × ( P a r e n t T i e r ) 2 + 10 {\\displaystyle 15\\times (Tier)^{2}+4\\times (ParentTier)^{2}+10} , where T i e r {\\displaystyle Tier} is 0 for courtier through 5 for emperor."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "AI acceptance:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factors",
+                            "Value",
+                            "Description"
+                        ],
+                        [
+                            "Base Reluctance",
+                            "-3",
+                            ""
+                        ],
+                        [
+                            "Wants freedom",
+                            "Yes",
+                            ""
+                        ],
+                        [
+                            "<Prisoner> can afford their own ransom",
+                            "Yes",
+                            "Despite the ransom being paid by the courtier, you can only send this request if the ruler has enough money."
+                        ],
+                        [
+                            "<Prisoner> is a close relative",
+                            "Yes",
+                            "Parent, child, sibling, or spouse (except first(!) spouse of Muslims)"
+                        ],
+                        [
+                            "No interest in <prisoner>",
+                            "No",
+                            "Not the same dynasty"
+                        ],
+                        [
+                            "Opinion of <prisoner>",
+                            "Opinion",
+                            "Used for other dynasty members. AI will accept with opinion around 8. Moving the prisoner to house arrest and assigning a guardian with high diplomacy skill may help."
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Ask to ransom prisoner",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can offer a captor money for the release of yourself or your courtier."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "AI acceptance:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factors",
+                            "Value",
+                            "Description"
+                        ],
+                        [
+                            "Base Reluctance",
+                            "-3",
+                            ""
+                        ],
+                        [
+                            "<Prisoner> has claims on my titles",
+                            "No",
+                            ""
+                        ],
+                        [
+                            "Gold is good",
+                            "+5",
+                            ""
+                        ],
+                        [
+                            "Greed",
+                            "+1 to +10",
+                            "Based on AI greed"
+                        ],
+                        [
+                            "Opinion of <prisoner>",
+                            "Opinion",
+                            "When ransoming self, only applies once"
+                        ],
+                        [
+                            "When ransoming self, only applies once",
+                            "Opinion of <requester>",
+                            "Opinion"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Dynasty",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Arrange marriage",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can suggest that a bride and groom marry subject to a few restrictions:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Characters with certain traits cannot marry: Eunuch , ascetic (e.g. Nun ), Horse , Cat",
+                            "children": []
+                        },
+                        {
+                            "text": "Prisoners cannot marry.",
+                            "children": []
+                        },
+                        {
+                            "text": "Characters who are In hiding cannot marry.",
+                            "children": []
+                        },
+                        {
+                            "text": "Older women cannot marry, except for Christians(?) and Zoroastrians.",
+                            "children": []
+                        },
+                        {
+                            "text": "Priests of some religions cannot marry (and their marriages will dissolve upon becoming priests).",
+                            "children": []
+                        },
+                        {
+                            "text": "Members of holy orders cannot marry.",
+                            "children": []
+                        },
+                        {
+                            "text": "Members of mercenaries cannot participate in betrothals, but can marry.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Marriages must be patrilineal if any party is a patrician or Muslim. However, with Conclave DLC and the required Status of Women law, it is possible to arrange matrilineal marriages; you may also have to invite the groom to your court."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If one of the characters is not in your court, you must get permission from their employer:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factors",
+                            "Value",
+                            "Description"
+                        ],
+                        [
+                            "Base Reluctance",
+                            "-2",
+                            ""
+                        ],
+                        [
+                            "Will not consider offers from infidels",
+                            "-5 (blocking)",
+                            "A requestee who does not share your religious group will generally refuse marriage requests. Exceptions: Rulers with Nomadic or Chinese Imperial government don't care. Rulers care less about infidel courtiers (see below). Intermarriage is allowed (in both directions) between certain pairs of religions. Intermarriage can be eliminated by reforming as Dogmatic or expanded by reforming as Cosmopolitan ."
+                        ],
+                        [
+                            "Will not consider offers from infidels",
+                            "-3",
+                            "When the requestee considers both the requester and their courtier to be infidels, or the requester is nomadic, this is non-blocking"
+                        ],
+                        [
+                            "<Bride/Groom> must not marry someone from another Caste",
+                            "-3",
+                            "Close relative of Hindu ruler?"
+                        ],
+                        [
+                            "<Groom> is of too lowly rank for a regular marriage",
+                            "-5 (blocking)",
+                            "Will not accept a patrilineal marriage with more than one level of difference in marriage rank, even if the bride is not in their line of succession or if the groom is of the same dynasty."
+                        ],
+                        [
+                            "<Groom> is too high in the line of succession",
+                            "-5 (blocking)",
+                            "Matrilineal marriage (into a different dynasty). Groom is either the requestee or (same dynasty, close relative other than nephew, and 1st through 6th in the line of succession for the requestee's primary title ). For Elective Gavelkind, the line of succession checked is the one shown in tooltips (top voted and their 5 primogeniture heirs), not the one shown on the succession screen (top 6 by votes). Theocracy rulers, baron-tier tribes, and baron-tier mayors don't care."
+                        ],
+                        [
+                            "<Bride> would prefer a Matrilineal Marriage",
+                            "-3 to -5",
+                            "Target bride has landed title and no dynastic heir, or is high in dynastic liege parent's line of succession, or has a strong claim. Matrilineal marriages are enabled ."
+                        ],
+                        [
+                            "<Bride> is unimportant",
+                            "-5 (blocking)",
+                            "Matrilineal marriage (into a different dynasty) and bride is not your daughter, sister, granddaughter, or high in your line of succession"
+                        ],
+                        [
+                            "<Groom> is our councilor",
+                            "-5 (blocking)",
+                            "Matrilineal marriage would steal a male council member who is not a close relative of the ruler"
+                        ],
+                        [
+                            "Prestige Effects",
+                            "-5 to +5",
+                            "Prestige effects due to rank difference and Dynasty Prestige , when the requestee is also affected (MARRIAGE_AI_PRESTIGE_VALUE = 0.33)"
+                        ],
+                        [
+                            "Opinion of <Requester>",
+                            "+1 to +5",
+                            "Unlike in most interactions, the opinion factor is shown as positive as long as opinion is above -100"
+                        ],
+                        [
+                            "<Requester> is my liege",
+                            "+2",
+                            ""
+                        ],
+                        [
+                            "Skills of <Bride/Groom>",
+                            "-2 to +2",
+                            "When your courtier will join their court."
+                        ],
+                        [
+                            "Age of <Bride>",
+                            "+1 to +2",
+                            "Young bride"
+                        ],
+                        [
+                            "<Bride> is past childbearing age",
+                            "-2 to -5 (blocking)",
+                            "Bride over 35 (or will be when the boy turns 16). Women actually become infertile at 45. Waived for men who already have two living sons. Blocking except when a ruler is requesting a marriage for herself."
+                        ],
+                        [
+                            "Difference in age",
+                            "-1 to -5",
+                            "Older bride for young groom"
+                        ],
+                        [
+                            "<Groom> is too young",
+                            "-2 to -3",
+                            "Young groom for older bride (betrothals only?)"
+                        ],
+                        [
+                            "Unlikely to have children",
+                            "-5 (blocking)",
+                            "Low fertility(?). Waived for men requesting a bride over 40. Waived if the potential spouse also has very low fertility."
+                        ],
+                        [
+                            "Has a contagious disease",
+                            "-5 (blocking)",
+                            "e.g. Consumption"
+                        ],
+                        [
+                            "Is sick",
+                            "-2",
+                            "e.g. Ill , Sickly , or Cramps"
+                        ],
+                        [
+                            "Desires a better non-aggression pact",
+                            "-5 (blocking?)",
+                            "Requestee is feudal, tribal, or merchant republic Requestee is count+ or patrician Requestee is not your vassal or below (!) Target bride/groom is their close relative and below age 20 Your bride/groom is not your close relative"
+                        ],
+                        [
+                            "Political concerns",
+                            "-5",
+                            "AI has a CB against you, and does not want to be prevented from attacking you Their religious head is hostile to your faith They're landless and have a unit in your lands You're their tributary You're a target of their plot or a plot they're backing They're a patrician and want trade posts in your lands"
+                        ],
+                        [
+                            "Will honor the betrothal",
+                            "+5",
+                            "AI rulers always honor patrilineal betrothals. For matrilineal betrothals, they consider the marriage offer just as they would if there wasn't a betrothal, and will reject e.g. a non-dynastic matrilineal betrothal with a man who is now a ruler. Even then, the AI ruler is likely to send a marriage request to you, effectively honoring the betrothal."
+                        ],
+                        [
+                            "Marriage type does not match the betrothal",
+                            "-5 (blocking)",
+                            "Will never accept a matrilineal marriage if betrothal was regular, or vice versa."
+                        ],
+                        [
+                            "<Courtier> is too important to send away",
+                            "-5 (blocking)",
+                            "Courtier has ai_flag_refuse_marriage (smiths, some characters from China). Even if character would not move as a result of marriage. Even when sending your own \"important\" character (if the potential spouse is also a non-ruler)."
+                        ],
+                        [
+                            "Dynastic deference to player",
+                            "Yes",
+                            "Your child or grandchild, who is a ruler under your control and has not been landed for 10 years. (You may also click the rings for more potential spouses.)"
+                        ],
+                        [
+                            "Marriages controlled by another player",
+                            "No",
+                            "\"Restrict marriage\" checkbox is checked"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Rulers with Nomadic or Chinese Imperial government don't care.",
+                            "children": []
+                        },
+                        {
+                            "text": "Rulers care less about infidel courtiers (see below).",
+                            "children": []
+                        },
+                        {
+                            "text": "Intermarriage is allowed (in both directions) between certain pairs of religions.",
+                            "children": [
+                                {
+                                    "text": "Intermarriage can be eliminated by reforming as Dogmatic or expanded by reforming as Cosmopolitan .",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Matrilineal marriage (into a different dynasty). Groom is either the requestee or (same dynasty, close relative other than nephew, and 1st through 6th in the line of succession for the requestee's primary title ). For Elective Gavelkind, the line of succession checked is the one shown in tooltips (top voted and their 5 primogeniture heirs), not the one shown on the succession screen (top 6 by votes). Theocracy rulers, baron-tier tribes, and baron-tier mayors don't care."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Requestee is feudal, tribal, or merchant republic",
+                            "children": []
+                        },
+                        {
+                            "text": "Requestee is count+ or patrician",
+                            "children": []
+                        },
+                        {
+                            "text": "Requestee is not your vassal or below (!)",
+                            "children": []
+                        },
+                        {
+                            "text": "Target bride/groom is their close relative and below age 20",
+                            "children": []
+                        },
+                        {
+                            "text": "Your bride/groom is not your close relative",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "AI has a CB against you, and does not want to be prevented from attacking you",
+                            "children": []
+                        },
+                        {
+                            "text": "Their religious head is hostile to your faith",
+                            "children": []
+                        },
+                        {
+                            "text": "They're landless and have a unit in your lands",
+                            "children": []
+                        },
+                        {
+                            "text": "You're their tributary",
+                            "children": []
+                        },
+                        {
+                            "text": "You're a target of their plot or a plot they're backing",
+                            "children": []
+                        },
+                        {
+                            "text": "They're a patrician and want trade posts in your lands",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Arrange a divorce",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Christians and Jews who have a religious head : requires approval of religious head and costs 10 piety.",
+                            "children": []
+                        },
+                        {
+                            "text": "All others: costs money, approximately your yearly income.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "heading": "Arrange betrothal",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Only if at least one character is underage.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Break betrothal",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Gives relations penalty with the former fiance and his or her parents.",
+                            "children": []
+                        },
+                        {
+                            "text": "May invalidate any NAPs and alliances that were based on the expected marriage tie.",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot break a betrothal if a favor was used to arrange the betrothal (even if you bought the favor!).",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Take concubine",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Religion or government allows taking concubines :",
+                            "children": [
+                                {
+                                    "text": "Pagans who do not have polygamy, Zoroastrians , or followers of Eastern religions",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Tribal or Nomadic",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Man",
+                            "children": []
+                        },
+                        {
+                            "text": "Fewer than three concubines",
+                            "children": []
+                        },
+                        {
+                            "text": "Woman is not a ruler",
+                            "children": []
+                        },
+                        {
+                            "text": "Woman is unmarried or is your prisoner",
+                            "children": []
+                        },
+                        {
+                            "text": "Woman is not In hiding",
+                            "children": []
+                        },
+                        {
+                            "text": "Requestee (liege of woman) is a ruler and not your wife",
+                            "children": []
+                        },
+                        {
+                            "text": "Not prohibited by consanguinity",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can take your own courtiers as concubines. You can take a prisoner as a concubine without permission from either her or her liege, but she, her close family, and her former husband will be upset."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can also request a non-imprisoned woman as a concubine from another ruler, but the other ruler will only agree in rare circumstances:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Factors",
+                            "Value",
+                            "Description"
+                        ],
+                        [
+                            "Opinion of <Requester>",
+                            "+1 to +5",
+                            ""
+                        ],
+                        [
+                            "<Requester> is my liege",
+                            "+2",
+                            ""
+                        ],
+                        [
+                            "<Our faith> does not allow the taking of concubines",
+                            "No",
+                            "Requestee must also have a religion or government that allows taking concubines"
+                        ],
+                        [
+                            "Will not consider offers from infidels",
+                            "No",
+                            "(Similar conditions as in Arrange marriage interactions, but the courtier's religion is irrelevant)"
+                        ],
+                        [
+                            "Is my child",
+                            "No",
+                            ""
+                        ],
+                        [
+                            "Is my close relative",
+                            "No",
+                            "Won't let you take a daughter, granddaughter, sister, mother, or grandmother. (But will let you take a niece.)"
+                        ],
+                        [
+                            "Is my heir",
+                            "No",
+                            ""
+                        ],
+                        [
+                            "Is claimant",
+                            "No",
+                            "Woman has a claim on any title"
+                        ],
+                        [
+                            "<Requester> is of too lowly rank for such a highborn concubine",
+                            "No",
+                            "Woman is a daughter or granddaughter of a ruler (?) (with higher rank than requester?)"
+                        ],
+                        [
+                            "<Courtier> is too important to send away",
+                            "No",
+                            "Courtier has ai_flag_refuse_marriage (smiths, some characters from China)"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Offer concubine",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can offer a woman as a concubine to a male ruler or even a male courtier. Women who are your close relatives will confer an opinion bonus."
+                }
+            ]
+        },
+        {
+            "heading": "Offer consort",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can offer an unmarried man as a consort to some female characters, provided that it is permitted by the character's religion."
+                }
+            ]
+        },
+        {
+            "heading": "Set concubine aside",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Unlike spouses, concubines can be set aside with only an opinion penalty. They will remain in your court."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Concubines cannot be set aside while they have the Pregnant trait."
+                }
+            ]
+        },
+        {
+            "heading": "Legitimize bastard",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Not Muslim",
+                            "children": []
+                        },
+                        {
+                            "text": "Target is your child, an illegitimate bastard , and under your control",
+                            "children": []
+                        },
+                        {
+                            "text": "You can spend 20 piety",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Break up with lover",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Lover is not your spouse or concubine",
+                            "children": []
+                        },
+                        {
+                            "text": "Way of Life DLC",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Convince to straighten up",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Muslim (Iqta or Tribal government)",
+                            "children": []
+                        },
+                        {
+                            "text": "You do not have a living, landed father (?)",
+                            "children": []
+                        },
+                        {
+                            "text": "Target is a Decadent kinsman with lower rank than you, not a prisoner, and does not have a regent",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This interaction is shown in the Religion interface. It has no distance limit, but is more useful against characters in your realm, because it gives you an imprisonment reason if your kinsman refuses to straighten up."
+                }
+            ]
+        },
+        {
+            "heading": "Organize Sumptuous Baptism",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With Holy Fury, independent kings and emperors can organize a special baptism by right-clicking a child under the age of 2. If the child is your heir and none of your other children have these traits, a cheaper version is available by event (12 days after birth) instead of right-clicking the child."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Trait",
+                            "Opinions",
+                            "Other modifiers",
+                            "Requirements"
+                        ],
+                        [
+                            "",
+                            "Baptized by [a pope or patriarch]",
+                            "+5 Christian",
+                            "+0.05 Monthly Prestige +0.10 Monthly Piety",
+                            "Catholic or Orthodox, and the religious head is available Costs 1y income (min 250, max 500) in event after birth of heir Costs 2y income (min 350, max 750) when right-clicking child"
+                        ],
+                        [
+                            "",
+                            "Baptized by [a Prince-Bishop]",
+                            "+5 Church",
+                            "+0.05 Monthly Piety",
+                            "Christian, and there is an important theocracy in the realm (count+ tier, cardinal, or antipope) Costs 0.75y income (min 50, max 150) in event after birth of heir Costs 1.5y income (min 150, max 350) when right-clicking child"
+                        ],
+                        [
+                            "",
+                            "Baptized by [a satanist]",
+                            "+15 Same Trait",
+                            "+0.05 Monthly Prestige -0.10 Monthly Piety",
+                            "Member of Lucifer's Own Costs 300 Dark Power in event after birth of heir Costs 500 Dark Power when right-clicking child"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Catholic or Orthodox, and the religious head is available",
+                            "children": []
+                        },
+                        {
+                            "text": "Costs 1y income (min 250, max 500) in event after birth of heir",
+                            "children": []
+                        },
+                        {
+                            "text": "Costs 2y income (min 350, max 750) when right-clicking child",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Christian, and there is an important theocracy in the realm (count+ tier, cardinal, or antipope)",
+                            "children": []
+                        },
+                        {
+                            "text": "Costs 0.75y income (min 50, max 150) in event after birth of heir",
+                            "children": []
+                        },
+                        {
+                            "text": "Costs 1.5y income (min 150, max 350) when right-clicking child",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Member of Lucifer's Own",
+                            "children": []
+                        },
+                        {
+                            "text": "Costs 300 Dark Power in event after birth of heir",
+                            "children": []
+                        },
+                        {
+                            "text": "Costs 500 Dark Power when right-clicking child",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Religious head",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Raiding adventurers",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Settle Adventurer",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Offer to grant a county or duchy (along with all lower titles) to a raiding adventurer. They are more likely to accept a duchy or a county with many holdings. If accepted, the provinces they gain will be protected from other raiding adventurers for 20 years. You will have a 1 year truce with them and they appear to not convert to your religion."
+                }
+            ]
+        },
+        {
+            "heading": "Negotiate with Adventurer",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "As an independent king+ ruler, you may initiate negotiations with a raiding adventurer who is in your territory. They will usually ask for one of your counties or one of your vassals' counties. If you agree on a deal, you will sign a three-year non-aggression pact with your new vassal, and they will protect you from other raiding adventurers for 10 years. They will almost always convert to your religion."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The same negotiation chain may be initiated by any adventurer who has raided you recently. In this case, failure to reach an agreement will lead to the adventurer beginning an invasion!"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When ruling under a nomadic government, choosing to settle an adventurer will result in losing the county as the adventurer will become an independent Emperor-tier Khagan. However, you will still receive the \"Settled Adventurer\" modifier for 10 years which prevents raiding."
+                }
+            ]
+        },
+        {
+            "heading": "Mercenary Bands",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Assemble Mercenary Company",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Only possible if ruler does not have any mercenary Bands."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Courtier with a military education",
+                            "children": []
+                        },
+                        {
+                            "text": "You can spend 50 gold.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Replace Mercenary Captain",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Only possible if ruler has a suitable replacement (a courtier with a military education)."
+                }
+            ]
+        },
+        {
+            "heading": "Send Equipment to Company",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "By sending more equipment to the Mercenary Company, they will be able to equip lighter units to become heavier units and change its composition."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "You can spend 50 gold.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Send Troops to Company",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "By paying for more troops for the Mercenary Company you can increase its size."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "You can spend 50 gold.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Dissolve Mercenary Company",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Put and end to the Mercany Company. Your current Mercenary Captain may not like this."
+                }
+            ]
+        },
+        {
+            "heading": "Send away as Mercenary",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Recall to Court",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Focus",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The Carousing focus enables Invite to Party",
+                            "children": []
+                        },
+                        {
+                            "text": "The War focus enables Duel",
+                            "children": []
+                        },
+                        {
+                            "text": "The Intrigue focus enables Spy On and Free from Captivity",
+                            "children": []
+                        },
+                        {
+                            "text": "The Seduction focus enables Seduce",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Modding",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Hard-coded interactions :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Cannot be changed much by modding",
+                            "children": []
+                        },
+                        {
+                            "text": "Thresholds for acceptance, along with costs, are in defines.lua",
+                            "children": []
+                        },
+                        {
+                            "text": "AI reasoning localisation keys start with AIREASON_",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Scripted interactions :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Are coded as targeted decisions , which can trigger events",
+                            "children": []
+                        },
+                        {
+                            "text": "Can be added or changed by modding",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot show AI reasoning tooltips",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        }
+    ]
+}

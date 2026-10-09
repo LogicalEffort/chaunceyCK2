@@ -1,0 +1,241 @@
+{
+    "pageid": 3645,
+    "title": "Bookmark modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Bookmarks are defined in the /common/bookmarks/ folder. Start date (i.e. custom start date) and last start date are additionally set at common/defines.txt."
+                }
+            ]
+        },
+        {
+            "heading": "Bookmarks",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Bookmarks can be appended/partly overwritten by including parts of the same bookmark in another file ( name , desc , date , era and picture ). [1]"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The bookmarks for the five interface-presented starts are BM_CHARLEMAGNE_ERA for the DLC-locked 769 start, BM_THE_OLD_GODS_ERA for the DLC-locked 867 start, OTTO_THE_FIRST_ERA for the 936 start, BM_FATE_OF_ENGLAND_ERA for the 1066 start, and BM_100_YEARS_WAR_ERA for the 1337 start."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "name",
+                            "key",
+                            "Localization key for the bookmark name. Vanilla convention is %bookmark%_ERA. These can be found in the \"localisation\" folder.",
+                            "name = \"BM_CHARLEMAGNE_ERA\""
+                        ],
+                        [
+                            "desc",
+                            "key",
+                            "Localization key for the bookmark description. Vanilla convention is %bookmark%_ERA_INFO. Look for the file LT.csv to edit the referenced key's displayed text.",
+                            "desc = \"BM_CHARLEMAGNE_ERA_INFO\""
+                        ],
+                        [
+                            "date",
+                            "date",
+                            "Bookmark date",
+                            "date = 769.1.1"
+                        ],
+                        [
+                            "era",
+                            "bool",
+                            "Will be shown on era screen. No more than 5 bookmarks can be highlighted, and will be picked chronologically. Note that if none is found it will use the first bookmark.",
+                            "era = yes"
+                        ],
+                        [
+                            "picture",
+                            "gfx",
+                            "The picture to use on era screen.",
+                            "picture = GFX_pick_era_image_1"
+                        ],
+                        [
+                            "custom_start",
+                            "bool",
+                            "The default bookmark to activate when choosing \"Custom Start\". At least one bookmark must be custom_start = yes , otherwise the game will CTD.",
+                            "custom_start = yes"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Selectable characters",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A bookmark can contain any number of characters, but the first 6 characters are highlighted for era bookmarks.\nAs of patch 2.5 the character history is no longer processed in the era selection screen, selectable characters need to be explicitly defined, by duplicating part of their character history ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Selected characters can be appended by including parts of the same bookmark in another file, containing the new characters. However to remove or overwrite characters, the original file must be overwritten."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Type",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "id",
+                            "character",
+                            "Character id. For non-era bookmarks, this is the only required info, as the rest will be deducted from the game files.",
+                            "id = 6392 # Charlemagne"
+                        ],
+                        [
+                            "age",
+                            "int",
+                            "Character age at the time of the bookmark",
+                            "age = 26"
+                        ],
+                        [
+                            "name",
+                            "key",
+                            "Character name. Vanilla convention is ERA_CHAR_NAME_%characterID%.",
+                            "name = ERA_CHAR_NAME_6392"
+                        ],
+                        [
+                            "title",
+                            "title",
+                            "Primary title of the character, as defined via title history .",
+                            "title = k_france"
+                        ],
+                        [
+                            "title_name",
+                            "key",
+                            "Localized (cultural) name of the title",
+                            "title_name = WEST_FRANCIA"
+                        ],
+                        [
+                            "coa_dynasty",
+                            "bool",
+                            "Replace the primary title by the dynasty coat of arms. This is for cultures that use dynasty_title_names = yes .",
+                            "coa_dynasty = yes"
+                        ],
+                        [
+                            "dlc",
+                            "dlc",
+                            "Whether the character requires a DLC to be playable (because its religion or government is DLC-locked).",
+                            "dlc = \"The Sword of Islam\""
+                        ],
+                        [
+                            "character",
+                            "clause",
+                            "Name Description Example dna See portrait modding dna = bcedirmbfcy properties See portrait modding properties = aj00bc00000 religion religion=\"catholic\" culture culture=\"old_frankish\" government government = feudal_government dynasty dynasty=25061",
+                            "character = {\n\tdna = bcedirmbfcy\n\tproperties = aj00bc00000\n\treligion=\"catholic\"\n\tculture=\"old_frankish\"\n\tgovernment = feudal_government\n\tdynasty=25061\n}"
+                        ],
+                        [
+                            "Name",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "dna",
+                            "See portrait modding",
+                            "dna = bcedirmbfcy"
+                        ],
+                        [
+                            "properties",
+                            "See portrait modding",
+                            "properties = aj00bc00000"
+                        ],
+                        [
+                            "religion",
+                            "",
+                            "religion=\"catholic\""
+                        ],
+                        [
+                            "culture",
+                            "",
+                            "culture=\"old_frankish\""
+                        ],
+                        [
+                            "government",
+                            "",
+                            "government = feudal_government"
+                        ],
+                        [
+                            "dynasty",
+                            "",
+                            "dynasty=25061"
+                        ]
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name",
+                            "Description",
+                            "Example"
+                        ],
+                        [
+                            "dna",
+                            "See portrait modding",
+                            "dna = bcedirmbfcy"
+                        ],
+                        [
+                            "properties",
+                            "See portrait modding",
+                            "properties = aj00bc00000"
+                        ],
+                        [
+                            "religion",
+                            "",
+                            "religion=\"catholic\""
+                        ],
+                        [
+                            "culture",
+                            "",
+                            "culture=\"old_frankish\""
+                        ],
+                        [
+                            "government",
+                            "",
+                            "government = feudal_government"
+                        ],
+                        [
+                            "dynasty",
+                            "",
+                            "dynasty=25061"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ forum:774248/page-23#post-20144691",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,217 @@
+{
+    "pageid": 1448,
+    "title": "Positions.txt",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Positions.txt is an important file in Map modding that stores all the data of locations of Map Objects in a province. These Map Objects include armies, councilors,cities and ports."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When a map is first created from scratch and fails to load, Positions.txt is often one of the culprits. It is often advised to leave Positions.txt empty when creating a new map, since it will prevent the file from crashing the game. The problem with this solution is that it will center all Map Objects in the center of the province. It is advised to fill Positions.txt only when modders are done with Provinces.bmp"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There are a few ways to fill Positions.txt:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Manually filling Positions.txt by getting the data from an image editor.",
+                            "children": []
+                        },
+                        {
+                            "text": "Using the in-game tool called Nudge",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Manual editing",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "When manually editing Positions.txt , the modder will be presented with a list of entries in the following format:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The name of the province is a comment and is used only for ease of use. It has no in-game function.",
+                            "children": []
+                        },
+                        {
+                            "text": "The province number is the number of the province as defined in definition.csv",
+                            "children": []
+                        },
+                        {
+                            "text": "The values for the various objects are listed in three separate sections. (See the Map objects section below for a list of the objects.) All values are listed to three decimal places (e.g. 0 is listed as 0.000).",
+                            "children": [
+                                {
+                                    "text": "Position is comprised of a list of X and Y coordinates for the various items, which are measured in pixels. They are measured from 0.000, with 0.000 0.000 being the bottom left corner of the map. The size of the map is determined by the pixel dimensions of provinces.bmp . As such, the position of an item is equivalent to the pixel it would occupy in provinces.bmp. Note however that Photoshop (and other image-editing software) treats the top -left as (0, 0).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Rotation determines the rotation of an item. It is measured in radians , with 0.000 corresponding to due south. As such, due north is represented as π radians, or 3.142. Generally, this is only used by ports, although it also affects cities and text.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Height determines the height of an item relative to the height of the map. This is usually unnecessary but can sometimes be used to prevent items from clipping into surrounding terrain. By default, the county's label has a value of 20.000, while all other values are 0.000",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Nudge",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Nudge is an in-game tool that helps filling Positions.txt."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Nudge will work with your mod's positions.txt, but it will always save it over the positions.txt in your CK2 installation. Before using Nudge, back up the vanilla positions.txt, and after using Nudge, copy positions.txt from vanilla to your mod and copy the backup to the vanilla positions.txt."
+                }
+            ]
+        },
+        {
+            "heading": "Setting up Nudge",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To be able to access Nudge, browse to Documents\\Paradox Interactive\\Crusader Kings II\\YOUR MOD FOLDER\\Settings.txt. If you do not find a folder for your Mod, you have not told the game to make one in your Mod's Mod File or you have not run your Mod yet. In the first case editing the vanilla settings.txt instead will work."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In Settings.txt, find the line"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "and change it to"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Now run your Mod. A Nudge button should now appear to the right of your normal Menu buttons."
+                }
+            ]
+        },
+        {
+            "heading": "Using Nudge",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To bring up the Nudge interface, select a province. Nudge's interface is simple, but it will still be explained here."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Map Objects: Located to the left of the interface, the selection boxes allow you to specify which Map Object you want to modify.",
+                            "children": []
+                        },
+                        {
+                            "text": "Height: The three buttons in the middle-left allow you to change the height of the selected Map Object. The height can be reset by pressing the middle \"0\" button.",
+                            "children": []
+                        },
+                        {
+                            "text": "Arrows: The four buttons in the middle-right allow you to change the location of the selected Map Object.",
+                            "children": []
+                        },
+                        {
+                            "text": "Rotation: The four buttons to the right allow you to change the rotation of the selected Map Object. This is measured in degrees. The - and + rotate the object in 5 degree increments with the -- and ++ buttons rotate it in 45 degree increments. +/++ rotate it clockwise while -/-- rotate it anti-/counter-clockwise. For ports, 0 represents due south.",
+                            "children": []
+                        },
+                        {
+                            "text": "Save: This button saves Positions.txt to your Crusader Kings 2\\map folder. Remember to copy the new Positions.txt to your Mod's map folder.",
+                            "children": []
+                        },
+                        {
+                            "text": "Check: This button applies a color to a province while not in terrain mapmode. The coloration is specific to each map object type (see below), and will be red if the object lies outside of the province; otherwise it will turn green. The coloration will also remain until the game is exited, allowing it to be used to remember which provinces have already been modified.",
+                            "children": []
+                        },
+                        {
+                            "text": "Mapmode : This button changes Mapmode between a Terrain Mapmode and a Mapmode that displays checked provinces. As of at least patch 3.1.0, this button is non-fuctioning and crashes the game.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "To start moving Map Objects around, right click on the location where you want to have the Map Object. After that you can make more accurate edits with the arrows, rotate the Map Object or modify the height of the Map Object. There is no interface to exit the game while using Nudge, so ALT + F4 must be used to exit the game."
+                }
+            ]
+        },
+        {
+            "heading": "Map Objects",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There are 7 Map Objects you can work with:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Cities : Cities in CKII are the houses on the map. These houses surround a central building, such as a tower for baronies. Move this central building and the houses will move with it.",
+                            "children": []
+                        },
+                        {
+                            "text": "Units : This is where the armies appear when they are raised or stationed in province. Armies cannot be rotated and should be placed in even ground, since their feet can clip in the ground when they are on uneven ground. Also note that when in combat more than one army is displayed on the map, and when in transit armies are displayed to the north west of their standing position, so it is advisable to place them away from borders and bodies of water where possible.",
+                            "children": []
+                        },
+                        {
+                            "text": "Councillors : this is where the Councillors are placed in the province. Remember that if there is more than one councillor in a province, they will surround this location. As such, it should not be placed near borders or on an island (where possible). Councillors cannot be rotated and should be placed in even ground, since their feet can clip in the ground when they are on uneven ground.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Text : This is the name of the county which appears on the map. It is ill advised to edit the text, as it can break the text in other provinces. It doesn't affect text on the menu, but does have an effect in-game.",
+                            "children": []
+                        },
+                        {
+                            "text": "Ports : Only coastal provinces can have ports. When the port is not visible, it is often located within/underneath the land of the province and thus hidden from view. Right-clicking near the coast where you want it is one way to resolve this issue. Parts of the port can be located underwater, so be sure to rise it where necessary.",
+                            "children": []
+                        },
+                        {
+                            "text": "Wonder : The location of a wonder that shows a non-coastal background in the interface.",
+                            "children": []
+                        },
+                        {
+                            "text": "Coastal Wonder : The location of a wonder that shows a coastal background in the interface.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "As they are not associated with any particular county/province, other map objects such as the frame around the map and the wonders added in DLC 63 are not defined in positions.txt; they are instead treated as \"statics\", which are defined in text files within map\\statics\\ and use a different (but similar) system."
+                }
+            ]
+        }
+    ]
+}

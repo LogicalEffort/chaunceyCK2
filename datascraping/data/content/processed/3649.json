@@ -1,0 +1,168 @@
+{
+    "pageid": 3649,
+    "title": "Unit modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": []
+        },
+        {
+            "heading": "Basic troops",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The stats of basic troops are found in defines.lua as LIGHT_INFANTRY_PHASE_SKIRMISH_ATTACK, etc."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For the 3D models used on the map, there's a convention on the name of EMFXActorType or pdxmesh gfx entries, based on the culturegfx of the units:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "culturegfx_<unit_type>",
+                            "children": []
+                        },
+                        {
+                            "text": "culturegfx_<unit_type>_rider (for mounted units)",
+                            "children": []
+                        },
+                        {
+                            "text": "culturegfx_<unit_type>_weapon",
+                            "children": []
+                        },
+                        {
+                            "text": "culturegfx_<unit_type>_helmet",
+                            "children": []
+                        },
+                        {
+                            "text": "culturegfx_<unit_type>_shield",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "culturegfx is the first matching unit_graphical_cultures of the culture (if any), otherwise the graphical_cultures , defaulting to westerngfx."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "See interface/avatars.gfx for the base game units assets."
+                }
+            ]
+        },
+        {
+            "heading": "Special troops",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To add a special troops the steps are to:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Add a unit in common\\special_troops :",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Add the unit sprite into gfx\\interface\\unitpanel_specialunits_bigstrip.dds and gfx\\interface\\unitpanel_specialunits_smallstrip.dds",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The noOfFrames in interface\\unitpanel.gfx needs to be increased"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Add a modifier definition in common\\modifier_definitions",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Add the localization:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Add the new unit in common\\technology in this case, typically associated to technology of its base_type (here TECH_HEAVY_INFANTRY):",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Tactics",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Tactics are defined in the /common/combat_tactics/ folder. The format is:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "\"days\" refers to the amounts of days a tactic will last. If it is set as \"1\" the tactic will last for one day, if it is set as \"2\" it will last for two days etc.",
+                            "children": []
+                        },
+                        {
+                            "text": "\"sprite\" defines the sprite the tactic will have. The number corresponds with the index of a tactics icon, which are defined inside Crusader Kings II\\gfx\\interface\\combat_tactic_strip.dds . Inside Crusader Kings II\\interface\\combat.gfx the properties spritetypes are defined.",
+                            "children": []
+                        },
+                        {
+                            "text": "\"group\" is the tactic group that the tactic belongs to. In vanilla, the groups skirmish, harass, swarm, volley, defensive, swarm, charge, stand_fast and advance are used.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "To illustrate, here is an example of a tactic from the the file 00_combat_tactics.txt in vanilla:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "This article is a Stub ,  which means that it does not sufficiently cover its subject matter. Please help expand this article if you can."
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

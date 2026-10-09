@@ -1,0 +1,527 @@
+{
+    "pageid": 2732,
+    "title": "Coats of arms modding",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Coats of arms (CoA) are heraldic designs to uniquely identify a title or a dynasty ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "They are composed of a shield inside a frame, and may be displayed in 2D (character screen) or 3D (map)."
+                }
+            ]
+        },
+        {
+            "heading": "Shield",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "There are various systems used to determine the shield of a CoA"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Type",
+                            "Predefined",
+                            "Random"
+                        ],
+                        [
+                            "Title (county and above)",
+                            "Default, uses gfx/flags/<title>.tga",
+                            "If religion group has has_coa_on_barony_only = no"
+                        ],
+                        [
+                            "Title (barony)",
+                            "If coat_of_arms = {} is specified in /common/landed_titles/",
+                            "Default"
+                        ],
+                        [
+                            "Dynasty",
+                            "If coat_of_arms = {} is specified in /common/dynasties/",
+                            "Default"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Flags",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Landed titles use pre-defined flags in /gfx/flags/ folder, with hardcoded name <title_code>.tga ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This is the default for titles with tier above baron, but may be disabled by setting has_coa_on_barony_only = no at religion group level."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Notes:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "due to the way flags are cached into sprites when the game is loaded, one missing flag for a title will cause a shift of ALL flags after the missing one.",
+                            "children": []
+                        },
+                        {
+                            "text": "baronies cannot use this system: even if an image file matching a barony's name is present in the flags folder, it won't be used.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "coat_of_arms",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Titles and dynasties can use a coat_of_arms = {} block in their definition."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In vanilla, this system is used for Dynasty Shields graphical DLCs , and titles above baron tier for Christians and Pagans."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A shorter but less readable alternative is to group all parameters using data = { } ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The order determines the meaning of each value: template, (texture, emblem, texture_internal, color1, color2, color3)+"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In case the template is composed by more than one layer, it is repeated for each layer."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In vanilla this is used for b_cluny barony title, and few dynasties."
+                }
+            ]
+        },
+        {
+            "heading": "pagan_coa",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Titles can have a special coat of arms set which is used instead of the main arms when held by a pagan character. These are defined using the pagan_coa tag in the same way as coat_of_arms tag."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For example:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This tells the game that when a pagan ruler holds the title, rather than displaying the normal coat of arms, arms number 8 (i.e. the 9th image; counting starts at 0) in norse_pagan arms texture number 2 will be displayed instead."
+                }
+            ]
+        },
+        {
+            "heading": "Random",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Random CoA, are based on religion restrictions on patterns, emblems and colors combinations, configured via coats of arms.txt ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This is the default for dynasties and baron tier titles. For titles above baron tier, it can be activated at religion group level by setting has_coa_on_barony_only = no ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In vanilla, this is used for most dynasties, baron tier titles for Christians and Pagans, and all tier titles for Muslims."
+                }
+            ]
+        },
+        {
+            "heading": "Frame",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "3D",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If displayed on the map, the frame is based on the graphical_culture of the religion of the liege, and looking for a EMFXActorType 3D gfx named <graphical_culture>_<tier>_shield :"
+                }
+            ]
+        },
+        {
+            "heading": "2D",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "When displayed on other screens, the frame is based on coats of arms.txt , by matching religion of the liege [ or dynasty head for dynasties ] ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Frame may be overridden in the definition of the dynasty via forced_coa_religiongroup [ {{{1}}} ] ."
+                }
+            ]
+        },
+        {
+            "heading": "Coats_of_arms.gfx",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This file is used to define the graphics used for drawing a Coat of Arms. Note that new definitions can be added to any separate .gfx file inside interface/ folder, not only in vanilla coats_of_arms.gfx"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It contains a series of a spriteType and CoatOfArmsType, inside a spriteTypes group."
+                }
+            ]
+        },
+        {
+            "heading": "spriteType",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The spriteType seems to be used internally by CKII, and not in the Coat of Arms data. In the vanilla file there is only spriteType, which is as follows:"
+                }
+            ]
+        },
+        {
+            "heading": "CoatOfArmsType",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The CoatOfArmsType defines the templates used for drawing templates, using the following attributes:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Attribute",
+                            "Description",
+                            "Data Type",
+                            "Example"
+                        ],
+                        [
+                            "name",
+                            "The name of the template",
+                            "String",
+                            "name = \"coa_plain\""
+                        ],
+                        [
+                            "frame",
+                            "The frame used for drawing the CoA",
+                            "String",
+                            "frame = \"gfx\\\\coats_of_arms\\\\frame.tga\""
+                        ],
+                        [
+                            "mask",
+                            "The mask used for the CoA seal",
+                            "String",
+                            "mask = \"gfx\\\\interface\\\\seal_mask_CoA.tga\""
+                        ],
+                        [
+                            "seal_overlay",
+                            "The graphic used for the seal",
+                            "String",
+                            "seal_overlay = \"gfx\\\\interface\\\\seal_overlay_CoA.dds\""
+                        ],
+                        [
+                            "effect",
+                            "The file containing the draw shaders",
+                            "String",
+                            "effect = \"gfx/FX/coa_shield.lua\""
+                        ],
+                        [
+                            "layer",
+                            "One or more layer definitions",
+                            "Group",
+                            "See below"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Layers",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The layer groups define how many layers, and which masks they should use, using the following attributes:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Attribute",
+                            "Description",
+                            "Data Type",
+                            "Example"
+                        ],
+                        [
+                            "mask",
+                            "The visibility mask used for the layer.",
+                            "String",
+                            "mask = \"gfx\\\\coats_of_arms\\\\plain.tga\""
+                        ],
+                        [
+                            "center",
+                            "The center coordinates of where the emblem is drawn on the layer",
+                            "Group",
+                            "center = { x= 0.25 y = 0.07 }"
+                        ],
+                        [
+                            "scale",
+                            "The scale which the emblem is drawn at",
+                            "Float",
+                            "scale = 0.5"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Example",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Coats_of_arms.txt",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This file is used to define the templates, colors, emblems, and pattern textures for a Coat of Arms."
+                }
+            ]
+        },
+        {
+            "heading": "culture",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This is the root tag in the file, within which are the following tags:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Attribute",
+                            "Description",
+                            "Data Type",
+                            "Example"
+                        ],
+                        [
+                            "religion_group",
+                            "Used to specify a separate Coat of Arms set for a religion group",
+                            "String",
+                            "religion_group = \"christian\""
+                        ],
+                        [
+                            "templates",
+                            "The list of templates used by the definition",
+                            "Group",
+                            "See below"
+                        ],
+                        [
+                            "color",
+                            "The list of colors that can be used for drawing",
+                            "Group",
+                            "See below"
+                        ],
+                        [
+                            "banned_colors",
+                            "A list of color combinations that cannot be used",
+                            "Group",
+                            "See below"
+                        ],
+                        [
+                            "emblem",
+                            "The path of the texture containing the emblems",
+                            "String",
+                            "emblem = \"gfx\\\\coats_of_arms\\\\emblem.tga\""
+                        ],
+                        [
+                            "noOfEmblem",
+                            "The number of emblems in the texture defined in the emblem tag",
+                            "Integer",
+                            "noOfEmblem = 25"
+                        ],
+                        [
+                            "textures",
+                            "A list of texture tags defining the patterns",
+                            "Group",
+                            "See below"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "templates",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A template (as defined in Coats of arms.gfx ) is added to the definition by enclosing the name and layer count of the template inside a template tag. For example:"
+                }
+            ]
+        },
+        {
+            "heading": "color",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The colors are defined using the RGB format with a range of 0-255 inside a pair of curly braces. Because these are stored as a series of numbers, it would be wise to comment the list with the name of the color. Colors are referred to by other sections by ID, starting from 0. An example color s definition:"
+                }
+            ]
+        },
+        {
+            "heading": "banned_colors",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This is a list of color combinations not to be used, with the colors listed by ID. To ban the colours Or and Argent (from the above example) from being used together, you would put them together in a group like so: { 0 1 } . An example banned_colors definition:"
+                }
+            ]
+        },
+        {
+            "heading": "textures",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The textures tag defines the pattern textures in a group of texture tags."
+                }
+            ]
+        },
+        {
+            "heading": "texture",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The texture tag defines the patterns used when drawing a Coat of Arms. Each pattern texture typically contains multiple individual pattens. It contains the following options:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Attribute",
+                            "Description",
+                            "Data Type",
+                            "Example"
+                        ],
+                        [
+                            "file",
+                            "The file path to the pattern texture",
+                            "String",
+                            "file = \"gfx\\\\coats_of_arms\\\\pattern.tga\""
+                        ],
+                        [
+                            "size",
+                            "The number of patterns on the X and Y axes.",
+                            "Group",
+                            "size = { x = 10 y = 3 }"
+                        ],
+                        [
+                            "noOfFrames",
+                            "The total number of patterns in the texture. This may be different from the X count multiplied by the Y count.",
+                            "Integer",
+                            "noOfFrames = 27"
+                        ],
+                        [
+                            "color",
+                            "The number of colors that can be used for drawing this pattern.",
+                            "Integer",
+                            "color = 2"
+                        ],
+                        [
+                            "max_emblems",
+                            "How many emblems the AI is allowed to use at most (default value is 1). Also ensures only templates with at most this many slots get used by the AI. No effect if \"emblem = no\" is set. Added in Patch 2.8.X.",
+                            "Integer",
+                            "max_emblems = 2"
+                        ],
+                        [
+                            "emblem_chance",
+                            "The chance that an emblem will be used at all by the AI (default value is 50). Added in Patch 2.8.X.",
+                            "Integer",
+                            "emblem_chance = 30"
+                        ],
+                        [
+                            "random",
+                            "If \"no\", then will not be used for random CoAs",
+                            "Bool",
+                            "random = no"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Dynasty modding",
+                            "children": []
+                        },
+                        {
+                            "text": "Title modding",
+                            "children": []
+                        },
+                        {
+                            "text": "Graphics modding",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "External links",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A Guide to Coat of Arms",
+                            "children": []
+                        },
+                        {
+                            "text": "Coat of Arms Builder tool by Measter",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

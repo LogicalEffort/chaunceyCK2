@@ -1,0 +1,1074 @@
+{
+    "pageid": 2437,
+    "title": "Patch 2.3",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Patch 2.3 was released on 2014-12-16 [1] alongside the Way of Life expansion."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The checksum for this version is BTOF."
+                }
+            ]
+        },
+        {
+            "heading": "Major",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed false positive OOS",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed auto-selection of characters in multiplayer problem when loading saves",
+                            "children": []
+                        },
+                        {
+                            "text": "Vassals called to war now respond in the message ticker, not a pop-up event",
+                            "children": []
+                        },
+                        {
+                            "text": "The Call Allies alert no longer lists all vassals you can call, and takes you to the military view if you click the \"All of our Vassals\" entry",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Fixed bug with trying to raise ships in provinces with no ships (0 size fleets appeared and disappeared)",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer possible to nominate heirs for secondary Elective Gavelkind kingdoms and empires (it has no effect anyway - only the first Gavelkind type title has an effect)",
+                            "children": []
+                        },
+                        {
+                            "text": "Reduced the amount of money the pope gets from bishops ( from 40% of tax to 10% of tax for Popes, 20% to 5% for Anti-Popes )",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a whole event system for husbands to find out if their wife/concubine has been unfaithful (after \"Doubt besets me...\")",
+                            "children": []
+                        },
+                        {
+                            "text": "Multithreaded startup of the game",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed crash caused by destroyed settlements by Viking looters",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed probable OOS",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed crash when missing certain Unit Pack DLC's",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed memory leak when calculating subunits monthly cost.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed crash when resigning characters from various appointments ( councillors, army leaders etc. )",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Minor",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed so laws are copied when you change primary title",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed so history laws are enforced, france in 1066 should no longer be gavelkind",
+                            "children": []
+                        },
+                        {
+                            "text": "Support to show the combat rating of a character together with combat modifiers",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed broken culture effect, now you can convert to local culture of a province again",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed problem with trait generation for random characters was done with not fully constructed characters, fixes the problem with females getting male traits.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed not being able to raise ships from demesne",
+                            "children": []
+                        },
+                        {
+                            "text": "Added \"Toggle Special Interest\", \"Reverse Relations\" and \"Go to Location\" buttons to the Diplomacy view.",
+                            "children": []
+                        },
+                        {
+                            "text": "Improved positioning of the Diplomacy View.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where autoselected interactions in the Diplomacy View were not properly selected.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Diplomacy View no longer closes automatically in some cases when opened along with a character view.",
+                            "children": []
+                        },
+                        {
+                            "text": "Pressing the middle mouse button no longer closes the Diplomacy View.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where portraits in Claimants view and Opposed to Law view were not clickable.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where the Diplomacy View ended up outside of the screen.",
+                            "children": []
+                        },
+                        {
+                            "text": "Character selection view left and right click behaviour is now consistent.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where landless characters gaining tribal provinces with holy sites through revolts became theocracies instead of becoming tribal.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added console commands set_flag, set_prov_flag, set_char_flag, clr_flag, clr_prov_flag, clr_char_flag and clear_focus.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a number of minor text issues.",
+                            "children": []
+                        },
+                        {
+                            "text": "The capital of Duchy of Ugra is now Ugra.",
+                            "children": []
+                        },
+                        {
+                            "text": "Powys, Man and Kola now have their de jure capitals set correctly.",
+                            "children": []
+                        },
+                        {
+                            "text": "Jews no longer want boar meat for their feasts.",
+                            "children": []
+                        },
+                        {
+                            "text": "No longer possible for non-Muslims to have the 'Decadent' trait.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a broken option trigger for declining some pagan feast invitations.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a new bug where the portrait of the sender would not be shown in letter and diplomacy response events",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a serious bug where Prepared Invasions would always be disable on reload",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a problem with event 3026, where the children of an unmarried female courtier would get an unknown father",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed some issues with event 3520 (incorrect use of impregnate_cuckoo, and added fertility checks)",
+                            "children": []
+                        },
+                        {
+                            "text": "All modifiers can now be set and used correctly in Ambitions (not just Fertility)",
+                            "children": []
+                        },
+                        {
+                            "text": "Better shield for the Emichid dynasty",
+                            "children": []
+                        },
+                        {
+                            "text": "Added GetHighGodName and GetHighGodNameCap to religions and texts",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with heretical count tier bishops and above being called \"counts\", etc",
+                            "children": []
+                        },
+                        {
+                            "text": "Character View: Removed a double colon (:",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a new bug with scope switching to specific character IDs",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the 'is_married' trigger when not taking a bool",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where the same character portrait found in both the immediate effect and an event option would be shown twice",
+                            "children": []
+                        },
+                        {
+                            "text": "Christians with Elective Gavelkind can no longer vote for bishops and mayors",
+                            "children": []
+                        },
+                        {
+                            "text": "Cut an inappropriate event option in old event 4115",
+                            "children": []
+                        },
+                        {
+                            "text": "Character View: Fixed an old bug with being able to cancel an Ambition when you should not",
+                            "children": []
+                        },
+                        {
+                            "text": "Character View: Added better tooltip saying _when_ you can cancel the current Ambition",
+                            "children": []
+                        },
+                        {
+                            "text": "Character View: Added better tooltip about cancelling plots",
+                            "children": []
+                        },
+                        {
+                            "text": "Intrigue View: Fixed cancel current plot button issues",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed decimals from attribute modifier descriptions",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed decimals from attribute change effects",
+                            "children": []
+                        },
+                        {
+                            "text": "Dynasty View: Fixed a bug with succession marriage status not being shown correctly anymore for dead characters",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the 'repeat_event' effect and namespaces",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed event 55000 and 55001 so that they now properly changes culture on the province and doesn't try to change the culture of the holder to the holder's culture.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a serious bug with targetted decisions that target yourself showing up for others",
+                            "children": []
+                        },
+                        {
+                            "text": "The \"Doubt besets me\" event chain now correctly reveals the real father of the unborn child",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed various text issues with certain targetted decisions",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a few missing event window borders",
+                            "children": []
+                        },
+                        {
+                            "text": "AI: Fixed a bug that limited the amount of potential target characters for ai target filters 'realm' and 'sub_realm' too much",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trait loss notification events for Stressed and Depressed",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a minor typo in birth event 457",
+                            "children": []
+                        },
+                        {
+                            "text": "Bastards born to lovers through the code now get a known father if the woman is unmarried",
+                            "children": []
+                        },
+                        {
+                            "text": "Moved the \"RIGHT-CLICK TO INTERACT\" tooltip on portraits to the instant part and made it all capital letters",
+                            "children": []
+                        },
+                        {
+                            "text": "Cut the \"Special interest\" button from the character view",
+                            "children": []
+                        },
+                        {
+                            "text": "Improved the tooltips for the three special buttons in the new Diplo Menu",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where retinues were calculated into the fleet levies in dynastic view.",
+                            "children": []
+                        },
+                        {
+                            "text": "Reverse relations now looks at the character's religion, culture and realm instead of the player's.",
+                            "children": []
+                        },
+                        {
+                            "text": "Executing interactions in diplomacy view will now update the yes/no icons indicating if characters will join your plot or accept being invited to your court.",
+                            "children": []
+                        },
+                        {
+                            "text": "Opening reverse relations now closes the diplomacy view.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where the spouse finder did not properly select bethrothal for minors.",
+                            "children": []
+                        },
+                        {
+                            "text": "Clicking on special interest entries in the outliner now works the same as clicking on portraits.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added alert for high-prio targetted decisions.",
+                            "children": []
+                        },
+                        {
+                            "text": "Character tooltips for buttons who opens diplomacy view with pre-selected interactions now say \"Right-click to select\" instead of \"Right-click to interact\".",
+                            "children": []
+                        },
+                        {
+                            "text": "Targetted decisions no longer shows the target character name (except in the targetted decision alert).",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where historical nicknames were not removed properly when moving backwards through history.",
+                            "children": []
+                        },
+                        {
+                            "text": "Troops number in dynastic view now takes event troops into consideration.",
+                            "children": []
+                        },
+                        {
+                            "text": "The Diplomacy View is now properly positioned.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed death effect in zunist torture event chain",
+                            "children": []
+                        },
+                        {
+                            "text": "Founding the HRE is now no longer possible if the Byzantines have restored the Roman Empire.",
+                            "children": []
+                        },
+                        {
+                            "text": "English culture can no longer spawn unintentionally through a minor Muslim random event.",
+                            "children": []
+                        },
+                        {
+                            "text": "Event triggering notification of someone coming out of hiding should now work correctly.",
+                            "children": []
+                        },
+                        {
+                            "text": "Adjusted the 'culture' text field in the character view",
+                            "children": []
+                        },
+                        {
+                            "text": "Raising runestones now also gives Piety",
+                            "children": []
+                        },
+                        {
+                            "text": "Reverted to previous version of v1_092.csv to correct a lot of broken special letters",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'is_foe' trigger and 'crime' flag to opinion modifiers",
+                            "children": []
+                        },
+                        {
+                            "text": "Converting Tribal Holdings no longer depletes the levy",
+                            "children": []
+                        },
+                        {
+                            "text": "Winning and losing wars now tends to give more nicknames",
+                            "children": []
+                        },
+                        {
+                            "text": "Decadence Revolts: Boosted troop strengths",
+                            "children": []
+                        },
+                        {
+                            "text": "Decadence Revolts: Vassals more likely to go independent",
+                            "children": []
+                        },
+                        {
+                            "text": "Decadence Revolts: the revolt winner no longer gets any claims on vassals that go independent",
+                            "children": []
+                        },
+                        {
+                            "text": "Expanded on the Lunatic gained event (6020). Now more common, and with different texts depending on your situation",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed an issue with gavelkind where, if your primary kingdom or empire was titular, it could cause strangeness",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with the 'holy_war' acquisition method not showing up in title history",
+                            "children": []
+                        },
+                        {
+                            "text": "Added some missing acquisition types to the CBs",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with elective gavelkind in empires with secondary kingdoms where your de facto capital and kingdom did not go to your primary heir",
+                            "children": []
+                        },
+                        {
+                            "text": "Winning claim wars on the liege (or when a liege folds to a claimant demand) will no longer incorrectly try to even out the de jure kingdom borders",
+                            "children": []
+                        },
+                        {
+                            "text": "Optimized and fixed many bugs in the health events",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed broken dynasty 8601 \"de Cantabria\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug in Charlemagne event CM.1076 preventing Charlemagne from getting a claim on whoever shelters Carloman's wife and children",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug in event 63100 causing issues when vassals change liege on succession due to being over the vassal limit",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a rare bug where landless title courts could contain random characters with no culture or religion",
+                            "children": []
+                        },
+                        {
+                            "text": "Corrected some event border colors",
+                            "children": []
+                        },
+                        {
+                            "text": "Tooltips on dead characters now list their primary tier titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Spouses now always only have personal opinions of each other",
+                            "children": []
+                        },
+                        {
+                            "text": "All non-Muslims can now legitimize bastards",
+                            "children": []
+                        },
+                        {
+                            "text": "All religions can now divorce their spouse if there is currently no religious head",
+                            "children": []
+                        },
+                        {
+                            "text": "Added divorce reasons to character opinions and to the divorce interactions",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaked the main bastard conception and lover gained events (450 and 456)",
+                            "children": []
+                        },
+                        {
+                            "text": "Optimized the lookup of database files",
+                            "children": []
+                        },
+                        {
+                            "text": "History province files will now only be loaded if they have correct name. The name need to be put in to the map definition file.",
+                            "children": []
+                        },
+                        {
+                            "text": "The character screen no longer shows the score of the player.",
+                            "children": []
+                        },
+                        {
+                            "text": "The character screen now shows how many troops that character can raise.",
+                            "children": []
+                        },
+                        {
+                            "text": "It is now possible to cancel your own plot in your character screen.",
+                            "children": []
+                        },
+                        {
+                            "text": "Demesne size and vassal limit is now visible in the character screen.",
+                            "children": []
+                        },
+                        {
+                            "text": "The loading screen for the most recent dlc is now always shown first when loading the game.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tengri no longer get pagan homeland attrition penalty against other pagans.",
+                            "children": []
+                        },
+                        {
+                            "text": "Reformed Zunists no longer have pagan defensive homeland attrition.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed CTD when resigning from games.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed broken options in events which used the religion = christian trigger.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where the cost of vassal mercenaries were not calculated properly.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where ironman saves became broken when creating a new save after loading an old one.",
+                            "children": []
+                        },
+                        {
+                            "text": "AI will now prefer using CB's without piety and prestige costs.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where elective gavelkind in some cases stole provinces from other realms on succession.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed crash when trying to host a save stored in a sub-directory.",
+                            "children": []
+                        },
+                        {
+                            "text": "Viceroyalties can no longer be granted to characters outside your realm.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed crash when finishing constructions in settlements without a holder.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue where both tribal settlement conversion decisions were avaliable for republics.",
+                            "children": []
+                        },
+                        {
+                            "text": "The decisions for forming the kingdom of Leon and Hungary is no longer allowed if the required kingdoms are viceroyalties.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where the king-tier crown was used for all characters in the lobby regardless of their tier.",
+                            "children": []
+                        },
+                        {
+                            "text": "Viceroys becoming unlanded will now hand back their viceroy title to their liege.",
+                            "children": []
+                        },
+                        {
+                            "text": "Wars and truces are now visible in the character view.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where the Assassin Resurface-event did not activate the title.",
+                            "children": []
+                        },
+                        {
+                            "text": "Decadence tooltip now uses a consistent amount of decimals.",
+                            "children": []
+                        },
+                        {
+                            "text": "Opening the chronicle now pauses the game if not in multiplayer.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where Empires could be granted as viceroyalties (but did not do anything).",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where the family of Carloman sometimes fled to a revolt.",
+                            "children": []
+                        },
+                        {
+                            "text": "Clarified the negative effects for tribal job troops if not used in the job action tooltip.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where provinces where unselectable after resigning and starting a new game if that province was selected before resigning.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed issue where De Jure Region modifiers were clamped with Owner Martial Skill in the levy tooltip.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed history bug where character 30829 (Simone Drengot) had the wrong father.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed broken allow-trigger in landed_titles.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing message type GRANT_VICE_ROYALTY_INTERACTION_ACCEPT",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where prepared invasion troops were not properly dismissed when the invader died before declaring war.",
+                            "children": []
+                        },
+                        {
+                            "text": "Duchy of Thessalonika is no longer set to be a viceroyalty when held by Latin Empire.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaked the stats of some early Norse characters.",
+                            "children": []
+                        },
+                        {
+                            "text": "Isle of Man is now its own de jure duchy.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaks to Manx title names.",
+                            "children": []
+                        },
+                        {
+                            "text": "Taking the \"Become Kshatriya Caste\" decision now also gives the Kshatriya caste trait to to any unlanded spouses or children in the ruler's court.",
+                            "children": []
+                        },
+                        {
+                            "text": "Muslim rulers now correctly get a negative opinion against Byzantine emperor who renounces iconoclasm.",
+                            "children": []
+                        },
+                        {
+                            "text": "Saxon Wars event can no longer trigger for non-feudal rulers.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added target list for great holy wars for reformed Zunists.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaked triggers for unlocking crusades and jihads (France and North Africa).",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaked the chances for some ruler nicknames.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the names for Church of Zun and West African Church (was wrong format).",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug where a coincillor could sometimes complain to liege about herself.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the localisation for the Seljuk Turks title.",
+                            "children": []
+                        },
+                        {
+                            "text": "Melitene province in Armenia is now properly considered mountainous terrain.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a crash when selecting a lowborn theocracy at startup.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where the dismiss vassal levies button in military view dismissed all vassal levies and was not always enabled.",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated tutorial and learning scenario to work with the new diplomacy menu.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added pagan and republic diplomatic menu buttons.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where republics with no vassals did not automatically generate patricians.",
+                            "children": []
+                        },
+                        {
+                            "text": "The extra prestige and piety bonuses for creating Kingdom of Jerusalem are now only given once per game.",
+                            "children": []
+                        },
+                        {
+                            "text": "added frames for business and war focus events.",
+                            "children": []
+                        },
+                        {
+                            "text": "The empty holding modifier for tribal settlements now applies for non-tribals as well.",
+                            "children": []
+                        },
+                        {
+                            "text": "Removed the wrong government type penalty for tribal settlements (they have the wrong culture/religion penalties instead).",
+                            "children": []
+                        },
+                        {
+                            "text": "The diplomacy menu is now positioned correctly when not opened from portraits.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where the drunkard trait were required for lowering decadence in some events where diligent and charitable was intended.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added missing event localisation for revolt event in learning scenario.",
+                            "children": []
+                        },
+                        {
+                            "text": "Vassal opinion modifiers from focuses are now properly calculated into vassal opinions.",
+                            "children": []
+                        },
+                        {
+                            "text": "WOL - Lowered the duration on the trade route modifier from 50 to 30 years.",
+                            "children": []
+                        },
+                        {
+                            "text": "WOL - Lowered the ai chance to refresh a trade route.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Modding",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Title variables are now correctly saved",
+                            "children": []
+                        },
+                        {
+                            "text": "In order to show character names properly in the targetted decision alert, use the localisation [decision_name]_named.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a new insult and compliment system based on strings scripted into the traits. Used in texts with [GetFromRootInsult], [GetRootFromFromCompliment], etc",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'modifier' fields to effects 'random_list' and 'random'",
+                            "children": []
+                        },
+                        {
+                            "text": "The 'is_married' trigger can now take a target as well as a bool (like 'is_lover' and 'is_consort')",
+                            "children": []
+                        },
+                        {
+                            "text": "Added many new nicknames",
+                            "children": []
+                        },
+                        {
+                            "text": "Added possibility to set a specific discoverer to the 'reveal_plot' effect (reveal_plot = ROOT, etc)",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'plot_is_known_by'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event effect 'usurp_title_plus_barony_if_unlanded_and_vassals_n o_adj'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'any_opinion_modifier_target'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added effects 'random_opinion_modifier_target' and 'any_opinion_modifier_target'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added combat rating modifier with triggers 'combat_rating' and 'combat_rating_diff'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added fromfromfromfrom scope targets",
+                            "children": []
+                        },
+                        {
+                            "text": "Added optional 'as_if_liege' parameter to opinion triggers",
+                            "children": []
+                        },
+                        {
+                            "text": "Added triggers 'personal_opinion', 'reverse_personal_opinion', 'personal_opinion_diff' and 'reverse_personal_opinion_diff'",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(These do not take state diplomacy, laws or any other such state concerns into account)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Moved to defines: MALE_ATTRACTION_CUTOFF and FEMALE_ATTRACTION_CUTOFF",
+                            "children": []
+                        },
+                        {
+                            "text": "Added 'capital' console command",
+                            "children": []
+                        },
+                        {
+                            "text": "Added event effect 'log'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'has_polygamy'",
+                            "children": []
+                        },
+                        {
+                            "text": "Added trigger 'has_concubinage'",
+                            "children": []
+                        },
+                        {
+                            "text": "Character modifier descriptions now support text variables",
+                            "children": []
+                        },
+                        {
+                            "text": "Added is_holy_site trigger",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with effect scope any_allied_character",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed a bug with effect scope random_allied_character",
+                            "children": []
+                        },
+                        {
+                            "text": "All any-triggers now support the use of count = x",
+                            "children": []
+                        },
+                        {
+                            "text": "Added variables to titles",
+                            "children": []
+                        },
+                        {
+                            "text": "All variable trigger and effects now work with title variables",
+                            "children": []
+                        },
+                        {
+                            "text": "Variables can be displayed with localization system",
+                            "children": []
+                        },
+                        {
+                            "text": "Variable triggers and effects can compare variables between types of scopes (country/province)",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed problems with the variable triggers check_variable and is_variable_equal",
+                            "children": []
+                        },
+                        {
+                            "text": "Added cal_true_if trigger",
+                            "children": []
+                        },
+                        {
+                            "text": "Added set_title_flag effect",
+                            "children": []
+                        },
+                        {
+                            "text": "Added clr_title_flag effect",
+                            "children": []
+                        },
+                        {
+                            "text": "Added has_title_flag trigger",
+                            "children": []
+                        },
+                        {
+                            "text": "Added had_title_flag trigger",
+                            "children": []
+                        },
+                        {
+                            "text": "Added save_event_target_as effect",
+                            "children": []
+                        },
+                        {
+                            "text": "Added save_global_event_target_as effect",
+                            "children": []
+                        },
+                        {
+                            "text": "Added clear_event_target effect",
+                            "children": []
+                        },
+                        {
+                            "text": "Added clear_global_event_target effect",
+                            "children": []
+                        },
+                        {
+                            "text": "Added clear_global_event_targets effect",
+                            "children": []
+                        },
+                        {
+                            "text": "Added support for weighted cultural names",
+                            "children": []
+                        },
+                        {
+                            "text": "Added support for weighted regnal names",
+                            "children": []
+                        },
+                        {
+                            "text": "Added an on_startup on action",
+                            "children": []
+                        },
+                        {
+                            "text": "Exported MAX_CROWN_LAW_CHANGES to defines",
+                            "children": []
+                        },
+                        {
+                            "text": "Added support for localized nicknames",
+                            "children": []
+                        },
+                        {
+                            "text": "Added effects convert_to_temple and convert_to_tribal",
+                            "children": []
+                        },
+                        {
+                            "text": "Renamed effects convert_to_feudal and convert_to_republic to convert_to_castle and convert_to_city",
+                            "children": []
+                        },
+                        {
+                            "text": "set_allow_free_duchy_revokation no longer only works for viceroyalties when Charlemagne is enabled",
+                            "children": []
+                        },
+                        {
+                            "text": "Added a set_allow_free_vice_royalty_revokation effect",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where the any_independent_ruler and random_independent_ruler could target revolts.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added ignores_defensive_attrition effect for religions, used for religions that do not have defensive attrition but will still not get the penalty towards such religions.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "AI",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Tweaked release from prison and execution logic",
+                            "children": []
+                        },
+                        {
+                            "text": "Added AI choice scripts to the bastard is born event (301)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Converter",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Made converter province mapping up to date with EU4 patch 1.8",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed missing cultures for converter",
+                            "children": []
+                        },
+                        {
+                            "text": "Buffed Jerusalem ideas",
+                            "children": []
+                        },
+                        {
+                            "text": "Tweaked Aztec and Incan ideas",
+                            "children": []
+                        },
+                        {
+                            "text": "Rebalanced hashashin, jerusalem, jewish, kinghts templar and roman ideas to accomodate new values in eu4",
+                            "children": []
+                        },
+                        {
+                            "text": "Version compliance with eu4 1.8 patch in the generated mod file",
+                            "children": []
+                        },
+                        {
+                            "text": "Gave cathar, fraticelli and waldensian new modifiers to their religion if you have SoA.",
+                            "children": []
+                        },
+                        {
+                            "text": "Tech groups should now be up to date with EU4 patch 1.8",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed crash bug when converting a game that has custom titles",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed now so converter mod's no longer changes checksum",
+                            "children": []
+                        },
+                        {
+                            "text": "Switched so Miaphysite is not dependent on SoA to become coptic",
+                            "children": []
+                        },
+                        {
+                            "text": "Added Karling ideas",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ Forum, Crusader Kings II - 2.3 PATCH RELEASED - Checksum BTOF , 2014-12-16",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

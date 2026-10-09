@@ -1,0 +1,700 @@
+{
+    "pageid": 2852,
+    "title": "Ambition events",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Rulers can try to raise an attribute that is below 8 by selecting an appropriate objective and waiting for random ambition events to fire. Without Way of Life , this takes the form of an ambition to reach 8."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "With Way of Life , these events instead require having a related focus , and having the attribute be below 8 even with the focus. The \"+3\" focus tends to have more such events: for example, war focus has five while hunting focus has one. (Each focus also provides ways to improve its attribute that do not require the attribute to be below 8.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Each of the event chains can only be taken once per character, and only one event chain can be active at a time."
+                }
+            ]
+        },
+        {
+            "heading": "Martial Ambition",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Name"
+                        ],
+                        [
+                            "94000",
+                            "Toy Army"
+                        ],
+                        [
+                            "94001",
+                            "Other Toy Army Enthusiasts"
+                        ],
+                        [
+                            "94002",
+                            "Toy Army Tournament Begins"
+                        ],
+                        [
+                            "94003",
+                            "Toy Army Tournament Defeat"
+                        ],
+                        [
+                            "94004",
+                            "Toy Army Tournament Victory"
+                        ],
+                        [
+                            "94005",
+                            "Street Ruffians"
+                        ],
+                        [
+                            "94006",
+                            "Melee Lost"
+                        ],
+                        [
+                            "94007",
+                            "Melee Won"
+                        ],
+                        [
+                            "94010",
+                            "Drunken Warrior"
+                        ],
+                        [
+                            "94011",
+                            "The Warrior is found"
+                        ],
+                        [
+                            "94012",
+                            "Warrior is asked to teach"
+                        ],
+                        [
+                            "94013",
+                            "Chopsticks"
+                        ],
+                        [
+                            "94014",
+                            "Boat"
+                        ],
+                        [
+                            "94015",
+                            "Training Done"
+                        ],
+                        [
+                            "94016",
+                            "Training with the Guard"
+                        ],
+                        [
+                            "94017",
+                            "Horsemanship"
+                        ],
+                        [
+                            "94018",
+                            "Alexander/Ashoka the Great"
+                        ],
+                        [
+                            "94019",
+                            "Further studies in strategy"
+                        ]
+                    ]
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Event Chain",
+                            "Ambition",
+                            "Trigger Conditions",
+                            "Possible Rewards"
+                        ],
+                        [
+                            "Toy Army",
+                            "Improve Martial",
+                            "Not Incapable Not a prisoner Not female Married",
+                            "+1 Martial (can stack with other outcomes) +2 Martial, -10 Piety (requires Wroth) +2 Martial, -15 Prestige +2 Martial, +15 Prestige"
+                        ],
+                        [
+                            "Street Ruffians",
+                            "Improve Martial",
+                            "Not Incapable Not a prisoner",
+                            "Nothing +1 Martial, -15 Prestige +1 Martial, -10 Piety (requires Cruel) +1 Martial, -15 Prestige, -20 Piety (if Jain) +1 Martial, -30 Piety (requires Cruel, if Jain) +2 Martial, +15 Prestige +2 Martial, +15 Prestige, -20 Piety (if Jain)"
+                        ],
+                        [
+                            "Drunken Warrior",
+                            "Improve Martial",
+                            "Not Incapable Not a prisoner",
+                            "Nothing -50 Wealth, +1 Martial, -15 Prestige (requires Wroth) -50 Wealth, +4 Martial, +15 Prestige -50 Wealth, +4 Martial, +15 Prestige, Remove Weak (if Weak)"
+                        ],
+                        [
+                            "Training with the Guard",
+                            "Improve Martial",
+                            "Not Incapable Not a prisoner",
+                            "+1 Martial"
+                        ],
+                        [
+                            "Horsemanship",
+                            "Improve Martial",
+                            "Not Incapable Not a prisoner",
+                            "+1 Martial"
+                        ],
+                        [
+                            "Alexander/Ashoka the Great",
+                            "Improve Martial",
+                            "Not Incapable Not a prisoner Does not have the strategist trait If capital is within the empires of Rajastan, Bengal, Deccan, or Persia then the Ashoka variant flavour text is used",
+                            "+1 Martial Gain student of strategy modifier (with Way of Life ) Gain adept of strategy modifier (with Way of Life, if already student of strategy) Gain strategist trait (with Way of Life, if already adept of strategy)"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that Alexander/Ashoka the Great can happen if Way of Life is active and the character has the war focus, even if they have a martial skill of at least 8, as long as they do not already have a lifestyle trait."
+                }
+            ]
+        },
+        {
+            "heading": "Stewardship Ambition",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Name",
+                            "Note : If the DLC Way of Life is Active, these events will incur when stewardship is strictly lower than 8."
+                        ],
+                        [
+                            "94050",
+                            "The Inn",
+                            "Available if choosing business focus, has 100 gold (although the actual cost is lower, and can be entirely recovered with profit), cannot take garden or survey event chains afterward."
+                        ],
+                        [
+                            "94051",
+                            "The Inn's name",
+                            ""
+                        ],
+                        [
+                            "94052",
+                            "Salt the turnips",
+                            "Choose 30% salt, less salt means less revenue, all the salt backfires."
+                        ],
+                        [
+                            "94053",
+                            "Entertainment",
+                            "Choose the bard or clergyman (only available if Christian/Muslim) for extra income, other choices will incur cost instead"
+                        ],
+                        [
+                            "94054",
+                            "Clergyman",
+                            ""
+                        ],
+                        [
+                            "94055",
+                            "Bard",
+                            ""
+                        ],
+                        [
+                            "94056",
+                            "Eunuch",
+                            ""
+                        ],
+                        [
+                            "94057",
+                            "Wild Ass",
+                            ""
+                        ],
+                        [
+                            "94058",
+                            "Salt Disaster",
+                            ""
+                        ],
+                        [
+                            "94059",
+                            "Salt Profit",
+                            ""
+                        ],
+                        [
+                            "94060",
+                            "Opening Night Over",
+                            "Gain 2 stewardship, 65 gold."
+                        ],
+                        [
+                            "94065",
+                            "The Garden",
+                            "Available if choosing business focus, this event chain will improve stewardship by 2 and give Gardener if you don't have a lifestyle trait beware . Cannot take inn or survey afterward"
+                        ],
+                        [
+                            "94066",
+                            "Gardening Done",
+                            ""
+                        ],
+                        [
+                            "94070",
+                            "Land Survey",
+                            "Gain 2 stewardship"
+                        ],
+                        [
+                            "94071",
+                            "Survey Complete",
+                            ""
+                        ],
+                        [
+                            "94072",
+                            "Bookkeeping",
+                            ""
+                        ],
+                        [
+                            "94073",
+                            "Delegation",
+                            ""
+                        ],
+                        [
+                            "94074",
+                            "Servant Staff",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Learning Ambition",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Name"
+                        ],
+                        [
+                            "94080",
+                            "The Flying Machine"
+                        ],
+                        [
+                            "94081",
+                            "Studies"
+                        ],
+                        [
+                            "94082",
+                            "Enlist Pilot"
+                        ],
+                        [
+                            "94083",
+                            "Otis Flies"
+                        ],
+                        [
+                            "94092",
+                            "al-Otis Flies (Muslim version)"
+                        ],
+                        [
+                            "94084",
+                            "Meldrick Flies"
+                        ],
+                        [
+                            "94093",
+                            "Ba'ah al-Drik Flies (Muslim version)"
+                        ],
+                        [
+                            "94085",
+                            "Dog Flies"
+                        ],
+                        [
+                            "94086",
+                            "Otis Aftermath"
+                        ],
+                        [
+                            "94094",
+                            "al-Otis Aftermath (Muslim version)"
+                        ],
+                        [
+                            "94087",
+                            "Meldrick Aftermath"
+                        ],
+                        [
+                            "94095",
+                            "Ba'ah al-Drik Aftermath (Muslim version)"
+                        ],
+                        [
+                            "94088",
+                            "Dog Aftermath"
+                        ],
+                        [
+                            "94089",
+                            "Otis Second Attempt"
+                        ],
+                        [
+                            "94096",
+                            "al-Otis Second Attempt (Muslim version)"
+                        ],
+                        [
+                            "94090",
+                            "Meldrick Second Attempt"
+                        ],
+                        [
+                            "94097",
+                            "Ba'ah al-Drik Second Attempt"
+                        ],
+                        [
+                            "94091",
+                            "Aftermath"
+                        ],
+                        [
+                            "94098",
+                            "Augustine"
+                        ],
+                        [
+                            "94099",
+                            "Finished Reading"
+                        ],
+                        [
+                            "94100",
+                            "The Shahnameh"
+                        ],
+                        [
+                            "94101",
+                            "Finished Reading"
+                        ],
+                        [
+                            "94102",
+                            "Hermit"
+                        ],
+                        [
+                            "94103",
+                            "Arrival"
+                        ],
+                        [
+                            "94104",
+                            "The Old Man Appears"
+                        ],
+                        [
+                            "94105",
+                            "The Cave"
+                        ],
+                        [
+                            "94106",
+                            "Leaving"
+                        ],
+                        [
+                            "94107",
+                            "Roman Engineering"
+                        ],
+                        [
+                            "94108",
+                            "Philosophy"
+                        ],
+                        [
+                            "94109",
+                            "Astronomy"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Diplomacy Ambition",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Name"
+                        ],
+                        [
+                            "94110",
+                            "The Feud"
+                        ],
+                        [
+                            "94111",
+                            "The Conference (Choice 1)"
+                        ],
+                        [
+                            "94112",
+                            "Appeal to reason"
+                        ],
+                        [
+                            "94113",
+                            "Flatter them (Choice 2A)"
+                        ],
+                        [
+                            "94114",
+                            "Find common ground (Choice 2B)"
+                        ],
+                        [
+                            "94115",
+                            "Their patriotic duty"
+                        ],
+                        [
+                            "94116",
+                            "Soothe tempers"
+                        ],
+                        [
+                            "94117",
+                            "Threaten violence"
+                        ],
+                        [
+                            "94118",
+                            "Lambast childish behavior"
+                        ],
+                        [
+                            "94119",
+                            "Fight!"
+                        ],
+                        [
+                            "94120",
+                            "Peace In Our Time"
+                        ],
+                        [
+                            "94125",
+                            "The Mirror"
+                        ],
+                        [
+                            "94126",
+                            "Practise Done"
+                        ],
+                        [
+                            "94130",
+                            "The Suicide"
+                        ],
+                        [
+                            "94131",
+                            "Approaching the Jumper"
+                        ],
+                        [
+                            "94132",
+                            "Man Grabbed"
+                        ],
+                        [
+                            "94133",
+                            "Jumping"
+                        ],
+                        [
+                            "94134",
+                            "Jumping Aftermath"
+                        ],
+                        [
+                            "94135",
+                            "Man Pulled Inside"
+                        ],
+                        [
+                            "94136",
+                            "Talk Successful"
+                        ],
+                        [
+                            "94137",
+                            "Talk Failure"
+                        ],
+                        [
+                            "94138",
+                            "Town Crier"
+                        ],
+                        [
+                            "94139",
+                            "Foreign Cultures"
+                        ],
+                        [
+                            "94156",
+                            "Old Diplomat"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Intrigue Ambition",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Name"
+                        ],
+                        [
+                            "94140",
+                            "The Necklace"
+                        ],
+                        [
+                            "94141",
+                            "The Theft"
+                        ],
+                        [
+                            "94142",
+                            "Cook's Wife"
+                        ],
+                        [
+                            "94143",
+                            "Cook's Wife, Theft Discovered"
+                        ],
+                        [
+                            "94144",
+                            "Cook's Wife Caught"
+                        ],
+                        [
+                            "94145",
+                            "Cook's Wife Aftermath"
+                        ],
+                        [
+                            "94146",
+                            "Cook's Wife Forgotten"
+                        ],
+                        [
+                            "94147",
+                            "Cook's Wife Dead"
+                        ],
+                        [
+                            "94148",
+                            "Cook's Wife Alive"
+                        ],
+                        [
+                            "94149",
+                            "Servant"
+                        ],
+                        [
+                            "94150",
+                            "Servant, Theft Discovered"
+                        ],
+                        [
+                            "94151",
+                            "Servant Caught"
+                        ],
+                        [
+                            "94152",
+                            "Servant Aftermath"
+                        ],
+                        [
+                            "94553",
+                            "Servant Forgotten"
+                        ],
+                        [
+                            "94554",
+                            "Servant Dead"
+                        ],
+                        [
+                            "94155",
+                            "Servant Alive"
+                        ],
+                        [
+                            "94160",
+                            "Gossip"
+                        ],
+                        [
+                            "94161",
+                            "Gossip learned"
+                        ],
+                        [
+                            "94165",
+                            "Old Spymaster"
+                        ],
+                        [
+                            "94166",
+                            "Visit"
+                        ],
+                        [
+                            "94167",
+                            "Agreed to teach"
+                        ],
+                        [
+                            "94168",
+                            "Training complete"
+                        ],
+                        [
+                            "94169",
+                            "Alchemy"
+                        ],
+                        [
+                            "94172",
+                            "Improved Bodygard [sic]"
+                        ],
+                        [
+                            "94173",
+                            "Old Assasin"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Decadence Ambition",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Name"
+                        ],
+                        [
+                            "94170",
+                            "Berber Life"
+                        ],
+                        [
+                            "94171",
+                            "Living with Berbers"
+                        ],
+                        [
+                            "94175",
+                            "The Bandit Camp"
+                        ],
+                        [
+                            "94176",
+                            "Sneak up on Camp"
+                        ],
+                        [
+                            "94177",
+                            "The Fight"
+                        ],
+                        [
+                            "94178",
+                            "Fight Aftermath"
+                        ],
+                        [
+                            "94180",
+                            "The Hunt"
+                        ],
+                        [
+                            "94181",
+                            "The Hunt Begins"
+                        ],
+                        [
+                            "94182",
+                            "No Sign of the Beast"
+                        ],
+                        [
+                            "94183",
+                            "Hunt is Abandoned"
+                        ],
+                        [
+                            "94184",
+                            "Coming Home"
+                        ],
+                        [
+                            "94185",
+                            "Couriers"
+                        ],
+                        [
+                            "94816",
+                            "Palace Stripped of Luxuries"
+                        ],
+                        [
+                            "94187",
+                            "Brothels Closed"
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

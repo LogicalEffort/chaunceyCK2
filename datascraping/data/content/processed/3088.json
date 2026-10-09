@@ -1,0 +1,163 @@
+{
+    "pageid": 3088,
+    "title": "Portrait Builder",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Portrait Builder is a utility tool for Windows, allowing to create custom characters, by previewing their appearance based on their DNA and properties."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It can be used for character modding , portrait modding or save-game editing ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The tool written in C#/.NET was initially created by Measter in 2012, and when development stopped, the tool was open-sourced."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It was updated in 2016 by Romulien to make it compatible with latest vanilla patch."
+                }
+            ]
+        },
+        {
+            "heading": "Features",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Read portraits from vanilla, DLC zip archives, or mods",
+                            "children": []
+                        },
+                        {
+                            "text": "Preview character portraits based on portraitTypes (ethnicity, sex, age, year), dna, properties, rank and government.",
+                            "children": [
+                                {
+                                    "text": "Merchant republic and religious special clothing frames are supported via a government drop-down.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Societies clothing override is supported via an optional dropdown to replace sprites used by culture-indexed layers (c0->c7)",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Auto-watch for modifications on loaded mod files while editing, to automatically reload the mod data and refresh current portrait",
+                            "children": []
+                        },
+                        {
+                            "text": "Randomize values for selected characteristics",
+                            "children": []
+                        },
+                        {
+                            "text": "Save current character portrait as png image",
+                            "children": []
+                        },
+                        {
+                            "text": "Import/export DNA and properties strings",
+                            "children": []
+                        },
+                        {
+                            "text": "Disable the characteristics that are not used by selected portrait type, or that have only one frame.",
+                            "children": []
+                        },
+                        {
+                            "text": "Read the user mod folder location via a userdir.txt file in Steam directory (if any)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Things which are not currently supported include:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Linux/Mac platforms (cross-compilation with Mono is not working due to dds image library)",
+                            "children": []
+                        },
+                        {
+                            "text": "Load order change via dependencies in .mod file : load order is vanilla -> DLCs (alphabetical) -> mods (alphabetical)",
+                            "children": []
+                        },
+                        {
+                            "text": "Dynamic government parsing (it uses hardcoded vanilla governments)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Installation",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Download the latest version of the tool from the dedicated CK2 forum thread and unzip it somewhere.",
+                            "children": []
+                        },
+                        {
+                            "text": "Install .NET 4.5 , if not already present.",
+                            "children": []
+                        },
+                        {
+                            "text": "Start PortraitBuilder.exe",
+                            "children": []
+                        },
+                        {
+                            "text": "Select the location of your CK2game.exe (for instance: C:\\Program Files (x86)\\Steam\\SteamApps\\common\\Crusader Kings II\\CK2game.exe ). Note: you can get the location from Steam, by right-clicking the game in the library, then Properties / Local Files / Browse Local Files",
+                            "children": []
+                        },
+                        {
+                            "text": "Wait 20-30s for the DLCs to unzip, then the UI should show up",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Troubleshooting",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In case of issue:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Check the log.txt file next to PortraitBuilder.exe: it will report crash exceptions, parsing errors of portrait data, corrupted assets, etc.",
+                            "children": []
+                        },
+                        {
+                            "text": "Adding -logfull to PortraitBuilder.exe launch options will set log level to DEBUG.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                }
+            ]
+        }
+    ]
+}

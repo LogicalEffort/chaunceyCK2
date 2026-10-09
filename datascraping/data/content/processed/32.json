@@ -1,0 +1,2256 @@
+{
+    "pageid": 32,
+    "title": "Casus Belli",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Casus belli , abbreviated as CB , is a Latin expression meaning \"case for war\". It represents a justification for war that is recognized as legitimate by other rulers and religious leaders."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "As with several other games from Paradox , you need to have a CB to start a war in Crusader Kings II. The CB for the war determines the prize for victory and the price of defeat, as well as frequently determining who can participate in the war and what you need to do to win it."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The rationale and reasoning for CB is that rulers of a certain religion and moral code should not be making war on one another for no reason whatsoever, as it is tyrannical and unjust. Followers of some religions, such as the varieties of paganism, are not confined by this and can wage war on whoever they wish - though they risk holy war if they push conquest for the sake of it too far."
+                }
+            ]
+        },
+        {
+            "heading": "Casus Belli and expansion",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Warfare is a primary way to expand your realm , as most CBs can give you new territory:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Pressing a personal claim usurps the title.",
+                            "children": [
+                                {
+                                    "text": "Pressing another's claim makes them your vassal if they are lower rank, and: they are your de jure vassal, or of your dynasty, or already your landed vassal.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "De jure wars on counties, as well as subjugation-type wars, vassalize or usurp the target titles. They try to make the current rulers into vassals, but usurp if they cannot, due to the attacker's low rank or the defender holding territory elsewhere.",
+                            "children": []
+                        },
+                        {
+                            "text": "Invasion-type wars usurp occupied territory in addition to the war's stated target. Minor holdings in occupied counties are also usurped.",
+                            "children": []
+                        },
+                        {
+                            "text": "Holy wars usurp all holdings from infidels. Muslims are an exception, however, as they will vassalize infidels instead of usurping their titles if possible.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can have several CB for a single target, and each has its own goal and reward for success. You should usually choose the CB with the largest reward, although it can be to your advantage to avoid a holy war to reduce the number of possible defenders."
+                }
+            ]
+        },
+        {
+            "heading": "Claim wars",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The possible outcomes are:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Upon winning a claim war, you will gain the title and you'll gain 100 prestige .",
+                            "children": []
+                        },
+                        {
+                            "text": "If it ends in a stalemate, you'll lose 100 prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "If it ends in loss, the claim will be lost in addition to 200 prestige.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Multiple claim wars on a single title cause all attackers to be hostile against each other. If the target title changes hands (whether due to another claim war or any other reason), the claim war will continue against the new controller!"
+                }
+            ]
+        },
+        {
+            "heading": "Claim",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If you have a personal claim upon a title in a realm, you can push this claim to usurp the title."
+                }
+            ]
+        },
+        {
+            "heading": "Claim All",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A ruler with multiple personal strong claims (upon a single realm) can push them all at once. This lets the attacker take all claimed titles in a single war and without waiting out 10-year truces."
+                }
+            ]
+        },
+        {
+            "heading": "Claim for other",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can also push a single claim on behalf of any of your courtiers or vassals. You cannot press claims for women against agnatic titles."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Upon winning, the person you were pushing the claim for will gain this title and their opinion of you will increase by 100. If the claimant was unlanded and the claim is on a higher title, they will also usurp a county from the target, and their opinion of you will increase by a further 100."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that if you push a claim that is outside your de jure lands for someone who is not already your vassal or a member of your dynasty, they will not become your vassal upon taking the title. Thus, if you're pushing a claim for a non-dynasty courtier, make him your vassal first by granting him a landed title. Similarly, if you push someone else's claim for a title equal in rank to your own, they will be independent."
+                }
+            ]
+        },
+        {
+            "heading": "De Jure wars",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "When you are the de jure liege of a title but not its de facto controller, you can press a \"de jure claim\" to gain control. Unlike personal claims, de jure claims cannot be lost unless you lose control of de jure liege title."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When the Sons of Abraham DLC is active, de jure wars cannot be used against holy orders of the same religion (unless they have been expelled )."
+                }
+            ]
+        },
+        {
+            "heading": "De jure claim on county",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If you or a vassal hold a duchy, or you personally hold a kingdom or empire, you can push a de jure claim upon one of its de jure counties held by the other realm. Even if the other realm holds more than one county, you can only push a single de jure claim at once. Also, this means that as an emperor, you cannot help your vassal kings press claims on counties which are de jure part of their kingdoms if their kingdoms are not de jure part of your empire."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the owner of the target county is a single-county count, they will be vassalized. However, if they have a second county, have any higher title, or are a patrician, then the targeted county will be usurped instead (along with any minor settlements in the county owned by the same character)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "AI rulers will not use this CB against other vassals of their liege if the target is down to its last county. Thus, vassal dukes usually won't \"steal\" direct vassal counts from a king, leaving it up to the king whether to transfer the vassal count or not."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Success also gives 100 prestige, and if you were pushing the de jure claim for someone else they'll have their opinion of you increased by 50 for 20 years. On a white peace, you lose 100 prestige, and the defender gets 50 prestige with a further 50 being divided among the defender and any allies. On a loss, prestige changes are doubled and you also have to pay a lump sum equal to 4 times your annual income to the defender."
+                }
+            ]
+        },
+        {
+            "heading": "De jure claim on minor holdings",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Sometimes, you or one of your vassals controls a county and one of the minor holdings (castle, temple or city) in the county is held by somebody outside your realm or is independent. In this case, you will be able to press a county claim in order to gain control of all such holdings the defender owns. Prestige gains and losses are half those for a claim on a county, except on white peace, where they are only a quarter of the usual amount. The holding will always be usurped, not vassalized."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "There are several ways to find minor holdings you do not control:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Zooming in and looking for extra shields",
+                            "children": []
+                        },
+                        {
+                            "text": "Clicking a county and checking whether each holding's upper-right coat of arms is yours",
+                            "children": []
+                        },
+                        {
+                            "text": "Using the \"Independent States\" list (page 10 of the ledger ), sorted by realm size",
+                            "children": []
+                        },
+                        {
+                            "text": "Using the \"Diplomatic Relations\" map mode ( e ) and looking for unusually light or dark counties",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Jade Dragon CBs",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These CBs require the Jade Dragon DLC and can be disabled by a game rule . In general, they are expensive to declare and relatively powerful."
+                }
+            ]
+        },
+        {
+            "heading": "De jure claim on duchy",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Go to war for all counties within a duchy title. You must personally hold the duchy title or be its de jure liege king or emperor. To declare the war, you must spend tier-scaled prestige (250 for dukes, 500 for kings, 1000 for emperors)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Can only be used within the same religious group. Muslims cannot use this CB against other sects of Muslims."
+                }
+            ]
+        },
+        {
+            "heading": "Force Vassalization",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Requirements of Forced Vassilization:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Target must have a realm size of 30 or less;",
+                            "children": []
+                        },
+                        {
+                            "text": "Target must be tier lower;",
+                            "children": []
+                        },
+                        {
+                            "text": "Target must be a neighbor;",
+                            "children": []
+                        },
+                        {
+                            "text": "Target must have same Religion and/or Culture Group;",
+                            "children": []
+                        },
+                        {
+                            "text": "You must be independent and non-nomadic.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Cost of Forced Vassalization:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "No cost to vassalize a baron",
+                            "children": []
+                        },
+                        {
+                            "text": "Costs 250 prestige to vassalize a count",
+                            "children": []
+                        },
+                        {
+                            "text": "Costs 1000 prestige to vassalize a duke",
+                            "children": []
+                        },
+                        {
+                            "text": "Costs 2500 prestige to vassalize a king",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: Holy orders and religious heads can never be targeted, regardless of religion."
+                }
+            ]
+        },
+        {
+            "heading": "Great Conquest",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A large realm can challenge another large realm for a de jure kingdom. Both realms must be independent, have 200 realm size , be non-nomadic, and be at least king tier. The targeted kingdom must be bordering or within two sea zones."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The attacker must spend 3000 prestige and 1500 piety to start the war. The defender must be 95% or greater the strength of the attacker (not including allies)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "On success, the kingdom title and all land within it held by the target character are usurped. The penalties for losing are much greater than for most CBs."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Save and reload the game if you think you should have this CB but don't see it."
+                }
+            ]
+        },
+        {
+            "heading": "Ducal Conquest",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Can be used to conquer a county in a duchy where you already hold a county or barony, as long as the duchy title does not exist. Vassalizes the target if possible, and usurps the title otherwise."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The attacker must spend 1 year income to declare this war. Additionally, counts must spend 100 piety and dukes must spend 250 piety. Higher tier characters cannot use this CB."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Muslims, pagans, and nomads cannot use this CB as they have alternative ways to expand."
+                }
+            ]
+        },
+        {
+            "heading": "Religious Liberation",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Liberates a kingdom that has provinces of your religion. The new ruler will be of your religion and will be a Tributary State under your protection."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Can only be used after getting a special \"opportunity\". An opportunity is likely the first time you start the Strengthen Religion ambition , especially if zealous and using the theology focus. It is also possible to get an opportunity at random."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Also available with Holy Fury to characters with certain bloodlines , even if Jade Dragon is not active. Bloodlines that \"Can call Religious Liberation wars\" allow declaring an unlimited number of Religious Liberation wars."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Cannot be used if you are a vassal."
+                }
+            ]
+        },
+        {
+            "heading": "Border Dispute",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "An unjust conquest of a neighboring county. On success, vassalizes the county if possible and usurps it otherwise."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When used within a realm, the county must be personally owned by the defender. When used against an independent ruler, the county can be owned by a vassal or below."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Pagans can use the CB for 100 prestige. Others can use the CB for wealth and piety, with the cost increasing based on your tier and the similarity of the defender's religion."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Declaring this war decreases the opinion of certain rulers toward you. The opinion hits are most damaging when declaring war on a coreligionist: in this case, most of your vassals and your religious head will be upset."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Pacifist religions cannot use this CB. Nomads and Muslims cannot use this CB as they have alternatives. Likewise, Pagans cannot use this CB except on coreligionists. The shattered-world Consolidation CB takes precedence if and when it is available."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The availability of this CB is controlled by a separate game rule from the other Jade Dragon CBs."
+                }
+            ]
+        },
+        {
+            "heading": "For vassals",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Independence",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "As long as you're someone's vassal, you can try to achieve independence through war. If you win, you'll be free of your current liege, and if the liege you're rebelling against is a king or emperor, crown authority will be lowered one step. If you stalemate, you'll lose 100 prestige, and if you lose, you'll be imprisoned and lose 200 prestige."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Like with changing laws, you cannot use this CB more than one step up the chain. If your previous liege was themselves the vassal of another liege (for example, if you're a count breaking free from a duke who is in turn under a king), you will become a direct vassal of the higher liege rather than becoming independent."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Unlike a faction war for independence, a directly declared war for independence allows the attacker to call in allies. (The defender can call in allies in both cases.) On the other hand, a faction war lets you conspire with fellow vassals (making them temporarily your vassals for the duration of the war, making the war effort more coordinated) and can be started while your levies are already raised and gathered. Vassals of vassals cannot use independence factions but can directly declare independence wars (in order to serve a higher liege directly)."
+                }
+            ]
+        },
+        {
+            "heading": "Overthrow ruler",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Triggered by failed arrest or refused title revocation ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Upon victory, the liege is forced to abdicate, and:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "With the Conclave DLC, the realm law for title revocation is set to Not Allowed.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Without the Conclave DLC, crown authority is lowered two steps.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For justified arrest:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "War name is \"Revolt against the rule of <ruler>\"",
+                            "children": []
+                        },
+                        {
+                            "text": "The rebelling vassal does not get a temporary title and must fight alone",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For unjustified arrest or any revocation:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "War name is \"War against the tyranny of <ruler>\"",
+                            "children": []
+                        },
+                        {
+                            "text": "The rebelling vassal gets a temporary title and other vassals may join in the rebellion (assuming the ruler is duke+ tier)",
+                            "children": []
+                        },
+                        {
+                            "text": "With Conclave, also seeks to set title revocation law to \"disallowed\"",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Faction CBs",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A vassal who feels their faction is powerful enough can issue an ultimatum. If their liege does not capitulate, a war begins with the faction leader as the attacker. Each faction goal has a corresponding CB."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The faction leader gains a temporary title of the defender's rank (thus temporarily becoming independent) with the fellow faction members as temporary vassals. They provide a minimum liege levy equal to their own army size."
+                }
+            ]
+        },
+        {
+            "heading": "Mass Conversion Revolt",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "When a ruler requests a mass conversion from another realm, it is possible that one or more of their own pagan tribal vassals will refuse and declare war against their liege."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Upon success, all declarants become independent and the tribal organization of the defending realm is reduced."
+                }
+            ]
+        },
+        {
+            "heading": "Religious CBs",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "General",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Holy War",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If your religion views an independent ruler as \"infidel\" or \"heretic\", you can declare a religious war against that ruler for a duchy. Muslims can also attack non-heretic Muslims of a different denomination (e.g. Sunni vs Shi'a) who are not busy fighting infidels. Dharmans can also attack Taoists."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You must control a province bordering the targeted duchy (or inside it). It can also be used across 2 sea zones if the attacker or defender is Muslim, or if the attacker is Christian and Crusades have been unlocked."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This CB cannot be used within a realm, for instance by a Sunni vassal against a Shi'a vassal of the same liege, or by a heretic vassal against their non-heretic liege. Vassals who do not share their liege's religion are restricted from using the CB even for external wars, unless the vassal and liege are both non-heretics of the same religion group. The Reformed pagan version of the CB is more specific, requiring that a vassal match the exact religion of their liege."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Upon victory , you'll gain 50 prestige and all de jure counties the previous duke/duchess controlled (as long as they're occupied by you or your allies, or unoccupied) in the targeted duchy. If the duke/duchess held 6 counties (directly, or via their vassals), and only one of the counties was in the de jure duchy that you targeted for Holy War, then you will only gain the 1 county. Click the shield of the targeted duchy and toggle the de jure checkbox to see what counties are de jure and what counties are controlled by the current duke/duchess; you will only \"win\" counties that are in both views."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If someone of your own religion owns one of the holdings, they'll become your vassal. If you are Muslim and attacking a non-Muslim, all vassals will be preserved if possible. Higher or equal tiers rulers' holdings will be usurped as usual, but lower tier vassals will become yours instead. This CB cannot vassalize any religious head such as the Pope even if you target the only duchy he has. Muslim victors will also lose decadence (based on war contribution ; maximum 10%)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you stalemate (white peace), you will lose 50 piety and 100 prestige."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you lose you will lose 150 piety and 200 prestige, and be forced to pay concessions."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The winner's religion gains 3% moral authority for 20 years and the loser's loses 3%. Also, Muslims will lose decadence upon winning holy wars. Conversely, Muslim attackers gain decadence upon losing a holy war, unless they have a liege of the same dynasty. Muslim defenders, however, do not gain decadence for losing."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This CB is available to rulers of most religions, but there are exceptions:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Unreformed pagans do not have holy wars.",
+                            "children": []
+                        },
+                        {
+                            "text": "Reformed pagans (and unreformed Aztecs) have a more powerful version of this CB that can always be used across two sea zones, can be used against other pagans, can be used by nomads, and only incurs a 5-year truce. However, this modified CB costs 100 piety to use.",
+                            "children": []
+                        },
+                        {
+                            "text": "Jains and reformed pagans with the Peaceful nature(requires Holy Fury DLC) do not have any type of religious war.",
+                            "children": []
+                        },
+                        {
+                            "text": "Buddhists must spend 250 piety to use this CB.",
+                            "children": []
+                        },
+                        {
+                            "text": "Taoists cannot use this CB.",
+                            "children": []
+                        },
+                        {
+                            "text": "Rulers cannot use this CB while participating in a reconquista war or while leading a reconquista campaign(?).",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "As with other religious wars, attackers should keep in mind that:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Rulers of the defender's faith may volunteer to join in defense. Attacking is safest when nearby rulers of the target's faith are engaged in other wars. AI rulers consider joining in defense if they are neighbors or their capital-to-capital distance is below 200.",
+                            "children": []
+                        },
+                        {
+                            "text": "Defenders may convert to their attacker's religion by decision . This invalidates the CB, ending the war inconclusively. AI rulers will consider doing so monthly once warscore reaches 50%, so try to reach 100% warscore quickly. They are more likely to convert when their own faith's moral authority is low.",
+                            "children": []
+                        },
+                        {
+                            "text": "Defenders with enough piety are likely to hire holy orders (especially Catholics who have more than 1 order). You can use Title Search to see whether the religion's holy orders exist and whether they are busy.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The Holy War CB can also be used against known demon worshippers of the same religious group, as long as the attacker is not also a known demon worshipper. Losing a Holy War against a satanist does not lower moral authority."
+                }
+            ]
+        },
+        {
+            "heading": "Crusade",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This is a special CB only available to religious heads with at least 5% moral authority . It targets all territories in a de jure kingdom held by heathens or heretics. Any ruler of the same religion can join, even vassals. Upon success, the land will be given out in one of three manners:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If the kingdom title is already held by a ruler of the same religion, that ruler gets the territory.",
+                            "children": []
+                        },
+                        {
+                            "text": "If the kingdom title is already held by a ruler who is not of the same religion (for example, a Sunni Jihad for the Kingdom of Anatolia which is held by the Orthodox Byzantine Emperor in Constantinople), the land is given to a same-religion claimant on the title (strong claims get priority over weak ones). If no same-religion claimant exists, the land is given to the war participant with the highest war contribution score. The title can be peacefully usurped afterwards by the de facto controller.",
+                            "children": []
+                        },
+                        {
+                            "text": "If the kingdom title does not exist, it is created and both kingdom and land are given to the participant with the highest war contribution score.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In addition, the Moral Authority of the attacker's religion increases by 20% for 20 years, and 500 piety and 1000 prestige are divided among all participants by their percentage contribution , while the loser loses 100 piety and his religion 20% moral authority. As with holy wars, defending pagans and Zoroastrians can convert to the attacker's religion by decision, ending the crusade inconclusively."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "On a white peace, the attacker loses 5% authority and 100 piety while the defender gets 2.5% authority, 200 prestige and 100 piety. On a loss, the attacker loses 10% authority, 200 piety, the principal defender gets 10% authority and 100 piety, and a further 300 prestige and 150 piety is divided up among all defenders."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Catholic crusades and Muslim jihads become available in the 11th-12th centuries, or earlier if certain holy sites fall to infidels. Reformed Pagans get Great Holy Wars once either crusades or jihads have been unlocked. Jewish and Zoroastrian Great Holy Wars are unlocked as soon as the head of the respective religion is reinstated. Fraticelli Crusades and Ibadi, Yazidi, Hurufi, and Kharijite Jihads are unlocked once their religious heads are formed, and when the Crusades or Jihads are respectively unlocked. The Eastern religions and Eastern Christians (Orthodox, Miaphysite and Nestorian) are the only religions without a Great Holy War of any kind."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the principal defender dies or is overthrown the war ends inconclusively."
+                }
+            ]
+        },
+        {
+            "heading": "Sanctioned Invasion",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Christian, Jewish, and Zoroastrian rulers can ask their religious head to condone an invasion on another realm targeting a de jure kingdom that follows the same religion and head. You must have a claim on the target's primary title or a smaller realm than the target. It costs 500 piety (250 with Papal Investiture) and will only be granted if the religious head likes you much more than the target."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Upon victory, you'll get the kingdom title in question, 400 prestige, and every occupied holding as well as all holdings in counties where you occupy the capital, and also earn the nickname of \"The Conqueror\". As such, you should occupy every county before enforcing demands, as then you can install your own nobles. If you stalemate you'll lose 100 prestige. If you lose, you'll lose 200 prestige, and have to pay concessions, and you'll lose your claim on the kingdom."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This CB is most useful for Catholics. Most Orthodox kings have autocephalous patriarchs , while Jews and Zoroastrians must first restore their respective religious head."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the target dies, the invasion claim disappears."
+                }
+            ]
+        },
+        {
+            "heading": "Excommunicated Ruler",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Used to depose a ruler who has been excommunicated , without conquering territory. The attacker must not also be excommunicated, and the defender must not be fighting infidels."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Victory will give you 10 to 70 piety and 50 to 400 prestige depending on the excommunicated ruler's rank. The target will have their excommunication lifted and be forced to abdicate (to their heir). A white peace will lose you 50 piety and 100 prestige. Losing will lose you 100 piety, 200 prestige, and you'll be forced to pay concessions."
+                }
+            ]
+        },
+        {
+            "heading": "Christian",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Depose Antipope",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Catholics who accept the authority of the 'true' Pope may attack rulers who have established an antipope. On success, the antipope is deposed (meaning he loses his claim on the papacy; he keeps his bishopric). The religion gets +5% moral authority ( Deposed Antipope ) for 50 years, and no ruler can appoint a new antipope for its duration. The winner gets 500 prestige, 250 piety and a massive opinion boost from the Pope. The loser takes a heavy prestige and piety hit. On failure, the attacker loses prestige and must pay heavy reparations."
+                }
+            ]
+        },
+        {
+            "heading": "Reconquista",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Iberian Christian rulers may once per life use the \"Prepare Reconquest War\" decision to unlock special CBs targeting fixed sets of duchies. Adventurers can also use these CBs.\nIt costs 500 prestige, 250 piety and 200 gold.\nWhen started you receive a 450 to 600 men regiment, non reinforcing, maintenance free at your capital."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The duchy sets will be visible when you actually declare war and are listed below (not all pairs will appear perhaps because you have to border them?):"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "CB",
+                            "Target duchies",
+                            "Kingdom gained if all target duchies are gained"
+                        ],
+                        [
+                            "Reconquest of Leon",
+                            "León, Asturias",
+                            "Kingdom of León or Asturias (whichever is non-titular)"
+                        ],
+                        [
+                            "Reconquest of Castille",
+                            "Castille, Toledo",
+                            "Kingdom of Castille"
+                        ],
+                        [
+                            "Reconquest of Aragon",
+                            "Aragon, Barcelona",
+                            "Kingdom of Aragon"
+                        ],
+                        [
+                            "Reconquest of Galicia",
+                            "Galicia, Portucale",
+                            "Kingdom of Galicia (if not titular)"
+                        ],
+                        [
+                            "Reconquest of Western Coast",
+                            "Beja, Algarve, Lisboa",
+                            "none"
+                        ],
+                        [
+                            "Reconquest of Southern Iberia",
+                            "Granada, Seville",
+                            "none"
+                        ],
+                        [
+                            "Reconquest of Central Iberia",
+                            "Cordoba, Badajoz aka Extremadura",
+                            "none"
+                        ],
+                        [
+                            "Reconquest of the Eastern Coast",
+                            "Valencia, Murcia",
+                            "none"
+                        ],
+                        [
+                            "Reconquest of Navarra",
+                            "Navarra",
+                            "Kingdom of Navarra"
+                        ],
+                        [
+                            "Reconquest of the Balearic Islands",
+                            "Mallorca",
+                            "none"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Throughout the 2 years that you have to declare war a series of events will help you prepare for war. E.g. you can chose how much piety to exchange for gold (e.g. 100 piety for 187.6 gold (1 year income?), 300 piety for 2 years income or refuse for 50 piety), chose how much gold to spend hiring a band of warriors (e.g. 50 prestige for 300 light foot, 100 gold for 300 light foot and 100 archers, etc), to purchase non-reinforcing maintenance free ships (100 gold for 10 ships, 200 gold for 20 ships and 100 prestige or nothing)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "On success, the attacker (or their chosen beneficiary) gains land held by the defender within the target duchies. The target duchies are created or taken (unless they are held by a non-target). If all named duchies are gained, the associated kingdom is gained as well. The loser gains a strong inheritable claim on the kingdom (or if not applicable on the duchies?). May lead to Reconquista bloodline ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Reconquista wars are mutually exclusive with each other and with Holy Wars."
+                }
+            ]
+        },
+        {
+            "heading": "Northern Crusade",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Teutonic Order may announce their intent to fight non-Christians in the North. The campaign will consist of a series of duchy-tier wars within a single de jure kingdom. This requires the Holy Fury DLC and can only happen after the year 1150."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "An independent Catholic ruler may suggest a target. The suggester must be independent and hold a king+ title which is in {Northern Europe, Eastern Baltic, or Rus region }. Otherwise, the Teutonic Order will pick a target themselves after 5-10 years. The first target must be a duke+ ruler; subsequent targets must own land within the kingdom chosen for the first war."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "On success, the Teutonic Order takes the conquered land. They also upgrade their title to the kingdom-tier Teutonic State, if they haven't already done so. If two wars fail, the order will call off the campaign."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Allied attackers get 150 piety and additional rewards depending on war contribution : 150 more piety at 1%, gold at 20%, and an artifact at 40%. If a ruler is the most contributing ally in three wars, they found a Northern Crusade Bloodline , allowing them and their descendants to vassalize the Teutonic Order or Teutonic State."
+                }
+            ]
+        },
+        {
+            "heading": "Papal war",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A duchy-level war on behalf of the Pope. Requires Holy Fury DLC."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Used by independent kings and emperors to restore the Pope to Papal lands (duchy of Latium, Spoleto, Ancona, Ferrara, or Benevento). The target may be a valid holy war target (infidel or heretic), an excommunicated ruler, or a non-theocratic ruler of the same religion who is excommunicated or severely disliked by the Pope ( -50 )."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The Pope may request such a war as a condition for coronation . It can also be a good way to increase Papal opinion or gain an artifact from the Pope as a gift."
+                }
+            ]
+        },
+        {
+            "heading": "Muslim",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Invasion (Muslim)",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For 1000 piety, Muslims may seek to conquer all territory in a de jure kingdom belonging to a ruler of a different religion who controls at least 6 counties within it. Like Muslim Holy Wars, \"different religion\" includes Muslims of other denominations, such as Sunni versus Shia. The attacker must border the target kingdom or own land within it. Nomads cannot use Muslim invasion; they use nomad invasion instead."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Winning grants all holdings held by rulers also owning land outside the kingdom, and also transfers vassalage of all subsidiary lords in the kingdom. The new vassals get a temporary +75 relations modifier with you, making it very easy to demand their conversion. Unlike other invasions, you only gain the target holdings; the loser gets to keep any holdings you occupy outside the wargoal."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "As with holy wars, neighbours of the target who share their religion can (and very likely will) join in defense. Defending pagan and Zoroastrian rulers can convert to the attacker's religion by decision, ending the war inconclusively."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Warning: the war will immediately end if the top liege of the target realm changes."
+                }
+            ]
+        },
+        {
+            "heading": "County Conquest (Muslim)",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Muslims may attack any county bordering their own lands. The CB costs 50 Piety to use, but is usable on any target except your liege. Victory gains you the county, or (if the county is ruled by a single-province count and you're duke rank or higher) transfers vassalage of the count to you, and gives 100 Prestige. White Peace costs 100 Prestige.  Losing costs 100 Prestige and forces you to pay concessions. The truce lasts only 5 years."
+                }
+            ]
+        },
+        {
+            "heading": "Caliphal Subjugation",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Once every 10 years, Muslim caliphs may attempt to subjugate a Muslim de jure kingdom of the same denomination. On success, the target's vassals in that kingdom (or target) become the attacker's vassals. If someone holds territory outside the target kingdom, they cannot be vassalized; their titles within the target kingdom are usurped instead."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The truce lasts only 1 year. Despite this CB not usurping all occupied titles, the attacker will not accept early surrender. This may be a bug."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "According to CB files, nomads cannot use Caliphal Subjugation; they use nomad invasion instead."
+                }
+            ]
+        },
+        {
+            "heading": "Decadence Usurpation",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Muslims can use this CB to usurp titles from kin with the decadent trait."
+                }
+            ]
+        },
+        {
+            "heading": "Pagan CBs",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Depending on the specific Pagan religion and whether or not you are reformed (and how you reformed, with Holy Fury ), the availability of these various CB to individual rulers will vary."
+                }
+            ]
+        },
+        {
+            "heading": "County Conquest (Pagan and Nomads)",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Similar to the Muslim CB, but only usable on targets of different religion and does not cost piety to use. All pagans may target neighboring counties, and Germanic pagans may also target any coastal county once the \"Start of the Viking Age\" event occurs in the year 800. On success, rewards 50 Piety and Prestige in addition to the county, and gives the religion 1% moral authority for 20 years. Like the Muslim CB, the truce lasts only 5 years."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Nomads have access to County Conquest regardless of their faith. However, non-pagan nomads can only use this CB on other nomads or tribals."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that characters of the same religion of your target can join the war against you, just like for Ducal Holy Wars and above. This information is not present in the tooltip, so be careful."
+                }
+            ]
+        },
+        {
+            "heading": "Tribal Invasion",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This powerful CB targets a de jure kingdom but does not usurp the kingdom title. As it is an invasion , it also usurps all occupied holdings (and holdings in occupied counties), even outside the wargoal."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is available for rulers who have tribal government or elective gavelkind succession, if they also have appropriate religion, culture, and are independent:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Without the Horse Lords DLC: it can be used by Pagans with Invasion culture (Altaic or Magyar) and non-Christians with Horde culture (Mongol or Nahua). Pagans cannot be targeted except by Horde culture attackers.",
+                            "children": []
+                        },
+                        {
+                            "text": "With the Horse Lords DLC: it can only be used by Pagans; requires Altaic, Magyar, or Nahua culture; and can never be used against Pagans.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is also available for:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Special hordes",
+                            "children": []
+                        },
+                        {
+                            "text": "Landless mercenaries who were not paid",
+                            "children": []
+                        },
+                        {
+                            "text": "Child of destiny",
+                            "children": []
+                        },
+                        {
+                            "text": "Alexander or Ashoka bloodline (once per lifetime, NOT refunded if the war becomes invalid)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Declaring a Tribal Invasion costs 500 prestige, but the attacker receives 400 prestige upon success (with 100% war contribution )."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Nomads cannot use this CB. Instead, they can use Nomad invasion when their population is 75% of its maximum and at least 30000."
+                }
+            ]
+        },
+        {
+            "heading": "Pagan Subjugation",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Pagans (except Hellenics), with either a tribal government or elective gavelkind succession, may target all land in a de jure kingdom held by another pagan. On success, all holdings are vassalized or seized, and top-level non-titular titles are seized if they are of equal or higher rank than the invader's top title. The conqueror gets an opinion bonus from the vassals he subjugates. The truce lasts only 1 year."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A character may only use this CB once in their lifespan, except with the \"Become King\" ambition, which allows unlimited usage within the capital's de jure kingdom. If a character is already being targeted in a subjugation war it invalidates that character as a target for another subjugation war."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Reformed Pagans lose this CB, and are also protected from it, except from attacks from the unreformed version of their own religion. Unreformed Aztecs can only use this CB against other unreformed Aztecs."
+                }
+            ]
+        },
+        {
+            "heading": "Prepared Invasion",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Certain Pagan rulers can declare their intent to attack a realm, and recruit followers from all over Scandinavia during a special preparation phase. Can only be used once per lifetime."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Prepared Invasions are available for:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Unreformed Germanic Pagans, after the \"Viking Age\" event in the year 800",
+                            "children": []
+                        },
+                        {
+                            "text": "Reformed Germanic pagans (without Holy Fury)",
+                            "children": []
+                        },
+                        {
+                            "text": "Reformed pagans with the Daring or Sons of Ragnarok doctrines (with Holy Fury)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The target realm must have between 9 and 50 holdings within the target de jure kingdom. The attacker must have 750 prestige and fewer than 51 holdings. During the two years after the invasion is announced, the preparing ruler has a chance to receive free troops and ships . The recruited army scales with the size of the ruler's existing army, and also tends to be larger with:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "7, 10, 15, and 20 martial skill",
+                            "children": []
+                        },
+                        {
+                            "text": "7, 10, 15, and 20 diplomacy skill",
+                            "children": []
+                        },
+                        {
+                            "text": "100 and 1000 prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "Higher rank than count",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Recruits show up slowly if the attacker has twice as many troops as the target realm and very slowly if the attacker has three times as many troops. Recruits do not show up at all if the attacker has four times as many troops as the target realm."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Since the recruited army scales with the size of your existing army, you should increase your strength by all possible means during the period before the invasion. At the very least, your capital should have the \"train troops\" and \"fleet returned with loot\" bonuses to levy size. Consider raising tribal prestige troops, hiring mercenaries, or even leading a faction rebellion."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Most of these event troops are earmarked for the invasion and will disband if the invasion is canceled or if the invasion war ends. However, some of the event troops (those that arrive with a hero commander) are not earmarked and can be retained. If the war becomes invalid due to the attacker no longer controlling any titles in the target kingdom, all event troops will be retained."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "As with Holy Wars, neighbors of the target who share their religion can (and very likely will) join in defense. Not declaring war within two years cancels the invasion and has a heavy Prestige cost. On success in the war, occupied holdings and holdings in occupied counties are usurped, and any remaining titles in the named target kingdom are vassalized. Conquered holdings do not get the \"recently conquered\" penalty and have their levies refilled immediately. Only usable once per ruler's lifetime. The truce lasts only 1 year."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you start as one of the British Sons of Ragnar in 867 (Halfdan Whiteshirt of Jorvik or Ivar the Boneless of Suðreyar), you will begin immediately following their declaration of a prepared invasion and this CB will not be available to your starting character afterward."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Prepared Invasion will be canceled if:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "You die",
+                            "children": []
+                        },
+                        {
+                            "text": "You have any troops in target realm before declaring war",
+                            "children": []
+                        },
+                        {
+                            "text": "You have raided target and target is still hostile towards you. After a raid hostile timer is 180 days.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Flower War",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Used by Aztecs or any reformed pagan religion with the \"Bloodthirsty Gods\" doctrine . The attacker must have the 3rd tier trait, Haemoarch . Requires Holy Fury DLC."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "On success, some non-ruler members of the ruler's court are sacrificed. Provinces of the defender's demesne, as well as those of their direct vassals, get a modifier for 10 years severely reducing levy size. The attacker's religion gets +3% moral authority for 30 years."
+                }
+            ]
+        },
+        {
+            "heading": "Matriarchal Deposition War",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A reformed pagan whose religion has the combination of the \"Warmongering\" nature and the \"Enatic Clans\" doctrine may declare war to depose a neighboring male ruler."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "On success, a woman from the defender's dynasty will be chosen to rule the title. Women are excluded if they are incapable or follow a religion with the opposing dogma \"Agnatic Clans\". If there are multiple candidates, it strongly prefers adult women of the attacker's religion, then adult close relatives of the defender, and finally children of the defender's dynasty. If there are no valid dynastic candidates, a female vassal will be chosen - and again, adults and attacker's religion are preferred. If there are still no valid candidates, a new female character will be generated."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The realm will also be forced onto enatic succession and full status of women (unless the new ruler's religion uses the semi-opposing equality dogma). Finally, the realm will become the attacker's tributary (if not already a tributary and with appropriate DLC) or non-aggression pact partner."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Although this CB does not always expand the territory of the attacker's religion, it counts as a holy war for moral authority and the \"strengthen religion\" ambition."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This CB requires that the ruler declaring the war has a king-tier title or higher."
+                }
+            ]
+        },
+        {
+            "heading": "Patriarchal Deposition War",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Opposite gender version of above, for pagan religions with combination of the \"Warmongering\" nature and the \"Agnatic Clans\" doctrine."
+                }
+            ]
+        },
+        {
+            "heading": "Indian religions",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Indian Subjugation",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Rulers of the Indian religions (Hinduism, Buddhism, Jainism) may (once per 100 years) subjugate a de jure kingdom held by another Indian ruler. Costs 500 piety, and is only usable on targets of the same culture group. The truce lasts only 1 year. A realm can only be the subject of one subjugation war at a time."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A character may only use this CB once every 100 years, except with the \"Become King\" ambition, which allows unlimited usage within the capital's de jure kingdom."
+                }
+            ]
+        },
+        {
+            "heading": "Buddhist county conquest",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Buddhists can attempt to vassalize a single county from another religion group or from Taoist. The targeted county must be bordering, or be within two sea zones. The truce only lasts 5 years."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "While called a \"minor holy war\" in game, this is deceptive as it does not affect moral authority and does not allow the defender's coreligionists to join."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "While smaller than the duchy-level holy war freely available to Hindus, this CB has advantages if the targeted county is held by a count who holds no other county titles. You can revoke the title from the holder (using religious control law) and have a county that is immediately productive, rather than having a severe conquest penalty to levies."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "You can also use this CB to gain control of infidel claimants. A second war, using the claim-for-other CB, can then net you an entire kingdom. With Muslim neighbors, there is even the possibility of gaining control of the ruler's sons or grandsons, letting you game their open succession by granting a kingdom."
+                }
+            ]
+        },
+        {
+            "heading": "Tributary",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A tributary-suzerain relationship is an asymmetric pact giving the suzerain power over the tributary. There are three types of tributaries, each with different tax rates and rules about who must join whose wars."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A suzerain cannot declare war on their tributaries. However, a suzerain may choose to release a tributary in order to attack them again, as long as both realms are at peace. The truce from the initial \"Make tributary\" war only lasts a year, and releasing a tributary does not create a new truce. Tributaries cannot join in defensive pacts against their suzerain."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In a war to establish a tributary relationship, defenders often offer to surrender early. This can happen in two ways:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "At the beginning of the war, as an option in an event . Proud , stubborn , lunatic , and possessed rulers will never choose to surrender this way. Craven or content rulers are more likely to choose surrender, while rulers with sufficient power to defend (including allies) are less likely to surrender.",
+                            "children": []
+                        },
+                        {
+                            "text": "At any time during the war, when evaluating warscore and defender_ai_defeat_worth . Distant targets, proud / brave / greedy characters, and kings are less inclined to fold.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Extort tribute",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "On success, the defender becomes a (normal) Tributary of the attacker at a tax rate of 40%. This type of tributary can be called to war and cannot unite with other tributaries, but always breaks free upon the suzerain's death."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Requires Horse Lords DLC. Requires a border or being at most 2 sea zones away (similar to holy wars). The attacker must not be a tributary (except imperial) and must be independent. The defender must be an independent count or above, cannot be the representative of an off-map power, and cannot be already participating in another tributary war."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Nomadic and tribal rulers get special opinion bonuses with their vassals after winning this kind of war. Primarily used by nomads against the richer government types, but occasionally used by rulers of other government types when other CBs are unavailable. Since the tributary relationship ends upon the suzerain's death, re-using this CB is a great way to gain prestige upon succession."
+                }
+            ]
+        },
+        {
+            "heading": "Establish tributary",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "On success, the defender becomes a Nomad Tributary , a type of tributary that pays 50% tax and grants the suzerain +0.3 monthly prestige. This type of tributary can be called to war, and only breaks free if the suzerain has negative prestige."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Requires Horse Lords DLC. Has similar requirements as Extort tribute, with the additional requirements that the attacker must be nomadic and that this CB cannot be used to steal tributaries from your own vassals. Can be used against realms that border a tributary of the same type, even if they are not otherwise in range."
+                }
+            ]
+        },
+        {
+            "heading": "Establish Tributary State",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "On success, the defender becomes a Tributary State , a type of tributary that pays 20% tax and transfers 15% reinforcement rate. This type of tributary cannot be called to war, but can call their suzerain to war. This type of tributary has many ways to break free: if the suzerain has negative prestige, ceases to be independent, has a smaller realm size, or declines a defensive call to arms from the tributary state."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Requires Jade Dragon DLC. Can only be used by non-nomadic rulers. The attacker must have 200 prestige and cannot have a smaller realm. Requires Majesty 4 in Europe ( region ) and Majesty 2 elsewhere. Can be used against realms that border a tributary of the same type, even if they are not otherwise in range."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The tributary will also break free if the current ruler is overthrown (e.g. from a decadence revolt). This will not happen with regular inheritance."
+                }
+            ]
+        },
+        {
+            "heading": "Free tributary",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Tributaries can use this CB to attempt to free themselves from tributary status. Tributaries cannot declare any other type of war against their suzerain. As wars for independence, these wars have ticking warscore in favor of the attacker as long as the attacker controls all their holdings."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Permanent tributaries can unite in an attempt to free themselves, as in an independence faction war. Normal tributaries can only fight alone and risk other tributaries joining their suzerain."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In the rare case that a tributary becomes a vassal of another realm, their liege can also use this CB on behalf of their vassal."
+                }
+            ]
+        },
+        {
+            "heading": "China",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Submission",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Used by China or by a rebel Chinese general to invade another realm. Usurps counties up to the attacker's demesne limit and forcibly vassalizes the defender."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the defender is not an emperor, they become a vassal and their kingdoms are usurped. If the defender is an emperor, their vassals become the attacker's vassals, the defender's empire titles are destroyed, and the defender becomes a vassal."
+                }
+            ]
+        },
+        {
+            "heading": "Establish Tributary State (China)",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "On success, the defender becomes an Imperial Tributary of China's Western Protectorate. This type of tributary pays 50% tax and transfers 30% of reinforcements. The tributary loses monthly prestige scaled by tier, but receives +2 monthly grace and can summon Chinese regiments . Imperial Tributaries can break away by decision if China is embroiled in civil war or experiencing an invasion."
+                }
+            ]
+        },
+        {
+            "heading": "Dismantle Pretender",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Used by China to destroy a pretender China (a realm created by a rebel Chinese general using the Submission CB)."
+                }
+            ]
+        },
+        {
+            "heading": "Force Open China",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Used against the Western Protectorate to force China to end an Isolationist policy and resume trade through the silk road ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Since this is a war against China, warscore can be decided entirely by battles and cannot be decided entirely by occupying the Western Protectorate. White peace is impossible."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "On success, get a lot of grace and wealth, and China is forced to change its policy to Open."
+                }
+            ]
+        },
+        {
+            "heading": "Shatter Realm",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Used by China when a player uses the \"request invasion\" boon. Sometimes used by China when a player attempts to intimidate China into opening the silk road."
+                }
+            ]
+        },
+        {
+            "heading": "Invasion of China",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Used by players to place a relative on the dragon throne. It should be noted that losing this war will cause the attacker's realm to be shattered ."
+                }
+            ]
+        },
+        {
+            "heading": "Special",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Imperial Reconquest",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A super-powered CB available only to the restored Roman Empire , targeting a duchy in the historical Roman Empire. The attacker must be Christian or Hellenic , and the defender must not be Muslim."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "On success, vassalizes rulers in the target duchy (or usurps their titles if they cannot be vassalized). Also usurps the named duchy title, if held by the defender."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The territories that may be targeted with this CB do not necessarily correspond to the lands required to gain the Roman Province events, or land that is required to reclaim the old Imperial borders. Ordered by 1066 de jure empire, the CB can be used within the borders of each of these de jure kingdoms:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Byzantine Empire - Kingdoms of Anatolia, Armenia, Bulgaria, Croatia, Greece, Serbia, Trebizond, Thrace, Epirus, Cyprus, Amalfi (missing Georgia)",
+                            "children": []
+                        },
+                        {
+                            "text": "Empire of Arabia - Kingdoms of Africa, Egypt, Jerusalem, Mauretania, Syria (missing Arabia, Yemen)",
+                            "children": []
+                        },
+                        {
+                            "text": "Empire of Britannia - Kingdoms of England, Wales (missing Ireland, Scotland)",
+                            "children": []
+                        },
+                        {
+                            "text": "Empire of Francia - Kingdoms of Aquitaine, Brittany, Burgundy, France",
+                            "children": []
+                        },
+                        {
+                            "text": "Holy Roman Empire - Kingdoms of Bavaria, Frisia, Lotharingia, Carinthia (missing Germany, Bohemia)",
+                            "children": []
+                        },
+                        {
+                            "text": "Empire of Hispania - Kingdoms of Andalusia, Asturias, Aragon, Castille, Galicia, León, Navarra, Portugal, Badajoz, Valencia",
+                            "children": []
+                        },
+                        {
+                            "text": "Empire of Italia - Kingdoms of Italy, Sicily, Sardinia & Corsica, Venice, Pisa, Genoa, Romagna, Papal States",
+                            "children": []
+                        },
+                        {
+                            "text": "No initial de jure empire:",
+                            "children": [
+                                {
+                                    "text": "The Papacy",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Kingdom of Antioch",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Kingdom of Switzerland",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Each of the above kingdoms can be targeted, regardless of what de jure empire it is part of. Note that if the de jure territory of any of the above kingdoms change, then so do the duchies that can be targeted using the CB."
+                }
+            ]
+        },
+        {
+            "heading": "Manifest Destiny Invasion",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This CB can only be used by Timurids and pre-1200 Seljuks. It targets a kingdom within the de jure empires of Persia, Byzantium, or Arabia. The target realm must control 3 provinces within the target kingdom."
+                }
+            ]
+        },
+        {
+            "heading": "Rivalry",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Humiliate and imprison a rival ruler.  This targets the person rather than his or her title(s):  on victory, the targeted rival is imprisoned by the victor, but no territory changes hands.  While of little direct utility other than gains in prestige and wealth, this can have side benefits such as forcing a regency , allowing weak claims to be pressed against the rival's title(s).  It is also extremely useful in a republic for boosting prestige, which factors prominently in succession—suppressing a rival house every time the truce expires can increase prestige enough to edge out the election against a non-rival house in an otherwise close campaign."
+                }
+            ]
+        },
+        {
+            "heading": "Free Captives",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Players can use this CB to free landless characters they care about from imprisonment or forced concubinage . Characters who can be freed this way are the attacker's spouses, concubines, friends, close relatives, and dynasts. Unlike other wars, this CB can be used despite the existence of prisoners who would normally be considered hostages."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The defender may choose to offer immediate release, execute one or all captives (including concubines), or simply accept the war. Executing the captives does not end the war."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "On success, seizes 3 years' income from the defender and frees the captives. Forced concubinage ends and marriages are annulled (with characters in the same realm). Prisoners are released. Freed characters will move to your court unless they are (still) the concubine or spouse of a landed character. Additionally, all freed characters will have a positive opinion modifier toward you as their saviour."
+                }
+            ]
+        },
+        {
+            "heading": "Government CBs",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Merchant republic CBs",
+            "level": 3,
+            "content": []
+        },
+        {
+            "heading": "Seize trade post",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "For patricians and merchant republics targeting each other or against foreign realms. Cannot be used against patricians in the same realm if you have 2 or more trade posts more than they do. On success, you gain the target trade post; on failure, you pay reparations. The truce lasts only 5 years. You must have an open trade post slot to acquire the trade post. Sometimes the trade post is destroyed when the war ends or if it's sieged in which case you will need to build the trade post yourself so make sure you have money and a slot to build one immediately. Can also be used against feudal realms if they maintain trade posts on the Silk Road or Trans-Saharan Route. Cannot be used against a Silk Road trade post that's in the capital of the realm you're attacking."
+                }
+            ]
+        },
+        {
+            "heading": "City conquest",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A republic-only CB. Can be used by patricians as well as doges. Usable if you or your vassal patrician control a trade post in the province. Targets a single city within the province. If used in a county with a vassal's trade post, they get the city instead of you. The city conquest CB cannot be used against characters in the same realm as you."
+                }
+            ]
+        },
+        {
+            "heading": "Republic county conquest",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Republic-only single county conquest, only usable if you (or your vassal patrician) already control a city in the province. You must either control a neighboring county or one at most two sea zones away. Patricians who don't already own a county can't use this CB. Cannot be used against characters in the same realm as you."
+                }
+            ]
+        },
+        {
+            "heading": "Embargo",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Usable against merchant republics (or their lieges) who control trade posts in any ruler's realm including your own. On success, all trade posts belonging to that merchant republic in that realm are removed and you earn significant money for each one removed in this way. Unlike other CBs, the Embargo option only appears when at peace and is only available to an independent ruler, not a patrician. You can right click on a foreign ruler and ask them to start an embargo war for you. If the war is won new trading posts cannot be created by that merchant republic in that realm for a period of time (possibly the length of the truce)."
+                }
+            ]
+        },
+        {
+            "heading": "Nomad CBs",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Nomads have access to Establish Tributary , and the following exclusive CBs. While they also can use the pagan county conquest CB regardless of religion, non-pagan nomads can only use this CB on other nomads and tribals."
+                }
+            ]
+        },
+        {
+            "heading": "Nomad subjugation",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This CB allows Nomads to subjugate non-Nomadic realms. Empires can only be targeted by emperor-level nomads (khagans)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When subjugating a realm that broke away during Nomadic Succession , the CB is completely free. This is controlled by the opinion modifier \"-50 Declared Independence\", given to the new khagan toward the breakaway ruler and their dynastic direct courtiers and vassals."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Otherwise, it costs 500 prestige and can only be used once every 100 years. If the war becomes invalid, the launched_subjugation timer is refunded, but the prestige is not."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Although religious heads (such as the Pope) can be targeted by this CB, they won't become your vassal (in the recent version of 2.8.3.1, unlike in the past it was possible), all their demesne holdings will be usurped instead."
+                }
+            ]
+        },
+        {
+            "heading": "Nomad invasion",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Can be launched by nomads whose population is at least 30,000 and 75% of max. Consider granting some lands to fellow clans in order to reach the 75% needed for the invasion; the Humiliate CB can also steal population from another nomad. Costs 100 prestige."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "According to CB files, Nomad invasion works like a crusade. It targets a de jure kingdom; all land occupied by your vassal/allies/tributaries will be usurped by yourself (even if outside the targeted kingdom). Titles in the target kingdom held by the defender which are unoccupied will be vassalized instead."
+                }
+            ]
+        },
+        {
+            "heading": "Subordination",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Also known as \"Nomad Expansion\", this CB allows any Nomad to vassalize non-nomad or usurp nomad holdings of an independent ruler within a single de jure duchy. It costs 300 prestige. The defender can call (and can be joined by) rulers of the same faith just like in a Holy War. It has a 10 years truce, contrary to a 5 years truce for county conquest or reformed Tengri holy war."
+                }
+            ]
+        },
+        {
+            "heading": "Nomad dispute",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Feuding clans can declare wars against each other to seize a single county. A Khagan cannot use this CB against a vassal clan. Cannot be used against a Nomad's capital or a county that contains a temple/castle/city."
+                }
+            ]
+        },
+        {
+            "heading": "Minor clan revolt",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If a khagan has the “clans want more land” alert and less than maximum number of clans, a rebel clan will emerge from one of the khagan's demesne. If the rebel clan is sucessful, they will become a vassal khan, their capital being the county they emerged from, and they also gain any counties they occupied."
+                }
+            ]
+        },
+        {
+            "heading": "Install Khagan",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A khan can use this CB to replace his liege as khagan. It is triggered either by refusing a tyrannical action, or by delivering an ultimatum as the leader of an \"overthrow khagan\" faction. On success, the war leader usurps empire-tier titles and executes the previous khagan."
+                }
+            ]
+        },
+        {
+            "heading": "Humiliate",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Used against another nomad to steal 300 prestige and 25% of their population. This CB is useful for acquiring enough population to reach the 75% mark for the Invasion CB.The tooltip suggests you steal from their dynasty's population, but how it all works exactly is not yet written here."
+                }
+            ]
+        },
+        {
+            "heading": "Liberate duchy from nomad",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Non-nomads can use this CB to take a duchy from a nomad realm. This requires a county in the target kingdom, a border, or being at most two sea zones away. The duchy must either be outside the Steppe region , or contain a non-temple settlement (castle, city, or tribe)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "On victory, this vassalizes non-nomadic rulers and usurps other titles. Vassalized rulers will get a +40 \"Subjugated\" opinion buff towards their new liege."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "AI rulers are more likely to use this CB when the duchy contains castles or cities, since they'd rather not have to deal with unproductive provinces and nomad agitation ."
+                }
+            ]
+        },
+        {
+            "heading": "County Conquest",
+            "level": 4,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Nomads have access to County Conquest regardless of their faith. However, non-pagan nomads can only use this CB on other nomads or tribals."
+                }
+            ]
+        },
+        {
+            "heading": "Shattered World CBs",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Consolidation",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Wage war for a single county that is adjacent or accessible over a single sea zone. A game rule controls whether this CB is available for 25 years, 100 years, the entire campaign, or not at all."
+                }
+            ]
+        },
+        {
+            "heading": "Great Conqueror Invasion",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A kingdom-level invasion CB usable only by the Great Conquerors generated at the beginning of a Shattered World game. A game rule controls how many Great Conquerors are generated across the map."
+                }
+            ]
+        },
+        {
+            "heading": "Triggered Wars",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These CBs cannot be used by the player, but are triggered by events. In each case, a large army appears under the command of a landless leader. On success, the ruler takes all occupied territory, and possibly higher-level titles as well."
+                }
+            ]
+        },
+        {
+            "heading": "Revolts",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Without The Old Gods DLC, revolts take the form of a leaderless army that's hostile to everyone, but not at war with anyone; sometimes they will capture a province, but just as often they will disperse. With the DLC, though, they actually have leaders with titular rebel titles and they declare war on you with a special CB. There are three types:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Nationalist rebels (e.g. \"Persian Liberation Revolt\") appear in foreign-cultured provinces that were once part of a kingdom or duchy of the province's culture. They are usually quite large and the leader has the Inspiring Leader trait. On success, the leader becomes an independent ruler of the culture. with the kingdom or duchy title and the nickname \"The Liberator.\"",
+                            "children": []
+                        },
+                        {
+                            "text": "Religious rebels (e.g. \"Persian Zoroastrian Uprising\") and heretic rebels (\"Persian Manichean Uprising\") are two different types, but similar. They appear in provinces of heretic or infidel religions. In the case of a heretic revolt, the leader has the Heresiarch trait. They are medium-sized. On success, the leader becomes a duke-level independent ruler.",
+                            "children": []
+                        },
+                        {
+                            "text": "Peasant rebels (e.g. \"Shirazian Peasant Revolt\") appear in rebellious provinces not meeting either of the above criteria. They are relatively small and the leader has the Peasant Leader trait. On success, he becomes a count-level independent ruler.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "In all three cases, the truce from the war lasts only 1 year. Except for peasant revolts, they usurp all occupied counties and their minor holdings, like a tribal invasion."
+                }
+            ]
+        },
+        {
+            "heading": "Adventurers",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Landless claimants to a title may declare their intention to press their claim and recruit an army. Norse, Frankish and Norman nobles without any claims may also attempt to conquer a coastal duchy. In both cases, assassinating the leader before the war starts stops the invasion. When the war starts, the adventurer gains a duchy-level titular title named after him (e.g. \"Arnulf's Host\"; if he's pressing a claim, the war is called e.g. \"Arnulf's Host Claim on Sicily War\", otherwise \"Arnulf's Conquest of Sicily\" which is a special CB). Adventurers have fairly large armies (typically about as big as the total levies of the targeted realm) and are quite dangerous. They automatically receive a treasury of 500 gold."
+                }
+            ]
+        },
+        {
+            "heading": "Decadence Invasion",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Muslim dynasties with at least 75% decadence that rule a duchy or higher may draw the ire of a desert tribe determined to end their corrupt rule. The invasion begins in a random realm province with a very large army appearing."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Upon success, the invader gets all occupied holdings and counties (like a tribal invasion). Top-level titles are destroyed and any other duke+ titles held by the defender are usurped. The invader also gets the nickname of \"the Conqueror\". The Crown Authority of all king+ titles is lowered to Autonomous Vassals."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Only Independent rulers can be attacked by a Decadence Invasion."
+                }
+            ]
+        },
+        {
+            "heading": "Rise of the Shia Caliphate",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A special targeted invasion that may appear in any Sunni kingdom or empire with at least 10% decadence if no Shia caliph exists. A Shia child leader with the Quick , Attractive and Sayyid traits appears holding the duchy-tier titular title \"Pretender Shia Caliphate\"; the CB is \"Shia Caliphate Rising in [kingdom]\" e.g. \"Shia Caliphate Rising in Egypt\". Human-controlled Sunni realms are much less likely ( MTTH 10x greater) to be targeted."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "His invasion begins in a random province and invades its de jure kingdom (as long as he has at least 6 counties in it and the liege title isn't held by someone else). If he wins, he takes the kingdom title and becomes the Shia caliph, in addition to the usual \"tribal invasion\" type result of vassalising its de jure vassals and usurping any occupied holdings and counties. The truce lasts only 1 year, so the caliph may well attack his original target again very shortly. Non de jure titles within the de jure borders are also usurped regardless of occupation (for example merchant republics)."
+                }
+            ]
+        },
+        {
+            "heading": "Gaining CBs",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "While some of these CBs you'll have merely due to your position, like the independence CB and the law change CBs, many of these can be gained on purpose."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "First, the easiest type of CB to gain are claims. There are four primary ways to gain claims :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "Have your chancellor forge claims. This doesn't work for anything above the ducal level (skill of 15 needed to forge a ducal claim), unless you have the Become King of [Kingdom] ambition.",
+                            "children": []
+                        },
+                        {
+                            "text": "Marry someone who has an inheritable claim. Your children will have the claim and you can then push it.",
+                            "children": []
+                        },
+                        {
+                            "text": "Marry someone in your dynasty to someone who has an inheritable claim. Their children will have the claim, and you'll be able to push it.",
+                            "children": []
+                        },
+                        {
+                            "text": "Invite someone with a claim to your court. You'll then be able to push it.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Expanding your realm outside your de jure borders using claims can be tricky: unless they're of your dynasty, a landless claimant to such a title will become independent when you win their war. If you want them to be your vassal instead, you will want to land them first. Since you get a +100 \"Pressed my Claim\" opinion bonus, you might be able to offer vassalization afterwards, but only if they're the same religion and culture as you – otherwise the \"False Religion\" and/or \"Foreigner\" penalties, along with \"Not my de jure liege\", mean they're unlikely to accept."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Second, de jure claims are also relatively easy to gain. If you can create a duchy or kingdom that overlaps another realm's territory, this will gain you a de jure claim, and the same applies if you usurp it. Both of these require having more than half of its de jure counties already, so you'll have to find some way to get hold of those. In addition, after pushing a claim for a duchy, you'll often have de jure claims."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Third, excommunication CBs are easy to get as long as the religion head likes you, but these won't help you grow your realm. They're good for gaining some prestige, though."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Fourth, you can get religious war CBs on essentially the entire world if you convert to a heresy (a Catholic-derived heretic will have CBs on all rulers except Orthodox and Miaphysite ones or other Catholic-derived heretics, while a Muslim heretic will have CBs on absolutely everyone except other followers of the same heresy). As a Catholic, the easiest way to get heresy to appear so that you can convert is appointing an antipope, as this lowers the moral authority of the church. The lower the moral authority of the church, the more likely heresy is to spread. Then upon the first chance you get, you should change to whatever heresy arises. Another option is to have your court chaplain research cultural tech until a heretic find appears. While the drawbacks of heresy are severe (-30 opinion with all non-heretics, and increased rebel risk), the advantages when it comes to expansion are huge.  However, note that it's a two-way street – if you convert to a Catholic heresy, then all Catholic rulers get a Holy War CB on you, and the Pope may even declare a Crusade against you."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Fifth, the pope will award strong, uninheritable claims to counties and duchies held by Catholic rulers, in exchange for some prestige and an opinion penalty. If the pope is your vassal (an emperor tier ruler who claims the papacy in the name of his antipope will receive the new pope as vassal), he will never refuse a request, regardless of opinion modifiers. This allows you to obtain one county or ducal claim per 100 piety (or 50 piety with papal investiture). You can use \"Request Claim\" to obtain any number of claims and then utilize \"Claim all\" CB. This strategy allows you to conquer vast amounts of land, even entire kingdoms with enough piety, in a single war, and allows you to appoint new count and duke level vassals on the newly conquered territory."
+                }
+            ]
+        },
+        {
+            "heading": "Using Your CB",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Pushing your own claims and similar is rather straight forward. When pushing someone else's claim, however, you have to be careful, or they'll end up as an independent realm. They'll only be your vassal if they are already your vassal, they're in your dynasty, or the claim you pushed was for an area that is de jure part of your title(s). If the title they took is the same level as yours or above, they'll be independent even if any of the above conditions apply, unless you have a liege above you where the conditions still apply."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The easiest way to ensure that they'll be part of your realm after pushing their claim is granting them a county or barony in your realm first. The only way they can become independent as a result of the claim pushed is if the title they gain is the same tier as yours or higher. It should be noted that Hindu characters cannot be granted a holding which their caste cannot hold."
+                }
+            ]
+        },
+        {
+            "heading": "\"War ended inconclusively\"",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Sometimes a war ends not with one side winning, or a white peace, but inconclusively. This happens when the war can no longer be pursued for some reason - usually because the casus belli is no longer valid. This does not, however, mean that a CB that could no longer be used leads to a war using it becoming invalid; the invalidation and usability conditions are separate, though usually related."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Some common messages are:"
+                }
+            ]
+        },
+        {
+            "heading": "Names of wars",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can identify what Casus Belli was used to declare a war by its name. In addition to the examples below, there may be an ordinal prefix indicating that this is the Nth war of that name to have been declared (several may be ongoing at once, e.g. \"Byzantine Holy War for Syria\" and \"2nd Byzantine Holy War for Syria\" might be declared at the same time, both targeting the de jure Emirate of Syria, but the parts of it in two different realms)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For some wars, the result is that someone \"gains or vassalises\" one or more titles. This means that titles that can be vassalised are vassalised, and all the others are gained. Generally a title is gained if vassalising would end up also vassalising a title that wasn't being targeted. For example in the case of a holy war targeting a duchy in which one of the counts had land outside that de jure duchy, the attacker doesn't become their new liege, but just usurps the target titles."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Name template",
+                            "Name example",
+                            "Casus Belli used",
+                            "Attacker",
+                            "Defender",
+                            "Goal (what happens on victory)"
+                        ],
+                        [
+                            "[Attacker adj](-[Defender adj]) War for ([Claimant]'s claim on) [Target]",
+                            "English-Cornish War for David's claim on Devon",
+                            "Claim (on nearly any title)",
+                            "The claimant or his liege (e.g. Kingdom of England). If attacker and claimant are the same, the \"claimant\" part is omitted (\"English-Cornish War for Devon\" on behalf of the King of England).",
+                            "The attackable realm (e.g. Duchy of Cornwall) that holds the target title (e.g. County of Devon). If defender and target are the same, the defender isn't mentioned (\"English War for David's claim on Devon\" attacking the Earl of Devon).",
+                            "The claimant (e.g. David) gains the target title"
+                        ],
+                        [
+                            "[Attacker adj]-[Defender adj] De Jure War over [Target]",
+                            "Welsh-English De Jure War over Devon",
+                            "De Jure claim",
+                            "The claimant (e.g. Duchy of Cornwall) or his liege (e.g. Kingdom of Wales), whose de jure but not de facto realm includes the target (e.g. Devon)",
+                            "The attackable realm that holds the target (e.g. Kingdom of England)",
+                            "The claimant gains or vassalises the target (e.g. County of Devon)"
+                        ],
+                        [
+                            "[Attacker adj](-[Defender adj]) Ducal War for ([Claimant]'s claim on) [Target]",
+                            "Welsh-Somerset Ducal War for Duke David's claim on Devon",
+                            "De Jure Claim (for a county on behalf of a vassal holding its duchy)",
+                            "The claimant (e.g. Duke David of Cornwall) or his liege (e.g. Kingdom of Wales). If attacker and claimant are the same, the \"claimant\" part is omitted (\"Cornish-Somerset Ducal War for Devon\").",
+                            "The attackable realm (e.g. Duchy of Somerset) that holds the target title (e.g. County of Devon). If defender and target are the same, the defender isn't mentioned (\"Welsh Ducal War for Duke David's claim on Devon\").",
+                            "The claimant gains or vassalises the target."
+                        ],
+                        [
+                            "[Attacker adj]-[Defender adj] De Jure Holding War over [Target]",
+                            "Welsh-English De Jure Holding War over Axminster",
+                            "[County] Holdings",
+                            "The holder of the county (e.g. Devon) that contains the target minor holding (e.g. Axminster), or his liege (e.g. Kingdom of Wales)",
+                            "The attackable realm (e.g. Kingdom of England) that holds the target",
+                            "The holder of the county containing the target (e.g. Earl of Devon) gains or vassalises the target"
+                        ],
+                        [
+                            "War of [Attacker adj] Independence",
+                            "War of Cornish Independence",
+                            "Independence (non-faction)",
+                            "A ruler who is not independent (e.g. County or Duchy of Cornwall)",
+                            "The attacker's nominal liege (e.g. Kingdom of Wales)",
+                            "The attacker becomes independent of his nominal liege (as a vassal of his nominal liege's liege, if any, e.g. Empire of Britannia)"
+                        ],
+                        [
+                            "[Leader adj] League Independence War",
+                            "Cornish League Independence War",
+                            "Independence (faction)",
+                            "All members of the \"Independence\" faction within the leader's (e.g. the Earl or Duke of Cornwall's) nominal liege's realm (e.g. Kingdom of Wales), led by the leader (e.g. County or Duchy of Cornwall), having had their ultimatum refused",
+                            "The attackers' nominal liege (e.g. Kingdom of Wales)",
+                            "All attackers become independent of their nominal liege (as a vassal of their nominal liege's liege, if any, e.g. Empire of Britannia)"
+                        ],
+                        [
+                            "War against the Tyranny of [Defending ruler]",
+                            "War against the Tyranny of King Hywel I of Wales",
+                            "Overthrow Ruler",
+                            "A vassal who escaped an arrest that was tyrannical or refused any revocation (tyrannical or justified)",
+                            "The attacker's nominal liege (e.g. Kingdom of Wales)",
+                            "Defender abdicates in favour of his/her heir"
+                        ],
+                        [
+                            "Revolt against the Rule of [Defending ruler]",
+                            "Revolt against the Rule of King Hywel I of Wales",
+                            "Overthrow Ruler",
+                            "A vassal who escaped an arrest that was justified",
+                            "The attacker's nominal liege (e.g. Kingdom of Wales)",
+                            "Defender abdicates in favour of his/her heir"
+                        ],
+                        [
+                            "War against the [Defender adj] Conversion",
+                            "War against the Great Saxon Conversion",
+                            "Mass Conversion Revolt",
+                            "One or more vassals refusing a mass conversion",
+                            "The attacker's nominal liege (e.g. Grand Chiefdom of Saxony)",
+                            "Attackers become independent and Tribal Organization is reduced"
+                        ],
+                        [
+                            "[Leader adj] War for [Claimant]'s claim on [Target]",
+                            "Cornish War for Prince Hywel's claim on Wales",
+                            "Claim on Liege faction",
+                            "All members of the claim faction (e.g. \"Prince Hywel for Wales\") in their realm (e.g. Kingdom of Wales), led by the leader (e.g. County or Duchy of Cornwall), having had their ultimatum refused",
+                            "The faction members' nominal liege (e.g. Kingdom of Wales)",
+                            "Claimant (e.g. Prince Hywel) usurps the target title (e.g. Kingdom of Wales)"
+                        ],
+                        [
+                            "[Defender adj] Civil War for [Succession law]",
+                            "Welsh Civil War for Seniority",
+                            "Succession law faction",
+                            "The leader and all members of the succession law faction (e.g. \"Seniority Succession in Wales\") in their realm (e.g. Kingdom of Wales), having had their ultimatum refused",
+                            "The faction members' nominal liege (e.g. Kingdom of Wales)",
+                            "Defender enacts specified succession type in the target realm (e.g. Seniority succession in Kingdom of Wales)"
+                        ],
+                        [
+                            "[Defender adj] Civil war to Lower Crown Authority",
+                            "Welsh Civil War to Lower Crown Authority",
+                            "Lower Crown Authority faction",
+                            "All members of the \"Lower Crown Authority\" faction in their realm (e.g. Kingdom of Wales)",
+                            "The faction members' nominal liege (e.g. Kingdom of Wales)",
+                            "Defender enacts the next lower level of crown authority law in the target kingdom or empire (e.g. Kingdom of Wales)"
+                        ],
+                        [
+                            "[Attacker adj] Invasion of [Defender]",
+                            "Cornish Invasion of Wales",
+                            "Invasion (Christian)",
+                            "A Christian, Jewish, or Zoroastrian ruler (e.g. County or Duchy/Petty Kingdom of Cornwall), whose relevant religious head (e.g. pope or ecumenical patriarch) has granted them permission to invade the target",
+                            "A ruler of the same religion (e.g. both Catholic) as the attacker (e.g. Kingdom of Wales)",
+                            "Attacker gains all occupied holdings and the target title (e.g. Kingdom of Wales)"
+                        ],
+                        [
+                            "[Attacker adj] Invasion of [Target]",
+                            "Abbasid Invasion of Jerusalem",
+                            "Invasion (Muslim)",
+                            "A Muslim ruler (e.g. Abbasid Emirate / Sultanate / Empire)",
+                            "Someone of a different religion who holds land in the target de jure kingdom (e.g. Jerusalem) bordering the attacker's realm, e.g. the Shia Caliph",
+                            "Attacker gains all titles held by the defender within the target de jure kingdom (e.g. Jerusalem) and vassalises all the defender's subsidiary lords wholly within the target de jure kingdom. (Fate of lands in the target kingdom held by defender's subsidiaries who also hold land outside the target kingdom unknown.)"
+                        ],
+                        [
+                            "[Religion adj] Crusade/Jihad/Great Holy War for [Target]",
+                            "Catholic Crusade for Jerusalem",
+                            "Crusade",
+                            "Head of the religion (e.g. the pope), joined by other rulers of that religion",
+                            "A realm (e.g. the Sunni Caliphate) ruled by someone of a different religion holding land in the de jure target kingdom (e.g. Jerusalem)",
+                            "The participant with the highest contribution, or the existing holder of the target kingdom if the same religion, gains the target kingdom and all titles held by the target in the de jure target kingdom"
+                        ],
+                        [
+                            "[Attacker] Holy War for [Target]",
+                            "Welsh Holy War for Cornwall",
+                            "Holy War",
+                            "A ruler of any religion other than Jain, Taoist, or unreformed pagan (e.g. Catholic King of Wales)",
+                            "A realm (e.g. Kingdom of England) ruled by someone of a different religion from the attacker (e.g. Germanic), holding land in the target de jure duchy (e.g. Cornwall)",
+                            "The attacker vassalises all rulers of his religion who were vassals of the defender (except ones that have land outside the target, whose titles are usurped instead) and gains all other titles held by the defender within the target de jure duchy"
+                        ],
+                        [
+                            "[Attacker adj]-[Defender adj] Excommunication War",
+                            "Gwyneddian-Cornish Excommunication War",
+                            "Excommunicated ruler",
+                            "A ruler of an religion which currently has a religious head and permits excommunication (e.g. County or Duchy of Gwynedd)",
+                            "A realm whose ruler has the same religion and religious head as the attacker and is excommunicated (e.g. County/Duchy/Petty Kingdom of Cornwall)",
+                            "The defender abdicates in favour of his heir"
+                        ],
+                        [
+                            "[Attacker adj] Conquest of [Target]",
+                            "Abbasid Conquest of Damascus",
+                            "Muslim county conquest",
+                            "A realm ruled by a Muslim (e.g. Abbasid Emirate / Sultanate / Empire)",
+                            "The realm controlling the target county (e.g. Damascus)",
+                            "The attacker gains or vassalises the target county"
+                        ],
+                        [
+                            "[Attacker adj] Subjugation of [Target]",
+                            "Abbasid Subjugation of Mesopotamia",
+                            "Caliphal Subjugation",
+                            "A Muslim Caliphate (or the caliph's liege?)",
+                            "A realm ruled by someone of the same religion as the attacker holding land in the target de jure kingdom (e.g. Mesopotamia)",
+                            "The attacker takes or vassalises all titles held by the defender in the target de jure kingdom"
+                        ],
+                        [
+                            "Imperial Reconquest of [Target]",
+                            "Imperial Reconquest of Cornwall",
+                            "Imperial Reconquest",
+                            "(Restored) Roman Empire",
+                            "A realm including land within the target de jure duchy (e.g. Cornwall)",
+                            "The Roman Emperor gains or vassalises all titles held by the defender within the target de jure duchy"
+                        ],
+                        [
+                            "[Attacker adj]-[Defender adj] Trade War over [Target]",
+                            "Veglian-Splitian Trade War over Zeta",
+                            "Seize Trade Post",
+                            "A patrician or merchant republic (e.g. Veglia)",
+                            "Another patrician or merchant republic (e.g. Spalato (Split))",
+                            "The attacker gains the target trade post (e.g. Zeta Trade Post)"
+                        ],
+                        [
+                            "[Attacker adj]-[Defender adj] War for the City of [Target]",
+                            "Venetian-Apulian War for the City of Brindisi",
+                            "Republic city conquest",
+                            "A merchant republic (e.g. Serene Republic of Venice)",
+                            "The liege (e.g. Duchy of Apulia) of the target city (e.g. Brindisi), in a county where the attacker controls a trade post",
+                            "The holder of the trade post gains the target city"
+                        ],
+                        [
+                            "[Attacker adj]-[Defender adj] War for the Coast of [Target]",
+                            "Venetian-Croatian War for the Coast of Senj",
+                            "Republic county conquest",
+                            "A patrician or merchant republic, on behalf of himself or his vassal, the mayor of a city (e.g. Brinje) in a county (e.g. Senj) that it doesn't control",
+                            "The realm that controls the county containing the city (e.g. Duchy/Kingdom of Croatia)",
+                            "The patrician who holds a city in the target county (e.g. Senj) gains the target county, and his city becomes its capital"
+                        ],
+                        [
+                            "[Attacker adj] Conquest of [Target]",
+                            "Scottish Conquest of Northumberland",
+                            "Pagan county conquest",
+                            "A pagan realm (e.g. Kingdom of Scotland/Skotland)",
+                            "The realm containing the target county (e.g. Northumberland)",
+                            "The attacker gains or vassalises the target county"
+                        ],
+                        [
+                            "[Attacker adj] Invasion of [Target]",
+                            "Magyar Invasion of Hungary",
+                            "Tribal invasion",
+                            "A Tengri, Aztec or non-Christian Altaic realm (e.g. Kingdom of Magyars)",
+                            "A realm ruled by someone of a different religion containing land in the target de jure kingdom (e.g. Hungary)",
+                            "The attacker gains all occupied territory and vassalises territory held by the defender in the target de jure kingdom"
+                        ],
+                        [
+                            "[Attacker adj] Subjugation of [Target]",
+                            "Magyar Subjugation of Hungary",
+                            "Pagan subjugation",
+                            "A pagan realm (e.g. Kingdom of Magyars)",
+                            "A realm of the same religion containing land in the target de jure kingdom (e.g. Hungary)",
+                            "The attacker gains all occupied territory (whether in the target kingdom or not) and takes or vassalises all titles in the target de jure kingdom controlled by the defender"
+                        ],
+                        [
+                            "[County] Peasant Revolt",
+                            "Devonian Peasant Revolt",
+                            "Peasant revolt",
+                            "[County] Peasant Revolt (a duchy-level titular title held by a peasant leader) (e.g. Devonian Peasant Revolt)",
+                            "The current top liege of the Earl of Devon",
+                            "Devon becomes independent, ruled by the peasant leader"
+                        ],
+                        [
+                            "[Realm] [Heresy] Uprising",
+                            "Welsh Lollard Uprising",
+                            "Heretic revolt",
+                            "[Realm] [Heresy] Uprising (a duchy-level titular title held by a heresiarch, who appears with troops in a county of his religion) (e.g. Welsh Lollard Uprising)",
+                            "The current top liege of the heresiarch's home county",
+                            "Devon becomes independent, ruled by the heresiarch"
+                        ],
+                        [
+                            "[Leader]'s Conquest of [Target]",
+                            "Sigurðr's Conquest of Cornwall",
+                            "Adventurer conquest",
+                            "[Leader]'s Host (a duchy-level titular title) (e.g. Sigurðr's Host)",
+                            "A realm containing land within the target de jure duchy (e.g. Cornwall)",
+                            "The attacker gains all the land held by the defender in the target de jure duchy (and the title itself, if it exists within that realm)"
+                        ],
+                        [
+                            "[Attacker adj] Invasion of [Target]",
+                            "Umayyad Decadence Revolt Invasion of Hispania",
+                            "Decadence invasion",
+                            "[Leader] of [Attacker adj] Decadence Revolt (a duchy-level titular title) (e.g. Utman of Umayyad Decadence Revolt)",
+                            "A realm with high decadence that triggered a decadence invasion",
+                            "The attacker gains all occupied territory and vassalises territory held by the defender in the target de jure kingdom, but duke tier or above vassals gain an event giving them the possibility of revolt"
+                        ],
+                        [
+                            "Shia Caliphate Rising in [Target]",
+                            "Shia Caliphate Rising in Egypt",
+                            "Rise of the Shia Caliphate",
+                            "Pretender Shi'a Caliphate (a duchy-level titular title held by a Quick Sayyid boy)",
+                            "A Sunni realm",
+                            "The attacker gains the target kingdom and becomes Shia Caliph"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Summary",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Casus belli and claims are easy to gain as long as you know what you're doing. Following these tips you should be able to expand easily."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Most wars incur a truce which lasts either 10 years or until the death of one of the war leaders.",
+                            "children": []
+                        },
+                        {
+                            "text": "Marry claimants with inheritable claims to gain more claims",
+                            "children": []
+                        },
+                        {
+                            "text": "Marry your dynasty members to characters with inheritable claims (marry male claimants matrilineally if possible)",
+                            "children": []
+                        },
+                        {
+                            "text": "Invite males with inheritable claims and grant them a county",
+                            "children": []
+                        },
+                        {
+                            "text": "Invite pretenders and grant them a county",
+                            "children": []
+                        },
+                        {
+                            "text": "Make the pope love you and you can farm prestige off of excommunication",
+                            "children": []
+                        },
+                        {
+                            "text": "Go heretic and you'll have CBs on everyone",
+                            "children": []
+                        },
+                        {
+                            "text": "Create or usurp duchies or kingdoms that overlap the territory of other realms",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Additionally, different CBs have different values to you as a ruler.  If you have more than one CB, consider pressing them in this order:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Invasion/Crusade - you gain all land you occupy under the Kingdom title (requires a special decision with the new Crusades)",
+                            "children": []
+                        },
+                        {
+                            "text": "Holy War - you gain all heretic/infidel held land in the targeted duchy",
+                            "children": []
+                        },
+                        {
+                            "text": "Personal Claim - you can fill up your demesne or select the new holder of the county yourself, can push more than one on a given ruler at a time.  Note that you don't get the title's vassals although they become your vassals.",
+                            "children": []
+                        },
+                        {
+                            "text": "County Conquest - costs piety; can only be pressed one county at a time",
+                            "children": []
+                        },
+                        {
+                            "text": "Seize County - you've already got one barony in this county, but this gives you the other 2/3rds of it.",
+                            "children": []
+                        },
+                        {
+                            "text": "Dynastic Ducal/County Claim - install a member of your dynasty and add land to your realm.",
+                            "children": []
+                        },
+                        {
+                            "text": "Vassal Ducal/County Claim - expands your realm, but the new holder isn't of your dynasty and you're making one of your current vassals more powerful",
+                            "children": []
+                        },
+                        {
+                            "text": "Dynastic Kingdom Claim - unless you're an Emperor, this will install a dynastic ally into a Kingdom who can help you in future wars.",
+                            "children": []
+                        },
+                        {
+                            "text": "Seize Coastal City - you're only getting one barony-level title out of this.",
+                            "children": []
+                        },
+                        {
+                            "text": "Embargo/Excommunication - Great for bringing in money or prestige/piety, but won't expand your realm.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Casus Belli modding",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

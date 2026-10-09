@@ -1,0 +1,720 @@
+{
+    "pageid": 2169,
+    "title": "Troubleshooting",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Troubleshooting is the identification of the cause of crashes, bugs or other problems. Some of CK2's debugging features are restricted in retail builds, but there is still plenty to work with."
+                }
+            ]
+        },
+        {
+            "heading": "Log files",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The game stores various log files in your CK2 user folder ( ~\\Documents\\Paradox Interactive\\Crusader Kings II\\logs\\ ). These are overwritten every time the game starts."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "More logging can be activated by using command line arguments (via Steam game properties / define launch options):"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "-debug -debugscripts -scriptlog -fullhistoricalsetuplog"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "File",
+                            "Description"
+                        ],
+                        [
+                            "game.log",
+                            "In game notifications and output of log commands . Since patch 2.4.1 only logged if -debugscripts is enabled."
+                        ],
+                        [
+                            "setup.log",
+                            "Game data loading logs (gui, modifiers, traits, ...)"
+                        ],
+                        [
+                            "error.log",
+                            "Parsing and loading errors. More asserts will be logged when enabling -debugscripts . Errors can be logged without also logging asserts by enabling -scriptlog . The following lines are OK if no elements is listed: [technology.cpp:718]: Missing Tech seed values:\n[technology.cpp:755]: None.\n[texturehandler.cpp:181]: Couldn't find texture file: ."
+                        ],
+                        [
+                            "historical_setup_errors.log",
+                            "Extra errors linked to title/character history. Only logged if -fullhistoricalsetuplog is enabled."
+                        ],
+                        [
+                            "system_interface.log",
+                            "Errors linked to interface modding"
+                        ],
+                        [
+                            "graphics.log",
+                            "Errors linked to map modding"
+                        ],
+                        [
+                            "system.log",
+                            "Hardware report"
+                        ],
+                        [
+                            "system_interface.log",
+                            "Interface errors"
+                        ],
+                        [
+                            "text.log",
+                            "Asserts on localization keys"
+                        ],
+                        [
+                            "script_optimizations.log",
+                            "Asserts on events that fire for courtiers"
+                        ],
+                        [
+                            "ai.log",
+                            ""
+                        ],
+                        [
+                            "exceptions.log",
+                            "In case of crash, you may get a stacktrace, with the last method called (ex: CLandedTitle::GetShortName)"
+                        ],
+                        [
+                            "time.log",
+                            "Logs the game loading time."
+                        ],
+                        [
+                            "memory.log",
+                            "Logs the memory usage."
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The following lines are OK if no elements is listed:"
+                }
+            ]
+        },
+        {
+            "heading": "Loading",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "When launching the game the following steps occur:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Initialising Map Logic",
+                            "children": []
+                        },
+                        {
+                            "text": "Loading Databases",
+                            "children": []
+                        },
+                        {
+                            "text": "Generating Coat of Arms",
+                            "children": []
+                        },
+                        {
+                            "text": "Loading Events",
+                            "children": []
+                        },
+                        {
+                            "text": "Loading Sounds",
+                            "children": []
+                        },
+                        {
+                            "text": "(Loading of vanilla history files occurs here (even if is replace_path), though it'll still show as \"Loading Sounds\") - very slow step !",
+                            "children": []
+                        },
+                        {
+                            "text": "Processing Flags - generates the flag sprites in gfx\\flags from the individual .tga files",
+                            "children": []
+                        },
+                        {
+                            "text": "Loading Flags",
+                            "children": []
+                        },
+                        {
+                            "text": "Loading Graphics",
+                            "children": []
+                        },
+                        {
+                            "text": "Creating Provinces",
+                            "children": []
+                        },
+                        {
+                            "text": "Loading Map(Creating Terrain)",
+                            "children": []
+                        },
+                        {
+                            "text": "Loading Map(Creating Borders)",
+                            "children": []
+                        },
+                        {
+                            "text": "Loading Map(Creating Trees)",
+                            "children": []
+                        },
+                        {
+                            "text": "Loading Map(Creating Textures)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Once this is done the lobby interface will be rendered."
+                }
+            ]
+        },
+        {
+            "heading": "Crashes",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Crashes or Crash To Desktop (CTD) are the despair of the players and nightmare of the modders. There is usually little to no information to identify the cause."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Here is a list of known issues:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Symptom",
+                            "Troubleshooting"
+                        ],
+                        [
+                            "Instant CTD clicking Play in the launcher",
+                            "Check no new defines.lua entries are missing in the mod (or better use defines folder to override, and avoid duplication)"
+                        ],
+                        [
+                            "CTD at \"Loading Databases\"",
+                            "Compare setup.log with the mod and with raw vanilla : next steps normally logged in vanilla are the likely cause of the crash Check the format and color indexes of map files (terrain.bmp, ...) Check Province Map for any Antialiazing pixels"
+                        ],
+                        [
+                            "CTD at \"Loading Events\"",
+                            "Check for unbalanced quotes, such as has_dlc = \"Reapers Can be caused by excessively long log commands with multiple references to global variables."
+                        ],
+                        [
+                            "CTD at \"Loading Graphics",
+                            "Ensure that your \"positions.txt\" is not misnamed and that it is empty."
+                        ],
+                        [
+                            "CTD when rendering the lobby interface",
+                            "Check that interface .gui and .gfx files are properly merged with vanilla , if copied in the mod."
+                        ],
+                        [
+                            "CTD on applying history (initial load or selecting a bookmark)",
+                            "Check that all groups in technology history have an entry for earliest starting date of the mod. See technology modding ."
+                        ],
+                        [
+                            "CTD on load/resign",
+                            "Check that no character has a death date past the end date of the mod. Check that no character has a birth date later than death date. [1]"
+                        ],
+                        [
+                            "CTD after 1 in-game day",
+                            "Check loaded trade routes reference valid provinces. For total conversion mods, use replace_path = \"common/trade_routes\" or blank vanilla files."
+                        ],
+                        [
+                            "CTD after a random elapsed time",
+                            "It is the worst kind of CTD, because it can be caused by ANY event or decision occurring in the game. If it slows down before crashing, it might be an infinite loop in an event. Check for a stackoverflow error being reported in exceptions.log. See Event modding#Recursive events If it crashes without warning, it may be a scripting error regarding parameter types that is not safely handled by the engine. Use The Validator and fix the errors reported, in priority effects used in a wrong context or with wrong parameters. For instance set_graphical_culture = norse vs set_graphical_culture = norsegfx used to CTD."
+                        ],
+                        [
+                            "CTD when hovering or clicking an event option",
+                            "Invalid syntax in the event, or calling a command with an invalid value."
+                        ],
+                        [
+                            "CTD when clicking on religion screen",
+                            "Check that no more than 5 holy sites are defined in landed_titles for that religion"
+                        ],
+                        [
+                            "CTD when clicking on button to open College of Cardinals",
+                            "See Interface modding#Papal succession"
+                        ],
+                        [
+                            "CTD when starting typing specific letters in the Title finder",
+                            "Check that there are no empty geographical regions (at least 1 valid province)"
+                        ],
+                        [
+                            "CTD when you click the \"Arrange Marriage\" rings button next to a character's portrait",
+                            "Check that no character, living or dead, that is conceived illegitimately is missing the required \" Bastard \" Trait. The Trait must be placed in each character's Character History entry BEFORE their birth date and WITHOUT being enclosed in brackets."
+                        ],
+                        [
+                            "Crash when you click a baron holding in a province to open building interface",
+                            "Check that there's no illegal buildings in that holding, e.g ca_con_wall_6(Theodosian Walls) in a city."
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Compare setup.log with the mod and with raw vanilla : next steps normally logged in vanilla are the likely cause of the crash",
+                            "children": []
+                        },
+                        {
+                            "text": "Check the format and color indexes of map files (terrain.bmp, ...)",
+                            "children": []
+                        },
+                        {
+                            "text": "Check Province Map for any Antialiazing pixels",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Check for unbalanced quotes, such as has_dlc = \"Reapers",
+                            "children": []
+                        },
+                        {
+                            "text": "Can be caused by excessively long log commands with multiple references to global variables.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Check that no character has a death date past the end date of the mod.",
+                            "children": []
+                        },
+                        {
+                            "text": "Check that no character has a birth date later than death date. [1]",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Check loaded trade routes reference valid provinces. For total conversion mods, use replace_path = \"common/trade_routes\" or blank vanilla files.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "It is the worst kind of CTD, because it can be caused by ANY event or decision occurring in the game."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "If it slows down before crashing, it might be an infinite loop in an event. Check for a stackoverflow error being reported in exceptions.log. See Event modding#Recursive events",
+                            "children": []
+                        },
+                        {
+                            "text": "If it crashes without warning, it may be a scripting error regarding parameter types that is not safely handled by the engine. Use The Validator and fix the errors reported, in priority effects used in a wrong context or with wrong parameters. For instance set_graphical_culture = norse vs set_graphical_culture = norsegfx used to CTD.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Debugging crashes on Windows",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In last resort you can use Visual Studio (including the free Express editions ; get the \"Windows Desktop\" one) to see detailed debugging information. Though it won't let you debug step by step, as the sources for the game are not available."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Simply start the game, then use the Debug > Attach to process... menu option. Use the Output window to read the game's messages, which will include script validation errors and performance data."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "For best results create an empty project and configure it to launch CK2.exe with your mod active (i.e. with the argument -mod=mod/foo.mod ); check the documentation for details on how to do this. You will then be able to launch the game with debugging by clicking the green Play button in Visual Studio. This will ensure that you capture any problems that show up right after the game starts."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When the game crashes Visual Studio will freeze it, tell you where the offset at which crash happened, and provide the option to save a \"minidump\". The offset and dump won't mean much to you but if you want to report the crash to Paradox they would find both useful."
+                }
+            ]
+        },
+        {
+            "heading": "Debugging crashes on macOS",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Install Xcode from the App Store, then run xcode-select --install in a Terminal window."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Launch the game from lldb:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If the game crashes, it will be paused in the debugger, letting you use the bt command to get a stack trace . Most other debugger features are unavailable without source code."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Meanwhile, use tail in separate terminal tabs to monitor the game's own logs:"
+                }
+            ]
+        },
+        {
+            "heading": "Bugs",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Bugs are usually easier to identify than crashes, as there is in-game context to identify the cause. \nMost non-functional bugs can be spotted via The Validator , a third-party tool which checks script files for various kinds of problems."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Symptom",
+                            "Troubleshooting"
+                        ],
+                        [
+                            "Blank event popups that pause the game and can't be closed.",
+                            "Save the game after the popups have appeared (without checking the compress save checkbox), and look in the save for the faulty eventID that is the source. They will be at the bottom of the file, in a player_event section. Use The Validator , check for Parse failures, or invalid node type errors."
+                        ],
+                        [
+                            "Scripting keywords appearing in decisions/councillor names",
+                            "Use The Validator , check for parse errors, missing curly braces"
+                        ],
+                        [
+                            "Decision not appearing",
+                            "Move conditions from potential to allow block, to see failing conditions in tooltip."
+                        ],
+                        [
+                            "Decision not having any effect when taken",
+                            "Use The Validator , check for duplicate decision IDs"
+                        ],
+                        [
+                            "Truncated localization",
+                            "Open .csv file with OpenOffice and check for extra columns containing text Make sure translations do not contain semi-colon character, as it used separate languages"
+                        ],
+                        [
+                            "Localization not appearing in game",
+                            "Ensure file extension is .csv, not .txt Check that mod folder is named localisation , not localization . Ensure overridden vanilla keys are loaded before vanilla (i.e. 00_ file prefix)"
+                        ],
+                        [
+                            "Localized names show strange characters (Ã)",
+                            "Check encoding of landed_titles, culture, and localization files to be Windows 1252 (ANSI), and not any type of Unicode."
+                        ],
+                        [
+                            "Events not triggering (but OK via console testevent)",
+                            "Check for invisible non-breakable spaces in event files (they can be found with Notepad++ by searching with \"Extended mode\" the Unicode string \\u00A0)"
+                        ],
+                        [
+                            "Titles have wrong flags",
+                            "Clean the flag cache in ~\\Documents\\Paradox Interactive\\Crusader Kings II\\(Mod user_dir)\\gfx\\flags Make sure all titles above barony have a corresponding flag in gfx/flags (with The Validator ) Try to see at which title it starts messing up, that's usually where you're missing the flag."
+                        ],
+                        [
+                            "Black coats of arms",
+                            "Verify the pattern file size in Coats of arms.txt Ensure all religion match a CoA group"
+                        ],
+                        [
+                            "Missing layers in portraits for custom ethnicities",
+                            "See Portrait modding#Custom ethnicities referencing DLC assets"
+                        ],
+                        [
+                            "Casus Belli immediately ends inconclusively",
+                            "Make sure can_use/can_use_title/is_valid_title blocks are in synch."
+                        ],
+                        [
+                            "All units models use wrong gfx",
+                            "Check that no province history files reference a barony that is not defined in landed_titles (with The Validator )"
+                        ],
+                        [
+                            "Rivers are flowing from east to west on the map",
+                            "Rivers flowing east to west typically means that there is something wrong with the color index of rivers.bmp. [2]"
+                        ],
+                        [
+                            "Title is badly displayed on the map (not visible or way outside its area)",
+                            "Check for stray pixels in provinces.bmp"
+                        ],
+                        [
+                            "Popups like naming children not showing up",
+                            "When using replace_path = \"events\" , the following script needs to be added in the mod events folder: # ID 1 and 2 are empty dummy events that are used by the message system to spawn messages\n# that should be displayed as events, their descriptions are filled in by the message system\nletter_event = {\n\tid = 1\n\tis_triggered_only = yes\n\tdesc = \"A\"\n}\ncharacter_event = {\n\tid = 2\n\tis_triggered_only = yes\n\tdesc = \"B\"\n}"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Save the game after the popups have appeared (without checking the compress save checkbox), and look in the save for the faulty eventID that is the source. They will be at the bottom of the file, in a player_event section.",
+                            "children": []
+                        },
+                        {
+                            "text": "Use The Validator , check for Parse failures, or invalid node type errors.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Use The Validator , check for parse errors, missing curly braces",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Move conditions from potential to allow block, to see failing conditions in tooltip.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Use The Validator , check for duplicate decision IDs",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Open .csv file with OpenOffice and check for extra columns containing text",
+                            "children": []
+                        },
+                        {
+                            "text": "Make sure translations do not contain semi-colon character, as it used separate languages",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Ensure file extension is .csv, not .txt",
+                            "children": []
+                        },
+                        {
+                            "text": "Check that mod folder is named localisation , not localization .",
+                            "children": []
+                        },
+                        {
+                            "text": "Ensure overridden vanilla keys are loaded before vanilla (i.e. 00_ file prefix)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Check encoding of landed_titles, culture, and localization files to be Windows 1252 (ANSI), and not any type of Unicode.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Check for invisible non-breakable spaces in event files (they can be found with Notepad++ by searching with \"Extended mode\" the Unicode string \\u00A0)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Clean the flag cache in ~\\Documents\\Paradox Interactive\\Crusader Kings II\\(Mod user_dir)\\gfx\\flags",
+                            "children": []
+                        },
+                        {
+                            "text": "Make sure all titles above barony have a corresponding flag in gfx/flags (with The Validator )",
+                            "children": []
+                        },
+                        {
+                            "text": "Try to see at which title it starts messing up, that's usually where you're missing the flag.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Verify the pattern file size in Coats of arms.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "Ensure all religion match a CoA group",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "See Portrait modding#Custom ethnicities referencing DLC assets",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Make sure can_use/can_use_title/is_valid_title blocks are in synch.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Check that no province history files reference a barony that is not defined in landed_titles (with The Validator )",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Rivers flowing east to west typically means that there is something wrong with the color index of rivers.bmp. [2]",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Check for stray pixels in provinces.bmp",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "When using replace_path = \"events\" , the following script needs to be added in the mod events folder:",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Testing",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Testing is the process of checking your mod for bugs, including crashes, broken functionalities, or gameplay/balance issues."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Tooling for testing include:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "In-game console , with various debugging (or cheating...) features, including:",
+                            "children": [
+                                {
+                                    "text": "play , take control of a specific character",
+                                    "children": []
+                                },
+                                {
+                                    "text": "testevent",
+                                    "children": []
+                                },
+                                {
+                                    "text": "event",
+                                    "children": []
+                                },
+                                {
+                                    "text": "run , for testing your conditions and commands without restarting the game",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Cheat mods",
+                            "children": []
+                        },
+                        {
+                            "text": "Observer mode ( observe console command), to check for game balance, and detect random CTDs over hundred of in-game years.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ In 2.6.3 game is fully playable and crashes only if you load saved game or resign the game",
+                            "children": []
+                        },
+                        {
+                            "text": "↑ [1]",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

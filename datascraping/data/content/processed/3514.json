@@ -1,0 +1,159 @@
+{
+    "pageid": 3514,
+    "title": "Total conversion guide",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "A total conversion is a mod that adapts CK2 game mechanics to another setting."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "This can be a medieval setting based on a different fantasy lore ( A Game of Thrones , Elder Kings , ...), or a completely different setting ( After the End , Crisis of the Confederation ,...)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Creating a total conversion mod is extremely time consuming, given that most or all vanilla content must be re-written to fit the new lore, meaning thousands lines of scripting."
+                }
+            ]
+        },
+        {
+            "heading": "Minimum vanilla elements",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Some vanilla elements are referenced by the game executable, and are expected to be present (sometimes only if a specific DLC is active), otherwise the game will crash:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Defines in defines.lua",
+                            "children": [
+                                {
+                                    "text": "The section NLearningScenario references some events and characeter IDs used by the tutorial.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Modifiers listed in common/static_modifiers.txt",
+                            "children": []
+                        },
+                        {
+                            "text": "The minor titles at the begining of file common/minor_titles/00_minor_titles.txt (from title_regent to title_commander )",
+                            "children": []
+                        },
+                        {
+                            "text": "Some CBs [ {{{1}}} ]",
+                            "children": []
+                        },
+                        {
+                            "text": "Some landed_titles like e_rebels or e_pirates [ {{{1}}} ]",
+                            "children": []
+                        },
+                        {
+                            "text": "The following script should be present in events folder:",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "\"default\" tributary type [ The doc says one is automatically created ? ]",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Mod file",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "In the .mod file, replace_path is there to prevent loading from vanilla. The exact list will depend on each mod setting and how the mod overrides vanilla files, but a typical list is:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Different history and titles:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note that replace_path of history folders does not seem to prevent the engine to read vanilla files during loading, which actually takes most of the loading time apart from graphics.\nA workaround during development is to rename vanilla folders to another name (ex: history/characters -> history/characters_old) to be sure they are ignored."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Different map:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Different lore (depends how different):"
+                }
+            ]
+        },
+        {
+            "heading": "Map modding",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "See Guide to Total Conversion Map Modding / Clans of Ireland"
+                }
+            ]
+        },
+        {
+            "heading": "Adapting events",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "When a vanilla event is unsuitable to the mod setting, try to find a lore-equivalent and override only the event localization keys (without changing the event script), rather than disabling the event entirely.\nSome events are more or less universal (ex: someone arrives with stories from a far away land), so adapting them:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is cheap and reduces the modding work, since event modding can be very time consuming.",
+                            "children": []
+                        },
+                        {
+                            "text": "May force you to consider a narrative line that you would not have otherwise, or would be low priority to implement.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Music DLCs",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Most vanilla music DLCs have religion or culture conditions, so will not be used by default.\nSee music modding , to override the .txt file of each DLC, and activate the applicable songs."
+                }
+            ]
+        },
+        {
+            "heading": "Featured Rulers",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The newly added Featured Rulers mechanic highlights historical rulers and invites you to play as them, but it will likely be inapplicable in the case of total conversion mods. It is not known whether you can edit the featured rulers and feats to reflect your own modded characters, but it is known how to disable the feature entirely and prevent it from referencing your new characters as if they were vanilla characters. One simply has to replace the file game\\interface\\highlighted_ruler.gui with a blank file in one's mod folder, and the entire window and associated mechanics are disabled."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,706 @@
+{
+    "pageid": 2343,
+    "title": "Tribes",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Tribes are the preferred settlement type for tribal rulers, and the only type they can hold without penalties. There can only be one tribe in a province, but it gets +50% income and levy size for each empty slot in the province. Most government types allows holding of tribes of the same culture , except nomads . If a nomad chooses to settle down as tribal, all nomadic counties will gain a tribe each, and remain under the control of the former nomad. Like castles, cultural buildings can be constructed in tribes."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "At game start, tribes are usually the only holding in their province. As the game progresses, rich tribal rulers may choose to build temples ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Tribal rulers can construct tribes in provinces without them, e.g. after conquering land from a feudal realm. The cost is 25 prestige per empty slot in the province, and they only take a year to build. However, the tribe will have reduced tax and levies if the county does not share the tribal ruler's culture or religion (up to -25% in each case (outside character's religion/culture group), with penalties stacking)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Tribes provide large numbers of Light Infantry, some Archers and very small amounts of Heavy Infantry; one of the combat tactics worth looking into as a tribal player is Feint during Skirmish phase. Technology-wise, Infantry and Skirmish Techniques improve troop effectiveness."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A tribe can be upgraded to another settlement type in two ways. When a a tribal ruler adopts feudalism or founds a merchant republic , all of their demesne tribes are upgraded. Rulers who already have an advanced government type can upgrade tribes in provinces that share their religion. Tribes can also be destroyed by pillaging nomads or by a settled ruler who chooses to build another settlement in the same slot; in the latter scenario, the tribe must be held by the settled ruler and not handed out to a vassal."
+                }
+            ]
+        },
+        {
+            "heading": "Base stats",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Characteristic",
+                            "Value"
+                        ],
+                        [
+                            "",
+                            "Income",
+                            "0.5"
+                        ],
+                        [
+                            "",
+                            "Fort level",
+                            "1"
+                        ],
+                        [
+                            "",
+                            "Levies",
+                            "100 light infantry 20 archers 5 heavy infantry"
+                        ],
+                        [
+                            "",
+                            "Garrison Size",
+                            "125"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "100 light infantry 20 archers 5 heavy infantry"
+                }
+            ]
+        },
+        {
+            "heading": "Buildings",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Unlike standard holdings, most buildings in a tribal holding cost Prestige instead of Wealth . The exceptions are hillforts, markets and fortifications. (Buildings that cost prestige usually still cost 1 wealth to build)"
+                }
+            ]
+        },
+        {
+            "heading": "Hillfort",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Rank 3 members of the Romuva Warrior Lodge can spend Renown to construct buildings in this series instantly and without the wealth cost."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Hillfort",
+                            "Cost",
+                            "Build time",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "Earth Hillfort",
+                            "37.5 gold",
+                            "365 days",
+                            "+0.25 fort level +5% levy size +100 retinue size",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Wooden Hillfort",
+                            "75 gold",
+                            "365 days",
+                            "+0.25 fort level +5% levy size",
+                            "Earth Hillfort",
+                            "",
+                            "Converts to City Walls I (if holding converted to city ) Converts to Castle Walls I (if holding converted to castle )"
+                        ],
+                        [
+                            "Reinforced Hillfort",
+                            "112.5 gold",
+                            "365 days",
+                            "+0.25 fort level +5% levy size",
+                            "Wooden Hillfort",
+                            "Castle Infrastructure I",
+                            ""
+                        ],
+                        [
+                            "Stone Hillfort",
+                            "150 gold",
+                            "365 days",
+                            "+0.25 fort level +5% levy size",
+                            "Reinforced Hillfort",
+                            "Castle Infrastructure I",
+                            "Converts to City Walls II (if holding converted to city ) Converts to Castle Walls II (if holding converted to castle ) Required for tribal rulers to adopt feudalism Required for feudal rulers to upgrade tribe to castle"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Converts to City Walls I (if holding converted to city ) Converts to Castle Walls I (if holding converted to castle )"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Converts to City Walls II (if holding converted to city ) Converts to Castle Walls II (if holding converted to castle ) Required for tribal rulers to adopt feudalism Required for feudal rulers to upgrade tribe to castle"
+                }
+            ]
+        },
+        {
+            "heading": "Market",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Market",
+                            "Cost",
+                            "Build time",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "Market Village",
+                            "37.5 gold",
+                            "365 days",
+                            "+0.5 income +20 retinue size",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Market Town",
+                            "75 gold",
+                            "365 days",
+                            "+0.5 income",
+                            "Market Village",
+                            "",
+                            "Converts to Castle Town I / Town Market I"
+                        ],
+                        [
+                            "Market City",
+                            "112.5 gold",
+                            "365 days",
+                            "+0.5 income",
+                            "Market Town",
+                            "Town Infrastructure I",
+                            ""
+                        ],
+                        [
+                            "Large Market City",
+                            "150 gold",
+                            "365 days",
+                            "+0.5 income",
+                            "Market City",
+                            "Town Infrastructure I",
+                            "Converts to Castle Town II / Town Market II Allows changing holding to city"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Shipbuilder",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Shipyards can only be built in coastal provinces."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Shipbuilder",
+                            "Cost",
+                            "Build time",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "Shipbuilder I",
+                            "100 prestige",
+                            "365 days",
+                            "+6 galleys",
+                            "",
+                            "Shipbuilding I",
+                            "Converts to Castle Shipyard I / City Shipyard I"
+                        ],
+                        [
+                            "Shipbuilder II",
+                            "200 prestige",
+                            "730 days",
+                            "+7 galleys",
+                            "Shipbuilder I",
+                            "Shipbuilding II",
+                            "Converts to Castle Shipyard II / City Shipyard II"
+                        ],
+                        [
+                            "Shipbuilder III",
+                            "300 prestige",
+                            "1095 days",
+                            "+8 galleys",
+                            "Shipbuilder II",
+                            "Shipbuilding III",
+                            "Converts to Castle Shipyard III / City Shipyard III"
+                        ],
+                        [
+                            "Shipbuilder IV",
+                            "400 prestige",
+                            "1460 days",
+                            "+9 galleys",
+                            "Shipbuilder III",
+                            "Shipbuilding IV",
+                            "Converts to Castle Shipyard IV / City Shipyard IV"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Training Grounds",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Training Grounds",
+                            "Cost",
+                            "Build time",
+                            "Effects",
+                            "Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "Training Grounds I",
+                            "100 prestige",
+                            "365 days",
+                            "+2.5% levy size +2.5% garrison size",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Training Grounds II",
+                            "200 prestige",
+                            "547 days",
+                            "+5% levy size +5% garrison size",
+                            "Training Grounds I",
+                            "Upgrades to Keep I / (City) Training Grounds I"
+                        ],
+                        [
+                            "Training Grounds III",
+                            "300 prestige",
+                            "730 days",
+                            "+7.5% levy size +7.5% garrison size",
+                            "Training Grounds II",
+                            ""
+                        ],
+                        [
+                            "Training Grounds IV",
+                            "400 prestige",
+                            "1095 days",
+                            "+10% levy size +10% garrison size",
+                            "Training Grounds III",
+                            "Upgrades to Keep II / (City) Training Grounds II"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "War Camp",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "War Camp",
+                            "Cost",
+                            "Build time",
+                            "Effects",
+                            "Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "War Camp I",
+                            "100 prestige",
+                            "365 days",
+                            "+40 light infantry",
+                            "",
+                            ""
+                        ],
+                        [
+                            "War Camp II",
+                            "200 prestige",
+                            "547 days",
+                            "+40 light infantry",
+                            "War Camp I",
+                            "Converts to Barracks I / City Guard I"
+                        ],
+                        [
+                            "War Camp III",
+                            "300 prestige",
+                            "730 days",
+                            "+40 light infantry",
+                            "War Camp II",
+                            ""
+                        ],
+                        [
+                            "War Camp IV",
+                            "400 prestige",
+                            "1095 days",
+                            "+40 light infantry",
+                            "War Camp III",
+                            "Converts to Barracks II / City Guard II"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Practice Range",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Practice Range",
+                            "Cost",
+                            "Build time",
+                            "Effects",
+                            "Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "Practice Range I",
+                            "100 prestige",
+                            "365 days",
+                            "+15 archers",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Practice Range II",
+                            "200 prestige",
+                            "547 days",
+                            "+15 archers",
+                            "Practice Range I",
+                            "Converts to Militia Training Grounds I / Mustering Grounds I"
+                        ],
+                        [
+                            "Practice Range III",
+                            "300 prestige",
+                            "730 days",
+                            "+15 archers",
+                            "Practice Range II",
+                            ""
+                        ],
+                        [
+                            "Practice Range IV",
+                            "400 prestige",
+                            "1095 days",
+                            "+15 archers",
+                            "Practice Range III",
+                            "Converts to Militia Training Grounds II / Mustering Grounds II"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Steppe Barracks",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Replaces the War camp for cultures from Altaic and Magyar culture groups in provinces with steppe terrain."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Barracks",
+                            "Cost",
+                            "Build time",
+                            "Effects",
+                            "Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "Barracks I",
+                            "100 prestige",
+                            "365 days",
+                            "+12 archers +10 light cavalry",
+                            ""
+                        ],
+                        [
+                            "Barracks II",
+                            "200 prestige",
+                            "547 days",
+                            "+12 archers +10 light cavalry",
+                            "Barracks I",
+                            "Converts to Steppe Barracks I / Guard I"
+                        ],
+                        [
+                            "Barracks III",
+                            "300 prestige",
+                            "730 days",
+                            "+12 archers +10 light cavalry",
+                            "Barracks II",
+                            ""
+                        ],
+                        [
+                            "Barracks IV",
+                            "400 prestige",
+                            "1095 days",
+                            "+12 archers +10 light cavalry",
+                            "Barracks III",
+                            "Converts to Steppe Barracks II / Guard II"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Stables",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Replaces the Practice Range for cultures from Altaic and Magyar culture groups in provinces with steppe terrain."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Stable",
+                            "Cost",
+                            "Build time",
+                            "Effects",
+                            "Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "Stables I",
+                            "100 prestige",
+                            "365 days",
+                            "+12 light cavalry +5 horse archers",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Stables II",
+                            "200 prestige",
+                            "547 days",
+                            "+12 light cavalry +5 horse archers",
+                            "Stables I",
+                            "Converts to Steppe Stables I / Barracks I"
+                        ],
+                        [
+                            "Stables III",
+                            "300 prestige",
+                            "730 days",
+                            "+12 light cavalry +5 horse archers",
+                            "Stables II",
+                            ""
+                        ],
+                        [
+                            "Stable IV",
+                            "400 prestige",
+                            "1095 days",
+                            "+12 light cavalry +5 horse archers",
+                            "Stables III",
+                            "Converts to Steppe Stables II / Barracks II"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Weaponsmith",
+            "level": 3,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Weaponsmith",
+                            "Cost",
+                            "Build time",
+                            "Effects",
+                            "Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "Weaponsmith I",
+                            "100 prestige",
+                            "365 days",
+                            "+10% morale +10% reinforce rate +25 retinue size",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Weaponsmith II",
+                            "200 prestige",
+                            "547 days",
+                            "+10% morale +10% reinforce rate +20 retinue size",
+                            "Weaponsmith I",
+                            "Converts to Training Grounds I / Arsenal I*"
+                        ],
+                        [
+                            "Weaponsmith III",
+                            "300 prestige",
+                            "730 days",
+                            "+10% morale +10% reinforce rate +15 retinue size",
+                            "Weaponsmith II",
+                            ""
+                        ],
+                        [
+                            "Weaponsmith IV",
+                            "400 prestige",
+                            "1095 days",
+                            "+10% morale +10% reinforce rate +10 retinue size",
+                            "Weaponsmith III",
+                            "Converts to Training Grounds II / Arsenal II*"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Note: since an arsenal can only be built in the capital of a merchant republic, a weaponsmith will do nothing in a non-capital upgraded to a city.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Fortifications",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "These buildings may only be built by followers of a defensive pagan religion. They cost piety instead of prestige."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Rank 3 members of the Romuva Warrior Lodge can spend Renown to construct buildings in this series instantly and without the Piety cost."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Fortification",
+                            "Cost",
+                            "Build time",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "Wall and Ditch",
+                            "100 piety",
+                            "365 days",
+                            "+0.2 fort level +15% garrison size +10 archers",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "Camouflaged Outposts",
+                            "200 piety",
+                            "547 days",
+                            "+0.2 fort level +15% garrison size +10 archers",
+                            "Wall and Ditch",
+                            "",
+                            "Converts to Castle Fortifications I / Town Fortifications I"
+                        ],
+                        [
+                            "Layered Palisades",
+                            "300 piety",
+                            "730 days",
+                            "+0.2 fort level +15% garrison size +10 archers",
+                            "Camouflaged Outposts",
+                            "Castle Infrastructure I",
+                            ""
+                        ],
+                        [
+                            "Stone Watchtowers",
+                            "400 piety",
+                            "1095 days",
+                            "+0.2 fort level +15% garrison size +10 archers",
+                            "Layered Palisades",
+                            "Castle Infrastructure I",
+                            "Converts to Castle Fortifications II / Town Fortifications II"
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Religious",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Great Tribal Pillar is a special building that may only be built in the capital via targeted decision. Sponsor must be unreformed pagan , at least Duke-tier and independent."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Only one Great Pillar per realm."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Each Great Pillar increases the religion’s Moral Authority and provides some special bonuses to the province based on the religion."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "After a successfull siege or raid, the occupier can simply destroy the Great Pillar. This results in not only the loss of the granted 5% moral authority, but also in a temporary malus on troop morale for all pagans!"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "An infidel ruler can take decision to simply burn it down."
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Fortification",
+                            "Cost",
+                            "Build time",
+                            "Effects",
+                            "Requirements",
+                            "Tech Requirements",
+                            "Notes"
+                        ],
+                        [
+                            "Great Pillar",
+                            "350 Gold 150 piety",
+                            "365 days",
+                            "+5% moral authority for 50 years +5% morale +5% reinforce rate +0.1 piety to liege",
+                            "unreformed pagan >Duke-tier independent Capital",
+                            "",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

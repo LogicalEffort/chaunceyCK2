@@ -1,0 +1,534 @@
+{
+    "pageid": 2514,
+    "title": "Carousing",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Carousing focus adds +3 diplomacy and lets the character have small private feasts ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Parties can improve diplomacy skill and opinion in many ways. All attendees get +10 opinion toward the host. Two events let you form new friendships (+100 opinion). Several events give the Cheery character modifier, which gives +10 general opinion for 2 years."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "By partying three times with this focus, you can level up to:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Carouser (+1 diplomacy)",
+                            "children": []
+                        },
+                        {
+                            "text": "Dedicated Carouser (+2 diplomacy)",
+                            "children": []
+                        },
+                        {
+                            "text": "A choice of lifestyle traits:",
+                            "children": [
+                                {
+                                    "text": "Hedonist (+2 diplomacy, +1 intrigue)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Socializer (+3 diplomacy)",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "By playing games at parties, you can level up to:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Apprentice Boardgamer (+1 diplomacy)",
+                            "children": []
+                        },
+                        {
+                            "text": "Game master (+2 diplomacy, +1 martial).",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "However, if a cannibal is on the guest list, beware! You might also want to think twice if a cannibal invites you..."
+                }
+            ]
+        },
+        {
+            "heading": "Hosting a party",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Invitations",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "You can only invite other characters in your realm. Both you and invitees must be adults, not at war , not Incapable , and not imprisoned . AI acceptance is largely based on traits rather than opinion."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Increases likelihood of accepting",
+                            "children": [
+                                {
+                                    "text": "Much more likely: your courtiers , Drunkard , Hedonist , Decadent , fake gurus",
+                                    "children": []
+                                },
+                                {
+                                    "text": "More likely: your direct vassals , Lustful , Gregarious , Gluttonous",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Decreases likelihood of accepting",
+                            "children": [
+                                {
+                                    "text": "Less likely: Stressed , Chaste , Celibate , Paranoid",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Much less likely: major disease , Depressed , opinion below -25 , Temperate , Shy",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Decline",
+                            "children": [
+                                {
+                                    "text": "Rivals; Muslims who are not decadent/hedonist/drunkard",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Decline and condemn decadence",
+                            "children": [
+                                {
+                                    "text": "Available for Zealous Muslims and for court gurus",
+                                    "children": []
+                                },
+                                {
+                                    "text": "5x if Brave or opinion below -50",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If someone accepts your invitation, their opinion of you increases by 10 ( Carousing ) and they will attend your party."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If someone declines your invitation, you lose 3 prestige. If someone declines and condemns decadence , you lose 10 prestige instead. In both cases, for two years you will have -5 opinion of them ( Declined Invitation ) and cannot invite them again during this time."
+                }
+            ]
+        },
+        {
+            "heading": "Party events",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "After 3–4 months, the invited guests arrive at your party. The party lasts about a month. It will be cancelled if nobody accepts your invitation or if you go to war."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "One random event will happen at your party, affecting the host and one or all guests. By limiting your guest list, you can make some events impossible, thus making desired events more likely."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "Description",
+                            "Weight",
+                            "Conditions",
+                            "Effects"
+                        ],
+                        [
+                            "Party fling",
+                            "20",
+                            "Host and guest are both lustful / hedonist and attracted to each other",
+                            "Host or guest proposes* a fling If accepted: Both characters get Cheery Chance of pregnancy (usually 40%, but halved for each character who has any traits that reduce fertility) [1] . Can transmit STDs If declined: opinion decrease; becomes chaste if not lustful ; proposer loses 5 prestige"
+                        ],
+                        [
+                            "Friendship forms",
+                            "30",
+                            "Host and guest are not already friends",
+                            "A friendship forms"
+                        ],
+                        [
+                            "Fight breaks out",
+                            "2",
+                            "Host or guest is lunatic , wroth , or paranoid",
+                            "One character goes into a rage. The other gets a choice to: Fight. Both are at risk of injury (89% beaten up , 10% wounded, 1% maimed) Talk. Requires 15 diplomacy. 20% chance to increase diplomacy skill. 20% chance to form friendship. Hide. Removes brave or has 30% chance to add craven ."
+                        ],
+                        [
+                            "Cannibalism",
+                            "2 (or 40)",
+                            "Host or guest is lunatic , possessed , or impaler",
+                            "Host eats* guest, or vice versa! Gains the cannibal trait: +3 martial, +1 personal combat, -10 general opinion, 20x more likely to trigger this event"
+                        ],
+                        [
+                            "Lunatic amuses",
+                            "20",
+                            "Host or guest is lunatic",
+                            "Lunatic gains Cheery for 2 years. If lunatic is host, so do all guests. If lunatic is guest, so does the host."
+                        ],
+                        [
+                            "Drunkard overdrinks",
+                            "10",
+                            "Host or guest is drunkard",
+                            "Drunkard gets the character modifier Epic Hangover for 1 year (-2 diplomacy). Observer opinion of drunkard is changed by -10 for 4 years (Despise drunkard), or +10 for 4 years (Gained Respect) if also drunkard."
+                        ],
+                        [
+                            "Tabletop games",
+                            "10 (or 30)",
+                            "Always possible; 3x more likely if host or guest is Game master",
+                            "Host chooses whether to bet 5 wealth on the outcome of the game Host gains the Apprentice Boardgamer character modifier (+1 diplomacy) if they win Host is very likely to win if Smart"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Both characters get Cheery",
+                            "children": []
+                        },
+                        {
+                            "text": "Chance of pregnancy (usually 40%, but halved for each character who has any traits that reduce fertility) [1] .",
+                            "children": []
+                        },
+                        {
+                            "text": "Can transmit STDs",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If declined: opinion decrease; becomes chaste if not lustful ; proposer loses 5 prestige"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fight. Both are at risk of injury (89% beaten up , 10% wounded, 1% maimed)",
+                            "children": []
+                        },
+                        {
+                            "text": "Talk. Requires 15 diplomacy. 20% chance to increase diplomacy skill. 20% chance to form friendship.",
+                            "children": []
+                        },
+                        {
+                            "text": "Hide. Removes brave or has 30% chance to add craven .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Gains the cannibal trait: +3 martial, +1 personal combat, -10 general opinion, 20x more likely to trigger this event"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Host chooses whether to bet 5 wealth on the outcome of the game",
+                            "children": []
+                        },
+                        {
+                            "text": "Host gains the Apprentice Boardgamer character modifier (+1 diplomacy) if they win",
+                            "children": []
+                        },
+                        {
+                            "text": "Host is very likely to win if Smart",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A * indicates that players can decide to override their character's inclination. This may cause their character to gain a bad trait due to cognitive dissonance."
+                }
+            ]
+        },
+        {
+            "heading": "End of the party",
+            "level": 3,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "This event triggers for the host and all guests."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Gain 20 prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "30% chance to lose stressed / depressed",
+                            "children": []
+                        },
+                        {
+                            "text": "Cannot host a party for 200 days",
+                            "children": []
+                        },
+                        {
+                            "text": "A choice of how to level up, if eligible:",
+                            "children": [
+                                {
+                                    "text": "If focus is Carousing, you can level up to Carouser (+1 diplomacy) and then Dedicated Carouser (+2 diplomacy)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "If focus is Carousing, and you are already a Dedicated Carouser , you can upgrade to the Hedonist lifestyle trait (+2 diplomacy, +1 intrigue)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "If focus is Carousing, and you are already a Dedicated Carouser , you can upgrade to the Socializer lifestyle trait (+3 diplomacy)",
+                                    "children": []
+                                },
+                                {
+                                    "text": "If Apprentice Boardgamer (+1 diplomacy), and you played games at this party, you can upgrade to the Game master lifestyle trait (+2 diplomacy, +1 martial).",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Ambition events",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "If your diplomacy is less than 8, these events can trigger, each with a MTTH of 280 months:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The Mirror (once per lifetime)",
+                            "children": []
+                        },
+                        {
+                            "text": "The Suicide (once per lifetime) (not in hiding)",
+                            "children": []
+                        },
+                        {
+                            "text": "Town Crier (not in hiding)",
+                            "children": []
+                        },
+                        {
+                            "text": "Foreign Cultures",
+                            "children": []
+                        },
+                        {
+                            "text": "Old Diplomat (not Indian religion)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Strategies",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Get Apprentice Boardgamer for +1 diplomacy :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Likely if you invite a game master .",
+                            "children": []
+                        },
+                        {
+                            "text": "Guaranteed if you only invite characters who are already your friends and cannot trigger special events.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Choose your lifestyle trait :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Socializer gives +10 attraction opinion.",
+                            "children": []
+                        },
+                        {
+                            "text": "Hedonist increases fertility and enables Cheery events (with continued Carousing). But it harms Christian church opinion and prevents becoming a saint .",
+                            "children": []
+                        },
+                        {
+                            "text": "Game Master has military benefits, but makes you less likely to get positive outcomes at future parties, such as new friendships and flings.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Get Cheery for +10 general opinion :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The safe way is to become lustful / hedonist and invite a lustful / hedonist character with the potential for mutual attraction.",
+                            "children": []
+                        },
+                        {
+                            "text": "Guaranteed if you only invite someone eligible who is already your friend and cannot trigger special events.",
+                            "children": []
+                        },
+                        {
+                            "text": "Repeat every 2 years.",
+                            "children": []
+                        },
+                        {
+                            "text": "To become lustful , use the Seduction focus first.",
+                            "children": []
+                        },
+                        {
+                            "text": "To become hedonist , throw 3 parties and choose the lifestyle.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Make friends :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "With powerful vassals.",
+                            "children": []
+                        },
+                        {
+                            "text": "With councilors, so they are likely to pick the Loyalist stance and support your actions in council votes .",
+                            "children": []
+                        },
+                        {
+                            "text": "With an eligible skilled character , if you have any skill between 5 and 9.",
+                            "children": []
+                        },
+                        {
+                            "text": "With a celibate character, if you already have 2 kids and don't want more. Note: event 100240 requires not having a lifestyle trait, even though celibate is no longer a lifestyle trait.",
+                            "children": []
+                        },
+                        {
+                            "text": "With courtiers of other religions, as there is an event that can fire to convert them to your religion or you to their religion.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Hold large parties for opinion boosts and guest health :"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Invite all vassals, along with their adult heirs, for +5 opinion from all guests.",
+                            "children": []
+                        },
+                        {
+                            "text": "Invite all family members who are stressed or depressed , and possibly their spouses, in order to increase their health and fertility.",
+                            "children": []
+                        },
+                        {
+                            "text": "Just don't invite someone who might eat you. Similarly, decline invitations from hosts who are likely to eat you as well.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Source",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "File related to Carousing located in /Crusader Kings II/events/wol_carousing_events.txt ."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ol",
+                    "items": [
+                        {
+                            "text": "↑ unprotected_sex_effect, considering that each character must be lustful/hedonist",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

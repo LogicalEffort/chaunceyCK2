@@ -1,0 +1,4410 @@
+{
+    "pageid": 552,
+    "title": "Combat tactics",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "During combat , each flank gets a combat tactic selected:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Eligibility: conditions based on phase, flank commander traits, and/or flank composition specify whether a given tactic is eligible (based on entire army size).",
+                            "children": []
+                        },
+                        {
+                            "text": "Weight: each eligible tactic gets a base weight which makes it more or less likely to be selected.",
+                            "children": []
+                        },
+                        {
+                            "text": "Modifiers: base weight is modified (multiplied and stackable) based on flank commander and/or flank composition and proportion of a unit among the same kind of units:",
+                            "children": [
+                                {
+                                    "text": "Skirmish units = Archers + Light cavalry + Horse archers + Camel Cavalry",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Melee units = Heavy infantry + Pikemen + Heavy cavalry",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Tactics involving Light Infantry or War Elephant compare the number to the entire army size.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "For eligibility horse archers and camel are added to light cavalry statistics. Elephants are added to heavy cavalry. So you can have heavy cavalry charge fire with only elephants.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Selection: a tactic is selected randomly among the weighted eligible tactics.",
+                            "children": []
+                        },
+                        {
+                            "text": "Effect: selected tactic runs for a fixed tactic-specific number of days (even if combat phase changes) and brings a damage modifier to units.",
+                            "children": []
+                        },
+                        {
+                            "text": "Affinity: Tactics have an asymmetrical offensive/defensive tactic affinity which gives a bonus when matched. Note: the attacker's tactical affinity bonus applies to the tactic used on the previous day by the defender.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Simulator",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "navelist's tactics simulator",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Normal Tactics",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Tactic",
+                            "Days",
+                            "Group",
+                            "Eligibility",
+                            "Weight",
+                            "Modifiers",
+                            "Effect",
+                            "Affinity"
+                        ],
+                        [
+                            "",
+                            "No Tactic",
+                            "1",
+                            "",
+                            "Never",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Generic Skirmish Tactic",
+                            "18",
+                            "Skirmish",
+                            "Skirmish",
+                            "3",
+                            "0.8 – Skirmish Technique level 2, also at lvl 4, 6 and 8",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Harass Tactic",
+                            "18",
+                            "Harass",
+                            "Skirmish Light Cavalry 5% Horse Archers < 50% One of the following: Light Cavalry <45% Light Cavalry <75% and Martial 12 or above The Light Cavalry (Light Cavalry units, Camel Cavalry, and Horse Archers) percentage is relative to the entire flank. Harass can fire with 5% (relative to the entire flank) Camel Cavalry (or Horse Archers) and no Light Cavalry units.\n(Disorganised Harass is used if the Light Cavalry percent is too high.)",
+                            "2",
+                            "2 – Martial 8, (Light Cav 70% OR Camel Cav 70%) of skirmish units 2 – Martial 12, (Light Cav 60% OR Camel Cav 60%) of skirmish units 2 – Martial 16, (Light Cav 50% OR Camel Cav 50%) of skirmish units",
+                            "Light Cav Offensive +300% Camel Cav Offensive +300% Horse Archers Offensive -150% Archers Offensive -150% Light Cav Defence -40% Camel Cav Defence -40%",
+                            "Swarm +100%"
+                        ],
+                        [
+                            "",
+                            "Disorganised Harass Tactic",
+                            "18",
+                            "Harass",
+                            "Skirmish Horse Archers < 50% One of the following: Light Cavalry 40% AND (Martial <12 OR no leader) Light Cavalry 75% (If flank has leader with Martial 12 it triggers at 75% Light Cavalry, otherwise it triggers at 40% Light Cavalry.)",
+                            "2",
+                            "1.5 – (Light Cav 50% OR Camel Cav 50%) of all skirmish units 1.5 – (Light Cav 70% OR Camel Cav 70%) of all skirmish units 1.5 – (Light Cav 90% OR Camel Cav 90%) of all skirmish units 0.8 – Skirmish Technique level 2, also at lvl 4, 6 and 8",
+                            "Light Cav Offensive +100% Camel Cav Offensive +100% Horse Archers Offensive -150% Archers Offensive -150% Light Cav Defence -60% Camel Cav Defence -60%",
+                            "Swarm +100%"
+                        ],
+                        [
+                            "",
+                            "Volley Harass Tactic",
+                            "18",
+                            "Harass",
+                            "Skirmish Light Cavalry 1% Archers 1% Archers <30% Light infantry 10%",
+                            "4",
+                            "1.5 – Martial 8, Light Infantry 40%, Archers 20% of all skirmish units 1.5 – Martial 12, Light Infantry  40%, Archers 20% of all skirmish units 1.5 – Martial 16, Light Infantry 40%, Archers 20% of all skirmish units The Light Infantry check is probably a bug. It's being compared to the total number of skirmish units but is not a skirmish unit itself.",
+                            "Light Cav Offensive +100% Camel Cav Offensive +100% Archers Offensive +60% Light Infantry Offensive +80% Horse Archers Offensive -180%",
+                            "Swarm +100%"
+                        ],
+                        [
+                            "",
+                            "Volley Tactic",
+                            "18",
+                            "Volley",
+                            "Skirmish Archers 1% Archers <40%",
+                            "3",
+                            "1.5 – Martial 8, Archers 10% of all skirmish units 1.5 – Martial 12, Archers 20% of all skirmish units 1.5 – Martial 16, Archers 30% of all skirmish units",
+                            "Archers Offensive +200% Light Cav Offensive -150% Camel Cav Offensive -150% Horse Archers Offensive -150%",
+                            "Harass +100%"
+                        ],
+                        [
+                            "",
+                            "Swarm Volley Tactic",
+                            "18",
+                            "Volley",
+                            "Skirmish Archers 1% Horse Archers 1% Location NOT forest, woods, mountain, jungle, or marsh",
+                            "3",
+                            "1.5 – Martial 8, Archers 70%, Horse Archers 30% of all skirmish units 1.5 – Martial 12, Archers 60%, Horse Archers 30% of all skirmish units 1.5 – Martial 16, Archers 50%, Horse Archers 30% of all skirmish units",
+                            "Archers Offensive +120% Horse Archers Offensive +60% Light Cav Offensive -180% Camel Cav Offensive -180%",
+                            "Harass +100%"
+                        ],
+                        [
+                            "",
+                            "Swarm Tactic",
+                            "18",
+                            "Swarm",
+                            "Skirmish Horse Archers 1% NOT location forest, woods, mountain, jungle, or marsh One of the following: Horse Archers <35% Horse archers <65% and Martial 12 or above (Basically if the percentage of Horse Archers is too high the Disorganised Swarm Tactic is used instead.)",
+                            "3",
+                            "1.5 – Martial 8, Horse Archers 20% of all skirmish units 1.5 – Martial 12, Horse Archers 30% of all skirmish units 1.5 – Martial 16, Horse Archers 40% of all skirmish units",
+                            "Horse Archers Offensive +100% Light Cav Offensive -150% Camel Cav Offensive -150% Archers Offensive -150%",
+                            "Volley +100%"
+                        ],
+                        [
+                            "",
+                            "Disorganised Swarm Tactic",
+                            "18",
+                            "Swarm",
+                            "Skirmish NOT location forest, woods, mountain, jungle, or marsh One of the following: Horse Archers 30% AND (Leader with martial below 12 OR no leader) Horse archers 50%",
+                            "3",
+                            "1.5 – Horse Archers 50% of all skirmish units 1.5 – Horse Archers 70% of all skirmish units 1.5 – Horse Archers 90% of all skirmish units 0.8 – Skirmish Technique level 2, also at lvl 4, 6 and 8",
+                            "Horse Archers Offensive +50% Horse Archers Defensive -100% Light Cav Offensive -150% Camel Cav Offensive -150% Archers Offensive -150%"
+                        ],
+                        [
+                            "",
+                            "Harass Swarm Tactic",
+                            "18",
+                            "Swarm",
+                            "Skirmish Horse Archers 1% NOT location Forest, woods, mountain, jungle, or marsh One of the following: Horse Archers <35% Horse archers <65% AND martial 12",
+                            "3",
+                            "1.5 – Martial 8, Horse Archers 20%, AND (Light Cav 30% OR Camel Cav 30%) of all skirmish units 1.5 – Martial 12, Horse Archers 30%, AND (Light Cav 30% OR Camel Cav 30%) of all skirmish units 1.5 – Martial 16, Horse Archers 40%, AND (Light Cav 30% OR Camel Cav 30%) of all skirmish units",
+                            "Horse Archers Offensive +120% Light Cav Offensive +60% Camel Cav Offensive +60% Archers Offensive -180%",
+                            "Volley +100%"
+                        ],
+                        [
+                            "",
+                            "Shieldwall Tactic",
+                            "12",
+                            "Defensive",
+                            "Skirmish Archers 1% Heavy Infantry 20% OR Light Infantry 20% OR Pikemen 20%",
+                            "3",
+                            "3 – Martial 12, Pikemen 30% of all melee units 3 – Martial 12, Heavy Infantry 30% of all melee units 3 - Martial 16, Pikemen 30% of all melee units 3 – Martial 16, Heavy Infantry 30% of all melee units",
+                            "Heavy Infantry Defensive +300% Pikemen Defensive +240% Light Infantry Defensive +120% Archers Offensive +60% Light Cav Defensive -50% Camel Cav Defensive -50% Heavy Cavalry Defensive -50% Horse Archers Defensive -50%",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Feint Tactic",
+                            "12",
+                            "Defensive",
+                            "Skirmish Light Infantry 20% Archers 20%",
+                            "3",
+                            "3 – Martial 12, Archers 30% of all skirmish units 3 – Martial 12, Light Infantry 40% of the entire flank",
+                            "Light Infantry Offensive +100% Archers Offensive +150% Light Infantry Defensive +50% Heavy Infantry Offensive -50% Heavy Infantry Defensive -50% Heavy Cavalry Offensive -50% Heavy Cavalry Defensive -50%",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Grey Wall",
+                            "12",
+                            "Defensive",
+                            "Skirmish War Elephants 2.5%",
+                            "5",
+                            "3 – Martial 12, Archers 30% of all skirmish units 3 – Martial 12, War Elephants 5% of the entire flank 3 – Martial 12, War Elephants 7.5% of the entire flank",
+                            "Heavy Infantry Defensive +300% Pikemen Defensive +240% Light Infantry Defensive +120% War Elephants Defensive +150% Archers Offensive +120% Archers Defensive +60% Light Cav Defensive -50% Heavy Cavalry Defensive -50% Horse Archers Defensive -50%",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Prepare Tactic",
+                            "1",
+                            "Defensive",
+                            "Skirmish Days = 15",
+                            "1",
+                            "0.1 – Martial 8 0.1 – Martial 12 0.1 – Martial 16 0.8 – Skirmish Technique level 2, also at lvl 4, 6 and 8",
+                            "Change Phase to Melee",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Charge on Undefended Flank",
+                            "2",
+                            "Charge",
+                            "Skirmish Days = 3 Not Flanking",
+                            "1",
+                            "100 - Enemy has 60% archers TOTAL in his flank",
+                            "Change Phase to Melee",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Charge of Opportunity",
+                            "6",
+                            "Charge",
+                            "Skirmish Days = 10 Not Flanking",
+                            "3",
+                            "",
+                            "Heavy Cavalry Offensive +300% Horse Archers Offensive +300% Heavy Infantry Offensive +120% Change Phase to Melee",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Charge Tactic",
+                            "6",
+                            "Charge",
+                            "Skirmish Days = 10 Not Flanking",
+                            "10",
+                            "3 – Martial 12, Horse Archers 30% of all skirmish units 3 – Martial 12, Heavy Infantry 10% of all melee units 3 – Martial 12, Heavy Cavalry 10% of all melee units",
+                            "Heavy Cavalry Offensive +300% Horse Archers Offensive +300% Heavy Infantry Offensive +120% Change Phase to Melee",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Crushing Charge",
+                            "10",
+                            "Charge",
+                            "Skirmish Days = 10 Not Flanking One of the following: War Elephants 1% Heavy Cavalry 20%",
+                            "2",
+                            "3 - Martial 8, War Elephants 4%  of the entire flank 3 - Martial 12, War Elephants 3%  of the entire flank 3 - Martial 18, War Elephants 2%  of the entire flank 8 - Martial 18, Heavy Cavalry 40% of the entire flank",
+                            "Heavy Cavalry Offensive +175% War Elephants Offensive +250% Change Phase to Melee",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Wait Tactic",
+                            "1",
+                            "Stand Fast",
+                            "Melee",
+                            "1",
+                            "0.1 – Martial 8 0.1 – Martial 12 0.1 – Martial 16 0.8 – Melee Techniques at level 2, also at lvl 4, 6, and 8",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Advance Tactic",
+                            "18",
+                            "Advance",
+                            "Melee Heavy Infantry 1%",
+                            "3",
+                            "1.5 – Martial 8, Heavy Infantry 70% of all melee units 1.5 – Martial 12, Heavy Infantry 60% of all melee units 1.5 – Martial 16, Heavy Infantry 50% of all melee units",
+                            "Heavy Infantry Offensive +300% Heavy Cavalry Offensive -150% Pikemen Offensive -150%",
+                            "Stand Fast +300%"
+                        ],
+                        [
+                            "",
+                            "Awesome Advance Tactic",
+                            "18",
+                            "Advance",
+                            "Melee Heavy Infantry 1% Heavy Cavalry 1%",
+                            "3",
+                            "1.5 – Martial 9, Heavy Infantry 70%, Heavy Cavalry 30% of all melee units 1.5 – Martial 13, Heavy Infantry 60%, Heavy Cavalry 30% of all melee units 1.5 – Martial 17, Heavy Infantry 50%, Heavy Cavalry 30% of all melee units",
+                            "Heavy Infantry Offensive +240% Heavy Cavalry Offensive +60% Pikemen Offensive -180%",
+                            "Stand Fast +300%"
+                        ],
+                        [
+                            "",
+                            "Stand Fast Tactic",
+                            "18",
+                            "Stand Fast",
+                            "Melee Pikemen 1% Terrain = Forest",
+                            "3",
+                            "1.5 – Martial 8, Pikemen 70% of all melee units 1.5 – Martial 12, Pikemen 60% of all melee units 1.5 – Martial 16, Pikemen 50% of all melee units",
+                            "Pikemen Offensive +300% Heavy Cavalry Offensive -150% Heavy Infantry Offensive -150%",
+                            "Charge +300%"
+                        ],
+                        [
+                            "",
+                            "Slow Advance",
+                            "18",
+                            "Stand Fast",
+                            "Melee Pikemen 1% Heavy Infantry 1%",
+                            "3",
+                            "1.5 – Martial 8, Pikemen 70%, Heavy Infantry 30% of all melee units 1.5 – Martial 12, Pikemen 60%, Heavy Infantry 30% of all melee units 1.5 – Martial 16, Pikemen 50%, Heavy Infantry 30% of all melee units",
+                            "Pikemen Offensive +240% Heavy Infantry Offensive +60% Heavy Cavalry Offensive -180%",
+                            "Charge +300%"
+                        ],
+                        [
+                            "",
+                            "Powerful Charge",
+                            "18",
+                            "Charge",
+                            "Melee Heavy Cavalry 1%",
+                            "3",
+                            "1.5 – Martial 8, Heavy Cavalry 70% of all melee units 1.5 – Martial 12, Heavy Cavalry 60% of all melee units 1.5 – Martial 16, Heavy Cavalry 50% of all melee units",
+                            "Heavy Cavalry Offensive +300% Heavy Infantry Offensive -150% Pikemen Offensive -150%",
+                            "Advance +300%"
+                        ],
+                        [
+                            "",
+                            "Overwhelming Charge",
+                            "18",
+                            "Charge",
+                            "Melee Heavy Cavalry 1% Pikemen 1%",
+                            "3",
+                            "1.5 – Martial 9, Heavy Cavalry 70%, Pikemen 30% of all melee units 1.5 – Martial 13, Heavy Cavalry 60%, Pikemen 30% of all melee units 1.5 – Martial 17, Heavy Cavalry 50%, Pikemen 30% of all melee units",
+                            "Heavy Cavalry Offensive +240% Pikemen Offensive +60% Heavy Infantry Offensive -180 %",
+                            "Advance +300%"
+                        ],
+                        [
+                            "",
+                            "Barrage Tactic",
+                            "6",
+                            "Defensive",
+                            "Melee Archers 20%",
+                            "3",
+                            "3 – Martial 12, Archers 30% of all skirmish units 3 – Martial 12, Horse Archers 30% of all skirmish units",
+                            "Archers Offensive +240% Horse Archers Offensive +240%",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Raid Tactic",
+                            "6",
+                            "Defensive",
+                            "Melee Light Cav 20% Horse Archers < 50%",
+                            "3",
+                            "3 – Martial 12, (Light Cavalry 30% of the entire flank OR Camel Cavalry 30% of the entire flank) 3 – Martial 12, Light Infantry 30% of the entire flank",
+                            "Light Cav Offensive +240% Camel Cav Offensive +240% Light Infantry Offensive +240%",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Force Back",
+                            "24",
+                            "Stand Fast",
+                            "Melee One of the following: War Elephants 0.5% Pikemen 25% Heavy Infantry 25%",
+                            "3",
+                            "1.5 – Martial 8, (Pikemen 70% of all melee units OR Heavy Infantry 30% of all melee units OR War Elephants 4% of the entire flank) 1.5 – Martial 12, (Pikemen 60% of all melee units OR Heavy Infantry 30% of all melee units OR War Elephants 2% of the entire flank) 1.5 – Martial 16, (Pikemen 50% of all melee units OR Heavy Infantry 30% of all melee units OR War Elephants 1% of the entire flank)",
+                            "Pikemen Offensive +240% Heavy Infantry Offensive +160% War Elephants Offensive +120% Heavy Cavalry Offensive -180% Archers Offensive -100% Light Cavalry Defensive -20% Horse Archers Offensive -100%",
+                            "Charge +300%"
+                        ],
+                        [
+                            "",
+                            "Elephant Trample Tactic",
+                            "12",
+                            "Advance",
+                            "Melee War Elephants 1%",
+                            "3",
+                            "1.5 – Martial 8, Pikemen 70% of all melee units OR Heavy Infantry 30% of all melee units OR War Elephants 4% of the entire flank OR Heavy Cavalry 25% of the entire flank 1.5 – Martial 12, Pikemen 60% of all melee units OR Heavy Infantry 30% of all melee units OR War Elephants 2% of the entire flank OR Heavy Cavalry 25% of the entire flank 1.5 – Martial 16, Pikemen 50% of all melee units OR Heavy Infantry 30% of all melee units OR War Elephants 1% of the entire flank OR Heavy Cavalry 25% of the entire flank",
+                            "War Elephants Offensive +250% War Elephants Defensive -40% Heavy Cavalry Offensive +200% Heavy Infantry Offensive +200% Pikemen Offensive +200% Light Cavalry Offensive +50% Light Cavalry Defensive -20% Archers Offensive -100% Horse Archers Offensive -100%",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Pursue Tactic",
+                            "15",
+                            "Charge",
+                            "Pursue",
+                            "10",
+                            "",
+                            "",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Never",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "0.8 – Skirmish Technique level 2, also at lvl 4, 6 and 8",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry 5%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers < 50%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "One of the following:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Light Cavalry <45%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry <75% and Martial 12 or above",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The Light Cavalry (Light Cavalry units, Camel Cavalry, and Horse Archers) percentage is relative to the entire flank. Harass can fire with 5% (relative to the entire flank) Camel Cavalry (or Horse Archers) and no Light Cavalry units.\n(Disorganised Harass is used if the Light Cavalry percent is too high.)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "2 – Martial 8, (Light Cav 70% OR Camel Cav 70%) of skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "2 – Martial 12, (Light Cav 60% OR Camel Cav 60%) of skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "2 – Martial 16, (Light Cav 50% OR Camel Cav 50%) of skirmish units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Light Cav Offensive +300%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cav Offensive +300%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Offensive -150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive -150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cav Defence -40%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cav Defence -40%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers < 50%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "One of the following:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Light Cavalry 40% AND (Martial <12 OR no leader)",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry 75%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(If flank has leader with Martial 12 it triggers at 75% Light Cavalry, otherwise it triggers at 40% Light Cavalry.)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 – (Light Cav 50% OR Camel Cav 50%) of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – (Light Cav 70% OR Camel Cav 70%) of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – (Light Cav 90% OR Camel Cav 90%) of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "0.8 – Skirmish Technique level 2, also at lvl 4, 6 and 8",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Light Cav Offensive +100%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cav Offensive +100%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Offensive -150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive -150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cav Defence -60%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cav Defence -60%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers <30%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light infantry 10%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 – Martial 8, Light Infantry 40%, Archers 20% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 12, Light Infantry  40%, Archers 20% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 16, Light Infantry 40%, Archers 20% of all skirmish units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The Light Infantry check is probably a bug. It's being compared to the total number of skirmish units but is not a skirmish unit itself."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Light Cav Offensive +100%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cav Offensive +100%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive +60%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Offensive +80%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Offensive -180%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers <40%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 – Martial 8, Archers 10% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 12, Archers 20% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 16, Archers 30% of all skirmish units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Archers Offensive +200%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cav Offensive -150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cav Offensive -150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Offensive -150%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Location NOT forest, woods, mountain, jungle, or marsh",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 – Martial 8, Archers 70%, Horse Archers 30% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 12, Archers 60%, Horse Archers 30% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 16, Archers 50%, Horse Archers 30% of all skirmish units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Archers Offensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Offensive +60%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cav Offensive -180%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cav Offensive -180%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "NOT location forest, woods, mountain, jungle, or marsh",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "One of the following:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Horse Archers <35%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse archers <65% and Martial 12 or above",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(Basically if the percentage of Horse Archers is too high the Disorganised Swarm Tactic is used instead.)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 – Martial 8, Horse Archers 20% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 12, Horse Archers 30% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 16, Horse Archers 40% of all skirmish units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Horse Archers Offensive +100%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cav Offensive -150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cav Offensive -150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive -150%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "NOT location forest, woods, mountain, jungle, or marsh",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "One of the following:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Horse Archers 30% AND (Leader with martial below 12 OR no leader)",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse archers 50%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 – Horse Archers 50% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Horse Archers 70% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Horse Archers 90% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "0.8 – Skirmish Technique level 2, also at lvl 4, 6 and 8",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Horse Archers Offensive +50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Defensive -100%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cav Offensive -150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cav Offensive -150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive -150%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "NOT location Forest, woods, mountain, jungle, or marsh",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "One of the following:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Horse Archers <35%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse archers <65% AND martial 12",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 – Martial 8, Horse Archers 20%, AND (Light Cav 30% OR Camel Cav 30%) of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 12, Horse Archers 30%, AND (Light Cav 30% OR Camel Cav 30%) of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 16, Horse Archers 40%, AND (Light Cav 30% OR Camel Cav 30%) of all skirmish units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Horse Archers Offensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cav Offensive +60%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cav Offensive +60%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive -180%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry 20% OR Light Infantry 20% OR Pikemen 20%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "3 – Martial 12, Pikemen 30% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "3 – Martial 12, Heavy Infantry 30% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "3 - Martial 16, Pikemen 30% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "3 – Martial 16, Heavy Infantry 30% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Infantry Defensive +300%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen Defensive +240%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Defensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive +60%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cav Defensive -50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cav Defensive -50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry Defensive -50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Defensive -50%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry 20%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers 20%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "3 – Martial 12, Archers 30% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "3 – Martial 12, Light Infantry 40% of the entire flank",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Light Infantry Offensive +100%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Defensive +50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Offensive -50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Defensive -50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry Offensive -50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry Defensive -50%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "War Elephants 2.5%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "3 – Martial 12, Archers 30% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "3 – Martial 12, War Elephants 5% of the entire flank",
+                            "children": []
+                        },
+                        {
+                            "text": "3 – Martial 12, War Elephants 7.5% of the entire flank",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Infantry Defensive +300%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen Defensive +240%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Defensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "War Elephants Defensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Defensive +60%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cav Defensive -50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry Defensive -50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Defensive -50%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Days = 15",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "0.1 – Martial 8",
+                            "children": []
+                        },
+                        {
+                            "text": "0.1 – Martial 12",
+                            "children": []
+                        },
+                        {
+                            "text": "0.1 – Martial 16",
+                            "children": []
+                        },
+                        {
+                            "text": "0.8 – Skirmish Technique level 2, also at lvl 4, 6 and 8",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Change Phase to Melee",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Days = 3",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Flanking",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "100 - Enemy has 60% archers TOTAL in his flank",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Change Phase to Melee",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Days = 10",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Flanking",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Cavalry Offensive +300%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Offensive +300%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Offensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Change Phase to Melee",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Days = 10",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Flanking",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "3 – Martial 12, Horse Archers 30% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "3 – Martial 12, Heavy Infantry 10% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "3 – Martial 12, Heavy Cavalry 10% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Cavalry Offensive +300%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Offensive +300%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Offensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Change Phase to Melee",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Days = 10",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Flanking",
+                            "children": []
+                        },
+                        {
+                            "text": "One of the following:",
+                            "children": [
+                                {
+                                    "text": "War Elephants 1%",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Heavy Cavalry 20%",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "3 - Martial 8, War Elephants 4%  of the entire flank",
+                            "children": []
+                        },
+                        {
+                            "text": "3 - Martial 12, War Elephants 3%  of the entire flank",
+                            "children": []
+                        },
+                        {
+                            "text": "3 - Martial 18, War Elephants 2%  of the entire flank",
+                            "children": []
+                        },
+                        {
+                            "text": "8 - Martial 18, Heavy Cavalry 40% of the entire flank",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Cavalry Offensive +175%",
+                            "children": []
+                        },
+                        {
+                            "text": "War Elephants Offensive +250%",
+                            "children": []
+                        },
+                        {
+                            "text": "Change Phase to Melee",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "0.1 – Martial 8",
+                            "children": []
+                        },
+                        {
+                            "text": "0.1 – Martial 12",
+                            "children": []
+                        },
+                        {
+                            "text": "0.1 – Martial 16",
+                            "children": []
+                        },
+                        {
+                            "text": "0.8 – Melee Techniques at level 2, also at lvl 4, 6, and 8",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry 1%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 – Martial 8, Heavy Infantry 70% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 12, Heavy Infantry 60% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 16, Heavy Infantry 50% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Infantry Offensive +300%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry Offensive -150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen Offensive -150%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry 1%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 – Martial 9, Heavy Infantry 70%, Heavy Cavalry 30% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 13, Heavy Infantry 60%, Heavy Cavalry 30% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 17, Heavy Infantry 50%, Heavy Cavalry 30% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Infantry Offensive +240%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry Offensive +60%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen Offensive -180%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Terrain = Forest",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 – Martial 8, Pikemen 70% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 12, Pikemen 60% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 16, Pikemen 50% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Pikemen Offensive +300%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry Offensive -150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Offensive -150%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry 1%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 – Martial 8, Pikemen 70%, Heavy Infantry 30% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 12, Pikemen 60%, Heavy Infantry 30% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 16, Pikemen 50%, Heavy Infantry 30% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Pikemen Offensive +240%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Offensive +60%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry Offensive -180%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry 1%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 – Martial 8, Heavy Cavalry 70% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 12, Heavy Cavalry 60% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 16, Heavy Cavalry 50% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Cavalry Offensive +300%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Offensive -150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen Offensive -150%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen 1%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 – Martial 9, Heavy Cavalry 70%, Pikemen 30% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 13, Heavy Cavalry 60%, Pikemen 30% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 17, Heavy Cavalry 50%, Pikemen 30% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Cavalry Offensive +240%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen Offensive +60%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Offensive -180 %",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers 20%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "3 – Martial 12, Archers 30% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "3 – Martial 12, Horse Archers 30% of all skirmish units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Archers Offensive +240%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Offensive +240%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cav 20%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers < 50%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "3 – Martial 12, (Light Cavalry 30% of the entire flank OR Camel Cavalry 30% of the entire flank)",
+                            "children": []
+                        },
+                        {
+                            "text": "3 – Martial 12, Light Infantry 30% of the entire flank",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Light Cav Offensive +240%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cav Offensive +240%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Offensive +240%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "One of the following:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "War Elephants 0.5%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen 25%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry 25%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 – Martial 8, (Pikemen 70% of all melee units OR Heavy Infantry 30% of all melee units OR War Elephants 4% of the entire flank)",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 12, (Pikemen 60% of all melee units OR Heavy Infantry 30% of all melee units OR War Elephants 2% of the entire flank)",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 16, (Pikemen 50% of all melee units OR Heavy Infantry 30% of all melee units OR War Elephants 1% of the entire flank)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Pikemen Offensive +240%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Offensive +160%",
+                            "children": []
+                        },
+                        {
+                            "text": "War Elephants Offensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry Offensive -180%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive -100%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry Defensive -20%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Offensive -100%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "War Elephants 1%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 – Martial 8, Pikemen 70% of all melee units OR Heavy Infantry 30% of all melee units OR War Elephants 4% of the entire flank OR Heavy Cavalry 25% of the entire flank",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 12, Pikemen 60% of all melee units OR Heavy Infantry 30% of all melee units OR War Elephants 2% of the entire flank OR Heavy Cavalry 25% of the entire flank",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 – Martial 16, Pikemen 50% of all melee units OR Heavy Infantry 30% of all melee units OR War Elephants 1% of the entire flank OR Heavy Cavalry 25% of the entire flank",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "War Elephants Offensive +250%",
+                            "children": []
+                        },
+                        {
+                            "text": "War Elephants Defensive -40%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry Offensive +200%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Offensive +200%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen Offensive +200%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry Offensive +50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry Defensive -20%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive -100%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Offensive -100%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Pursue",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Bad Tactics",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Tactic",
+                            "Days",
+                            "Group",
+                            "Eligibility",
+                            "Weight",
+                            "Modifiers",
+                            "Effect",
+                            "Affinity"
+                        ],
+                        [
+                            "",
+                            "Reckless Charge Tactic",
+                            "6",
+                            "Charge",
+                            "Skirmish Not Flanking Days = 10 Leader = Wroth or Aggressive leader",
+                            "10",
+                            "3 - Martial < 7, Horse archers 30% of all skirmish units 3 - Martial < 7, Heavy Cavalry 10% of all melee units 3 - Martial < 7, Heavy Infantry 10% of all melee units",
+                            "Heavy Cavalry Offensive +120% Horse Archers Offensive +120% Heavy Infantry Offensive +60% Heavy Infantry Defensive -30% Heavy Cavalry Defensive -50% Horse Archers Defensive -50% Change Phase to Melee",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Timid Advance Tactic",
+                            "18",
+                            "Advance",
+                            "Melee Heavy Infantry 1% Leader = Craven or Organizer",
+                            "3",
+                            "1.5 - Martial < 7, Heavy Infantry 50%  of all melee units",
+                            "Pikemen Offensive +120% Heavy Cavalry Offensive -210% Heavy Infantry Offensive -210%",
+                            "Stand Fast +120%"
+                        ],
+                        [
+                            "",
+                            "Confused Orders",
+                            "18",
+                            "Volley",
+                            "Skirmish Archers 1% Leader = Lisp or Stutter",
+                            "3",
+                            "1.5 - Martial < 7, Archers 50% of all skirmish units",
+                            "Archers Offensive -120% Horse Archers Offensive -120%",
+                            "Charge -120%"
+                        ],
+                        [
+                            "",
+                            "Hesitant Commander",
+                            "18",
+                            "Stand Fast",
+                            "Melee Leader = Slothful or Shy",
+                            "3",
+                            "1.5 - Martial < 7",
+                            "Heavy Cavalry Offensive -150% Heavy Infantry Offensive -150%",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Charging Through Own Skirmishers",
+                            "6",
+                            "Charge",
+                            "Skirmish Not Flanking Days = 10 Leader = Cruel",
+                            "10",
+                            "3 - Martial < 10, Heavy Cavalry 10%  of all melee units 3 - Martial < 10, (Light Cavalry 10% of all skirmish units OR Camel Cavalry 10% of all skirmish units)",
+                            "Heavy Cavalry Offensive +300% Light Cav Offensive +180% Camel Cav Offensive +180% Horse Archers Defensive -30% Archers Defensive -50% Horse Archers Offensive -120% Archers Offensive -420% Change Phase to Melee",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Flanking",
+                            "children": []
+                        },
+                        {
+                            "text": "Days = 10",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader = Wroth or Aggressive leader",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "3 - Martial < 7, Horse archers 30% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "3 - Martial < 7, Heavy Cavalry 10% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "3 - Martial < 7, Heavy Infantry 10% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Cavalry Offensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Offensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Offensive +60%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Defensive -30%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry Defensive -50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Defensive -50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Change Phase to Melee",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader = Craven or Organizer",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Martial < 7, Heavy Infantry 50%  of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Pikemen Offensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry Offensive -210%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Offensive -210%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader = Lisp or Stutter",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Martial < 7, Archers 50% of all skirmish units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Archers Offensive -120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Offensive -120%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader = Slothful or Shy",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Martial < 7",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Cavalry Offensive -150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Offensive -150%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Not Flanking",
+                            "children": []
+                        },
+                        {
+                            "text": "Days = 10",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader = Cruel",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "3 - Martial < 10, Heavy Cavalry 10%  of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "3 - Martial < 10, (Light Cavalry 10% of all skirmish units OR Camel Cavalry 10% of all skirmish units)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Cavalry Offensive +300%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cav Offensive +180%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cav Offensive +180%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Defensive -30%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Defensive -50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Offensive -120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive -420%",
+                            "children": []
+                        },
+                        {
+                            "text": "Change Phase to Melee",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Good Tactics",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Tactic",
+                            "Days",
+                            "Group",
+                            "Eligibility",
+                            "Weight",
+                            "Modifiers",
+                            "Effect",
+                            "Affinity",
+                            "Second Affinity"
+                        ],
+                        [
+                            "",
+                            "Inspired Defense Tactic",
+                            "12",
+                            "Defensive",
+                            "Skirmish Leader = Inspiring leader or Defensive leader",
+                            "3",
+                            "1.5 - Martial 14 3 - Martial 14, Defensive leader",
+                            "Heavy Cavalry Defensive +150% Heavy Infantry Defensive +150% Light Infantry Defensive +150% Light Cavalry Defensive +150% Camel Cavalry Defensive +150% Archers Defensive +150% Horse Archers Defensive +150% Pikemen Defensive +150% War Elephant Defensive +150%",
+                            "Charge +120%",
+                            "Advance +60%"
+                        ],
+                        [
+                            "",
+                            "Heroic Counter-Charge Tactic",
+                            "18",
+                            "Charge",
+                            "Melee Heavy Cavalry 1% Light Cavalry 1% Leader has at least one of the following traits: Aggressive leader Brave Cavalry leader Reminder: Camel Cavalry and Horse Archers are added to Light Cavalry for this check. War Elephants are added to Heavy Cavalry.",
+                            "3",
+                            "3 - Martial 14, Heavy Cavalry 10% of all melee units",
+                            "Heavy Cavalry Offensive +360% Light Cav Offensive +360% Camel Cav Offensive +360% Heavy Infantry Offensive +60% Pikemen Offensive +60%",
+                            "Charge +300%"
+                        ],
+                        [
+                            "",
+                            "Clever Ambush Tactic",
+                            "18",
+                            "Stand Fast",
+                            "Melee Light Cavalry 10% Light Infantry 10% Leader has at least one of the following traits: Trickster Quick Genius Shrewd The combat takes place on one of the following terrains: Forest Hills Mountain",
+                            "3",
+                            "1.5 - Martial 14, (Light Cavalry 20% of the entire flank OR Camel Cavalry 20% of the entire flank), Light Infantry 20% of the entire flank 3 - Martial 14, Trickster , (Light Cavalry 20% of the entire flank OR Camel Cavalry 20% of the entire flank), Light Infantry 20% of the entire flank",
+                            "Light Cavalry Offensive +240% Camel Cavalry Offensive +240% Light Infantry Offensive +120% Horse Archers Offensive +120% Archers Offensive +120%",
+                            "Advance +300%"
+                        ],
+                        [
+                            "",
+                            "Gripped by Religious Fervour",
+                            "18",
+                            "Advance",
+                            "Melee Leader meets at least one of the following conditions: Leader has the trait Possessed Leader has the trait Zealous AND the trait Inspiring leader",
+                            "3",
+                            "3 - Martial 14, Possessed",
+                            "Heavy Cavalry Offensive +150% Heavy Infantry Offensive +150% Light Infantry Offensive +150% Light Cavalry Offensive +150% Camel Cavalry Offensive +150% Archers Offensive +150% Horse Archers Offensive +150% Pikemen Offensive +150% War Elephants Offensive +150%",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader = Inspiring leader or Defensive leader",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Martial 14",
+                            "children": []
+                        },
+                        {
+                            "text": "3 - Martial 14, Defensive leader",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Cavalry Defensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Defensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Defensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry Defensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cavalry Defensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Defensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Defensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen Defensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "War Elephant Defensive +150%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry 1%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Leader has at least one of the following traits:",
+                            "children": [
+                                {
+                                    "text": "Aggressive leader",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Brave",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Cavalry leader",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Reminder: Camel Cavalry and Horse Archers are added to Light Cavalry for this check. War Elephants are added to Heavy Cavalry."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "3 - Martial 14, Heavy Cavalry 10% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Cavalry Offensive +360%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cav Offensive +360%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cav Offensive +360%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Offensive +60%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen Offensive +60%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry 10%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry 10%",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader has at least one of the following traits:",
+                            "children": [
+                                {
+                                    "text": "Trickster",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Quick",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Genius",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Shrewd",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "The combat takes place on one of the following terrains:",
+                            "children": [
+                                {
+                                    "text": "Forest",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Hills",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Mountain",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Martial 14, (Light Cavalry 20% of the entire flank OR Camel Cavalry 20% of the entire flank), Light Infantry 20% of the entire flank",
+                            "children": []
+                        },
+                        {
+                            "text": "3 - Martial 14, Trickster , (Light Cavalry 20% of the entire flank OR Camel Cavalry 20% of the entire flank), Light Infantry 20% of the entire flank",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Light Cavalry Offensive +240%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cavalry Offensive +240%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Offensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Offensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive +120%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader meets at least one of the following conditions:",
+                            "children": [
+                                {
+                                    "text": "Leader has the trait Possessed",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Leader has the trait Zealous AND the trait Inspiring leader",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Cavalry Offensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Offensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Offensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry Offensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cavalry Offensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Offensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen Offensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "War Elephants Offensive +150%",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Cultural Specific Tactics",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Tactic",
+                            "Days",
+                            "Group",
+                            "Eligibility",
+                            "Weight",
+                            "Modifiers",
+                            "Effect",
+                            "Affinity",
+                            "Second Affinity"
+                        ],
+                        [
+                            "",
+                            "Retreat and Ambush Tactic",
+                            "6",
+                            "Defensive",
+                            "Leader belongs to the Altaic culture group Melee Horse Archers 20% Combat does not take place on one of the following terrains: Forest Woods Mountain Jungle Marsh",
+                            "2",
+                            "2 - Martial 10, Horse Archers 30% of all skirmish units 2 - Martial 4, Horse Archers 40% of all skirmish units",
+                            "Horse Archers Offensive +200% Light Cavalry Offensive +120% Archers Offensive +100% Change Phase to Skirmish",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Berserker Charge",
+                            "18",
+                            "Charge",
+                            "Leader belongs to the North Germanic culture group Melee Heavy Infantry 1%",
+                            "3",
+                            "3 - Martial 10, Heavy Infantry 30% of all melee units",
+                            "Heavy Infantry Offensive +360% Light Infantry Offensive +120% Heavy Infantry Defensive -50% Light Infantry Defensive -30%",
+                            "Stand Fast +100%"
+                        ],
+                        [
+                            "",
+                            "Schiltron Formation",
+                            "18",
+                            "Stand Fast",
+                            "Leader belongs to the Scottish culture Melee Pikemen 1%",
+                            "3",
+                            "1.5 - Martial 8, Pikemen 60% of all melee units, Heavy Infantry 30% of all melee units 1.5 - Martial 12, Pikemen 50% of all melee units, Heavy Infantry 30% of all melee units 1.5 - Martial 16, Pikemen 40% of all melee units, Heavy Infantry 20% of all melee units",
+                            "Pikemen Defensive +360% Pikemen Offensive +240% Heavy Infantry Defensive +240% Light Infantry Defensive +120% Archers Offensive +60% Light Cavalry Defensive -40% Heavy Cavalry Defensive -40% Horse Archers Defensive -40%",
+                            "Charge +300%"
+                        ],
+                        [
+                            "",
+                            "Pike Column Advance",
+                            "18",
+                            "Advance",
+                            "Leader belongs to the Italian or Roman culture (NB: not Dalmatian) Melee Pikemen 1%",
+                            "3",
+                            "1.5 - Martial 8, Pikemen 60% of all melee units 1.5 - Martial 12, Pikemen 50% of all melee units 1.5 - Martial 16, Pikemen 40% of all melee units",
+                            "Pikemen Offensive +300% Heavy Infantry Offensive +120% Heavy Cavalry Offensive +60%",
+                            "Stand Fast +300%"
+                        ],
+                        [
+                            "",
+                            "Massive Longbow Volley Tactic",
+                            "18",
+                            "Volley",
+                            "Leader belongs to the English or Welsh culture Skirmish Archers 1%",
+                            "3",
+                            "1.5 - Martial 8, Archers 60% of all skirmish units 1.5 - Martial 12, Archers 50% of all skirmish units 1.5 - Martial 16, Archers 40% of all skirmish units",
+                            "Archers Offensive +350%",
+                            "Charge +100%",
+                            "Harass +100%"
+                        ],
+                        [
+                            "",
+                            "Couched Lance Charge",
+                            "18",
+                            "Charge",
+                            "Leader belongs to one of the following cultures : French Outremer Occitan Norman German Breton Melee Heavy Cavalry 1%",
+                            "3",
+                            "1.5 - Martial 8, Heavy Cavalry 60% of all melee units 1.5 - Martial 12, Heavy Cavalry 50% of all melee units 1.5 - Martial 16, Heavy Cavalry 40% of all melee units",
+                            "Heavy Cavalry Offensive +420% Pikemen Offensive +60% Heavy Infantry Offensive -60%",
+                            "Advance +300%"
+                        ],
+                        [
+                            "",
+                            "Mountain Ambush Tactic",
+                            "18",
+                            "Stand Fast",
+                            "Leader belongs to the Tibetan culture group Martial 9 Light infantry 10% Melee Combat takes place on one of the following terrains: Hills Mountain",
+                            "3",
+                            "1.5 - Light infantry 20% of the entire flank 2 - Martial 14, 3 - Leader has the trait Trickster",
+                            "Light Cavalry Offensive +240% Light Infantry Offensive +150% Heavy infantry Offensive +125% Horse Archers Offensive +150% Archers Offensive +120%",
+                            "Advance +300%"
+                        ],
+                        [
+                            "",
+                            "Desert Ambush",
+                            "18",
+                            "Stand Fast",
+                            "Leader belongs to the Arabic culture group Combat takes place on the following terrain: Desert Melee Light Cavalry 10% Light Infantry 10%",
+                            "3",
+                            "1.5 - Martial 10, (Light Cavalry 20% of the entire flank OR Camel Cavalry 20% of the entire flank), Light Infantry 20% of the entire flank 3 - Martial 10, Leader has the trait Trickster , (Light Cavalry 20% of the entire flank OR Camel Cavalry 20% of the entire flank), Light Infantry 20% of the entire flank",
+                            "Light Cavalry Offensive +180% Camel Cavalry Offensive +240% Light Infantry Offensive +120% Horse Archers Offensive +120% Archers Offensive +120%",
+                            "Advance +300%"
+                        ],
+                        [
+                            "",
+                            "Embolon Charge Formation",
+                            "18",
+                            "Charge",
+                            "Leader belongs to the Byzantine culture group Melee Heavy Cavalry 1%",
+                            "3",
+                            "1.5 - Martial 8, Heavy Cavalry 60% of all melee units 1.5 - Martial 12, Heavy Cavalry 50% of all melee units 1.5 - Martial 16, Heavy Cavalry 40% of all melee units",
+                            "Heavy Cavalry Offensive +240% Light Cavalry Offensive +180% Pikemen Offensive +60% Heavy Infantry Offensive -120%",
+                            "Advance +300%"
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Leader belongs to the Altaic culture group",
+                            "children": []
+                        },
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers 20%",
+                            "children": []
+                        },
+                        {
+                            "text": "Combat does not take place on one of the following terrains:",
+                            "children": [
+                                {
+                                    "text": "Forest",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Woods",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Mountain",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Jungle",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Marsh",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "2 - Martial 10, Horse Archers 30% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "2 - Martial 4, Horse Archers 40% of all skirmish units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Horse Archers Offensive +200%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry Offensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive +100%",
+                            "children": []
+                        },
+                        {
+                            "text": "Change Phase to Skirmish",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Leader belongs to the North Germanic culture group",
+                            "children": []
+                        },
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry 1%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "3 - Martial 10, Heavy Infantry 30% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Infantry Offensive +360%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Offensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Defensive -50%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Defensive -30%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Leader belongs to the Scottish culture",
+                            "children": []
+                        },
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen 1%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Martial 8, Pikemen 60% of all melee units, Heavy Infantry 30% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 12, Pikemen 50% of all melee units, Heavy Infantry 30% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 16, Pikemen 40% of all melee units, Heavy Infantry 20% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Pikemen Defensive +360%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen Offensive +240%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Defensive +240%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Defensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive +60%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry Defensive -40%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry Defensive -40%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Defensive -40%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Leader belongs to the Italian or Roman culture (NB: not Dalmatian)",
+                            "children": []
+                        },
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen 1%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Martial 8, Pikemen 60% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 12, Pikemen 50% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 16, Pikemen 40% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Pikemen Offensive +300%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Offensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry Offensive +60%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Leader belongs to the English or Welsh culture",
+                            "children": []
+                        },
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers 1%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Martial 8, Archers 60% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 12, Archers 50% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 16, Archers 40% of all skirmish units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Archers Offensive +350%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Leader belongs to one of the following cultures :",
+                            "children": [
+                                {
+                                    "text": "French",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Outremer",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Occitan",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Norman",
+                                    "children": []
+                                },
+                                {
+                                    "text": "German",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Breton",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry 1%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Martial 8, Heavy Cavalry 60% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 12, Heavy Cavalry 50% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 16, Heavy Cavalry 40% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Cavalry Offensive +420%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen Offensive +60%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Offensive -60%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Leader belongs to the Tibetan culture group",
+                            "children": []
+                        },
+                        {
+                            "text": "Martial 9",
+                            "children": []
+                        },
+                        {
+                            "text": "Light infantry 10%",
+                            "children": []
+                        },
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Combat takes place on one of the following terrains:",
+                            "children": [
+                                {
+                                    "text": "Hills",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Mountain",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Light infantry 20% of the entire flank",
+                            "children": []
+                        },
+                        {
+                            "text": "2 - Martial 14,",
+                            "children": []
+                        },
+                        {
+                            "text": "3 - Leader has the trait Trickster",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Light Cavalry Offensive +240%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Offensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy infantry Offensive +125%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Offensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive +120%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Leader belongs to the Arabic culture group",
+                            "children": []
+                        },
+                        {
+                            "text": "Combat takes place on the following terrain:",
+                            "children": [
+                                {
+                                    "text": "Desert",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry 10%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry 10%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Martial 10, (Light Cavalry 20% of the entire flank OR Camel Cavalry 20% of the entire flank), Light Infantry 20% of the entire flank",
+                            "children": []
+                        },
+                        {
+                            "text": "3 - Martial 10, Leader has the trait Trickster , (Light Cavalry 20% of the entire flank OR Camel Cavalry 20% of the entire flank), Light Infantry 20% of the entire flank",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Light Cavalry Offensive +180%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cavalry Offensive +240%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Offensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Offensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive +120%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Leader belongs to the Byzantine culture group",
+                            "children": []
+                        },
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Cavalry 1%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Martial 8, Heavy Cavalry 60% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 12, Heavy Cavalry 50% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 16, Heavy Cavalry 40% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Cavalry Offensive +240%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry Offensive +180%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen Offensive +60%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Offensive -120%",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Glorious tactics",
+            "level": 2,
+            "content": [
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Tactic",
+                            "Days",
+                            "Group",
+                            "Eligibility",
+                            "Weight",
+                            "Modifiers",
+                            "Effect",
+                            "Affinity",
+                            "Second Affinity"
+                        ],
+                        [
+                            "",
+                            "Glorious Countercharge Tactic",
+                            "18",
+                            "Charge",
+                            "Melee Leader has Call to Glory power One of the following: Light Cavalry 1% Light Infantry 1% Pikemen 1% Horse Archers 1%",
+                            "15",
+                            "3 - Martial > 14, Light cavalry 10% of all light units",
+                            "Heavy Infantry Offensive + 175% Light Infantry Offensive + 175% Light Cavalry Offensive + 175% Camel Cavalry Offensive + 175% Archers Offensive + 175% Horse Archers Offensive + 175% Pikemen Offensive + 175%",
+                            "Charge +300%",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Winter's Maw",
+                            "18",
+                            "Charge",
+                            "Melee Heavy Infantry 1% Leader has Call to Glory power Leader is a member of the Wolf Warriors",
+                            "15",
+                            "1.5 - Martial 8, Heavy Infantry 70% of all melee units 1.5 - Martial 12, Heavy Infantry 60% of all melee units 1.5 - Martial 16, Heavy Infantry 50% of all melee units",
+                            "Heavy Infantry Offensive +275% Light Infantry Defensive +150%",
+                            "Stand Fast +100%",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Wolf's Howling",
+                            "6",
+                            "Defensive",
+                            "Melee Horse Archers 5% Leader has Call to Glory power Leader is a member of the Eagle Warriors No enemy leader is considered an honorable combatant by the leader or the leader's liege NOT in forest, woods, mountain, jungle, or marsh",
+                            "15",
+                            "2 - Martial 10, Horse Archers 30% of all skirmish units 2 - Martial 4, Horse Archers 40% of all skirmish units",
+                            "Horse Archer Offensive +200% Light Cavalry Offensive +120% Change Phase to Skirmish",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Slavic Last Stand",
+                            "18",
+                            "Stand Fast",
+                            "Melee Light Infantry 1% Leader has Call to Glory power Leader is a member of the Champions of Perun",
+                            "15",
+                            "1.5 - Martial 8, Light Infantry 70% of the flank 1.5 - Martial 12, Light Infantry 60% of the flank 1.5 - Martial 16, Light Infantry 50% of the flank",
+                            "Light Infantry Offensive +125% Light Infantry Defensive +250% Light Cavalry Defensive +125%",
+                            "Charge +300%",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Baltic Last Stand",
+                            "18",
+                            "Stand Fast",
+                            "Melee Heavy Infantry 1% Leader has Call to Glory power Leader is a member of the Band of Medeina",
+                            "15",
+                            "1.5 - Martial 8, Heavy Infantry 70% of all melee units 1.5 - Martial 12, Heavy Infantry 60% of all melee units 1.5 - Martial 16, Heavy Infantry 50% of all melee units",
+                            "Heavy Infantry Offensive +125% Heavy Infantry Defensive +250% Light Infantry Defensive +125%",
+                            "Charge +300%",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Elk's Lament",
+                            "6",
+                            "Volley",
+                            "Melee Archers 5% Leader has Call to Glory power Leader is a member of the Followers of Otso No enemy leader is considered an honorable combatant by the leader or the leader's liege NOT in desert",
+                            "15",
+                            "2 - Martial 10, Archers 30% of all skirmish units 2 - Martial 4, Archers 40% of all skirmish units",
+                            "Archers Offensive +250% Light Infantry Defensive +150% Change Phase to Skirmish",
+                            "",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Bull Horns",
+                            "18",
+                            "Charge",
+                            "Melee Pikemen 1% Leader has Call to Glory power Leader is a member of the Children of the Storm",
+                            "15",
+                            "1.5 - Martial 8, Pikemen 70% of all melee units 1.5 - Martial 12, Pikemen 60% of all melee units 1.5 - Martial 16, Pikemen 50% of all melee units",
+                            "Archers Offensive +150% Light Infantry Offensive +150% Pikemen Offensive +250%",
+                            "Advance +300%",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Sunburst",
+                            "18",
+                            "Volley",
+                            "Skirmish Archers 1% Leader has Call to Glory power Leader is a member of the Keepers of the Flame",
+                            "15",
+                            "1.5 - Martial 8, Archers 60% of all skirmish units 1.5 - Martial 12, Archers 50% of all skirmish units 1.5 - Martial 16, Archers 40% of all skirmish units",
+                            "Archers Offensive +375% Archers Defensive +125%",
+                            "Charge +100%",
+                            "Harass +100%"
+                        ],
+                        [
+                            "",
+                            "Balanced Tactic",
+                            "18",
+                            "Stand Fast",
+                            "Melee Light Infantry 1% Light Cavalry 1% Leader has Call to Glory power Leader is a member of the Sentinels of Light",
+                            "15",
+                            "1.5 - Martial 8, Light Infantry 60% of the flank, Light Cavalry 60% of skirmish units 1.5 - Martial 12, Light Infantry 50% of the flank, Light Cavalry 30% of skirmish units 1.5 - Martial 16, Light Infantry 40% of the flank, Light Cavalry 20% of skirmish units",
+                            "Light Infantry Offensive +150% Light Infantry Defensive +150% Light Cavalry Offensive +150% Light Cavalry Defensive +150%",
+                            "Charge +300%",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Quincunx Tactic",
+                            "18",
+                            "Stand Fast",
+                            "Melee Pikemen 1% Leader has Call to Glory power Leader is a member of the Olympian Champions",
+                            "15",
+                            "1.5 - Martial 8, Pikemen 70% of all melee units 1.5 - Martial 12, Pikemen 60% of all melee units 1.5 - Martial 16, Pikemen 50% of all melee units",
+                            "Pikemen Offensive +175% Pikemen Defensive +275%",
+                            "Charge +300%",
+                            ""
+                        ]
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader has Call to Glory power",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "One of the following:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Light Cavalry 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers 1%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "3 - Martial > 14, Light cavalry 10% of all light units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Infantry Offensive + 175%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Offensive + 175%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry Offensive + 175%",
+                            "children": []
+                        },
+                        {
+                            "text": "Camel Cavalry Offensive + 175%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Offensive + 175%",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers Offensive + 175%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen Offensive + 175%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader has Call to Glory power",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader is a member of the Wolf Warriors",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Martial 8, Heavy Infantry 70% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 12, Heavy Infantry 60% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 16, Heavy Infantry 50% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Infantry Offensive +275%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Defensive +150%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Horse Archers 5%",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader has Call to Glory power",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader is a member of the Eagle Warriors",
+                            "children": []
+                        },
+                        {
+                            "text": "No enemy leader is considered an honorable combatant by the leader or the leader's liege",
+                            "children": []
+                        },
+                        {
+                            "text": "NOT in forest, woods, mountain, jungle, or marsh",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "2 - Martial 10, Horse Archers 30% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "2 - Martial 4, Horse Archers 40% of all skirmish units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Horse Archer Offensive +200%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry Offensive +120%",
+                            "children": []
+                        },
+                        {
+                            "text": "Change Phase to Skirmish",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader has Call to Glory power",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader is a member of the Champions of Perun",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Martial 8, Light Infantry 70% of the flank",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 12, Light Infantry 60% of the flank",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 16, Light Infantry 50% of the flank",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Light Infantry Offensive +125%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Defensive +250%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry Defensive +125%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader has Call to Glory power",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader is a member of the Band of Medeina",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Martial 8, Heavy Infantry 70% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 12, Heavy Infantry 60% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 16, Heavy Infantry 50% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Heavy Infantry Offensive +125%",
+                            "children": []
+                        },
+                        {
+                            "text": "Heavy Infantry Defensive +250%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Defensive +125%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers 5%",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader has Call to Glory power",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader is a member of the Followers of Otso",
+                            "children": []
+                        },
+                        {
+                            "text": "No enemy leader is considered an honorable combatant by the leader or the leader's liege",
+                            "children": []
+                        },
+                        {
+                            "text": "NOT in desert",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "2 - Martial 10, Archers 30% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "2 - Martial 4, Archers 40% of all skirmish units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Archers Offensive +250%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Defensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Change Phase to Skirmish",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader has Call to Glory power",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader is a member of the Children of the Storm",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Martial 8, Pikemen 70% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 12, Pikemen 60% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 16, Pikemen 50% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Archers Offensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Offensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen Offensive +250%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Skirmish",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader has Call to Glory power",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader is a member of the Keepers of the Flame",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Martial 8, Archers 60% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 12, Archers 50% of all skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 16, Archers 40% of all skirmish units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Archers Offensive +375%",
+                            "children": []
+                        },
+                        {
+                            "text": "Archers Defensive +125%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": ""
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader has Call to Glory power",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader is a member of the Sentinels of Light",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Martial 8, Light Infantry 60% of the flank, Light Cavalry 60% of skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 12, Light Infantry 50% of the flank, Light Cavalry 30% of skirmish units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 16, Light Infantry 40% of the flank, Light Cavalry 20% of skirmish units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Light Infantry Offensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Infantry Defensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry Offensive +150%",
+                            "children": []
+                        },
+                        {
+                            "text": "Light Cavalry Defensive +150%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Melee",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen 1%",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader has Call to Glory power",
+                            "children": []
+                        },
+                        {
+                            "text": "Leader is a member of the Olympian Champions",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "1.5 - Martial 8, Pikemen 70% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 12, Pikemen 60% of all melee units",
+                            "children": []
+                        },
+                        {
+                            "text": "1.5 - Martial 16, Pikemen 50% of all melee units",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Pikemen Offensive +175%",
+                            "children": []
+                        },
+                        {
+                            "text": "Pikemen Defensive +275%",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "References",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Combat mechanics thread",
+                            "children": []
+                        },
+                        {
+                            "text": "ahhheygao's Google Docs spreadsheet",
+                            "children": []
+                        },
+                        {
+                            "text": "the game file 00_combat_tactics.txt at the path /Crusader Kings II/common/combat_tactics/00_combat_tactics.txt (where the tactics are defined for the Crusader Kings II game engine)",
+                            "children": []
+                        },
+                        {
+                            "text": "the game file text1.csv at the path /Crusader Kings II//localisation/text1.csv (where some of the names of the tactics are defined for the Crusader Kings II game engine)",
+                            "children": []
+                        },
+                        {
+                            "text": "the game file v2_50b.csv at the path /Crusader Kings II/localisation/v2_50b.csv (where some of the names of the tactics are defined for the Crusader Kings II game engine)",
+                            "children": []
+                        },
+                        {
+                            "text": "the game file text3.csv at the path /Crusader Kings II/localisation/text3.csv (where some of the names of the tactics are defined for the Crusader Kings II game engine)",
+                            "children": []
+                        },
+                        {
+                            "text": "the game file v1_06.csv at the path /Crusader Kings II/localisation/v1_06.csv (where some of the names of the tactics are defined for the Crusader Kings II game engine)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Further Reading",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Combat",
+                            "children": []
+                        },
+                        {
+                            "text": "Unit modding",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

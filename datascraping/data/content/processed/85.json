@@ -1,0 +1,869 @@
+{
+    "pageid": 85,
+    "title": "Ambition",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Ambitions are personal goals that characters will set for themselves in their life."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Ambitions are assigned through the Character screen. The player can pick a new ambition after fulfilling the current one or cancelling one which the character have had for over 3 years."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Below is a list of all ambitions in Crusader Kings II. All ambitions are only available to characters who are adults (16+ years-old) if not specified, are not imprisoned , and do not have the Incapable traits . Specific ambitions have other requirements, listed below:"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "",
+                            "Ambition",
+                            "Requisites",
+                            "Goal",
+                            "Passive Modifiers",
+                            "Success Bonuses"
+                        ],
+                        [
+                            "",
+                            "Acquire Title",
+                            "The character has not been successful at any previous \"Acquire Title\" ambition. The character's government is not nomadic . The character's liege is not nomadic. Requires the Conclave DLC",
+                            "Earn any title from liege",
+                            "With this ambition, you may spend 60 prestige to \"Ask Liege for Title\" if other conditions are met: You must be an adult, not a prisoner, and not incapable. Liege must not have a regent, have at least 3 demesne size, and have a county which can be given away. Your liege will never accept if they are Greedy , and unlikely to accept if they have at least 9 diplomacy. Liege is more likely to accept if they are charitable , have a high opinion of you, or are your friend . If it is not granted, the player can try again after 2 years, or immediately abort this ambition (losing an additional 100 prestige).",
+                            "+200 prestige"
+                        ],
+                        [
+                            "",
+                            "Amass Wealth",
+                            "The character possesses lower than 200 gold . The character is not Charitable . Only without the Conclave DLC",
+                            "Acquire 500 gold if a Count, 700 if a King or 1000 if an Emperor",
+                            "",
+                            "+1 stewardship"
+                        ],
+                        [
+                            "",
+                            "Become a Councillor",
+                            "The character is not a councillor , but is eligible for such position. The character's liege is independent. The character's liege is not their spouse. The character is not inaccessible ( In hiding , in seclusion or out traveling, etc.). Requires the Conclave DLC",
+                            "Become a councillor",
+                            "This ambition enables the diplomatic interaction \"Request Council Position\" with liege",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Become [Councilor] (5 flavours)",
+                            "The character is a vassal and is eligible for given council position. Only without the Conclave DLC",
+                            "Become a councilor",
+                            "",
+                            "+1 attribute point in the field of councilor (only once per character )"
+                        ],
+                        [
+                            "",
+                            "Become Exalted among Men",
+                            "The character possess lower than 1000 prestige . The character is not Humble , Content , nor Shy The character possesses a king tier or above title, or is Ambitious , Envious or Proud .",
+                            "Accumulate 5000 prestige",
+                            "",
+                            "+1 diplomacy +100 prestige +5 opinion from direct vassals for 100 years"
+                        ],
+                        [
+                            "",
+                            "Become Heir",
+                            "The character 's liege is a parent. The character is not the primary heir . The current primary heir is the liege's child and has any of the following health traits : Incapable , Infirm , Lunatic or Possessed Only for AI if Conclave is enabled",
+                            "Become heir",
+                            "",
+                            "+1 intrigue"
+                        ],
+                        [
+                            "",
+                            "Become King of [Kingdom]",
+                            "The character possesses a count or duke -tier title. The character is not an heir to a kingdom . The character is independent or their liege is independent",
+                            "Character is king (of de jure kingdom containing its capital)",
+                            "This ambition cannot be cancelled; The character cannot move capital to another de jure kingdom ; The character cannot give away capital county; This ambition allows a chancellor to fabricate claim on any kingdom (if chancellor 's stationed in a king 's demesne county which is within the de jure kingdom ); Pagans and Hindus may use Subjugation casus belli without restriction inside their kingdom Halves the gold and piety cost for creating the kingdom .",
+                            "+500 prestige"
+                        ],
+                        [
+                            "",
+                            "Become Paragon of Enlightenment",
+                            "The character follow any Eastern religion faith and possesses lower than 1000 piety . The character has any of following traits : any learning education traits, Theologian , Celibate , Chaste , Humble , Content , Zealous , Shieldmaiden , Ashari or is on/has finished pilgrimage/Hajjaj The character has none of following traits : Cynical , any bad priest traits, Hedonist , Lustful , Cannibal or Impaler \\",
+                            "Accumulate 2000 piety",
+                            "",
+                            "+1 learning +100 piety Earns the nickname : \"The Wise\" +1% moral authority +15 Clergy opinion"
+                        ],
+                        [
+                            "",
+                            "Become Paragon of Virtue",
+                            "The character does not follow any Eastern religion faith and posssess lower than 1000 piety . The character has any of following traits : any learning education traits, Theologian , Celibate , Chaste , Humble , Content , Zealous , Shieldmaiden , Ashari or is on/has finished pilgrimage/Hajjaj The character has none of following traits : Cynical , any bad priest traits, Hedonist , Lustful , Cannibal or Impaler",
+                            "Accumulate 2000 piety",
+                            "",
+                            "+1 learning +100 piety Earns the nickname : \"The Holy\" +1% moral authority for 20 years +25 opinion from direct vassal clergy +25 opinion from religious head"
+                        ],
+                        [
+                            "",
+                            "Build a Great Work",
+                            "Independent No great work in realm Has not started building a great work 1000 wealth 500 prestige",
+                            "A great work in your realm, on which you initiated construction, reaches stage 2",
+                            "",
+                            "A random great work in your demesne gets one of the following features: Spikes, Tower, or Watchtower Network. The free feature does not count against the two-per-stage limit. If you did not build in your demesne, there is no bonus."
+                        ],
+                        [
+                            "",
+                            "Build a War Chest",
+                            "Conclave DLC is enabled; Is an adult; Is not nomadic ; Is not at war; Possesses a count -level or higher title; Has less than the target amount of wealth (see right); Is neither incapable nor inaccessible (eg. in hiding , in seclusion , out traveling); Has not completed the \"War Chest\" ambition in the last 25 years (tracked via the war_chest_timer modifier)",
+                            "Accumulate 300 wealth for count -level ruler; Accumulate 500 wealth for duke -level ruler; Accumulate 700 wealth for king -level ruler; Accumulate 1,000 wealth for emperor -level ruler",
+                            "Vassals can offer 200 wealth in exchange for a favor ; Enables the \"Extort Subjects\" decision : Extorting peasants reduces province income for 5 years; Extorting a courtier gives approximately half their wealth ; Extorting the church angers religious head; Any extortion decision inccurs a -10 \"Tyranny\" opinion penalty;",
+                            "+10% national tax bonus for 5 years"
+                        ],
+                        [
+                            "",
+                            "Create a Treasury",
+                            "The character doesn't have any artifact of quality 2 or higher. The character hasn't fulfilled this ambition before. The character possesses a count tier or above title. The character is not inaccessible ( In hiding , in seclusion or out traveling, etc.). Requires the Holy Fury DLC",
+                            "Have at least 3 artifacts of quality 2 or higher",
+                            "More likely to hear rumors to find artifacts (req Mystics DLC)",
+                            "+1 stewardship Gain Impressive Treasury ( +0.5 monthly prestige, +5 vassal opinion) modifier for 5 years"
+                        ],
+                        [
+                            "",
+                            "Forge Bloodline",
+                            "Normally requires 5000 prestige. However, some children (those who are Willful , Proud , Ambitious , Quick or Genius ) can start with only 2500 prestige. The prestige requirement increases from 5000/2500 to 20000/15000 if any dynasty member has ever succeeded at this ambition, even if their bloodline has died out. The character doesn't own any created bloodline . The character is at least duke tier and landed. The character is at least 6 years old. The character is not Content . Requires the Holy Fury DLC",
+                            "Gain ANY created bloodline",
+                            "This ambition cannot be cancelled Allows creation of Forged Bloodlines Alexander/Ashoka bloodline events are more likely",
+                            "+1000 prestige"
+                        ],
+                        [
+                            "",
+                            "Gain a [landed] Title",
+                            "The liege is a close relative with multiple titles . The character is neither a ruler nor heir to any of their liege's titles. Heirs under feudal elective and seniority will still be able to take this ambition.",
+                            "Gain a title",
+                            "",
+                            "+50 prestige"
+                        ],
+                        [
+                            "",
+                            "Gain Land for an Unlanded Son/Daughter",
+                            "The character is not independent. The beneficiary is the player's unlanded adult son/daughter and is at their liege's court. The beneficiary is not an heir . The beneficiary is not Ascetic (e.g. Monk ), Incapable nor Eunuch . The character and liege follow a matriarchal, equal or harmonious religion if the beneficiary is daughter. Requires the Conclave DLC",
+                            "The player's son receives land",
+                            "This ambition enables an interaction with liege to request a county for the player's son/daughter",
+                            ""
+                        ],
+                        [
+                            "",
+                            "Get Married",
+                            "The character is unmarried , or is not engaged in a betrothal . The character is not an ascetic (e.g. Nun ), Celibate or Eunuch . If the character is female, she is under 40 years-old. The character does not rule a theocracy or normal republic Only for AI if Conclave is enabled",
+                            "Get Married",
+                            "",
+                            "+10 piety +10 Opinion boost (courtier toward liege or ruler toward whoever accepted the marriage request)"
+                        ],
+                        [
+                            "",
+                            "Groom an Heir",
+                            "The character is an adult, but they are not over 75 years-old. If the character is female, she is under 45 years-old. The character is not an Eunuch who does not have a living child . The character is not inaccessible ( In hiding , in seclusion or out traveling, etc.). Requires the Conclave DLC",
+                            "Have an adult son or daughter (allowed by gender succession law) who is not: Bastard ; Celibate ; Eunuch ; Incapable ; Ascetic (e.g. Monk or Nun )",
+                            "+20% fertility Enables the \"Introduce heir to realm\" diplomatic interaction when the character's child is between 12 and 15 years-old. The ruler must have at least 7 vassals and be at peace",
+                            "+15 opinion from adult descendant"
+                        ],
+                        [
+                            "",
+                            "Have a Son/Daughter",
+                            "The character is neither over 75 nor a woman over 45. The character is married , but is not Celibate . The character has no child of desired gender. Only without the Conclave DLC",
+                            "Have Son/Daughter",
+                            "+25% fertility",
+                            "+10 piety"
+                        ],
+                        [
+                            "",
+                            "Improve [Attribute] (5 flavours)",
+                            "The character's attribute is below 8. If the Way of Life DLC is enabled, this ambition is replaced by focuses",
+                            "Reach 8 on an attribute",
+                            "Event chains to improve ability",
+                            "+100 prestige Ends special event chain"
+                        ],
+                        [
+                            "",
+                            "Lower Decadence",
+                            "The character is Muslim and accumulated 60+ decadence Requires the Sword of Islam DLC",
+                            "Decadence is under 60",
+                            "Event chains to lower decadence",
+                            "+100 prestige Ends special event chain"
+                        ],
+                        [
+                            "",
+                            "Make a Friend",
+                            "The character doesn't have any friend . The character is not Shy . The character hasn't fulfilled this ambition before. The character possesses a count tier or above title. The character is not inaccessible ( In hiding , in seclusion or out traveling, etc.). Requires the Holy Fury DLC",
+                            "Have at least one friend",
+                            "",
+                            "+1 diplomacy Gain Popular ( +2 diplomacy , +5 general opinion) modifier for 5 years"
+                        ],
+                        [
+                            "",
+                            "Marry Ruler",
+                            "The character is a female under 45 years-old or male under 45 years-old with a matriarchal religion . The character is not married and can marry The character is not Celibate The character's father is a duke or higher-level ruler. Only for AI if Conclave is enabled.",
+                            "Marry Ruler",
+                            "",
+                            "+20 prestige"
+                        ],
+                        [
+                            "",
+                            "Reject [Negative Trait] (9 flavours for 11 traits)",
+                            "The character follows the Buddhist religion. The character is Craven , Cruel , Drunkard , Envious , Gluttonous , Greedy , Impaler , Lustful , Paranoid , Proud or Wroth The character is not Imbecile , Inbred , Lunatic or Slow",
+                            "The chosen negative trait is lost",
+                            "Chance to lose negative trait Higher chance to lose negative trait , if character possesses 6 or more personality traits Chance for the character's court guru to offer help: 75% chance of success, if the character is Ambitious or Zealous , or if court guru is a Genius 25% chance of success, otherwise",
+                            "+100 piety"
+                        ],
+                        [
+                            "",
+                            "See the Realm Prosper",
+                            "The character is independent and their government is not nomadic . The character has at least one province in their realm which: Is not depopulated; Has a city , castle , or tribe holding. The character is not inaccessible ( In hiding , in seclusion or out traveling, etc.). Requires the The Reaper's Due DLC",
+                            "Remain at peace for 5 years",
+                            "-1% revolt risk; The character has a better chance to get opportunities to invest in demesne ; Any war (other than a province revolt ) will cancel this ambition and prevent choosing it again for 5 years; Promoting a raid does not affect this ambition",
+                            "+1 stewardship All eligible provinces in the character 's realm receive 35 points of prosperity . If this ambition is successful, the character cannot take it again for 25 years"
+                        ],
+                        [
+                            "",
+                            "Strengthen Religion",
+                            "The character 's religion has moral authority lower than 30%. The character is independent and their government is not nomadic . The character was not successful at this ambition previously. The character has no secret religion . The character is not a demon worshipper. The character is not inaccessible ( In hiding , in seclusion or out traveling, etc.). Requires the Jade Dragon DLC",
+                            "Accumulate 3 \"strengthen_religion\" points while this ambition is active. A \"strengthen_religion\" point can be acquired by completing any of the following tasks: Win a religious war (Holy War, Minor Holy War, Muslim Invasion, Religious Liberation, Papal war or Matriarchal/Patriarchal Deposition War); Successfully defend against an opposing holy war. Note that a white peace is insufficient; Build a temple holding; Convert a province to the character 's religion",
+                            "The character may receive an opportunity to use the Religious Liberation CB. In order to this option be possible, it must be the first time the character uses this ambition, they must not be Cynical , and there must be a valid target. It is more likely to get this opportunity if the character is Zealous or by choosing the theology focus ; This ambition is cancelled if religious moral authority reaches 50%",
+                            "+100 piety +2% moral authority for 50 years (Strengthened Religion) +10 same faith opinion for 30 years (Religious Champion)"
+                        ]
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character's government is not nomadic . The character's liege is not nomadic. Requires the Conclave DLC"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "You must be an adult, not a prisoner, and not incapable.",
+                            "children": []
+                        },
+                        {
+                            "text": "Liege must not have a regent, have at least 3 demesne size, and have a county which can be given away.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Your liege will never accept if they are Greedy , and unlikely to accept if they have at least 9 diplomacy. Liege is more likely to accept if they are charitable , have a high opinion of you, or are your friend . If it is not granted, the player can try again after 2 years, or immediately abort this ambition (losing an additional 100 prestige)."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character is not Charitable . Only without the Conclave DLC"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character's liege is independent. The character's liege is not their spouse. The character is not inaccessible ( In hiding , in seclusion or out traveling, etc.). Requires the Conclave DLC"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(5 flavours)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Only without the Conclave DLC"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character is not Humble , Content , nor Shy The character possesses a king tier or above title, or is Ambitious , Envious or Proud ."
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+1 diplomacy",
+                            "children": []
+                        },
+                        {
+                            "text": "+100 prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "+5 opinion from direct vassals for 100 years",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character is not the primary heir . The current primary heir is the liege's child and has any of the following health traits : Incapable , Infirm , Lunatic or Possessed Only for AI if Conclave is enabled"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character possesses a count or duke -tier title. The character is not an heir to a kingdom . The character is independent or their liege is independent"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "This ambition cannot be cancelled;",
+                            "children": []
+                        },
+                        {
+                            "text": "The character cannot move capital to another de jure kingdom ;",
+                            "children": []
+                        },
+                        {
+                            "text": "The character cannot give away capital county;",
+                            "children": []
+                        },
+                        {
+                            "text": "This ambition allows a chancellor to fabricate claim on any kingdom (if chancellor 's stationed in a king 's demesne county which is within the de jure kingdom );",
+                            "children": []
+                        },
+                        {
+                            "text": "Pagans and Hindus may use Subjugation casus belli without restriction inside their kingdom",
+                            "children": []
+                        },
+                        {
+                            "text": "Halves the gold and piety cost for creating the kingdom .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character has any of following traits : any learning education traits, Theologian , Celibate , Chaste , Humble , Content , Zealous , Shieldmaiden , Ashari or is on/has finished pilgrimage/Hajjaj The character has none of following traits : Cynical , any bad priest traits, Hedonist , Lustful , Cannibal or Impaler \\"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+1 learning",
+                            "children": []
+                        },
+                        {
+                            "text": "+100 piety",
+                            "children": []
+                        },
+                        {
+                            "text": "Earns the nickname : \"The Wise\"",
+                            "children": []
+                        },
+                        {
+                            "text": "+1% moral authority",
+                            "children": []
+                        },
+                        {
+                            "text": "+15 Clergy opinion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character has any of following traits : any learning education traits, Theologian , Celibate , Chaste , Humble , Content , Zealous , Shieldmaiden , Ashari or is on/has finished pilgrimage/Hajjaj The character has none of following traits : Cynical , any bad priest traits, Hedonist , Lustful , Cannibal or Impaler"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+1 learning",
+                            "children": []
+                        },
+                        {
+                            "text": "+100 piety",
+                            "children": []
+                        },
+                        {
+                            "text": "Earns the nickname : \"The Holy\"",
+                            "children": []
+                        },
+                        {
+                            "text": "+1% moral authority for 20 years",
+                            "children": []
+                        },
+                        {
+                            "text": "+25 opinion from direct vassal clergy",
+                            "children": []
+                        },
+                        {
+                            "text": "+25 opinion from religious head",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Independent",
+                            "children": []
+                        },
+                        {
+                            "text": "No great work in realm",
+                            "children": []
+                        },
+                        {
+                            "text": "Has not started building a great work",
+                            "children": []
+                        },
+                        {
+                            "text": "1000 wealth",
+                            "children": []
+                        },
+                        {
+                            "text": "500 prestige",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "A random great work in your demesne gets one of the following features: Spikes, Tower, or Watchtower Network.",
+                            "children": []
+                        },
+                        {
+                            "text": "The free feature does not count against the two-per-stage limit.",
+                            "children": []
+                        },
+                        {
+                            "text": "If you did not build in your demesne, there is no bonus.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Conclave DLC is enabled;",
+                            "children": []
+                        },
+                        {
+                            "text": "Is an adult;",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not nomadic ;",
+                            "children": []
+                        },
+                        {
+                            "text": "Is not at war;",
+                            "children": []
+                        },
+                        {
+                            "text": "Possesses a count -level or higher title;",
+                            "children": []
+                        },
+                        {
+                            "text": "Has less than the target amount of wealth (see right);",
+                            "children": []
+                        },
+                        {
+                            "text": "Is neither incapable nor inaccessible (eg. in hiding , in seclusion , out traveling);",
+                            "children": []
+                        },
+                        {
+                            "text": "Has not completed the \"War Chest\" ambition in the last 25 years (tracked via the war_chest_timer modifier)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Accumulate 300 wealth for count -level ruler;",
+                            "children": []
+                        },
+                        {
+                            "text": "Accumulate 500 wealth for duke -level ruler;",
+                            "children": []
+                        },
+                        {
+                            "text": "Accumulate 700 wealth for king -level ruler;",
+                            "children": []
+                        },
+                        {
+                            "text": "Accumulate 1,000 wealth for emperor -level ruler",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Vassals can offer 200 wealth in exchange for a favor ;",
+                            "children": []
+                        },
+                        {
+                            "text": "Enables the \"Extort Subjects\" decision :",
+                            "children": [
+                                {
+                                    "text": "Extorting peasants reduces province income for 5 years;",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Extorting a courtier gives approximately half their wealth ;",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Extorting the church angers religious head;",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Any extortion decision inccurs a -10 \"Tyranny\" opinion penalty;",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character hasn't fulfilled this ambition before. The character possesses a count tier or above title. The character is not inaccessible ( In hiding , in seclusion or out traveling, etc.). Requires the Holy Fury DLC"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "More likely to hear rumors to find artifacts (req Mystics DLC)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Gain Impressive Treasury ( +0.5 monthly prestige, +5 vassal opinion) modifier for 5 years"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Normally requires 5000 prestige. However, some children (those who are Willful , Proud , Ambitious , Quick or Genius ) can start with only 2500 prestige. The prestige requirement increases from 5000/2500 to 20000/15000 if any dynasty member has ever succeeded at this ambition, even if their bloodline has died out. The character doesn't own any created bloodline . The character is at least duke tier and landed. The character is at least 6 years old. The character is not Content . Requires the Holy Fury DLC"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "This ambition cannot be cancelled",
+                            "children": []
+                        },
+                        {
+                            "text": "Allows creation of Forged Bloodlines",
+                            "children": []
+                        },
+                        {
+                            "text": "Alexander/Ashoka bloodline events are more likely",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character is neither a ruler nor heir to any of their liege's titles. Heirs under feudal elective and seniority will still be able to take this ambition."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The beneficiary is the player's unlanded adult son/daughter and is at their liege's court. The beneficiary is not an heir . The beneficiary is not Ascetic (e.g. Monk ), Incapable nor Eunuch . The character and liege follow a matriarchal, equal or harmonious religion if the beneficiary is daughter. Requires the Conclave DLC"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character is not an ascetic (e.g. Nun ), Celibate or Eunuch . If the character is female, she is under 40 years-old. The character does not rule a theocracy or normal republic Only for AI if Conclave is enabled"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+10 piety",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 Opinion boost (courtier toward liege or ruler toward whoever accepted the marriage request)",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character is an adult, but they are not over 75 years-old. If the character is female, she is under 45 years-old. The character is not an Eunuch who does not have a living child . The character is not inaccessible ( In hiding , in seclusion or out traveling, etc.). Requires the Conclave DLC"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Have an adult son or daughter (allowed by gender succession law) who is not:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Bastard ;",
+                            "children": []
+                        },
+                        {
+                            "text": "Celibate ;",
+                            "children": []
+                        },
+                        {
+                            "text": "Eunuch ;",
+                            "children": []
+                        },
+                        {
+                            "text": "Incapable ;",
+                            "children": []
+                        },
+                        {
+                            "text": "Ascetic (e.g. Monk or Nun )",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Enables the \"Introduce heir to realm\" diplomatic interaction when the character's child is between 12 and 15 years-old. The ruler must have at least 7 vassals and be at peace"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character is married , but is not Celibate . The character has no child of desired gender. Only without the Conclave DLC"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(5 flavours)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character's attribute is below 8. If the Way of Life DLC is enabled, this ambition is replaced by focuses"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+100 prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "Ends special event chain",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Requires the Sword of Islam DLC"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+100 prestige",
+                            "children": []
+                        },
+                        {
+                            "text": "Ends special event chain",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character is not Shy . The character hasn't fulfilled this ambition before. The character possesses a count tier or above title. The character is not inaccessible ( In hiding , in seclusion or out traveling, etc.). Requires the Holy Fury DLC"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Gain Popular ( +2 diplomacy , +5 general opinion) modifier for 5 years"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character is not married and can marry The character is not Celibate The character's father is a duke or higher-level ruler. Only for AI if Conclave is enabled."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "(9 flavours for 11 traits)"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character is Craven , Cruel , Drunkard , Envious , Gluttonous , Greedy , Impaler , Lustful , Paranoid , Proud or Wroth The character is not Imbecile , Inbred , Lunatic or Slow"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Chance to lose negative trait",
+                            "children": []
+                        },
+                        {
+                            "text": "Higher chance to lose negative trait , if character possesses 6 or more personality traits",
+                            "children": []
+                        },
+                        {
+                            "text": "Chance for the character's court guru to offer help:",
+                            "children": [
+                                {
+                                    "text": "75% chance of success, if the character is Ambitious or Zealous , or if court guru is a Genius",
+                                    "children": []
+                                },
+                                {
+                                    "text": "25% chance of success, otherwise",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character is independent and their government is not nomadic . The character has at least one province in their realm which:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Is not depopulated;",
+                            "children": []
+                        },
+                        {
+                            "text": "Has a city , castle , or tribe holding.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character is not inaccessible ( In hiding , in seclusion or out traveling, etc.). Requires the The Reaper's Due DLC"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "-1% revolt risk;",
+                            "children": []
+                        },
+                        {
+                            "text": "The character has a better chance to get opportunities to invest in demesne ;",
+                            "children": []
+                        },
+                        {
+                            "text": "Any war (other than a province revolt ) will cancel this ambition and prevent choosing it again for 5 years;",
+                            "children": []
+                        },
+                        {
+                            "text": "Promoting a raid does not affect this ambition",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+1 stewardship",
+                            "children": []
+                        },
+                        {
+                            "text": "All eligible provinces in the character 's realm receive 35 points of prosperity .",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If this ambition is successful, the character cannot take it again for 25 years"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The character 's religion has moral authority lower than 30%. The character is independent and their government is not nomadic . The character was not successful at this ambition previously. The character has no secret religion . The character is not a demon worshipper. The character is not inaccessible ( In hiding , in seclusion or out traveling, etc.). Requires the Jade Dragon DLC"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Accumulate 3 \"strengthen_religion\" points while this ambition is active. A \"strengthen_religion\" point can be acquired by completing any of the following tasks:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Win a religious war (Holy War, Minor Holy War, Muslim Invasion, Religious Liberation, Papal war or Matriarchal/Patriarchal Deposition War);",
+                            "children": []
+                        },
+                        {
+                            "text": "Successfully defend against an opposing holy war. Note that a white peace is insufficient;",
+                            "children": []
+                        },
+                        {
+                            "text": "Build a temple holding;",
+                            "children": []
+                        },
+                        {
+                            "text": "Convert a province to the character 's religion",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "The character may receive an opportunity to use the Religious Liberation CB. In order to this option be possible, it must be the first time the character uses this ambition, they must not be Cynical , and there must be a valid target. It is more likely to get this opportunity if the character is Zealous or by choosing the theology focus ;",
+                            "children": []
+                        },
+                        {
+                            "text": "This ambition is cancelled if religious moral authority reaches 50%",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "+100 piety",
+                            "children": []
+                        },
+                        {
+                            "text": "+2% moral authority for 50 years (Strengthened Religion)",
+                            "children": []
+                        },
+                        {
+                            "text": "+10 same faith opinion for 30 years (Religious Champion)",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "See also",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Objective modding",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

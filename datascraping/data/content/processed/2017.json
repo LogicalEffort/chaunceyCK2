@@ -1,0 +1,129 @@
+{
+    "pageid": 2017,
+    "title": "Ironman",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Ironman is an optional gameplay flag that restricts control over the save file , disallowing the player from correcting mistakes and changing decisions made during the course of play. Playing in Ironman is required to unlock Steam achievements ."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Ironman mode can be enabled from the settings screen when starting a new game:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Ironman is enabled.",
+                            "children": []
+                        },
+                        {
+                            "text": "Ironman is enabled, but achievements are not, due to use of Ruler Designer or mods that alter gameplay.",
+                            "children": []
+                        },
+                        {
+                            "text": "Ironman is disabled (default).",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Restrictions",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Ironman has a number of restrictions:"
+                },
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Restrictions to prevent save-scumming",
+                            "children": [
+                                {
+                                    "text": "Only a single save will be stored; it is thus impossible to load an earlier save if something goes wrong.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The game saves automatically every six months (on January 4th and July 4th), ten days after a savefile is loaded, and when exiting the game.",
+                                    "children": [
+                                        {
+                                            "text": "If a savefile is loaded to a date fewer than ten days before January or July 4th, saving on January or July 4th will be skipped.",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "Save files are stored in the player's Steam account's 'Steam Cloud', online. A backup is available. Or the Steam Cloud save can be disabled by the player for local saves only.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Restrictions to prevent cheating",
+                            "children": [
+                                {
+                                    "text": "Cannot switch to another character using the lobby.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The console is disabled (even harmless commands like `hello` and `recalc_succ`).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "The save-file is compressed and tamper-proofed by using a checksum of the save data.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Issues",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Ironman increases the risk of potential save file corruption by seriously limiting the amount of saves a player may create. The player may not create a secondary save file and autosaves will always overwrite the same file which means that the corruption of an Ironman game could easily mean a premature end of game."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If at any point while playing an Ironman game the player loses Internet access, therefore causing the game to save locally, Steam achievements will be disabled.  However, the game may have achievements restored if the game manages to successfully cloud save before the game gets closed. Or the Steam Cloud save can be disabled by the player."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "When attempting to load a previously saved Cloud Save, you must start the game from within the Steam Library:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Note: You cannot use a CK2 shortcut on the desktop."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "If you want to check if Steam is considered Disabled by CK2, begin the steps to start a new game and attempt to enable Achievements. If it won't let you, hover over the Achievements disabled button to see the missing conditions."
+                }
+            ]
+        },
+        {
+            "heading": "Bronzeman",
+            "level": 2,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Bronzeman , used for Featured Ruler and Monarch's Journey challenges, prevents most cheating like Ironman but allows creating multiple save files. \nThe current save is frequently overwritten, so players must plan ahead (by saving an extra time) if they want to reload an earlier save."
+                }
+            ]
+        }
+    ]
+}

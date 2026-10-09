@@ -1,0 +1,821 @@
+{
+    "pageid": 6338,
+    "title": "HF sway events",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "/Crusader Kings II/events/HF_sway_events.txt"
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        [
+                            "ID",
+                            "Event",
+                            ""
+                        ],
+                        [
+                            "HF.21997",
+                            "On_five_years pulse handling the AI picking a Antagonizing target.",
+                            ""
+                        ],
+                        [
+                            "HF.21998",
+                            "On_five_years pulse handling the AI picking a Swaying target.",
+                            ""
+                        ],
+                        [
+                            "HF.21999",
+                            "(triggered by choosing sway target)",
+                            ""
+                        ],
+                        [
+                            "HF.21000",
+                            "Giant yearly event firing all the events related to appeasement.",
+                            ""
+                        ],
+                        [
+                            "HF.21001",
+                            "on_death of sway/antagonize_target, clear persistent event target.",
+                            ""
+                        ],
+                        [
+                            "HF.21002",
+                            "Appeaser: you or your target has gone into Seclusion, Swaying is canceled",
+                            ""
+                        ],
+                        [
+                            "HF.21003",
+                            "Appeaser notified.",
+                            ""
+                        ],
+                        [
+                            "HF.21004",
+                            "Appeased: is imprisoned and can no longer be interacted with.",
+                            ""
+                        ],
+                        [
+                            "HF.21005",
+                            "Appeaser notified, offered chance to clear target.",
+                            ""
+                        ],
+                        [
+                            "HF.21006",
+                            "Appeased: the Appeaser set you free.",
+                            ""
+                        ],
+                        [
+                            "HF.21007",
+                            "Appeased: became incapable, hidden event to ping to appeaser and clear event target.",
+                            ""
+                        ],
+                        [
+                            "HF.21008",
+                            "Appeaser notified.",
+                            ""
+                        ],
+                        [
+                            "HF.21009",
+                            "Appeased: already likes you, maybe you should stop.",
+                            ""
+                        ],
+                        [
+                            "HF.21010",
+                            "Appeaser notified. Shouldn't you stop?",
+                            ""
+                        ],
+                        [
+                            "HF.21011",
+                            "Send letter to ingratiate target. Appeased: hidden ping.",
+                            "Tier I Events - Generic events that only required the two characters to be living and withing writing distance."
+                        ],
+                        [
+                            "HF.21012",
+                            "Appeaser: write a letter to increase opinion?",
+                            ""
+                        ],
+                        [
+                            "HF.21013",
+                            "Appeased: received a letter. Do you like it?",
+                            ""
+                        ],
+                        [
+                            "HF.21014",
+                            "Appeaser: the Appeased like the letter.",
+                            ""
+                        ],
+                        [
+                            "HF.21015",
+                            "Appeaser: the Appeased did not like the letter.",
+                            ""
+                        ],
+                        [
+                            "HF.21016",
+                            "Generic diplomacy roll to sway character. Appeased: hidden ping.",
+                            ""
+                        ],
+                        [
+                            "HF.21017",
+                            "Appeaser: hidden ping.",
+                            ""
+                        ],
+                        [
+                            "HF.21018",
+                            "Appeased: inform of Appeaser's attempt to socialize.",
+                            ""
+                        ],
+                        [
+                            "HF.21019",
+                            "Appeaser: notified of roll's result.",
+                            ""
+                        ],
+                        [
+                            "HF.21020",
+                            "Send gift to ingratiate target. Appeased: hidden ping.",
+                            ""
+                        ],
+                        [
+                            "HF.21021",
+                            "Appeaser: send a gift to increase opinion?",
+                            ""
+                        ],
+                        [
+                            "HF.21022",
+                            "Appeased: Received a gift.",
+                            ""
+                        ],
+                        [
+                            "HF.21023",
+                            "Appeaser: notified that Appeased liked his gift.",
+                            ""
+                        ],
+                        [
+                            "HF.21024",
+                            "Appeaser: notified that Appeased did not like his gift.",
+                            ""
+                        ],
+                        [
+                            "HF.21025",
+                            "Send tribal gift to ingratiate target.",
+                            ""
+                        ],
+                        [
+                            "HF.21026",
+                            "Appeaser: send a tribal gift to increase opinion?",
+                            ""
+                        ],
+                        [
+                            "HF.21027",
+                            "Appeased: Received a gift.",
+                            ""
+                        ],
+                        [
+                            "HF.21028",
+                            "Appeaser: notified that Appeased liked his gift.",
+                            ""
+                        ],
+                        [
+                            "HF.21029",
+                            "Appeaser: notified that Appeased did not like his gift.",
+                            ""
+                        ],
+                        [
+                            "HF.21030",
+                            "Martial education event. Appeased: hidden ping.",
+                            ""
+                        ],
+                        [
+                            "HF.21031",
+                            "Appeaser: use your martial education to improve opinion?",
+                            ""
+                        ],
+                        [
+                            "HF.21032",
+                            "Appeased: Military talk.",
+                            ""
+                        ],
+                        [
+                            "HF.21033",
+                            "Appeaser: Character was impressed by your martial.",
+                            ""
+                        ],
+                        [
+                            "HF.21034",
+                            "Appeaser: Character was not impressed by your martial.",
+                            ""
+                        ],
+                        [
+                            "HF.21035",
+                            "Diplomacy education event. Appeased: hidden ping.",
+                            ""
+                        ],
+                        [
+                            "HF.21036",
+                            "Appeaser: use your diplomatic education to improve opinion?",
+                            ""
+                        ],
+                        [
+                            "HF.21037",
+                            "Appeased: Diplomatic talk.",
+                            ""
+                        ],
+                        [
+                            "HF.21038",
+                            "Appeaser: Character was impressed by your diplomacy.",
+                            ""
+                        ],
+                        [
+                            "HF.21039",
+                            "Appeaser: Character was not impressed by your diplomacy.",
+                            ""
+                        ],
+                        [
+                            "HF.21040",
+                            "Stewardship education event. Appeased: hidden ping.",
+                            ""
+                        ],
+                        [
+                            "HF.21041",
+                            "Appeaser: use your stewardship education to improve opinion?",
+                            ""
+                        ],
+                        [
+                            "HF.21042",
+                            "Appeased: Stewardship talk.",
+                            ""
+                        ],
+                        [
+                            "HF.21043",
+                            "Appeaser: Character was impressed by your stewardship.",
+                            ""
+                        ],
+                        [
+                            "HF.21044",
+                            "Appeaser: Character was not impressed by your stewardship.",
+                            ""
+                        ],
+                        [
+                            "HF.21045",
+                            "Learning education event. Appeased: hidden ping.",
+                            ""
+                        ],
+                        [
+                            "HF.21046",
+                            "Appeaser: use your learning education to improve opinion?",
+                            ""
+                        ],
+                        [
+                            "HF.21047",
+                            "Appeased: Learning talk.",
+                            ""
+                        ],
+                        [
+                            "HF.21048",
+                            "Appeaser: Character was impressed by your learning.",
+                            ""
+                        ],
+                        [
+                            "HF.21049",
+                            "Appeaser: Character was not impressed by your learning.",
+                            ""
+                        ],
+                        [
+                            "HF.21050",
+                            "Lustful event. Appeased: hidden ping.",
+                            "Tier II Events - Events tied to the Appeaser's personality traits."
+                        ],
+                        [
+                            "HF.21051",
+                            "Appeaser: lust-based options.",
+                            ""
+                        ],
+                        [
+                            "HF.21052",
+                            "Appeased: Lustful appeasement.",
+                            ""
+                        ],
+                        [
+                            "HF.21053",
+                            "Appeaser: Character was impressed by your present.",
+                            ""
+                        ],
+                        [
+                            "HF.21054",
+                            "Appeaser: Character was not impressed by your present.",
+                            ""
+                        ],
+                        [
+                            "HF.21055",
+                            "Gluttonous event. Appeased: hidden ping.",
+                            ""
+                        ],
+                        [
+                            "HF.21056",
+                            "Appeaser: gluttony-based options.",
+                            ""
+                        ],
+                        [
+                            "HF.21057",
+                            "Appeased: Gluttonous appeasement.",
+                            ""
+                        ],
+                        [
+                            "HF.21058",
+                            "Appeaser: Character was impressed by your present.",
+                            ""
+                        ],
+                        [
+                            "HF.21059",
+                            "Appeaser: Character was not impressed by your present.",
+                            ""
+                        ],
+                        [
+                            "HF.21060",
+                            "Slothful event. Appeased: hidden ping.",
+                            ""
+                        ],
+                        [
+                            "HF.21061",
+                            "Appeaser: sloth-based options.",
+                            ""
+                        ],
+                        [
+                            "HF.21062",
+                            "Appeased: slothful appeasement.",
+                            ""
+                        ],
+                        [
+                            "HF.21063",
+                            "Appeaser: Character was impressed by your present.",
+                            ""
+                        ],
+                        [
+                            "HF.21064",
+                            "Appeaser: Character was not impressed by your present.",
+                            ""
+                        ],
+                        [
+                            "HF.21065",
+                            "Wroth event. Appeased: hidden ping.",
+                            ""
+                        ],
+                        [
+                            "HF.21066",
+                            "Appeaser: wroth-based options.",
+                            ""
+                        ],
+                        [
+                            "HF.21067",
+                            "Appeased: wroth appeasement.",
+                            ""
+                        ],
+                        [
+                            "HF.21068",
+                            "Appeaser: Character was impressed by your present.",
+                            ""
+                        ],
+                        [
+                            "HF.21069",
+                            "Appeaser: Character was not impressed by your present.",
+                            ""
+                        ],
+                        [
+                            "HF.21070",
+                            "Proud event. Appeased: hidden ping.",
+                            ""
+                        ],
+                        [
+                            "HF.21071",
+                            "Appeaser: proud-based options.",
+                            ""
+                        ],
+                        [
+                            "HF.21072",
+                            "Appeased: proud appeasement.",
+                            ""
+                        ],
+                        [
+                            "HF.21073",
+                            "Appeaser: Character was impressed by your present.",
+                            ""
+                        ],
+                        [
+                            "HF.21074",
+                            "Appeaser: Character was not impressed by your present.",
+                            ""
+                        ],
+                        [
+                            "HF.21075",
+                            "Kind event. Appeased: hidden ping.",
+                            ""
+                        ],
+                        [
+                            "HF.21076",
+                            "Appeaser: kind-based options.",
+                            ""
+                        ],
+                        [
+                            "HF.21077",
+                            "Appeased: kind appeasement.",
+                            ""
+                        ],
+                        [
+                            "HF.21078",
+                            "Appeaser: Character was impressed by your present.",
+                            ""
+                        ],
+                        [
+                            "HF.21079",
+                            "Appeaser: Character was not impressed by your present.",
+                            ""
+                        ],
+                        [
+                            "HF.21080",
+                            "Physician: Hidden event to administer cure to Appeased.",
+                            ""
+                        ],
+                        [
+                            "HF.21081",
+                            "Appeased: Physician was extremely good.",
+                            ""
+                        ],
+                        [
+                            "HF.21082",
+                            "Appeased: Physician was just good.",
+                            ""
+                        ],
+                        [
+                            "HF.21083",
+                            "Appeased: Physician failed.",
+                            ""
+                        ],
+                        [
+                            "HF.21084",
+                            "Cruel/Envious event. Appeased: hidden ping.",
+                            ""
+                        ],
+                        [
+                            "HF.21085",
+                            "Appeaser: cruel-based options.",
+                            ""
+                        ],
+                        [
+                            "HF.21086",
+                            "Appeased: cruel appeasement.",
+                            ""
+                        ],
+                        [
+                            "HF.21087",
+                            "Appeaser: Character was impressed by your present.",
+                            ""
+                        ],
+                        [
+                            "HF.21088",
+                            "Appeaser: Character was not impressed by your present.",
+                            ""
+                        ],
+                        [
+                            "HF.21089",
+                            "Poet event. Appeased: hidden ping.",
+                            ""
+                        ],
+                        [
+                            "HF.21090",
+                            "Appeaser: poet-based options.",
+                            ""
+                        ],
+                        [
+                            "HF.21091",
+                            "Appeased: poet appeasement.",
+                            ""
+                        ],
+                        [
+                            "HF.21092",
+                            "Appeaser: Character was impressed by your present.",
+                            ""
+                        ],
+                        [
+                            "HF.21093",
+                            "Appeaser: Character was not impressed by your present.",
+                            ""
+                        ],
+                        [
+                            "HF.21094",
+                            "War friends event. Appeased: fighting a war against Appeaser as an unlanded commander, switch sides?",
+                            ""
+                        ],
+                        [
+                            "HF.21095",
+                            "Liege: Appeased refuses to fight!",
+                            ""
+                        ],
+                        [
+                            "HF.21096",
+                            "Appeaser: Appeased refuses to fight against you.",
+                            ""
+                        ],
+                        [
+                            "HF.21097",
+                            "Visit event. Appeased: hidden ping.",
+                            "Tier III Events - Long event chains"
+                        ],
+                        [
+                            "HF.21098",
+                            "Appeaser: do you wish to invite Appeased to court?",
+                            ""
+                        ],
+                        [
+                            "HF.21099",
+                            "Appeased: request to join Appeaser for a few days.",
+                            ""
+                        ],
+                        [
+                            "HF.21100",
+                            "Appeaser: Appeased has arrived.",
+                            ""
+                        ],
+                        [
+                            "HF.21101",
+                            "Appeaser: Appeased did not come.",
+                            ""
+                        ],
+                        [
+                            "HF.21102",
+                            "Appeased: Notified of welcome.",
+                            ""
+                        ],
+                        [
+                            "HF.21103",
+                            "Appeaser: hidden event setting up flags for options and randomizing result.",
+                            ""
+                        ],
+                        [
+                            "HF.21153",
+                            "Hidden ping for safer localization.",
+                            ""
+                        ],
+                        [
+                            "HF.21104",
+                            "Appeaser: Visit event",
+                            ""
+                        ],
+                        [
+                            "HF.21105",
+                            "Appeased: Reaction to Appeaser's visit.",
+                            ""
+                        ],
+                        [
+                            "HF.21106",
+                            "Appeaser: Becoming friends with appeased.",
+                            ""
+                        ],
+                        [
+                            "HF.21107",
+                            "Appeased: Accept offer of friendship?",
+                            ""
+                        ],
+                        [
+                            "HF.21108",
+                            "Appeaser: Notified Appeased has refused friendship.",
+                            ""
+                        ],
+                        [
+                            "HF.21109",
+                            "Appeaser: Becoming in love with appeased.",
+                            ""
+                        ],
+                        [
+                            "HF.21110",
+                            "Appeased: Accept offer of romance?",
+                            ""
+                        ],
+                        [
+                            "HF.21111",
+                            "Appeaser: Notified Appeased has refused romance.",
+                            ""
+                        ],
+                        [
+                            "HF.21112",
+                            "Appeased: Hidden event to pick a potential lifestyle trait (in case character has more than one for whatever reason).",
+                            ""
+                        ],
+                        [
+                            "HF.21113",
+                            "Appeased: choose if you want to learn the Appeaser's lifestyle trait.",
+                            ""
+                        ],
+                        [
+                            "HF.21114",
+                            "Appeaser: Notified Appeased now shares your lifestyle after the visit.",
+                            ""
+                        ],
+                        [
+                            "HF.21115",
+                            "Appeased: Feeling indebted for the nice visit.",
+                            ""
+                        ],
+                        [
+                            "HF.21116",
+                            "Appeaser: Notified of Favor.",
+                            ""
+                        ],
+                        [
+                            "HF.21117",
+                            "Appeaser: Having strong disagreement.",
+                            ""
+                        ],
+                        [
+                            "HF.21118",
+                            "Appeased: Having strong disagreement, Appeaser used diplomacy to resolve it.",
+                            ""
+                        ],
+                        [
+                            "HF.21119",
+                            "Appeased: Having strong disagreement, Appeaser remained patient.",
+                            ""
+                        ],
+                        [
+                            "HF.21120",
+                            "Appeased: Having strong disagreement.",
+                            ""
+                        ],
+                        [
+                            "HF.21121",
+                            "Appeased: Having strong disagreement, and the Appeaser is wroth.",
+                            ""
+                        ],
+                        [
+                            "HF.21122",
+                            "Appeased: has become rivals with Appeaser, hidden event to ping to appeaser and clear event target.",
+                            ""
+                        ],
+                        [
+                            "HF.21123",
+                            "Appeaser notified.",
+                            ""
+                        ],
+                        [
+                            "HF.21124",
+                            "Appeased is convinced to switch personality trait after visit.",
+                            ""
+                        ],
+                        [
+                            "HF.21125",
+                            "Appeaser notified of switch.",
+                            ""
+                        ],
+                        [
+                            "HF.21126",
+                            "Special events for people the Appeaser hurt badly. Appeaser ping: select grievance to try and remove, if more than one is available.",
+                            ""
+                        ],
+                        [
+                            "HF.21127",
+                            "Appeaser notified of hatred.",
+                            ""
+                        ],
+                        [
+                            "HF.21128",
+                            "Diplomacy option: Appeased forgives.",
+                            ""
+                        ],
+                        [
+                            "HF.21129",
+                            "Intrigue option: Appeased forgives.",
+                            ""
+                        ],
+                        [
+                            "HF.21130",
+                            "Kind option: Appeased forgives.",
+                            ""
+                        ],
+                        [
+                            "HF.21131",
+                            "Default option: Appeased decides what to do.",
+                            ""
+                        ],
+                        [
+                            "HF.21132",
+                            "Envious Appeased rejected apology.",
+                            ""
+                        ],
+                        [
+                            "HF.21133",
+                            "Notification: the Appeased forgave you.",
+                            ""
+                        ],
+                        [
+                            "HF.21134",
+                            "Paranoid Appeased rejected apology.",
+                            ""
+                        ],
+                        [
+                            "HF.21135",
+                            "Cruel Appeased rejected apology.",
+                            ""
+                        ],
+                        [
+                            "HF.21136",
+                            "Default Appeased rejected apology.",
+                            ""
+                        ],
+                        [
+                            "HF.21137",
+                            "Swayer notified of death of Appeased.",
+                            ""
+                        ],
+                        [
+                            "HF.21138",
+                            "Antagonizer notified of death of Antagonized.",
+                            ""
+                        ],
+                        [
+                            "HF.21139",
+                            "War events : Appeased: hidden ping.",
+                            ""
+                        ],
+                        [
+                            "HF.21140",
+                            "Appeaser: what do you do?",
+                            ""
+                        ],
+                        [
+                            "HF.21141",
+                            "War: Appeased receives request.",
+                            ""
+                        ],
+                        [
+                            "HF.21142",
+                            "Swayer notified ambushes are now illegal vs Swayed and viceversa.",
+                            ""
+                        ],
+                        [
+                            "HF.21143",
+                            "Swayer notified of peace.",
+                            ""
+                        ],
+                        [
+                            "HF.21144",
+                            "Swayer: meeting happens.",
+                            ""
+                        ],
+                        [
+                            "HF.21145",
+                            "Swayer notified Swayed refused request.",
+                            ""
+                        ],
+                        [
+                            "HF.21146",
+                            "Swayer notified Swayed reciprocate honors.",
+                            ""
+                        ],
+                        [
+                            "HF.21147",
+                            "Swayer notified Swayed does not reciprocate honors.",
+                            ""
+                        ],
+                        [
+                            "HF.21148",
+                            "Swayed: Ambush was successful!",
+                            ""
+                        ],
+                        [
+                            "HF.21149",
+                            "Swayer is notified.",
+                            ""
+                        ],
+                        [
+                            "HF.21150",
+                            "Swayed: Ambush was unsuccessful!",
+                            ""
+                        ],
+                        [
+                            "HF.21151",
+                            "Swayer is notified.",
+                            ""
+                        ],
+                        [
+                            "HF.21152",
+                            "On_death: Clean up event for outliner characters.",
+                            ""
+                        ],
+                        [
+                            "HF.21151",
+                            "Swayer is notified.",
+                            ""
+                        ],
+                        [
+                            "HF.21152",
+                            "On_death: Clean up event for outliner characters.",
+                            ""
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

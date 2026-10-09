@@ -1,0 +1,690 @@
+{
+    "pageid": 143,
+    "title": "Titular Title Generator",
+    "sections": [
+        {
+            "heading": "Introduction",
+            "level": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The Titular Title Generator is a mod which generates higher tier titular titles from existing titles."
+                }
+            ]
+        },
+        {
+            "heading": "Features",
+            "level": 2,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Creates higher titular titles for every landed duchy and kingdom. The lower tier title is required to create the title (e.g. to create the Kingdom of Leinster, you would need the Duchy of Leinster as your primary title.)",
+                            "children": []
+                        },
+                        {
+                            "text": "Ability to use an existing mod as a base to create new titles, and creates an addon for it.",
+                            "children": []
+                        },
+                        {
+                            "text": "Can choose to only generate kingdoms or empires.",
+                            "children": []
+                        },
+                        {
+                            "text": "Can output short names. For example: Leinsterian Kingdom instead of Kingdom of Leinster. English only.",
+                            "children": []
+                        },
+                        {
+                            "text": "Selectable culture restrictions:",
+                            "children": [
+                                {
+                                    "text": "None: No cultural restrictions. A character of any culture can create the title.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Culture: To create the Kingdom of Leinster, your character would need to be Irish.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Culture Group: To create the Kingdom of Leinster, your character would have to be Irish, Scottish, Welsh, or Breton to create it.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Selectable religion restrictions:",
+                            "children": [
+                                {
+                                    "text": "None: No religious restrictions. A character of any religion can create the title.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Religion: To create the Kingdom of Leinster, your character would have to be Catholic, or a heresy of Catholic to create it.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Religion Group: To create the Kingdom of Leinster, your character would have to be Christian to create it.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Selectable lower-tier-title requirements:",
+                            "children": [
+                                {
+                                    "text": "Duchies: To create a kingdom, you would need this number of duchy titles (minimum of 2).",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Kingdoms: To create an empire, you would need this number of kingdom titles (minimum of 2).",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Can make new titles de jure liege of currently held titles.",
+                            "children": [
+                                {
+                                    "text": "Replace De Jure Unchecked: You create the Kingdom of Leinster with the Duchies of Munster and Leinster, both remain de jure Kingdom of Ireland.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Replace De Jure Checked: You create the Kingdom of Leinster with the Duchies of Munster and Leinster, both are new de jure Kingdom of Leinster.",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Can clear title history.",
+                            "children": [
+                                {
+                                    "text": "Counties: All county, duchy, kingdom, and empire histories are wiped. A new character is created, and a single county is assigned to it. You'll need to start a new game with that character, save, and then reload as another county.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Duchies: All duchy, kingdom, and empire histories are wiped.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Kingdoms: All kingdom and empire histories are wiped.",
+                                    "children": []
+                                },
+                                {
+                                    "text": "Empire: All empire history is wiped.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Change Log",
+            "level": 2,
+            "content": []
+        },
+        {
+            "heading": "Version 1.3.11",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed bug with county selector window going under the main program window.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug when creating title strings for empires from kingdoms.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added title creation from counties.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.3.10",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed parser error when the last line is a comment.",
+                            "children": []
+                        },
+                        {
+                            "text": "Renamed County Selector window to Character Setup.",
+                            "children": []
+                        },
+                        {
+                            "text": "Rearranged Character Setup window.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added birth year and gender selector on Character Setup dialog during history wipe.",
+                            "children": []
+                        },
+                        {
+                            "text": "Changed generated character ID to 999999999 to attempt to avoid conflicts.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.3.9",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "You can now select the starting county and dynasty.",
+                            "children": []
+                        },
+                        {
+                            "text": "Random character can now be female.",
+                            "children": []
+                        },
+                        {
+                            "text": "Supports reading mods from My Documents.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.3.8",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added list of skipped titles to the log.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.3.7",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed logic error in history creation causing duchy, kingdom, and empire settings to not run.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.3.6",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed exception when reading data style Coat of Arms definitions.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.3.5",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Refactored history creation for less repetition.",
+                            "children": []
+                        },
+                        {
+                            "text": "Updated for CKUtils 1.8.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug causing crash in culture parser when bastard prefix has more than two words.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug in reading replaces in .mod files where they used a forward slash.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug in parsers when encountering empty files.",
+                            "children": []
+                        },
+                        {
+                            "text": "Now outputs error log when the program encounters an error. The -log command line option now forces a dump of the log.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added history clear selection to options log.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.3.4",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added history wipe options.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed encoding selection on created files.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.3.3",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed crash if a title's culture/religion isn't defined, and the user selected the Culture/Religion Group restriction.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.3.2",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Program no longer loads files with the same name.",
+                            "children": []
+                        },
+                        {
+                            "text": "Parsers now handle empty files.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed crash in province parser handling comments.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.3.1",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added program version to log file.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed crash when adding a sub title if another with the same ID already exists.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.3",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Changed the UI layout to make more sense.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Create Kingdoms and Create Empires checkboxes being enabled at start.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added status of Create Kingdoms and Create Empires checkboxes to logging output.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added support for generating from multiple mods.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added support for mods that only change Religions, Cultures, Flags, Provinces, and Localisations.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed the Generate button being enabled at start.",
+                            "children": []
+                        },
+                        {
+                            "text": "Short name checkboxes are now disabled at start.",
+                            "children": []
+                        },
+                        {
+                            "text": "Now doesn't load vanilla files if any selected mod replaces them.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added logging when reading localisation.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.2.2",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed bug causing duplicate empires to be created.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.2.1",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed crash when a title is landless due to a conflicting title name being dealt with.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.2",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Now supports CK2 1.06.",
+                            "children": []
+                        },
+                        {
+                            "text": "Option to generate only kingdoms or only empires.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.1.8",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Removed copy feature in favour of dependant addon.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed incorrect logging messages.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug causing crash when the program is closed if logging isn't enabled.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.1.7",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed bug causing an ArgumentException when reading provinces.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug where colour values were out of bounds.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug when a from_dynasty_prefix in a culture is a blank string.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug causing an error if a county title doesn't have a related province file.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug preventing the log file being written if an exception is thrown.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.1.6",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Added logging feature to assist with debugging.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.1.5",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed short names of empires generated from existing kingdoms being called kingdoms, not empires.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.1.4",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed missing '=' in generated titles.",
+                            "children": []
+                        },
+                        {
+                            "text": "Rewrote parsers to be better.",
+                            "children": []
+                        },
+                        {
+                            "text": "Added outputting of short names.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.1.3",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Removed the culture and religion from the title definition, because it was limiting who could create the title.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.1.2",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed bug causing a crash if the Culture setting on the PC does not use a '.' as a decimal separator.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.1.1",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Generated titles can now be usurped without holding the capital.",
+                            "children": []
+                        },
+                        {
+                            "text": "Generated titles that have been destroyed will no longer add new de jure duchies when recreated.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.1",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Fixed bug causing the program to crash if there are no mods installed in CK2.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug causing tags in allow brackets to be read incorrectly as title stats.",
+                            "children": []
+                        },
+                        {
+                            "text": "Fixed bug in which the landed_titles.txt file wasn't replaced when run on vanilla.",
+                            "children": []
+                        },
+                        {
+                            "text": "Titles now become de jure vassals of new titles.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Version 1.0.1",
+            "level": 3,
+            "content": [
+                {
+                    "type": "list",
+                    "list_type": "ul",
+                    "items": [
+                        {
+                            "text": "Clamped colour values to the expected range.",
+                            "children": []
+                        },
+                        {
+                            "text": "Handled cases where there is a county level title without a matching province file.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
